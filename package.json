@@ -1,6 +1,6 @@
 {
 	"name": "ai-usage-tracker",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "Chrome extension that tracks Claude and Codex usage limits (session and weekly).",
 	"private": true,
 	"license": "MIT",

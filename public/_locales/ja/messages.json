@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "ページ内オーバーレイ"
   },
+  "modelsToggleLabel": {
+    "message": "モデル別"
+  },
   "loadingSnapshot": {
     "message": "データを読み込み中"
   },

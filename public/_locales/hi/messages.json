@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "पेज ओवरले"
   },
+  "modelsToggleLabel": {
+    "message": "मॉडल के अनुसार"
+  },
   "loadingSnapshot": {
     "message": "डेटा लोड हो रहा है"
   },

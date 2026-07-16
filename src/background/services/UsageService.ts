@@ -1,5 +1,5 @@
 import { STORAGE_KEYS } from '../../shared/constants';
-import { ClaudeUsage, CodexUsage, UsageLimit, UsageState } from '../../shared/types';
+import { ClaudeUsage, CodexUsage, ModelUsage, UsageLimit, UsageState } from '../../shared/types';
 import { clampPercent, getUsageTone } from '../../shared/utils';
 
 const ENDPOINTS = {
@@ -45,11 +45,41 @@ const finalize = <T extends { session: UsageLimit; weekly: UsageLimit }>(payload
   lastUpdated: Date.now(),
 });
 
+const humanizeSlug = (slug: string): string =>
+  slug
+    .split(/[_-]+/)
+    .filter(Boolean)
+    .map((word) =>
+      word.toLowerCase() === 'gpt' ? 'GPT' : word[0].toUpperCase() + word.slice(1).toLowerCase(),
+    )
+    .join(' ');
+
 /* -------------------- Claude -------------------- */
 
 const claudeWindowFrom = (window: unknown): UsageLimit => {
   if (!isObject(window)) return buildLimit(0, null);
   return buildLimit(readNumber(window.utilization), readString(window.resets_at));
+};
+
+const claudeModelBreakdown = (raw: Json): ModelUsage[] => {
+  if (!Array.isArray(raw.limits)) return [];
+
+  return raw.limits.reduce<ModelUsage[]>((models, entry, index) => {
+    if (!isObject(entry)) return models;
+
+    const scope = isObject(entry.scope) ? entry.scope : null;
+    const model = scope && isObject(scope.model) ? scope.model : null;
+    const displayName = model ? readString(model.display_name) : null;
+    if (!displayName) return models;
+
+    const tag = entry.group === 'session' ? '5h' : '7d';
+    models.push({
+      id: `${readString(entry.kind) ?? 'scoped'}-${index}`,
+      label: `${displayName} · ${tag}`,
+      limit: buildLimit(readNumber(entry.percent), readString(entry.resets_at)),
+    });
+    return models;
+  }, []);
 };
 
 const buildClaudeUsage = (raw: Json | null): ClaudeUsage | null => {
@@ -61,6 +91,7 @@ const buildClaudeUsage = (raw: Json | null): ClaudeUsage | null => {
       session: claudeWindowFrom(raw.five_hour),
       weekly: claudeWindowFrom(raw.seven_day),
     }),
+    models: claudeModelBreakdown(raw),
     raw,
   };
 };
@@ -103,6 +134,51 @@ const codexWindowFrom = (window: unknown): UsageLimit => {
   return buildLimit(readNumber(window.used_percent), codexResetTimestamp(window));
 };
 
+const codexRateLimitWindows = (id: string, label: string, entry: Json): ModelUsage[] => {
+  const windows: ModelUsage[] = [];
+  if (isObject(entry.primary_window)) {
+    windows.push({
+      id: `${id}:5h`,
+      label: `${label} · 5h`,
+      limit: codexWindowFrom(entry.primary_window),
+    });
+  }
+  if (isObject(entry.secondary_window)) {
+    windows.push({
+      id: `${id}:7d`,
+      label: `${label} · 7d`,
+      limit: codexWindowFrom(entry.secondary_window),
+    });
+  }
+  return windows;
+};
+
+const codexModelBreakdown = (raw: Json): ModelUsage[] => {
+  const models: ModelUsage[] = [];
+  const additional = raw.additional_rate_limits;
+
+  if (Array.isArray(additional)) {
+    additional.forEach((entry, index) => {
+      if (!isObject(entry)) return;
+      const label = humanizeSlug(
+        firstString(entry.model, entry.name, entry.label) ?? `limit_${index + 1}`,
+      );
+      models.push(...codexRateLimitWindows(`additional[${index}]`, label, entry));
+    });
+  } else if (isObject(additional)) {
+    for (const [name, entry] of Object.entries(additional)) {
+      if (!isObject(entry)) continue;
+      models.push(...codexRateLimitWindows(`additional.${name}`, humanizeSlug(name), entry));
+    }
+  }
+
+  if (isObject(raw.code_review_rate_limit)) {
+    models.push(...codexRateLimitWindows('code_review', 'Code review', raw.code_review_rate_limit));
+  }
+
+  return models;
+};
+
 const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
   if (!raw) return null;
   const rate = isObject(raw.rate_limit) ? raw.rate_limit : null;
@@ -112,6 +188,7 @@ const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
       session: codexWindowFrom(rate?.primary_window),
       weekly: codexWindowFrom(rate?.secondary_window),
     }),
+    models: codexModelBreakdown(raw),
     raw,
   };
 };

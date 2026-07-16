@@ -9,10 +9,17 @@ export interface UsageLimit {
   limit?: number;
 }
 
+export interface ModelUsage {
+  id: string;
+  label: string;
+  limit: UsageLimit;
+}
+
 export interface ClaudeUsage {
   plan: string;
   session: UsageLimit;
   weekly: UsageLimit;
+  models: ModelUsage[];
   status: UsageStatus;
   lastUpdated: number;
   raw?: Record<string, unknown>;
@@ -21,6 +28,7 @@ export interface ClaudeUsage {
 export interface CodexUsage {
   session: UsageLimit;
   weekly: UsageLimit;
+  models: ModelUsage[];
   status: UsageStatus;
   lastUpdated: number;
   raw?: Record<string, unknown>;

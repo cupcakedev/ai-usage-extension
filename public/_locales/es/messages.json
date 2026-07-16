@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "Superposiciones en página"
   },
+  "modelsToggleLabel": {
+    "message": "Por modelo"
+  },
   "loadingSnapshot": {
     "message": "cargando datos"
   },

@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "页面浮层"
   },
+  "modelsToggleLabel": {
+    "message": "按模型"
+  },
   "loadingSnapshot": {
     "message": "正在加载数据"
   },

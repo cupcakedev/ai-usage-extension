@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "Overlays auf der Seite"
   },
+  "modelsToggleLabel": {
+    "message": "Nach Modell"
+  },
   "loadingSnapshot": {
     "message": "Daten werden geladen"
   },

@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "Оверлеи на страницах"
   },
+  "modelsToggleLabel": {
+    "message": "По моделям"
+  },
   "loadingSnapshot": {
     "message": "загрузка данных"
   },

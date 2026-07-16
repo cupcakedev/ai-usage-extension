@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { msg } from '../../shared/i18n';
 import type { ClaudeUsage, CodexUsage } from '../../shared/types';
 import { formatRelativeTime } from '../../shared/utils';
@@ -28,6 +28,45 @@ const Skeleton: React.FC = () => (
   </div>
 );
 
+const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number }> = ({ usage, now }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  if (!usage.models.length) {
+    return null;
+  }
+
+  return (
+    <div className="au-breakdown">
+      <button
+        type="button"
+        className="au-breakdown__toggle"
+        onClick={() => setExpanded((prev) => !prev)}
+        aria-expanded={expanded}
+      >
+        <span>{msg('modelsToggleLabel')}</span>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={`au-breakdown__chevron ${expanded ? 'au-breakdown__chevron--open' : ''}`}
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+      {expanded && (
+        <div className="au-breakdown__list">
+          {usage.models.map((model) => (
+            <UsageMetric key={model.id} label={model.label} limit={model.limit} now={now} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 /** Renders one provider's usage, handling loading / empty / data states. */
 export const ProviderCard: React.FC<ProviderCardProps> = ({
   title,
@@ -53,6 +92,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
         <>
           <UsageMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
           <UsageMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+          <ModelBreakdown usage={usage} now={now} />
           {'plan' in usage && usage.plan !== 'unknown' && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>
           )}

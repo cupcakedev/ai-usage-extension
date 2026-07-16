@@ -29,6 +29,9 @@
   "overlayToggleLabel": {
     "message": "Overlays sur la page"
   },
+  "modelsToggleLabel": {
+    "message": "Par modèle"
+  },
   "loadingSnapshot": {
     "message": "chargement"
   },

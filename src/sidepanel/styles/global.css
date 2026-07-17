@@ -84,8 +84,8 @@ input {
 
 .au-title {
   margin: 0;
-  font-size: 21px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 500;
   letter-spacing: -0.01em;
 }
 
@@ -286,43 +286,9 @@ input {
 /* ---- Model breakdown -------------------------------------------------- */
 
 .au-breakdown {
-  border-top: 1px solid var(--au-line);
-  padding-top: 10px;
-}
-
-.au-breakdown__toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 8px;
-  border: none;
-  background: transparent;
-  padding: 0;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--au-text-muted);
-  cursor: pointer;
-}
-
-.au-breakdown__chevron {
-  width: 13px;
-  height: 13px;
-  flex: none;
-  transition: transform 150ms ease;
-}
-
-.au-breakdown__chevron--open {
-  transform: rotate(180deg);
-}
-
-.au-breakdown__list {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding-top: 14px;
 }
 
 /* ---- Metric --------------------------------------------------------- */
@@ -394,8 +360,6 @@ input {
 
 .au-footnote {
   margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--au-line);
   font-size: 11px;
   letter-spacing: 0.02em;
   color: var(--au-text-faint);

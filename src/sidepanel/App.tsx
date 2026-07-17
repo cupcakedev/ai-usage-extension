@@ -26,8 +26,7 @@ export const App = () => {
     <main className="au-shell">
       <header className="au-topbar">
         <div>
-          <p className="au-eyebrow">{msg('popupEyebrow')}</p>
-          <h1 className="au-title">{msg('popupTitle')}</h1>
+          <h2 className="au-title">{msg('popupTitle')}</h2>
         </div>
         <button
           type="button"

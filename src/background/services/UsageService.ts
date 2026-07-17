@@ -179,6 +179,12 @@ const codexModelBreakdown = (raw: Json): ModelUsage[] => {
   return models;
 };
 
+const codexAvailableResets = (raw: Json): number | null => {
+  const resetCredits = raw.rate_limit_reset_credits;
+  if (!isObject(resetCredits)) return null;
+  return readNumber(resetCredits.available_count);
+};
+
 const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
   if (!raw) return null;
   const rate = isObject(raw.rate_limit) ? raw.rate_limit : null;
@@ -189,6 +195,7 @@ const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
       weekly: codexWindowFrom(rate?.secondary_window),
     }),
     models: codexModelBreakdown(raw),
+    availableResets: codexAvailableResets(raw),
     raw,
   };
 };

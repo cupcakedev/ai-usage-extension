@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "ページ内オーバーレイ"
   },
-  "modelsToggleLabel": {
-    "message": "モデル別"
+  "availableResetsLabel": {
+    "message": "利用可能なリセット回数 · $1"
   },
   "loadingSnapshot": {
     "message": "データを読み込み中"

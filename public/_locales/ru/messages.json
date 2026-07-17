@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "Оверлеи на страницах"
   },
-  "modelsToggleLabel": {
-    "message": "По моделям"
+  "availableResetsLabel": {
+    "message": "Доступно сбросов · $1"
   },
   "loadingSnapshot": {
     "message": "загрузка данных"

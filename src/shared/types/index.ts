@@ -29,6 +29,7 @@ export interface CodexUsage {
   session: UsageLimit;
   weekly: UsageLimit;
   models: ModelUsage[];
+  availableResets: number | null;
   status: UsageStatus;
   lastUpdated: number;
   raw?: Record<string, unknown>;

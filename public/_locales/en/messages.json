@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "On-page overlays"
   },
-  "modelsToggleLabel": {
-    "message": "By model"
+  "availableResetsLabel": {
+    "message": "Available resets · $1"
   },
   "loadingSnapshot": {
     "message": "loading snapshot"

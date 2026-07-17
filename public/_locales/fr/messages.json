@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "Overlays sur la page"
   },
-  "modelsToggleLabel": {
-    "message": "Par modèle"
+  "availableResetsLabel": {
+    "message": "Réinitialisations disponibles · $1"
   },
   "loadingSnapshot": {
     "message": "chargement"

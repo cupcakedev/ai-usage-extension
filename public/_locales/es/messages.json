@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "Superposiciones en página"
   },
-  "modelsToggleLabel": {
-    "message": "Por modelo"
+  "availableResetsLabel": {
+    "message": "Reinicios disponibles · $1"
   },
   "loadingSnapshot": {
     "message": "cargando datos"

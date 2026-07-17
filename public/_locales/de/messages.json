@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "Overlays auf der Seite"
   },
-  "modelsToggleLabel": {
-    "message": "Nach Modell"
+  "availableResetsLabel": {
+    "message": "Verfügbare Resets · $1"
   },
   "loadingSnapshot": {
     "message": "Daten werden geladen"

@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "Overlay nella pagina"
   },
-  "modelsToggleLabel": {
-    "message": "Per modello"
+  "availableResetsLabel": {
+    "message": "Ripristini disponibili · $1"
   },
   "loadingSnapshot": {
     "message": "caricamento dati"

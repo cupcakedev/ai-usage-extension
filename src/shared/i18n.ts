@@ -10,7 +10,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   refreshErrorPrefix: 'Couldn’t refresh',
   refreshFailed: 'Refresh failed',
   overlayToggleLabel: 'On-page overlays',
-  modelsToggleLabel: 'By model',
+  availableResetsLabel: 'Available resets · $1',
   loadingSnapshot: 'loading snapshot',
   notConnected: 'not connected',
   updated: 'updated $1',

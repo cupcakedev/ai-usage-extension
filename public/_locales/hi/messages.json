@@ -29,8 +29,8 @@
   "overlayToggleLabel": {
     "message": "पेज ओवरले"
   },
-  "modelsToggleLabel": {
-    "message": "मॉडल के अनुसार"
+  "availableResetsLabel": {
+    "message": "उपलब्ध रीसेट · $1"
   },
   "loadingSnapshot": {
     "message": "डेटा लोड हो रहा है"

@@ -229,10 +229,19 @@ const codexModelBreakdown = (raw: Json): ModelUsage[] => {
   if (Array.isArray(additional)) {
     additional.forEach((entry, index) => {
       if (!isObject(entry)) return;
-      const label = humanizeSlug(
-        firstString(entry.model, entry.name, entry.label) ?? `limit_${index + 1}`,
+      const limitName = firstString(
+        entry.limit_name,
+        entry.model,
+        entry.name,
+        entry.label,
+        entry.metered_feature,
       );
-      models.push(...codexRateLimitWindows(`additional[${index}]`, label, entry));
+      if (!limitName) return;
+
+      const limitId = firstString(entry.metered_feature, entry.limit_name) ?? String(index);
+      models.push(
+        ...codexRateLimitWindows(`additional.${limitId}`, humanizeSlug(limitName), entry),
+      );
     });
   } else if (isObject(additional)) {
     for (const [name, entry] of Object.entries(additional)) {

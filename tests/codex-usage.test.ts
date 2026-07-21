@@ -88,6 +88,34 @@ describe('Codex usage windows', () => {
     );
   });
 
+  it('uses Codex additional-limit schema names and omits genuinely anonymous entries', () => {
+    const usage = buildCodexUsage({
+      rate_limit: {
+        primary_window: rateWindow(83, 7 * 24 * 60 * 60),
+      },
+      additional_rate_limits: [
+        {
+          limit_name: 'codex_other',
+          metered_feature: 'codex_other',
+          rate_limit: {
+            primary_window: rateWindow(0, 7 * 24 * 60 * 60),
+          },
+        },
+        {
+          rate_limit: {
+            primary_window: rateWindow(0, 7 * 24 * 60 * 60),
+          },
+        },
+      ],
+    });
+
+    assert.ok(usage);
+    assert.deepEqual(
+      usage.models.map(({ id, label, limit }) => [id, label, limit.percentage]),
+      [['additional.codex_other:primary:604800', 'Codex Other · 7d', 0]],
+    );
+  });
+
   it('uses a generic label for missing or unsupported durations', () => {
     const usage = buildCodexUsage({
       rate_limit: {

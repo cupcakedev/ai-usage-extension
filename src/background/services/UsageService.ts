@@ -1,4 +1,5 @@
 import { STORAGE_KEYS } from '../../shared/constants';
+import { msg } from '../../shared/i18n';
 import { ClaudeUsage, CodexUsage, ModelUsage, UsageLimit, UsageState } from '../../shared/types';
 import { clampPercent, getUsageTone } from '../../shared/utils';
 
@@ -114,6 +115,52 @@ const resolveOrgFromList = (orgs: unknown): string | null => {
 /* -------------------- Codex -------------------- */
 
 type CodexSessionInfo = { accessToken: string; accountId: string | null };
+type CodexWindowPosition = 'primary' | 'secondary';
+
+interface ParsedCodexWindow {
+  position: CodexWindowPosition;
+  durationSeconds: number | null;
+  sortSeconds: number;
+  shortLabel: string;
+  label: string;
+  limit: UsageLimit;
+}
+
+const CODEX_WINDOW_PERIODS = [
+  { seconds: 5 * 60 * 60, labelKey: 'sessionLimit', shortLabel: '5h' },
+  { seconds: 24 * 60 * 60, labelKey: 'dailyLimit', shortLabel: '1d' },
+  { seconds: 7 * 24 * 60 * 60, labelKey: 'weeklyLimit', shortLabel: '7d' },
+  { seconds: 30 * 24 * 60 * 60, labelKey: 'monthlyLimit', shortLabel: '30d' },
+  { seconds: 365 * 24 * 60 * 60, labelKey: 'annualLimit', shortLabel: '1y' },
+] as const;
+
+const isApproximateWindow = (actual: number, expected: number): boolean =>
+  actual >= expected * 0.95 && actual <= expected * 1.05;
+
+const codexWindowCopy = (
+  durationSeconds: number | null,
+  position: CodexWindowPosition,
+): { label: string; shortLabel: string; sortSeconds: number } => {
+  const period =
+    durationSeconds === null
+      ? null
+      : CODEX_WINDOW_PERIODS.find(({ seconds }) => isApproximateWindow(durationSeconds, seconds));
+
+  if (period) {
+    return {
+      label: msg(period.labelKey),
+      shortLabel: period.shortLabel,
+      sortSeconds: period.seconds,
+    };
+  }
+
+  const labelKey = position === 'primary' ? 'usageLimit' : 'secondaryUsageLimit';
+  return {
+    label: msg(labelKey),
+    shortLabel: msg(labelKey),
+    sortSeconds: Number.POSITIVE_INFINITY,
+  };
+};
 
 const codexResetTimestamp = (window: Json): string | null => {
   const epochSeconds = readNumber(window.reset_at);
@@ -129,28 +176,50 @@ const codexResetTimestamp = (window: Json): string | null => {
   return null;
 };
 
-const codexWindowFrom = (window: unknown): UsageLimit => {
-  if (!isObject(window)) return buildLimit(0, null);
+const codexWindowFrom = (window: Json): UsageLimit => {
   return buildLimit(readNumber(window.used_percent), codexResetTimestamp(window));
 };
 
+const parseCodexWindows = (entry: Json): ParsedCodexWindow[] => {
+  const windows: ParsedCodexWindow[] = [];
+
+  (['primary', 'secondary'] as const).forEach((position) => {
+    const rawWindow = entry[`${position}_window`];
+    if (!isObject(rawWindow)) return;
+
+    const rawDuration = readNumber(rawWindow.limit_window_seconds);
+    const durationSeconds = rawDuration !== null && rawDuration > 0 ? rawDuration : null;
+    const copy = codexWindowCopy(durationSeconds, position);
+    windows.push({
+      position,
+      durationSeconds,
+      ...copy,
+      limit: codexWindowFrom(rawWindow),
+    });
+  });
+
+  return windows.sort((left, right) => {
+    if (left.sortSeconds !== right.sortSeconds) return left.sortSeconds - right.sortSeconds;
+    return left.position === 'primary' ? -1 : 1;
+  });
+};
+
+const codexPrimaryWindows = (rate: Json | null): ModelUsage[] => {
+  if (!rate) return [];
+  return parseCodexWindows(rate).map((window) => ({
+    id: `codex:${window.position}:${window.durationSeconds ?? 'unknown'}`,
+    label: window.label,
+    limit: window.limit,
+  }));
+};
+
 const codexRateLimitWindows = (id: string, label: string, entry: Json): ModelUsage[] => {
-  const windows: ModelUsage[] = [];
-  if (isObject(entry.primary_window)) {
-    windows.push({
-      id: `${id}:5h`,
-      label: `${label} · 5h`,
-      limit: codexWindowFrom(entry.primary_window),
-    });
-  }
-  if (isObject(entry.secondary_window)) {
-    windows.push({
-      id: `${id}:7d`,
-      label: `${label} · 7d`,
-      limit: codexWindowFrom(entry.secondary_window),
-    });
-  }
-  return windows;
+  const rate = isObject(entry.rate_limit) ? entry.rate_limit : entry;
+  return parseCodexWindows(rate).map((window) => ({
+    id: `${id}:${window.position}:${window.durationSeconds ?? 'unknown'}`,
+    label: `${label} · ${window.shortLabel}`,
+    limit: window.limit,
+  }));
 };
 
 const codexModelBreakdown = (raw: Json): ModelUsage[] => {
@@ -185,17 +254,17 @@ const codexAvailableResets = (raw: Json): number | null => {
   return readNumber(resetCredits.available_count);
 };
 
-const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
+export const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
   if (!raw) return null;
   const rate = isObject(raw.rate_limit) ? raw.rate_limit : null;
+  const windows = codexPrimaryWindows(rate);
 
   return {
-    ...finalize({
-      session: codexWindowFrom(rate?.primary_window),
-      weekly: codexWindowFrom(rate?.secondary_window),
-    }),
+    windows,
     models: codexModelBreakdown(raw),
     availableResets: codexAvailableResets(raw),
+    status: getUsageTone(Math.max(0, ...windows.map((window) => window.limit.percentage))),
+    lastUpdated: Date.now(),
     raw,
   };
 };

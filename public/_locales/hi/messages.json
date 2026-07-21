@@ -50,8 +50,26 @@
   "sessionLimit": {
     "message": "सत्र · 5 घंटे"
   },
+  "dailyLimit": {
+    "message": "दैनिक · 1 दिन"
+  },
   "weeklyLimit": {
     "message": "साप्ताहिक · 7 दिन"
+  },
+  "monthlyLimit": {
+    "message": "मासिक · 30 दिन"
+  },
+  "annualLimit": {
+    "message": "वार्षिक · 1 वर्ष"
+  },
+  "usageLimit": {
+    "message": "उपयोग सीमा"
+  },
+  "secondaryUsageLimit": {
+    "message": "द्वितीयक उपयोग सीमा"
+  },
+  "percentUsed": {
+    "message": "$1% उपयोग हुआ"
   },
   "planLabel": {
     "message": "प्लान · $1"

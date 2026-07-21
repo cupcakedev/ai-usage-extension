@@ -50,8 +50,26 @@
   "sessionLimit": {
     "message": "会话 · 5小时"
   },
+  "dailyLimit": {
+    "message": "每日 · 1天"
+  },
   "weeklyLimit": {
     "message": "每周 · 7天"
+  },
+  "monthlyLimit": {
+    "message": "每月 · 30天"
+  },
+  "annualLimit": {
+    "message": "每年 · 1年"
+  },
+  "usageLimit": {
+    "message": "使用限额"
+  },
+  "secondaryUsageLimit": {
+    "message": "次级使用限额"
+  },
+  "percentUsed": {
+    "message": "已使用 $1%"
   },
   "planLabel": {
     "message": "方案 · $1"

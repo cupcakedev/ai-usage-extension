@@ -50,8 +50,26 @@
   "sessionLimit": {
     "message": "セッション · 5時間"
   },
+  "dailyLimit": {
+    "message": "日次 · 1日"
+  },
   "weeklyLimit": {
     "message": "週間 · 7日"
+  },
+  "monthlyLimit": {
+    "message": "月間 · 30日"
+  },
+  "annualLimit": {
+    "message": "年間 · 1年"
+  },
+  "usageLimit": {
+    "message": "使用上限"
+  },
+  "secondaryUsageLimit": {
+    "message": "第2使用上限"
+  },
+  "percentUsed": {
+    "message": "$1% 使用済み"
   },
   "planLabel": {
     "message": "プラン · $1"

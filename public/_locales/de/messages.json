@@ -50,8 +50,26 @@
   "sessionLimit": {
     "message": "Sitzung · 5 h"
   },
+  "dailyLimit": {
+    "message": "Täglich · 1 T"
+  },
   "weeklyLimit": {
     "message": "Woche · 7 T"
+  },
+  "monthlyLimit": {
+    "message": "Monatlich · 30 T"
+  },
+  "annualLimit": {
+    "message": "Jährlich · 1 J"
+  },
+  "usageLimit": {
+    "message": "Nutzungslimit"
+  },
+  "secondaryUsageLimit": {
+    "message": "Sekundäres Nutzungslimit"
+  },
+  "percentUsed": {
+    "message": "$1 % genutzt"
   },
   "planLabel": {
     "message": "Plan · $1"

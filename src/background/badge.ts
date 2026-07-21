@@ -1,6 +1,7 @@
 import { msg } from '../shared/i18n';
 import type { ProviderId, UsageState } from '../shared/types';
 import { clampPercent } from '../shared/utils';
+import { highestUsageWindow } from '../shared/usageWindows';
 
 const iconPath = (range: number): string => `icons/badges/range-${range}.png`;
 
@@ -44,7 +45,6 @@ const iconRange = (percent: number): number => {
 };
 
 const PROVIDER_TITLE: Record<ProviderId, string> = { claude: 'Claude', codex: 'Codex' };
-const SESSION_LABEL = msg('sessionLimit');
 
 interface UsageSummary {
   percent: number;
@@ -52,29 +52,32 @@ interface UsageSummary {
 }
 
 const summarizeUsage = (state: UsageState): UsageSummary | null => {
-  const rows: number[] = [];
+  const rows: Array<{ provider: ProviderId; label: string; percent: number }> = [];
 
   (['claude', 'codex'] as const).forEach((provider) => {
     const usage = state[provider];
     if (!usage) return;
-    rows.push(usage.session.percentage);
+    const highest = highestUsageWindow(usage);
+    if (!highest) return;
+    rows.push({
+      provider,
+      label: highest.label,
+      percent: clampPercent(highest.limit.percentage),
+    });
   });
 
   if (rows.length === 0) {
     return null;
   }
 
-  const percent = Math.max(...rows);
+  const percent = Math.max(...rows.map((row) => row.percent));
 
   const tooltip = [
     msg('appShortName'),
-    ...(['claude', 'codex'] as const).flatMap((provider) => {
-      const usage = state[provider];
-      if (!usage) return [];
-      return [
-        `${PROVIDER_TITLE[provider]} · ${SESSION_LABEL} ${clampPercent(usage.session.percentage)}%`,
-      ];
-    }),
+    ...rows.map(
+      (row) =>
+        `${PROVIDER_TITLE[row.provider]} · ${row.label} ${msg('percentUsed', String(row.percent))}`,
+    ),
   ].join('\n');
 
   return { percent, tooltip };

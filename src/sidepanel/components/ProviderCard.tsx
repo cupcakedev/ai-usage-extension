@@ -1,11 +1,9 @@
 import React from 'react';
 import { msg } from '../../shared/i18n';
-import type { ClaudeUsage, CodexUsage } from '../../shared/types';
 import { formatRelativeTime } from '../../shared/utils';
+import { getUsageWindows, type ProviderUsage } from '../../shared/usageWindows';
 import { UsageCard } from './UsageCard';
 import { UsageMetric } from './UsageMetric';
-
-type ProviderUsage = ClaudeUsage | CodexUsage;
 
 interface ProviderCardProps {
   title: string;
@@ -42,6 +40,14 @@ const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number }> = ({ usage
   );
 };
 
+const ProviderLimits: React.FC<{ usage: ProviderUsage; now: number }> = ({ usage, now }) => (
+  <>
+    {getUsageWindows(usage).map((window) => (
+      <UsageMetric key={window.id} label={window.label} limit={window.limit} now={now} />
+    ))}
+  </>
+);
+
 /** Renders one provider's usage, handling loading / empty / data states. */
 export const ProviderCard: React.FC<ProviderCardProps> = ({
   title,
@@ -65,8 +71,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
         <Skeleton />
       ) : usage ? (
         <>
-          <UsageMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
-          <UsageMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+          <ProviderLimits usage={usage} now={now} />
           <ModelBreakdown usage={usage} now={now} />
           {'plan' in usage && usage.plan !== 'unknown' && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>

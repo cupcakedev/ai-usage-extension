@@ -4,12 +4,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 A Chrome extension (Manifest V3) that tracks your **Claude** and **Codex** usage
-limits — both the 5-hour session window and the 7-day weekly window — and surfaces
-them in a popup, an on-page overlay, and the toolbar badge.
+limits — including 5-hour session and 7-day weekly windows when the providers
+return them — and surfaces them in a popup, an on-page overlay, and the toolbar
+badge.
 
 ## Features
 
 - **Live limits** for Claude and Codex: percentage used, raw counts, and time to reset.
+  Codex windows are labelled from the duration returned by the service rather than
+  assuming fixed primary and secondary periods.
 - **Toolbar badge** showing your highest current usage at a glance.
 - **On-page overlay** on `claude.ai` — a collapsible capsule rendered in a Shadow DOM,
   so it never clashes with the host page's styles.
@@ -103,7 +106,7 @@ pnpm build
 | `pnpm build`         | Type-check, then produce a production build.  |
 | `pnpm release`       | Test, build, and package `dist/` into `release/*.zip`. |
 | `pnpm typecheck`     | Run `tsc` with no emit.                       |
-| `pnpm test`          | Run release-gate checks for store metadata.   |
+| `pnpm test`          | Run regression and store metadata checks.     |
 | `pnpm lint`          | Lint `src/` with ESLint.                      |
 | `pnpm format`        | Format `src/` with Prettier.                  |
 

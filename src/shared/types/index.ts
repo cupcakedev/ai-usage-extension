@@ -26,8 +26,11 @@ export interface ClaudeUsage {
 }
 
 export interface CodexUsage {
-  session: UsageLimit;
-  weekly: UsageLimit;
+  /** Rate-limit windows returned by Codex, classified by their server duration. */
+  windows: ModelUsage[];
+  /** Legacy fields retained as optional so stored pre-upgrade snapshots still render. */
+  session?: UsageLimit;
+  weekly?: UsageLimit;
   models: ModelUsage[];
   availableResets: number | null;
   status: UsageStatus;

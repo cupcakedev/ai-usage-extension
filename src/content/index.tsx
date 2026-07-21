@@ -7,19 +7,15 @@ import { STORAGE_KEYS } from '../shared/constants';
 import { useNow } from '../shared/hooks/useNow';
 import { msg } from '../shared/i18n';
 import { requestUsageRefresh } from '../shared/messaging';
-import type { ClaudeUsage, CodexUsage, UsageLimit, UsageState } from '../shared/types';
+import type { UsageLimit, UsageState } from '../shared/types';
 import { formatRelativeTime, formatReset, getUsageTone } from '../shared/utils';
+import { getUsageWindows, type ProviderUsage } from '../shared/usageWindows';
 
 const HOST_ID = 'ai-usage-claude-overlay-host';
 
-type AnyUsage = {
-  session: UsageLimit;
-  weekly: UsageLimit;
-  lastUpdated: number;
-};
-
-const nextReset = (usage: AnyUsage, now: number): string => {
-  const upcoming = [usage.session.resetsAt, usage.weekly.resetsAt]
+const nextReset = (usage: ProviderUsage, now: number): string => {
+  const upcoming = getUsageWindows(usage)
+    .map((window) => window.limit.resetsAt)
     .filter((value): value is string => Boolean(value))
     .map((value) => new Date(value).getTime())
     .filter((value) => Number.isFinite(value) && value > now)
@@ -36,6 +32,7 @@ interface OverlayMetricProps {
 
 const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
   const percent = useMemo(() => Math.round(limit.percentage), [limit.percentage]);
+  const percentLabel = msg('percentUsed', String(percent));
   const hasCount =
     typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0;
 
@@ -43,13 +40,14 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
     <div className="aiu-group">
       <div className="aiu-row">
         <span className="aiu-label">{label}</span>
-        <span className="aiu-value">{percent}%</span>
+        <span className="aiu-value">{percentLabel}</span>
       </div>
       <div
         className={`aiu-meter aiu-meter--${getUsageTone(percent)}`}
         role="progressbar"
         aria-label={label}
         aria-valuenow={percent}
+        aria-valuetext={percentLabel}
         aria-valuemin={0}
         aria-valuemax={100}
       >
@@ -84,7 +82,7 @@ const inputSelector = isClaude
 
 const UsageOverlay: React.FC = () => {
   const [enabled, setEnabled] = useState(true);
-  const [usage, setUsage] = useState<ClaudeUsage | CodexUsage | null>(null);
+  const [usage, setUsage] = useState<ProviderUsage | null>(null);
   const [collapsed, setCollapsed] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -243,8 +241,14 @@ const UsageOverlay: React.FC = () => {
 
           {usage ? (
             <>
-              <OverlayMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
-              <OverlayMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+              {getUsageWindows(usage).map((window) => (
+                <OverlayMetric
+                  key={window.id}
+                  label={window.label}
+                  limit={window.limit}
+                  now={now}
+                />
+              ))}
             </>
           ) : isLoading || isRefreshing ? (
             <div className="aiu-loader" aria-hidden="true">

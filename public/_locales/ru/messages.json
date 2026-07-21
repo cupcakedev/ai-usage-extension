@@ -50,8 +50,26 @@
   "sessionLimit": {
     "message": "Сессия · 5 ч"
   },
+  "dailyLimit": {
+    "message": "День · 1 д"
+  },
   "weeklyLimit": {
     "message": "Неделя · 7 д"
+  },
+  "monthlyLimit": {
+    "message": "Месяц · 30 д"
+  },
+  "annualLimit": {
+    "message": "Год · 1 г"
+  },
+  "usageLimit": {
+    "message": "Лимит использования"
+  },
+  "secondaryUsageLimit": {
+    "message": "Дополнительный лимит использования"
+  },
+  "percentUsed": {
+    "message": "Использовано: $1%"
   },
   "planLabel": {
     "message": "План · $1"

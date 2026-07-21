@@ -50,8 +50,26 @@
   "sessionLimit": {
     "message": "Session · 5 h"
   },
+  "dailyLimit": {
+    "message": "Quotidien · 1 j"
+  },
   "weeklyLimit": {
     "message": "Semaine · 7 j"
+  },
+  "monthlyLimit": {
+    "message": "Mois · 30 j"
+  },
+  "annualLimit": {
+    "message": "Annuel · 1 an"
+  },
+  "usageLimit": {
+    "message": "Limite d’utilisation"
+  },
+  "secondaryUsageLimit": {
+    "message": "Limite d’utilisation secondaire"
+  },
+  "percentUsed": {
+    "message": "$1 % utilisé"
   },
   "planLabel": {
     "message": "Forfait · $1"

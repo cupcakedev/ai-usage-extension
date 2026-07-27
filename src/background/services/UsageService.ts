@@ -1,5 +1,15 @@
 import { STORAGE_KEYS } from '../../shared/constants';
-import { ClaudeUsage, CodexUsage, ModelUsage, UsageLimit, UsageState } from '../../shared/types';
+import {
+  ClaudeUsage,
+  CodexUsage,
+  CursorUsage,
+  KimiUsage,
+  MiniMaxUsage,
+  MiMoUsage,
+  ModelUsage,
+  UsageLimit,
+  UsageState,
+} from '../../shared/types';
 import { clampPercent, getUsageTone } from '../../shared/utils';
 
 const ENDPOINTS = {
@@ -7,6 +17,12 @@ const ENDPOINTS = {
   claudeUsage: (orgId: string) => `https://claude.ai/api/organizations/${orgId}/usage`,
   codexSession: 'https://chatgpt.com/api/auth/session',
   codexUsage: 'https://chatgpt.com/backend-api/wham/usage',
+  miniMaxUsage: 'https://platform.minimax.io/backend/account/token_plan/remains_percent',
+  kimiUsage: 'https://www.kimi.com/apiv2/kimi.gateway.billing.v1.BillingService/GetUsages',
+  cursorUsage: 'https://cursor.com/api/usage-summary',
+  mimoBalance: 'https://platform.xiaomimimo.com/api/v1/balance',
+  mimoPlanDetail: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/detail',
+  mimoPlanUsage: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/usage',
 } as const;
 
 const JSON_HEADERS = { Accept: 'application/json' } as const;
@@ -24,6 +40,39 @@ const readString = (value: unknown): string | null => {
 const readNumber = (value: unknown): number | null => {
   if (typeof value !== 'number' || !Number.isFinite(value)) return null;
   return value;
+};
+
+const readNumeric = (value: unknown): number | null => {
+  const numeric = readNumber(value);
+  if (numeric !== null) return numeric;
+  if (typeof value !== 'string') return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const readPercent = (value: unknown): number | null => {
+  const numeric = readNumeric(value);
+  if (numeric !== null) return numeric;
+  if (typeof value !== 'string') return null;
+  const parsed = Number(value.trim().replace(/%$/, ''));
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const readBoolean = (value: unknown): boolean | null => (typeof value === 'boolean' ? value : null);
+
+const asJson = (value: unknown): Json | null => (isObject(value) ? value : null);
+
+const asArray = (value: unknown): unknown[] => (Array.isArray(value) ? value : []);
+
+const epochToIso = (value: unknown): string | null => {
+  const epoch = readNumeric(value);
+  if (epoch === null || epoch <= 0) return null;
+  return new Date(epoch > 10_000_000_000 ? epoch : epoch * 1000).toISOString();
+};
+
+const percentFromUsedLimit = (used: number | null, limit: number | null): number | null => {
+  if (used === null || limit === null || limit <= 0) return null;
+  return (used / limit) * 100;
 };
 
 const firstString = (...candidates: unknown[]): string | null => {
@@ -229,6 +278,217 @@ const accountIdFromSession = (session: Json): string | null => {
   return null;
 };
 
+/* -------------------- Browser-session providers -------------------- */
+
+const minimaxLimit = (row: Json, period: 'interval' | 'weekly'): UsageLimit => {
+  const prefix = period === 'interval' ? 'current_interval' : 'current_weekly';
+  const total = readNumeric(row[`${prefix}_total_count`]);
+  const usedCount = readNumeric(row[`${prefix}_used_count`]);
+  const remaining = readNumeric(row[`${prefix}_remains_count`] ?? row[`${prefix}_usage_count`]);
+  const usableTotal = total !== null && total > 0 ? total : null;
+  const usableUsed = usedCount !== null && usedCount >= 0 ? usedCount : null;
+  const inferredUsed =
+    usableTotal !== null && remaining !== null && remaining >= 0
+      ? Math.max(0, usableTotal - remaining)
+      : null;
+  const used = usableUsed ?? inferredUsed;
+  const percentage =
+    readPercent(row[`${prefix}_used_percent`]) ??
+    (readPercent(row[`${prefix}_remaining_percent`]) !== null
+      ? 100 - (readPercent(row[`${prefix}_remaining_percent`]) ?? 0)
+      : percentFromUsedLimit(used, usableTotal));
+  const resetField = period === 'interval' ? 'end_time' : 'weekly_end_time';
+  return {
+    ...buildLimit(percentage, epochToIso(row[resetField])),
+    ...(used !== null ? { used } : {}),
+    ...(usableTotal !== null ? { limit: usableTotal } : {}),
+  };
+};
+
+const buildMiniMaxUsage = (raw: Json | null): MiniMaxUsage | null => {
+  if (!raw) return null;
+  const payload = asJson(raw.data) ?? raw;
+  const modelRemains = asArray(payload.model_remains);
+  const models: ModelUsage[] = [];
+
+  modelRemains.forEach((entry, index) => {
+    const row = asJson(entry);
+    if (!row) return;
+    const name = readString(row.model_name) ?? `Model ${index + 1}`;
+    // The Token Plan page exposes a dormant video lane alongside the active general quota.
+    // It is not part of the coding-plan usage the extension reports.
+    if (name.toLowerCase() === 'video') return;
+    const session = minimaxLimit(row, 'interval');
+    models.push({ id: `minimax:${index}:session`, label: `${name} · Session`, limit: session });
+
+    if (
+      readPercent(row.current_weekly_used_percent) !== null ||
+      readPercent(row.current_weekly_remaining_percent) !== null ||
+      (readNumeric(row.current_weekly_total_count) ?? 0) > 0
+    ) {
+      models.push({
+        id: `minimax:${index}:weekly`,
+        label: `${name} · Weekly`,
+        limit: minimaxLimit(row, 'weekly'),
+      });
+    }
+  });
+
+  const services = asArray(payload.services);
+  services.forEach((entry, index) => {
+    const row = asJson(entry);
+    if (!row) return;
+    const label = readString(row.service_type) ?? `Service ${index + 1}`;
+    const window = readString(row.window_type) ?? 'Usage';
+    const limit = readNumeric(row.limit);
+    const used = readNumeric(row.usage);
+    models.push({
+      id: `minimax:service:${index}`,
+      label: `${label} · ${window}`,
+      limit: {
+        ...buildLimit(readNumeric(row.percent) ?? percentFromUsedLimit(used, limit), null),
+        ...(used !== null ? { used } : {}),
+        ...(limit !== null ? { limit } : {}),
+      },
+    });
+  });
+
+  const session = models.find((model) => model.id.endsWith(':session'))?.limit ?? models[0]?.limit;
+  const weekly = models.find((model) => model.id.endsWith(':weekly'))?.limit ?? buildLimit(0, null);
+  if (!session) return null;
+
+  return {
+    plan:
+      firstString(
+        payload.current_subscribe_title,
+        payload.plan_name,
+        payload.combo_title,
+        payload.current_plan_title,
+      ) ?? 'Token Plan',
+    ...finalize({ session, weekly }),
+    models: models.filter((model) => model.limit !== session && model.limit !== weekly),
+    raw,
+  };
+};
+
+const kimiDetailLimit = (value: unknown): UsageLimit => {
+  const detail = asJson(value);
+  if (!detail) return buildLimit(0, null);
+  const used = readNumeric(detail.used);
+  const limit = readNumeric(detail.limit);
+  return {
+    ...buildLimit(percentFromUsedLimit(used, limit), readString(detail.resetTime)),
+    ...(used !== null ? { used } : {}),
+    ...(limit !== null ? { limit } : {}),
+  };
+};
+
+const buildKimiUsage = (raw: Json | null): KimiUsage | null => {
+  if (!raw) return null;
+  const usage = asArray(raw.usages)
+    .map(asJson)
+    .find((entry) => entry?.scope === 'FEATURE_CODING');
+  if (!usage) return null;
+
+  const weekly = kimiDetailLimit(usage.detail);
+  const limits = asArray(usage.limits)
+    .map(asJson)
+    .filter((entry): entry is Json => entry !== null);
+  const rateLimit = limits[0] ? kimiDetailLimit(limits[0].detail) : null;
+  return {
+    ...finalize({ session: rateLimit ?? weekly, weekly }),
+    models: [],
+    raw,
+  };
+};
+
+const cursorUsageWindow = (value: unknown, resetsAt: string | null): UsageLimit | null => {
+  const usage = asJson(value);
+  if (!usage || readBoolean(usage.enabled) === false) return null;
+  const used = readNumeric(usage.used);
+  const limit = readNumeric(usage.limit);
+  const percentage =
+    [usage.totalPercentUsed, usage.autoPercentUsed, usage.apiPercentUsed]
+      .map(readNumeric)
+      .find((value): value is number => value !== null) ?? percentFromUsedLimit(used, limit);
+  if (percentage === null && used === null) return null;
+  return {
+    ...buildLimit(percentage, resetsAt),
+    ...(used !== null ? { used } : {}),
+    ...(limit !== null ? { limit } : {}),
+  };
+};
+
+const buildCursorUsage = (raw: Json | null): CursorUsage | null => {
+  if (!raw) return null;
+  const individual = asJson(raw.individualUsage);
+  const team = asJson(raw.teamUsage);
+  const resetsAt = readString(raw.billingCycleEnd);
+  const candidates: Array<[string, unknown]> = [
+    ['Plan', individual?.plan],
+    ['Personal cap', individual?.overall],
+    ['Team pool', team?.pooled],
+    ['On-demand', individual?.onDemand],
+    ['Team on-demand', team?.onDemand],
+  ];
+  const models = candidates.flatMap(([label, value]) => {
+    const limit = cursorUsageWindow(value, resetsAt);
+    return limit ? [{ id: `cursor:${label.toLowerCase().replace(/ /g, '-')}`, label, limit }] : [];
+  });
+  const session = models[0]?.limit;
+  if (!session) return null;
+
+  return {
+    plan: readString(raw.membershipType) ?? undefined,
+    ...finalize({ session, weekly: buildLimit(0, resetsAt) }),
+    models: models.slice(1),
+    raw,
+  };
+};
+
+const mimoBalanceSummary = (raw: Json): string | undefined => {
+  const data = asJson(raw.data);
+  if (!data) return undefined;
+  const balance = readString(data.balance);
+  const currency = readString(data.currency);
+  if (!balance || !currency) return undefined;
+  const parts = [`Balance · ${balance} ${currency}`];
+  const cash = readString(data.cashBalance);
+  const gift = readString(data.giftBalance);
+  if (cash || gift) parts.push(`Paid ${cash ?? '0'} · Granted ${gift ?? '0'}`);
+  return parts.join(' · ');
+};
+
+const buildMiMoUsage = (
+  balance: Json | null,
+  detail: Json | null,
+  usage: Json | null,
+): MiMoUsage | null => {
+  if (!balance || readNumeric(balance.code) !== 0) return null;
+  const plan = asJson(detail?.data);
+  const monthUsage = asJson(asJson(usage?.data)?.monthUsage);
+  const item = asArray(monthUsage?.items)
+    .map(asJson)
+    .find((entry) => entry !== null);
+  const used = item ? readNumeric(item.used) : null;
+  const limit = item ? readNumeric(item.limit) : null;
+  const session: UsageLimit = {
+    ...buildLimit(
+      readNumeric(monthUsage?.percent) ?? percentFromUsedLimit(used, limit),
+      readString(plan?.currentPeriodEnd),
+    ),
+    ...(used !== null ? { used } : {}),
+    ...(limit !== null ? { limit } : {}),
+  };
+  return {
+    plan: readString(plan?.planCode) ?? undefined,
+    ...finalize({ session, weekly: buildLimit(0, null) }),
+    models: [],
+    summary: mimoBalanceSummary(balance),
+    raw: balance,
+  };
+};
+
 /* -------------------- HTTP -------------------- */
 
 const fetchJson = async (
@@ -272,14 +532,22 @@ export class UsageService {
   }
 
   static async refreshAllUsage(): Promise<UsageState> {
-    const [claude, codex] = await Promise.all([
+    const [claude, codex, minimax, kimi, cursor, mimo] = await Promise.all([
       this.fetchClaudeUsage().catch(() => null),
       this.fetchCodexUsage().catch(() => null),
+      this.fetchMiniMaxUsage().catch(() => null),
+      this.fetchKimiUsage().catch(() => null),
+      this.fetchCursorUsage().catch(() => null),
+      this.fetchMiMoUsage().catch(() => null),
     ]);
 
     const next = await this.getUsageState();
     if (claude) next.claude = claude;
     if (codex) next.codex = codex;
+    if (minimax) next.minimax = minimax;
+    if (kimi) next.kimi = kimi;
+    if (cursor) next.cursor = cursor;
+    if (mimo) next.mimo = mimo;
 
     await this.saveUsageState(next);
     return next;
@@ -315,6 +583,56 @@ export class UsageService {
     if (!result.ok) return null;
 
     return buildCodexUsage(result.data);
+  }
+
+  static async fetchMiniMaxUsage(): Promise<MiniMaxUsage | null> {
+    const globalResult = await fetchJson(ENDPOINTS.miniMaxUsage);
+    const result = globalResult.ok
+      ? globalResult
+      : await fetchJson('https://platform.minimaxi.com/backend/account/token_plan/remains_percent');
+    if (!result.ok) return null;
+    return buildMiniMaxUsage(result.data);
+  }
+
+  static async fetchKimiUsage(): Promise<KimiUsage | null> {
+    const cookie = await chrome.cookies.get({ url: 'https://www.kimi.com', name: 'kimi-auth' });
+    const token = readString(cookie?.value);
+    if (!token) return null;
+
+    const result = await fetchJson(ENDPOINTS.kimiUsage, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'Connect-Protocol-Version': '1',
+        'X-Language': 'en-US',
+        'X-Msh-Platform': 'web',
+        'R-Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone,
+      },
+      body: JSON.stringify({ scope: ['FEATURE_CODING'] }),
+    });
+    if (!result.ok) return null;
+    return buildKimiUsage(result.data);
+  }
+
+  static async fetchCursorUsage(): Promise<CursorUsage | null> {
+    const result = await fetchJson(ENDPOINTS.cursorUsage);
+    if (!result.ok) return null;
+    return buildCursorUsage(result.data);
+  }
+
+  static async fetchMiMoUsage(): Promise<MiMoUsage | null> {
+    const [balance, detail, usage] = await Promise.all([
+      fetchJson(ENDPOINTS.mimoBalance, { headers: { 'X-Timezone': 'UTC' } }),
+      fetchJson(ENDPOINTS.mimoPlanDetail, { headers: { 'X-Timezone': 'UTC' } }),
+      fetchJson(ENDPOINTS.mimoPlanUsage, { headers: { 'X-Timezone': 'UTC' } }),
+    ]);
+    if (!balance.ok) return null;
+    return buildMiMoUsage(
+      balance.data,
+      detail.ok ? detail.data : null,
+      usage.ok ? usage.data : null,
+    );
   }
 
   private static async fetchCodexSession(): Promise<CodexSessionInfo | null> {

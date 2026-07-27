@@ -1,6 +1,6 @@
 export type UsageStatus = 'ok' | 'warning' | 'critical';
 
-export type ProviderId = 'claude' | 'codex';
+export type ProviderId = 'claude' | 'codex' | 'minimax' | 'kimi' | 'cursor' | 'mimo';
 
 export interface UsageLimit {
   percentage: number;
@@ -35,9 +35,31 @@ export interface CodexUsage {
   raw?: Record<string, unknown>;
 }
 
+/** Shared snapshot shape for providers added after the original Claude/Codex pair. */
+export interface ExternalProviderUsage {
+  plan?: string;
+  session: UsageLimit;
+  weekly: UsageLimit;
+  models: ModelUsage[];
+  status: UsageStatus;
+  lastUpdated: number;
+  /** Human-readable balance or account detail when the provider has no second quota window. */
+  summary?: string;
+  raw?: Record<string, unknown>;
+}
+
+export type MiniMaxUsage = ExternalProviderUsage;
+export type KimiUsage = ExternalProviderUsage;
+export type CursorUsage = ExternalProviderUsage;
+export type MiMoUsage = ExternalProviderUsage;
+
 export interface UsageState {
   claude?: ClaudeUsage;
   codex?: CodexUsage;
+  minimax?: MiniMaxUsage;
+  kimi?: KimiUsage;
+  cursor?: CursorUsage;
+  mimo?: MiMoUsage;
 }
 
 /* -------------------------------------------------------------------------- */

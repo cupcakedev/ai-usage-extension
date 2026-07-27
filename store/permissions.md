@@ -24,10 +24,9 @@ only update while the popup was open, which defeats the at-a-glance use case.
 
 ## cookies
 
-Used to read the `lastActiveOrg` cookie from `claude.ai` so the extension can
-build the correct `/api/organizations/{id}/usage` URL for the user's currently
-selected organization. The cookie value is never copied off-device and is only
-read, never written.
+Used to read the `lastActiveOrg` cookie from Claude and the `kimi-auth` cookie
+from Kimi Code, solely to make authenticated usage requests for the signed-in
+user. Cookie values are never copied off-device and are only read, never written.
 
 ## host: https://claude.ai/*
 
@@ -49,3 +48,33 @@ The legacy ChatGPT host that still resolves for some accounts. Same usage as
 `chatgpt.com` above: reading the user's own rate-limit data via their existing
 session and rendering the on-page overlay. Kept so signed-in users who land on
 the legacy domain see the same experience.
+
+## host: https://platform.minimax.io/*
+
+Required to read the signed-in user's MiniMax Token Plan quota from its own
+`/backend/account/token_plan/remains_percent` endpoint using existing browser
+cookies. The extension reads quota counters only and sends no prompts or chats.
+
+## host: https://platform.minimaxi.com/*
+
+Required for the China mainland MiniMax Token Plan surface, which uses the
+same authenticated quota endpoint and existing browser session as the global
+host. It is limited to usage data and never accesses model-generation routes.
+
+## host: https://www.kimi.com/*
+
+Required to read the existing Kimi Code session and fetch its coding-plan
+usage endpoint. The extension uses the short-lived authenticated web request
+only for quota data and never transmits the session token to another domain.
+
+## host: https://cursor.com/*
+
+Required to call Cursor's signed-in `/api/usage-summary` endpoint with the
+user's existing web session. The response contains plan and quota figures only;
+the extension neither reads source code nor sends editor or chat content.
+
+## host: https://platform.xiaomimimo.com/*
+
+Required to read the signed-in Xiaomi MiMo balance and token-plan usage from
+its console API using existing browser cookies. Requests are limited to balance,
+plan detail, and usage endpoints; no generation API is called.

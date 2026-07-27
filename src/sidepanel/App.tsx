@@ -1,5 +1,9 @@
 import claudeBrandAsset from '../assets/brands/claude-anthropic.jpg';
 import codexBrandAsset from '../assets/brands/codex-openai.jpg';
+import cursorBrandAsset from '../assets/brands/cursor.webp';
+import kimiBrandAsset from '../assets/brands/kimi.webp';
+import minimaxBrandAsset from '../assets/brands/minimax.webp';
+import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
 import { msg } from '../shared/i18n';
 import { useNow } from '../shared/hooks/useNow';
 import { ProviderCard } from './components/ProviderCard';
@@ -20,7 +24,14 @@ export const App = () => {
   } = useUsageData();
   const now = useNow(30_000);
 
-  const initialLoading = loading && !usage.claude && !usage.codex;
+  const initialLoading =
+    loading &&
+    !usage.claude &&
+    !usage.codex &&
+    !usage.minimax &&
+    !usage.kimi &&
+    !usage.cursor &&
+    !usage.mimo;
 
   return (
     <main className="au-shell">
@@ -93,6 +104,46 @@ export const App = () => {
           loading={initialLoading}
           now={now}
           emptyHint={msg('emptyCodex')}
+        />
+        <ProviderCard
+          title="MiniMax"
+          iconSrc={minimaxBrandAsset}
+          iconAlt="MiniMax"
+          usage={usage.minimax}
+          loading={initialLoading}
+          now={now}
+          emptyHint={msg('emptyMiniMax')}
+        />
+        <ProviderCard
+          title="Kimi Code"
+          iconSrc={kimiBrandAsset}
+          iconAlt="Kimi"
+          usage={usage.kimi}
+          loading={initialLoading}
+          now={now}
+          emptyHint={msg('emptyKimi')}
+        />
+        <ProviderCard
+          title="Cursor"
+          iconSrc={cursorBrandAsset}
+          iconAlt="Cursor"
+          usage={usage.cursor}
+          loading={initialLoading}
+          now={now}
+          emptyHint={msg('emptyCursor')}
+          primaryLabel={msg('planUsage')}
+          secondaryLabel=""
+        />
+        <ProviderCard
+          title="Xiaomi MiMo"
+          iconSrc={mimoBrandAsset}
+          iconAlt="Xiaomi"
+          usage={usage.mimo}
+          loading={initialLoading}
+          now={now}
+          emptyHint={msg('emptyMiMo')}
+          primaryLabel={msg('tokenPlan')}
+          secondaryLabel=""
         />
       </div>
 

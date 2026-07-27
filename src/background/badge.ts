@@ -43,7 +43,14 @@ const iconRange = (percent: number): number => {
   return Math.max(10, Math.floor(clamped / 10) * 10);
 };
 
-const PROVIDER_TITLE: Record<ProviderId, string> = { claude: 'Claude', codex: 'Codex' };
+const PROVIDER_TITLE: Record<ProviderId, string> = {
+  claude: 'Claude',
+  codex: 'Codex',
+  minimax: 'MiniMax',
+  kimi: 'Kimi',
+  cursor: 'Cursor',
+  mimo: 'MiMo',
+};
 const SESSION_LABEL = msg('sessionLimit');
 
 interface UsageSummary {
@@ -54,7 +61,7 @@ interface UsageSummary {
 const summarizeUsage = (state: UsageState): UsageSummary | null => {
   const rows: number[] = [];
 
-  (['claude', 'codex'] as const).forEach((provider) => {
+  (['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'] as const).forEach((provider) => {
     const usage = state[provider];
     if (!usage) return;
     rows.push(usage.session.percentage);
@@ -68,7 +75,7 @@ const summarizeUsage = (state: UsageState): UsageSummary | null => {
 
   const tooltip = [
     msg('appShortName'),
-    ...(['claude', 'codex'] as const).flatMap((provider) => {
+    ...(['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'] as const).flatMap((provider) => {
       const usage = state[provider];
       if (!usage) return [];
       return [

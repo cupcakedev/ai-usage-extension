@@ -1,21 +1,24 @@
 import React from 'react';
 import { msg } from '../../shared/i18n';
-import type { ClaudeUsage, CodexUsage } from '../../shared/types';
+import type { ClaudeUsage, CodexUsage, ExternalProviderUsage } from '../../shared/types';
 import { formatRelativeTime } from '../../shared/utils';
 import { UsageCard } from './UsageCard';
 import { UsageMetric } from './UsageMetric';
 
-type ProviderUsage = ClaudeUsage | CodexUsage;
+type ProviderUsage = ClaudeUsage | CodexUsage | ExternalProviderUsage;
 
 interface ProviderCardProps {
   title: string;
-  iconSrc: string;
-  iconAlt: string;
+  iconSrc?: string;
+  iconAlt?: string;
   usage?: ProviderUsage;
   loading: boolean;
   now: number;
   /** Hint shown when the provider has no snapshot yet. */
   emptyHint: string;
+  /** Labels vary because some providers expose a billing or token-plan window rather than 5h/7d quotas. */
+  primaryLabel?: string;
+  secondaryLabel?: string;
   /** Optional content pinned to the bottom of the card (e.g. a setting). */
   footer?: React.ReactNode;
 }
@@ -51,6 +54,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   loading,
   now,
   emptyHint,
+  primaryLabel = msg('sessionLimit'),
+  secondaryLabel = msg('weeklyLimit'),
   footer,
 }) => {
   const subtitle = loading
@@ -65,8 +70,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
         <Skeleton />
       ) : usage ? (
         <>
-          <UsageMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
-          <UsageMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+          <UsageMetric label={primaryLabel} limit={usage.session} now={now} />
+          {secondaryLabel && <UsageMetric label={secondaryLabel} limit={usage.weekly} now={now} />}
           <ModelBreakdown usage={usage} now={now} />
           {'plan' in usage && usage.plan !== 'unknown' && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>
@@ -76,6 +81,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
               {msg('availableResetsLabel', String(usage.availableResets))}
             </p>
           )}
+          {'summary' in usage && usage.summary && <p className="au-footnote">{usage.summary}</p>}
         </>
       ) : (
         <p className="au-empty">{emptyHint}</p>

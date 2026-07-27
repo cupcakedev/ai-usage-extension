@@ -3,19 +3,20 @@
 [![CI](https://github.com/cupcakedev/ai-usage-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/cupcakedev/ai-usage-extension/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-A Chrome extension (Manifest V3) that tracks your **Claude** and **Codex** usage
-limits — both the 5-hour session window and the 7-day weekly window — and surfaces
-them in a popup, an on-page overlay, and the toolbar badge.
+A Chrome extension (Manifest V3) that tracks usage limits from **Claude**, **Codex**,
+**MiniMax**, **Kimi Code**, **Cursor**, and **Xiaomi MiMo**, using your existing browser
+sessions. It surfaces the data in a popup, an on-page overlay, and the toolbar badge.
 
 ## Features
 
-- **Live limits** for Claude and Codex: percentage used, raw counts, and time to reset.
+- **Live limits** for Claude, Codex, MiniMax, Kimi Code, Cursor, and Xiaomi MiMo:
+  percentage used, raw counts, and time to reset when exposed by the provider.
 - **Toolbar badge** showing your highest current usage at a glance.
 - **On-page overlay** on `claude.ai` — a collapsible capsule rendered in a Shadow DOM,
   so it never clashes with the host page's styles.
 - **Background refresh** every 5 minutes via `chrome.alarms`, plus on-demand refresh.
-- **Private by design**: usage is read from your own authenticated sessions with
-  Claude and OpenAI. No external servers, no accounts, no tracking.
+- **Private by design**: usage is read from your own authenticated browser sessions.
+  No external servers, no extension accounts, no tracking.
 
 ## Install
 
@@ -35,7 +36,7 @@ Then:
 1. Open `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Click **Load unpacked** and select the `dist/` directory.
-4. Sign in to `claude.ai` and `chatgpt.com`, then open the popup and refresh.
+4. Sign in to the providers you want to track, then open the popup and refresh.
 
 ## Architecture
 

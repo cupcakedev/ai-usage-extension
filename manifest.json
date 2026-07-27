@@ -12,7 +12,12 @@
   "host_permissions": [
     "https://claude.ai/*",
     "https://chatgpt.com/*",
-    "https://chat.openai.com/*"
+    "https://chat.openai.com/*",
+    "https://platform.minimax.io/*",
+    "https://platform.minimaxi.com/*",
+    "https://www.kimi.com/*",
+    "https://cursor.com/*",
+    "https://platform.xiaomimimo.com/*"
   ],
   "background": {
     "service_worker": "src/background/index.ts",

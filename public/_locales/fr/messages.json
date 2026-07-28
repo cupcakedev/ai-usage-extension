@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Toutes les modifications sont enregistrées"
+  },
+  "optionsSaving": {
+    "message": "Enregistrement…"
+  },
+  "optionsSaveError": {
+    "message": "Échec de l’enregistrement"
+  },
+  "optionsSkip": {
+    "message": "Aller aux réglages"
+  },
+  "optionsLoading": {
+    "message": "Chargement des réglages…"
+  },
+  "optionsInstantHint": {
+    "message": "Chaque modification est enregistrée et appliquée immédiatement — aucun rechargement nécessaire."
+  },
+  "optionsNavLabel": {
+    "message": "Sections des réglages"
+  },
+  "optionsNavLayout": {
+    "message": "Disposition"
+  },
+  "optionsNavProviders": {
+    "message": "Fournisseurs"
+  },
+  "optionsNavBadge": {
+    "message": "Icône de la barre d’outils"
+  },
+  "optionsNavOverlays": {
+    "message": "Surcouches sur la page"
+  },
+  "optionsLayoutTitle": {
+    "message": "Disposition du popup"
+  },
+  "optionsLayoutDescription": {
+    "message": "Choisissez comment les cartes des fournisseurs visibles sont disposées dans le popup."
+  },
+  "optionsLayoutSingle": {
+    "message": "Une colonne"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Une carte pleine largeur par fournisseur."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "largeur 360 px"
+  },
+  "optionsLayoutGrid": {
+    "message": "Deux colonnes"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Vue compacte avec deux cartes par ligne."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "largeur 500 px"
+  },
+  "optionsProvidersTitle": {
+    "message": "Fournisseurs"
+  },
+  "optionsProvidersDescription": {
+    "message": "Masquez une carte ou choisissez les détails d’utilisation qu’elle peut afficher. Les données indisponibles sont masquées automatiquement."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 sur $2 affichés"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 sur $2 détails"
+  },
+  "optionsProviderHidden": {
+    "message": "Masqué dans le popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Afficher $1 dans le popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Détails d’utilisation de $1"
+  },
+  "optionsMetricSession": {
+    "message": "Utilisation de la session"
+  },
+  "optionsMetricWeekly": {
+    "message": "Utilisation hebdomadaire"
+  },
+  "optionsMetricModels": {
+    "message": "Détail par modèle"
+  },
+  "optionsMetricReset": {
+    "message": "Heure de réinitialisation"
+  },
+  "optionsMetricPlan": {
+    "message": "Forfait"
+  },
+  "optionsMetricSummary": {
+    "message": "Solde / résumé"
+  },
+  "optionsMetricBalance": {
+    "message": "Solde"
+  },
+  "optionsBadgeTitle": {
+    "message": "Plage de l’icône"
+  },
+  "optionsBadgeDescription": {
+    "message": "L’icône de l’extension change par paliers de 10 % selon cette source."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Source de l’icône"
+  },
+  "optionsBadgeHighest": {
+    "message": "Le plus élevé des fournisseurs visibles"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Utilise le pourcentage actuel le plus élevé parmi les cartes affichées."
+  },
+  "optionsBadgeSelected": {
+    "message": "Fournisseur sélectionné"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Utilise un seul fournisseur, quelle que soit la visibilité des autres cartes."
+  },
+  "optionsBadgeWindow": {
+    "message": "Fenêtre d’utilisation"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Session"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Semaine"
+  },
+  "optionsBadgeProvider": {
+    "message": "Fournisseur"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Ce fournisseur est masqué dans le popup, mais sa plage d’icône reste active."
+  },
+  "optionsBadgeSteps": {
+    "message": "Paliers de l’icône"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "arrondi au palier de 10 % inférieur"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Surcouches sur la page"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Affiche la capsule d’utilisation repliable à côté du champ de message."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Activer la surcouche $1 sur la page"
+  },
+  "optionsResetTitle": {
+    "message": "Réinitialiser"
+  },
+  "optionsResetDescription": {
+    "message": "Restaure toutes les préférences de cette page. Action irréversible."
+  },
+  "optionsResetAction": {
+    "message": "Réinitialiser"
+  },
+  "optionsResetConfirm": {
+    "message": "Cliquez à nouveau pour confirmer"
+  },
+  "planUsage": {
+    "message": "Utilisation du forfait"
+  },
+  "tokenPlan": {
+    "message": "Forfait de jetons"
+  },
+  "optionsTitle": {
+    "message": "Réglages d’AI Usage Tracker"
   }
 }

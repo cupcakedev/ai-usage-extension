@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Tutte le modifiche salvate"
+  },
+  "optionsSaving": {
+    "message": "Salvataggio…"
+  },
+  "optionsSaveError": {
+    "message": "Impossibile salvare"
+  },
+  "optionsSkip": {
+    "message": "Vai alle impostazioni"
+  },
+  "optionsLoading": {
+    "message": "Caricamento impostazioni…"
+  },
+  "optionsInstantHint": {
+    "message": "Ogni modifica viene salvata e applicata subito: nessun ricaricamento."
+  },
+  "optionsNavLabel": {
+    "message": "Sezioni delle impostazioni"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Provider"
+  },
+  "optionsNavBadge": {
+    "message": "Icona nella barra"
+  },
+  "optionsNavOverlays": {
+    "message": "Overlay nella pagina"
+  },
+  "optionsLayoutTitle": {
+    "message": "Layout del popup"
+  },
+  "optionsLayoutDescription": {
+    "message": "Scegli come disporre le schede dei provider visibili nel popup."
+  },
+  "optionsLayoutSingle": {
+    "message": "Una colonna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Una scheda a tutta larghezza per ogni provider."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "larghezza 360 px"
+  },
+  "optionsLayoutGrid": {
+    "message": "Due colonne"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Panoramica compatta con due schede per riga."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "larghezza 500 px"
+  },
+  "optionsProvidersTitle": {
+    "message": "Provider"
+  },
+  "optionsProvidersDescription": {
+    "message": "Nascondi una scheda o scegli i dettagli di utilizzo che può mostrare. I dati non disponibili restano nascosti automaticamente."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 di $2 visibili"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 di $2 dettagli"
+  },
+  "optionsProviderHidden": {
+    "message": "Nascosto nel popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Mostra $1 nel popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Dettagli di utilizzo di $1"
+  },
+  "optionsMetricSession": {
+    "message": "Utilizzo della sessione"
+  },
+  "optionsMetricWeekly": {
+    "message": "Utilizzo settimanale"
+  },
+  "optionsMetricModels": {
+    "message": "Dettaglio per modello"
+  },
+  "optionsMetricReset": {
+    "message": "Orario di reset"
+  },
+  "optionsMetricPlan": {
+    "message": "Piano"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / riepilogo"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Intervallo dell’icona"
+  },
+  "optionsBadgeDescription": {
+    "message": "L’icona dell’estensione cambia a intervalli del 10% in base a questa fonte."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Fonte dell’icona"
+  },
+  "optionsBadgeHighest": {
+    "message": "Il più alto tra i provider visibili"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Usa la percentuale attuale più alta tra le schede mostrate."
+  },
+  "optionsBadgeSelected": {
+    "message": "Provider selezionato"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Usa un solo provider, indipendentemente dalla visibilità delle altre schede."
+  },
+  "optionsBadgeWindow": {
+    "message": "Finestra di utilizzo"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sessione"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Settimana"
+  },
+  "optionsBadgeProvider": {
+    "message": "Provider"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Questo provider è nascosto nel popup, ma il suo intervallo dell’icona resta attivo."
+  },
+  "optionsBadgeSteps": {
+    "message": "Passi dell’icona"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "arrotondato per difetto al 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Overlay nella pagina"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Mostra la capsula di utilizzo comprimibile accanto al campo del messaggio."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Attiva l’overlay di $1 nella pagina"
+  },
+  "optionsResetTitle": {
+    "message": "Ripristina i valori predefiniti"
+  },
+  "optionsResetDescription": {
+    "message": "Ripristina tutte le preferenze di questa pagina. L’azione è irreversibile."
+  },
+  "optionsResetAction": {
+    "message": "Ripristina"
+  },
+  "optionsResetConfirm": {
+    "message": "Fai clic di nuovo per confermare"
+  },
+  "planUsage": {
+    "message": "Utilizzo del piano"
+  },
+  "tokenPlan": {
+    "message": "Piano token"
+  },
+  "optionsTitle": {
+    "message": "Impostazioni di AI Usage Tracker"
   }
 }

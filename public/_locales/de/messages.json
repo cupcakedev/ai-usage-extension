@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Alle Änderungen gespeichert"
+  },
+  "optionsSaving": {
+    "message": "Wird gespeichert…"
+  },
+  "optionsSaveError": {
+    "message": "Speichern fehlgeschlagen"
+  },
+  "optionsSkip": {
+    "message": "Zu den Einstellungen"
+  },
+  "optionsLoading": {
+    "message": "Einstellungen werden geladen…"
+  },
+  "optionsInstantHint": {
+    "message": "Jede Änderung wird sofort gespeichert und angewendet – kein Neuladen nötig."
+  },
+  "optionsNavLabel": {
+    "message": "Einstellungsbereiche"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Anbieter"
+  },
+  "optionsNavBadge": {
+    "message": "Symbol in der Leiste"
+  },
+  "optionsNavOverlays": {
+    "message": "Overlays auf der Seite"
+  },
+  "optionsLayoutTitle": {
+    "message": "Popup-Layout"
+  },
+  "optionsLayoutDescription": {
+    "message": "Lege fest, wie sichtbare Anbieterkarten im Popup angeordnet werden."
+  },
+  "optionsLayoutSingle": {
+    "message": "Eine Spalte"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Eine Karte über die volle Breite pro Anbieter."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "360 px breit"
+  },
+  "optionsLayoutGrid": {
+    "message": "Zwei Spalten"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompakte Übersicht mit zwei Karten pro Zeile."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "500 px breit"
+  },
+  "optionsProvidersTitle": {
+    "message": "Anbieter"
+  },
+  "optionsProvidersDescription": {
+    "message": "Blende eine Karte aus oder wähle, welche Nutzungsdetails sie zeigen darf. Nicht verfügbare Daten bleiben automatisch ausgeblendet."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 von $2 sichtbar"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 von $2 Details"
+  },
+  "optionsProviderHidden": {
+    "message": "Im Popup ausgeblendet"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "$1 im Popup anzeigen"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Nutzungsdetails von $1"
+  },
+  "optionsMetricSession": {
+    "message": "Sitzungsnutzung"
+  },
+  "optionsMetricWeekly": {
+    "message": "Wochennutzung"
+  },
+  "optionsMetricModels": {
+    "message": "Aufschlüsselung nach Modell"
+  },
+  "optionsMetricReset": {
+    "message": "Zurücksetzung"
+  },
+  "optionsMetricPlan": {
+    "message": "Tarif"
+  },
+  "optionsMetricSummary": {
+    "message": "Guthaben / Übersicht"
+  },
+  "optionsMetricBalance": {
+    "message": "Guthaben"
+  },
+  "optionsBadgeTitle": {
+    "message": "Symbolbereich"
+  },
+  "optionsBadgeDescription": {
+    "message": "Das Symbol der Erweiterung wechselt in 10-%-Schritten auf Basis dieser Quelle."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Quelle des Symbols"
+  },
+  "optionsBadgeHighest": {
+    "message": "Höchster Wert sichtbarer Anbieter"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Nutzt den höchsten aktuellen Prozentwert der angezeigten Karten."
+  },
+  "optionsBadgeSelected": {
+    "message": "Ausgewählter Anbieter"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Nutzt einen Anbieter, unabhängig von der Sichtbarkeit anderer Karten."
+  },
+  "optionsBadgeWindow": {
+    "message": "Nutzungsfenster"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sitzung"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Woche"
+  },
+  "optionsBadgeProvider": {
+    "message": "Anbieter"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Dieser Anbieter ist im Popup ausgeblendet, sein Symbolbereich bleibt aber aktiv."
+  },
+  "optionsBadgeSteps": {
+    "message": "Symbolstufen"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "auf volle 10 % abgerundet"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Overlays auf der Seite"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Zeigt die einklappbare Nutzungskapsel neben dem Eingabefeld."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1-Overlay auf der Seite aktivieren"
+  },
+  "optionsResetTitle": {
+    "message": "Auf Standard zurücksetzen"
+  },
+  "optionsResetDescription": {
+    "message": "Setzt alle Einstellungen dieser Seite zurück. Das lässt sich nicht rückgängig machen."
+  },
+  "optionsResetAction": {
+    "message": "Zurücksetzen"
+  },
+  "optionsResetConfirm": {
+    "message": "Zum Bestätigen erneut klicken"
+  },
+  "planUsage": {
+    "message": "Tarifnutzung"
+  },
+  "tokenPlan": {
+    "message": "Token-Tarif"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker – Einstellungen"
   }
 }

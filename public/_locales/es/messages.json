@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Todos los cambios guardados"
+  },
+  "optionsSaving": {
+    "message": "Guardando…"
+  },
+  "optionsSaveError": {
+    "message": "No se pudo guardar"
+  },
+  "optionsSkip": {
+    "message": "Ir a los ajustes"
+  },
+  "optionsLoading": {
+    "message": "Cargando ajustes…"
+  },
+  "optionsInstantHint": {
+    "message": "Cada cambio se guarda y se aplica al instante: no hace falta recargar."
+  },
+  "optionsNavLabel": {
+    "message": "Secciones de ajustes"
+  },
+  "optionsNavLayout": {
+    "message": "Diseño"
+  },
+  "optionsNavProviders": {
+    "message": "Proveedores"
+  },
+  "optionsNavBadge": {
+    "message": "Icono de la barra"
+  },
+  "optionsNavOverlays": {
+    "message": "Superposiciones en la página"
+  },
+  "optionsLayoutTitle": {
+    "message": "Diseño del popup"
+  },
+  "optionsLayoutDescription": {
+    "message": "Elige cómo se organizan las tarjetas de proveedores visibles en el popup."
+  },
+  "optionsLayoutSingle": {
+    "message": "Una columna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Una tarjeta de ancho completo por proveedor."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "360 px de ancho"
+  },
+  "optionsLayoutGrid": {
+    "message": "Dos columnas"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Vista compacta con dos tarjetas por fila."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "500 px de ancho"
+  },
+  "optionsProvidersTitle": {
+    "message": "Proveedores"
+  },
+  "optionsProvidersDescription": {
+    "message": "Oculta una tarjeta o elige los detalles de uso que puede mostrar. Los datos no disponibles se ocultan automáticamente."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 de $2 visibles"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 de $2 detalles"
+  },
+  "optionsProviderHidden": {
+    "message": "Oculto en el popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Mostrar $1 en el popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Detalles de uso de $1"
+  },
+  "optionsMetricSession": {
+    "message": "Uso de la sesión"
+  },
+  "optionsMetricWeekly": {
+    "message": "Uso semanal"
+  },
+  "optionsMetricModels": {
+    "message": "Desglose por modelo"
+  },
+  "optionsMetricReset": {
+    "message": "Hora de reinicio"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / resumen"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Rango del icono"
+  },
+  "optionsBadgeDescription": {
+    "message": "El icono de la extensión cambia en rangos del 10 % según esta fuente."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Fuente del icono"
+  },
+  "optionsBadgeHighest": {
+    "message": "El más alto de los proveedores visibles"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Usa el porcentaje actual más alto entre las tarjetas mostradas."
+  },
+  "optionsBadgeSelected": {
+    "message": "Proveedor seleccionado"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Usa un proveedor sin importar la visibilidad de las demás tarjetas."
+  },
+  "optionsBadgeWindow": {
+    "message": "Ventana de uso"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesión"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Semana"
+  },
+  "optionsBadgeProvider": {
+    "message": "Proveedor"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Este proveedor está oculto en el popup, pero su rango de icono sigue activo."
+  },
+  "optionsBadgeSteps": {
+    "message": "Pasos del icono"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "redondeado hacia abajo al 10 % más cercano"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Superposiciones en la página"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Muestra la cápsula de uso plegable junto al cuadro de mensaje."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Activar la superposición de $1 en la página"
+  },
+  "optionsResetTitle": {
+    "message": "Restablecer valores"
+  },
+  "optionsResetDescription": {
+    "message": "Restaura todas las preferencias de esta página. No se puede deshacer."
+  },
+  "optionsResetAction": {
+    "message": "Restablecer"
+  },
+  "optionsResetConfirm": {
+    "message": "Haz clic otra vez para confirmar"
+  },
+  "planUsage": {
+    "message": "Uso del plan"
+  },
+  "tokenPlan": {
+    "message": "Plan de tokens"
+  },
+  "optionsTitle": {
+    "message": "Ajustes de AI Usage Tracker"
   }
 }

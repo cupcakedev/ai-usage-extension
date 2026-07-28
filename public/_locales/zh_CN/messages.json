@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "分钟"
+  },
+  "optionsSaved": {
+    "message": "所有更改已保存"
+  },
+  "optionsSaving": {
+    "message": "保存中…"
+  },
+  "optionsSaveError": {
+    "message": "无法保存"
+  },
+  "optionsSkip": {
+    "message": "跳到设置"
+  },
+  "optionsLoading": {
+    "message": "正在加载设置…"
+  },
+  "optionsInstantHint": {
+    "message": "每项更改都会立即保存并生效，无需重新加载。"
+  },
+  "optionsNavLabel": {
+    "message": "设置分区"
+  },
+  "optionsNavLayout": {
+    "message": "布局"
+  },
+  "optionsNavProviders": {
+    "message": "服务商"
+  },
+  "optionsNavBadge": {
+    "message": "工具栏图标"
+  },
+  "optionsNavOverlays": {
+    "message": "页面内浮层"
+  },
+  "optionsLayoutTitle": {
+    "message": "弹窗布局"
+  },
+  "optionsLayoutDescription": {
+    "message": "选择弹窗中可见服务商卡片的排列方式。"
+  },
+  "optionsLayoutSingle": {
+    "message": "单列"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "每个服务商占满整行。"
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "宽 360 px"
+  },
+  "optionsLayoutGrid": {
+    "message": "双列"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "紧凑视图，每行两张卡片。"
+  },
+  "optionsLayoutGridWidth": {
+    "message": "宽 500 px"
+  },
+  "optionsProvidersTitle": {
+    "message": "服务商"
+  },
+  "optionsProvidersDescription": {
+    "message": "隐藏卡片，或选择它可显示的用量信息。无法获取的数据会自动隐藏。"
+  },
+  "optionsProvidersShown": {
+    "message": "已显示 $1/$2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1/$2 项"
+  },
+  "optionsProviderHidden": {
+    "message": "已在弹窗中隐藏"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "在弹窗中显示 $1"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 的用量信息"
+  },
+  "optionsMetricSession": {
+    "message": "会话用量"
+  },
+  "optionsMetricWeekly": {
+    "message": "每周用量"
+  },
+  "optionsMetricModels": {
+    "message": "按模型细分"
+  },
+  "optionsMetricReset": {
+    "message": "重置时间"
+  },
+  "optionsMetricPlan": {
+    "message": "套餐"
+  },
+  "optionsMetricSummary": {
+    "message": "余额 / 概览"
+  },
+  "optionsMetricBalance": {
+    "message": "余额"
+  },
+  "optionsBadgeTitle": {
+    "message": "图标区间"
+  },
+  "optionsBadgeDescription": {
+    "message": "扩展图标会依据该来源，按 10% 的区间变化。"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "图标来源"
+  },
+  "optionsBadgeHighest": {
+    "message": "可见服务商中的最高值"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "使用已显示卡片中当前百分比最高的那个。"
+  },
+  "optionsBadgeSelected": {
+    "message": "指定服务商"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "只用一个服务商，与其他卡片是否显示无关。"
+  },
+  "optionsBadgeWindow": {
+    "message": "统计周期"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "会话"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "每周"
+  },
+  "optionsBadgeProvider": {
+    "message": "服务商"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "该服务商已在弹窗中隐藏，但其图标区间仍然生效。"
+  },
+  "optionsBadgeSteps": {
+    "message": "工具栏图标档位"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "向下取整到 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "页面内浮层"
+  },
+  "optionsOverlaysDescription": {
+    "message": "在输入框旁显示可折叠的用量胶囊。"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "启用 $1 的页面内浮层"
+  },
+  "optionsResetTitle": {
+    "message": "恢复默认设置"
+  },
+  "optionsResetDescription": {
+    "message": "恢复本页的所有设置。此操作无法撤销。"
+  },
+  "optionsResetAction": {
+    "message": "恢复默认"
+  },
+  "optionsResetConfirm": {
+    "message": "再次点击以确认"
+  },
+  "planUsage": {
+    "message": "套餐用量"
+  },
+  "tokenPlan": {
+    "message": "Token 套餐"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker 设置"
   }
 }

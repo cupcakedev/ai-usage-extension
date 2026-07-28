@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "मि."
+  },
+  "optionsSaved": {
+    "message": "सभी बदलाव सहेजे गए"
+  },
+  "optionsSaving": {
+    "message": "सहेजा जा रहा है…"
+  },
+  "optionsSaveError": {
+    "message": "सहेजा नहीं जा सका"
+  },
+  "optionsSkip": {
+    "message": "सेटिंग्स पर जाएँ"
+  },
+  "optionsLoading": {
+    "message": "सेटिंग्स लोड हो रही हैं…"
+  },
+  "optionsInstantHint": {
+    "message": "हर बदलाव तुरंत सहेजा और लागू किया जाता है — रीलोड की ज़रूरत नहीं।"
+  },
+  "optionsNavLabel": {
+    "message": "सेटिंग्स अनुभाग"
+  },
+  "optionsNavLayout": {
+    "message": "लेआउट"
+  },
+  "optionsNavProviders": {
+    "message": "प्रोवाइडर"
+  },
+  "optionsNavBadge": {
+    "message": "टूलबार आइकन"
+  },
+  "optionsNavOverlays": {
+    "message": "पेज पर ओवरले"
+  },
+  "optionsLayoutTitle": {
+    "message": "पॉपअप लेआउट"
+  },
+  "optionsLayoutDescription": {
+    "message": "चुनें कि पॉपअप में दिख रहे प्रोवाइडर कार्ड कैसे व्यवस्थित हों।"
+  },
+  "optionsLayoutSingle": {
+    "message": "एक कॉलम"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "हर प्रोवाइडर के लिए पूरी चौड़ाई का कार्ड।"
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "चौड़ाई 360 px"
+  },
+  "optionsLayoutGrid": {
+    "message": "दो कॉलम"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "कॉम्पैक्ट दृश्य, हर पंक्ति में दो कार्ड।"
+  },
+  "optionsLayoutGridWidth": {
+    "message": "चौड़ाई 500 px"
+  },
+  "optionsProvidersTitle": {
+    "message": "प्रोवाइडर"
+  },
+  "optionsProvidersDescription": {
+    "message": "कार्ड छिपाएँ या चुनें कि वह कौन-से उपयोग विवरण दिखा सकता है। अनुपलब्ध डेटा अपने आप छिपा रहता है।"
+  },
+  "optionsProvidersShown": {
+    "message": "$2 में से $1 दिख रहे"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 में से $1 विवरण"
+  },
+  "optionsProviderHidden": {
+    "message": "पॉपअप में छिपा"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "पॉपअप में $1 दिखाएँ"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 के उपयोग विवरण"
+  },
+  "optionsMetricSession": {
+    "message": "सेशन उपयोग"
+  },
+  "optionsMetricWeekly": {
+    "message": "साप्ताहिक उपयोग"
+  },
+  "optionsMetricModels": {
+    "message": "मॉडल के अनुसार विवरण"
+  },
+  "optionsMetricReset": {
+    "message": "रीसेट समय"
+  },
+  "optionsMetricPlan": {
+    "message": "प्लान"
+  },
+  "optionsMetricSummary": {
+    "message": "बैलेंस / सारांश"
+  },
+  "optionsMetricBalance": {
+    "message": "बैलेंस"
+  },
+  "optionsBadgeTitle": {
+    "message": "आइकन रेंज"
+  },
+  "optionsBadgeDescription": {
+    "message": "इस स्रोत के आधार पर एक्सटेंशन आइकन 10% की रेंज में बदलता है।"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "आइकन का स्रोत"
+  },
+  "optionsBadgeHighest": {
+    "message": "दिख रहे प्रोवाइडर में सबसे अधिक"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "दिख रहे कार्डों में सबसे अधिक मौजूदा प्रतिशत का उपयोग करें।"
+  },
+  "optionsBadgeSelected": {
+    "message": "चुना गया प्रोवाइडर"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "अन्य कार्ड दिख रहे हों या नहीं, एक ही प्रोवाइडर का उपयोग करें।"
+  },
+  "optionsBadgeWindow": {
+    "message": "उपयोग अवधि"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "सेशन"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "साप्ताहिक"
+  },
+  "optionsBadgeProvider": {
+    "message": "प्रोवाइडर"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "यह प्रोवाइडर पॉपअप में छिपा है, पर इसकी आइकन रेंज सक्रिय रहती है।"
+  },
+  "optionsBadgeSteps": {
+    "message": "टूलबार आइकन चरण"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "निकटतम 10% तक नीचे की ओर"
+  },
+  "optionsOverlaysTitle": {
+    "message": "पेज पर ओवरले"
+  },
+  "optionsOverlaysDescription": {
+    "message": "मैसेज बॉक्स के पास मोड़ी जा सकने वाली उपयोग कैप्सूल दिखाएँ।"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 के लिए पेज ओवरले सक्षम करें"
+  },
+  "optionsResetTitle": {
+    "message": "डिफ़ॉल्ट पर रीसेट करें"
+  },
+  "optionsResetDescription": {
+    "message": "इस पेज की सभी प्राथमिकताएँ बहाल करता है। इसे पूर्ववत नहीं किया जा सकता।"
+  },
+  "optionsResetAction": {
+    "message": "रीसेट करें"
+  },
+  "optionsResetConfirm": {
+    "message": "पुष्टि के लिए फिर क्लिक करें"
+  },
+  "planUsage": {
+    "message": "प्लान उपयोग"
+  },
+  "tokenPlan": {
+    "message": "टोकन प्लान"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker सेटिंग्स"
   }
 }

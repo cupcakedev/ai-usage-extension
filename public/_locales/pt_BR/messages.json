@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Todas as alterações salvas"
+  },
+  "optionsSaving": {
+    "message": "Salvando…"
+  },
+  "optionsSaveError": {
+    "message": "Não foi possível salvar"
+  },
+  "optionsSkip": {
+    "message": "Ir para as configurações"
+  },
+  "optionsLoading": {
+    "message": "Carregando configurações…"
+  },
+  "optionsInstantHint": {
+    "message": "Cada alteração é salva e aplicada na hora — sem precisar recarregar."
+  },
+  "optionsNavLabel": {
+    "message": "Seções de configurações"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Provedores"
+  },
+  "optionsNavBadge": {
+    "message": "Ícone da barra"
+  },
+  "optionsNavOverlays": {
+    "message": "Sobreposições na página"
+  },
+  "optionsLayoutTitle": {
+    "message": "Layout do popup"
+  },
+  "optionsLayoutDescription": {
+    "message": "Escolha como os cards dos provedores visíveis são organizados no popup."
+  },
+  "optionsLayoutSingle": {
+    "message": "Uma coluna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Um card de largura total para cada provedor."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "360 px de largura"
+  },
+  "optionsLayoutGrid": {
+    "message": "Duas colunas"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Visão compacta com dois cards por linha."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "500 px de largura"
+  },
+  "optionsProvidersTitle": {
+    "message": "Provedores"
+  },
+  "optionsProvidersDescription": {
+    "message": "Oculte um card ou escolha os detalhes de uso que ele pode exibir. Dados indisponíveis ficam ocultos automaticamente."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 de $2 exibidos"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 de $2 detalhes"
+  },
+  "optionsProviderHidden": {
+    "message": "Oculto no popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Exibir $1 no popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Detalhes de uso de $1"
+  },
+  "optionsMetricSession": {
+    "message": "Uso da sessão"
+  },
+  "optionsMetricWeekly": {
+    "message": "Uso semanal"
+  },
+  "optionsMetricModels": {
+    "message": "Detalhamento por modelo"
+  },
+  "optionsMetricReset": {
+    "message": "Horário de reinício"
+  },
+  "optionsMetricPlan": {
+    "message": "Plano"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / resumo"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Faixa do ícone"
+  },
+  "optionsBadgeDescription": {
+    "message": "O ícone da extensão muda em faixas de 10% com base nesta fonte."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Fonte do ícone"
+  },
+  "optionsBadgeHighest": {
+    "message": "Maior entre os provedores visíveis"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Usa a maior porcentagem atual entre os cards exibidos."
+  },
+  "optionsBadgeSelected": {
+    "message": "Provedor selecionado"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Usa um provedor, independentemente da visibilidade dos outros cards."
+  },
+  "optionsBadgeWindow": {
+    "message": "Janela de uso"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sessão"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Semana"
+  },
+  "optionsBadgeProvider": {
+    "message": "Provedor"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Este provedor está oculto no popup, mas a faixa do ícone continua ativa."
+  },
+  "optionsBadgeSteps": {
+    "message": "Etapas do ícone"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "arredondado para baixo a cada 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Sobreposições na página"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Mostra a cápsula de uso recolhível ao lado do campo de mensagem."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Ativar sobreposição de $1 na página"
+  },
+  "optionsResetTitle": {
+    "message": "Restaurar padrões"
+  },
+  "optionsResetDescription": {
+    "message": "Restaura todas as preferências desta página. Não é possível desfazer."
+  },
+  "optionsResetAction": {
+    "message": "Restaurar padrões"
+  },
+  "optionsResetConfirm": {
+    "message": "Clique novamente para confirmar"
+  },
+  "planUsage": {
+    "message": "Uso do plano"
+  },
+  "tokenPlan": {
+    "message": "Plano de tokens"
+  },
+  "optionsTitle": {
+    "message": "Configurações do AI Usage Tracker"
   }
 }

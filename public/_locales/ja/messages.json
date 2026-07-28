@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "分"
+  },
+  "optionsSaved": {
+    "message": "すべての変更を保存しました"
+  },
+  "optionsSaving": {
+    "message": "保存中…"
+  },
+  "optionsSaveError": {
+    "message": "保存できませんでした"
+  },
+  "optionsSkip": {
+    "message": "設定へスキップ"
+  },
+  "optionsLoading": {
+    "message": "設定を読み込み中…"
+  },
+  "optionsInstantHint": {
+    "message": "変更は即座に保存・適用されます。再読み込みは不要です。"
+  },
+  "optionsNavLabel": {
+    "message": "設定セクション"
+  },
+  "optionsNavLayout": {
+    "message": "レイアウト"
+  },
+  "optionsNavProviders": {
+    "message": "プロバイダー"
+  },
+  "optionsNavBadge": {
+    "message": "ツールバーアイコン"
+  },
+  "optionsNavOverlays": {
+    "message": "ページ内オーバーレイ"
+  },
+  "optionsLayoutTitle": {
+    "message": "ポップアップのレイアウト"
+  },
+  "optionsLayoutDescription": {
+    "message": "表示中のプロバイダーカードの並べ方を選びます。"
+  },
+  "optionsLayoutSingle": {
+    "message": "1列"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "各プロバイダーを全幅カードで表示します。"
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "幅 360 px"
+  },
+  "optionsLayoutGrid": {
+    "message": "2列"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "1行に2枚のカードを並べたコンパクト表示。"
+  },
+  "optionsLayoutGridWidth": {
+    "message": "幅 500 px"
+  },
+  "optionsProvidersTitle": {
+    "message": "プロバイダー"
+  },
+  "optionsProvidersDescription": {
+    "message": "カードを非表示にするか、表示する使用状況の項目を選びます。取得できないデータは自動的に非表示になります。"
+  },
+  "optionsProvidersShown": {
+    "message": "$2 件中 $1 件を表示"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 件中 $1 件"
+  },
+  "optionsProviderHidden": {
+    "message": "ポップアップで非表示"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "ポップアップに $1 を表示"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 の使用状況の項目"
+  },
+  "optionsMetricSession": {
+    "message": "セッションの使用量"
+  },
+  "optionsMetricWeekly": {
+    "message": "週間の使用量"
+  },
+  "optionsMetricModels": {
+    "message": "モデル別の内訳"
+  },
+  "optionsMetricReset": {
+    "message": "リセット時刻"
+  },
+  "optionsMetricPlan": {
+    "message": "プラン"
+  },
+  "optionsMetricSummary": {
+    "message": "残高 / 概要"
+  },
+  "optionsMetricBalance": {
+    "message": "残高"
+  },
+  "optionsBadgeTitle": {
+    "message": "アイコンの段階"
+  },
+  "optionsBadgeDescription": {
+    "message": "拡張機能のアイコンが、この基準で10%ごとに変化します。"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "アイコンの基準"
+  },
+  "optionsBadgeHighest": {
+    "message": "表示中のプロバイダーの最大値"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "表示中のカードのうち、現在の割合が最も高いものを使います。"
+  },
+  "optionsBadgeSelected": {
+    "message": "選択したプロバイダー"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "他のカードの表示状態に関わらず、1つのプロバイダーを使います。"
+  },
+  "optionsBadgeWindow": {
+    "message": "集計期間"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "セッション"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "週間"
+  },
+  "optionsBadgeProvider": {
+    "message": "プロバイダー"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "このプロバイダーはポップアップで非表示ですが、アイコンの段階には反映されます。"
+  },
+  "optionsBadgeSteps": {
+    "message": "ツールバーアイコンの段階"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "10%単位で切り捨て"
+  },
+  "optionsOverlaysTitle": {
+    "message": "ページ内オーバーレイ"
+  },
+  "optionsOverlaysDescription": {
+    "message": "入力欄の横に折りたたみ式の使用状況カプセルを表示します。"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 のページ内オーバーレイを有効にする"
+  },
+  "optionsResetTitle": {
+    "message": "初期設定に戻す"
+  },
+  "optionsResetDescription": {
+    "message": "このページのすべての設定を元に戻します。取り消せません。"
+  },
+  "optionsResetAction": {
+    "message": "初期設定に戻す"
+  },
+  "optionsResetConfirm": {
+    "message": "もう一度クリックで確定"
+  },
+  "planUsage": {
+    "message": "プランの使用量"
+  },
+  "tokenPlan": {
+    "message": "トークンプラン"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker の設定"
   }
 }

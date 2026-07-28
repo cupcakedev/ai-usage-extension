@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "m"
+  },
+  "optionsSaved": {
+    "message": "All changes saved"
+  },
+  "optionsSaving": {
+    "message": "Saving…"
+  },
+  "optionsSaveError": {
+    "message": "Could not save"
+  },
+  "optionsSkip": {
+    "message": "Skip to settings"
+  },
+  "optionsLoading": {
+    "message": "Loading settings…"
+  },
+  "optionsInstantHint": {
+    "message": "Every change is saved and applied immediately — no reload needed."
+  },
+  "optionsNavLabel": {
+    "message": "Settings sections"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Providers"
+  },
+  "optionsNavBadge": {
+    "message": "Toolbar badge"
+  },
+  "optionsNavOverlays": {
+    "message": "On-page overlays"
+  },
+  "optionsLayoutTitle": {
+    "message": "Popup layout"
+  },
+  "optionsLayoutDescription": {
+    "message": "Choose how visible provider cards are arranged in the popup."
+  },
+  "optionsLayoutSingle": {
+    "message": "One column"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "A full-width card for each provider."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "360 px wide"
+  },
+  "optionsLayoutGrid": {
+    "message": "Two columns"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "A compact overview with two cards per row."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "500 px wide"
+  },
+  "optionsProvidersTitle": {
+    "message": "Providers"
+  },
+  "optionsProvidersDescription": {
+    "message": "Hide a card or choose the usage details it can display. Unavailable data stays hidden automatically."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 of $2 shown"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 of $2 details"
+  },
+  "optionsProviderHidden": {
+    "message": "Hidden in popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Show $1 in popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 usage details"
+  },
+  "optionsMetricSession": {
+    "message": "Session usage"
+  },
+  "optionsMetricWeekly": {
+    "message": "Weekly usage"
+  },
+  "optionsMetricModels": {
+    "message": "Model breakdown"
+  },
+  "optionsMetricReset": {
+    "message": "Reset time"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Balance / summary"
+  },
+  "optionsMetricBalance": {
+    "message": "Balance"
+  },
+  "optionsBadgeTitle": {
+    "message": "Badge range"
+  },
+  "optionsBadgeDescription": {
+    "message": "The extension icon changes by 10% ranges based on this source."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Badge source"
+  },
+  "optionsBadgeHighest": {
+    "message": "Highest of visible providers"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Use the largest current percentage among shown provider cards."
+  },
+  "optionsBadgeSelected": {
+    "message": "Selected provider"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Use one provider regardless of the popup visibility of other cards."
+  },
+  "optionsBadgeWindow": {
+    "message": "Usage window"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Session"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Weekly"
+  },
+  "optionsBadgeProvider": {
+    "message": "Provider"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "This provider is hidden in the popup, but its badge range remains active."
+  },
+  "optionsBadgeSteps": {
+    "message": "Toolbar icon steps"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "rounded down to the nearest 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "On-page overlays"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Show the collapsible usage capsule next to the message composer."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Enable $1 on-page overlay"
+  },
+  "optionsResetTitle": {
+    "message": "Reset to defaults"
+  },
+  "optionsResetDescription": {
+    "message": "Restores every preference on this page. This cannot be undone."
+  },
+  "optionsResetAction": {
+    "message": "Reset defaults"
+  },
+  "optionsResetConfirm": {
+    "message": "Click again to confirm"
+  },
+  "planUsage": {
+    "message": "Plan usage"
+  },
+  "tokenPlan": {
+    "message": "Token plan"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker settings"
   }
 }

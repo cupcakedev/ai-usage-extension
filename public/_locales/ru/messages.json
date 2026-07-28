@@ -106,5 +106,176 @@
   },
   "timeMinuteShort": {
     "message": "м"
+  },
+  "optionsSaved": {
+    "message": "Все изменения сохранены"
+  },
+  "optionsSaving": {
+    "message": "Сохранение…"
+  },
+  "optionsSaveError": {
+    "message": "Не удалось сохранить"
+  },
+  "optionsSkip": {
+    "message": "Перейти к настройкам"
+  },
+  "optionsLoading": {
+    "message": "Загрузка настроек…"
+  },
+  "optionsInstantHint": {
+    "message": "Все изменения сохраняются и применяются сразу — перезагрузка не нужна."
+  },
+  "optionsNavLabel": {
+    "message": "Разделы настроек"
+  },
+  "optionsNavLayout": {
+    "message": "Раскладка"
+  },
+  "optionsNavProviders": {
+    "message": "Провайдеры"
+  },
+  "optionsNavBadge": {
+    "message": "Значок на панели"
+  },
+  "optionsNavOverlays": {
+    "message": "Оверлеи на страницах"
+  },
+  "optionsLayoutTitle": {
+    "message": "Раскладка попапа"
+  },
+  "optionsLayoutDescription": {
+    "message": "Выберите, как располагать карточки провайдеров в попапе."
+  },
+  "optionsLayoutSingle": {
+    "message": "Одна колонка"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Карточка каждого провайдера во всю ширину."
+  },
+  "optionsLayoutSingleWidth": {
+    "message": "ширина 360 px"
+  },
+  "optionsLayoutGrid": {
+    "message": "Две колонки"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Компактный обзор: по две карточки в ряд."
+  },
+  "optionsLayoutGridWidth": {
+    "message": "ширина 500 px"
+  },
+  "optionsProvidersTitle": {
+    "message": "Провайдеры"
+  },
+  "optionsProvidersDescription": {
+    "message": "Скройте карточку или выберите, какие данные она может показывать. Недоступные данные скрываются автоматически."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 из $2 показано"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 из $2 деталей"
+  },
+  "optionsProviderHidden": {
+    "message": "Скрыт в попапе"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Показывать $1 в попапе"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Данные $1"
+  },
+  "optionsMetricSession": {
+    "message": "Расход за сессию"
+  },
+  "optionsMetricWeekly": {
+    "message": "Расход за неделю"
+  },
+  "optionsMetricModels": {
+    "message": "Разбивка по моделям"
+  },
+  "optionsMetricReset": {
+    "message": "Время сброса"
+  },
+  "optionsMetricPlan": {
+    "message": "Тариф"
+  },
+  "optionsMetricSummary": {
+    "message": "Баланс / сводка"
+  },
+  "optionsMetricBalance": {
+    "message": "Баланс"
+  },
+  "optionsBadgeTitle": {
+    "message": "Диапазон значка"
+  },
+  "optionsBadgeDescription": {
+    "message": "Иконка расширения меняется шагами по 10% на основе этого источника."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Источник значка"
+  },
+  "optionsBadgeHighest": {
+    "message": "Максимум среди видимых провайдеров"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Использовать наибольший текущий процент среди показанных карточек."
+  },
+  "optionsBadgeSelected": {
+    "message": "Выбранный провайдер"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Использовать одного провайдера независимо от видимости других карточек."
+  },
+  "optionsBadgeWindow": {
+    "message": "Окно расхода"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Сессия"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Неделя"
+  },
+  "optionsBadgeProvider": {
+    "message": "Провайдер"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Этот провайдер скрыт в попапе, но его диапазон значка остаётся активным."
+  },
+  "optionsBadgeSteps": {
+    "message": "Шаги иконки на панели"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "округление вниз до 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Оверлеи на страницах"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Показывать сворачиваемую капсулу с расходом рядом с полем ввода."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Включить оверлей $1 на странице"
+  },
+  "optionsResetTitle": {
+    "message": "Сброс настроек"
+  },
+  "optionsResetDescription": {
+    "message": "Восстанавливает все настройки на этой странице. Действие необратимо."
+  },
+  "optionsResetAction": {
+    "message": "Сбросить настройки"
+  },
+  "optionsResetConfirm": {
+    "message": "Нажмите ещё раз для подтверждения"
+  },
+  "planUsage": {
+    "message": "Расход тарифа"
+  },
+  "tokenPlan": {
+    "message": "Токен-план"
+  },
+  "optionsTitle": {
+    "message": "Настройки AI Usage Tracker"
   }
 }

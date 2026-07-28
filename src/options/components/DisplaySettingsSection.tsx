@@ -1,3 +1,5 @@
+import { Check } from 'lucide-react';
+import type { CSSProperties } from 'react';
 import type { PopupLayout } from '../../shared/types';
 import { SettingsSection } from './SettingsSection';
 
@@ -6,27 +8,61 @@ interface DisplaySettingsSectionProps {
   onPopupLayoutChange: (layout: PopupLayout) => void;
 }
 
-const LAYOUT_OPTIONS: Array<{ value: PopupLayout; title: string; description: string }> = [
-  { value: 'single', title: 'One column', description: 'A full-width card for each provider.' },
+const LAYOUT_OPTIONS: Array<{
+  value: PopupLayout;
+  title: string;
+  description: string;
+  width: string;
+  cards: number;
+}> = [
+  {
+    value: 'single',
+    title: 'One column',
+    description: 'A full-width card for each provider.',
+    width: '360 px wide',
+    cards: 3,
+  },
   {
     value: 'grid',
     title: 'Two columns',
     description: 'A compact overview with two cards per row.',
+    width: '500 px wide',
+    cards: 4,
   },
 ];
+
+/** Miniature of the popup so the layout choice can be judged at a glance. */
+const LayoutPreview = ({ layout, cards }: { layout: PopupLayout; cards: number }) => (
+  <span className={`auo-preview auo-preview--${layout}`} aria-hidden="true">
+    <span className="auo-preview__bar">
+      <i />
+      <i />
+    </span>
+    <span className="auo-preview__cards">
+      {Array.from({ length: cards }, (_, index) => (
+        <span className="auo-preview__card" key={index}>
+          <span className="auo-preview__dot" />
+          <span className="auo-preview__lines">
+            <i />
+            <i />
+          </span>
+          <span
+            className="auo-preview__meter"
+            style={{ '--fill-width': `${72 - index * 17}%` } as CSSProperties}
+          />
+        </span>
+      ))}
+    </span>
+  </span>
+);
 
 export const DisplaySettingsSection = ({
   popupLayout,
   onPopupLayoutChange,
 }: DisplaySettingsSectionProps) => (
-  <SettingsSection
-    id="display"
-    kicker="Popup"
-    title="Display"
-    description="Choose how visible provider cards are arranged in the popup."
-  >
+  <SettingsSection id="display">
     <div className="auo-choice-group" role="radiogroup" aria-label="Popup layout">
-      {LAYOUT_OPTIONS.map(({ value, title, description }) => (
+      {LAYOUT_OPTIONS.map(({ value, title, description, width, cards }) => (
         <label
           className={`auo-choice ${popupLayout === value ? 'auo-choice--selected' : ''}`}
           key={value}
@@ -38,9 +74,16 @@ export const DisplaySettingsSection = ({
             checked={popupLayout === value}
             onChange={() => onPopupLayoutChange(value)}
           />
-          <span>
-            <strong>{title}</strong>
+          <LayoutPreview layout={value} cards={cards} />
+          <span className="auo-choice__text">
+            <strong>
+              {title}
+              <span className="auo-choice__mark" aria-hidden="true">
+                <Check size={11} strokeWidth={3} />
+              </span>
+            </strong>
             <small>{description}</small>
+            <em>{width}</em>
           </span>
         </label>
       ))}

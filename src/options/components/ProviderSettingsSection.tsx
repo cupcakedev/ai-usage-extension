@@ -1,6 +1,7 @@
-import { PROVIDER_IDS, PROVIDER_METRICS } from '../../shared/settings';
+import { Check, EyeOff } from 'lucide-react';
+import { PROVIDER_IDS, PROVIDER_SUPPORTED_METRICS } from '../../shared/settings';
 import type { ExtensionSettings, ProviderId, ProviderMetric } from '../../shared/types';
-import { PROVIDER_DETAILS, PROVIDER_METRIC_LABELS } from '../config';
+import { metricLabel, PROVIDER_DETAILS } from '../config';
 import { SettingsSection } from './SettingsSection';
 import { Switch } from './Switch';
 
@@ -14,50 +15,75 @@ export const ProviderSettingsSection = ({
   providers,
   onProviderVisibilityChange,
   onMetricToggle,
-}: ProviderSettingsSectionProps) => (
-  <SettingsSection
-    id="providers"
-    kicker="Popup content"
-    title="Providers"
-    description="Hide a card or choose the usage details it can display. Unavailable data stays hidden automatically."
-  >
-    <div className="auo-provider-list">
-      {PROVIDER_IDS.map((provider) => {
-        const providerSettings = providers[provider];
-        const details = PROVIDER_DETAILS[provider];
-        return (
-          <section className="auo-provider" key={provider} aria-labelledby={`${provider}-title`}>
-            <div className="auo-provider__head">
-              <div className="auo-provider__identity">
-                <img src={details.icon} alt="" />
-                <h3 id={`${provider}-title`}>{details.name}</h3>
-              </div>
-              <div className="auo-provider__visibility">
-                <span>Show in popup</span>
+}: ProviderSettingsSectionProps) => {
+  const visibleCount = PROVIDER_IDS.filter((provider) => providers[provider].visible).length;
+
+  return (
+    <SettingsSection
+      id="providers"
+      aside={
+        <span className="auo-counter">
+          <strong>{visibleCount}</strong> of {PROVIDER_IDS.length} shown
+        </span>
+      }
+    >
+      <div className="auo-provider-list">
+        {PROVIDER_IDS.map((provider) => {
+          const providerSettings = providers[provider];
+          const details = PROVIDER_DETAILS[provider];
+          const supported = PROVIDER_SUPPORTED_METRICS[provider];
+          return (
+            <section
+              className={`auo-provider ${providerSettings.visible ? '' : 'auo-provider--off'}`}
+              key={provider}
+              aria-labelledby={`${provider}-title`}
+            >
+              <div className="auo-provider__head">
+                <div className="auo-provider__identity">
+                  <span className="auo-provider__avatar">
+                    <img src={details.icon} alt="" />
+                  </span>
+                  <span className="auo-provider__naming">
+                    <h3 id={`${provider}-title`}>{details.name}</h3>
+                    <small>
+                      {providerSettings.visible ? (
+                        `${providerSettings.metrics.length} of ${supported.length} details`
+                      ) : (
+                        <>
+                          <EyeOff size={11} strokeWidth={2} aria-hidden="true" />
+                          Hidden in popup
+                        </>
+                      )}
+                    </small>
+                  </span>
+                </div>
                 <Switch
                   checked={providerSettings.visible}
                   label={`Show ${details.name} in popup`}
                   onChange={(visible) => onProviderVisibilityChange(provider, visible)}
                 />
               </div>
-            </div>
-            <fieldset className="auo-metrics" disabled={!providerSettings.visible}>
-              <div className="auo-metrics__items">
-                {PROVIDER_METRICS.map((metric) => (
-                  <label className="auo-check" key={metric}>
+
+              <fieldset className="auo-metrics" disabled={!providerSettings.visible}>
+                <legend className="auo-sr-only">{details.name} usage details</legend>
+                {supported.map((metric) => (
+                  <label className="auo-chip" key={metric}>
                     <input
                       type="checkbox"
                       checked={providerSettings.metrics.includes(metric)}
                       onChange={() => onMetricToggle(provider, metric)}
                     />
-                    <span>{PROVIDER_METRIC_LABELS[metric]}</span>
+                    <span className="auo-chip__mark" aria-hidden="true">
+                      <Check size={10} strokeWidth={3.2} />
+                    </span>
+                    <span>{metricLabel(provider, metric)}</span>
                   </label>
                 ))}
-              </div>
-            </fieldset>
-          </section>
-        );
-      })}
-    </div>
-  </SettingsSection>
-);
+              </fieldset>
+            </section>
+          );
+        })}
+      </div>
+    </SettingsSection>
+  );
+};

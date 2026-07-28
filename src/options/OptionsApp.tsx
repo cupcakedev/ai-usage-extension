@@ -1,11 +1,14 @@
 import { RotateCcw } from 'lucide-react';
+import { useRef, useState } from 'react';
 import { BadgeSettingsSection } from './components/BadgeSettingsSection';
 import { DisplaySettingsSection } from './components/DisplaySettingsSection';
 import { OptionsHeader } from './components/OptionsHeader';
 import { OptionsNavigation } from './components/OptionsNavigation';
 import { OverlaySettingsSection } from './components/OverlaySettingsSection';
 import { ProviderSettingsSection } from './components/ProviderSettingsSection';
+import { useActiveSection } from './hooks/useActiveSection';
 import { useOptionsSettings } from './hooks/useOptionsSettings';
+import { SECTION_IDS } from './sections';
 import {
   withBadgeMetric,
   withBadgeMode,
@@ -18,21 +21,57 @@ import {
 
 export const OptionsApp = () => {
   const { settings, saveState, updateSettings, resetSettings } = useOptionsSettings();
+  const contentRef = useRef<HTMLDivElement>(null);
+  const { activeId, setActiveId } = useActiveSection(contentRef, SECTION_IDS, Boolean(settings));
+  const [resetArmed, setResetArmed] = useState(false);
 
   if (!settings) {
-    return <main className="auo-loading">Loading settings…</main>;
+    return (
+      <main className="auo-loading">
+        <span className="auo-loading__pulse" aria-hidden="true" />
+        Loading settings…
+      </main>
+    );
   }
+
+  /** Scrolls only the settings column — a native `#id` jump would move the whole shell. */
+  const scrollToSection = (id: string): void => {
+    const container = contentRef.current;
+    const target = document.getElementById(id);
+    if (!container || !target) return;
+
+    setActiveId(id);
+    const offset = target.getBoundingClientRect().top - container.getBoundingClientRect().top - 2;
+    // Behaviour is left to the element's CSS scroll-behavior so reduced-motion wins.
+    container.scrollTo({ top: container.scrollTop + offset });
+  };
+
+  const handleReset = (): void => {
+    if (!resetArmed) {
+      setResetArmed(true);
+      return;
+    }
+    resetSettings();
+    setResetArmed(false);
+  };
 
   return (
     <main className="auo-shell">
-      <a className="auo-skip" href="#settings-content">
+      <a
+        className="auo-skip"
+        href="#settings-content"
+        onClick={(event) => {
+          event.preventDefault();
+          contentRef.current?.focus();
+        }}
+      >
         Skip to settings
       </a>
       <OptionsHeader saveState={saveState} />
 
       <div className="auo-layout">
-        <OptionsNavigation />
-        <div id="settings-content" className="auo-content">
+        <OptionsNavigation activeId={activeId} onNavigate={scrollToSection} />
+        <div id="settings-content" className="auo-content" ref={contentRef} tabIndex={-1}>
           <DisplaySettingsSection
             popupLayout={settings.popupLayout}
             onPopupLayoutChange={(layout) =>
@@ -67,11 +106,19 @@ export const OptionsApp = () => {
           />
 
           <footer className="auo-footer">
-            <button type="button" className="auo-reset" onClick={resetSettings}>
-              <RotateCcw size={15} aria-hidden="true" />
-              Reset defaults
+            <div className="auo-footer__copy">
+              <strong>Reset to defaults</strong>
+              <span>Restores every preference on this page. This cannot be undone.</span>
+            </div>
+            <button
+              type="button"
+              className={`auo-reset ${resetArmed ? 'auo-reset--armed' : ''}`}
+              onClick={handleReset}
+              onBlur={() => setResetArmed(false)}
+            >
+              <RotateCcw size={14} strokeWidth={2} aria-hidden="true" />
+              {resetArmed ? 'Click again to confirm' : 'Reset defaults'}
             </button>
-            <span>Changes apply immediately.</span>
           </footer>
         </div>
       </div>

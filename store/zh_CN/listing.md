@@ -14,6 +14,8 @@ AI Usage Tracker：Claude 与 Codex 限额是一款浏览器扩展，适合希�
 
 无论你使用 Claude 和 ChatGPT 来编程、写作、研究还是深入解决问题，AI Usage Tracker 都能减少遇到限额阻断时的摩擦，并让你直接控制容量的监控方式。你可以选择浮层出现的位置，也可以选择如何跟踪自己的限额。
 
+AI Usage Tracker 还支持 Kimi、MiniMax、Cursor 和 Xiaomi MiMo。它会根据各服务商公开的账户数据展示会话、每周、套餐、模型、余额和重置时间等信息。无需 API 密钥或单独登录：扩展程序只读取浏览器中已认证的服务商会话。
+
 主要功能：
 
 - 实时跟踪 Claude (claude.ai) 和 ChatGPT/Codex (chatgpt.com) 的限额

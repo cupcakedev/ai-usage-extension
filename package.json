@@ -1,7 +1,7 @@
 {
 	"name": "ai-usage-tracker",
 	"version": "0.1.9",
-	"description": "Chrome extension that tracks Claude and Codex usage limits (session and weekly).",
+	"description": "Private Chrome extension for tracking Claude, Codex, Kimi, MiniMax, Cursor, and Xiaomi MiMo usage limits, quotas, and reset times.",
 	"private": true,
 	"license": "MIT",
 	"author": "cupcakedev",
@@ -21,7 +21,13 @@
 		"vite",
 		"claude",
 		"codex",
-		"usage-tracker"
+		"kimi",
+		"minimax",
+		"cursor",
+		"mimo",
+		"usage-tracker",
+		"rate-limit-tracker",
+		"quota-monitor"
 	],
 	"engines": {
 		"node": ">=20.0.0"

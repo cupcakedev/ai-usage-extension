@@ -1,8 +1,8 @@
 const FALLBACK_MESSAGES: Record<string, string> = {
-  appName: 'AI Usage Tracker: Claude & Codex Limits',
+  appName: 'AI Usage Tracker: Quota & Limits for Claude, Codex, Kimi, Cursor, MiniMax',
   appShortName: 'AI Usage Tracker',
   appDescription:
-    'Track Claude and ChatGPT (Codex) session and weekly usage limits in a popup, toolbar badge, and on-page overlay. Privacy-first, no setup.',
+    'Track Claude, Codex, Kimi, MiniMax, Cursor and MiMo usage limits, quotas and resets. Private, cookie-based Chrome extension.',
   popupEyebrow: 'AI Capacity',
   popupTitle: 'Usage',
   refreshUsage: 'Refresh usage',
@@ -58,10 +58,8 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsLayoutDescription: 'Choose how visible provider cards are arranged in the popup.',
   optionsLayoutSingle: 'One column',
   optionsLayoutSingleDescription: 'A full-width card for each provider.',
-  optionsLayoutSingleWidth: '360 px wide',
   optionsLayoutGrid: 'Two columns',
   optionsLayoutGridDescription: 'A compact overview with two cards per row.',
-  optionsLayoutGridWidth: '500 px wide',
   optionsProvidersTitle: 'Providers',
   optionsProvidersDescription:
     'Hide a card or choose the usage details it can display. Unavailable data stays hidden automatically.',

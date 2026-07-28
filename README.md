@@ -1,4 +1,4 @@
-# AI Usage Tracker
+# AI Usage Tracker: Claude, Codex, Kimi, Cursor
 
 [![CI](https://github.com/cupcakedev/ai-usage-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/cupcakedev/ai-usage-extension/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)

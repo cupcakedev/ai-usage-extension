@@ -15,7 +15,19 @@ export const PROVIDER_DETAILS: Record<ProviderId, { name: string; icon: string }
   mimo: { name: 'Xiaomi MiMo', icon: mimoBrandAsset },
 };
 
-export const PROVIDER_METRIC_LABELS: Record<ProviderMetric, string> = {
+/** Resolves a file shipped in the extension root (icons/…) from an extension page. */
+export const extensionAsset = (path: string): string =>
+  globalThis.chrome?.runtime?.getURL?.(path) ?? `/${path}`;
+
+export const APP_ICON = extensionAsset('icons/icon-128.png');
+
+/** The exact toolbar icons the background script swaps between, in 10% steps. */
+export const BADGE_RANGE_ICONS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((range) => ({
+  range,
+  src: extensionAsset(`icons/badges/range-${range}.png`),
+}));
+
+const PROVIDER_METRIC_LABELS: Record<ProviderMetric, string> = {
   session: 'Session usage',
   weekly: 'Weekly usage',
   models: 'Model breakdown',
@@ -23,3 +35,13 @@ export const PROVIDER_METRIC_LABELS: Record<ProviderMetric, string> = {
   plan: 'Plan',
   summary: 'Balance / summary',
 };
+
+/** Providers whose card labels this window differently in the popup. */
+const METRIC_LABEL_OVERRIDES: Partial<Record<ProviderId, Partial<Record<ProviderMetric, string>>>> =
+  {
+    cursor: { session: 'Plan usage' },
+    mimo: { session: 'Token plan', summary: 'Balance' },
+  };
+
+export const metricLabel = (provider: ProviderId, metric: ProviderMetric): string =>
+  METRIC_LABEL_OVERRIDES[provider]?.[metric] ?? PROVIDER_METRIC_LABELS[metric];

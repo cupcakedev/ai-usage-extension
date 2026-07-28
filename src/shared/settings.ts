@@ -8,24 +8,34 @@ import type {
 
 export const PROVIDER_IDS: ProviderId[] = ['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'];
 
-export const PROVIDER_METRICS: ProviderMetric[] = [
-  'session',
-  'weekly',
-  'models',
-  'reset',
-  'plan',
-  'summary',
-];
+/**
+ * What each provider can actually put on its popup card, derived from the snapshots the
+ * background collectors build and the render rules in ProviderCard:
+ * - `weekly` needs a second quota window — Cursor and MiMo only expose a single one.
+ * - `models` needs a non-empty breakdown — Kimi and MiMo always report an empty list.
+ * - `plan` is a footnote skipped for Claude, whose snapshot pins the plan to 'unknown',
+ *   and Codex, whose snapshot has no plan field at all.
+ * - `summary` is the balance footnote only MiMo produces.
+ * Metrics outside this list would be dead toggles, so they are neither offered nor stored.
+ */
+export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = {
+  claude: ['session', 'weekly', 'models', 'reset'],
+  codex: ['session', 'weekly', 'models', 'reset'],
+  minimax: ['session', 'weekly', 'models', 'reset', 'plan'],
+  kimi: ['session', 'weekly', 'reset'],
+  cursor: ['session', 'models', 'reset', 'plan'],
+  mimo: ['session', 'reset', 'plan', 'summary'],
+};
 
-const defaultProvider = (): ProviderDisplaySettings => ({
+const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({
   visible: true,
-  metrics: [...PROVIDER_METRICS],
+  metrics: [...PROVIDER_SUPPORTED_METRICS[provider]],
 });
 
 export const createDefaultSettings = (): ExtensionSettings => ({
   popupLayout: 'single',
   providers: Object.fromEntries(
-    PROVIDER_IDS.map((provider) => [provider, defaultProvider()]),
+    PROVIDER_IDS.map((provider) => [provider, defaultProvider(provider)]),
   ) as ExtensionSettings['providers'],
   badge: {
     mode: 'highest',
@@ -38,12 +48,15 @@ export const createDefaultSettings = (): ExtensionSettings => ({
   },
 });
 
-const asMetricList = (value: unknown): ProviderMetric[] =>
-  Array.isArray(value)
+/** Keeps only metrics the provider can render, so stored lists never carry dead toggles. */
+const asMetricList = (value: unknown, provider: ProviderId): ProviderMetric[] => {
+  const supported = PROVIDER_SUPPORTED_METRICS[provider];
+  return Array.isArray(value)
     ? value.filter((metric): metric is ProviderMetric =>
-        PROVIDER_METRICS.includes(metric as ProviderMetric),
+        supported.includes(metric as ProviderMetric),
       )
-    : [...PROVIDER_METRICS];
+    : [...supported];
+};
 
 export const normalizeSettings = (
   value: unknown,
@@ -65,7 +78,7 @@ export const normalizeSettings = (
         provider,
         {
           visible: providerValue?.visible !== false,
-          metrics: asMetricList(providerValue?.metrics),
+          metrics: asMetricList(providerValue?.metrics, provider),
         },
       ];
     }),

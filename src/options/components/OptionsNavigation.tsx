@@ -1,19 +1,40 @@
-import { BadgePercent, Layers3, LayoutDashboard, MonitorCog } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { SECTIONS } from '../sections';
 
-const NAVIGATION_ITEMS = [
-  { href: '#display', label: 'Display', Icon: LayoutDashboard },
-  { href: '#providers', label: 'Providers', Icon: Layers3 },
-  { href: '#badge', label: 'Toolbar badge', Icon: BadgePercent },
-  { href: '#overlays', label: 'On-page overlays', Icon: MonitorCog },
-] as const;
+interface OptionsNavigationProps {
+  activeId: string;
+  /** Scrolls the settings column; native hash jumps would scroll the page shell instead. */
+  onNavigate: (id: string) => void;
+}
 
-export const OptionsNavigation = () => (
-  <nav className="auo-nav" aria-label="Settings sections">
-    {NAVIGATION_ITEMS.map(({ href, label, Icon }) => (
-      <a href={href} key={href}>
-        <Icon size={15} aria-hidden="true" />
-        {label}
-      </a>
-    ))}
-  </nav>
+export const OptionsNavigation = ({ activeId, onNavigate }: OptionsNavigationProps) => (
+  <div className="auo-sidebar">
+    <nav className="auo-nav" aria-label="Settings sections">
+      {SECTIONS.map(({ id, label, Icon }) => {
+        const active = id === activeId;
+        return (
+          <a
+            className={`auo-nav__item ${active ? 'auo-nav__item--active' : ''}`}
+            href={`#${id}`}
+            key={id}
+            aria-current={active ? 'true' : undefined}
+            onClick={(event) => {
+              event.preventDefault();
+              onNavigate(id);
+            }}
+          >
+            <span className="auo-nav__icon">
+              <Icon size={15} strokeWidth={1.9} aria-hidden="true" />
+            </span>
+            {label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <p className="auo-sidebar__hint">
+      <Zap size={13} strokeWidth={1.9} aria-hidden="true" />
+      Every change is saved and applied immediately — no reload needed.
+    </p>
+  </div>
 );

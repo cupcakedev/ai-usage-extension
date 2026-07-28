@@ -1,6 +1,11 @@
 import React from 'react';
 import { msg } from '../../shared/i18n';
-import type { ClaudeUsage, CodexUsage, ExternalProviderUsage } from '../../shared/types';
+import type {
+  ClaudeUsage,
+  CodexUsage,
+  ExternalProviderUsage,
+  ProviderMetric,
+} from '../../shared/types';
 import { formatRelativeTime } from '../../shared/utils';
 import { UsageCard } from './UsageCard';
 import { UsageMetric } from './UsageMetric';
@@ -21,6 +26,7 @@ interface ProviderCardProps {
   secondaryLabel?: string;
   /** Optional content pinned to the bottom of the card (e.g. a setting). */
   footer?: React.ReactNode;
+  metrics?: ProviderMetric[];
 }
 
 const Skeleton: React.FC = () => (
@@ -31,7 +37,11 @@ const Skeleton: React.FC = () => (
   </div>
 );
 
-const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number }> = ({ usage, now }) => {
+const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number; showReset: boolean }> = ({
+  usage,
+  now,
+  showReset,
+}) => {
   if (!usage.models.length) {
     return null;
   }
@@ -39,7 +49,13 @@ const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number }> = ({ usage
   return (
     <div className="au-breakdown">
       {usage.models.map((model) => (
-        <UsageMetric key={model.id} label={model.label} limit={model.limit} now={now} />
+        <UsageMetric
+          key={model.id}
+          label={model.label}
+          limit={model.limit}
+          now={now}
+          showReset={showReset}
+        />
       ))}
     </div>
   );
@@ -57,7 +73,9 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   primaryLabel = msg('sessionLimit'),
   secondaryLabel = msg('weeklyLimit'),
   footer,
+  metrics = ['session', 'weekly', 'models', 'reset', 'plan', 'summary'],
 }) => {
+  const shows = (metric: ProviderMetric): boolean => metrics.includes(metric);
   const subtitle = loading
     ? msg('loadingSnapshot')
     : usage
@@ -70,18 +88,35 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
         <Skeleton />
       ) : usage ? (
         <>
-          <UsageMetric label={primaryLabel} limit={usage.session} now={now} />
-          {secondaryLabel && <UsageMetric label={secondaryLabel} limit={usage.weekly} now={now} />}
-          <ModelBreakdown usage={usage} now={now} />
-          {'plan' in usage && usage.plan !== 'unknown' && (
+          {shows('session') && (
+            <UsageMetric
+              label={primaryLabel}
+              limit={usage.session}
+              now={now}
+              showReset={shows('reset')}
+            />
+          )}
+          {shows('weekly') && secondaryLabel && (
+            <UsageMetric
+              label={secondaryLabel}
+              limit={usage.weekly}
+              now={now}
+              showReset={shows('reset')}
+            />
+          )}
+          {shows('models') && <ModelBreakdown usage={usage} now={now} showReset={shows('reset')} />}
+          {shows('plan') && 'plan' in usage && usage.plan !== 'unknown' && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>
           )}
-          {'availableResets' in usage && usage.availableResets !== null && (
+          {shows('reset') && 'availableResets' in usage && usage.availableResets !== null && (
             <p className="au-footnote">
               {msg('availableResetsLabel', String(usage.availableResets))}
             </p>
           )}
-          {'summary' in usage && usage.summary && <p className="au-footnote">{usage.summary}</p>}
+          {shows('summary') && 'summary' in usage && usage.summary && (
+            <p className="au-footnote">{usage.summary}</p>
+          )}
+          {!metrics.length && <p className="au-empty">No metrics selected.</p>}
         </>
       ) : (
         <p className="au-empty">{emptyHint}</p>

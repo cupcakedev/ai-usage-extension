@@ -39,6 +39,12 @@ body,
   color: var(--au-text);
 }
 
+html:has(.au-shell--grid),
+body:has(.au-shell--grid),
+#root:has(.au-shell--grid) {
+  width: 500px;
+}
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
@@ -72,6 +78,11 @@ input {
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
+}
+
+.au-topbar__actions {
+  display: flex;
+  gap: 6px;
 }
 
 .au-eyebrow {
@@ -233,6 +244,31 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.au-cards--grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.au-cards--grid .au-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.au-cards--grid .au-card__header,
+.au-cards--grid .au-card__body,
+.au-cards--grid .au-breakdown {
+  gap: 10px;
+}
+
+.au-cards--grid .au-card {
+  padding: 12px;
+}
+
+.au-cards--grid .au-card__header {
+  margin-bottom: 10px;
 }
 
 .au-card {

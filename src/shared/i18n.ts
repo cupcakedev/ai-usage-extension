@@ -74,6 +74,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsMetricWeekly: 'Weekly usage',
   optionsMetricModels: 'Model breakdown',
   optionsMetricReset: 'Reset time',
+  optionsMetricAvailableResets: 'Available resets',
   optionsMetricPlan: 'Plan',
   optionsMetricSummary: 'Balance / summary',
   optionsMetricBalance: 'Balance',

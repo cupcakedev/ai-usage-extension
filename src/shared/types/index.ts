@@ -63,7 +63,14 @@ export interface UsageState {
 }
 
 export type PopupLayout = 'single' | 'grid';
-export type ProviderMetric = 'session' | 'weekly' | 'models' | 'reset' | 'plan' | 'summary';
+export type ProviderMetric =
+  | 'session'
+  | 'weekly'
+  | 'models'
+  | 'reset'
+  | 'availableResets'
+  | 'plan'
+  | 'summary';
 export type BadgeMode = 'highest' | 'provider';
 export type BadgeMetric = 'session' | 'weekly';
 

@@ -73,7 +73,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   primaryLabel = msg('sessionLimit'),
   secondaryLabel = msg('weeklyLimit'),
   footer,
-  metrics = ['session', 'weekly', 'models', 'reset', 'plan', 'summary'],
+  metrics = ['session', 'weekly', 'models', 'reset', 'availableResets', 'plan', 'summary'],
 }) => {
   const shows = (metric: ProviderMetric): boolean => metrics.includes(metric);
   const subtitle = loading
@@ -108,11 +108,13 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
           {shows('plan') && 'plan' in usage && usage.plan !== 'unknown' && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>
           )}
-          {shows('reset') && 'availableResets' in usage && usage.availableResets !== null && (
-            <p className="au-footnote">
-              {msg('availableResetsLabel', String(usage.availableResets))}
-            </p>
-          )}
+          {shows('availableResets') &&
+            'availableResets' in usage &&
+            usage.availableResets !== null && (
+              <p className="au-footnote">
+                {msg('availableResetsLabel', String(usage.availableResets))}
+              </p>
+            )}
           {shows('summary') && 'summary' in usage && usage.summary && (
             <p className="au-footnote">{usage.summary}</p>
           )}

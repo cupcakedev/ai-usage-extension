@@ -33,6 +33,7 @@ const PROVIDER_METRIC_LABELS: Record<ProviderMetric, string> = {
   weekly: msg('optionsMetricWeekly'),
   models: msg('optionsMetricModels'),
   reset: msg('optionsMetricReset'),
+  availableResets: msg('optionsMetricAvailableResets'),
   plan: msg('optionsMetricPlan'),
   summary: msg('optionsMetricSummary'),
 };

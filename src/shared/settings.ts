@@ -20,7 +20,7 @@ export const PROVIDER_IDS: ProviderId[] = ['claude', 'codex', 'minimax', 'kimi',
  */
 export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = {
   claude: ['session', 'weekly', 'models', 'reset'],
-  codex: ['session', 'weekly', 'models', 'reset'],
+  codex: ['session', 'weekly', 'models', 'reset', 'availableResets'],
   minimax: ['session', 'weekly', 'models', 'reset', 'plan'],
   kimi: ['session', 'weekly', 'reset'],
   cursor: ['session', 'models', 'reset', 'plan'],

@@ -435,6 +435,7 @@ select {
 
 .auo-choice__text {
   display: block;
+  width: 100%;
   min-width: 0;
 }
 

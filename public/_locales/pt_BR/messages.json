@@ -1,12 +1,12 @@
 {
   "appName": {
-    "message": "AI Usage Tracker: limites do Claude e Codex"
+    "message": "AI Usage Tracker: Quota & Limits for Claude, Codex, Kimi, Cursor, MiniMax"
   },
   "appShortName": {
     "message": "AI Usage Tracker"
   },
   "appDescription": {
-    "message": "Acompanhe limites do Claude e ChatGPT (Codex) por sessão e semana no popup, badge e overlay. Privado, sem configuração."
+    "message": "Acompanhe limites, cotas e redefinições de Claude, Codex, Kimi, MiniMax, Cursor e MiMo. Extensão privada do Chrome."
   },
   "popupEyebrow": {
     "message": "Capacidade de IA"
@@ -152,17 +152,11 @@
   "optionsLayoutSingleDescription": {
     "message": "Um card de largura total para cada provedor."
   },
-  "optionsLayoutSingleWidth": {
-    "message": "360 px de largura"
-  },
   "optionsLayoutGrid": {
     "message": "Duas colunas"
   },
   "optionsLayoutGridDescription": {
     "message": "Visão compacta com dois cards por linha."
-  },
-  "optionsLayoutGridWidth": {
-    "message": "500 px de largura"
   },
   "optionsProvidersTitle": {
     "message": "Provedores"

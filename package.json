@@ -41,6 +41,7 @@
 		"format:check": "prettier --check \"src/**/*.{ts,tsx,css}\""
 	},
 	"dependencies": {
+		"lucide-react": "^1.27.0",
 		"react": "^19.2.4",
 		"react-dom": "^19.2.4",
 		"react-shadow": "^20.6.0"

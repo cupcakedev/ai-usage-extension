@@ -33,6 +33,10 @@
     },
     "default_title": "__MSG_appShortName__"
   },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": true
+  },
   "content_scripts": [
     {
       "matches": [

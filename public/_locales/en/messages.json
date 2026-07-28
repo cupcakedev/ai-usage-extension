@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "Reset time"
   },
+  "optionsMetricAvailableResets": {
+    "message": "Available resets"
+  },
   "optionsMetricPlan": {
     "message": "Plan"
   },

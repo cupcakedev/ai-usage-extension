@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "Horário de reinício"
   },
+  "optionsMetricAvailableResets": {
+    "message": "Redefinições disponíveis"
+  },
   "optionsMetricPlan": {
     "message": "Plano"
   },

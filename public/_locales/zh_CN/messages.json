@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "重置时间"
   },
+  "optionsMetricAvailableResets": {
+    "message": "可用重置次数"
+  },
   "optionsMetricPlan": {
     "message": "套餐"
   },

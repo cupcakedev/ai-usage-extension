@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "Zurücksetzung"
   },
+  "optionsMetricAvailableResets": {
+    "message": "Verfügbare Zurücksetzungen"
+  },
   "optionsMetricPlan": {
     "message": "Tarif"
   },

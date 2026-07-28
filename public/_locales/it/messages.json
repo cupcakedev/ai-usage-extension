@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "Orario di reset"
   },
+  "optionsMetricAvailableResets": {
+    "message": "Reimpostazioni disponibili"
+  },
   "optionsMetricPlan": {
     "message": "Piano"
   },

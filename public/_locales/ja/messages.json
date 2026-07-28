@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "リセット時刻"
   },
+  "optionsMetricAvailableResets": {
+    "message": "利用可能なリセット"
+  },
   "optionsMetricPlan": {
     "message": "プラン"
   },

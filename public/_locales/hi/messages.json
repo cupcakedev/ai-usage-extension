@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "रीसेट समय"
   },
+  "optionsMetricAvailableResets": {
+    "message": "उपलब्ध रीसेट"
+  },
   "optionsMetricPlan": {
     "message": "प्लान"
   },

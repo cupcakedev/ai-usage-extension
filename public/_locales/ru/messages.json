@@ -197,6 +197,9 @@
   "optionsMetricReset": {
     "message": "Время сброса"
   },
+  "optionsMetricAvailableResets": {
+    "message": "Доступные сбросы"
+  },
   "optionsMetricPlan": {
     "message": "Тариф"
   },

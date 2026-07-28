@@ -1,4 +1,5 @@
 import { Zap } from 'lucide-react';
+import { msg } from '../../shared/i18n';
 import { SECTIONS } from '../sections';
 
 interface OptionsNavigationProps {
@@ -9,7 +10,7 @@ interface OptionsNavigationProps {
 
 export const OptionsNavigation = ({ activeId, onNavigate }: OptionsNavigationProps) => (
   <div className="auo-sidebar">
-    <nav className="auo-nav" aria-label="Settings sections">
+    <nav className="auo-nav" aria-label={msg('optionsNavLabel')}>
       {SECTIONS.map(({ id, label, Icon }) => {
         const active = id === activeId;
         return (
@@ -34,7 +35,7 @@ export const OptionsNavigation = ({ activeId, onNavigate }: OptionsNavigationPro
 
     <p className="auo-sidebar__hint">
       <Zap size={13} strokeWidth={1.9} aria-hidden="true" />
-      Every change is saved and applied immediately — no reload needed.
+      {msg('optionsInstantHint')}
     </p>
   </div>
 );

@@ -1,5 +1,6 @@
 import { BadgePercent, Layers3, LayoutDashboard, MonitorCog } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { msg } from '../shared/i18n';
 
 export interface SectionDefinition {
   id: string;
@@ -13,31 +14,30 @@ export interface SectionDefinition {
 export const SECTIONS: SectionDefinition[] = [
   {
     id: 'display',
-    label: 'Layout',
-    title: 'Popup layout',
-    description: 'Choose how visible provider cards are arranged in the popup.',
+    label: msg('optionsNavLayout'),
+    title: msg('optionsLayoutTitle'),
+    description: msg('optionsLayoutDescription'),
     Icon: LayoutDashboard,
   },
   {
     id: 'providers',
-    label: 'Providers',
-    title: 'Providers',
-    description:
-      'Hide a card or choose the usage details it can display. Unavailable data stays hidden automatically.',
+    label: msg('optionsNavProviders'),
+    title: msg('optionsProvidersTitle'),
+    description: msg('optionsProvidersDescription'),
     Icon: Layers3,
   },
   {
     id: 'badge',
-    label: 'Toolbar badge',
-    title: 'Badge range',
-    description: 'The extension icon changes by 10% ranges based on this source.',
+    label: msg('optionsNavBadge'),
+    title: msg('optionsBadgeTitle'),
+    description: msg('optionsBadgeDescription'),
     Icon: BadgePercent,
   },
   {
     id: 'overlays',
-    label: 'On-page overlays',
-    title: 'On-page overlays',
-    description: 'Show the collapsible usage capsule next to the message composer.',
+    label: msg('optionsNavOverlays'),
+    title: msg('optionsOverlaysTitle'),
+    description: msg('optionsOverlaysDescription'),
     Icon: MonitorCog,
   },
 ];

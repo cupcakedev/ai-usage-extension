@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import type { CSSProperties } from 'react';
+import { msg } from '../../shared/i18n';
 import type { PopupLayout } from '../../shared/types';
 import { SettingsSection } from './SettingsSection';
 
@@ -17,16 +18,16 @@ const LAYOUT_OPTIONS: Array<{
 }> = [
   {
     value: 'single',
-    title: 'One column',
-    description: 'A full-width card for each provider.',
-    width: '360 px wide',
+    title: msg('optionsLayoutSingle'),
+    description: msg('optionsLayoutSingleDescription'),
+    width: msg('optionsLayoutSingleWidth'),
     cards: 3,
   },
   {
     value: 'grid',
-    title: 'Two columns',
-    description: 'A compact overview with two cards per row.',
-    width: '500 px wide',
+    title: msg('optionsLayoutGrid'),
+    description: msg('optionsLayoutGridDescription'),
+    width: msg('optionsLayoutGridWidth'),
     cards: 4,
   },
 ];
@@ -61,7 +62,7 @@ export const DisplaySettingsSection = ({
   onPopupLayoutChange,
 }: DisplaySettingsSectionProps) => (
   <SettingsSection id="display">
-    <div className="auo-choice-group" role="radiogroup" aria-label="Popup layout">
+    <div className="auo-choice-group" role="radiogroup" aria-label={msg('optionsLayoutTitle')}>
       {LAYOUT_OPTIONS.map(({ value, title, description, width, cards }) => (
         <label
           className={`auo-choice ${popupLayout === value ? 'auo-choice--selected' : ''}`}

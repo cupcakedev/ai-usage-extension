@@ -1,4 +1,5 @@
 import { AlertTriangle, Layers, Target } from 'lucide-react';
+import { msg } from '../../shared/i18n';
 import { PROVIDER_IDS } from '../../shared/settings';
 import type { BadgeMetric, BadgeMode, ExtensionSettings, ProviderId } from '../../shared/types';
 import { BADGE_RANGE_ICONS, PROVIDER_DETAILS } from '../config';
@@ -20,14 +21,14 @@ const MODE_OPTIONS: Array<{
 }> = [
   {
     value: 'highest',
-    title: 'Highest of visible providers',
-    description: 'Use the largest current percentage among shown provider cards.',
+    title: msg('optionsBadgeHighest'),
+    description: msg('optionsBadgeHighestDescription'),
     Icon: Layers,
   },
   {
     value: 'provider',
-    title: 'Selected provider',
-    description: 'Use one provider regardless of the popup visibility of other cards.',
+    title: msg('optionsBadgeSelected'),
+    description: msg('optionsBadgeSelectedDescription'),
     Icon: Target,
   },
 ];
@@ -36,8 +37,8 @@ const MODE_OPTIONS: Array<{
 const RangeScale = () => (
   <div className="auo-scale">
     <div className="auo-scale__head">
-      <span>Toolbar icon steps</span>
-      <em>rounded down to the nearest 10%</em>
+      <span>{msg('optionsBadgeSteps')}</span>
+      <em>{msg('optionsBadgeStepsHint')}</em>
     </div>
     <div className="auo-scale__steps">
       {BADGE_RANGE_ICONS.map(({ range, src }) => (
@@ -59,7 +60,11 @@ export const BadgeSettingsSection = ({
 }: BadgeSettingsSectionProps) => (
   <SettingsSection id="badge">
     <div className="auo-fieldset">
-      <div className="auo-choice-group" role="radiogroup" aria-label="Badge source">
+      <div
+        className="auo-choice-group"
+        role="radiogroup"
+        aria-label={msg('optionsBadgeSourceLabel')}
+      >
         {MODE_OPTIONS.map(({ value, title, description, Icon }) => (
           <label
             className={`auo-choice auo-choice--compact ${
@@ -86,17 +91,17 @@ export const BadgeSettingsSection = ({
 
       <div className="auo-select-grid">
         <label className="auo-field">
-          <span className="auo-field__label">Usage window</span>
+          <span className="auo-field__label">{msg('optionsBadgeWindow')}</span>
           <select
             value={badge.metric}
             onChange={(event) => onBadgeMetricChange(event.target.value as BadgeMetric)}
           >
-            <option value="session">Session</option>
-            <option value="weekly">Weekly</option>
+            <option value="session">{msg('optionsBadgeWindowSession')}</option>
+            <option value="weekly">{msg('optionsBadgeWindowWeekly')}</option>
           </select>
         </label>
         <label className={`auo-field ${badge.mode !== 'provider' ? 'auo-field--muted' : ''}`}>
-          <span className="auo-field__label">Provider</span>
+          <span className="auo-field__label">{msg('optionsBadgeProvider')}</span>
           <select
             disabled={badge.mode !== 'provider'}
             value={badge.provider}
@@ -111,7 +116,7 @@ export const BadgeSettingsSection = ({
           {badge.mode === 'provider' && !providers[badge.provider].visible && (
             <small className="auo-warning">
               <AlertTriangle size={12} strokeWidth={2} aria-hidden="true" />
-              This provider is hidden in the popup, but its badge range remains active.
+              {msg('optionsBadgeHiddenWarning')}
             </small>
           )}
         </label>

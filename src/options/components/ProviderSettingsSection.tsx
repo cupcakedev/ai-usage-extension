@@ -1,4 +1,5 @@
 import { Check, EyeOff } from 'lucide-react';
+import { msg } from '../../shared/i18n';
 import { PROVIDER_IDS, PROVIDER_SUPPORTED_METRICS } from '../../shared/settings';
 import type { ExtensionSettings, ProviderId, ProviderMetric } from '../../shared/types';
 import { metricLabel, PROVIDER_DETAILS } from '../config';
@@ -23,7 +24,7 @@ export const ProviderSettingsSection = ({
       id="providers"
       aside={
         <span className="auo-counter">
-          <strong>{visibleCount}</strong> of {PROVIDER_IDS.length} shown
+          {msg('optionsProvidersShown', [String(visibleCount), String(PROVIDER_IDS.length)])}
         </span>
       }
     >
@@ -47,11 +48,14 @@ export const ProviderSettingsSection = ({
                     <h3 id={`${provider}-title`}>{details.name}</h3>
                     <small>
                       {providerSettings.visible ? (
-                        `${providerSettings.metrics.length} of ${supported.length} details`
+                        msg('optionsProviderDetails', [
+                          String(providerSettings.metrics.length),
+                          String(supported.length),
+                        ])
                       ) : (
                         <>
                           <EyeOff size={11} strokeWidth={2} aria-hidden="true" />
-                          Hidden in popup
+                          {msg('optionsProviderHidden')}
                         </>
                       )}
                     </small>
@@ -59,13 +63,15 @@ export const ProviderSettingsSection = ({
                 </div>
                 <Switch
                   checked={providerSettings.visible}
-                  label={`Show ${details.name} in popup`}
+                  label={msg('optionsProviderToggleLabel', details.name)}
                   onChange={(visible) => onProviderVisibilityChange(provider, visible)}
                 />
               </div>
 
               <fieldset className="auo-metrics" disabled={!providerSettings.visible}>
-                <legend className="auo-sr-only">{details.name} usage details</legend>
+                <legend className="auo-sr-only">
+                  {msg('optionsProviderDetailsLegend', details.name)}
+                </legend>
                 {supported.map((metric) => (
                   <label className="auo-chip" key={metric}>
                     <input

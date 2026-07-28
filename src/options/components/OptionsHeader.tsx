@@ -1,4 +1,5 @@
 import { AlertTriangle, Check, RefreshCw } from 'lucide-react';
+import { msg } from '../../shared/i18n';
 import { APP_ICON } from '../config';
 import type { SaveState } from '../hooks/useOptionsSettings';
 
@@ -11,9 +12,9 @@ const extensionVersion = (): string | null => {
 };
 
 const SAVE_COPY: Record<SaveState, string> = {
-  loading: 'Saving…',
-  saved: 'All changes saved',
-  error: 'Could not save',
+  loading: msg('optionsSaving'),
+  saved: msg('optionsSaved'),
+  error: msg('optionsSaveError'),
 };
 
 export const OptionsHeader = ({ saveState }: { saveState: SaveState }) => {
@@ -25,7 +26,7 @@ export const OptionsHeader = ({ saveState }: { saveState: SaveState }) => {
         <img className="auo-applogo" src={APP_ICON} alt="" width={34} height={34} />
         <div>
           <h1>
-            AI Usage Tracker
+            {msg('appShortName')}
             {version && <span className="auo-version">v{version}</span>}
           </h1>
         </div>

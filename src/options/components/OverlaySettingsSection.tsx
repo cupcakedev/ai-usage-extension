@@ -1,3 +1,4 @@
+import { msg } from '../../shared/i18n';
 import type { ExtensionSettings } from '../../shared/types';
 import { PROVIDER_DETAILS } from '../config';
 import { SettingsSection } from './SettingsSection';
@@ -37,7 +38,7 @@ export const OverlaySettingsSection = ({
             </div>
             <Switch
               checked={overlays[provider]}
-              label={`Enable ${details.name} on-page overlay`}
+              label={msg('optionsOverlayToggleLabel', details.name)}
               onChange={(enabled) => onOverlayChange(provider, enabled)}
             />
           </div>

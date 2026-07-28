@@ -4,6 +4,7 @@ import cursorBrandAsset from '../assets/brands/cursor.webp';
 import kimiBrandAsset from '../assets/brands/kimi.webp';
 import minimaxBrandAsset from '../assets/brands/minimax.webp';
 import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
+import { msg } from '../shared/i18n';
 import type { ProviderId, ProviderMetric } from '../shared/types';
 
 export const PROVIDER_DETAILS: Record<ProviderId, { name: string; icon: string }> = {
@@ -28,19 +29,19 @@ export const BADGE_RANGE_ICONS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((
 }));
 
 const PROVIDER_METRIC_LABELS: Record<ProviderMetric, string> = {
-  session: 'Session usage',
-  weekly: 'Weekly usage',
-  models: 'Model breakdown',
-  reset: 'Reset time',
-  plan: 'Plan',
-  summary: 'Balance / summary',
+  session: msg('optionsMetricSession'),
+  weekly: msg('optionsMetricWeekly'),
+  models: msg('optionsMetricModels'),
+  reset: msg('optionsMetricReset'),
+  plan: msg('optionsMetricPlan'),
+  summary: msg('optionsMetricSummary'),
 };
 
 /** Providers whose card labels this window differently in the popup. */
 const METRIC_LABEL_OVERRIDES: Partial<Record<ProviderId, Partial<Record<ProviderMetric, string>>>> =
   {
-    cursor: { session: 'Plan usage' },
-    mimo: { session: 'Token plan', summary: 'Balance' },
+    cursor: { session: msg('planUsage') },
+    mimo: { session: msg('tokenPlan'), summary: msg('optionsMetricBalance') },
   };
 
 export const metricLabel = (provider: ProviderId, metric: ProviderMetric): string =>

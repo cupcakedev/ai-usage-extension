@@ -1,5 +1,6 @@
 import { RotateCcw } from 'lucide-react';
 import { useRef, useState } from 'react';
+import { msg } from '../shared/i18n';
 import { BadgeSettingsSection } from './components/BadgeSettingsSection';
 import { DisplaySettingsSection } from './components/DisplaySettingsSection';
 import { OptionsHeader } from './components/OptionsHeader';
@@ -29,7 +30,7 @@ export const OptionsApp = () => {
     return (
       <main className="auo-loading">
         <span className="auo-loading__pulse" aria-hidden="true" />
-        Loading settings…
+        {msg('optionsLoading')}
       </main>
     );
   }
@@ -65,7 +66,7 @@ export const OptionsApp = () => {
           contentRef.current?.focus();
         }}
       >
-        Skip to settings
+        {msg('optionsSkip')}
       </a>
       <OptionsHeader saveState={saveState} />
 
@@ -107,8 +108,8 @@ export const OptionsApp = () => {
 
           <footer className="auo-footer">
             <div className="auo-footer__copy">
-              <strong>Reset to defaults</strong>
-              <span>Restores every preference on this page. This cannot be undone.</span>
+              <strong>{msg('optionsResetTitle')}</strong>
+              <span>{msg('optionsResetDescription')}</span>
             </div>
             <button
               type="button"
@@ -117,7 +118,7 @@ export const OptionsApp = () => {
               onBlur={() => setResetArmed(false)}
             >
               <RotateCcw size={14} strokeWidth={2} aria-hidden="true" />
-              {resetArmed ? 'Click again to confirm' : 'Reset defaults'}
+              {resetArmed ? msg('optionsResetConfirm') : msg('optionsResetAction')}
             </button>
           </footer>
         </div>

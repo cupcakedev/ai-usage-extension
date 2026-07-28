@@ -386,8 +386,8 @@ select {
 .auo-choice {
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 11px;
   padding: 13px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -396,12 +396,6 @@ select {
   transition:
     border-color 150ms ease,
     background-color 150ms ease;
-}
-
-.auo-choice--compact {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 11px;
 }
 
 .auo-choice:hover {
@@ -461,16 +455,6 @@ select {
   line-height: 1.45;
 }
 
-.auo-choice__text em {
-  display: block;
-  margin-top: 8px;
-  color: var(--faint);
-  font-size: 10px;
-  font-style: normal;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .auo-choice__mark {
   display: grid;
   place-items: center;
@@ -490,105 +474,6 @@ select {
 .auo-choice--selected .auo-choice__mark {
   opacity: 1;
   transform: scale(1);
-}
-
-/* ---- Popup mini preview --------------------------------------------- */
-
-.auo-preview {
-  display: block;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: var(--bg);
-}
-
-.auo-preview__bar {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
-}
-
-.auo-preview__bar i {
-  height: 5px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-}
-
-.auo-preview__bar i:first-child {
-  width: 32px;
-}
-
-.auo-preview__bar i:last-child {
-  width: 13px;
-  margin-left: auto;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.auo-preview__cards {
-  display: grid;
-  gap: 6px;
-}
-
-.auo-preview--grid .auo-preview__cards {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.auo-preview__card {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: 6px;
-  padding: 7px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--surface);
-}
-
-.auo-preview__dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.auo-preview__lines {
-  display: grid;
-  gap: 3px;
-}
-
-.auo-preview__lines i {
-  height: 3px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-}
-
-.auo-preview__lines i:first-child {
-  width: 60%;
-}
-
-.auo-preview__lines i:last-child {
-  width: 34%;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.auo-preview__meter {
-  position: relative;
-  grid-column: 1 / -1;
-  height: 3px;
-  margin-top: 2px;
-  border-radius: 999px;
-  background: var(--track);
-  overflow: hidden;
-}
-
-.auo-preview__meter::after {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: var(--fill-width, 50%);
-  border-radius: 999px;
-  background: var(--fill);
 }
 
 /* ---- Providers ------------------------------------------------------ */

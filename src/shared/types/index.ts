@@ -62,6 +62,30 @@ export interface UsageState {
   mimo?: MiMoUsage;
 }
 
+export type PopupLayout = 'single' | 'grid';
+export type ProviderMetric = 'session' | 'weekly' | 'models' | 'reset' | 'plan' | 'summary';
+export type BadgeMode = 'highest' | 'provider';
+export type BadgeMetric = 'session' | 'weekly';
+
+export interface ProviderDisplaySettings {
+  visible: boolean;
+  metrics: ProviderMetric[];
+}
+
+export interface ExtensionSettings {
+  popupLayout: PopupLayout;
+  providers: Record<ProviderId, ProviderDisplaySettings>;
+  badge: {
+    mode: BadgeMode;
+    provider: ProviderId;
+    metric: BadgeMetric;
+  };
+  overlays: {
+    claude: boolean;
+    codex: boolean;
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*  Messaging protocol                                                        */
 /* -------------------------------------------------------------------------- */

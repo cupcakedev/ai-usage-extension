@@ -14,6 +14,8 @@ export const STORAGE_KEYS = {
   claudeOverlayCollapsed: 'claude_overlay_collapsed',
   codexOverlayEnabled: 'codex_overlay_enabled',
   codexOverlayCollapsed: 'codex_overlay_collapsed',
+  /** User-configurable display, badge, and overlay preferences. */
+  extensionSettings: 'ai_usage_settings',
 } as const;
 
 /** Name of the recurring alarm that refreshes usage in the background. */

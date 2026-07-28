@@ -1,4 +1,4 @@
-import { REFRESH_ALARM, REFRESH_INTERVAL_MINUTES } from '../shared/constants';
+import { REFRESH_ALARM, REFRESH_INTERVAL_MINUTES, STORAGE_KEYS } from '../shared/constants';
 import type { ExtensionMessage, RefreshUsageResponse, UsageState } from '../shared/types';
 import { updateBadge } from './badge';
 import { UsageService } from './services/UsageService';
@@ -46,6 +46,14 @@ chrome.runtime.onStartup.addListener(() => {
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === REFRESH_ALARM) {
     void refreshUsage().catch(() => undefined);
+  }
+});
+
+chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName === 'local' && changes[STORAGE_KEYS.extensionSettings]) {
+    void UsageService.getUsageState()
+      .then(queueBadgeUpdate)
+      .catch(() => undefined);
   }
 });
 

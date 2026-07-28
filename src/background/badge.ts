@@ -1,5 +1,6 @@
 import { msg } from '../shared/i18n';
-import type { ProviderId, UsageState } from '../shared/types';
+import { readExtensionSettings } from '../shared/settings';
+import type { ExtensionSettings, ProviderId, UsageState } from '../shared/types';
 import { clampPercent } from '../shared/utils';
 
 const iconPath = (range: number): string => `icons/badges/range-${range}.png`;
@@ -58,13 +59,19 @@ interface UsageSummary {
   tooltip: string;
 }
 
-const summarizeUsage = (state: UsageState): UsageSummary | null => {
+const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSummary | null => {
   const rows: number[] = [];
+  const providers =
+    settings.badge.mode === 'provider'
+      ? [settings.badge.provider]
+      : (['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'] as const).filter(
+          (provider) => settings.providers[provider].visible,
+        );
 
-  (['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'] as const).forEach((provider) => {
+  providers.forEach((provider) => {
     const usage = state[provider];
     if (!usage) return;
-    rows.push(usage.session.percentage);
+    rows.push(usage[settings.badge.metric].percentage);
   });
 
   if (rows.length === 0) {
@@ -75,11 +82,11 @@ const summarizeUsage = (state: UsageState): UsageSummary | null => {
 
   const tooltip = [
     msg('appShortName'),
-    ...(['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'] as const).flatMap((provider) => {
+    ...providers.flatMap((provider) => {
       const usage = state[provider];
       if (!usage) return [];
       return [
-        `${PROVIDER_TITLE[provider]} · ${SESSION_LABEL} ${clampPercent(usage.session.percentage)}%`,
+        `${PROVIDER_TITLE[provider]} · ${settings.badge.metric === 'session' ? SESSION_LABEL : msg('weeklyLimit')} ${clampPercent(usage[settings.badge.metric].percentage)}%`,
       ];
     }),
   ].join('\n');
@@ -96,7 +103,7 @@ const resetBadge = async (): Promise<void> => {
 };
 
 export const updateBadge = async (state: UsageState): Promise<void> => {
-  const summary = summarizeUsage(state);
+  const summary = summarizeUsage(state, await readExtensionSettings());
   if (!summary) {
     await resetBadge();
     return;

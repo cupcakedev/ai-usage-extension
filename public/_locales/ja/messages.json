@@ -1,12 +1,12 @@
 {
   "appName": {
-    "message": "AI Usage Tracker: Quota & Limits for Claude, Codex"
+    "message": "AI Usage Tracker: Claude と Codex の上限"
   },
   "appShortName": {
     "message": "AI Usage Tracker"
   },
   "appDescription": {
-    "message": "Claude、Codex、Kimi、MiniMax、Cursor、MiMo の利用上限、クォータ、リセットを追跡するプライベートな Chrome 拡張機能。"
+    "message": "Claude と ChatGPT (Codex) のセッション・週間上限をポップアップ、バッジ、オーバーレイで確認。プライバシー重視、設定不要。"
   },
   "popupEyebrow": {
     "message": "AI 容量"

@@ -1,8 +1,8 @@
 const FALLBACK_MESSAGES: Record<string, string> = {
-  appName: 'AI Usage Tracker: Quota & Limits for Claude, Codex',
+  appName: 'AI Usage Tracker: Claude & Codex Limits',
   appShortName: 'AI Usage Tracker',
   appDescription:
-    'Track Claude, Codex, Kimi, MiniMax, Cursor and MiMo usage limits, quotas and resets. Private, cookie-based Chrome extension.',
+    'Track Claude and ChatGPT (Codex) session and weekly usage limits in a popup, toolbar badge, and on-page overlay. Privacy-first, no setup.',
   popupEyebrow: 'AI Capacity',
   popupTitle: 'Usage',
   refreshUsage: 'Refresh usage',

@@ -1,12 +1,12 @@
 {
   "appName": {
-    "message": "AI Usage Tracker: Quota & Limits for Claude, Codex"
+    "message": "AI Usage Tracker：Claude 与 Codex 限额"
   },
   "appShortName": {
     "message": "AI Usage Tracker"
   },
   "appDescription": {
-    "message": "跟踪 Claude、Codex、Kimi、MiniMax、Cursor 和 MiMo 的用量限额、配额与重置时间。私密 Chrome 扩展。"
+    "message": "在弹窗、徽章和页面浮层中跟踪 Claude 与 ChatGPT (Codex) 的会话和每周限额。注重隐私，无需设置。"
   },
   "popupEyebrow": {
     "message": "AI 容量"

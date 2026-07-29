@@ -1,12 +1,12 @@
 {
   "appName": {
-    "message": "AI Usage Tracker: Quota & Limits for Claude, Codex"
+    "message": "AI Usage Tracker: лимиты Claude и Codex"
   },
   "appShortName": {
     "message": "AI Usage Tracker"
   },
   "appDescription": {
-    "message": "Отслеживайте лимиты, квоты и сбросы Claude, Codex, Kimi, MiniMax, Cursor и MiMo. Приватное Chrome-расширение."
+    "message": "Отслеживайте лимиты Claude и ChatGPT (Codex) за сессию и неделю в попапе, бейдже и оверлее. Приватно, без настройки."
   },
   "popupEyebrow": {
     "message": "AI-лимиты"

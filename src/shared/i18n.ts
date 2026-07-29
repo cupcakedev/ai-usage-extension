@@ -1,5 +1,5 @@
 const FALLBACK_MESSAGES: Record<string, string> = {
-  appName: 'AI Usage Tracker: Quota & Limits for Claude, Codex, Kimi, Cursor, MiniMax',
+  appName: 'AI Usage Tracker: Quota & Limits for Claude, Codex',
   appShortName: 'AI Usage Tracker',
   appDescription:
     'Track Claude, Codex, Kimi, MiniMax, Cursor and MiMo usage limits, quotas and resets. Private, cookie-based Chrome extension.',

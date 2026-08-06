@@ -3,14 +3,6 @@ import { msg } from '../../shared/i18n';
 import { APP_ICON } from '../config';
 import type { SaveState } from '../hooks/useOptionsSettings';
 
-const extensionVersion = (): string | null => {
-  try {
-    return globalThis.chrome?.runtime?.getManifest?.().version ?? null;
-  } catch {
-    return null;
-  }
-};
-
 const SAVE_COPY: Record<SaveState, string> = {
   loading: msg('optionsSaving'),
   saved: msg('optionsSaved'),
@@ -18,8 +10,6 @@ const SAVE_COPY: Record<SaveState, string> = {
 };
 
 export const OptionsHeader = ({ saveState }: { saveState: SaveState }) => {
-  const version = extensionVersion();
-
   return (
     <header className="auo-header">
       <div className="auo-header__identity">
@@ -27,7 +17,6 @@ export const OptionsHeader = ({ saveState }: { saveState: SaveState }) => {
         <div>
           <h1>
             {msg('appShortName')}
-            {version && <span className="auo-version">v{version}</span>}
           </h1>
         </div>
       </div>

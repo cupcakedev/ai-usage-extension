@@ -1,4 +1,3 @@
-import { Zap } from 'lucide-react';
 import { msg } from '../../shared/i18n';
 import { SECTIONS } from '../sections';
 
@@ -32,10 +31,5 @@ export const OptionsNavigation = ({ activeId, onNavigate }: OptionsNavigationPro
         );
       })}
     </nav>
-
-    <p className="auo-sidebar__hint">
-      <Zap size={13} strokeWidth={1.9} aria-hidden="true" />
-      {msg('optionsInstantHint')}
-    </p>
   </div>
 );

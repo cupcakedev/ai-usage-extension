@@ -15,9 +15,7 @@ export const OptionsHeader = ({ saveState }: { saveState: SaveState }) => {
       <div className="auo-header__identity">
         <img className="auo-applogo" src={APP_ICON} alt="" width={34} height={34} />
         <div>
-          <h1>
-            {msg('appShortName')}
-          </h1>
+          <h1>{msg('appShortName')}</h1>
         </div>
       </div>
 

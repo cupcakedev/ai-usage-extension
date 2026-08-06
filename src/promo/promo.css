@@ -1,0 +1,375 @@
+/**
+ * Layout for the store artwork only. The product UI keeps its own styles —
+ * `global.css` (popup) and `overlay.css` (content script) are imported as-is so
+ * the renders stay in sync with what ships.
+ */
+
+/*
+ * The product stylesheets pin the document to their own surface: the popup
+ * sizes it to 360px (500px in grid mode) and the options page clips it to the
+ * viewport. Here the document is just a canvas, so all of that is undone —
+ * the `:has()` selectors are repeated to match global.css's specificity.
+ */
+html,
+body,
+#promo,
+html:has(.au-shell--grid),
+body:has(.au-shell--grid) {
+  width: auto;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  background: #0b0b0c;
+}
+
+/* ---- Frame ----------------------------------------------------------- */
+
+.promo-frame {
+  position: relative;
+  overflow: hidden;
+  background: #0b0b0c;
+  color: var(--au-text);
+}
+
+/** One enormous circle; only its edge crosses the canvas. */
+.promo-frame__arc {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.016);
+}
+
+.promo-frame__bloom {
+  position: absolute;
+  left: -12%;
+  top: -22%;
+  width: 62%;
+  height: 82%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.055), transparent 62%);
+}
+
+/* Centred layouts want the light behind the mark, not off in a corner. */
+.promo-frame--center .promo-frame__bloom {
+  left: 50%;
+  top: -46%;
+  width: 86%;
+  height: 130%;
+  transform: translateX(-50%);
+}
+
+/* ---- Copy column ----------------------------------------------------- */
+
+.promo-copy {
+  position: absolute;
+  z-index: 10;
+}
+
+/* Stacked, centred composition — used by the small tile. */
+.promo-copy--center {
+  text-align: center;
+}
+
+.promo-copy--center .promo-chips {
+  justify-content: center;
+}
+
+.promo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.promo-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: #a8a4fa;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.promo-eyebrow span {
+  width: 30px;
+  height: 3px;
+  flex: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8752fa, #4500f9);
+}
+
+.promo-headline {
+  margin: 0;
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  color: #f4f2ee;
+}
+
+.promo-headline span {
+  display: block;
+  white-space: nowrap;
+}
+
+.promo-sub {
+  margin: 0;
+  color: #a3a09a;
+  line-height: 1.6;
+}
+
+.promo-sub span {
+  display: block;
+}
+
+/* ---- Brand mark ------------------------------------------------------ */
+
+.promo-mark {
+  position: relative;
+  flex: none;
+}
+
+.promo-mark img {
+  display: block;
+  filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.55));
+}
+
+/* ---- Provider chips -------------------------------------------------- */
+
+.promo-chips {
+  display: flex;
+  align-items: center;
+}
+
+.promo-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--au-line);
+  border-radius: 12px;
+  background: var(--au-surface);
+  color: var(--au-text);
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.promo-chip img {
+  border-radius: 6px;
+  object-fit: cover;
+  flex: none;
+}
+
+.promo-chips--labels {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.promo-chips--labels .promo-chip {
+  gap: 10px;
+  padding: 9px 15px;
+  font-size: 13.5px;
+}
+
+.promo-chips--labels .promo-chip img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon-only lineup for the small tile, where wordmarks would not fit. */
+.promo-chips--icons {
+  gap: 9px;
+}
+
+.promo-chips--icons .promo-chip {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.promo-chips--icons .promo-chip img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---- Popup stage ----------------------------------------------------- */
+
+.promo-stage--popup {
+  position: absolute;
+  z-index: 5;
+  width: 360px;
+  transform-origin: top right;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  background: var(--au-bg);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    0 40px 90px rgba(0, 0, 0, 0.55);
+}
+
+.promo-stage--popup .au-shell {
+  padding: 22px 18px;
+}
+
+/* The two-column layout is the popup's own 500px width. */
+.promo-stage--grid {
+  width: 500px;
+}
+
+/* ---- Windowed stages (options page, highlights) ---------------------- */
+
+.promo-window {
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+  padding: 24px 22px;
+  transform-origin: top right;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  background: var(--au-bg);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    0 40px 90px rgba(0, 0, 0, 0.55);
+}
+
+/* Content taller than the window keeps going — fade it instead of cutting. */
+.promo-window--fade {
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+}
+
+.promo-options {
+  display: grid;
+  gap: 14px;
+}
+
+/* ---- Highlights (closing slide) -------------------------------------- */
+
+.promo-highlights {
+  display: grid;
+  gap: 20px;
+}
+
+.promo-highlights__title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--au-text);
+}
+
+.promo-lineup {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.promo-lineup__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--au-line);
+  border-radius: 12px;
+  background: var(--au-surface);
+}
+
+.promo-lineup__row img {
+  width: 26px;
+  height: 26px;
+  flex: none;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.promo-lineup__naming {
+  display: grid;
+  min-width: 0;
+}
+
+.promo-lineup__naming strong {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--au-text);
+}
+
+.promo-lineup__naming small {
+  font-size: 11px;
+  color: var(--au-text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.promo-highlights__list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo-highlights__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 14px;
+  border: 1px solid var(--au-line);
+  border-radius: 12px;
+  background: var(--au-surface);
+}
+
+.promo-highlights__glyph {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--au-text);
+}
+
+.promo-highlights__copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.promo-highlights__copy strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--au-text);
+}
+
+.promo-highlights__copy small {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--au-text-muted);
+}
+
+/* ---- Overlay stage --------------------------------------------------- */
+
+.promo-overlays.aiu-root {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.promo-overlays__card {
+  position: absolute;
+  transform-origin: top left;
+}
+
+/* The real capsule is fixed to the viewport edge; here the cards are placed. */
+.promo-overlays .aiu-wrap {
+  position: relative;
+  right: auto;
+  top: auto;
+  transform: none;
+}
+
+.promo-overlays .aiu-card {
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 26px 60px rgba(0, 0, 0, 0.55);
+}

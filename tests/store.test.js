@@ -228,9 +228,18 @@ describe('store/promo/', () => {
     assert.ok(existsSync(resolve(promoDir, 'README.md')), 'store/promo/README.md is missing');
   });
 
-  // Required image assets — small/marquee tiles are optional in the README and
-  // therefore not enforced. Add to this list once they are required.
-  const requiredAssets = ['icon-128.png', 'screenshot-1.jpg', 'screenshot-2.jpg'];
+  // Required image assets. Everything except the icon is produced by
+  // `pnpm promo`, so a missing file means the artwork was never re-rendered.
+  const requiredAssets = [
+    'icon-128.png',
+    'screenshot-1.jpg',
+    'screenshot-2.jpg',
+    'screenshot-3.jpg',
+    'screenshot-4.jpg',
+    'screenshot-5.jpg',
+    'marquee.png',
+    'small-tile.png',
+  ];
 
   for (const asset of requiredAssets) {
     it(`has ${asset}`, () => {

@@ -7,6 +7,7 @@ export interface UsageLimit {
   resetsAt: string | null;
   used?: number;
   limit?: number;
+  available?: boolean;
 }
 
 export interface ModelUsage {

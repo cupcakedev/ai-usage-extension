@@ -27,9 +27,18 @@ export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = 
   mimo: ['session', 'reset', 'plan', 'summary'],
 };
 
+const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
+  claude: { visible: true, metrics: ['session', 'weekly', 'reset'] },
+  codex: { visible: true, metrics: ['weekly', 'reset', 'availableResets'] },
+  minimax: { visible: false, metrics: ['session', 'weekly', 'models', 'reset'] },
+  kimi: { visible: false, metrics: ['session', 'weekly', 'reset'] },
+  cursor: { visible: false, metrics: ['session', 'reset'] },
+  mimo: { visible: false, metrics: ['session'] },
+};
+
 const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({
-  visible: true,
-  metrics: [...PROVIDER_SUPPORTED_METRICS[provider]],
+  visible: PROVIDER_DEFAULTS[provider].visible,
+  metrics: [...PROVIDER_DEFAULTS[provider].metrics],
 });
 
 export const createDefaultSettings = (): ExtensionSettings => ({
@@ -55,7 +64,7 @@ const asMetricList = (value: unknown, provider: ProviderId): ProviderMetric[] =>
     ? value.filter((metric): metric is ProviderMetric =>
         supported.includes(metric as ProviderMetric),
       )
-    : [...supported];
+    : [...PROVIDER_DEFAULTS[provider].metrics];
 };
 
 export const normalizeSettings = (
@@ -77,7 +86,9 @@ export const normalizeSettings = (
       return [
         provider,
         {
-          visible: providerValue?.visible !== false,
+          visible: providerValue
+            ? providerValue.visible !== false
+            : defaults.providers[provider].visible,
           metrics: asMetricList(providerValue?.metrics, provider),
         },
       ];

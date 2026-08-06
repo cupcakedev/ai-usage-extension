@@ -8,7 +8,7 @@ import { useNow } from '../shared/hooks/useNow';
 import { msg } from '../shared/i18n';
 import { requestUsageRefresh } from '../shared/messaging';
 import type { ClaudeUsage, CodexUsage, UsageLimit, UsageState } from '../shared/types';
-import { formatRelativeTime, formatReset, getUsageTone } from '../shared/utils';
+import { formatRelativeTime, formatReset, getUsageTone, isLimitAvailable } from '../shared/utils';
 
 const HOST_ID = 'ai-usage-claude-overlay-host';
 
@@ -243,8 +243,12 @@ const UsageOverlay: React.FC = () => {
 
           {usage ? (
             <>
-              <OverlayMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
-              <OverlayMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+              {isLimitAvailable(usage.session) && (
+                <OverlayMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
+              )}
+              {isLimitAvailable(usage.weekly) && (
+                <OverlayMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+              )}
             </>
           ) : isLoading || isRefreshing ? (
             <div className="aiu-loader" aria-hidden="true">

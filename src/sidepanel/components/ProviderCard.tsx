@@ -6,7 +6,7 @@ import type {
   ExternalProviderUsage,
   ProviderMetric,
 } from '../../shared/types';
-import { formatRelativeTime } from '../../shared/utils';
+import { formatRelativeTime, isLimitAvailable } from '../../shared/utils';
 import { UsageCard } from './UsageCard';
 import { UsageMetric } from './UsageMetric';
 
@@ -88,7 +88,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
         <Skeleton />
       ) : usage ? (
         <>
-          {shows('session') && (
+          {shows('session') && isLimitAvailable(usage.session) && (
             <UsageMetric
               label={primaryLabel}
               limit={usage.session}
@@ -96,7 +96,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
               showReset={shows('reset')}
             />
           )}
-          {shows('weekly') && secondaryLabel && (
+          {shows('weekly') && secondaryLabel && isLimitAvailable(usage.weekly) && (
             <UsageMetric
               label={secondaryLabel}
               limit={usage.weekly}

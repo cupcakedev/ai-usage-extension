@@ -41,6 +41,8 @@
 		"test": "node --test tests/",
 		"build": "tsc --noEmit && vite build",
 		"release": "pnpm test && pnpm build && node scripts/release.js",
+		"promo": "node scripts/promo.js",
+		"promo:dev": "vite --config vite.promo.config.ts",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
 		"format": "prettier --write \"src/**/*.{ts,tsx,css}\"",

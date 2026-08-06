@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Verfolge Claude- und ChatGPT-(Codex)-Limits pro Sitzung und Woche in Popup, Badge und Overlay. Privat, ohne Einrichtung."
   },
-  "popupEyebrow": {
-    "message": "KI-Kapazität"
-  },
   "popupTitle": {
     "message": "Nutzung"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "Aktualisierung fehlgeschlagen"
-  },
-  "overlayToggleLabel": {
-    "message": "Overlays auf der Seite"
   },
   "availableResetsLabel": {
     "message": "Verfügbare Resets · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "Noch keine Daten. Öffne chatgpt.com angemeldet und aktualisiere."
   },
+  "emptyMiniMax": {
+    "message": "Noch keine Daten. Öffne platform.minimax.io angemeldet und aktualisiere."
+  },
+  "emptyKimi": {
+    "message": "Noch keine Daten. Öffne kimi.com/code angemeldet und aktualisiere."
+  },
+  "emptyCursor": {
+    "message": "Noch keine Daten. Öffne cursor.com angemeldet und aktualisiere."
+  },
+  "emptyMiMo": {
+    "message": "Noch keine Daten. Öffne platform.xiaomimimo.com angemeldet und aktualisiere."
+  },
   "emptyOverlay": {
     "message": "Noch keine Daten. Öffne das Popup und aktualisiere."
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "Einstellungen werden geladen…"
-  },
-  "optionsInstantHint": {
-    "message": "Jede Änderung wird sofort gespeichert und angewendet – kein Neuladen nötig."
   },
   "optionsNavLabel": {
     "message": "Einstellungsbereiche"

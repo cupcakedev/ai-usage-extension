@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "在弹窗、徽章和页面浮层中跟踪 Claude 与 ChatGPT (Codex) 的会话和每周限额。注重隐私，无需设置。"
   },
-  "popupEyebrow": {
-    "message": "AI 容量"
-  },
   "popupTitle": {
     "message": "使用情况"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "刷新失败"
-  },
-  "overlayToggleLabel": {
-    "message": "页面浮层"
   },
   "availableResetsLabel": {
     "message": "可用重置次数 · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "暂无数据。请在登录状态下打开 chatgpt.com，然后刷新。"
   },
+  "emptyMiniMax": {
+    "message": "暂无数据。请在登录状态下打开 platform.minimax.io，然后刷新。"
+  },
+  "emptyKimi": {
+    "message": "暂无数据。请在登录状态下打开 kimi.com/code，然后刷新。"
+  },
+  "emptyCursor": {
+    "message": "暂无数据。请在登录状态下打开 cursor.com，然后刷新。"
+  },
+  "emptyMiMo": {
+    "message": "暂无数据。请在登录状态下打开 platform.xiaomimimo.com，然后刷新。"
+  },
   "emptyOverlay": {
     "message": "暂无数据。请打开弹窗并刷新。"
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "正在加载设置…"
-  },
-  "optionsInstantHint": {
-    "message": "每项更改都会立即保存并生效，无需重新加载。"
   },
   "optionsNavLabel": {
     "message": "设置分区"

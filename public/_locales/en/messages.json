@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Track Claude and ChatGPT (Codex) session & weekly usage limits at a glance in a popup and on-page overlay. Privacy-first, no setup."
   },
-  "popupEyebrow": {
-    "message": "AI Capacity"
-  },
   "popupTitle": {
     "message": "Usage"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "Refresh failed"
-  },
-  "overlayToggleLabel": {
-    "message": "On-page overlays"
   },
   "availableResetsLabel": {
     "message": "Available resets · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "No data yet. Open chatgpt.com while signed in, then refresh."
   },
+  "emptyMiniMax": {
+    "message": "No data yet. Open platform.minimax.io while signed in, then refresh."
+  },
+  "emptyKimi": {
+    "message": "No data yet. Open kimi.com/code while signed in, then refresh."
+  },
+  "emptyCursor": {
+    "message": "No data yet. Open cursor.com while signed in, then refresh."
+  },
+  "emptyMiMo": {
+    "message": "No data yet. Open platform.xiaomimimo.com while signed in, then refresh."
+  },
   "emptyOverlay": {
     "message": "No data yet. Open the popup and refresh."
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "Loading settings…"
-  },
-  "optionsInstantHint": {
-    "message": "Every change is saved and applied immediately — no reload needed."
   },
   "optionsNavLabel": {
     "message": "Settings sections"

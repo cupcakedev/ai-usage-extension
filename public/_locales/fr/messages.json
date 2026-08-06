@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Suivez les limites Claude et ChatGPT (Codex) par session et semaine dans le popup, le badge et l’overlay. Privé, sans configuration."
   },
-  "popupEyebrow": {
-    "message": "Capacité IA"
-  },
   "popupTitle": {
     "message": "Utilisation"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "Échec de l’actualisation"
-  },
-  "overlayToggleLabel": {
-    "message": "Overlays sur la page"
   },
   "availableResetsLabel": {
     "message": "Réinitialisations disponibles · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "Aucune donnée. Ouvrez chatgpt.com connecté, puis actualisez."
   },
+  "emptyMiniMax": {
+    "message": "Aucune donnée. Ouvrez platform.minimax.io connecté, puis actualisez."
+  },
+  "emptyKimi": {
+    "message": "Aucune donnée. Ouvrez kimi.com/code connecté, puis actualisez."
+  },
+  "emptyCursor": {
+    "message": "Aucune donnée. Ouvrez cursor.com connecté, puis actualisez."
+  },
+  "emptyMiMo": {
+    "message": "Aucune donnée. Ouvrez platform.xiaomimimo.com connecté, puis actualisez."
+  },
   "emptyOverlay": {
     "message": "Aucune donnée. Ouvrez le popup et actualisez."
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "Chargement des réglages…"
-  },
-  "optionsInstantHint": {
-    "message": "Chaque modification est enregistrée et appliquée immédiatement — aucun rechargement nécessaire."
   },
   "optionsNavLabel": {
     "message": "Sections des réglages"

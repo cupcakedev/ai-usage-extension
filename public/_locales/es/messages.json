@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Consulta límites de Claude y ChatGPT (Codex) por sesión y semana en popup, insignia y superposición. Privado y sin configuración."
   },
-  "popupEyebrow": {
-    "message": "Capacidad de IA"
-  },
   "popupTitle": {
     "message": "Uso"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "Error al actualizar"
-  },
-  "overlayToggleLabel": {
-    "message": "Superposiciones en página"
   },
   "availableResetsLabel": {
     "message": "Reinicios disponibles · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "Aún no hay datos. Abre chatgpt.com con sesión iniciada y actualiza."
   },
+  "emptyMiniMax": {
+    "message": "Aún no hay datos. Abre platform.minimax.io con sesión iniciada y actualiza."
+  },
+  "emptyKimi": {
+    "message": "Aún no hay datos. Abre kimi.com/code con sesión iniciada y actualiza."
+  },
+  "emptyCursor": {
+    "message": "Aún no hay datos. Abre cursor.com con sesión iniciada y actualiza."
+  },
+  "emptyMiMo": {
+    "message": "Aún no hay datos. Abre platform.xiaomimimo.com con sesión iniciada y actualiza."
+  },
   "emptyOverlay": {
     "message": "Aún no hay datos. Abre el popup y actualiza."
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "Cargando ajustes…"
-  },
-  "optionsInstantHint": {
-    "message": "Cada cambio se guarda y se aplica al instante: no hace falta recargar."
   },
   "optionsNavLabel": {
     "message": "Secciones de ajustes"

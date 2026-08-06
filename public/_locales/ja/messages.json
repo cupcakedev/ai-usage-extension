@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Claude と ChatGPT (Codex) のセッション・週間上限をポップアップ、バッジ、オーバーレイで確認。プライバシー重視、設定不要。"
   },
-  "popupEyebrow": {
-    "message": "AI 容量"
-  },
   "popupTitle": {
     "message": "使用状況"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "更新に失敗しました"
-  },
-  "overlayToggleLabel": {
-    "message": "ページ内オーバーレイ"
   },
   "availableResetsLabel": {
     "message": "利用可能なリセット回数 · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "まだデータがありません。ログイン済みの chatgpt.com を開いて更新してください。"
   },
+  "emptyMiniMax": {
+    "message": "まだデータがありません。ログイン済みの platform.minimax.io を開いて更新してください。"
+  },
+  "emptyKimi": {
+    "message": "まだデータがありません。ログイン済みの kimi.com/code を開いて更新してください。"
+  },
+  "emptyCursor": {
+    "message": "まだデータがありません。ログイン済みの cursor.com を開いて更新してください。"
+  },
+  "emptyMiMo": {
+    "message": "まだデータがありません。ログイン済みの platform.xiaomimimo.com を開いて更新してください。"
+  },
   "emptyOverlay": {
     "message": "まだデータがありません。ポップアップを開いて更新してください。"
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "設定を読み込み中…"
-  },
-  "optionsInstantHint": {
-    "message": "変更は即座に保存・適用されます。再読み込みは不要です。"
   },
   "optionsNavLabel": {
     "message": "設定セクション"

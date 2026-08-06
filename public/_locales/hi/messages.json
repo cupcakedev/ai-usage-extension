@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Claude और ChatGPT (Codex) की सत्र और साप्ताहिक सीमाएं पॉपअप, बैज और पेज ओवरले में देखें। निजी, बिना सेटअप।"
   },
-  "popupEyebrow": {
-    "message": "AI क्षमता"
-  },
   "popupTitle": {
     "message": "उपयोग"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "अपडेट विफल रहा"
-  },
-  "overlayToggleLabel": {
-    "message": "पेज ओवरले"
   },
   "availableResetsLabel": {
     "message": "उपलब्ध रीसेट · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "अभी कोई डेटा नहीं है। साइन इन करके chatgpt.com खोलें, फिर अपडेट करें।"
   },
+  "emptyMiniMax": {
+    "message": "अभी कोई डेटा नहीं है। साइन इन करके platform.minimax.io खोलें, फिर अपडेट करें।"
+  },
+  "emptyKimi": {
+    "message": "अभी कोई डेटा नहीं है। साइन इन करके kimi.com/code खोलें, फिर अपडेट करें।"
+  },
+  "emptyCursor": {
+    "message": "अभी कोई डेटा नहीं है। साइन इन करके cursor.com खोलें, फिर अपडेट करें।"
+  },
+  "emptyMiMo": {
+    "message": "अभी कोई डेटा नहीं है। साइन इन करके platform.xiaomimimo.com खोलें, फिर अपडेट करें।"
+  },
   "emptyOverlay": {
     "message": "अभी कोई डेटा नहीं है। पॉपअप खोलें और अपडेट करें।"
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "सेटिंग्स लोड हो रही हैं…"
-  },
-  "optionsInstantHint": {
-    "message": "हर बदलाव तुरंत सहेजा और लागू किया जाता है — रीलोड की ज़रूरत नहीं।"
   },
   "optionsNavLabel": {
     "message": "सेटिंग्स अनुभाग"

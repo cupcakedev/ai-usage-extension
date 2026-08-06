@@ -8,9 +8,6 @@
   "appDescription": {
     "message": "Отслеживайте лимиты Claude и ChatGPT (Codex) за сессию и неделю в попапе, бейдже и оверлее. Приватно, без настройки."
   },
-  "popupEyebrow": {
-    "message": "AI-лимиты"
-  },
   "popupTitle": {
     "message": "Использование"
   },
@@ -25,9 +22,6 @@
   },
   "refreshFailed": {
     "message": "Ошибка обновления"
-  },
-  "overlayToggleLabel": {
-    "message": "Оверлеи на страницах"
   },
   "availableResetsLabel": {
     "message": "Доступно сбросов · $1"
@@ -77,6 +71,18 @@
   "emptyCodex": {
     "message": "Данных пока нет. Откройте chatgpt.com под своим аккаунтом и обновите."
   },
+  "emptyMiniMax": {
+    "message": "Данных пока нет. Откройте platform.minimax.io под своим аккаунтом и обновите."
+  },
+  "emptyKimi": {
+    "message": "Данных пока нет. Откройте kimi.com/code под своим аккаунтом и обновите."
+  },
+  "emptyCursor": {
+    "message": "Данных пока нет. Откройте cursor.com под своим аккаунтом и обновите."
+  },
+  "emptyMiMo": {
+    "message": "Данных пока нет. Откройте platform.xiaomimimo.com под своим аккаунтом и обновите."
+  },
   "emptyOverlay": {
     "message": "Данных пока нет. Откройте попап и обновите."
   },
@@ -121,9 +127,6 @@
   },
   "optionsLoading": {
     "message": "Загрузка настроек…"
-  },
-  "optionsInstantHint": {
-    "message": "Все изменения сохраняются и применяются сразу — перезагрузка не нужна."
   },
   "optionsNavLabel": {
     "message": "Разделы настроек"

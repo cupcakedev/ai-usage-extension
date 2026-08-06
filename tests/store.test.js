@@ -168,6 +168,17 @@ describe('extension localization', () => {
       );
     }
   });
+
+  it('every fallback string in src/shared/i18n.ts is translated in every locale', () => {
+    const fallbackKeys = [...read('src/shared/i18n.ts').matchAll(/^ {2}([A-Za-z0-9_]+):/gm)].map(
+      (match) => match[1],
+    );
+    assert.ok(fallbackKeys.length > 0, 'no fallback keys parsed from src/shared/i18n.ts');
+
+    const baseKeys = new Set(Object.keys(JSON.parse(read('public/_locales/en/messages.json'))));
+    const untranslated = fallbackKeys.filter((key) => !baseKeys.has(key));
+    assert.deepEqual(untranslated, [], `fallback keys missing from _locales: ${untranslated}`);
+  });
 });
 
 describe('store/permissions.md', () => {

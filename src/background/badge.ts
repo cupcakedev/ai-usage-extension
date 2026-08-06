@@ -1,6 +1,6 @@
 import { msg } from '../shared/i18n';
 import { readExtensionSettings } from '../shared/settings';
-import type { ExtensionSettings, ProviderId, UsageState } from '../shared/types';
+import type { BadgeMetric, ExtensionSettings, ProviderId, UsageState } from '../shared/types';
 import { clampPercent, isLimitAvailable } from '../shared/utils';
 
 const iconPath = (range: number): string => `icons/badges/range-${range}.png`;
@@ -52,12 +52,26 @@ const PROVIDER_TITLE: Record<ProviderId, string> = {
   cursor: 'Cursor',
   mimo: 'MiMo',
 };
-const SESSION_LABEL = msg('sessionLimit');
+const METRIC_LABEL: Record<BadgeMetric, string> = {
+  session: msg('sessionLimit'),
+  weekly: msg('weeklyLimit'),
+};
 
 interface UsageSummary {
   percent: number;
   tooltip: string;
 }
+
+/** Providers without the chosen window (e.g. Codex has no 5h quota) report the other one. */
+const badgeMetricFor = (
+  usage: UsageState[ProviderId],
+  preferred: BadgeMetric,
+): BadgeMetric | null => {
+  if (!usage) return null;
+  const fallback: BadgeMetric = preferred === 'session' ? 'weekly' : 'session';
+  if (isLimitAvailable(usage[preferred])) return preferred;
+  return isLimitAvailable(usage[fallback]) ? fallback : null;
+};
 
 const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSummary | null => {
   const providers =
@@ -68,20 +82,21 @@ const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSu
         );
 
   const rows = providers.flatMap((provider) => {
-    const limit = state[provider]?.[settings.badge.metric];
-    if (!limit || !isLimitAvailable(limit)) return [];
-    return [{ provider, percent: clampPercent(limit.percentage) }];
+    const usage = state[provider];
+    const metric = badgeMetricFor(usage, settings.badge.metric);
+    if (!usage || !metric) return [];
+    return [{ provider, metric, percent: clampPercent(usage[metric].percentage) }];
   });
 
   if (rows.length === 0) {
     return null;
   }
 
-  const metricLabel = settings.badge.metric === 'session' ? SESSION_LABEL : msg('weeklyLimit');
   const tooltip = [
     msg('appShortName'),
     ...rows.map(
-      ({ provider, percent }) => `${PROVIDER_TITLE[provider]} · ${metricLabel} ${percent}%`,
+      ({ provider, metric, percent }) =>
+        `${PROVIDER_TITLE[provider]} · ${METRIC_LABEL[metric]} ${percent}%`,
     ),
   ].join('\n');
 

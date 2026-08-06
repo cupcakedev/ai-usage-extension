@@ -18,6 +18,7 @@ const ENDPOINTS = {
   codexSession: 'https://chatgpt.com/api/auth/session',
   codexUsage: 'https://chatgpt.com/backend-api/wham/usage',
   miniMaxUsage: 'https://platform.minimax.io/backend/account/token_plan/remains_percent',
+  miniMaxUsageCn: 'https://platform.minimaxi.com/backend/account/token_plan/remains_percent',
   kimiUsage: 'https://www.kimi.com/apiv2/kimi.gateway.billing.v1.BillingService/GetUsages',
   cursorUsage: 'https://cursor.com/api/usage-summary',
   mimoBalance: 'https://platform.xiaomimimo.com/api/v1/balance',
@@ -64,10 +65,15 @@ const asJson = (value: unknown): Json | null => (isObject(value) ? value : null)
 
 const asArray = (value: unknown): unknown[] => (Array.isArray(value) ? value : []);
 
+const toIso = (milliseconds: number): string | null => {
+  const date = new Date(milliseconds);
+  return Number.isFinite(date.getTime()) ? date.toISOString() : null;
+};
+
 const epochToIso = (value: unknown): string | null => {
   const epoch = readNumeric(value);
   if (epoch === null || epoch <= 0) return null;
-  return new Date(epoch > 10_000_000_000 ? epoch : epoch * 1000).toISOString();
+  return toIso(epoch > 10_000_000_000 ? epoch : epoch * 1000);
 };
 
 const percentFromUsedLimit = (used: number | null, limit: number | null): number | null => {
@@ -174,12 +180,12 @@ type CodexSessionInfo = { accessToken: string; accountId: string | null };
 const codexResetTimestamp = (window: Json): string | null => {
   const epochSeconds = readNumber(window.reset_at);
   if (epochSeconds !== null) {
-    return new Date(epochSeconds * 1000).toISOString();
+    return toIso(epochSeconds * 1000);
   }
 
   const afterSeconds = readNumber(window.reset_after_seconds);
   if (afterSeconds !== null) {
-    return new Date(Date.now() + afterSeconds * 1000).toISOString();
+    return toIso(Date.now() + afterSeconds * 1000);
   }
 
   return null;
@@ -386,7 +392,7 @@ const buildMiniMaxUsage = (raw: Json | null): MiniMaxUsage | null => {
   });
 
   const session = models.find((model) => model.id.endsWith(':session'))?.limit ?? models[0]?.limit;
-  const weekly = models.find((model) => model.id.endsWith(':weekly'))?.limit ?? buildLimit(0, null);
+  const weekly = models.find((model) => model.id.endsWith(':weekly'))?.limit ?? unavailableLimit();
   if (!session) return null;
 
   return {
@@ -405,7 +411,7 @@ const buildMiniMaxUsage = (raw: Json | null): MiniMaxUsage | null => {
 
 const kimiDetailLimit = (value: unknown): UsageLimit => {
   const detail = asJson(value);
-  if (!detail) return buildLimit(0, null);
+  if (!detail) return unavailableLimit();
   const used = readNumeric(detail.used);
   const limit = readNumeric(detail.limit);
   return {
@@ -426,9 +432,9 @@ const buildKimiUsage = (raw: Json | null): KimiUsage | null => {
   const limits = asArray(usage.limits)
     .map(asJson)
     .filter((entry): entry is Json => entry !== null);
-  const rateLimit = limits[0] ? kimiDetailLimit(limits[0].detail) : null;
+  const rateLimit = limits[0] ? kimiDetailLimit(limits[0].detail) : unavailableLimit();
   return {
-    ...finalize({ session: rateLimit ?? weekly, weekly }),
+    ...finalize({ session: rateLimit, weekly }),
     models: [],
     raw,
   };
@@ -472,7 +478,7 @@ const buildCursorUsage = (raw: Json | null): CursorUsage | null => {
 
   return {
     plan: readString(raw.membershipType) ?? undefined,
-    ...finalize({ session, weekly: buildLimit(0, resetsAt) }),
+    ...finalize({ session, weekly: unavailableLimit() }),
     models: models.slice(1),
     raw,
   };
@@ -514,7 +520,7 @@ const buildMiMoUsage = (
   };
   return {
     plan: readString(plan?.planCode) ?? undefined,
-    ...finalize({ session, weekly: buildLimit(0, null) }),
+    ...finalize({ session, weekly: unavailableLimit() }),
     models: [],
     summary: mimoBalanceSummary(balance),
     raw: balance,
@@ -618,12 +624,11 @@ export class UsageService {
   }
 
   static async fetchMiniMaxUsage(): Promise<MiniMaxUsage | null> {
-    const globalResult = await fetchJson(ENDPOINTS.miniMaxUsage);
-    const result = globalResult.ok
-      ? globalResult
-      : await fetchJson('https://platform.minimaxi.com/backend/account/token_plan/remains_percent');
-    if (!result.ok) return null;
-    return buildMiniMaxUsage(result.data);
+    for (const endpoint of [ENDPOINTS.miniMaxUsage, ENDPOINTS.miniMaxUsageCn]) {
+      const result = await fetchJson(endpoint).catch(() => null);
+      if (result?.ok) return buildMiniMaxUsage(result.data);
+    }
+    return null;
   }
 
   static async fetchKimiUsage(): Promise<KimiUsage | null> {

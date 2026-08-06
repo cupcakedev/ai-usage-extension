@@ -10,7 +10,7 @@ import {
   UsageLimit,
   UsageState,
 } from '../../shared/types';
-import { clampPercent, getUsageTone } from '../../shared/utils';
+import { clampPercent, getUsageTone, isLimitAvailable } from '../../shared/utils';
 
 const ENDPOINTS = {
   claudeOrgs: 'https://claude.ai/api/organizations',
@@ -88,9 +88,16 @@ const buildLimit = (percent: number | null, resetsAt: string | null): UsageLimit
   resetsAt,
 });
 
+const unavailableLimit = (): UsageLimit => ({ percentage: 0, resetsAt: null, available: false });
+
 const finalize = <T extends { session: UsageLimit; weekly: UsageLimit }>(payload: T) => ({
   ...payload,
-  status: getUsageTone(Math.max(payload.session.percentage, payload.weekly.percentage)),
+  status: getUsageTone(
+    Math.max(
+      0,
+      ...[payload.session, payload.weekly].filter(isLimitAvailable).map((l) => l.percentage),
+    ),
+  ),
   lastUpdated: Date.now(),
 });
 
@@ -183,20 +190,38 @@ const codexWindowFrom = (window: unknown): UsageLimit => {
   return buildLimit(readNumber(window.used_percent), codexResetTimestamp(window));
 };
 
+const CODEX_SESSION_MAX_SECONDS = 24 * 60 * 60;
+
+type CodexWindowKind = 'session' | 'weekly';
+
+const CODEX_WINDOW_SLOTS = [
+  ['primary_window', 'session'],
+  ['secondary_window', 'weekly'],
+] as const satisfies readonly (readonly [string, CodexWindowKind])[];
+
+const codexWindowKind = (window: Json, fallback: CodexWindowKind): CodexWindowKind => {
+  const seconds = readNumber(window.limit_window_seconds);
+  if (seconds === null || seconds <= 0) return fallback;
+  return seconds <= CODEX_SESSION_MAX_SECONDS ? 'session' : 'weekly';
+};
+
+const codexWindowTag = (window: Json, kind: CodexWindowKind): string => {
+  const seconds = readNumber(window.limit_window_seconds);
+  if (seconds === null || seconds <= 0) return kind === 'session' ? '5h' : '7d';
+  const hours = Math.max(1, Math.round(seconds / 3600));
+  return hours >= 48 ? `${Math.round(hours / 24)}d` : `${hours}h`;
+};
+
 const codexRateLimitWindows = (id: string, label: string, entry: Json): ModelUsage[] => {
   const windows: ModelUsage[] = [];
-  if (isObject(entry.primary_window)) {
+  for (const [slot, fallback] of CODEX_WINDOW_SLOTS) {
+    const window = entry[slot];
+    if (!isObject(window)) continue;
+    const tag = codexWindowTag(window, codexWindowKind(window, fallback));
     windows.push({
-      id: `${id}:5h`,
-      label: `${label} · 5h`,
-      limit: codexWindowFrom(entry.primary_window),
-    });
-  }
-  if (isObject(entry.secondary_window)) {
-    windows.push({
-      id: `${id}:7d`,
-      label: `${label} · 7d`,
-      limit: codexWindowFrom(entry.secondary_window),
+      id: `${id}:${tag}`,
+      label: `${label} · ${tag}`,
+      limit: codexWindowFrom(window),
     });
   }
   return windows;
@@ -234,15 +259,22 @@ const codexAvailableResets = (raw: Json): number | null => {
   return readNumber(resetCredits.available_count);
 };
 
+const codexWindows = (rate: Json | null): { session: UsageLimit; weekly: UsageLimit } => {
+  const windows = { session: unavailableLimit(), weekly: unavailableLimit() };
+  for (const [slot, fallback] of CODEX_WINDOW_SLOTS) {
+    const window = rate?.[slot];
+    if (!isObject(window)) continue;
+    windows[codexWindowKind(window, fallback)] = codexWindowFrom(window);
+  }
+  return windows;
+};
+
 const buildCodexUsage = (raw: Json | null): CodexUsage | null => {
   if (!raw) return null;
   const rate = isObject(raw.rate_limit) ? raw.rate_limit : null;
 
   return {
-    ...finalize({
-      session: codexWindowFrom(rate?.primary_window),
-      weekly: codexWindowFrom(rate?.secondary_window),
-    }),
+    ...finalize(codexWindows(rate)),
     models: codexModelBreakdown(raw),
     availableResets: codexAvailableResets(raw),
     raw,

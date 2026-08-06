@@ -1,6 +1,6 @@
 import { USAGE_THRESHOLDS } from '../constants';
 import { msg } from '../i18n';
-import type { UsageStatus } from '../types';
+import type { UsageLimit, UsageStatus } from '../types';
 
 /** @deprecated kept as an alias — prefer `UsageStatus` from shared/types. */
 export type UsageTone = UsageStatus;
@@ -8,6 +8,9 @@ export type UsageTone = UsageStatus;
 /** Round a number into the inclusive 0–100 range. */
 export const clampPercent = (value: number): number =>
   Math.max(0, Math.min(100, Math.round(value)));
+
+export const isLimitAvailable = (limit: UsageLimit | undefined): boolean =>
+  Boolean(limit) && limit?.available !== false;
 
 /** Map a usage percentage to its severity tone. */
 export const getUsageTone = (value: number): UsageStatus => {

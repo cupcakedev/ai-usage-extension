@@ -1,7 +1,7 @@
 import { msg } from '../shared/i18n';
 import { readExtensionSettings } from '../shared/settings';
 import type { ExtensionSettings, ProviderId, UsageState } from '../shared/types';
-import { clampPercent } from '../shared/utils';
+import { clampPercent, isLimitAvailable } from '../shared/utils';
 
 const iconPath = (range: number): string => `icons/badges/range-${range}.png`;
 
@@ -60,7 +60,6 @@ interface UsageSummary {
 }
 
 const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSummary | null => {
-  const rows: number[] = [];
   const providers =
     settings.badge.mode === 'provider'
       ? [settings.badge.provider]
@@ -68,30 +67,25 @@ const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSu
           (provider) => settings.providers[provider].visible,
         );
 
-  providers.forEach((provider) => {
-    const usage = state[provider];
-    if (!usage) return;
-    rows.push(usage[settings.badge.metric].percentage);
+  const rows = providers.flatMap((provider) => {
+    const limit = state[provider]?.[settings.badge.metric];
+    if (!limit || !isLimitAvailable(limit)) return [];
+    return [{ provider, percent: clampPercent(limit.percentage) }];
   });
 
   if (rows.length === 0) {
     return null;
   }
 
-  const percent = Math.max(...rows);
-
+  const metricLabel = settings.badge.metric === 'session' ? SESSION_LABEL : msg('weeklyLimit');
   const tooltip = [
     msg('appShortName'),
-    ...providers.flatMap((provider) => {
-      const usage = state[provider];
-      if (!usage) return [];
-      return [
-        `${PROVIDER_TITLE[provider]} · ${settings.badge.metric === 'session' ? SESSION_LABEL : msg('weeklyLimit')} ${clampPercent(usage[settings.badge.metric].percentage)}%`,
-      ];
-    }),
+    ...rows.map(
+      ({ provider, percent }) => `${PROVIDER_TITLE[provider]} · ${metricLabel} ${percent}%`,
+    ),
   ].join('\n');
 
-  return { percent, tooltip };
+  return { percent: Math.max(...rows.map(({ percent }) => percent)), tooltip };
 };
 
 const resetBadge = async (): Promise<void> => {

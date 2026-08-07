@@ -1,15 +1,3 @@
-/**
- * Layout for the store artwork only. The product UI keeps its own styles —
- * `global.css` (popup) and `overlay.css` (content script) are imported as-is so
- * the renders stay in sync with what ships.
- */
-
-/*
- * The product stylesheets pin the document to their own surface: the popup
- * sizes it to 360px (500px in grid mode) and the options page clips it to the
- * viewport. Here the document is just a canvas, so all of that is undone —
- * the `:has()` selectors are repeated to match global.css's specificity.
- */
 html,
 body,
 #promo,
@@ -22,8 +10,6 @@ body:has(.au-shell--grid) {
   background: #0b0b0c;
 }
 
-/* ---- Frame ----------------------------------------------------------- */
-
 .promo-frame {
   position: relative;
   overflow: hidden;
@@ -31,7 +17,6 @@ body:has(.au-shell--grid) {
   color: var(--au-text);
 }
 
-/** One enormous circle; only its edge crosses the canvas. */
 .promo-frame__arc {
   position: absolute;
   border-radius: 50%;
@@ -47,7 +32,6 @@ body:has(.au-shell--grid) {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.055), transparent 62%);
 }
 
-/* Centred layouts want the light behind the mark, not off in a corner. */
 .promo-frame--center .promo-frame__bloom {
   left: 50%;
   top: -46%;
@@ -56,14 +40,11 @@ body:has(.au-shell--grid) {
   transform: translateX(-50%);
 }
 
-/* ---- Copy column ----------------------------------------------------- */
-
 .promo-copy {
   position: absolute;
   z-index: 10;
 }
 
-/* Stacked, centred composition — used by the small tile. */
 .promo-copy--center {
   text-align: center;
 }
@@ -119,9 +100,8 @@ body:has(.au-shell--grid) {
 
 .promo-sub span {
   display: block;
+  white-space: nowrap;
 }
-
-/* ---- Brand mark ------------------------------------------------------ */
 
 .promo-mark {
   position: relative;
@@ -132,8 +112,6 @@ body:has(.au-shell--grid) {
   display: block;
   filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.55));
 }
-
-/* ---- Provider chips -------------------------------------------------- */
 
 .promo-chips {
   display: flex;
@@ -175,7 +153,6 @@ body:has(.au-shell--grid) {
   height: 24px;
 }
 
-/* Icon-only lineup for the small tile, where wordmarks would not fit. */
 .promo-chips--icons {
   gap: 9px;
 }
@@ -189,8 +166,6 @@ body:has(.au-shell--grid) {
   width: 24px;
   height: 24px;
 }
-
-/* ---- Popup stage ----------------------------------------------------- */
 
 .promo-stage--popup {
   position: absolute;
@@ -209,12 +184,9 @@ body:has(.au-shell--grid) {
   padding: 22px 18px;
 }
 
-/* The two-column layout is the popup's own 500px width. */
 .promo-stage--grid {
   width: 500px;
 }
-
-/* ---- Windowed stages (options page, highlights) ---------------------- */
 
 .promo-window {
   position: absolute;
@@ -230,7 +202,6 @@ body:has(.au-shell--grid) {
     0 40px 90px rgba(0, 0, 0, 0.55);
 }
 
-/* Content taller than the window keeps going — fade it instead of cutting. */
 .promo-window--fade {
   -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
@@ -240,8 +211,6 @@ body:has(.au-shell--grid) {
   display: grid;
   gap: 14px;
 }
-
-/* ---- Highlights (closing slide) -------------------------------------- */
 
 .promo-highlights {
   display: grid;
@@ -347,8 +316,6 @@ body:has(.au-shell--grid) {
   color: var(--au-text-muted);
 }
 
-/* ---- Overlay stage --------------------------------------------------- */
-
 .promo-overlays.aiu-root {
   position: absolute;
   inset: 0;
@@ -360,7 +327,6 @@ body:has(.au-shell--grid) {
   transform-origin: top left;
 }
 
-/* The real capsule is fixed to the viewport edge; here the cards are placed. */
 .promo-overlays .aiu-wrap {
   position: relative;
   right: auto;

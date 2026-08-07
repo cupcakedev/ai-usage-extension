@@ -6,18 +6,10 @@ import { COPY } from './copy';
 import { NOW, providerById } from './fixtures';
 
 interface PopupStageProps {
-  /** `grid` widens the popup to two columns, exactly as the real setting does. */
   layout: PopupLayout;
   providers: readonly ProviderId[];
 }
 
-/**
- * The popup as the artwork shows it: real `ProviderCard`s over mock usage, so
- * the screenshots drift with the product instead of going stale.
- *
- * Interactive chrome (buttons, overlay switch) is rendered as inert markup —
- * the promo page has no extension runtime behind it.
- */
 export const PopupStage = ({ layout, providers }: PopupStageProps) => {
   const grid = layout === 'grid';
 
@@ -40,9 +32,9 @@ export const PopupStage = ({ layout, providers }: PopupStageProps) => {
 
       <div className="au-global-controls">
         <div className="au-overlay-toggle">
-          <p className="au-overlay-toggle__label">{COPY.overlaysToggle}</p>
+          <p className="au-overlay-toggle__label">{msg('optionsOverlaysTitle')}</p>
           <span className="au-switch">
-            <input type="checkbox" checked readOnly aria-label={COPY.overlaysToggle} />
+            <input type="checkbox" checked readOnly aria-label={msg('optionsOverlaysTitle')} />
             <span className="au-switch__slider" />
           </span>
         </div>

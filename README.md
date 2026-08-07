@@ -107,7 +107,7 @@ pnpm build
 | `pnpm test`          | Run release-gate checks for store metadata.   |
 | `pnpm lint`          | Lint `src/` with ESLint.                      |
 | `pnpm format`        | Format `src/` with Prettier.                  |
-| `pnpm promo`         | Render the store artwork into `store/promo/`. |
+| `pnpm promo`         | Render the store artwork into `store/<locale>/promo/`. |
 | `pnpm promo:dev`     | Preview the store artwork in the browser.     |
 
 ## Contributing

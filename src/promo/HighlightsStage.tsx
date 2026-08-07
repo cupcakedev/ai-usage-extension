@@ -4,10 +4,6 @@ import { PROVIDERS } from './fixtures';
 
 const GLYPHS = [KeyRound, ShieldCheck, RefreshCw];
 
-/**
- * Closing slide: the full provider lineup with the host each snapshot is read
- * from, plus the three claims that hold for all of them.
- */
 export const HighlightsStage = () => (
   <div className="promo-highlights">
     <h2 className="promo-highlights__title">{COPY.highlights.title}</h2>

@@ -10,13 +10,6 @@ import type {
 } from '@shared/types';
 import { PROVIDER_DETAILS } from '../options/config';
 
-/**
- * Mock usage shown in the artwork. Never render real account data here — the
- * store listing would leak personal usage (see store/promo/README.md).
- *
- * The clock is frozen once per page load so a capture never straddles a minute
- * boundary and every render of the same shot is byte-identical.
- */
 export const NOW = Date.now();
 
 const MINUTE = 60_000;
@@ -25,7 +18,6 @@ const DAY = 24 * HOUR;
 
 const resetsIn = (offsetMs: number): string => new Date(NOW + offsetMs).toISOString();
 
-/** Providers that report a single quota window leave the second one unavailable. */
 const NO_SECOND_WINDOW = { percentage: 0, resetsAt: null, available: false };
 
 const CLAUDE_USAGE: ClaudeUsage = {
@@ -87,7 +79,6 @@ export interface PromoProvider {
   iconSrc: string;
   usage: ClaudeUsage | CodexUsage | ExternalProviderUsage;
   metrics: ProviderMetric[];
-  /** Cursor and MiMo label their single window differently, exactly as the popup does. */
   primaryLabel?: string;
   secondaryLabel?: string;
 }
@@ -101,7 +92,6 @@ const USAGE: Record<ProviderId, PromoProvider['usage']> = {
   mimo: MIMO_USAGE,
 };
 
-/** What each card shows in the artwork — its richest useful combination. */
 const METRICS: Record<ProviderId, ProviderMetric[]> = {
   claude: ['session', 'weekly', 'reset'],
   codex: ['session', 'weekly', 'reset'],
@@ -133,10 +123,6 @@ export const providerById = (id: ProviderId): PromoProvider => {
   return provider;
 };
 
-/**
- * Settings as the artwork shows them: everything switched on, so the options
- * shots demonstrate the full set of cards, toggles, and detail chips.
- */
 export const SETTINGS: ExtensionSettings = (() => {
   const defaults = createDefaultSettings();
   return {

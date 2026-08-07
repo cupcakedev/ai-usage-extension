@@ -4,7 +4,6 @@ import { resolve } from 'path';
 
 const ENTRY = '/src/promo/index.html';
 
-/** Lets `scripts/promo.js` (and the browser) hit the artwork page at `/`. */
 const serveEntryAtRoot = (): Plugin => ({
   name: 'promo-entry-at-root',
   configureServer(server) {

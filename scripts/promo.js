@@ -1,15 +1,4 @@
 #!/usr/bin/env node
-/**
- * Renders the Chrome Web Store artwork from `src/promo` into `store/promo`.
- *
- * Boots the promo Vite server, screenshots each format with headless Chrome,
- * and converts the two listing screenshots to JPEG (the store README requires
- * `.jpg` there; Chrome can only write PNG).
- *
- * Usage:
- *   node scripts/promo.js              # every target
- *   node scripts/promo.js screenshot-1 # one target, by filename stem
- */
 import { execFile } from 'node:child_process';
 import { accessSync, constants, mkdirSync, renameSync, rmSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -20,14 +9,14 @@ import { createServer } from 'vite';
 
 const run = promisify(execFile);
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const outDir = resolve(root, 'store/promo');
+
+const LOCALES = ['en', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'pt_BR', 'ru', 'zh_CN'];
 
 const MIN_BYTES = 12 * 1024;
 const CAPTURE_TIMEOUT_MS = 90_000;
 const CAPTURE_ATTEMPTS = 3;
 const JPEG_QUALITY = 92;
 
-/** Five screenshots is the Chrome Web Store maximum; order matches the listing. */
 const TARGETS = [
   { file: 'screenshot-1.jpg', query: 'shot=popup', width: 1280, height: 800 },
   { file: 'screenshot-2.jpg', query: 'shot=overlay', width: 1280, height: 800 },
@@ -71,7 +60,6 @@ function findChrome() {
   );
 }
 
-/** `sips` on macOS, ImageMagick anywhere else. */
 async function toJpeg(pngPath, jpegPath) {
   const attempts =
     process.platform === 'darwin'
@@ -108,7 +96,7 @@ async function toJpeg(pngPath, jpegPath) {
   throw new Error('no JPEG converter found (install ImageMagick, or run this on macOS)');
 }
 
-async function shoot(chrome, baseUrl, target, output) {
+async function shoot(chrome, baseUrl, target, locale, output) {
   await run(
     chrome,
     [
@@ -118,7 +106,7 @@ async function shoot(chrome, baseUrl, target, output) {
       `--window-size=${target.width},${target.height}`,
       '--virtual-time-budget=5000',
       `--screenshot=${output}`,
-      `${baseUrl}?${target.query}`,
+      `${baseUrl}?locale=${locale}&${target.query}`,
     ],
     { timeout: CAPTURE_TIMEOUT_MS, killSignal: 'SIGKILL' },
   );
@@ -129,15 +117,15 @@ async function shoot(chrome, baseUrl, target, output) {
   }
 }
 
-async function capture(chrome, baseUrl, target) {
+async function capture(chrome, baseUrl, target, locale, outDir) {
   const final = resolve(outDir, target.file);
-  const staging = resolve(tmpdir(), `promo-${target.file.replace(/\.\w+$/, '')}.png`);
+  const staging = resolve(tmpdir(), `promo-${locale}-${target.file.replace(/\.\w+$/, '')}.png`);
   let lastError;
 
   for (let attempt = 1; attempt <= CAPTURE_ATTEMPTS; attempt += 1) {
     rmSync(staging, { force: true });
     try {
-      await shoot(chrome, baseUrl, target, staging);
+      await shoot(chrome, baseUrl, target, locale, staging);
       rmSync(final, { force: true });
       if (target.file.endsWith('.jpg')) {
         await toJpeg(staging, final);
@@ -151,15 +139,25 @@ async function capture(chrome, baseUrl, target) {
     }
   }
 
-  throw new Error(`${target.file}: ${lastError}`);
+  throw new Error(`${locale}/${target.file}: ${lastError}`);
 }
 
 async function main() {
   const chrome = findChrome();
-  const only = process.argv[2];
-  const targets = only ? TARGETS.filter((target) => target.file.startsWith(only)) : TARGETS;
+  const [localeArg, targetArg] = process.argv.slice(2);
+
+  const locales = localeArg ? LOCALES.filter((locale) => locale === localeArg) : LOCALES;
+  if (!locales.length) {
+    throw new Error(`Unknown locale "${localeArg}". Known: ${LOCALES.join(', ')}`);
+  }
+
+  const targets = targetArg
+    ? TARGETS.filter((target) => target.file.startsWith(targetArg))
+    : TARGETS;
   if (!targets.length) {
-    throw new Error(`Unknown target "${only}". Known: ${TARGETS.map((t) => t.file).join(', ')}`);
+    throw new Error(
+      `Unknown target "${targetArg}". Known: ${TARGETS.map((t) => t.file).join(', ')}`,
+    );
   }
 
   const server = await createServer({
@@ -170,25 +168,31 @@ async function main() {
   const baseUrl = server.resolvedUrls?.local?.[0];
   if (!baseUrl) throw new Error('Vite did not report a local URL');
 
-  mkdirSync(outDir, { recursive: true });
   const failures = [];
 
   try {
-    for (const target of targets) {
-      try {
-        const size = await capture(chrome, baseUrl, target);
-        console.log(
-          `  ${target.file.padEnd(18)} ${target.width}×${target.height}  ${Math.round(size / 1024)} KB`,
-        );
-      } catch (error) {
-        failures.push(error instanceof Error ? error.message : String(error));
+    for (const locale of locales) {
+      const outDir = resolve(root, 'store', locale, 'promo');
+      mkdirSync(outDir, { recursive: true });
+
+      const sizes = [];
+      for (const target of targets) {
+        try {
+          sizes.push(await capture(chrome, baseUrl, target, locale, outDir));
+        } catch (error) {
+          failures.push(error instanceof Error ? error.message : String(error));
+        }
       }
+
+      const total = Math.round(sizes.reduce((sum, size) => sum + size, 0) / 1024);
+      console.log(`  ${locale.padEnd(6)} ${sizes.length}/${targets.length} files  ${total} KB`);
     }
   } finally {
     await server.close();
   }
 
-  console.log(`\nWrote ${targets.length - failures.length}/${targets.length} files to store/promo`);
+  const written = targets.length * locales.length - failures.length;
+  console.log(`\nWrote ${written} files across ${locales.length} locales`);
 
   if (failures.length) {
     console.error(`\n${failures.length} capture(s) failed after ${CAPTURE_ATTEMPTS} attempts:`);

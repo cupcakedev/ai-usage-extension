@@ -6,14 +6,12 @@ import { NOW, providerById } from './fixtures';
 import { MARK, OVERLAY_STAGE } from './shots';
 import '../content/styles/overlay.css';
 
-/** Same minimal shape the content script works with. */
 interface OverlayUsage {
   session: UsageLimit;
   weekly: UsageLimit;
   lastUpdated: number;
 }
 
-/** Soonest of the two windows — the same summary the content script shows. */
 const nextReset = (usage: OverlayUsage, now: number): string => {
   const upcoming = [usage.session.resetsAt, usage.weekly.resetsAt]
     .filter((value): value is string => Boolean(value))
@@ -41,11 +39,6 @@ const Metric = ({ label, limit, now }: { label: string; limit: UsageLimit; now: 
   );
 };
 
-/**
- * Mirrors the expanded on-page overlay from `src/content/index.tsx`, minus the
- * storage plumbing. It reuses `overlay.css`, so the artwork inherits any
- * styling change made to the real capsule.
- */
 const OverlayCard = ({
   title,
   iconSrc,
@@ -84,7 +77,6 @@ const OverlayCard = ({
   </div>
 );
 
-/** Two overlapping overlay capsules, the way they stack on a real chat page. */
 export const OverlayStage = () => (
   <div className="aiu-root promo-overlays">
     {OVERLAY_STAGE.cards.map((card, index) => {

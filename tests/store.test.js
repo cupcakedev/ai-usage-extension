@@ -228,10 +228,15 @@ describe('store/promo/', () => {
     assert.ok(existsSync(resolve(promoDir, 'README.md')), 'store/promo/README.md is missing');
   });
 
-  // Required image assets. Everything except the icon is produced by
-  // `pnpm promo`, so a missing file means the artwork was never re-rendered.
-  const requiredAssets = [
-    'icon-128.png',
+  it('has icon-128.png', () => {
+    const p = resolve(promoDir, 'icon-128.png');
+    assert.ok(existsSync(p), 'store/promo/icon-128.png is missing');
+    assert.ok(statSync(p).size > 0, 'store/promo/icon-128.png is empty');
+  });
+});
+
+describe('store/<locale>/promo/', () => {
+  const localizedAssets = [
     'screenshot-1.jpg',
     'screenshot-2.jpg',
     'screenshot-3.jpg',
@@ -241,11 +246,13 @@ describe('store/promo/', () => {
     'small-tile.png',
   ];
 
-  for (const asset of requiredAssets) {
-    it(`has ${asset}`, () => {
-      const p = resolve(promoDir, asset);
-      assert.ok(existsSync(p), `store/promo/${asset} is missing`);
-      assert.ok(statSync(p).size > 0, `store/promo/${asset} is empty`);
-    });
+  for (const locale of localizedStoreLocales) {
+    for (const asset of localizedAssets) {
+      it(`${locale} has ${asset}`, () => {
+        const p = resolve(root, 'store', locale, 'promo', asset);
+        assert.ok(existsSync(p), `store/${locale}/promo/${asset} is missing`);
+        assert.ok(statSync(p).size > 0, `store/${locale}/promo/${asset} is empty`);
+      });
+    }
   }
 });

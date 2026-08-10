@@ -62,9 +62,6 @@
   "hideLimits": {
     "message": "सीमाएं छिपाएं"
   },
-  "limitsTab": {
-    "message": "सीमाएं"
-  },
   "emptyClaude": {
     "message": "अभी कोई डेटा नहीं है। साइन इन करके claude.ai खोलें, फिर अपडेट करें।"
   },

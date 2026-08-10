@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: vikomo vya Claude na Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Fuatilia vikomo vya kipindi na vya wiki kwa Claude na ChatGPT (Codex) kwenye kidirisha ibukizi na kwenye ukurasa."
+  },
+  "popupTitle": {
+    "message": "Matumizi"
+  },
+  "refreshUsage": {
+    "message": "Onyesha upya matumizi"
+  },
+  "refreshUsageLimits": {
+    "message": "Onyesha upya vikomo"
+  },
+  "refreshErrorPrefix": {
+    "message": "Imeshindwa kuonyesha upya"
+  },
+  "refreshFailed": {
+    "message": "Kuonyesha upya kumeshindikana"
+  },
+  "availableResetsLabel": {
+    "message": "Kuweka upya kunakopatikana · $1"
+  },
+  "loadingSnapshot": {
+    "message": "inapakia"
+  },
+  "notConnected": {
+    "message": "haijaunganishwa"
+  },
+  "updated": {
+    "message": "imesasishwa $1"
+  },
+  "refreshing": {
+    "message": "inaonyesha upya..."
+  },
+  "waitingForSnapshot": {
+    "message": "inasubiri data"
+  },
+  "sessionLimit": {
+    "message": "Kipindi · saa 5"
+  },
+  "weeklyLimit": {
+    "message": "Wiki · siku 7"
+  },
+  "planLabel": {
+    "message": "Mpango · $1"
+  },
+  "resetsLabel": {
+    "message": "itawekwa upya baada ya $1"
+  },
+  "nextResetLabel": {
+    "message": "itawekwa upya baada ya $1"
+  },
+  "showLimits": {
+    "message": "Onyesha vikomo"
+  },
+  "hideLimits": {
+    "message": "Ficha vikomo"
+  },
+  "emptyClaude": {
+    "message": "Bado hakuna data. Fungua claude.ai ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyCodex": {
+    "message": "Bado hakuna data. Fungua chatgpt.com ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyMiniMax": {
+    "message": "Bado hakuna data. Fungua platform.minimax.io ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyKimi": {
+    "message": "Bado hakuna data. Fungua kimi.com/code ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyCursor": {
+    "message": "Bado hakuna data. Fungua cursor.com ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyMiMo": {
+    "message": "Bado hakuna data. Fungua platform.xiaomimimo.com ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyOverlay": {
+    "message": "Bado hakuna data. Fungua kidirisha ibukizi na uonyeshe upya."
+  },
+  "sourceCode": {
+    "message": "Msimbo wa chanzo"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "haijulikani"
+  },
+  "timeNow": {
+    "message": "sasa"
+  },
+  "timeJustNow": {
+    "message": "sasa hivi"
+  },
+  "timeAgo": {
+    "message": "$1 zilizopita"
+  },
+  "timeDayShort": {
+    "message": "s"
+  },
+  "timeHourShort": {
+    "message": "sa"
+  },
+  "timeMinuteShort": {
+    "message": "dk"
+  },
+  "optionsSaved": {
+    "message": "Mabadiliko yote yamehifadhiwa"
+  },
+  "optionsSaving": {
+    "message": "Inahifadhi…"
+  },
+  "optionsSaveError": {
+    "message": "Imeshindwa kuhifadhi"
+  },
+  "optionsSkip": {
+    "message": "Rukia hadi mipangilio"
+  },
+  "optionsLoading": {
+    "message": "Inapakia mipangilio…"
+  },
+  "optionsNavLabel": {
+    "message": "Sehemu za mipangilio"
+  },
+  "optionsNavLayout": {
+    "message": "Mpangilio"
+  },
+  "optionsNavProviders": {
+    "message": "Watoa huduma"
+  },
+  "optionsNavBadge": {
+    "message": "Aikoni ya upau"
+  },
+  "optionsNavOverlays": {
+    "message": "Vipande vya ukurasa"
+  },
+  "optionsLayoutTitle": {
+    "message": "Mpangilio wa kidirisha"
+  },
+  "optionsLayoutDescription": {
+    "message": "Chagua jinsi kadi zinazoonekana zinavyopangwa."
+  },
+  "optionsLayoutSingle": {
+    "message": "Safu moja"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Kadi ya upana kamili kwa kila mtoa huduma."
+  },
+  "optionsLayoutGrid": {
+    "message": "Safu mbili"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Muhtasari mfupi wenye kadi mbili kwa mstari."
+  },
+  "optionsProvidersTitle": {
+    "message": "Watoa huduma"
+  },
+  "optionsProvidersDescription": {
+    "message": "Ficha kadi au chagua taarifa inazoonyesha. Data isiyopatikana hufichwa moja kwa moja."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 kati ya $2 zinaonyeshwa"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 kati ya $2 taarifa"
+  },
+  "optionsProviderHidden": {
+    "message": "Imefichwa kwenye kidirisha"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Onyesha $1 kwenye kidirisha"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Taarifa za matumizi ya $1"
+  },
+  "optionsMetricSession": {
+    "message": "Matumizi ya kipindi"
+  },
+  "optionsMetricWeekly": {
+    "message": "Matumizi ya wiki"
+  },
+  "optionsMetricModels": {
+    "message": "Mchanganuo kwa modeli"
+  },
+  "optionsMetricReset": {
+    "message": "Muda wa kuweka upya"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Kuweka upya kunakopatikana"
+  },
+  "optionsMetricPlan": {
+    "message": "Mpango"
+  },
+  "optionsMetricSummary": {
+    "message": "Salio / muhtasari"
+  },
+  "optionsMetricBalance": {
+    "message": "Salio"
+  },
+  "optionsBadgeTitle": {
+    "message": "Kiwango cha aikoni"
+  },
+  "optionsBadgeDescription": {
+    "message": "Aikoni ya kiendelezi hubadilika kwa hatua za 10% kulingana na chanzo hiki."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Chanzo cha aikoni"
+  },
+  "optionsBadgeHighest": {
+    "message": "Ya juu zaidi kati ya zinazoonekana"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Tumia asilimia kubwa zaidi ya sasa miongoni mwa kadi zinazoonyeshwa."
+  },
+  "optionsBadgeSelected": {
+    "message": "Mtoa huduma aliyechaguliwa"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Tumia mtoa huduma mmoja bila kujali kadi nyingine."
+  },
+  "optionsBadgeWindow": {
+    "message": "Dirisha la matumizi"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Kipindi"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Wiki"
+  },
+  "optionsBadgeProvider": {
+    "message": "Mtoa huduma"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Mtoa huduma huyu amefichwa kwenye kidirisha, lakini kiwango cha aikoni bado kinatumika."
+  },
+  "optionsBadgeSteps": {
+    "message": "Hatua za aikoni"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "imepunguzwa hadi 10% ya karibu"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Vipande vya ukurasa"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Onyesha kapsuli ya matumizi inayokunjwa karibu na kisanduku cha ujumbe."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Washa kipande cha $1 kwenye ukurasa"
+  },
+  "optionsResetTitle": {
+    "message": "Rejesha chaguo-msingi"
+  },
+  "optionsResetDescription": {
+    "message": "Hurejesha mapendeleo yote ya ukurasa huu. Haiwezi kutenduliwa."
+  },
+  "optionsResetAction": {
+    "message": "Rejesha chaguo-msingi"
+  },
+  "optionsResetConfirm": {
+    "message": "Bofya tena kuthibitisha"
+  },
+  "planUsage": {
+    "message": "Matumizi ya mpango"
+  },
+  "tokenPlan": {
+    "message": "Mpango wa tokeni"
+  },
+  "optionsTitle": {
+    "message": "Mipangilio ya AI Usage Tracker"
+  }
+}

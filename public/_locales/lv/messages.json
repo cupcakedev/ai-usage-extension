@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude un Codex limiti"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Sekojiet Claude un ChatGPT (Codex) sesijas un nedēļas limitiem uznirstošajā logā un lapas pārklājumā."
+  },
+  "popupTitle": {
+    "message": "Patēriņš"
+  },
+  "refreshUsage": {
+    "message": "Atsvaidzināt patēriņu"
+  },
+  "refreshUsageLimits": {
+    "message": "Atsvaidzināt limitus"
+  },
+  "refreshErrorPrefix": {
+    "message": "Neizdevās atsvaidzināt"
+  },
+  "refreshFailed": {
+    "message": "Atsvaidzināšana neizdevās"
+  },
+  "availableResetsLabel": {
+    "message": "Pieejamās atiestatīšanas · $1"
+  },
+  "loadingSnapshot": {
+    "message": "ielādē"
+  },
+  "notConnected": {
+    "message": "nav savienojuma"
+  },
+  "updated": {
+    "message": "atjaunināts $1"
+  },
+  "refreshing": {
+    "message": "atsvaidzina..."
+  },
+  "waitingForSnapshot": {
+    "message": "gaida datus"
+  },
+  "sessionLimit": {
+    "message": "Sesija · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Nedēļa · 7 d"
+  },
+  "planLabel": {
+    "message": "Plāns · $1"
+  },
+  "resetsLabel": {
+    "message": "atiestatīsies pēc $1"
+  },
+  "nextResetLabel": {
+    "message": "atiestatīsies pēc $1"
+  },
+  "showLimits": {
+    "message": "Rādīt limitus"
+  },
+  "hideLimits": {
+    "message": "Slēpt limitus"
+  },
+  "emptyClaude": {
+    "message": "Datu vēl nav. Atveriet claude.ai, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyCodex": {
+    "message": "Datu vēl nav. Atveriet chatgpt.com, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyMiniMax": {
+    "message": "Datu vēl nav. Atveriet platform.minimax.io, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyKimi": {
+    "message": "Datu vēl nav. Atveriet kimi.com/code, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyCursor": {
+    "message": "Datu vēl nav. Atveriet cursor.com, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyMiMo": {
+    "message": "Datu vēl nav. Atveriet platform.xiaomimimo.com, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyOverlay": {
+    "message": "Datu vēl nav. Atveriet uznirstošo logu un atsvaidziniet."
+  },
+  "sourceCode": {
+    "message": "Pirmkods"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "nezināms"
+  },
+  "timeNow": {
+    "message": "tagad"
+  },
+  "timeJustNow": {
+    "message": "tikko"
+  },
+  "timeAgo": {
+    "message": "pirms $1"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Visas izmaiņas saglabātas"
+  },
+  "optionsSaving": {
+    "message": "Saglabā…"
+  },
+  "optionsSaveError": {
+    "message": "Neizdevās saglabāt"
+  },
+  "optionsSkip": {
+    "message": "Pāriet uz iestatījumiem"
+  },
+  "optionsLoading": {
+    "message": "Ielādē iestatījumus…"
+  },
+  "optionsNavLabel": {
+    "message": "Iestatījumu sadaļas"
+  },
+  "optionsNavLayout": {
+    "message": "Izkārtojums"
+  },
+  "optionsNavProviders": {
+    "message": "Pakalpojumi"
+  },
+  "optionsNavBadge": {
+    "message": "Rīkjoslas ikona"
+  },
+  "optionsNavOverlays": {
+    "message": "Pārklājumi lapā"
+  },
+  "optionsLayoutTitle": {
+    "message": "Uznirstošā loga izkārtojums"
+  },
+  "optionsLayoutDescription": {
+    "message": "Izvēlieties, kā izkārtot redzamās pakalpojumu kartes."
+  },
+  "optionsLayoutSingle": {
+    "message": "Viena kolonna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Pilna platuma karte katram pakalpojumam."
+  },
+  "optionsLayoutGrid": {
+    "message": "Divas kolonnas"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompakts pārskats ar divām kartēm rindā."
+  },
+  "optionsProvidersTitle": {
+    "message": "Pakalpojumi"
+  },
+  "optionsProvidersDescription": {
+    "message": "Paslēpiet karti vai izvēlieties, kādus datus tā rāda. Nepieejamie dati paliek paslēpti."
+  },
+  "optionsProvidersShown": {
+    "message": "redzami $1 no $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 no $2 datiem"
+  },
+  "optionsProviderHidden": {
+    "message": "Paslēpts uznirstošajā logā"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Rādīt $1 uznirstošajā logā"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 patēriņa dati"
+  },
+  "optionsMetricSession": {
+    "message": "Sesijas patēriņš"
+  },
+  "optionsMetricWeekly": {
+    "message": "Nedēļas patēriņš"
+  },
+  "optionsMetricModels": {
+    "message": "Sadalījums pa modeļiem"
+  },
+  "optionsMetricReset": {
+    "message": "Atiestatīšanas laiks"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Pieejamās atiestatīšanas"
+  },
+  "optionsMetricPlan": {
+    "message": "Plāns"
+  },
+  "optionsMetricSummary": {
+    "message": "Atlikums / kopsavilkums"
+  },
+  "optionsMetricBalance": {
+    "message": "Atlikums"
+  },
+  "optionsBadgeTitle": {
+    "message": "Ikonas diapazons"
+  },
+  "optionsBadgeDescription": {
+    "message": "Paplašinājuma ikona mainās ik pa 10%, balstoties uz šo avotu."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Ikonas avots"
+  },
+  "optionsBadgeHighest": {
+    "message": "Augstākais no redzamajiem"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Izmantot lielāko pašreizējo procentu no redzamajām kartēm."
+  },
+  "optionsBadgeSelected": {
+    "message": "Izvēlētais pakalpojums"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Izmantot vienu pakalpojumu neatkarīgi no citu karšu redzamības."
+  },
+  "optionsBadgeWindow": {
+    "message": "Patēriņa logs"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesija"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Nedēļa"
+  },
+  "optionsBadgeProvider": {
+    "message": "Pakalpojums"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Šis pakalpojums uznirstošajā logā ir paslēpts, bet ikonas diapazons paliek aktīvs."
+  },
+  "optionsBadgeSteps": {
+    "message": "Ikonas pakāpes"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "noapaļots uz leju līdz 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Pārklājumi lapā"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Rādīt saliekamo patēriņa kapsulu blakus ziņas laukam."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Ieslēgt $1 pārklājumu lapā"
+  },
+  "optionsResetTitle": {
+    "message": "Atjaunot noklusējumus"
+  },
+  "optionsResetDescription": {
+    "message": "Atjauno visus šīs lapas iestatījumus. To nevar atsaukt."
+  },
+  "optionsResetAction": {
+    "message": "Atjaunot noklusējumus"
+  },
+  "optionsResetConfirm": {
+    "message": "Noklikšķiniet vēlreiz, lai apstiprinātu"
+  },
+  "planUsage": {
+    "message": "Plāna patēriņš"
+  },
+  "tokenPlan": {
+    "message": "Tokenu plāns"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker iestatījumi"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI-kapacitás",
+  "shots": {
+    "popup": {
+      "eyebrow": "Egyetlen felugró ablak",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "és Xiaomi MiMo egyetlen képernyőn."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Panel az oldalon",
+      "sub": [
+        "Munkamenet- és heti limitek közvetlenül",
+        "a Claude és ChatGPT beviteli mezője mellett."
+      ]
+    },
+    "providers": {
+      "eyebrow": "A te beállításaid",
+      "sub": [
+        "Válaszd ki a szolgáltatókat, az elrendezést",
+        "és hogy mit mutasson minden kártya."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikon és panelek",
+      "sub": [
+        "Az eszköztár ikonja 10%-os lépésekben követi",
+        "a legmagasabb felhasználást."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Nincs beállítás",
+      "sub": [
+        "Nincs API-kulcs, bejelentkezés vagy szerver.",
+        "Minden a böngésződben marad."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Hat szolgáltató, egy felugró ablak: munkamenet- és heti",
+      "limitek, eszköztár ikon, panelek és teljes kontroll."
+    ]
+  },
+  "tile": {
+    "sub": "Hat szolgáltató. Egy ablak."
+  },
+  "highlights": {
+    "title": "Hat szolgáltató, nulla beállítás",
+    "items": [
+      {
+        "title": "Nincs API-kulcs, nincs külön belépés",
+        "body": "A böngésződben már bejelentkezett munkameneteket olvassa."
+      },
+      {
+        "title": "Semmi nem hagyja el a böngészőt",
+        "body": "Nincs szerver, fiók vagy telemetria — minden helyben marad."
+      },
+      {
+        "title": "5 percenként frissül",
+        "body": "A háttérszinkron naprakészen tartja az egészet."
+      }
+    ]
+  }
+}

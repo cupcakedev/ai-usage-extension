@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI kapacitāte",
+  "shots": {
+    "popup": {
+      "eyebrow": "Viens logs",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "un Xiaomi MiMo vienā ekrānā."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Pārklājums lapā",
+      "sub": [
+        "Sesijas un nedēļas limiti tieši blakus",
+        "ziņas laukam Claude un ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Jūsu iestatījumi",
+      "sub": [
+        "Izvēlieties pakalpojumus, izkārtojumu un to,",
+        "kādus datus rāda katra karte."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikona un pārklājumi",
+      "sub": [
+        "Ikona seko lielākajam patēriņam ar 10%",
+        "soli — bez loga atvēršanas."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Bez iestatīšanas",
+      "sub": [
+        "Bez API atslēgām, pieteikšanās un serveriem.",
+        "Viss paliek jūsu pārlūkā."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Seši pakalpojumi, viens logs: sesijas un nedēļas limiti,",
+      "ikona rīkjoslā, pārklājumi un pilna kontrole."
+    ]
+  },
+  "tile": {
+    "sub": "Seši pakalpojumi. Viens logs."
+  },
+  "highlights": {
+    "title": "Seši pakalpojumi, nulle iestatīšanas",
+    "items": [
+      {
+        "title": "Bez API atslēgām un liekas pieteikšanās",
+        "body": "Nolasa sesijas, kurās pārlūks jau ir pieteicies."
+      },
+      {
+        "title": "Nekas neatstāj pārlūku",
+        "body": "Bez serveriem, kontiem un telemetrijas — viss paliek lokāli."
+      },
+      {
+        "title": "Atjaunojas ik pēc 5 minūtēm",
+        "body": "Fona sinhronizācija uztur visu aktuālu."
+      }
+    ]
+  }
+}

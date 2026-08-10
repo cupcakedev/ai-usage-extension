@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Kapasiti AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Satu popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "dan Xiaomi MiMo dalam satu skrin."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Lapisan pada halaman",
+      "sub": [
+        "Had sesi dan mingguan betul-betul di sebelah",
+        "kotak mesej Claude dan ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Tetapan anda",
+      "sub": [
+        "Pilih penyedia, susun atur dan butiran yang",
+        "dipaparkan pada setiap kad."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikon dan lapisan",
+      "sub": [
+        "Ikon bar alat mengikut penggunaan tertinggi",
+        "dalam langkah 10% — tanpa buka popup."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Tiada persediaan",
+      "sub": [
+        "Tiada kunci API, log masuk atau pelayan.",
+        "Semuanya kekal dalam pelayar anda."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Enam penyedia, satu popup: had sesi dan mingguan,",
+      "ikon bar alat, lapisan halaman dan kawalan penuh."
+    ]
+  },
+  "tile": {
+    "sub": "Enam penyedia. Satu popup."
+  },
+  "highlights": {
+    "title": "Enam penyedia, sifar persediaan",
+    "items": [
+      {
+        "title": "Tiada kunci API atau log masuk tambahan",
+        "body": "Membaca sesi yang pelayar anda sudah log masuk."
+      },
+      {
+        "title": "Tiada apa keluar dari pelayar",
+        "body": "Tiada pelayan, akaun atau telemetri — semua data kekal setempat."
+      },
+      {
+        "title": "Menyegar sendiri setiap 5 minit",
+        "body": "Penyegerakan latar memastikan semuanya terkini."
+      }
+    ]
+  }
+}

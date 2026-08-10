@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Capacidad de IA",
+  "shots": {
+    "popup": {
+      "eyebrow": "Un solo popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "y Xiaomi MiMo en una sola pantalla."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Superposición en la página",
+      "sub": [
+        "Límites de sesión y semanales junto",
+        "al campo de mensaje en Claude y ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Tu configuración",
+      "sub": [
+        "Elige proveedores, diseño y qué",
+        "detalles muestra cada tarjeta."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Icono y superposiciones",
+      "sub": [
+        "El icono sigue tu mayor consumo",
+        "en pasos del 10 %, sin abrir el popup."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Sin configurar nada",
+      "sub": [
+        "Sin claves de API, sin sesiones nuevas.",
+        "Todo se queda en tu navegador."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Seis proveedores, un popup: límites de sesión y semana,",
+      "icono en la barra, superposiciones y control total."
+    ]
+  },
+  "tile": {
+    "sub": "Seis proveedores. Un popup."
+  },
+  "highlights": {
+    "title": "Seis proveedores, cero configuración",
+    "items": [
+      {
+        "title": "Sin claves de API ni inicios de sesión",
+        "body": "Lee las sesiones en las que tu navegador ya está autenticado."
+      },
+      {
+        "title": "Nada sale de tu navegador",
+        "body": "Sin servidores, sin cuentas, sin telemetría: todo es local."
+      },
+      {
+        "title": "Se actualiza cada 5 minutos",
+        "body": "La sincronización en segundo plano mantiene todo al día."
+      }
+    ]
+  }
+}

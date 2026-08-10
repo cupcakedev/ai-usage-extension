@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI Capacity",
+  "shots": {
+    "popup": {
+      "eyebrow": "One popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "and Xiaomi MiMo, all on one screen."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "On-page overlay",
+      "sub": [
+        "Session and weekly limits right next",
+        "to the chat input on Claude and ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Your setup",
+      "sub": [
+        "Choose providers, layout, and exactly",
+        "which details each card shows."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Badge & overlays",
+      "sub": [
+        "The toolbar icon follows your highest",
+        "usage in 10% steps — no popup needed."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "No setup",
+      "sub": [
+        "No API keys, no logins, no servers.",
+        "Everything stays in your browser."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Six providers, one popup: session & weekly limits,",
+      "toolbar badge, on-page overlays, and full control."
+    ]
+  },
+  "tile": {
+    "sub": "Six providers. One popup."
+  },
+  "highlights": {
+    "title": "Six providers, zero setup",
+    "items": [
+      {
+        "title": "No API keys, no extra logins",
+        "body": "Reads the sessions your browser is already signed in to."
+      },
+      {
+        "title": "Nothing leaves your browser",
+        "body": "No servers, no accounts, no telemetry — all data stays local."
+      },
+      {
+        "title": "Refreshes itself every 5 minutes",
+        "body": "Background sync keeps the popup, badge, and overlays current."
+      }
+    ]
+  }
+}

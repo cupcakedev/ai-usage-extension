@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Kapacita AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Jeden popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "a Xiaomi MiMo na jednej obrazovke."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Prekrytie na stránke",
+      "sub": [
+        "Limity relácie a týždňa hneď vedľa poľa",
+        "na správu v Claude aj ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Vaše nastavenia",
+      "sub": [
+        "Vyberte poskytovateľov, rozloženie aj to,",
+        "aké údaje karta zobrazuje."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikona a prekrytia",
+      "sub": [
+        "Ikona na paneli sleduje najvyššiu spotrebu",
+        "po 10 % — bez otvárania popupu."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Bez nastavovania",
+      "sub": [
+        "Žiadne API kľúče, prihlásenia ani servery.",
+        "Všetko zostáva v prehliadači."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Šesť poskytovateľov, jeden popup: limity relácie a týždňa,",
+      "ikona na paneli, prekrytia a plná kontrola."
+    ]
+  },
+  "tile": {
+    "sub": "Šesť poskytovateľov. Jeden popup."
+  },
+  "highlights": {
+    "title": "Šesť poskytovateľov, nulové nastavovanie",
+    "items": [
+      {
+        "title": "Žiadne API kľúče ani ďalšie prihlásenia",
+        "body": "Číta relácie, do ktorých je prehliadač už prihlásený."
+      },
+      {
+        "title": "Nič neopúšťa prehliadač",
+        "body": "Žiadne servery, účty ani telemetria — dáta zostávajú lokálne."
+      },
+      {
+        "title": "Obnovuje sa každých 5 minút",
+        "body": "Synchronizácia na pozadí drží všetko aktuálne."
+      }
+    ]
+  }
+}

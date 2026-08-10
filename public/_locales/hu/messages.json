@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude és Codex limitek"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Kövesd a Claude és a ChatGPT (Codex) munkamenet- és heti limitjeit felugró ablakban és oldalon megjelenő panelen."
+  },
+  "popupTitle": {
+    "message": "Felhasználás"
+  },
+  "refreshUsage": {
+    "message": "Felhasználás frissítése"
+  },
+  "refreshUsageLimits": {
+    "message": "Limitek frissítése"
+  },
+  "refreshErrorPrefix": {
+    "message": "Nem sikerült frissíteni"
+  },
+  "refreshFailed": {
+    "message": "A frissítés nem sikerült"
+  },
+  "availableResetsLabel": {
+    "message": "Elérhető visszaállítások · $1"
+  },
+  "loadingSnapshot": {
+    "message": "betöltés"
+  },
+  "notConnected": {
+    "message": "nincs kapcsolat"
+  },
+  "updated": {
+    "message": "frissítve $1"
+  },
+  "refreshing": {
+    "message": "frissítés..."
+  },
+  "waitingForSnapshot": {
+    "message": "adatokra várva"
+  },
+  "sessionLimit": {
+    "message": "Munkamenet · 5 ó"
+  },
+  "weeklyLimit": {
+    "message": "Heti · 7 n"
+  },
+  "planLabel": {
+    "message": "Csomag · $1"
+  },
+  "resetsLabel": {
+    "message": "visszaáll: $1"
+  },
+  "nextResetLabel": {
+    "message": "visszaáll: $1"
+  },
+  "showLimits": {
+    "message": "Limitek mutatása"
+  },
+  "hideLimits": {
+    "message": "Limitek elrejtése"
+  },
+  "emptyClaude": {
+    "message": "Még nincs adat. Nyisd meg a claude.ai oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyCodex": {
+    "message": "Még nincs adat. Nyisd meg a chatgpt.com oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyMiniMax": {
+    "message": "Még nincs adat. Nyisd meg a platform.minimax.io oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyKimi": {
+    "message": "Még nincs adat. Nyisd meg a kimi.com/code oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyCursor": {
+    "message": "Még nincs adat. Nyisd meg a cursor.com oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyMiMo": {
+    "message": "Még nincs adat. Nyisd meg a platform.xiaomimimo.com oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyOverlay": {
+    "message": "Még nincs adat. Nyisd meg a felugró ablakot és frissíts."
+  },
+  "sourceCode": {
+    "message": "Forráskód"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "ismeretlen"
+  },
+  "timeNow": {
+    "message": "most"
+  },
+  "timeJustNow": {
+    "message": "az imént"
+  },
+  "timeAgo": {
+    "message": "$1 óta"
+  },
+  "timeDayShort": {
+    "message": "n"
+  },
+  "timeHourShort": {
+    "message": "ó"
+  },
+  "timeMinuteShort": {
+    "message": "p"
+  },
+  "optionsSaved": {
+    "message": "Minden változás mentve"
+  },
+  "optionsSaving": {
+    "message": "Mentés…"
+  },
+  "optionsSaveError": {
+    "message": "Nem sikerült menteni"
+  },
+  "optionsSkip": {
+    "message": "Ugrás a beállításokhoz"
+  },
+  "optionsLoading": {
+    "message": "Beállítások betöltése…"
+  },
+  "optionsNavLabel": {
+    "message": "Beállítási szakaszok"
+  },
+  "optionsNavLayout": {
+    "message": "Elrendezés"
+  },
+  "optionsNavProviders": {
+    "message": "Szolgáltatók"
+  },
+  "optionsNavBadge": {
+    "message": "Eszköztár ikon"
+  },
+  "optionsNavOverlays": {
+    "message": "Oldalon megjelenő panelek"
+  },
+  "optionsLayoutTitle": {
+    "message": "Felugró ablak elrendezése"
+  },
+  "optionsLayoutDescription": {
+    "message": "Válaszd ki, hogyan rendeződjenek a látható szolgáltatókártyák."
+  },
+  "optionsLayoutSingle": {
+    "message": "Egy oszlop"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Teljes szélességű kártya minden szolgáltatónak."
+  },
+  "optionsLayoutGrid": {
+    "message": "Két oszlop"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompakt áttekintés, soronként két kártyával."
+  },
+  "optionsProvidersTitle": {
+    "message": "Szolgáltatók"
+  },
+  "optionsProvidersDescription": {
+    "message": "Rejts el egy kártyát, vagy válaszd ki, milyen adatokat mutasson. Az elérhetetlen adatok automatikusan rejtve maradnak."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 / $2 látható"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 / $2 adat"
+  },
+  "optionsProviderHidden": {
+    "message": "Rejtve a felugró ablakban"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "$1 mutatása a felugró ablakban"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 felhasználási adatai"
+  },
+  "optionsMetricSession": {
+    "message": "Munkamenet-felhasználás"
+  },
+  "optionsMetricWeekly": {
+    "message": "Heti felhasználás"
+  },
+  "optionsMetricModels": {
+    "message": "Modellenkénti bontás"
+  },
+  "optionsMetricReset": {
+    "message": "Visszaállítás ideje"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Elérhető visszaállítások"
+  },
+  "optionsMetricPlan": {
+    "message": "Csomag"
+  },
+  "optionsMetricSummary": {
+    "message": "Egyenleg / összegzés"
+  },
+  "optionsMetricBalance": {
+    "message": "Egyenleg"
+  },
+  "optionsBadgeTitle": {
+    "message": "Ikon tartománya"
+  },
+  "optionsBadgeDescription": {
+    "message": "A bővítmény ikonja 10%-os lépésekben változik e forrás alapján."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Ikon forrása"
+  },
+  "optionsBadgeHighest": {
+    "message": "A látható szolgáltatók legmagasabb értéke"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "A megjelenített kártyák közül a legnagyobb aktuális százalékot használja."
+  },
+  "optionsBadgeSelected": {
+    "message": "Kiválasztott szolgáltató"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Egy szolgáltatót használ, függetlenül a többi kártya láthatóságától."
+  },
+  "optionsBadgeWindow": {
+    "message": "Felhasználási ablak"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Munkamenet"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Heti"
+  },
+  "optionsBadgeProvider": {
+    "message": "Szolgáltató"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Ez a szolgáltató rejtve van a felugró ablakban, de az ikon tartománya továbbra is aktív."
+  },
+  "optionsBadgeSteps": {
+    "message": "Eszköztár ikon fokozatai"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "lefelé kerekítve 10%-ra"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Oldalon megjelenő panelek"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Összecsukható felhasználási kapszula az üzenetmező mellett."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 oldalpanel bekapcsolása"
+  },
+  "optionsResetTitle": {
+    "message": "Visszaállítás alapértelmezettre"
+  },
+  "optionsResetDescription": {
+    "message": "Visszaállítja az oldal összes beállítását. Ez nem vonható vissza."
+  },
+  "optionsResetAction": {
+    "message": "Alapértelmezett"
+  },
+  "optionsResetConfirm": {
+    "message": "Kattints újra a megerősítéshez"
+  },
+  "planUsage": {
+    "message": "Csomag felhasználása"
+  },
+  "tokenPlan": {
+    "message": "Token csomag"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker beállítások"
+  }
+}

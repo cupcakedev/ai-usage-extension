@@ -22,8 +22,14 @@ Preview URLs: `?locale=de&shot=popup|overlay|providers|badge|privacy`,
 | `store/promo/icon-128.png`  | Store tile icon, hand-made, shared by locales |
 | `store/<locale>/promo/`     | The rendered set for that store language      |
 
-Locales: `en`, `de`, `es`, `fr`, `hi`, `it`, `ja`, `pt_BR`, `ru`, `zh_CN` —
-the same list as `public/_locales` and `store/<locale>/listing.md`.
+Locales: all 53 languages the Chrome Web Store supports — the same list as
+`public/_locales`, `src/promo/locale.ts` and the `LOCALES` array in
+`scripts/promo.js`. (Long-form `store/<locale>/listing.md` copy exists only for
+the ten largest markets.)
+
+`ar`, `fa` and `he` render right-to-left: the copy column and the product mock
+swap sides, while the mock itself stays left-to-right, exactly as the shipped
+UI renders it.
 
 ## Files in each locale folder
 
@@ -49,7 +55,10 @@ usage, so a UI change shows up in the artwork on the next run.
 Product strings are read from `public/_locales` through a `chrome.i18n` stub,
 so every locale shows the wording the extension actually ships. The only
 promo-specific copy — eyebrows, taglines, and the closing slide — lives in
-`src/promo/copy.ts`, translated for each locale.
+`src/promo/copy/<locale>.json`, one file per language.
+
+The "LIMITS" side tab in the on-page overlay is deliberately never translated,
+so it reads the same in every screenshot.
 
 If you also have editable sources (Figma, Sketch, .psd, .pen), keep them in
 `promo/sources/` — anything inside `sources/` is ignored by the release

@@ -62,9 +62,6 @@
   "hideLimits": {
     "message": "Скрыть лимиты"
   },
-  "limitsTab": {
-    "message": "ЛИМИТЫ"
-  },
   "emptyClaude": {
     "message": "Данных пока нет. Откройте claude.ai под своим аккаунтом и обновите."
   },

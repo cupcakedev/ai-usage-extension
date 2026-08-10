@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: محدودیت‌های Claude و Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "محدودیت‌های نشست و هفتگی Claude و ChatGPT (Codex) را در پنجره بازشو و لایه روی صفحه دنبال کنید."
+  },
+  "popupTitle": {
+    "message": "مصرف"
+  },
+  "refreshUsage": {
+    "message": "به‌روزرسانی مصرف"
+  },
+  "refreshUsageLimits": {
+    "message": "به‌روزرسانی محدودیت‌ها"
+  },
+  "refreshErrorPrefix": {
+    "message": "به‌روزرسانی نشد"
+  },
+  "refreshFailed": {
+    "message": "به‌روزرسانی ناموفق"
+  },
+  "availableResetsLabel": {
+    "message": "بازنشانی‌های موجود · $1"
+  },
+  "loadingSnapshot": {
+    "message": "در حال بارگذاری"
+  },
+  "notConnected": {
+    "message": "متصل نیست"
+  },
+  "updated": {
+    "message": "به‌روزرسانی $1"
+  },
+  "refreshing": {
+    "message": "در حال به‌روزرسانی..."
+  },
+  "waitingForSnapshot": {
+    "message": "در انتظار داده"
+  },
+  "sessionLimit": {
+    "message": "نشست · ۵ ساعت"
+  },
+  "weeklyLimit": {
+    "message": "هفته · ۷ روز"
+  },
+  "planLabel": {
+    "message": "طرح · $1"
+  },
+  "resetsLabel": {
+    "message": "بازنشانی تا $1"
+  },
+  "nextResetLabel": {
+    "message": "بازنشانی تا $1"
+  },
+  "showLimits": {
+    "message": "نمایش محدودیت‌ها"
+  },
+  "hideLimits": {
+    "message": "پنهان کردن محدودیت‌ها"
+  },
+  "emptyClaude": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده claude.ai را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyCodex": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده chatgpt.com را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyMiniMax": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده platform.minimax.io را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyKimi": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده kimi.com/code را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyCursor": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده cursor.com را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyMiMo": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده platform.xiaomimimo.com را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyOverlay": {
+    "message": "هنوز داده‌ای نیست. پنجره بازشو را باز کنید و به‌روزرسانی کنید."
+  },
+  "sourceCode": {
+    "message": "کد منبع"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "نامشخص"
+  },
+  "timeNow": {
+    "message": "اکنون"
+  },
+  "timeJustNow": {
+    "message": "همین حالا"
+  },
+  "timeAgo": {
+    "message": "$1 پیش"
+  },
+  "timeDayShort": {
+    "message": "روز"
+  },
+  "timeHourShort": {
+    "message": "س"
+  },
+  "timeMinuteShort": {
+    "message": "د"
+  },
+  "optionsSaved": {
+    "message": "همه تغییرات ذخیره شد"
+  },
+  "optionsSaving": {
+    "message": "در حال ذخیره…"
+  },
+  "optionsSaveError": {
+    "message": "ذخیره نشد"
+  },
+  "optionsSkip": {
+    "message": "رفتن به تنظیمات"
+  },
+  "optionsLoading": {
+    "message": "در حال بارگذاری تنظیمات…"
+  },
+  "optionsNavLabel": {
+    "message": "بخش‌های تنظیمات"
+  },
+  "optionsNavLayout": {
+    "message": "چیدمان"
+  },
+  "optionsNavProviders": {
+    "message": "ارائه‌دهندگان"
+  },
+  "optionsNavBadge": {
+    "message": "نماد نوار ابزار"
+  },
+  "optionsNavOverlays": {
+    "message": "لایه‌های روی صفحه"
+  },
+  "optionsLayoutTitle": {
+    "message": "چیدمان پنجره بازشو"
+  },
+  "optionsLayoutDescription": {
+    "message": "انتخاب کنید کارت‌های قابل مشاهده چگونه چیده شوند."
+  },
+  "optionsLayoutSingle": {
+    "message": "یک ستون"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "یک کارت تمام‌عرض برای هر ارائه‌دهنده."
+  },
+  "optionsLayoutGrid": {
+    "message": "دو ستون"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "نمای فشرده با دو کارت در هر ردیف."
+  },
+  "optionsProvidersTitle": {
+    "message": "ارائه‌دهندگان"
+  },
+  "optionsProvidersDescription": {
+    "message": "کارتی را پنهان کنید یا جزئیات نمایش آن را انتخاب کنید. داده‌های در دسترس نبودن خودکار پنهان می‌شوند."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 از $2 نمایش داده می‌شود"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 از $2 جزئیات"
+  },
+  "optionsProviderHidden": {
+    "message": "پنهان در پنجره بازشو"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "نمایش $1 در پنجره بازشو"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "جزئیات مصرف $1"
+  },
+  "optionsMetricSession": {
+    "message": "مصرف نشست"
+  },
+  "optionsMetricWeekly": {
+    "message": "مصرف هفتگی"
+  },
+  "optionsMetricModels": {
+    "message": "تفکیک بر اساس مدل"
+  },
+  "optionsMetricReset": {
+    "message": "زمان بازنشانی"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "بازنشانی‌های موجود"
+  },
+  "optionsMetricPlan": {
+    "message": "طرح"
+  },
+  "optionsMetricSummary": {
+    "message": "موجودی / خلاصه"
+  },
+  "optionsMetricBalance": {
+    "message": "موجودی"
+  },
+  "optionsBadgeTitle": {
+    "message": "بازه نماد"
+  },
+  "optionsBadgeDescription": {
+    "message": "نماد افزونه بر اساس این منبع در گام‌های ۱۰٪ تغییر می‌کند."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "منبع نماد"
+  },
+  "optionsBadgeHighest": {
+    "message": "بیشترین بین ارائه‌دهندگان قابل مشاهده"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "بیشترین درصد فعلی میان کارت‌های نمایش‌داده‌شده استفاده شود."
+  },
+  "optionsBadgeSelected": {
+    "message": "ارائه‌دهنده انتخاب‌شده"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "یک ارائه‌دهنده بدون توجه به نمایش سایر کارت‌ها استفاده شود."
+  },
+  "optionsBadgeWindow": {
+    "message": "بازه مصرف"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "نشست"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "هفتگی"
+  },
+  "optionsBadgeProvider": {
+    "message": "ارائه‌دهنده"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "این ارائه‌دهنده در پنجره بازشو پنهان است، اما بازه نماد آن فعال می‌ماند."
+  },
+  "optionsBadgeSteps": {
+    "message": "گام‌های نماد"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "به پایین تا ۱۰٪ گرد می‌شود"
+  },
+  "optionsOverlaysTitle": {
+    "message": "لایه‌های روی صفحه"
+  },
+  "optionsOverlaysDescription": {
+    "message": "نمایش کپسول جمع‌شونده مصرف کنار کادر پیام."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "فعال‌سازی لایه $1 روی صفحه"
+  },
+  "optionsResetTitle": {
+    "message": "بازگشت به پیش‌فرض"
+  },
+  "optionsResetDescription": {
+    "message": "همه تنظیمات این صفحه را بازمی‌گرداند. قابل بازگشت نیست."
+  },
+  "optionsResetAction": {
+    "message": "بازنشانی"
+  },
+  "optionsResetConfirm": {
+    "message": "برای تأیید دوباره کلیک کنید"
+  },
+  "planUsage": {
+    "message": "مصرف طرح"
+  },
+  "tokenPlan": {
+    "message": "طرح توکن"
+  },
+  "optionsTitle": {
+    "message": "تنظیمات AI Usage Tracker"
+  }
+}

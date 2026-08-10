@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker፦ የClaude እና Codex ገደቦች"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "የClaude እና የChatGPT (Codex) የክፍለ ጊዜና ሳምንታዊ ገደቦችን በብቅ-ባይ መስኮትና በገጽ ላይ ይከታተሉ።"
+  },
+  "popupTitle": {
+    "message": "አጠቃቀም"
+  },
+  "refreshUsage": {
+    "message": "አጠቃቀምን አድስ"
+  },
+  "refreshUsageLimits": {
+    "message": "ገደቦችን አድስ"
+  },
+  "refreshErrorPrefix": {
+    "message": "ማደስ አልተቻለም"
+  },
+  "refreshFailed": {
+    "message": "ማደስ አልተሳካም"
+  },
+  "availableResetsLabel": {
+    "message": "የሚገኙ ዳግም ማስጀመሪያዎች · $1"
+  },
+  "loadingSnapshot": {
+    "message": "በመጫን ላይ"
+  },
+  "notConnected": {
+    "message": "አልተገናኘም"
+  },
+  "updated": {
+    "message": "ተዘምኗል $1"
+  },
+  "refreshing": {
+    "message": "በማደስ ላይ..."
+  },
+  "waitingForSnapshot": {
+    "message": "መረጃ በመጠበቅ ላይ"
+  },
+  "sessionLimit": {
+    "message": "ክፍለ ጊዜ · 5 ሰዓት"
+  },
+  "weeklyLimit": {
+    "message": "ሳምንታዊ · 7 ቀን"
+  },
+  "planLabel": {
+    "message": "ዕቅድ · $1"
+  },
+  "resetsLabel": {
+    "message": "በ$1 ውስጥ ዳግም ይጀምራል"
+  },
+  "nextResetLabel": {
+    "message": "በ$1 ውስጥ ዳግም ይጀምራል"
+  },
+  "showLimits": {
+    "message": "ገደቦችን አሳይ"
+  },
+  "hideLimits": {
+    "message": "ገደቦችን ደብቅ"
+  },
+  "emptyClaude": {
+    "message": "እስካሁን መረጃ የለም። ገብተው claude.ai ን ይክፈቱና ያድሱ።"
+  },
+  "emptyCodex": {
+    "message": "እስካሁን መረጃ የለም። ገብተው chatgpt.com ን ይክፈቱና ያድሱ።"
+  },
+  "emptyMiniMax": {
+    "message": "እስካሁን መረጃ የለም። ገብተው platform.minimax.io ን ይክፈቱና ያድሱ።"
+  },
+  "emptyKimi": {
+    "message": "እስካሁን መረጃ የለም። ገብተው kimi.com/code ን ይክፈቱና ያድሱ።"
+  },
+  "emptyCursor": {
+    "message": "እስካሁን መረጃ የለም። ገብተው cursor.com ን ይክፈቱና ያድሱ።"
+  },
+  "emptyMiMo": {
+    "message": "እስካሁን መረጃ የለም። ገብተው platform.xiaomimimo.com ን ይክፈቱና ያድሱ።"
+  },
+  "emptyOverlay": {
+    "message": "እስካሁን መረጃ የለም። ብቅ-ባዩን ይክፈቱና ያድሱ።"
+  },
+  "sourceCode": {
+    "message": "ምንጭ ኮድ"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "አይታወቅም"
+  },
+  "timeNow": {
+    "message": "አሁን"
+  },
+  "timeJustNow": {
+    "message": "ልክ አሁን"
+  },
+  "timeAgo": {
+    "message": "ከ$1 በፊት"
+  },
+  "timeDayShort": {
+    "message": "ቀ"
+  },
+  "timeHourShort": {
+    "message": "ሰ"
+  },
+  "timeMinuteShort": {
+    "message": "ደ"
+  },
+  "optionsSaved": {
+    "message": "ሁሉም ለውጦች ተቀምጠዋል"
+  },
+  "optionsSaving": {
+    "message": "በማስቀመጥ ላይ…"
+  },
+  "optionsSaveError": {
+    "message": "ማስቀመጥ አልተቻለም"
+  },
+  "optionsSkip": {
+    "message": "ወደ ቅንብሮች ዝለል"
+  },
+  "optionsLoading": {
+    "message": "ቅንብሮች በመጫን ላይ…"
+  },
+  "optionsNavLabel": {
+    "message": "የቅንብር ክፍሎች"
+  },
+  "optionsNavLayout": {
+    "message": "አቀማመጥ"
+  },
+  "optionsNavProviders": {
+    "message": "አቅራቢዎች"
+  },
+  "optionsNavBadge": {
+    "message": "የመሣሪያ አሞሌ አዶ"
+  },
+  "optionsNavOverlays": {
+    "message": "በገጽ ላይ ሽፋኖች"
+  },
+  "optionsLayoutTitle": {
+    "message": "የብቅ-ባይ አቀማመጥ"
+  },
+  "optionsLayoutDescription": {
+    "message": "የሚታዩ የአቅራቢ ካርዶች እንዴት እንደሚደረደሩ ይምረጡ።"
+  },
+  "optionsLayoutSingle": {
+    "message": "አንድ አምድ"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "ለእያንዳንዱ አቅራቢ ሙሉ ስፋት ያለው ካርድ።"
+  },
+  "optionsLayoutGrid": {
+    "message": "ሁለት አምዶች"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "በእያንዳንዱ ረድፍ ሁለት ካርዶች ያሉት አጭር እይታ።"
+  },
+  "optionsProvidersTitle": {
+    "message": "አቅራቢዎች"
+  },
+  "optionsProvidersDescription": {
+    "message": "ካርድ ይደብቁ ወይም የሚያሳየውን ዝርዝር ይምረጡ። የማይገኝ መረጃ በራሱ ይደበቃል።"
+  },
+  "optionsProvidersShown": {
+    "message": "$1 ከ$2 ይታያሉ"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 ከ$2 ዝርዝሮች"
+  },
+  "optionsProviderHidden": {
+    "message": "በብቅ-ባይ ተደብቋል"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "$1 ን በብቅ-ባይ አሳይ"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "የ$1 አጠቃቀም ዝርዝሮች"
+  },
+  "optionsMetricSession": {
+    "message": "የክፍለ ጊዜ አጠቃቀም"
+  },
+  "optionsMetricWeekly": {
+    "message": "ሳምንታዊ አጠቃቀም"
+  },
+  "optionsMetricModels": {
+    "message": "በሞዴል ክፍፍል"
+  },
+  "optionsMetricReset": {
+    "message": "የዳግም ማስጀመሪያ ሰዓት"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "የሚገኙ ዳግም ማስጀመሪያዎች"
+  },
+  "optionsMetricPlan": {
+    "message": "ዕቅድ"
+  },
+  "optionsMetricSummary": {
+    "message": "ቀሪ ሒሳብ / ማጠቃለያ"
+  },
+  "optionsMetricBalance": {
+    "message": "ቀሪ ሒሳብ"
+  },
+  "optionsBadgeTitle": {
+    "message": "የአዶ ክልል"
+  },
+  "optionsBadgeDescription": {
+    "message": "የቅጥያው አዶ በዚህ ምንጭ መሠረት በ10% ደረጃዎች ይቀየራል።"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "የአዶ ምንጭ"
+  },
+  "optionsBadgeHighest": {
+    "message": "ከሚታዩ አቅራቢዎች ከፍተኛው"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "ከሚታዩ ካርዶች መካከል ከፍተኛውን የአሁን መቶኛ ተጠቀም።"
+  },
+  "optionsBadgeSelected": {
+    "message": "የተመረጠ አቅራቢ"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "ሌሎች ካርዶች ቢታዩም ባይታዩም አንድ አቅራቢ ተጠቀም።"
+  },
+  "optionsBadgeWindow": {
+    "message": "የአጠቃቀም መስኮት"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "ክፍለ ጊዜ"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "ሳምንታዊ"
+  },
+  "optionsBadgeProvider": {
+    "message": "አቅራቢ"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "ይህ አቅራቢ በብቅ-ባይ ተደብቋል፣ ነገር ግን የአዶው ክልል አሁንም ንቁ ነው።"
+  },
+  "optionsBadgeSteps": {
+    "message": "የአዶ ደረጃዎች"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "ወደ ቅርብ 10% ወደ ታች ተጠጋግቷል"
+  },
+  "optionsOverlaysTitle": {
+    "message": "በገጽ ላይ ሽፋኖች"
+  },
+  "optionsOverlaysDescription": {
+    "message": "ከመልእክት ሳጥኑ አጠገብ የሚታጠፍ የአጠቃቀም ካፕሱል አሳይ።"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "የ$1 በገጽ ላይ ሽፋን አንቃ"
+  },
+  "optionsResetTitle": {
+    "message": "ወደ ነባሪ መልስ"
+  },
+  "optionsResetDescription": {
+    "message": "በዚህ ገጽ ላይ ያሉትን ሁሉንም ምርጫዎች ይመልሳል። ይህ መቀልበስ አይቻልም።"
+  },
+  "optionsResetAction": {
+    "message": "ነባሪዎችን መልስ"
+  },
+  "optionsResetConfirm": {
+    "message": "ለማረጋገጥ እንደገና ጠቅ ያድርጉ"
+  },
+  "planUsage": {
+    "message": "የዕቅድ አጠቃቀም"
+  },
+  "tokenPlan": {
+    "message": "የቶከን ዕቅድ"
+  },
+  "optionsTitle": {
+    "message": "የAI Usage Tracker ቅንብሮች"
+  }
+}

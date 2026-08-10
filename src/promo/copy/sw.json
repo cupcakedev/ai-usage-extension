@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Uwezo wa AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Kidirisha kimoja",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "na Xiaomi MiMo kwenye skrini moja."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Kipande kwenye ukurasa",
+      "sub": [
+        "Vikomo vya kipindi na wiki karibu na",
+        "kisanduku cha ujumbe cha Claude na ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Mipangilio yako",
+      "sub": [
+        "Chagua watoa huduma, mpangilio na taarifa",
+        "hasa zinazoonyeshwa kwenye kila kadi."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Aikoni na vipande",
+      "sub": [
+        "Aikoni hufuata matumizi ya juu zaidi kwa",
+        "hatua za 10% — bila kufungua kidirisha."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Hakuna usanidi",
+      "sub": [
+        "Hakuna funguo za API, kuingia wala seva.",
+        "Kila kitu hubaki kwenye kivinjari chako."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Watoa huduma sita, kidirisha kimoja: vikomo vya kipindi",
+      "na wiki, aikoni, vipande vya ukurasa na udhibiti kamili."
+    ]
+  },
+  "tile": {
+    "sub": "Watoa huduma sita. Kidirisha kimoja."
+  },
+  "highlights": {
+    "title": "Watoa huduma sita, usanidi sifuri",
+    "items": [
+      {
+        "title": "Hakuna funguo za API wala kuingia zaidi",
+        "body": "Husoma vipindi ambavyo kivinjari chako kimeshaingia."
+      },
+      {
+        "title": "Hakuna kinachotoka kwenye kivinjari",
+        "body": "Hakuna seva, akaunti wala telemetri — data yote hubaki hapa."
+      },
+      {
+        "title": "Hujisasisha kila dakika 5",
+        "body": "Usawazishaji wa chinichini huweka kila kitu sasa."
+      }
+    ]
+  }
+}

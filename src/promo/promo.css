@@ -25,7 +25,7 @@ body:has(.au-shell--grid) {
 
 .promo-frame__bloom {
   position: absolute;
-  left: -12%;
+  inset-inline-start: -12%;
   top: -22%;
   width: 62%;
   height: 82%;
@@ -33,7 +33,7 @@ body:has(.au-shell--grid) {
 }
 
 .promo-frame--center .promo-frame__bloom {
-  left: 50%;
+  inset-inline-start: 50%;
   top: -46%;
   width: 86%;
   height: 130%;
@@ -316,7 +316,7 @@ body:has(.au-shell--grid) {
   color: var(--au-text-muted);
 }
 
-.promo-overlays.aiu-root {
+.promo-overlays {
   position: absolute;
   inset: 0;
   z-index: 5;
@@ -338,4 +338,13 @@ body:has(.au-shell--grid) {
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.4),
     0 26px 60px rgba(0, 0, 0, 0.55);
+}
+
+[dir='rtl'] .promo-stage--popup,
+[dir='rtl'] .promo-window {
+  transform-origin: top left;
+}
+
+[dir='rtl'] .promo-overlays__card {
+  transform-origin: top right;
 }

@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI-capaciteit",
+  "shots": {
+    "popup": {
+      "eyebrow": "Eén pop-up",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "en Xiaomi MiMo op één scherm."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay op de pagina",
+      "sub": [
+        "Sessie- en weeklimieten direct naast het",
+        "berichtveld in Claude en ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Jouw instellingen",
+      "sub": [
+        "Kies aanbieders, indeling en precies welke",
+        "gegevens elke kaart toont."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Pictogram en overlays",
+      "sub": [
+        "Het pictogram volgt je hoogste verbruik",
+        "in stappen van 10% — zonder pop-up."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Geen installatie",
+      "sub": [
+        "Geen API-sleutels, logins of servers.",
+        "Alles blijft in je browser."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Zes aanbieders, één pop-up: sessie- en weeklimieten,",
+      "pictogram, overlays en volledige controle."
+    ]
+  },
+  "tile": {
+    "sub": "Zes aanbieders. Eén pop-up."
+  },
+  "highlights": {
+    "title": "Zes aanbieders, nul installatie",
+    "items": [
+      {
+        "title": "Geen API-sleutels, geen extra logins",
+        "body": "Leest de sessies waarop je browser al is ingelogd."
+      },
+      {
+        "title": "Niets verlaat je browser",
+        "body": "Geen servers, accounts of telemetrie — alles blijft lokaal."
+      },
+      {
+        "title": "Ververst zichzelf elke 5 minuten",
+        "body": "Achtergrondsynchronisatie houdt alles actueel."
+      }
+    ]
+  }
+}

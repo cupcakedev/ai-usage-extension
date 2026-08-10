@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: had Claude & Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Pantau had sesi dan mingguan Claude serta ChatGPT (Codex) dalam popup dan lapisan pada halaman. Tanpa persediaan."
+  },
+  "popupTitle": {
+    "message": "Penggunaan"
+  },
+  "refreshUsage": {
+    "message": "Muat semula penggunaan"
+  },
+  "refreshUsageLimits": {
+    "message": "Muat semula had"
+  },
+  "refreshErrorPrefix": {
+    "message": "Gagal dimuat semula"
+  },
+  "refreshFailed": {
+    "message": "Muat semula gagal"
+  },
+  "availableResetsLabel": {
+    "message": "Set semula tersedia · $1"
+  },
+  "loadingSnapshot": {
+    "message": "memuatkan"
+  },
+  "notConnected": {
+    "message": "tidak disambungkan"
+  },
+  "updated": {
+    "message": "dikemas kini $1"
+  },
+  "refreshing": {
+    "message": "memuat semula..."
+  },
+  "waitingForSnapshot": {
+    "message": "menunggu data"
+  },
+  "sessionLimit": {
+    "message": "Sesi · 5 j"
+  },
+  "weeklyLimit": {
+    "message": "Mingguan · 7 h"
+  },
+  "planLabel": {
+    "message": "Pelan · $1"
+  },
+  "resetsLabel": {
+    "message": "set semula dalam $1"
+  },
+  "nextResetLabel": {
+    "message": "set semula dalam $1"
+  },
+  "showLimits": {
+    "message": "Tunjuk had"
+  },
+  "hideLimits": {
+    "message": "Sembunyi had"
+  },
+  "emptyClaude": {
+    "message": "Belum ada data. Buka claude.ai sambil log masuk, kemudian muat semula."
+  },
+  "emptyCodex": {
+    "message": "Belum ada data. Buka chatgpt.com sambil log masuk, kemudian muat semula."
+  },
+  "emptyMiniMax": {
+    "message": "Belum ada data. Buka platform.minimax.io sambil log masuk, kemudian muat semula."
+  },
+  "emptyKimi": {
+    "message": "Belum ada data. Buka kimi.com/code sambil log masuk, kemudian muat semula."
+  },
+  "emptyCursor": {
+    "message": "Belum ada data. Buka cursor.com sambil log masuk, kemudian muat semula."
+  },
+  "emptyMiMo": {
+    "message": "Belum ada data. Buka platform.xiaomimimo.com sambil log masuk, kemudian muat semula."
+  },
+  "emptyOverlay": {
+    "message": "Belum ada data. Buka popup dan muat semula."
+  },
+  "sourceCode": {
+    "message": "Kod sumber"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "tidak diketahui"
+  },
+  "timeNow": {
+    "message": "sekarang"
+  },
+  "timeJustNow": {
+    "message": "sebentar tadi"
+  },
+  "timeAgo": {
+    "message": "$1 lalu"
+  },
+  "timeDayShort": {
+    "message": "h"
+  },
+  "timeHourShort": {
+    "message": "j"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Semua perubahan disimpan"
+  },
+  "optionsSaving": {
+    "message": "Menyimpan…"
+  },
+  "optionsSaveError": {
+    "message": "Gagal menyimpan"
+  },
+  "optionsSkip": {
+    "message": "Lompat ke tetapan"
+  },
+  "optionsLoading": {
+    "message": "Memuatkan tetapan…"
+  },
+  "optionsNavLabel": {
+    "message": "Bahagian tetapan"
+  },
+  "optionsNavLayout": {
+    "message": "Susun atur"
+  },
+  "optionsNavProviders": {
+    "message": "Penyedia"
+  },
+  "optionsNavBadge": {
+    "message": "Ikon bar alat"
+  },
+  "optionsNavOverlays": {
+    "message": "Lapisan pada halaman"
+  },
+  "optionsLayoutTitle": {
+    "message": "Susun atur popup"
+  },
+  "optionsLayoutDescription": {
+    "message": "Pilih cara kad penyedia yang kelihatan disusun."
+  },
+  "optionsLayoutSingle": {
+    "message": "Satu lajur"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Kad selebar penuh bagi setiap penyedia."
+  },
+  "optionsLayoutGrid": {
+    "message": "Dua lajur"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Pandangan padat dengan dua kad sebaris."
+  },
+  "optionsProvidersTitle": {
+    "message": "Penyedia"
+  },
+  "optionsProvidersDescription": {
+    "message": "Sembunyikan kad atau pilih butiran yang dipaparkan. Data yang tiada disembunyikan secara automatik."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 daripada $2 dipaparkan"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 daripada $2 butiran"
+  },
+  "optionsProviderHidden": {
+    "message": "Tersembunyi dalam popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Tunjukkan $1 dalam popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Butiran penggunaan $1"
+  },
+  "optionsMetricSession": {
+    "message": "Penggunaan sesi"
+  },
+  "optionsMetricWeekly": {
+    "message": "Penggunaan mingguan"
+  },
+  "optionsMetricModels": {
+    "message": "Pecahan mengikut model"
+  },
+  "optionsMetricReset": {
+    "message": "Masa set semula"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Set semula tersedia"
+  },
+  "optionsMetricPlan": {
+    "message": "Pelan"
+  },
+  "optionsMetricSummary": {
+    "message": "Baki / ringkasan"
+  },
+  "optionsMetricBalance": {
+    "message": "Baki"
+  },
+  "optionsBadgeTitle": {
+    "message": "Julat ikon"
+  },
+  "optionsBadgeDescription": {
+    "message": "Ikon sambungan berubah setiap 10% berdasarkan sumber ini."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Sumber ikon"
+  },
+  "optionsBadgeHighest": {
+    "message": "Tertinggi antara penyedia yang kelihatan"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Gunakan peratusan semasa tertinggi antara kad yang dipaparkan."
+  },
+  "optionsBadgeSelected": {
+    "message": "Penyedia dipilih"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Gunakan satu penyedia tanpa mengira kad lain."
+  },
+  "optionsBadgeWindow": {
+    "message": "Tetingkap penggunaan"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesi"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Mingguan"
+  },
+  "optionsBadgeProvider": {
+    "message": "Penyedia"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Penyedia ini tersembunyi dalam popup, tetapi julat ikonnya kekal aktif."
+  },
+  "optionsBadgeSteps": {
+    "message": "Tahap ikon"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "dibundarkan ke bawah kepada 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Lapisan pada halaman"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Tunjukkan kapsul penggunaan boleh lipat di sebelah kotak mesej."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Hidupkan lapisan $1 pada halaman"
+  },
+  "optionsResetTitle": {
+    "message": "Set semula kepada lalai"
+  },
+  "optionsResetDescription": {
+    "message": "Memulihkan semua keutamaan pada halaman ini. Tindakan ini tidak boleh dibatalkan."
+  },
+  "optionsResetAction": {
+    "message": "Set semula lalai"
+  },
+  "optionsResetConfirm": {
+    "message": "Klik sekali lagi untuk sahkan"
+  },
+  "planUsage": {
+    "message": "Penggunaan pelan"
+  },
+  "tokenPlan": {
+    "message": "Pelan token"
+  },
+  "optionsTitle": {
+    "message": "Tetapan AI Usage Tracker"
+  }
+}

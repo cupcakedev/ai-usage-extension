@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: gränser för Claude och Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Följ sessions- och veckogränser för Claude och ChatGPT (Codex) i en popup och som overlay på sidan. Utan konfiguration."
+  },
+  "popupTitle": {
+    "message": "Användning"
+  },
+  "refreshUsage": {
+    "message": "Uppdatera användning"
+  },
+  "refreshUsageLimits": {
+    "message": "Uppdatera gränser"
+  },
+  "refreshErrorPrefix": {
+    "message": "Kunde inte uppdatera"
+  },
+  "refreshFailed": {
+    "message": "Uppdateringen misslyckades"
+  },
+  "availableResetsLabel": {
+    "message": "Tillgängliga återställningar · $1"
+  },
+  "loadingSnapshot": {
+    "message": "laddar"
+  },
+  "notConnected": {
+    "message": "ej ansluten"
+  },
+  "updated": {
+    "message": "uppdaterad $1"
+  },
+  "refreshing": {
+    "message": "uppdaterar..."
+  },
+  "waitingForSnapshot": {
+    "message": "väntar på data"
+  },
+  "sessionLimit": {
+    "message": "Session · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Vecka · 7 d"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "återställs om $1"
+  },
+  "nextResetLabel": {
+    "message": "återställs om $1"
+  },
+  "showLimits": {
+    "message": "Visa gränser"
+  },
+  "hideLimits": {
+    "message": "Dölj gränser"
+  },
+  "emptyClaude": {
+    "message": "Inga data än. Öppna claude.ai när du är inloggad och uppdatera."
+  },
+  "emptyCodex": {
+    "message": "Inga data än. Öppna chatgpt.com när du är inloggad och uppdatera."
+  },
+  "emptyMiniMax": {
+    "message": "Inga data än. Öppna platform.minimax.io när du är inloggad och uppdatera."
+  },
+  "emptyKimi": {
+    "message": "Inga data än. Öppna kimi.com/code när du är inloggad och uppdatera."
+  },
+  "emptyCursor": {
+    "message": "Inga data än. Öppna cursor.com när du är inloggad och uppdatera."
+  },
+  "emptyMiMo": {
+    "message": "Inga data än. Öppna platform.xiaomimimo.com när du är inloggad och uppdatera."
+  },
+  "emptyOverlay": {
+    "message": "Inga data än. Öppna popupen och uppdatera."
+  },
+  "sourceCode": {
+    "message": "Källkod"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "okänt"
+  },
+  "timeNow": {
+    "message": "nu"
+  },
+  "timeJustNow": {
+    "message": "nyss"
+  },
+  "timeAgo": {
+    "message": "för $1 sedan"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Alla ändringar sparade"
+  },
+  "optionsSaving": {
+    "message": "Sparar…"
+  },
+  "optionsSaveError": {
+    "message": "Kunde inte spara"
+  },
+  "optionsSkip": {
+    "message": "Hoppa till inställningar"
+  },
+  "optionsLoading": {
+    "message": "Laddar inställningar…"
+  },
+  "optionsNavLabel": {
+    "message": "Inställningsavsnitt"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Leverantörer"
+  },
+  "optionsNavBadge": {
+    "message": "Verktygsfältsikon"
+  },
+  "optionsNavOverlays": {
+    "message": "Overlays på sidan"
+  },
+  "optionsLayoutTitle": {
+    "message": "Popup-layout"
+  },
+  "optionsLayoutDescription": {
+    "message": "Välj hur synliga leverantörskort ordnas i popupen."
+  },
+  "optionsLayoutSingle": {
+    "message": "En kolumn"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Ett kort i full bredd för varje leverantör."
+  },
+  "optionsLayoutGrid": {
+    "message": "Två kolumner"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompakt översikt med två kort per rad."
+  },
+  "optionsProvidersTitle": {
+    "message": "Leverantörer"
+  },
+  "optionsProvidersDescription": {
+    "message": "Dölj ett kort eller välj vilka uppgifter det visar. Otillgängliga data döljs automatiskt."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 av $2 visas"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 av $2 detaljer"
+  },
+  "optionsProviderHidden": {
+    "message": "Dold i popupen"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Visa $1 i popupen"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Användningsdetaljer för $1"
+  },
+  "optionsMetricSession": {
+    "message": "Sessionsanvändning"
+  },
+  "optionsMetricWeekly": {
+    "message": "Veckoanvändning"
+  },
+  "optionsMetricModels": {
+    "message": "Fördelning per modell"
+  },
+  "optionsMetricReset": {
+    "message": "Återställningstid"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Tillgängliga återställningar"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / sammanfattning"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Ikonintervall"
+  },
+  "optionsBadgeDescription": {
+    "message": "Tilläggets ikon ändras i steg om 10 % utifrån den här källan."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Ikonkälla"
+  },
+  "optionsBadgeHighest": {
+    "message": "Högsta av synliga leverantörer"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Använd den högsta aktuella procenten bland visade kort."
+  },
+  "optionsBadgeSelected": {
+    "message": "Vald leverantör"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Använd en leverantör oavsett om andra kort visas."
+  },
+  "optionsBadgeWindow": {
+    "message": "Användningsfönster"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Session"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Vecka"
+  },
+  "optionsBadgeProvider": {
+    "message": "Leverantör"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Leverantören är dold i popupen, men ikonintervallet är fortfarande aktivt."
+  },
+  "optionsBadgeSteps": {
+    "message": "Ikonens steg"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "avrundat nedåt till 10 %"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Overlays på sidan"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Visa den hopfällbara användningskapseln bredvid meddelandefältet."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Aktivera $1-overlay på sidan"
+  },
+  "optionsResetTitle": {
+    "message": "Återställ till standard"
+  },
+  "optionsResetDescription": {
+    "message": "Återställer alla inställningar på den här sidan. Det går inte att ångra."
+  },
+  "optionsResetAction": {
+    "message": "Återställ"
+  },
+  "optionsResetConfirm": {
+    "message": "Klicka igen för att bekräfta"
+  },
+  "planUsage": {
+    "message": "Planens användning"
+  },
+  "tokenPlan": {
+    "message": "Tokenplan"
+  },
+  "optionsTitle": {
+    "message": "Inställningar för AI Usage Tracker"
+  }
+}

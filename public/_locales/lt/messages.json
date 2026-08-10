@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude ir Codex limitai"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Stebėkite Claude ir ChatGPT (Codex) sesijos bei savaitės limitus iššokančiame lange ir puslapio perdangoje."
+  },
+  "popupTitle": {
+    "message": "Naudojimas"
+  },
+  "refreshUsage": {
+    "message": "Atnaujinti naudojimą"
+  },
+  "refreshUsageLimits": {
+    "message": "Atnaujinti limitus"
+  },
+  "refreshErrorPrefix": {
+    "message": "Nepavyko atnaujinti"
+  },
+  "refreshFailed": {
+    "message": "Atnaujinti nepavyko"
+  },
+  "availableResetsLabel": {
+    "message": "Galimi atstatymai · $1"
+  },
+  "loadingSnapshot": {
+    "message": "įkeliama"
+  },
+  "notConnected": {
+    "message": "neprisijungta"
+  },
+  "updated": {
+    "message": "atnaujinta $1"
+  },
+  "refreshing": {
+    "message": "atnaujinama..."
+  },
+  "waitingForSnapshot": {
+    "message": "laukiama duomenų"
+  },
+  "sessionLimit": {
+    "message": "Sesija · 5 val."
+  },
+  "weeklyLimit": {
+    "message": "Savaitė · 7 d."
+  },
+  "planLabel": {
+    "message": "Planas · $1"
+  },
+  "resetsLabel": {
+    "message": "atsinaujins po $1"
+  },
+  "nextResetLabel": {
+    "message": "atsinaujins po $1"
+  },
+  "showLimits": {
+    "message": "Rodyti limitus"
+  },
+  "hideLimits": {
+    "message": "Slėpti limitus"
+  },
+  "emptyClaude": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite claude.ai ir atnaujinkite."
+  },
+  "emptyCodex": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite chatgpt.com ir atnaujinkite."
+  },
+  "emptyMiniMax": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite platform.minimax.io ir atnaujinkite."
+  },
+  "emptyKimi": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite kimi.com/code ir atnaujinkite."
+  },
+  "emptyCursor": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite cursor.com ir atnaujinkite."
+  },
+  "emptyMiMo": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite platform.xiaomimimo.com ir atnaujinkite."
+  },
+  "emptyOverlay": {
+    "message": "Duomenų dar nėra. Atidarykite iššokantį langą ir atnaujinkite."
+  },
+  "sourceCode": {
+    "message": "Pirminis kodas"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "nežinoma"
+  },
+  "timeNow": {
+    "message": "dabar"
+  },
+  "timeJustNow": {
+    "message": "ką tik"
+  },
+  "timeAgo": {
+    "message": "prieš $1"
+  },
+  "timeDayShort": {
+    "message": "d."
+  },
+  "timeHourShort": {
+    "message": "val."
+  },
+  "timeMinuteShort": {
+    "message": "min."
+  },
+  "optionsSaved": {
+    "message": "Visi pakeitimai išsaugoti"
+  },
+  "optionsSaving": {
+    "message": "Išsaugoma…"
+  },
+  "optionsSaveError": {
+    "message": "Nepavyko išsaugoti"
+  },
+  "optionsSkip": {
+    "message": "Pereiti prie nustatymų"
+  },
+  "optionsLoading": {
+    "message": "Įkeliami nustatymai…"
+  },
+  "optionsNavLabel": {
+    "message": "Nustatymų skiltys"
+  },
+  "optionsNavLayout": {
+    "message": "Išdėstymas"
+  },
+  "optionsNavProviders": {
+    "message": "Tiekėjai"
+  },
+  "optionsNavBadge": {
+    "message": "Įrankių juostos piktograma"
+  },
+  "optionsNavOverlays": {
+    "message": "Perdangos puslapyje"
+  },
+  "optionsLayoutTitle": {
+    "message": "Iššokančio lango išdėstymas"
+  },
+  "optionsLayoutDescription": {
+    "message": "Pasirinkite, kaip išdėstyti matomas tiekėjų korteles."
+  },
+  "optionsLayoutSingle": {
+    "message": "Vienas stulpelis"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Viso pločio kortelė kiekvienam tiekėjui."
+  },
+  "optionsLayoutGrid": {
+    "message": "Du stulpeliai"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompaktiška apžvalga po dvi korteles eilėje."
+  },
+  "optionsProvidersTitle": {
+    "message": "Tiekėjai"
+  },
+  "optionsProvidersDescription": {
+    "message": "Paslėpkite kortelę arba pasirinkite, kokius duomenis ji rodo. Nepasiekiami duomenys slepiami automatiškai."
+  },
+  "optionsProvidersShown": {
+    "message": "rodoma $1 iš $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 iš $2 detalių"
+  },
+  "optionsProviderHidden": {
+    "message": "Paslėpta iššokančiame lange"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Rodyti $1 iššokančiame lange"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 naudojimo duomenys"
+  },
+  "optionsMetricSession": {
+    "message": "Sesijos naudojimas"
+  },
+  "optionsMetricWeekly": {
+    "message": "Savaitės naudojimas"
+  },
+  "optionsMetricModels": {
+    "message": "Pasiskirstymas pagal modelius"
+  },
+  "optionsMetricReset": {
+    "message": "Atstatymo laikas"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Galimi atstatymai"
+  },
+  "optionsMetricPlan": {
+    "message": "Planas"
+  },
+  "optionsMetricSummary": {
+    "message": "Likutis / santrauka"
+  },
+  "optionsMetricBalance": {
+    "message": "Likutis"
+  },
+  "optionsBadgeTitle": {
+    "message": "Piktogramos diapazonas"
+  },
+  "optionsBadgeDescription": {
+    "message": "Plėtinio piktograma keičiasi kas 10 % pagal šį šaltinį."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Piktogramos šaltinis"
+  },
+  "optionsBadgeHighest": {
+    "message": "Didžiausias iš matomų tiekėjų"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Naudoti didžiausią dabartinį procentą tarp rodomų kortelių."
+  },
+  "optionsBadgeSelected": {
+    "message": "Pasirinktas tiekėjas"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Naudoti vieną tiekėją, nepaisant kitų kortelių matomumo."
+  },
+  "optionsBadgeWindow": {
+    "message": "Naudojimo langas"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesija"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Savaitė"
+  },
+  "optionsBadgeProvider": {
+    "message": "Tiekėjas"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Šis tiekėjas paslėptas iššokančiame lange, bet jo piktogramos diapazonas lieka aktyvus."
+  },
+  "optionsBadgeSteps": {
+    "message": "Piktogramos pakopos"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "suapvalinta žemyn iki 10 %"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Perdangos puslapyje"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Rodyti sutraukiamą naudojimo kapsulę šalia žinutės lauko."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Įjungti $1 perdangą puslapyje"
+  },
+  "optionsResetTitle": {
+    "message": "Atkurti numatytuosius"
+  },
+  "optionsResetDescription": {
+    "message": "Atkuria visus šio puslapio nustatymus. Veiksmo atšaukti negalima."
+  },
+  "optionsResetAction": {
+    "message": "Atkurti numatytuosius"
+  },
+  "optionsResetConfirm": {
+    "message": "Spustelėkite dar kartą patvirtinti"
+  },
+  "planUsage": {
+    "message": "Plano naudojimas"
+  },
+  "tokenPlan": {
+    "message": "Tokenų planas"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker nustatymai"
+  }
+}

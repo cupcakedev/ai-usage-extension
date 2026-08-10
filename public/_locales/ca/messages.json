@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: límits de Claude i Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Segueix els límits de sessió i setmanals de Claude i ChatGPT (Codex) en una finestra emergent i una capa a la pàgina."
+  },
+  "popupTitle": {
+    "message": "Ús"
+  },
+  "refreshUsage": {
+    "message": "Actualitza l’ús"
+  },
+  "refreshUsageLimits": {
+    "message": "Actualitza els límits"
+  },
+  "refreshErrorPrefix": {
+    "message": "No s’ha pogut actualitzar"
+  },
+  "refreshFailed": {
+    "message": "L’actualització ha fallat"
+  },
+  "availableResetsLabel": {
+    "message": "Restabliments disponibles · $1"
+  },
+  "loadingSnapshot": {
+    "message": "s’està carregant"
+  },
+  "notConnected": {
+    "message": "sense connexió"
+  },
+  "updated": {
+    "message": "actualitzat $1"
+  },
+  "refreshing": {
+    "message": "s’està actualitzant..."
+  },
+  "waitingForSnapshot": {
+    "message": "esperant dades"
+  },
+  "sessionLimit": {
+    "message": "Sessió · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Setmana · 7 d"
+  },
+  "planLabel": {
+    "message": "Pla · $1"
+  },
+  "resetsLabel": {
+    "message": "es restableix en $1"
+  },
+  "nextResetLabel": {
+    "message": "es restableix en $1"
+  },
+  "showLimits": {
+    "message": "Mostra els límits"
+  },
+  "hideLimits": {
+    "message": "Amaga els límits"
+  },
+  "emptyClaude": {
+    "message": "Encara no hi ha dades. Obre claude.ai amb la sessió iniciada i actualitza."
+  },
+  "emptyCodex": {
+    "message": "Encara no hi ha dades. Obre chatgpt.com amb la sessió iniciada i actualitza."
+  },
+  "emptyMiniMax": {
+    "message": "Encara no hi ha dades. Obre platform.minimax.io amb la sessió iniciada i actualitza."
+  },
+  "emptyKimi": {
+    "message": "Encara no hi ha dades. Obre kimi.com/code amb la sessió iniciada i actualitza."
+  },
+  "emptyCursor": {
+    "message": "Encara no hi ha dades. Obre cursor.com amb la sessió iniciada i actualitza."
+  },
+  "emptyMiMo": {
+    "message": "Encara no hi ha dades. Obre platform.xiaomimimo.com amb la sessió iniciada i actualitza."
+  },
+  "emptyOverlay": {
+    "message": "Encara no hi ha dades. Obre la finestra emergent i actualitza."
+  },
+  "sourceCode": {
+    "message": "Codi font"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "desconegut"
+  },
+  "timeNow": {
+    "message": "ara"
+  },
+  "timeJustNow": {
+    "message": "ara mateix"
+  },
+  "timeAgo": {
+    "message": "fa $1"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "S’han desat tots els canvis"
+  },
+  "optionsSaving": {
+    "message": "S’està desant…"
+  },
+  "optionsSaveError": {
+    "message": "No s’ha pogut desar"
+  },
+  "optionsSkip": {
+    "message": "Ves a la configuració"
+  },
+  "optionsLoading": {
+    "message": "S’està carregant la configuració…"
+  },
+  "optionsNavLabel": {
+    "message": "Seccions de configuració"
+  },
+  "optionsNavLayout": {
+    "message": "Disposició"
+  },
+  "optionsNavProviders": {
+    "message": "Proveïdors"
+  },
+  "optionsNavBadge": {
+    "message": "Icona de la barra"
+  },
+  "optionsNavOverlays": {
+    "message": "Capes a la pàgina"
+  },
+  "optionsLayoutTitle": {
+    "message": "Disposició de la finestra emergent"
+  },
+  "optionsLayoutDescription": {
+    "message": "Tria com s’ordenen les targetes de proveïdor visibles."
+  },
+  "optionsLayoutSingle": {
+    "message": "Una columna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Una targeta d’amplada completa per a cada proveïdor."
+  },
+  "optionsLayoutGrid": {
+    "message": "Dues columnes"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Vista compacta amb dues targetes per fila."
+  },
+  "optionsProvidersTitle": {
+    "message": "Proveïdors"
+  },
+  "optionsProvidersDescription": {
+    "message": "Amaga una targeta o tria quines dades mostra. Les dades no disponibles queden amagades automàticament."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 de $2 visibles"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 de $2 detalls"
+  },
+  "optionsProviderHidden": {
+    "message": "Amagat a la finestra emergent"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Mostra $1 a la finestra emergent"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Detalls d’ús de $1"
+  },
+  "optionsMetricSession": {
+    "message": "Ús de la sessió"
+  },
+  "optionsMetricWeekly": {
+    "message": "Ús setmanal"
+  },
+  "optionsMetricModels": {
+    "message": "Desglossament per model"
+  },
+  "optionsMetricReset": {
+    "message": "Hora de restabliment"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Restabliments disponibles"
+  },
+  "optionsMetricPlan": {
+    "message": "Pla"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / resum"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Interval de la icona"
+  },
+  "optionsBadgeDescription": {
+    "message": "La icona de l’extensió canvia en trams del 10% segons aquesta font."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Font de la icona"
+  },
+  "optionsBadgeHighest": {
+    "message": "El més alt dels proveïdors visibles"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Fes servir el percentatge actual més alt entre les targetes mostrades."
+  },
+  "optionsBadgeSelected": {
+    "message": "Proveïdor seleccionat"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Fes servir un sol proveïdor, independentment de les altres targetes."
+  },
+  "optionsBadgeWindow": {
+    "message": "Finestra d’ús"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sessió"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Setmanal"
+  },
+  "optionsBadgeProvider": {
+    "message": "Proveïdor"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Aquest proveïdor està amagat a la finestra emergent, però el seu interval d’icona continua actiu."
+  },
+  "optionsBadgeSteps": {
+    "message": "Trams de la icona"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "arrodonit cap avall al 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Capes a la pàgina"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Mostra la càpsula d’ús plegable al costat del camp de missatge."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Activa la capa de $1 a la pàgina"
+  },
+  "optionsResetTitle": {
+    "message": "Restableix els valors per defecte"
+  },
+  "optionsResetDescription": {
+    "message": "Restaura totes les preferències d’aquesta pàgina. No es pot desfer."
+  },
+  "optionsResetAction": {
+    "message": "Restableix"
+  },
+  "optionsResetConfirm": {
+    "message": "Torna a fer clic per confirmar"
+  },
+  "planUsage": {
+    "message": "Ús del pla"
+  },
+  "tokenPlan": {
+    "message": "Pla de tokens"
+  },
+  "optionsTitle": {
+    "message": "Configuració d’AI Usage Tracker"
+  }
+}

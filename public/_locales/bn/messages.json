@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude ও Codex-এর লিমিট"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude ও ChatGPT (Codex)-এর সেশন ও সাপ্তাহিক লিমিট পপআপ এবং পেজ ওভারলেতে দেখুন। কোনো সেটআপ লাগে না।"
+  },
+  "popupTitle": {
+    "message": "ব্যবহার"
+  },
+  "refreshUsage": {
+    "message": "ব্যবহার রিফ্রেশ করুন"
+  },
+  "refreshUsageLimits": {
+    "message": "লিমিট রিফ্রেশ করুন"
+  },
+  "refreshErrorPrefix": {
+    "message": "রিফ্রেশ করা যায়নি"
+  },
+  "refreshFailed": {
+    "message": "রিফ্রেশ ব্যর্থ"
+  },
+  "availableResetsLabel": {
+    "message": "উপলব্ধ রিসেট · $1"
+  },
+  "loadingSnapshot": {
+    "message": "লোড হচ্ছে"
+  },
+  "notConnected": {
+    "message": "সংযুক্ত নয়"
+  },
+  "updated": {
+    "message": "আপডেট $1"
+  },
+  "refreshing": {
+    "message": "রিফ্রেশ হচ্ছে..."
+  },
+  "waitingForSnapshot": {
+    "message": "ডেটার জন্য অপেক্ষা"
+  },
+  "sessionLimit": {
+    "message": "সেশন · ৫ ঘণ্টা"
+  },
+  "weeklyLimit": {
+    "message": "সাপ্তাহিক · ৭ দিন"
+  },
+  "planLabel": {
+    "message": "প্ল্যান · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 পরে রিসেট"
+  },
+  "nextResetLabel": {
+    "message": "$1 পরে রিসেট"
+  },
+  "showLimits": {
+    "message": "লিমিট দেখান"
+  },
+  "hideLimits": {
+    "message": "লিমিট লুকান"
+  },
+  "emptyClaude": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় claude.ai খুলে রিফ্রেশ করুন।"
+  },
+  "emptyCodex": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় chatgpt.com খুলে রিফ্রেশ করুন।"
+  },
+  "emptyMiniMax": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় platform.minimax.io খুলে রিফ্রেশ করুন।"
+  },
+  "emptyKimi": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় kimi.com/code খুলে রিফ্রেশ করুন।"
+  },
+  "emptyCursor": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় cursor.com খুলে রিফ্রেশ করুন।"
+  },
+  "emptyMiMo": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় platform.xiaomimimo.com খুলে রিফ্রেশ করুন।"
+  },
+  "emptyOverlay": {
+    "message": "এখনও ডেটা নেই। পপআপ খুলে রিফ্রেশ করুন।"
+  },
+  "sourceCode": {
+    "message": "সোর্স কোড"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "অজানা"
+  },
+  "timeNow": {
+    "message": "এখন"
+  },
+  "timeJustNow": {
+    "message": "এইমাত্র"
+  },
+  "timeAgo": {
+    "message": "$1 আগে"
+  },
+  "timeDayShort": {
+    "message": "দি"
+  },
+  "timeHourShort": {
+    "message": "ঘ"
+  },
+  "timeMinuteShort": {
+    "message": "মি"
+  },
+  "optionsSaved": {
+    "message": "সব পরিবর্তন সেভ হয়েছে"
+  },
+  "optionsSaving": {
+    "message": "সেভ হচ্ছে…"
+  },
+  "optionsSaveError": {
+    "message": "সেভ করা যায়নি"
+  },
+  "optionsSkip": {
+    "message": "সেটিংসে যান"
+  },
+  "optionsLoading": {
+    "message": "সেটিংস লোড হচ্ছে…"
+  },
+  "optionsNavLabel": {
+    "message": "সেটিংস বিভাগ"
+  },
+  "optionsNavLayout": {
+    "message": "লেআউট"
+  },
+  "optionsNavProviders": {
+    "message": "প্রোভাইডার"
+  },
+  "optionsNavBadge": {
+    "message": "টুলবার আইকন"
+  },
+  "optionsNavOverlays": {
+    "message": "পেজ ওভারলে"
+  },
+  "optionsLayoutTitle": {
+    "message": "পপআপ লেআউট"
+  },
+  "optionsLayoutDescription": {
+    "message": "দৃশ্যমান প্রোভাইডার কার্ডগুলো কীভাবে সাজানো হবে তা বেছে নিন।"
+  },
+  "optionsLayoutSingle": {
+    "message": "এক কলাম"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "প্রতিটি প্রোভাইডারের জন্য পূর্ণ প্রস্থের কার্ড।"
+  },
+  "optionsLayoutGrid": {
+    "message": "দুই কলাম"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "সারিতে দুটি কার্ড নিয়ে সংক্ষিপ্ত ভিউ।"
+  },
+  "optionsProvidersTitle": {
+    "message": "প্রোভাইডার"
+  },
+  "optionsProvidersDescription": {
+    "message": "কার্ড লুকান বা কোন তথ্য দেখাবে তা বেছে নিন। অনুপলব্ধ ডেটা নিজে থেকেই লুকানো থাকে।"
+  },
+  "optionsProvidersShown": {
+    "message": "$2-এর মধ্যে $1 দেখানো হচ্ছে"
+  },
+  "optionsProviderDetails": {
+    "message": "$2-এর মধ্যে $1 তথ্য"
+  },
+  "optionsProviderHidden": {
+    "message": "পপআপে লুকানো"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "পপআপে $1 দেখান"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1-এর ব্যবহারের তথ্য"
+  },
+  "optionsMetricSession": {
+    "message": "সেশন ব্যবহার"
+  },
+  "optionsMetricWeekly": {
+    "message": "সাপ্তাহিক ব্যবহার"
+  },
+  "optionsMetricModels": {
+    "message": "মডেল অনুযায়ী বিভাজন"
+  },
+  "optionsMetricReset": {
+    "message": "রিসেটের সময়"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "উপলব্ধ রিসেট"
+  },
+  "optionsMetricPlan": {
+    "message": "প্ল্যান"
+  },
+  "optionsMetricSummary": {
+    "message": "ব্যালেন্স / সারসংক্ষেপ"
+  },
+  "optionsMetricBalance": {
+    "message": "ব্যালেন্স"
+  },
+  "optionsBadgeTitle": {
+    "message": "আইকনের রেঞ্জ"
+  },
+  "optionsBadgeDescription": {
+    "message": "এই উৎসের ভিত্তিতে এক্সটেনশনের আইকন ১০% ধাপে বদলায়।"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "আইকনের উৎস"
+  },
+  "optionsBadgeHighest": {
+    "message": "দৃশ্যমান প্রোভাইডারদের সর্বোচ্চ"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "দেখানো কার্ডগুলোর মধ্যে বর্তমান সর্বোচ্চ শতাংশ ব্যবহার করুন।"
+  },
+  "optionsBadgeSelected": {
+    "message": "নির্বাচিত প্রোভাইডার"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "অন্য কার্ড দেখা যাক বা না যাক, একটি প্রোভাইডার ব্যবহার করুন।"
+  },
+  "optionsBadgeWindow": {
+    "message": "ব্যবহারের উইন্ডো"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "সেশন"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "সাপ্তাহিক"
+  },
+  "optionsBadgeProvider": {
+    "message": "প্রোভাইডার"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "এই প্রোভাইডার পপআপে লুকানো, তবে এর আইকন রেঞ্জ সক্রিয় থাকে।"
+  },
+  "optionsBadgeSteps": {
+    "message": "টুলবার আইকনের ধাপ"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "নিকটতম ১০%-এ নিচের দিকে গোল করা"
+  },
+  "optionsOverlaysTitle": {
+    "message": "পেজ ওভারলে"
+  },
+  "optionsOverlaysDescription": {
+    "message": "মেসেজ বক্সের পাশে ভাঁজযোগ্য ব্যবহারের ক্যাপসুল দেখান।"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1-এর পেজ ওভারলে চালু করুন"
+  },
+  "optionsResetTitle": {
+    "message": "ডিফল্টে রিসেট"
+  },
+  "optionsResetDescription": {
+    "message": "এই পেজের সব পছন্দ ফিরিয়ে আনে। এটি ফেরানো যাবে না।"
+  },
+  "optionsResetAction": {
+    "message": "ডিফল্ট ফেরান"
+  },
+  "optionsResetConfirm": {
+    "message": "নিশ্চিত করতে আবার ক্লিক করুন"
+  },
+  "planUsage": {
+    "message": "প্ল্যানের ব্যবহার"
+  },
+  "tokenPlan": {
+    "message": "টোকেন প্ল্যান"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker সেটিংস"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: giới hạn Claude và Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Theo dõi giới hạn phiên và hằng tuần của Claude và ChatGPT (Codex) trong cửa sổ bật lên và lớp phủ trên trang."
+  },
+  "popupTitle": {
+    "message": "Mức dùng"
+  },
+  "refreshUsage": {
+    "message": "Làm mới mức dùng"
+  },
+  "refreshUsageLimits": {
+    "message": "Làm mới giới hạn"
+  },
+  "refreshErrorPrefix": {
+    "message": "Không làm mới được"
+  },
+  "refreshFailed": {
+    "message": "Làm mới thất bại"
+  },
+  "availableResetsLabel": {
+    "message": "Lần đặt lại khả dụng · $1"
+  },
+  "loadingSnapshot": {
+    "message": "đang tải"
+  },
+  "notConnected": {
+    "message": "chưa kết nối"
+  },
+  "updated": {
+    "message": "cập nhật $1"
+  },
+  "refreshing": {
+    "message": "đang làm mới..."
+  },
+  "waitingForSnapshot": {
+    "message": "đang chờ dữ liệu"
+  },
+  "sessionLimit": {
+    "message": "Phiên · 5 giờ"
+  },
+  "weeklyLimit": {
+    "message": "Tuần · 7 ngày"
+  },
+  "planLabel": {
+    "message": "Gói · $1"
+  },
+  "resetsLabel": {
+    "message": "đặt lại sau $1"
+  },
+  "nextResetLabel": {
+    "message": "đặt lại sau $1"
+  },
+  "showLimits": {
+    "message": "Hiện giới hạn"
+  },
+  "hideLimits": {
+    "message": "Ẩn giới hạn"
+  },
+  "emptyClaude": {
+    "message": "Chưa có dữ liệu. Mở claude.ai khi đã đăng nhập rồi làm mới."
+  },
+  "emptyCodex": {
+    "message": "Chưa có dữ liệu. Mở chatgpt.com khi đã đăng nhập rồi làm mới."
+  },
+  "emptyMiniMax": {
+    "message": "Chưa có dữ liệu. Mở platform.minimax.io khi đã đăng nhập rồi làm mới."
+  },
+  "emptyKimi": {
+    "message": "Chưa có dữ liệu. Mở kimi.com/code khi đã đăng nhập rồi làm mới."
+  },
+  "emptyCursor": {
+    "message": "Chưa có dữ liệu. Mở cursor.com khi đã đăng nhập rồi làm mới."
+  },
+  "emptyMiMo": {
+    "message": "Chưa có dữ liệu. Mở platform.xiaomimimo.com khi đã đăng nhập rồi làm mới."
+  },
+  "emptyOverlay": {
+    "message": "Chưa có dữ liệu. Mở cửa sổ bật lên rồi làm mới."
+  },
+  "sourceCode": {
+    "message": "Mã nguồn"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "không rõ"
+  },
+  "timeNow": {
+    "message": "bây giờ"
+  },
+  "timeJustNow": {
+    "message": "vừa xong"
+  },
+  "timeAgo": {
+    "message": "$1 trước"
+  },
+  "timeDayShort": {
+    "message": "n"
+  },
+  "timeHourShort": {
+    "message": "g"
+  },
+  "timeMinuteShort": {
+    "message": "p"
+  },
+  "optionsSaved": {
+    "message": "Đã lưu mọi thay đổi"
+  },
+  "optionsSaving": {
+    "message": "Đang lưu…"
+  },
+  "optionsSaveError": {
+    "message": "Không lưu được"
+  },
+  "optionsSkip": {
+    "message": "Tới phần cài đặt"
+  },
+  "optionsLoading": {
+    "message": "Đang tải cài đặt…"
+  },
+  "optionsNavLabel": {
+    "message": "Mục cài đặt"
+  },
+  "optionsNavLayout": {
+    "message": "Bố cục"
+  },
+  "optionsNavProviders": {
+    "message": "Nhà cung cấp"
+  },
+  "optionsNavBadge": {
+    "message": "Biểu tượng thanh công cụ"
+  },
+  "optionsNavOverlays": {
+    "message": "Lớp phủ trên trang"
+  },
+  "optionsLayoutTitle": {
+    "message": "Bố cục cửa sổ bật lên"
+  },
+  "optionsLayoutDescription": {
+    "message": "Chọn cách sắp xếp các thẻ nhà cung cấp đang hiện."
+  },
+  "optionsLayoutSingle": {
+    "message": "Một cột"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Thẻ rộng hết cỡ cho mỗi nhà cung cấp."
+  },
+  "optionsLayoutGrid": {
+    "message": "Hai cột"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Tổng quan gọn với hai thẻ mỗi hàng."
+  },
+  "optionsProvidersTitle": {
+    "message": "Nhà cung cấp"
+  },
+  "optionsProvidersDescription": {
+    "message": "Ẩn một thẻ hoặc chọn thông tin nó hiển thị. Dữ liệu không có sẽ tự động ẩn."
+  },
+  "optionsProvidersShown": {
+    "message": "hiện $1 trong $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 trong $2 mục"
+  },
+  "optionsProviderHidden": {
+    "message": "Đang ẩn trong cửa sổ bật lên"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Hiện $1 trong cửa sổ bật lên"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Chi tiết mức dùng của $1"
+  },
+  "optionsMetricSession": {
+    "message": "Mức dùng theo phiên"
+  },
+  "optionsMetricWeekly": {
+    "message": "Mức dùng theo tuần"
+  },
+  "optionsMetricModels": {
+    "message": "Phân tách theo mô hình"
+  },
+  "optionsMetricReset": {
+    "message": "Thời điểm đặt lại"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Lần đặt lại khả dụng"
+  },
+  "optionsMetricPlan": {
+    "message": "Gói"
+  },
+  "optionsMetricSummary": {
+    "message": "Số dư / tóm tắt"
+  },
+  "optionsMetricBalance": {
+    "message": "Số dư"
+  },
+  "optionsBadgeTitle": {
+    "message": "Dải biểu tượng"
+  },
+  "optionsBadgeDescription": {
+    "message": "Biểu tượng tiện ích đổi theo từng mức 10% dựa trên nguồn này."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Nguồn biểu tượng"
+  },
+  "optionsBadgeHighest": {
+    "message": "Cao nhất trong các nhà cung cấp đang hiện"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Dùng phần trăm hiện tại lớn nhất trong các thẻ đang hiển thị."
+  },
+  "optionsBadgeSelected": {
+    "message": "Nhà cung cấp đã chọn"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Dùng một nhà cung cấp bất kể các thẻ khác có hiện hay không."
+  },
+  "optionsBadgeWindow": {
+    "message": "Khung mức dùng"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Phiên"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Tuần"
+  },
+  "optionsBadgeProvider": {
+    "message": "Nhà cung cấp"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Nhà cung cấp này đang ẩn trong cửa sổ bật lên, nhưng dải biểu tượng vẫn hoạt động."
+  },
+  "optionsBadgeSteps": {
+    "message": "Các mức biểu tượng"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "làm tròn xuống 10% gần nhất"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Lớp phủ trên trang"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Hiện viên nang mức dùng có thể thu gọn cạnh ô soạn tin."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Bật lớp phủ $1 trên trang"
+  },
+  "optionsResetTitle": {
+    "message": "Đặt lại mặc định"
+  },
+  "optionsResetDescription": {
+    "message": "Khôi phục mọi tùy chọn trên trang này. Không thể hoàn tác."
+  },
+  "optionsResetAction": {
+    "message": "Đặt lại mặc định"
+  },
+  "optionsResetConfirm": {
+    "message": "Nhấp lần nữa để xác nhận"
+  },
+  "planUsage": {
+    "message": "Mức dùng của gói"
+  },
+  "tokenPlan": {
+    "message": "Gói token"
+  },
+  "optionsTitle": {
+    "message": "Cài đặt AI Usage Tracker"
+  }
+}

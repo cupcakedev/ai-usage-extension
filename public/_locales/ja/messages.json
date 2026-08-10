@@ -62,9 +62,6 @@
   "hideLimits": {
     "message": "上限を非表示"
   },
-  "limitsTab": {
-    "message": "上限"
-  },
   "emptyClaude": {
     "message": "まだデータがありません。ログイン済みの claude.ai を開いて更新してください。"
   },

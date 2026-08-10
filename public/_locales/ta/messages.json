@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude மற்றும் Codex வரம்புகள்"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude மற்றும் ChatGPT (Codex) அமர்வு மற்றும் வாராந்திர வரம்புகளை பாப்அப்பிலும் பக்க மேலடுக்கிலும் கண்காணிக்கவும்."
+  },
+  "popupTitle": {
+    "message": "பயன்பாடு"
+  },
+  "refreshUsage": {
+    "message": "பயன்பாட்டைப் புதுப்பி"
+  },
+  "refreshUsageLimits": {
+    "message": "வரம்புகளைப் புதுப்பி"
+  },
+  "refreshErrorPrefix": {
+    "message": "புதுப்பிக்க முடியவில்லை"
+  },
+  "refreshFailed": {
+    "message": "புதுப்பிப்பு தோல்வி"
+  },
+  "availableResetsLabel": {
+    "message": "கிடைக்கும் மீட்டமைப்புகள் · $1"
+  },
+  "loadingSnapshot": {
+    "message": "ஏற்றுகிறது"
+  },
+  "notConnected": {
+    "message": "இணைக்கப்படவில்லை"
+  },
+  "updated": {
+    "message": "புதுப்பிக்கப்பட்டது $1"
+  },
+  "refreshing": {
+    "message": "புதுப்பிக்கிறது..."
+  },
+  "waitingForSnapshot": {
+    "message": "தரவுக்காகக் காத்திருக்கிறது"
+  },
+  "sessionLimit": {
+    "message": "அமர்வு · 5 மணி"
+  },
+  "weeklyLimit": {
+    "message": "வாரம் · 7 நாள்"
+  },
+  "planLabel": {
+    "message": "திட்டம் · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 இல் மீட்டமைவு"
+  },
+  "nextResetLabel": {
+    "message": "$1 இல் மீட்டமைவு"
+  },
+  "showLimits": {
+    "message": "வரம்புகளைக் காட்டு"
+  },
+  "hideLimits": {
+    "message": "வரம்புகளை மறை"
+  },
+  "emptyClaude": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் claude.ai ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyCodex": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் chatgpt.com ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyMiniMax": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் platform.minimax.io ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyKimi": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் kimi.com/code ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyCursor": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் cursor.com ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyMiMo": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் platform.xiaomimimo.com ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyOverlay": {
+    "message": "இதுவரை தரவு இல்லை. பாப்அப்பைத் திறந்து புதுப்பிக்கவும்."
+  },
+  "sourceCode": {
+    "message": "மூலக் குறியீடு"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "தெரியவில்லை"
+  },
+  "timeNow": {
+    "message": "இப்போது"
+  },
+  "timeJustNow": {
+    "message": "இப்போதுதான்"
+  },
+  "timeAgo": {
+    "message": "$1 முன்"
+  },
+  "timeDayShort": {
+    "message": "நா"
+  },
+  "timeHourShort": {
+    "message": "ம"
+  },
+  "timeMinuteShort": {
+    "message": "நி"
+  },
+  "optionsSaved": {
+    "message": "அனைத்து மாற்றங்களும் சேமிக்கப்பட்டன"
+  },
+  "optionsSaving": {
+    "message": "சேமிக்கிறது…"
+  },
+  "optionsSaveError": {
+    "message": "சேமிக்க முடியவில்லை"
+  },
+  "optionsSkip": {
+    "message": "அமைப்புகளுக்குச் செல்"
+  },
+  "optionsLoading": {
+    "message": "அமைப்புகள் ஏற்றப்படுகின்றன…"
+  },
+  "optionsNavLabel": {
+    "message": "அமைப்புப் பிரிவுகள்"
+  },
+  "optionsNavLayout": {
+    "message": "தளவமைப்பு"
+  },
+  "optionsNavProviders": {
+    "message": "வழங்குநர்கள்"
+  },
+  "optionsNavBadge": {
+    "message": "கருவிப்பட்டை ஐகான்"
+  },
+  "optionsNavOverlays": {
+    "message": "பக்க மேலடுக்குகள்"
+  },
+  "optionsLayoutTitle": {
+    "message": "பாப்அப் தளவமைப்பு"
+  },
+  "optionsLayoutDescription": {
+    "message": "தெரியும் வழங்குநர் அட்டைகள் எப்படி அமைய வேண்டும் எனத் தேர்வுசெய்யவும்."
+  },
+  "optionsLayoutSingle": {
+    "message": "ஒரு நெடுவரிசை"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "ஒவ்வொரு வழங்குநருக்கும் முழு அகல அட்டை."
+  },
+  "optionsLayoutGrid": {
+    "message": "இரண்டு நெடுவரிசைகள்"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "வரிசைக்கு இரண்டு அட்டைகளுடன் சுருக்கமான காட்சி."
+  },
+  "optionsProvidersTitle": {
+    "message": "வழங்குநர்கள்"
+  },
+  "optionsProvidersDescription": {
+    "message": "அட்டையை மறைக்கவும் அல்லது எந்த விவரங்களைக் காட்ட வேண்டும் எனத் தேர்வுசெய்யவும். கிடைக்காத தரவு தானாக மறைக்கப்படும்."
+  },
+  "optionsProvidersShown": {
+    "message": "$2 இல் $1 காட்டப்படுகிறது"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 இல் $1 விவரங்கள்"
+  },
+  "optionsProviderHidden": {
+    "message": "பாப்அப்பில் மறைக்கப்பட்டது"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "பாப்அப்பில் $1 ஐக் காட்டு"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 பயன்பாட்டு விவரங்கள்"
+  },
+  "optionsMetricSession": {
+    "message": "அமர்வுப் பயன்பாடு"
+  },
+  "optionsMetricWeekly": {
+    "message": "வாராந்திரப் பயன்பாடு"
+  },
+  "optionsMetricModels": {
+    "message": "மாதிரி வாரியான பிரிவு"
+  },
+  "optionsMetricReset": {
+    "message": "மீட்டமைப்பு நேரம்"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "கிடைக்கும் மீட்டமைப்புகள்"
+  },
+  "optionsMetricPlan": {
+    "message": "திட்டம்"
+  },
+  "optionsMetricSummary": {
+    "message": "இருப்பு / சுருக்கம்"
+  },
+  "optionsMetricBalance": {
+    "message": "இருப்பு"
+  },
+  "optionsBadgeTitle": {
+    "message": "ஐகான் வரம்பு"
+  },
+  "optionsBadgeDescription": {
+    "message": "இந்த மூலத்தின் அடிப்படையில் நீட்டிப்பு ஐகான் 10% படிகளில் மாறும்."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "ஐகான் மூலம்"
+  },
+  "optionsBadgeHighest": {
+    "message": "தெரியும் வழங்குநர்களில் அதிகபட்சம்"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "காட்டப்படும் அட்டைகளில் தற்போதைய அதிகபட்ச சதவீதத்தைப் பயன்படுத்து."
+  },
+  "optionsBadgeSelected": {
+    "message": "தேர்ந்தெடுத்த வழங்குநர்"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "மற்ற அட்டைகள் தெரிந்தாலும் இல்லாவிட்டாலும் ஒரு வழங்குநரைப் பயன்படுத்து."
+  },
+  "optionsBadgeWindow": {
+    "message": "பயன்பாட்டுச் சாளரம்"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "அமர்வு"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "வாராந்திரம்"
+  },
+  "optionsBadgeProvider": {
+    "message": "வழங்குநர்"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "இந்த வழங்குநர் பாப்அப்பில் மறைக்கப்பட்டுள்ளது, ஆனால் அதன் ஐகான் வரம்பு செயலில் உள்ளது."
+  },
+  "optionsBadgeSteps": {
+    "message": "ஐகான் படிகள்"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "அருகிலுள்ள 10% ஆகக் குறைக்கப்படும்"
+  },
+  "optionsOverlaysTitle": {
+    "message": "பக்க மேலடுக்குகள்"
+  },
+  "optionsOverlaysDescription": {
+    "message": "செய்திப் பெட்டிக்கு அருகில் மடிக்கக்கூடிய பயன்பாட்டுக் காப்ஸ்யூலைக் காட்டு."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 பக்க மேலடுக்கை இயக்கு"
+  },
+  "optionsResetTitle": {
+    "message": "இயல்புநிலைக்கு மீட்டமை"
+  },
+  "optionsResetDescription": {
+    "message": "இந்தப் பக்கத்தின் அனைத்து விருப்பங்களையும் மீட்டமைக்கும். இதைத் திரும்பப்பெற முடியாது."
+  },
+  "optionsResetAction": {
+    "message": "இயல்புநிலை"
+  },
+  "optionsResetConfirm": {
+    "message": "உறுதிப்படுத்த மீண்டும் கிளிக் செய்"
+  },
+  "planUsage": {
+    "message": "திட்டப் பயன்பாடு"
+  },
+  "tokenPlan": {
+    "message": "டோக்கன் திட்டம்"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker அமைப்புகள்"
+  }
+}

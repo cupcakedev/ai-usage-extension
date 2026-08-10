@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: limiti za Claude i Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Pratite limite sesije i tjedna za Claude i ChatGPT (Codex) u skočnom prozoru i preklopu na stranici. Bez postavljanja."
+  },
+  "popupTitle": {
+    "message": "Potrošnja"
+  },
+  "refreshUsage": {
+    "message": "Osvježi potrošnju"
+  },
+  "refreshUsageLimits": {
+    "message": "Osvježi limite"
+  },
+  "refreshErrorPrefix": {
+    "message": "Osvježavanje nije uspjelo"
+  },
+  "refreshFailed": {
+    "message": "Osvježavanje nije uspjelo"
+  },
+  "availableResetsLabel": {
+    "message": "Dostupna resetiranja · $1"
+  },
+  "loadingSnapshot": {
+    "message": "učitavanje"
+  },
+  "notConnected": {
+    "message": "nije povezano"
+  },
+  "updated": {
+    "message": "ažurirano $1"
+  },
+  "refreshing": {
+    "message": "osvježavanje..."
+  },
+  "waitingForSnapshot": {
+    "message": "čekanje podataka"
+  },
+  "sessionLimit": {
+    "message": "Sesija · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Tjedan · 7 d"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "reset za $1"
+  },
+  "nextResetLabel": {
+    "message": "reset za $1"
+  },
+  "showLimits": {
+    "message": "Prikaži limite"
+  },
+  "hideLimits": {
+    "message": "Sakrij limite"
+  },
+  "emptyClaude": {
+    "message": "Još nema podataka. Otvorite claude.ai dok ste prijavljeni i osvježite."
+  },
+  "emptyCodex": {
+    "message": "Još nema podataka. Otvorite chatgpt.com dok ste prijavljeni i osvježite."
+  },
+  "emptyMiniMax": {
+    "message": "Još nema podataka. Otvorite platform.minimax.io dok ste prijavljeni i osvježite."
+  },
+  "emptyKimi": {
+    "message": "Još nema podataka. Otvorite kimi.com/code dok ste prijavljeni i osvježite."
+  },
+  "emptyCursor": {
+    "message": "Još nema podataka. Otvorite cursor.com dok ste prijavljeni i osvježite."
+  },
+  "emptyMiMo": {
+    "message": "Još nema podataka. Otvorite platform.xiaomimimo.com dok ste prijavljeni i osvježite."
+  },
+  "emptyOverlay": {
+    "message": "Još nema podataka. Otvorite skočni prozor i osvježite."
+  },
+  "sourceCode": {
+    "message": "Izvorni kod"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "nepoznato"
+  },
+  "timeNow": {
+    "message": "sada"
+  },
+  "timeJustNow": {
+    "message": "upravo sada"
+  },
+  "timeAgo": {
+    "message": "prije $1"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Sve promjene spremljene"
+  },
+  "optionsSaving": {
+    "message": "Spremanje…"
+  },
+  "optionsSaveError": {
+    "message": "Spremanje nije uspjelo"
+  },
+  "optionsSkip": {
+    "message": "Prijeđi na postavke"
+  },
+  "optionsLoading": {
+    "message": "Učitavanje postavki…"
+  },
+  "optionsNavLabel": {
+    "message": "Odjeljci postavki"
+  },
+  "optionsNavLayout": {
+    "message": "Raspored"
+  },
+  "optionsNavProviders": {
+    "message": "Pružatelji"
+  },
+  "optionsNavBadge": {
+    "message": "Ikona na alatnoj traci"
+  },
+  "optionsNavOverlays": {
+    "message": "Preklopi na stranici"
+  },
+  "optionsLayoutTitle": {
+    "message": "Raspored skočnog prozora"
+  },
+  "optionsLayoutDescription": {
+    "message": "Odaberite kako su raspoređene vidljive kartice pružatelja."
+  },
+  "optionsLayoutSingle": {
+    "message": "Jedan stupac"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Kartica pune širine za svakog pružatelja."
+  },
+  "optionsLayoutGrid": {
+    "message": "Dva stupca"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompaktan pregled s dvije kartice u retku."
+  },
+  "optionsProvidersTitle": {
+    "message": "Pružatelji"
+  },
+  "optionsProvidersDescription": {
+    "message": "Sakrijte karticu ili odaberite koje podatke prikazuje. Nedostupni podaci ostaju skriveni."
+  },
+  "optionsProvidersShown": {
+    "message": "prikazano $1 od $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 od $2 podataka"
+  },
+  "optionsProviderHidden": {
+    "message": "Skriveno u skočnom prozoru"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Prikaži $1 u skočnom prozoru"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Podaci o potrošnji: $1"
+  },
+  "optionsMetricSession": {
+    "message": "Potrošnja sesije"
+  },
+  "optionsMetricWeekly": {
+    "message": "Tjedna potrošnja"
+  },
+  "optionsMetricModels": {
+    "message": "Raščlamba po modelima"
+  },
+  "optionsMetricReset": {
+    "message": "Vrijeme resetiranja"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Dostupna resetiranja"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Stanje / sažetak"
+  },
+  "optionsMetricBalance": {
+    "message": "Stanje"
+  },
+  "optionsBadgeTitle": {
+    "message": "Raspon ikone"
+  },
+  "optionsBadgeDescription": {
+    "message": "Ikona proširenja mijenja se u koracima od 10 % prema ovom izvoru."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Izvor ikone"
+  },
+  "optionsBadgeHighest": {
+    "message": "Najviši među vidljivim pružateljima"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Koristi najveći trenutni postotak među prikazanim karticama."
+  },
+  "optionsBadgeSelected": {
+    "message": "Odabrani pružatelj"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Koristi jednog pružatelja bez obzira na vidljivost drugih kartica."
+  },
+  "optionsBadgeWindow": {
+    "message": "Prozor potrošnje"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesija"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Tjedan"
+  },
+  "optionsBadgeProvider": {
+    "message": "Pružatelj"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Ovaj je pružatelj skriven u skočnom prozoru, ali raspon ikone ostaje aktivan."
+  },
+  "optionsBadgeSteps": {
+    "message": "Koraci ikone"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "zaokruženo naniže na 10 %"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Preklopi na stranici"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Prikaži sklopivu kapsulu potrošnje pokraj polja za poruku."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Uključi preklop $1 na stranici"
+  },
+  "optionsResetTitle": {
+    "message": "Vrati na zadano"
+  },
+  "optionsResetDescription": {
+    "message": "Vraća sve postavke na ovoj stranici. Radnja se ne može poništiti."
+  },
+  "optionsResetAction": {
+    "message": "Vrati zadano"
+  },
+  "optionsResetConfirm": {
+    "message": "Kliknite ponovno za potvrdu"
+  },
+  "planUsage": {
+    "message": "Potrošnja plana"
+  },
+  "tokenPlan": {
+    "message": "Plan tokena"
+  },
+  "optionsTitle": {
+    "message": "Postavke AI Usage Trackera"
+  }
+}

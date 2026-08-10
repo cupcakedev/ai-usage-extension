@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: όρια Claude και Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Παρακολουθήστε τα όρια συνεδρίας και εβδομάδας για Claude και ChatGPT (Codex) σε αναδυόμενο παράθυρο και επικάλυψη."
+  },
+  "popupTitle": {
+    "message": "Χρήση"
+  },
+  "refreshUsage": {
+    "message": "Ανανέωση χρήσης"
+  },
+  "refreshUsageLimits": {
+    "message": "Ανανέωση ορίων"
+  },
+  "refreshErrorPrefix": {
+    "message": "Αποτυχία ανανέωσης"
+  },
+  "refreshFailed": {
+    "message": "Η ανανέωση απέτυχε"
+  },
+  "availableResetsLabel": {
+    "message": "Διαθέσιμες επαναφορές · $1"
+  },
+  "loadingSnapshot": {
+    "message": "φόρτωση"
+  },
+  "notConnected": {
+    "message": "χωρίς σύνδεση"
+  },
+  "updated": {
+    "message": "ενημερώθηκε $1"
+  },
+  "refreshing": {
+    "message": "ανανέωση..."
+  },
+  "waitingForSnapshot": {
+    "message": "αναμονή δεδομένων"
+  },
+  "sessionLimit": {
+    "message": "Συνεδρία · 5 ώ"
+  },
+  "weeklyLimit": {
+    "message": "Εβδομάδα · 7 ημ"
+  },
+  "planLabel": {
+    "message": "Πλάνο · $1"
+  },
+  "resetsLabel": {
+    "message": "επαναφορά σε $1"
+  },
+  "nextResetLabel": {
+    "message": "επαναφορά σε $1"
+  },
+  "showLimits": {
+    "message": "Εμφάνιση ορίων"
+  },
+  "hideLimits": {
+    "message": "Απόκρυψη ορίων"
+  },
+  "emptyClaude": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το claude.ai συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyCodex": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το chatgpt.com συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyMiniMax": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το platform.minimax.io συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyKimi": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το kimi.com/code συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyCursor": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το cursor.com συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyMiMo": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το platform.xiaomimimo.com συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyOverlay": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το αναδυόμενο παράθυρο και ανανεώστε."
+  },
+  "sourceCode": {
+    "message": "Πηγαίος κώδικας"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "άγνωστο"
+  },
+  "timeNow": {
+    "message": "τώρα"
+  },
+  "timeJustNow": {
+    "message": "μόλις τώρα"
+  },
+  "timeAgo": {
+    "message": "$1 πριν"
+  },
+  "timeDayShort": {
+    "message": "ημ"
+  },
+  "timeHourShort": {
+    "message": "ώ"
+  },
+  "timeMinuteShort": {
+    "message": "λ"
+  },
+  "optionsSaved": {
+    "message": "Όλες οι αλλαγές αποθηκεύτηκαν"
+  },
+  "optionsSaving": {
+    "message": "Αποθήκευση…"
+  },
+  "optionsSaveError": {
+    "message": "Αποτυχία αποθήκευσης"
+  },
+  "optionsSkip": {
+    "message": "Μετάβαση στις ρυθμίσεις"
+  },
+  "optionsLoading": {
+    "message": "Φόρτωση ρυθμίσεων…"
+  },
+  "optionsNavLabel": {
+    "message": "Ενότητες ρυθμίσεων"
+  },
+  "optionsNavLayout": {
+    "message": "Διάταξη"
+  },
+  "optionsNavProviders": {
+    "message": "Πάροχοι"
+  },
+  "optionsNavBadge": {
+    "message": "Εικονίδιο γραμμής"
+  },
+  "optionsNavOverlays": {
+    "message": "Επικαλύψεις στη σελίδα"
+  },
+  "optionsLayoutTitle": {
+    "message": "Διάταξη αναδυόμενου"
+  },
+  "optionsLayoutDescription": {
+    "message": "Επιλέξτε πώς διατάσσονται οι ορατές κάρτες παρόχων."
+  },
+  "optionsLayoutSingle": {
+    "message": "Μία στήλη"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Κάρτα πλήρους πλάτους για κάθε πάροχο."
+  },
+  "optionsLayoutGrid": {
+    "message": "Δύο στήλες"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Συμπαγής εικόνα με δύο κάρτες ανά σειρά."
+  },
+  "optionsProvidersTitle": {
+    "message": "Πάροχοι"
+  },
+  "optionsProvidersDescription": {
+    "message": "Κρύψτε μια κάρτα ή επιλέξτε ποια στοιχεία δείχνει. Τα μη διαθέσιμα δεδομένα κρύβονται αυτόματα."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 από $2 εμφανίζονται"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 από $2 στοιχεία"
+  },
+  "optionsProviderHidden": {
+    "message": "Κρυφό στο αναδυόμενο"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Εμφάνιση $1 στο αναδυόμενο"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Στοιχεία χρήσης $1"
+  },
+  "optionsMetricSession": {
+    "message": "Χρήση συνεδρίας"
+  },
+  "optionsMetricWeekly": {
+    "message": "Εβδομαδιαία χρήση"
+  },
+  "optionsMetricModels": {
+    "message": "Ανάλυση κατά μοντέλο"
+  },
+  "optionsMetricReset": {
+    "message": "Ώρα επαναφοράς"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Διαθέσιμες επαναφορές"
+  },
+  "optionsMetricPlan": {
+    "message": "Πλάνο"
+  },
+  "optionsMetricSummary": {
+    "message": "Υπόλοιπο / σύνοψη"
+  },
+  "optionsMetricBalance": {
+    "message": "Υπόλοιπο"
+  },
+  "optionsBadgeTitle": {
+    "message": "Εύρος εικονιδίου"
+  },
+  "optionsBadgeDescription": {
+    "message": "Το εικονίδιο αλλάζει ανά 10% βάσει αυτής της πηγής."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Πηγή εικονιδίου"
+  },
+  "optionsBadgeHighest": {
+    "message": "Υψηλότερο των ορατών παρόχων"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Χρήση του μεγαλύτερου τρέχοντος ποσοστού από τις εμφανιζόμενες κάρτες."
+  },
+  "optionsBadgeSelected": {
+    "message": "Επιλεγμένος πάροχος"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Χρήση ενός παρόχου ανεξάρτητα από την ορατότητα των άλλων καρτών."
+  },
+  "optionsBadgeWindow": {
+    "message": "Παράθυρο χρήσης"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Συνεδρία"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Εβδομάδα"
+  },
+  "optionsBadgeProvider": {
+    "message": "Πάροχος"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Ο πάροχος είναι κρυμμένος στο αναδυόμενο, αλλά το εύρος του εικονιδίου παραμένει ενεργό."
+  },
+  "optionsBadgeSteps": {
+    "message": "Βήματα εικονιδίου"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "στρογγυλοποίηση προς τα κάτω στο 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Επικαλύψεις στη σελίδα"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Εμφάνιση της αναδιπλούμενης κάψουλας χρήσης δίπλα στο πεδίο μηνύματος."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Ενεργοποίηση επικάλυψης $1 στη σελίδα"
+  },
+  "optionsResetTitle": {
+    "message": "Επαναφορά προεπιλογών"
+  },
+  "optionsResetDescription": {
+    "message": "Επαναφέρει όλες τις προτιμήσεις αυτής της σελίδας. Δεν αναστρέφεται."
+  },
+  "optionsResetAction": {
+    "message": "Επαναφορά"
+  },
+  "optionsResetConfirm": {
+    "message": "Κάντε κλικ ξανά για επιβεβαίωση"
+  },
+  "planUsage": {
+    "message": "Χρήση πλάνου"
+  },
+  "tokenPlan": {
+    "message": "Πλάνο tokens"
+  },
+  "optionsTitle": {
+    "message": "Ρυθμίσεις AI Usage Tracker"
+  }
+}

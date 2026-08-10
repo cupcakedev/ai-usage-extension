@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude·Codex 사용 한도"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude와 ChatGPT(Codex)의 세션·주간 사용 한도를 팝업과 페이지 오버레이에서 확인하세요. 설정 불필요."
+  },
+  "popupTitle": {
+    "message": "사용량"
+  },
+  "refreshUsage": {
+    "message": "사용량 새로고침"
+  },
+  "refreshUsageLimits": {
+    "message": "한도 새로고침"
+  },
+  "refreshErrorPrefix": {
+    "message": "새로고침하지 못했습니다"
+  },
+  "refreshFailed": {
+    "message": "새로고침 실패"
+  },
+  "availableResetsLabel": {
+    "message": "사용 가능한 초기화 · $1"
+  },
+  "loadingSnapshot": {
+    "message": "불러오는 중"
+  },
+  "notConnected": {
+    "message": "연결되지 않음"
+  },
+  "updated": {
+    "message": "$1 업데이트"
+  },
+  "refreshing": {
+    "message": "새로고침 중..."
+  },
+  "waitingForSnapshot": {
+    "message": "데이터 대기 중"
+  },
+  "sessionLimit": {
+    "message": "세션 · 5시간"
+  },
+  "weeklyLimit": {
+    "message": "주간 · 7일"
+  },
+  "planLabel": {
+    "message": "요금제 · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 후 초기화"
+  },
+  "nextResetLabel": {
+    "message": "$1 후 초기화"
+  },
+  "showLimits": {
+    "message": "한도 표시"
+  },
+  "hideLimits": {
+    "message": "한도 숨기기"
+  },
+  "emptyClaude": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 claude.ai를 열고 새로고침하세요."
+  },
+  "emptyCodex": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 chatgpt.com을 열고 새로고침하세요."
+  },
+  "emptyMiniMax": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 platform.minimax.io를 열고 새로고침하세요."
+  },
+  "emptyKimi": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 kimi.com/code를 열고 새로고침하세요."
+  },
+  "emptyCursor": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 cursor.com을 열고 새로고침하세요."
+  },
+  "emptyMiMo": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 platform.xiaomimimo.com을 열고 새로고침하세요."
+  },
+  "emptyOverlay": {
+    "message": "아직 데이터가 없습니다. 팝업을 열고 새로고침하세요."
+  },
+  "sourceCode": {
+    "message": "소스 코드"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "알 수 없음"
+  },
+  "timeNow": {
+    "message": "지금"
+  },
+  "timeJustNow": {
+    "message": "방금"
+  },
+  "timeAgo": {
+    "message": "$1 전"
+  },
+  "timeDayShort": {
+    "message": "일"
+  },
+  "timeHourShort": {
+    "message": "시간"
+  },
+  "timeMinuteShort": {
+    "message": "분"
+  },
+  "optionsSaved": {
+    "message": "모든 변경사항 저장됨"
+  },
+  "optionsSaving": {
+    "message": "저장 중…"
+  },
+  "optionsSaveError": {
+    "message": "저장하지 못했습니다"
+  },
+  "optionsSkip": {
+    "message": "설정으로 이동"
+  },
+  "optionsLoading": {
+    "message": "설정 불러오는 중…"
+  },
+  "optionsNavLabel": {
+    "message": "설정 섹션"
+  },
+  "optionsNavLayout": {
+    "message": "레이아웃"
+  },
+  "optionsNavProviders": {
+    "message": "제공업체"
+  },
+  "optionsNavBadge": {
+    "message": "툴바 아이콘"
+  },
+  "optionsNavOverlays": {
+    "message": "페이지 오버레이"
+  },
+  "optionsLayoutTitle": {
+    "message": "팝업 레이아웃"
+  },
+  "optionsLayoutDescription": {
+    "message": "표시된 제공업체 카드의 배치 방식을 선택하세요."
+  },
+  "optionsLayoutSingle": {
+    "message": "1열"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "제공업체마다 전체 너비 카드."
+  },
+  "optionsLayoutGrid": {
+    "message": "2열"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "한 줄에 카드 두 개인 간결한 보기."
+  },
+  "optionsProvidersTitle": {
+    "message": "제공업체"
+  },
+  "optionsProvidersDescription": {
+    "message": "카드를 숨기거나 표시할 항목을 선택하세요. 제공되지 않는 데이터는 자동으로 숨겨집니다."
+  },
+  "optionsProvidersShown": {
+    "message": "$2개 중 $1개 표시"
+  },
+  "optionsProviderDetails": {
+    "message": "$2개 중 $1개 항목"
+  },
+  "optionsProviderHidden": {
+    "message": "팝업에서 숨김"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "팝업에 $1 표시"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 사용량 항목"
+  },
+  "optionsMetricSession": {
+    "message": "세션 사용량"
+  },
+  "optionsMetricWeekly": {
+    "message": "주간 사용량"
+  },
+  "optionsMetricModels": {
+    "message": "모델별 분석"
+  },
+  "optionsMetricReset": {
+    "message": "초기화 시각"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "사용 가능한 초기화"
+  },
+  "optionsMetricPlan": {
+    "message": "요금제"
+  },
+  "optionsMetricSummary": {
+    "message": "잔액 / 요약"
+  },
+  "optionsMetricBalance": {
+    "message": "잔액"
+  },
+  "optionsBadgeTitle": {
+    "message": "아이콘 구간"
+  },
+  "optionsBadgeDescription": {
+    "message": "확장 프로그램 아이콘이 이 기준에 따라 10% 단위로 바뀝니다."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "아이콘 기준"
+  },
+  "optionsBadgeHighest": {
+    "message": "표시된 제공업체 중 최고"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "표시된 카드 중 현재 가장 높은 비율을 사용합니다."
+  },
+  "optionsBadgeSelected": {
+    "message": "선택한 제공업체"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "다른 카드의 표시 여부와 상관없이 한 제공업체를 사용합니다."
+  },
+  "optionsBadgeWindow": {
+    "message": "사용 구간"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "세션"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "주간"
+  },
+  "optionsBadgeProvider": {
+    "message": "제공업체"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "이 제공업체는 팝업에서 숨겨져 있지만 아이콘 구간은 계속 적용됩니다."
+  },
+  "optionsBadgeSteps": {
+    "message": "툴바 아이콘 단계"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "10% 단위로 내림"
+  },
+  "optionsOverlaysTitle": {
+    "message": "페이지 오버레이"
+  },
+  "optionsOverlaysDescription": {
+    "message": "입력창 옆에 접을 수 있는 사용량 캡슐을 표시합니다."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 페이지 오버레이 켜기"
+  },
+  "optionsResetTitle": {
+    "message": "기본값으로 초기화"
+  },
+  "optionsResetDescription": {
+    "message": "이 페이지의 모든 설정을 되돌립니다. 되돌릴 수 없습니다."
+  },
+  "optionsResetAction": {
+    "message": "기본값 복원"
+  },
+  "optionsResetConfirm": {
+    "message": "확인하려면 다시 클릭"
+  },
+  "planUsage": {
+    "message": "요금제 사용량"
+  },
+  "tokenPlan": {
+    "message": "토큰 요금제"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker 설정"
+  }
+}

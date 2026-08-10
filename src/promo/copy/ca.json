@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Capacitat d’IA",
+  "shots": {
+    "popup": {
+      "eyebrow": "Una sola finestra",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "i Xiaomi MiMo en una sola pantalla."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Capa a la pàgina",
+      "sub": [
+        "Límits de sessió i setmana just al costat",
+        "del camp de missatge de Claude i ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "La teva configuració",
+      "sub": [
+        "Tria els proveïdors, la disposició i quines",
+        "dades mostra cada targeta."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Icona i capes",
+      "sub": [
+        "La icona segueix el consum més alt en trams",
+        "del 10%, sense obrir la finestra."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Sense configurar res",
+      "sub": [
+        "Sense claus API, sense inicis de sessió nous.",
+        "Tot es queda al teu navegador."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Sis proveïdors, una finestra: límits de sessió i setmana,",
+      "icona a la barra, capes a la pàgina i control total."
+    ]
+  },
+  "tile": {
+    "sub": "Sis proveïdors. Una finestra."
+  },
+  "highlights": {
+    "title": "Sis proveïdors, zero configuració",
+    "items": [
+      {
+        "title": "Sense claus API ni inicis de sessió extra",
+        "body": "Llegeix les sessions on el navegador ja té la sessió iniciada."
+      },
+      {
+        "title": "Res no surt del teu navegador",
+        "body": "Sense servidors, comptes ni telemetria: tot es queda en local."
+      },
+      {
+        "title": "S’actualitza cada 5 minuts",
+        "body": "La sincronització en segon pla ho manté tot al dia."
+      }
+    ]
+  }
+}

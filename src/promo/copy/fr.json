@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Capacité IA",
+  "shots": {
+    "popup": {
+      "eyebrow": "Un seul popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "et Xiaomi MiMo sur un seul écran."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Surcouche sur la page",
+      "sub": [
+        "Limites de session et hebdomadaires",
+        "à côté du champ de message."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Votre configuration",
+      "sub": [
+        "Choisissez les fournisseurs, la disposition",
+        "et les détails affichés par carte."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Icône et surcouches",
+      "sub": [
+        "L’icône suit votre consommation la plus",
+        "élevée par paliers de 10 %."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Aucune installation",
+      "sub": [
+        "Ni clé d’API, ni connexion, ni serveur.",
+        "Tout reste dans votre navigateur."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Six fournisseurs, un popup : limites de session et de semaine,",
+      "icône, surcouches sur la page et contrôle total."
+    ]
+  },
+  "tile": {
+    "sub": "Six fournisseurs. Un popup."
+  },
+  "highlights": {
+    "title": "Six fournisseurs, zéro configuration",
+    "items": [
+      {
+        "title": "Ni clé d’API, ni connexion supplémentaire",
+        "body": "Lit les sessions auxquelles votre navigateur est déjà connecté."
+      },
+      {
+        "title": "Rien ne quitte votre navigateur",
+        "body": "Aucun serveur, aucun compte, aucune télémétrie : tout reste local."
+      },
+      {
+        "title": "Se rafraîchit toutes les 5 minutes",
+        "body": "La synchronisation en arrière-plan garde tout à jour."
+      }
+    ]
+  }
+}

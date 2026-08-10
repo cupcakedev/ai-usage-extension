@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: mga limitasyon ng Claude at Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Subaybayan ang session at lingguhang limitasyon ng Claude at ChatGPT (Codex) sa popup at overlay sa pahina."
+  },
+  "popupTitle": {
+    "message": "Paggamit"
+  },
+  "refreshUsage": {
+    "message": "I-refresh ang paggamit"
+  },
+  "refreshUsageLimits": {
+    "message": "I-refresh ang mga limitasyon"
+  },
+  "refreshErrorPrefix": {
+    "message": "Hindi na-refresh"
+  },
+  "refreshFailed": {
+    "message": "Nabigo ang pag-refresh"
+  },
+  "availableResetsLabel": {
+    "message": "Available na reset · $1"
+  },
+  "loadingSnapshot": {
+    "message": "naglo-load"
+  },
+  "notConnected": {
+    "message": "hindi nakakonekta"
+  },
+  "updated": {
+    "message": "na-update $1"
+  },
+  "refreshing": {
+    "message": "nagre-refresh..."
+  },
+  "waitingForSnapshot": {
+    "message": "naghihintay ng data"
+  },
+  "sessionLimit": {
+    "message": "Session · 5 oras"
+  },
+  "weeklyLimit": {
+    "message": "Lingguhan · 7 araw"
+  },
+  "planLabel": {
+    "message": "Plano · $1"
+  },
+  "resetsLabel": {
+    "message": "magre-reset sa $1"
+  },
+  "nextResetLabel": {
+    "message": "magre-reset sa $1"
+  },
+  "showLimits": {
+    "message": "Ipakita ang limitasyon"
+  },
+  "hideLimits": {
+    "message": "Itago ang limitasyon"
+  },
+  "emptyClaude": {
+    "message": "Wala pang data. Buksan ang claude.ai habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyCodex": {
+    "message": "Wala pang data. Buksan ang chatgpt.com habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyMiniMax": {
+    "message": "Wala pang data. Buksan ang platform.minimax.io habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyKimi": {
+    "message": "Wala pang data. Buksan ang kimi.com/code habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyCursor": {
+    "message": "Wala pang data. Buksan ang cursor.com habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyMiMo": {
+    "message": "Wala pang data. Buksan ang platform.xiaomimimo.com habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyOverlay": {
+    "message": "Wala pang data. Buksan ang popup at mag-refresh."
+  },
+  "sourceCode": {
+    "message": "Source code"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "hindi alam"
+  },
+  "timeNow": {
+    "message": "ngayon"
+  },
+  "timeJustNow": {
+    "message": "kanina lang"
+  },
+  "timeAgo": {
+    "message": "$1 ang nakalipas"
+  },
+  "timeDayShort": {
+    "message": "a"
+  },
+  "timeHourShort": {
+    "message": "o"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Naka-save lahat ng pagbabago"
+  },
+  "optionsSaving": {
+    "message": "Sine-save…"
+  },
+  "optionsSaveError": {
+    "message": "Hindi na-save"
+  },
+  "optionsSkip": {
+    "message": "Pumunta sa mga setting"
+  },
+  "optionsLoading": {
+    "message": "Naglo-load ng mga setting…"
+  },
+  "optionsNavLabel": {
+    "message": "Mga seksyon ng setting"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Mga provider"
+  },
+  "optionsNavBadge": {
+    "message": "Icon sa toolbar"
+  },
+  "optionsNavOverlays": {
+    "message": "Mga overlay sa pahina"
+  },
+  "optionsLayoutTitle": {
+    "message": "Layout ng popup"
+  },
+  "optionsLayoutDescription": {
+    "message": "Piliin kung paano isasaayos ang nakikitang mga card ng provider."
+  },
+  "optionsLayoutSingle": {
+    "message": "Isang hanay"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Buong lapad na card para sa bawat provider."
+  },
+  "optionsLayoutGrid": {
+    "message": "Dalawang hanay"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Compact na tanaw na may dalawang card kada hilera."
+  },
+  "optionsProvidersTitle": {
+    "message": "Mga provider"
+  },
+  "optionsProvidersDescription": {
+    "message": "Itago ang card o piliin ang mga detalyeng ipapakita. Awtomatikong nakatago ang data na hindi available."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 sa $2 ang ipinapakita"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 sa $2 detalye"
+  },
+  "optionsProviderHidden": {
+    "message": "Nakatago sa popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Ipakita ang $1 sa popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Mga detalye ng paggamit ng $1"
+  },
+  "optionsMetricSession": {
+    "message": "Paggamit sa session"
+  },
+  "optionsMetricWeekly": {
+    "message": "Lingguhang paggamit"
+  },
+  "optionsMetricModels": {
+    "message": "Hati ayon sa modelo"
+  },
+  "optionsMetricReset": {
+    "message": "Oras ng reset"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Available na reset"
+  },
+  "optionsMetricPlan": {
+    "message": "Plano"
+  },
+  "optionsMetricSummary": {
+    "message": "Balanse / buod"
+  },
+  "optionsMetricBalance": {
+    "message": "Balanse"
+  },
+  "optionsBadgeTitle": {
+    "message": "Saklaw ng icon"
+  },
+  "optionsBadgeDescription": {
+    "message": "Nagbabago ang icon ng extension kada 10% batay sa pinagmulang ito."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Pinagmulan ng icon"
+  },
+  "optionsBadgeHighest": {
+    "message": "Pinakamataas sa mga nakikitang provider"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Gamitin ang pinakamataas na kasalukuyang porsyento sa mga ipinapakitang card."
+  },
+  "optionsBadgeSelected": {
+    "message": "Piniling provider"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Gumamit ng isang provider anuman ang nakikitang ibang card."
+  },
+  "optionsBadgeWindow": {
+    "message": "Window ng paggamit"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Session"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Lingguhan"
+  },
+  "optionsBadgeProvider": {
+    "message": "Provider"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Nakatago sa popup ang provider na ito, pero aktibo pa rin ang saklaw ng icon nito."
+  },
+  "optionsBadgeSteps": {
+    "message": "Mga hakbang ng icon"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "binababa sa pinakamalapit na 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Mga overlay sa pahina"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Ipakita ang natitiklop na capsule ng paggamit sa tabi ng kahon ng mensahe."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "I-on ang overlay ng $1 sa pahina"
+  },
+  "optionsResetTitle": {
+    "message": "I-reset sa default"
+  },
+  "optionsResetDescription": {
+    "message": "Ibinabalik ang lahat ng kagustuhan sa pahinang ito. Hindi ito mababawi."
+  },
+  "optionsResetAction": {
+    "message": "I-reset"
+  },
+  "optionsResetConfirm": {
+    "message": "I-click ulit para kumpirmahin"
+  },
+  "planUsage": {
+    "message": "Paggamit ng plano"
+  },
+  "tokenPlan": {
+    "message": "Planong token"
+  },
+  "optionsTitle": {
+    "message": "Mga setting ng AI Usage Tracker"
+  }
+}

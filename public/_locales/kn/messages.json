@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude ಮತ್ತು Codex ಮಿತಿಗಳು"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude ಮತ್ತು ChatGPT (Codex) ಸೆಷನ್ ಹಾಗೂ ವಾರದ ಮಿತಿಗಳನ್ನು ಪಾಪ್‌ಅಪ್ ಮತ್ತು ಪುಟದ ಓವರ್‌ಲೇಯಲ್ಲಿ ನೋಡಿ."
+  },
+  "popupTitle": {
+    "message": "ಬಳಕೆ"
+  },
+  "refreshUsage": {
+    "message": "ಬಳಕೆಯನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ"
+  },
+  "refreshUsageLimits": {
+    "message": "ಮಿತಿಗಳನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ"
+  },
+  "refreshErrorPrefix": {
+    "message": "ರಿಫ್ರೆಶ್ ಮಾಡಲಾಗಲಿಲ್ಲ"
+  },
+  "refreshFailed": {
+    "message": "ರಿಫ್ರೆಶ್ ವಿಫಲವಾಯಿತು"
+  },
+  "availableResetsLabel": {
+    "message": "ಲಭ್ಯ ಮರುಹೊಂದಿಕೆಗಳು · $1"
+  },
+  "loadingSnapshot": {
+    "message": "ಲೋಡ್ ಆಗುತ್ತಿದೆ"
+  },
+  "notConnected": {
+    "message": "ಸಂಪರ್ಕವಿಲ್ಲ"
+  },
+  "updated": {
+    "message": "ನವೀಕರಣ $1"
+  },
+  "refreshing": {
+    "message": "ರಿಫ್ರೆಶ್ ಆಗುತ್ತಿದೆ..."
+  },
+  "waitingForSnapshot": {
+    "message": "ಡೇಟಾಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ"
+  },
+  "sessionLimit": {
+    "message": "ಸೆಷನ್ · 5 ಗಂ"
+  },
+  "weeklyLimit": {
+    "message": "ವಾರ · 7 ದಿ"
+  },
+  "planLabel": {
+    "message": "ಯೋಜನೆ · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 ನಂತರ ಮರುಹೊಂದಿಕೆ"
+  },
+  "nextResetLabel": {
+    "message": "$1 ನಂತರ ಮರುಹೊಂದಿಕೆ"
+  },
+  "showLimits": {
+    "message": "ಮಿತಿಗಳನ್ನು ತೋರಿಸು"
+  },
+  "hideLimits": {
+    "message": "ಮಿತಿಗಳನ್ನು ಮರೆಮಾಡು"
+  },
+  "emptyClaude": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ claude.ai ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "emptyCodex": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ chatgpt.com ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "emptyMiniMax": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ platform.minimax.io ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "emptyKimi": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ kimi.com/code ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "emptyCursor": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ cursor.com ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "emptyMiMo": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ platform.xiaomimimo.com ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "emptyOverlay": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಪಾಪ್‌ಅಪ್ ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
+  "sourceCode": {
+    "message": "ಮೂಲ ಕೋಡ್"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "ಗೊತ್ತಿಲ್ಲ"
+  },
+  "timeNow": {
+    "message": "ಈಗ"
+  },
+  "timeJustNow": {
+    "message": "ಈಗಷ್ಟೇ"
+  },
+  "timeAgo": {
+    "message": "$1 ಹಿಂದೆ"
+  },
+  "timeDayShort": {
+    "message": "ದಿ"
+  },
+  "timeHourShort": {
+    "message": "ಗಂ"
+  },
+  "timeMinuteShort": {
+    "message": "ನಿ"
+  },
+  "optionsSaved": {
+    "message": "ಎಲ್ಲ ಬದಲಾವಣೆಗಳು ಉಳಿಸಲ್ಪಟ್ಟಿವೆ"
+  },
+  "optionsSaving": {
+    "message": "ಉಳಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "optionsSaveError": {
+    "message": "ಉಳಿಸಲಾಗಲಿಲ್ಲ"
+  },
+  "optionsSkip": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಹೋಗಿ"
+  },
+  "optionsLoading": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಲೋಡ್ ಆಗುತ್ತಿವೆ…"
+  },
+  "optionsNavLabel": {
+    "message": "ಸೆಟ್ಟಿಂಗ್ ವಿಭಾಗಗಳು"
+  },
+  "optionsNavLayout": {
+    "message": "ವಿನ್ಯಾಸ"
+  },
+  "optionsNavProviders": {
+    "message": "ಪೂರೈಕೆದಾರರು"
+  },
+  "optionsNavBadge": {
+    "message": "ಟೂಲ್‌ಬಾರ್ ಐಕಾನ್"
+  },
+  "optionsNavOverlays": {
+    "message": "ಪುಟದ ಓವರ್‌ಲೇಗಳು"
+  },
+  "optionsLayoutTitle": {
+    "message": "ಪಾಪ್‌ಅಪ್ ವಿನ್ಯಾಸ"
+  },
+  "optionsLayoutDescription": {
+    "message": "ಕಾಣುವ ಪೂರೈಕೆದಾರ ಕಾರ್ಡ್‌ಗಳ ಜೋಡಣೆಯನ್ನು ಆರಿಸಿ."
+  },
+  "optionsLayoutSingle": {
+    "message": "ಒಂದು ಕಾಲಂ"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "ಪ್ರತಿ ಪೂರೈಕೆದಾರರಿಗೆ ಪೂರ್ಣ ಅಗಲದ ಕಾರ್ಡ್."
+  },
+  "optionsLayoutGrid": {
+    "message": "ಎರಡು ಕಾಲಂ"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "ಸಾಲಿಗೆ ಎರಡು ಕಾರ್ಡ್‌ಗಳ ಸಂಕ್ಷಿಪ್ತ ನೋಟ."
+  },
+  "optionsProvidersTitle": {
+    "message": "ಪೂರೈಕೆದಾರರು"
+  },
+  "optionsProvidersDescription": {
+    "message": "ಕಾರ್ಡ್ ಮರೆಮಾಡಿ ಅಥವಾ ಯಾವ ವಿವರಗಳು ಕಾಣಬೇಕೆಂದು ಆರಿಸಿ. ಲಭ್ಯವಿಲ್ಲದ ಡೇಟಾ ತಾನಾಗಿಯೇ ಮರೆಯಾಗುತ್ತದೆ."
+  },
+  "optionsProvidersShown": {
+    "message": "$2 ರಲ್ಲಿ $1 ಕಾಣಿಸುತ್ತಿವೆ"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 ರಲ್ಲಿ $1 ವಿವರಗಳು"
+  },
+  "optionsProviderHidden": {
+    "message": "ಪಾಪ್‌ಅಪ್‌ನಲ್ಲಿ ಮರೆ"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "ಪಾಪ್‌ಅಪ್‌ನಲ್ಲಿ $1 ತೋರಿಸು"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 ಬಳಕೆಯ ವಿವರಗಳು"
+  },
+  "optionsMetricSession": {
+    "message": "ಸೆಷನ್ ಬಳಕೆ"
+  },
+  "optionsMetricWeekly": {
+    "message": "ವಾರದ ಬಳಕೆ"
+  },
+  "optionsMetricModels": {
+    "message": "ಮಾದರಿವಾರು ವಿಭಜನೆ"
+  },
+  "optionsMetricReset": {
+    "message": "ಮರುಹೊಂದಿಕೆ ಸಮಯ"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "ಲಭ್ಯ ಮರುಹೊಂದಿಕೆಗಳು"
+  },
+  "optionsMetricPlan": {
+    "message": "ಯೋಜನೆ"
+  },
+  "optionsMetricSummary": {
+    "message": "ಬಾಕಿ / ಸಾರಾಂಶ"
+  },
+  "optionsMetricBalance": {
+    "message": "ಬಾಕಿ"
+  },
+  "optionsBadgeTitle": {
+    "message": "ಐಕಾನ್ ವ್ಯಾಪ್ತಿ"
+  },
+  "optionsBadgeDescription": {
+    "message": "ಈ ಮೂಲದ ಆಧಾರದಲ್ಲಿ ವಿಸ್ತರಣೆಯ ಐಕಾನ್ 10% ಹಂತಗಳಲ್ಲಿ ಬದಲಾಗುತ್ತದೆ."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "ಐಕಾನ್ ಮೂಲ"
+  },
+  "optionsBadgeHighest": {
+    "message": "ಕಾಣುವ ಪೂರೈಕೆದಾರರಲ್ಲಿ ಗರಿಷ್ಠ"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "ತೋರಿಸಲಾದ ಕಾರ್ಡ್‌ಗಳಲ್ಲಿ ಪ್ರಸ್ತುತ ಗರಿಷ್ಠ ಶೇಕಡಾವನ್ನು ಬಳಸಿ."
+  },
+  "optionsBadgeSelected": {
+    "message": "ಆಯ್ದ ಪೂರೈಕೆದಾರ"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "ಇತರ ಕಾರ್ಡ್‌ಗಳು ಕಾಣಲಿ ಬಿಡಲಿ, ಒಬ್ಬ ಪೂರೈಕೆದಾರರನ್ನೇ ಬಳಸಿ."
+  },
+  "optionsBadgeWindow": {
+    "message": "ಬಳಕೆಯ ಅವಧಿ"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "ಸೆಷನ್"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "ವಾರ"
+  },
+  "optionsBadgeProvider": {
+    "message": "ಪೂರೈಕೆದಾರ"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "ಈ ಪೂರೈಕೆದಾರ ಪಾಪ್‌ಅಪ್‌ನಲ್ಲಿ ಮರೆಯಾಗಿದ್ದಾರೆ, ಆದರೆ ಐಕಾನ್ ವ್ಯಾಪ್ತಿ ಸಕ್ರಿಯವಾಗಿರುತ್ತದೆ."
+  },
+  "optionsBadgeSteps": {
+    "message": "ಐಕಾನ್ ಹಂತಗಳು"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "ಹತ್ತಿರದ 10% ಗೆ ಇಳಿಸಲಾಗಿದೆ"
+  },
+  "optionsOverlaysTitle": {
+    "message": "ಪುಟದ ಓವರ್‌ಲೇಗಳು"
+  },
+  "optionsOverlaysDescription": {
+    "message": "ಸಂದೇಶ ಪೆಟ್ಟಿಗೆಯ ಪಕ್ಕದಲ್ಲಿ ಮಡಚಬಹುದಾದ ಬಳಕೆ ಕ್ಯಾಪ್ಸೂಲ್ ತೋರಿಸಿ."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 ಪುಟದ ಓವರ್‌ಲೇ ಆನ್ ಮಾಡಿ"
+  },
+  "optionsResetTitle": {
+    "message": "ಡೀಫಾಲ್ಟ್‌ಗೆ ಮರುಹೊಂದಿಸಿ"
+  },
+  "optionsResetDescription": {
+    "message": "ಈ ಪುಟದ ಎಲ್ಲ ಆದ್ಯತೆಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗದು."
+  },
+  "optionsResetAction": {
+    "message": "ಡೀಫಾಲ್ಟ್"
+  },
+  "optionsResetConfirm": {
+    "message": "ದೃಢೀಕರಿಸಲು ಮತ್ತೆ ಕ್ಲಿಕ್ ಮಾಡಿ"
+  },
+  "planUsage": {
+    "message": "ಯೋಜನೆಯ ಬಳಕೆ"
+  },
+  "tokenPlan": {
+    "message": "ಟೋಕನ್ ಯೋಜನೆ"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI kapasitesi",
+  "shots": {
+    "popup": {
+      "eyebrow": "Tek popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "ve Xiaomi MiMo tek ekranda."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Sayfa katmanı",
+      "sub": [
+        "Oturum ve haftalık limitler, Claude ile",
+        "ChatGPT’de mesaj alanının hemen yanında."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Senin ayarların",
+      "sub": [
+        "Sağlayıcıları, düzeni ve her kartın hangi",
+        "ayrıntıları göstereceğini seç."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Simge ve katmanlar",
+      "sub": [
+        "Araç çubuğu simgesi en yüksek kullanımı",
+        "%10’luk adımlarla gösterir."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Kurulum yok",
+      "sub": [
+        "API anahtarı, ek giriş ve sunucu yok.",
+        "Her şey tarayıcında kalır."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Altı sağlayıcı, tek popup: oturum ve haftalık limitler,",
+      "araç çubuğu simgesi, sayfa katmanları ve tam kontrol."
+    ]
+  },
+  "tile": {
+    "sub": "Altı sağlayıcı. Tek popup."
+  },
+  "highlights": {
+    "title": "Altı sağlayıcı, sıfır kurulum",
+    "items": [
+      {
+        "title": "API anahtarı ve ek giriş yok",
+        "body": "Tarayıcının zaten oturum açtığı hesapları okur."
+      },
+      {
+        "title": "Hiçbir şey tarayıcından çıkmaz",
+        "body": "Sunucu, hesap ve telemetri yok — tüm veri yerelde kalır."
+      },
+      {
+        "title": "Her 5 dakikada bir yenilenir",
+        "body": "Arka plan senkronu her şeyi güncel tutar."
+      }
+    ]
+  }
+}

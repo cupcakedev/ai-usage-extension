@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: limity Claude a Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Sledujte limity relácie a týždňa v Claude a ChatGPT (Codex) v popupe aj v prekrytí na stránke. Bez nastavovania."
+  },
+  "popupTitle": {
+    "message": "Využitie"
+  },
+  "refreshUsage": {
+    "message": "Obnoviť využitie"
+  },
+  "refreshUsageLimits": {
+    "message": "Obnoviť limity"
+  },
+  "refreshErrorPrefix": {
+    "message": "Nepodarilo sa obnoviť"
+  },
+  "refreshFailed": {
+    "message": "Obnovenie zlyhalo"
+  },
+  "availableResetsLabel": {
+    "message": "Dostupné resety · $1"
+  },
+  "loadingSnapshot": {
+    "message": "načítava sa"
+  },
+  "notConnected": {
+    "message": "nepripojené"
+  },
+  "updated": {
+    "message": "aktualizované $1"
+  },
+  "refreshing": {
+    "message": "obnovuje sa..."
+  },
+  "waitingForSnapshot": {
+    "message": "čaká sa na dáta"
+  },
+  "sessionLimit": {
+    "message": "Relácia · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Týždeň · 7 d"
+  },
+  "planLabel": {
+    "message": "Tarif · $1"
+  },
+  "resetsLabel": {
+    "message": "reset o $1"
+  },
+  "nextResetLabel": {
+    "message": "reset o $1"
+  },
+  "showLimits": {
+    "message": "Zobraziť limity"
+  },
+  "hideLimits": {
+    "message": "Skryť limity"
+  },
+  "emptyClaude": {
+    "message": "Zatiaľ žiadne dáta. Otvorte claude.ai prihlásení a obnovte."
+  },
+  "emptyCodex": {
+    "message": "Zatiaľ žiadne dáta. Otvorte chatgpt.com prihlásení a obnovte."
+  },
+  "emptyMiniMax": {
+    "message": "Zatiaľ žiadne dáta. Otvorte platform.minimax.io prihlásení a obnovte."
+  },
+  "emptyKimi": {
+    "message": "Zatiaľ žiadne dáta. Otvorte kimi.com/code prihlásení a obnovte."
+  },
+  "emptyCursor": {
+    "message": "Zatiaľ žiadne dáta. Otvorte cursor.com prihlásení a obnovte."
+  },
+  "emptyMiMo": {
+    "message": "Zatiaľ žiadne dáta. Otvorte platform.xiaomimimo.com prihlásení a obnovte."
+  },
+  "emptyOverlay": {
+    "message": "Zatiaľ žiadne dáta. Otvorte popup a obnovte."
+  },
+  "sourceCode": {
+    "message": "Zdrojový kód"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "neznáme"
+  },
+  "timeNow": {
+    "message": "teraz"
+  },
+  "timeJustNow": {
+    "message": "práve teraz"
+  },
+  "timeAgo": {
+    "message": "pred $1"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Všetky zmeny uložené"
+  },
+  "optionsSaving": {
+    "message": "Ukladá sa…"
+  },
+  "optionsSaveError": {
+    "message": "Nepodarilo sa uložiť"
+  },
+  "optionsSkip": {
+    "message": "Prejsť na nastavenia"
+  },
+  "optionsLoading": {
+    "message": "Načítavajú sa nastavenia…"
+  },
+  "optionsNavLabel": {
+    "message": "Sekcie nastavení"
+  },
+  "optionsNavLayout": {
+    "message": "Rozloženie"
+  },
+  "optionsNavProviders": {
+    "message": "Poskytovatelia"
+  },
+  "optionsNavBadge": {
+    "message": "Ikona na paneli"
+  },
+  "optionsNavOverlays": {
+    "message": "Prekrytia na stránke"
+  },
+  "optionsLayoutTitle": {
+    "message": "Rozloženie popupu"
+  },
+  "optionsLayoutDescription": {
+    "message": "Vyberte, ako usporiadať viditeľné karty poskytovateľov v popupe."
+  },
+  "optionsLayoutSingle": {
+    "message": "Jeden stĺpec"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Karta na celú šírku pre každého poskytovateľa."
+  },
+  "optionsLayoutGrid": {
+    "message": "Dva stĺpce"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompaktný prehľad s dvomi kartami v riadku."
+  },
+  "optionsProvidersTitle": {
+    "message": "Poskytovatelia"
+  },
+  "optionsProvidersDescription": {
+    "message": "Skryte kartu alebo vyberte, aké údaje zobrazuje. Nedostupné dáta sa skryjú automaticky."
+  },
+  "optionsProvidersShown": {
+    "message": "zobrazených $1 z $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 z $2 údajov"
+  },
+  "optionsProviderHidden": {
+    "message": "Skryté v popupe"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Zobraziť $1 v popupe"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Údaje o využití: $1"
+  },
+  "optionsMetricSession": {
+    "message": "Využitie relácie"
+  },
+  "optionsMetricWeekly": {
+    "message": "Týždenné využitie"
+  },
+  "optionsMetricModels": {
+    "message": "Rozpis podľa modelov"
+  },
+  "optionsMetricReset": {
+    "message": "Čas resetu"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Dostupné resety"
+  },
+  "optionsMetricPlan": {
+    "message": "Tarif"
+  },
+  "optionsMetricSummary": {
+    "message": "Zostatok / súhrn"
+  },
+  "optionsMetricBalance": {
+    "message": "Zostatok"
+  },
+  "optionsBadgeTitle": {
+    "message": "Rozsah ikony"
+  },
+  "optionsBadgeDescription": {
+    "message": "Ikona rozšírenia sa mení po 10 % podľa tohto zdroja."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Zdroj ikony"
+  },
+  "optionsBadgeHighest": {
+    "message": "Najvyšší z viditeľných poskytovateľov"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Použiť najvyššie aktuálne percento spomedzi zobrazených kariet."
+  },
+  "optionsBadgeSelected": {
+    "message": "Vybraný poskytovateľ"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Použiť jedného poskytovateľa bez ohľadu na viditeľnosť ostatných kariet."
+  },
+  "optionsBadgeWindow": {
+    "message": "Okno využitia"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Relácia"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Týždeň"
+  },
+  "optionsBadgeProvider": {
+    "message": "Poskytovateľ"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Tento poskytovateľ je v popupe skrytý, ale jeho rozsah ikony zostáva aktívny."
+  },
+  "optionsBadgeSteps": {
+    "message": "Stupne ikony na paneli"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "zaokrúhlené nadol na 10 %"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Prekrytia na stránke"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Zobraziť zbaliteľnú kapsulu s využitím vedľa poľa správy."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Zapnúť prekrytie $1 na stránke"
+  },
+  "optionsResetTitle": {
+    "message": "Obnoviť predvolené"
+  },
+  "optionsResetDescription": {
+    "message": "Obnoví všetky nastavenia na tejto stránke. Akciu nemožno vrátiť späť."
+  },
+  "optionsResetAction": {
+    "message": "Obnoviť predvolené"
+  },
+  "optionsResetConfirm": {
+    "message": "Potvrďte ďalším kliknutím"
+  },
+  "planUsage": {
+    "message": "Využitie tarifu"
+  },
+  "tokenPlan": {
+    "message": "Tokenový tarif"
+  },
+  "optionsTitle": {
+    "message": "Nastavenia AI Usage Tracker"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude, Codex പരിധികൾ"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude, ChatGPT (Codex) എന്നിവയുടെ സെഷൻ, പ്രതിവാര പരിധികൾ പോപ്പപ്പിലും പേജ് ഓവർലേയിലും കാണുക."
+  },
+  "popupTitle": {
+    "message": "ഉപയോഗം"
+  },
+  "refreshUsage": {
+    "message": "ഉപയോഗം പുതുക്കുക"
+  },
+  "refreshUsageLimits": {
+    "message": "പരിധികൾ പുതുക്കുക"
+  },
+  "refreshErrorPrefix": {
+    "message": "പുതുക്കാനായില്ല"
+  },
+  "refreshFailed": {
+    "message": "പുതുക്കൽ പരാജയപ്പെട്ടു"
+  },
+  "availableResetsLabel": {
+    "message": "ലഭ്യമായ റീസെറ്റുകൾ · $1"
+  },
+  "loadingSnapshot": {
+    "message": "ലോഡുചെയ്യുന്നു"
+  },
+  "notConnected": {
+    "message": "കണക്റ്റ് ചെയ്തിട്ടില്ല"
+  },
+  "updated": {
+    "message": "പുതുക്കി $1"
+  },
+  "refreshing": {
+    "message": "പുതുക്കുന്നു..."
+  },
+  "waitingForSnapshot": {
+    "message": "ഡാറ്റയ്ക്കായി കാത്തിരിക്കുന്നു"
+  },
+  "sessionLimit": {
+    "message": "സെഷൻ · 5 മ"
+  },
+  "weeklyLimit": {
+    "message": "ആഴ്ച · 7 ദി"
+  },
+  "planLabel": {
+    "message": "പ്ലാൻ · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 കഴിഞ്ഞ് റീസെറ്റ്"
+  },
+  "nextResetLabel": {
+    "message": "$1 കഴിഞ്ഞ് റീസെറ്റ്"
+  },
+  "showLimits": {
+    "message": "പരിധികൾ കാണിക്കുക"
+  },
+  "hideLimits": {
+    "message": "പരിധികൾ മറയ്ക്കുക"
+  },
+  "emptyClaude": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് claude.ai തുറന്ന് പുതുക്കുക."
+  },
+  "emptyCodex": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് chatgpt.com തുറന്ന് പുതുക്കുക."
+  },
+  "emptyMiniMax": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് platform.minimax.io തുറന്ന് പുതുക്കുക."
+  },
+  "emptyKimi": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് kimi.com/code തുറന്ന് പുതുക്കുക."
+  },
+  "emptyCursor": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് cursor.com തുറന്ന് പുതുക്കുക."
+  },
+  "emptyMiMo": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് platform.xiaomimimo.com തുറന്ന് പുതുക്കുക."
+  },
+  "emptyOverlay": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. പോപ്പപ്പ് തുറന്ന് പുതുക്കുക."
+  },
+  "sourceCode": {
+    "message": "സോഴ്‌സ് കോഡ്"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "അജ്ഞാതം"
+  },
+  "timeNow": {
+    "message": "ഇപ്പോൾ"
+  },
+  "timeJustNow": {
+    "message": "ഇപ്പോൾ തന്നെ"
+  },
+  "timeAgo": {
+    "message": "$1 മുമ്പ്"
+  },
+  "timeDayShort": {
+    "message": "ദി"
+  },
+  "timeHourShort": {
+    "message": "മ"
+  },
+  "timeMinuteShort": {
+    "message": "മി"
+  },
+  "optionsSaved": {
+    "message": "എല്ലാ മാറ്റങ്ങളും സേവ് ചെയ്തു"
+  },
+  "optionsSaving": {
+    "message": "സേവ് ചെയ്യുന്നു…"
+  },
+  "optionsSaveError": {
+    "message": "സേവ് ചെയ്യാനായില്ല"
+  },
+  "optionsSkip": {
+    "message": "ക്രമീകരണങ്ങളിലേക്ക് പോകുക"
+  },
+  "optionsLoading": {
+    "message": "ക്രമീകരണങ്ങൾ ലോഡുചെയ്യുന്നു…"
+  },
+  "optionsNavLabel": {
+    "message": "ക്രമീകരണ വിഭാഗങ്ങൾ"
+  },
+  "optionsNavLayout": {
+    "message": "ലേഔട്ട്"
+  },
+  "optionsNavProviders": {
+    "message": "ദാതാക്കൾ"
+  },
+  "optionsNavBadge": {
+    "message": "ടൂൾബാർ ഐക്കൺ"
+  },
+  "optionsNavOverlays": {
+    "message": "പേജിലെ ഓവർലേകൾ"
+  },
+  "optionsLayoutTitle": {
+    "message": "പോപ്പപ്പ് ലേഔട്ട്"
+  },
+  "optionsLayoutDescription": {
+    "message": "കാണുന്ന ദാതാവ് കാർഡുകൾ എങ്ങനെ ക്രമീകരിക്കണമെന്ന് തിരഞ്ഞെടുക്കുക."
+  },
+  "optionsLayoutSingle": {
+    "message": "ഒരു കോളം"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "ഓരോ ദാതാവിനും മുഴുവൻ വീതിയുള്ള കാർഡ്."
+  },
+  "optionsLayoutGrid": {
+    "message": "രണ്ട് കോളം"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "വരിയിൽ രണ്ട് കാർഡുകളുള്ള ഒതുക്കമുള്ള കാഴ്ച."
+  },
+  "optionsProvidersTitle": {
+    "message": "ദാതാക്കൾ"
+  },
+  "optionsProvidersDescription": {
+    "message": "കാർഡ് മറയ്ക്കുക അല്ലെങ്കിൽ ഏതു വിവരങ്ങൾ കാണിക്കണമെന്ന് തിരഞ്ഞെടുക്കുക. ലഭ്യമല്ലാത്ത ഡാറ്റ സ്വയം മറയും."
+  },
+  "optionsProvidersShown": {
+    "message": "$2 ൽ $1 കാണുന്നു"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 ൽ $1 വിവരങ്ങൾ"
+  },
+  "optionsProviderHidden": {
+    "message": "പോപ്പപ്പിൽ മറച്ചിരിക്കുന്നു"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "പോപ്പപ്പിൽ $1 കാണിക്കുക"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 ഉപയോഗ വിവരങ്ങൾ"
+  },
+  "optionsMetricSession": {
+    "message": "സെഷൻ ഉപയോഗം"
+  },
+  "optionsMetricWeekly": {
+    "message": "പ്രതിവാര ഉപയോഗം"
+  },
+  "optionsMetricModels": {
+    "message": "മോഡൽ അനുസരിച്ചുള്ള വിഭജനം"
+  },
+  "optionsMetricReset": {
+    "message": "റീസെറ്റ് സമയം"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "ലഭ്യമായ റീസെറ്റുകൾ"
+  },
+  "optionsMetricPlan": {
+    "message": "പ്ലാൻ"
+  },
+  "optionsMetricSummary": {
+    "message": "ബാലൻസ് / സംഗ്രഹം"
+  },
+  "optionsMetricBalance": {
+    "message": "ബാലൻസ്"
+  },
+  "optionsBadgeTitle": {
+    "message": "ഐക്കൺ ശ്രേണി"
+  },
+  "optionsBadgeDescription": {
+    "message": "ഈ ഉറവിടം അനുസരിച്ച് എക്സ്റ്റൻഷൻ ഐക്കൺ 10% ഘട്ടങ്ങളിൽ മാറും."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "ഐക്കൺ ഉറവിടം"
+  },
+  "optionsBadgeHighest": {
+    "message": "കാണുന്ന ദാതാക്കളിൽ ഏറ്റവും ഉയർന്നത്"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "കാണിക്കുന്ന കാർഡുകളിലെ നിലവിലെ ഏറ്റവും ഉയർന്ന ശതമാനം ഉപയോഗിക്കുക."
+  },
+  "optionsBadgeSelected": {
+    "message": "തിരഞ്ഞെടുത്ത ദാതാവ്"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "മറ്റു കാർഡുകൾ കാണുന്നുണ്ടോ എന്നത് പരിഗണിക്കാതെ ഒരു ദാതാവിനെ ഉപയോഗിക്കുക."
+  },
+  "optionsBadgeWindow": {
+    "message": "ഉപയോഗ വിൻഡോ"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "സെഷൻ"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "പ്രതിവാരം"
+  },
+  "optionsBadgeProvider": {
+    "message": "ദാതാവ്"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "ഈ ദാതാവ് പോപ്പപ്പിൽ മറച്ചിരിക്കുന്നു, പക്ഷേ ഐക്കൺ ശ്രേണി സജീവമായി തുടരും."
+  },
+  "optionsBadgeSteps": {
+    "message": "ഐക്കൺ ഘട്ടങ്ങൾ"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "അടുത്ത 10% ലേക്ക് താഴ്ത്തി"
+  },
+  "optionsOverlaysTitle": {
+    "message": "പേജിലെ ഓവർലേകൾ"
+  },
+  "optionsOverlaysDescription": {
+    "message": "സന്ദേശ ബോക്സിനടുത്ത് മടക്കാവുന്ന ഉപയോഗ കാപ്സ്യൂൾ കാണിക്കുക."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 പേജ് ഓവർലേ ഓണാക്കുക"
+  },
+  "optionsResetTitle": {
+    "message": "ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ്"
+  },
+  "optionsResetDescription": {
+    "message": "ഈ പേജിലെ എല്ലാ മുൻഗണനകളും പുനഃസ്ഥാപിക്കും. ഇത് പഴയപടിയാക്കാനാവില്ല."
+  },
+  "optionsResetAction": {
+    "message": "ഡിഫോൾട്ട്"
+  },
+  "optionsResetConfirm": {
+    "message": "സ്ഥിരീകരിക്കാൻ വീണ്ടും ക്ലിക്ക് ചെയ്യുക"
+  },
+  "planUsage": {
+    "message": "പ്ലാൻ ഉപയോഗം"
+  },
+  "tokenPlan": {
+    "message": "ടോക്കൺ പ്ലാൻ"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker ക്രമീകരണങ്ങൾ"
+  }
+}

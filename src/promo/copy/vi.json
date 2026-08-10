@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Dung lượng AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Một cửa sổ",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "và Xiaomi MiMo trên cùng một màn hình."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Lớp phủ trên trang",
+      "sub": [
+        "Giới hạn phiên và tuần ngay cạnh ô soạn",
+        "tin của Claude và ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Thiết lập của bạn",
+      "sub": [
+        "Chọn nhà cung cấp, bố cục và đúng những",
+        "thông tin mỗi thẻ hiển thị."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Biểu tượng và lớp phủ",
+      "sub": [
+        "Biểu tượng bám theo mức dùng cao nhất theo",
+        "từng mức 10% — không cần mở cửa sổ."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Không cần cài đặt",
+      "sub": [
+        "Không khóa API, không đăng nhập, không máy chủ.",
+        "Mọi thứ ở lại trong trình duyệt."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Sáu nhà cung cấp, một cửa sổ: giới hạn phiên và tuần,",
+      "biểu tượng thanh công cụ, lớp phủ và toàn quyền kiểm soát."
+    ]
+  },
+  "tile": {
+    "sub": "Sáu nhà cung cấp. Một cửa sổ."
+  },
+  "highlights": {
+    "title": "Sáu nhà cung cấp, không cần cài đặt",
+    "items": [
+      {
+        "title": "Không khóa API, không đăng nhập thêm",
+        "body": "Đọc các phiên mà trình duyệt của bạn đã đăng nhập."
+      },
+      {
+        "title": "Không gì rời khỏi trình duyệt",
+        "body": "Không máy chủ, tài khoản hay đo từ xa — dữ liệu ở máy bạn."
+      },
+      {
+        "title": "Tự làm mới mỗi 5 phút",
+        "body": "Đồng bộ nền giữ mọi thứ luôn mới."
+      }
+    ]
+  }
+}

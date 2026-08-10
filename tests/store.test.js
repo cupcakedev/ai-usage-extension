@@ -31,7 +31,10 @@ const sectionBody = (markdown, heading) => {
   const start = lines.findIndex((l) => l.trim() === `## ${heading}`);
   if (start === -1) return '';
   const end = lines.findIndex((l, i) => i > start && l.startsWith('## '));
-  return lines.slice(start + 1, end === -1 ? undefined : end).join('\n').trim();
+  return lines
+    .slice(start + 1, end === -1 ? undefined : end)
+    .join('\n')
+    .trim();
 };
 
 const manifest = JSON.parse(read('manifest.json'));
@@ -40,13 +43,72 @@ const hostHeading = (host) => `host: ${host}`;
 
 const expectedPermissionHeadings = [
   ...(manifest.permissions ?? []),
-  ...((manifest.host_permissions ?? []).map(hostHeading)),
+  ...(manifest.host_permissions ?? []).map(hostHeading),
 ];
 
 const CHROME_SHORT_DESCRIPTION_MAX = 132;
 const SEO_FULL_DESCRIPTION_MIN = 600;
 const PERMISSION_RATIONALE_MIN = 60;
+// Long-form store copy is maintained for the top markets only.
 const localizedStoreLocales = ['en', 'es', 'fr', 'de', 'it', 'pt_BR', 'ru', 'ja', 'zh_CN', 'hi'];
+
+// The UI and the artwork cover every locale the Chrome Web Store supports.
+// Keep in sync with src/promo/locale.ts and scripts/promo.js.
+const supportedLocales = [
+  'am',
+  'ar',
+  'bg',
+  'bn',
+  'ca',
+  'cs',
+  'da',
+  'de',
+  'el',
+  'en',
+  'en_GB',
+  'es',
+  'es_419',
+  'et',
+  'fa',
+  'fi',
+  'fil',
+  'fr',
+  'gu',
+  'he',
+  'hi',
+  'hr',
+  'hu',
+  'id',
+  'it',
+  'ja',
+  'kn',
+  'ko',
+  'lt',
+  'lv',
+  'ml',
+  'mr',
+  'ms',
+  'nl',
+  'no',
+  'pl',
+  'pt_BR',
+  'pt_PT',
+  'ro',
+  'ru',
+  'sk',
+  'sl',
+  'sr',
+  'sv',
+  'sw',
+  'ta',
+  'te',
+  'th',
+  'tr',
+  'uk',
+  'vi',
+  'zh_CN',
+  'zh_TW',
+];
 const requiredListingHeadings = [
   'Name',
   'Short Description',
@@ -67,10 +129,7 @@ describe('store/listing.md', () => {
 
   for (const required of requiredListingHeadings) {
     it(`has the "## ${required}" section`, () => {
-      assert.ok(
-        present.has(required),
-        `${path} must contain a "## ${required}" heading`,
-      );
+      assert.ok(present.has(required), `${path} must contain a "## ${required}" heading`);
     });
   }
 
@@ -156,7 +215,7 @@ describe('extension localization', () => {
     const baseMessages = JSON.parse(read(basePath));
     const baseKeys = Object.keys(baseMessages).sort();
 
-    for (const locale of localizedStoreLocales) {
+    for (const locale of supportedLocales) {
       const path = `public/_locales/${locale}/messages.json`;
       assert.ok(existsSync(resolve(root, path)), `${path} is missing`);
 
@@ -246,7 +305,7 @@ describe('store/<locale>/promo/', () => {
     'small-tile.png',
   ];
 
-  for (const locale of localizedStoreLocales) {
+  for (const locale of supportedLocales) {
     for (const asset of localizedAssets) {
       it(`${locale} has ${asset}`, () => {
         const p = resolve(root, 'store', locale, 'promo', asset);

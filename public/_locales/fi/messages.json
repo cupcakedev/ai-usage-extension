@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Clauden ja Codexin rajat"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Seuraa Clauden ja ChatGPT:n (Codex) istunto- ja viikkorajoja ponnahdusikkunassa ja sivun peittokuvassa."
+  },
+  "popupTitle": {
+    "message": "Käyttö"
+  },
+  "refreshUsage": {
+    "message": "Päivitä käyttö"
+  },
+  "refreshUsageLimits": {
+    "message": "Päivitä rajat"
+  },
+  "refreshErrorPrefix": {
+    "message": "Päivitys ei onnistunut"
+  },
+  "refreshFailed": {
+    "message": "Päivitys epäonnistui"
+  },
+  "availableResetsLabel": {
+    "message": "Käytettävissä olevat nollaukset · $1"
+  },
+  "loadingSnapshot": {
+    "message": "ladataan"
+  },
+  "notConnected": {
+    "message": "ei yhteyttä"
+  },
+  "updated": {
+    "message": "päivitetty $1"
+  },
+  "refreshing": {
+    "message": "päivitetään..."
+  },
+  "waitingForSnapshot": {
+    "message": "odotetaan tietoja"
+  },
+  "sessionLimit": {
+    "message": "Istunto · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Viikko · 7 pv"
+  },
+  "planLabel": {
+    "message": "Tilaus · $1"
+  },
+  "resetsLabel": {
+    "message": "nollautuu $1"
+  },
+  "nextResetLabel": {
+    "message": "nollautuu $1"
+  },
+  "showLimits": {
+    "message": "Näytä rajat"
+  },
+  "hideLimits": {
+    "message": "Piilota rajat"
+  },
+  "emptyClaude": {
+    "message": "Ei vielä tietoja. Avaa claude.ai kirjautuneena ja päivitä."
+  },
+  "emptyCodex": {
+    "message": "Ei vielä tietoja. Avaa chatgpt.com kirjautuneena ja päivitä."
+  },
+  "emptyMiniMax": {
+    "message": "Ei vielä tietoja. Avaa platform.minimax.io kirjautuneena ja päivitä."
+  },
+  "emptyKimi": {
+    "message": "Ei vielä tietoja. Avaa kimi.com/code kirjautuneena ja päivitä."
+  },
+  "emptyCursor": {
+    "message": "Ei vielä tietoja. Avaa cursor.com kirjautuneena ja päivitä."
+  },
+  "emptyMiMo": {
+    "message": "Ei vielä tietoja. Avaa platform.xiaomimimo.com kirjautuneena ja päivitä."
+  },
+  "emptyOverlay": {
+    "message": "Ei vielä tietoja. Avaa ponnahdusikkuna ja päivitä."
+  },
+  "sourceCode": {
+    "message": "Lähdekoodi"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "tuntematon"
+  },
+  "timeNow": {
+    "message": "nyt"
+  },
+  "timeJustNow": {
+    "message": "juuri nyt"
+  },
+  "timeAgo": {
+    "message": "$1 sitten"
+  },
+  "timeDayShort": {
+    "message": "pv"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Kaikki muutokset tallennettu"
+  },
+  "optionsSaving": {
+    "message": "Tallennetaan…"
+  },
+  "optionsSaveError": {
+    "message": "Tallennus ei onnistunut"
+  },
+  "optionsSkip": {
+    "message": "Siirry asetuksiin"
+  },
+  "optionsLoading": {
+    "message": "Ladataan asetuksia…"
+  },
+  "optionsNavLabel": {
+    "message": "Asetusosiot"
+  },
+  "optionsNavLayout": {
+    "message": "Asettelu"
+  },
+  "optionsNavProviders": {
+    "message": "Palveluntarjoajat"
+  },
+  "optionsNavBadge": {
+    "message": "Työkalurivin kuvake"
+  },
+  "optionsNavOverlays": {
+    "message": "Peittokuvat sivulla"
+  },
+  "optionsLayoutTitle": {
+    "message": "Ponnahdusikkunan asettelu"
+  },
+  "optionsLayoutDescription": {
+    "message": "Valitse, miten näkyvät palvelukortit järjestetään."
+  },
+  "optionsLayoutSingle": {
+    "message": "Yksi sarake"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Koko leveyden kortti jokaiselle palvelulle."
+  },
+  "optionsLayoutGrid": {
+    "message": "Kaksi saraketta"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Tiivis yleiskuva, kaksi korttia rivillä."
+  },
+  "optionsProvidersTitle": {
+    "message": "Palveluntarjoajat"
+  },
+  "optionsProvidersDescription": {
+    "message": "Piilota kortti tai valitse, mitä tietoja se näyttää. Puuttuvat tiedot piilotetaan automaattisesti."
+  },
+  "optionsProvidersShown": {
+    "message": "$1/$2 näkyvissä"
+  },
+  "optionsProviderDetails": {
+    "message": "$1/$2 tietoa"
+  },
+  "optionsProviderHidden": {
+    "message": "Piilotettu ponnahdusikkunassa"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Näytä $1 ponnahdusikkunassa"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Palvelun $1 käyttötiedot"
+  },
+  "optionsMetricSession": {
+    "message": "Istunnon käyttö"
+  },
+  "optionsMetricWeekly": {
+    "message": "Viikkokäyttö"
+  },
+  "optionsMetricModels": {
+    "message": "Erittely malleittain"
+  },
+  "optionsMetricReset": {
+    "message": "Nollausaika"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Käytettävissä olevat nollaukset"
+  },
+  "optionsMetricPlan": {
+    "message": "Tilaus"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / yhteenveto"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Kuvakkeen taso"
+  },
+  "optionsBadgeDescription": {
+    "message": "Laajennuksen kuvake muuttuu 10 %:n välein tämän lähteen mukaan."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Kuvakkeen lähde"
+  },
+  "optionsBadgeHighest": {
+    "message": "Korkein näkyvistä palveluista"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Käytä suurinta nykyistä prosenttia näkyvistä korteista."
+  },
+  "optionsBadgeSelected": {
+    "message": "Valittu palvelu"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Käytä yhtä palvelua riippumatta muiden korttien näkyvyydestä."
+  },
+  "optionsBadgeWindow": {
+    "message": "Käyttöjakso"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Istunto"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Viikko"
+  },
+  "optionsBadgeProvider": {
+    "message": "Palvelu"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Palvelu on piilotettu ponnahdusikkunassa, mutta sen kuvaketaso on yhä käytössä."
+  },
+  "optionsBadgeSteps": {
+    "message": "Kuvakkeen tasot"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "pyöristetty alaspäin 10 %:iin"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Peittokuvat sivulla"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Näytä kokoon taittuva käyttökapseli viestikentän vieressä."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Ota $1-peittokuva käyttöön sivulla"
+  },
+  "optionsResetTitle": {
+    "message": "Palauta oletukset"
+  },
+  "optionsResetDescription": {
+    "message": "Palauttaa kaikki tämän sivun asetukset. Toimintoa ei voi kumota."
+  },
+  "optionsResetAction": {
+    "message": "Palauta oletukset"
+  },
+  "optionsResetConfirm": {
+    "message": "Vahvista napsauttamalla uudelleen"
+  },
+  "planUsage": {
+    "message": "Tilauksen käyttö"
+  },
+  "tokenPlan": {
+    "message": "Token-tilaus"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Trackerin asetukset"
+  }
+}

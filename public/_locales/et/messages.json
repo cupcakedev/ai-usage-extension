@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude'i ja Codexi limiidid"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Jälgi Claude'i ja ChatGPT (Codex) sessiooni- ja nädalalimiite hüpikaknas ning lehe ülekattes. Ilma seadistamiseta."
+  },
+  "popupTitle": {
+    "message": "Kasutus"
+  },
+  "refreshUsage": {
+    "message": "Värskenda kasutust"
+  },
+  "refreshUsageLimits": {
+    "message": "Värskenda limiite"
+  },
+  "refreshErrorPrefix": {
+    "message": "Värskendamine ebaõnnestus"
+  },
+  "refreshFailed": {
+    "message": "Värskendamine ebaõnnestus"
+  },
+  "availableResetsLabel": {
+    "message": "Saadaolevad lähtestused · $1"
+  },
+  "loadingSnapshot": {
+    "message": "laadimine"
+  },
+  "notConnected": {
+    "message": "ühendus puudub"
+  },
+  "updated": {
+    "message": "värskendatud $1"
+  },
+  "refreshing": {
+    "message": "värskendan..."
+  },
+  "waitingForSnapshot": {
+    "message": "ootan andmeid"
+  },
+  "sessionLimit": {
+    "message": "Sessioon · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Nädal · 7 p"
+  },
+  "planLabel": {
+    "message": "Pakett · $1"
+  },
+  "resetsLabel": {
+    "message": "lähtestub $1 pärast"
+  },
+  "nextResetLabel": {
+    "message": "lähtestub $1 pärast"
+  },
+  "showLimits": {
+    "message": "Näita limiite"
+  },
+  "hideLimits": {
+    "message": "Peida limiidid"
+  },
+  "emptyClaude": {
+    "message": "Andmeid veel pole. Ava sisselogituna claude.ai ja värskenda."
+  },
+  "emptyCodex": {
+    "message": "Andmeid veel pole. Ava sisselogituna chatgpt.com ja värskenda."
+  },
+  "emptyMiniMax": {
+    "message": "Andmeid veel pole. Ava sisselogituna platform.minimax.io ja värskenda."
+  },
+  "emptyKimi": {
+    "message": "Andmeid veel pole. Ava sisselogituna kimi.com/code ja värskenda."
+  },
+  "emptyCursor": {
+    "message": "Andmeid veel pole. Ava sisselogituna cursor.com ja värskenda."
+  },
+  "emptyMiMo": {
+    "message": "Andmeid veel pole. Ava sisselogituna platform.xiaomimimo.com ja värskenda."
+  },
+  "emptyOverlay": {
+    "message": "Andmeid veel pole. Ava hüpikaken ja värskenda."
+  },
+  "sourceCode": {
+    "message": "Lähtekood"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "teadmata"
+  },
+  "timeNow": {
+    "message": "nüüd"
+  },
+  "timeJustNow": {
+    "message": "just praegu"
+  },
+  "timeAgo": {
+    "message": "$1 tagasi"
+  },
+  "timeDayShort": {
+    "message": "p"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Kõik muudatused salvestatud"
+  },
+  "optionsSaving": {
+    "message": "Salvestan…"
+  },
+  "optionsSaveError": {
+    "message": "Salvestamine ebaõnnestus"
+  },
+  "optionsSkip": {
+    "message": "Liigu seadetesse"
+  },
+  "optionsLoading": {
+    "message": "Laadin seadeid…"
+  },
+  "optionsNavLabel": {
+    "message": "Seadete jaotised"
+  },
+  "optionsNavLayout": {
+    "message": "Paigutus"
+  },
+  "optionsNavProviders": {
+    "message": "Teenusepakkujad"
+  },
+  "optionsNavBadge": {
+    "message": "Tööriistariba ikoon"
+  },
+  "optionsNavOverlays": {
+    "message": "Ülekatted lehel"
+  },
+  "optionsLayoutTitle": {
+    "message": "Hüpikakna paigutus"
+  },
+  "optionsLayoutDescription": {
+    "message": "Vali, kuidas nähtavad pakkujakaardid paigutatakse."
+  },
+  "optionsLayoutSingle": {
+    "message": "Üks veerg"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Täislaiuses kaart iga pakkuja kohta."
+  },
+  "optionsLayoutGrid": {
+    "message": "Kaks veergu"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompaktne ülevaade, kaks kaarti reas."
+  },
+  "optionsProvidersTitle": {
+    "message": "Teenusepakkujad"
+  },
+  "optionsProvidersDescription": {
+    "message": "Peida kaart või vali, milliseid andmeid see näitab. Puuduvad andmed peidetakse automaatselt."
+  },
+  "optionsProvidersShown": {
+    "message": "nähtaval $1/$2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1/$2 üksikasja"
+  },
+  "optionsProviderHidden": {
+    "message": "Peidetud hüpikaknas"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Näita $1 hüpikaknas"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 kasutusandmed"
+  },
+  "optionsMetricSession": {
+    "message": "Sessiooni kasutus"
+  },
+  "optionsMetricWeekly": {
+    "message": "Nädala kasutus"
+  },
+  "optionsMetricModels": {
+    "message": "Jaotus mudelite kaupa"
+  },
+  "optionsMetricReset": {
+    "message": "Lähtestamise aeg"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Saadaolevad lähtestused"
+  },
+  "optionsMetricPlan": {
+    "message": "Pakett"
+  },
+  "optionsMetricSummary": {
+    "message": "Jääk / kokkuvõte"
+  },
+  "optionsMetricBalance": {
+    "message": "Jääk"
+  },
+  "optionsBadgeTitle": {
+    "message": "Ikooni vahemik"
+  },
+  "optionsBadgeDescription": {
+    "message": "Laienduse ikoon muutub 10% sammudega selle allika põhjal."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Ikooni allikas"
+  },
+  "optionsBadgeHighest": {
+    "message": "Kõrgeim nähtavatest pakkujatest"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Kasuta nähtavate kaartide suurimat praegust protsenti."
+  },
+  "optionsBadgeSelected": {
+    "message": "Valitud pakkuja"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Kasuta üht pakkujat sõltumata teiste kaartide nähtavusest."
+  },
+  "optionsBadgeWindow": {
+    "message": "Kasutusaken"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sessioon"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Nädal"
+  },
+  "optionsBadgeProvider": {
+    "message": "Pakkuja"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "See pakkuja on hüpikaknas peidetud, kuid ikooni vahemik jääb aktiivseks."
+  },
+  "optionsBadgeSteps": {
+    "message": "Ikooni astmed"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "ümardatud alla 10%-ni"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Ülekatted lehel"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Näita kokkupandavat kasutuskapslit sõnumivälja kõrval."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Luba $1 ülekate lehel"
+  },
+  "optionsResetTitle": {
+    "message": "Taasta vaikeseaded"
+  },
+  "optionsResetDescription": {
+    "message": "Taastab kõik selle lehe eelistused. Seda ei saa tagasi võtta."
+  },
+  "optionsResetAction": {
+    "message": "Taasta vaikeseaded"
+  },
+  "optionsResetConfirm": {
+    "message": "Kinnitamiseks klõpsa uuesti"
+  },
+  "planUsage": {
+    "message": "Paketi kasutus"
+  },
+  "tokenPlan": {
+    "message": "Tokenipakett"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Trackeri seaded"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: limieten voor Claude en Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Volg sessie- en weeklimieten van Claude en ChatGPT (Codex) in een pop-up en overlay op de pagina. Zonder installatie."
+  },
+  "popupTitle": {
+    "message": "Verbruik"
+  },
+  "refreshUsage": {
+    "message": "Verbruik vernieuwen"
+  },
+  "refreshUsageLimits": {
+    "message": "Limieten vernieuwen"
+  },
+  "refreshErrorPrefix": {
+    "message": "Vernieuwen mislukt"
+  },
+  "refreshFailed": {
+    "message": "Vernieuwen mislukt"
+  },
+  "availableResetsLabel": {
+    "message": "Beschikbare resets · $1"
+  },
+  "loadingSnapshot": {
+    "message": "laden"
+  },
+  "notConnected": {
+    "message": "niet verbonden"
+  },
+  "updated": {
+    "message": "bijgewerkt $1"
+  },
+  "refreshing": {
+    "message": "vernieuwen..."
+  },
+  "waitingForSnapshot": {
+    "message": "wachten op gegevens"
+  },
+  "sessionLimit": {
+    "message": "Sessie · 5 u"
+  },
+  "weeklyLimit": {
+    "message": "Week · 7 d"
+  },
+  "planLabel": {
+    "message": "Abonnement · $1"
+  },
+  "resetsLabel": {
+    "message": "reset over $1"
+  },
+  "nextResetLabel": {
+    "message": "reset over $1"
+  },
+  "showLimits": {
+    "message": "Limieten tonen"
+  },
+  "hideLimits": {
+    "message": "Limieten verbergen"
+  },
+  "emptyClaude": {
+    "message": "Nog geen gegevens. Open claude.ai terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyCodex": {
+    "message": "Nog geen gegevens. Open chatgpt.com terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyMiniMax": {
+    "message": "Nog geen gegevens. Open platform.minimax.io terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyKimi": {
+    "message": "Nog geen gegevens. Open kimi.com/code terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyCursor": {
+    "message": "Nog geen gegevens. Open cursor.com terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyMiMo": {
+    "message": "Nog geen gegevens. Open platform.xiaomimimo.com terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyOverlay": {
+    "message": "Nog geen gegevens. Open de pop-up en vernieuw."
+  },
+  "sourceCode": {
+    "message": "Broncode"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "onbekend"
+  },
+  "timeNow": {
+    "message": "nu"
+  },
+  "timeJustNow": {
+    "message": "zojuist"
+  },
+  "timeAgo": {
+    "message": "$1 geleden"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "u"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Alle wijzigingen opgeslagen"
+  },
+  "optionsSaving": {
+    "message": "Opslaan…"
+  },
+  "optionsSaveError": {
+    "message": "Opslaan mislukt"
+  },
+  "optionsSkip": {
+    "message": "Naar instellingen"
+  },
+  "optionsLoading": {
+    "message": "Instellingen laden…"
+  },
+  "optionsNavLabel": {
+    "message": "Instellingssecties"
+  },
+  "optionsNavLayout": {
+    "message": "Indeling"
+  },
+  "optionsNavProviders": {
+    "message": "Aanbieders"
+  },
+  "optionsNavBadge": {
+    "message": "Werkbalkpictogram"
+  },
+  "optionsNavOverlays": {
+    "message": "Overlays op de pagina"
+  },
+  "optionsLayoutTitle": {
+    "message": "Pop-upindeling"
+  },
+  "optionsLayoutDescription": {
+    "message": "Kies hoe zichtbare aanbiederkaarten in de pop-up worden geordend."
+  },
+  "optionsLayoutSingle": {
+    "message": "Eén kolom"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Een kaart over de volle breedte per aanbieder."
+  },
+  "optionsLayoutGrid": {
+    "message": "Twee kolommen"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Compact overzicht met twee kaarten per rij."
+  },
+  "optionsProvidersTitle": {
+    "message": "Aanbieders"
+  },
+  "optionsProvidersDescription": {
+    "message": "Verberg een kaart of kies welke gegevens die toont. Niet-beschikbare gegevens blijven automatisch verborgen."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 van $2 zichtbaar"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 van $2 details"
+  },
+  "optionsProviderHidden": {
+    "message": "Verborgen in pop-up"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "$1 tonen in pop-up"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Verbruiksgegevens van $1"
+  },
+  "optionsMetricSession": {
+    "message": "Sessieverbruik"
+  },
+  "optionsMetricWeekly": {
+    "message": "Weekverbruik"
+  },
+  "optionsMetricModels": {
+    "message": "Uitsplitsing per model"
+  },
+  "optionsMetricReset": {
+    "message": "Resettijd"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Beschikbare resets"
+  },
+  "optionsMetricPlan": {
+    "message": "Abonnement"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / samenvatting"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Pictogrambereik"
+  },
+  "optionsBadgeDescription": {
+    "message": "Het pictogram verandert in stappen van 10% op basis van deze bron."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Bron van pictogram"
+  },
+  "optionsBadgeHighest": {
+    "message": "Hoogste van zichtbare aanbieders"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Gebruik het hoogste actuele percentage van de getoonde kaarten."
+  },
+  "optionsBadgeSelected": {
+    "message": "Gekozen aanbieder"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Gebruik één aanbieder, ongeacht de zichtbaarheid van andere kaarten."
+  },
+  "optionsBadgeWindow": {
+    "message": "Verbruiksvenster"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sessie"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Week"
+  },
+  "optionsBadgeProvider": {
+    "message": "Aanbieder"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Deze aanbieder is verborgen in de pop-up, maar het pictogrambereik blijft actief."
+  },
+  "optionsBadgeSteps": {
+    "message": "Stappen van het pictogram"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "naar beneden afgerond op 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Overlays op de pagina"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Toon de inklapbare verbruikscapsule naast het berichtveld."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1-overlay op de pagina inschakelen"
+  },
+  "optionsResetTitle": {
+    "message": "Standaardwaarden herstellen"
+  },
+  "optionsResetDescription": {
+    "message": "Herstelt elke voorkeur op deze pagina. Dit kan niet ongedaan worden gemaakt."
+  },
+  "optionsResetAction": {
+    "message": "Standaard herstellen"
+  },
+  "optionsResetConfirm": {
+    "message": "Klik nogmaals ter bevestiging"
+  },
+  "planUsage": {
+    "message": "Abonnementsverbruik"
+  },
+  "tokenPlan": {
+    "message": "Tokenabonnement"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker-instellingen"
+  }
+}

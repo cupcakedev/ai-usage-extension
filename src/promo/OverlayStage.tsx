@@ -51,7 +51,7 @@ const OverlayCard = ({
   <div className="aiu-wrap">
     <span className="aiu-tab">
       <img className="aiu-tab-icon" src={MARK} alt="" />
-      <span className="aiu-tab-label">{msg('limitsTab')}</span>
+      <span className="aiu-tab-label">LIMITS</span>
     </span>
 
     <div className="aiu-card">
@@ -78,7 +78,7 @@ const OverlayCard = ({
 );
 
 export const OverlayStage = () => (
-  <div className="aiu-root promo-overlays">
+  <div className="promo-overlays">
     {OVERLAY_STAGE.cards.map((card, index) => {
       const provider = providerById(card.provider);
 
@@ -87,17 +87,19 @@ export const OverlayStage = () => (
           key={card.provider}
           className="promo-overlays__card"
           style={{
-            left: card.left,
+            insetInlineStart: card.left,
             top: card.top,
             zIndex: index + 1,
             transform: `scale(${OVERLAY_STAGE.scale})`,
           }}
         >
-          <OverlayCard
-            title={provider.title}
-            iconSrc={provider.iconSrc}
-            usage={{ ...provider.usage, lastUpdated: NOW }}
-          />
+          <div className="aiu-root">
+            <OverlayCard
+              title={provider.title}
+              iconSrc={provider.iconSrc}
+              usage={{ ...provider.usage, lastUpdated: NOW }}
+            />
+          </div>
         </div>
       );
     })}

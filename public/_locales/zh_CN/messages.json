@@ -62,9 +62,6 @@
   "hideLimits": {
     "message": "隐藏限额"
   },
-  "limitsTab": {
-    "message": "限额"
-  },
   "emptyClaude": {
     "message": "暂无数据。请在登录状态下打开 claude.ai，然后刷新。"
   },

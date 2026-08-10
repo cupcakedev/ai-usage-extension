@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude & Codex Limits"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Track Claude and ChatGPT (Codex) session & weekly usage limits at a glance in a popup and on-page overlay. Privacy-first, no setup."
+  },
+  "popupTitle": {
+    "message": "Usage"
+  },
+  "refreshUsage": {
+    "message": "Refresh usage"
+  },
+  "refreshUsageLimits": {
+    "message": "Refresh usage limits"
+  },
+  "refreshErrorPrefix": {
+    "message": "Couldn’t refresh"
+  },
+  "refreshFailed": {
+    "message": "Refresh failed"
+  },
+  "availableResetsLabel": {
+    "message": "Available resets · $1"
+  },
+  "loadingSnapshot": {
+    "message": "loading snapshot"
+  },
+  "notConnected": {
+    "message": "not connected"
+  },
+  "updated": {
+    "message": "updated $1"
+  },
+  "refreshing": {
+    "message": "refreshing..."
+  },
+  "waitingForSnapshot": {
+    "message": "waiting for snapshot"
+  },
+  "sessionLimit": {
+    "message": "Session · 5h"
+  },
+  "weeklyLimit": {
+    "message": "Weekly · 7d"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "resets $1"
+  },
+  "nextResetLabel": {
+    "message": "resets $1"
+  },
+  "showLimits": {
+    "message": "Show limits"
+  },
+  "hideLimits": {
+    "message": "Hide limits"
+  },
+  "emptyClaude": {
+    "message": "No data yet. Open claude.ai while signed in, then refresh."
+  },
+  "emptyCodex": {
+    "message": "No data yet. Open chatgpt.com while signed in, then refresh."
+  },
+  "emptyMiniMax": {
+    "message": "No data yet. Open platform.minimax.io while signed in, then refresh."
+  },
+  "emptyKimi": {
+    "message": "No data yet. Open kimi.com/code while signed in, then refresh."
+  },
+  "emptyCursor": {
+    "message": "No data yet. Open cursor.com while signed in, then refresh."
+  },
+  "emptyMiMo": {
+    "message": "No data yet. Open platform.xiaomimimo.com while signed in, then refresh."
+  },
+  "emptyOverlay": {
+    "message": "No data yet. Open the popup and refresh."
+  },
+  "sourceCode": {
+    "message": "Source code"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "unknown"
+  },
+  "timeNow": {
+    "message": "now"
+  },
+  "timeJustNow": {
+    "message": "just now"
+  },
+  "timeAgo": {
+    "message": "$1 ago"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "All changes saved"
+  },
+  "optionsSaving": {
+    "message": "Saving…"
+  },
+  "optionsSaveError": {
+    "message": "Could not save"
+  },
+  "optionsSkip": {
+    "message": "Skip to settings"
+  },
+  "optionsLoading": {
+    "message": "Loading settings…"
+  },
+  "optionsNavLabel": {
+    "message": "Settings sections"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Providers"
+  },
+  "optionsNavBadge": {
+    "message": "Toolbar badge"
+  },
+  "optionsNavOverlays": {
+    "message": "On-page overlays"
+  },
+  "optionsLayoutTitle": {
+    "message": "Popup layout"
+  },
+  "optionsLayoutDescription": {
+    "message": "Choose how visible provider cards are arranged in the popup."
+  },
+  "optionsLayoutSingle": {
+    "message": "One column"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "A full-width card for each provider."
+  },
+  "optionsLayoutGrid": {
+    "message": "Two columns"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "A compact overview with two cards per row."
+  },
+  "optionsProvidersTitle": {
+    "message": "Providers"
+  },
+  "optionsProvidersDescription": {
+    "message": "Hide a card or choose the usage details it can display. Unavailable data stays hidden automatically."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 of $2 shown"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 of $2 details"
+  },
+  "optionsProviderHidden": {
+    "message": "Hidden in popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Show $1 in popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 usage details"
+  },
+  "optionsMetricSession": {
+    "message": "Session usage"
+  },
+  "optionsMetricWeekly": {
+    "message": "Weekly usage"
+  },
+  "optionsMetricModels": {
+    "message": "Model breakdown"
+  },
+  "optionsMetricReset": {
+    "message": "Reset time"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Available resets"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Balance / summary"
+  },
+  "optionsMetricBalance": {
+    "message": "Balance"
+  },
+  "optionsBadgeTitle": {
+    "message": "Badge range"
+  },
+  "optionsBadgeDescription": {
+    "message": "The extension icon changes by 10% ranges based on this source."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Badge source"
+  },
+  "optionsBadgeHighest": {
+    "message": "Highest of visible providers"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Use the largest current percentage among shown provider cards."
+  },
+  "optionsBadgeSelected": {
+    "message": "Selected provider"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Use one provider regardless of the popup visibility of other cards."
+  },
+  "optionsBadgeWindow": {
+    "message": "Usage window"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Session"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Weekly"
+  },
+  "optionsBadgeProvider": {
+    "message": "Provider"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "This provider is hidden in the popup, but its badge range stays active."
+  },
+  "optionsBadgeSteps": {
+    "message": "Toolbar icon steps"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "rounded down to the nearest 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "On-page overlays"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Show the collapsible usage capsule next to the message composer."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Enable $1 on-page overlay"
+  },
+  "optionsResetTitle": {
+    "message": "Reset to defaults"
+  },
+  "optionsResetDescription": {
+    "message": "Restores every preference on this page. This cannot be undone."
+  },
+  "optionsResetAction": {
+    "message": "Reset defaults"
+  },
+  "optionsResetConfirm": {
+    "message": "Click again to confirm"
+  },
+  "planUsage": {
+    "message": "Plan usage"
+  },
+  "tokenPlan": {
+    "message": "Token plan"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker settings"
+  }
+}

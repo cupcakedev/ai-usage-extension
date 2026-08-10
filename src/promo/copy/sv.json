@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI-kapacitet",
+  "shots": {
+    "popup": {
+      "eyebrow": "En popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "och Xiaomi MiMo på en och samma skärm."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay på sidan",
+      "sub": [
+        "Sessions- och veckogränser direkt bredvid",
+        "meddelandefältet i Claude och ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Dina inställningar",
+      "sub": [
+        "Välj leverantörer, layout och exakt vilka",
+        "uppgifter varje kort visar."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikon och overlays",
+      "sub": [
+        "Ikonen följer din högsta användning i steg",
+        "om 10 % — utan att öppna popupen."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Ingen installation",
+      "sub": [
+        "Inga API-nycklar, inloggningar eller servrar.",
+        "Allt stannar i din webbläsare."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Sex leverantörer, en popup: sessions- och veckogränser,",
+      "ikon i verktygsfältet, overlays och full kontroll."
+    ]
+  },
+  "tile": {
+    "sub": "Sex leverantörer. En popup."
+  },
+  "highlights": {
+    "title": "Sex leverantörer, noll installation",
+    "items": [
+      {
+        "title": "Inga API-nycklar, inga extra inloggningar",
+        "body": "Läser de sessioner din webbläsare redan är inloggad på."
+      },
+      {
+        "title": "Inget lämnar din webbläsare",
+        "body": "Inga servrar, konton eller telemetri — allt stannar lokalt."
+      },
+      {
+        "title": "Uppdaterar sig var 5:e minut",
+        "body": "Bakgrundssynkning håller allt aktuellt."
+      }
+    ]
+  }
+}

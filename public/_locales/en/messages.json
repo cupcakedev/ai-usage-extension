@@ -62,9 +62,6 @@
   "hideLimits": {
     "message": "Hide limits"
   },
-  "limitsTab": {
-    "message": "LIMITS"
-  },
   "emptyClaude": {
     "message": "No data yet. Open claude.ai while signed in, then refresh."
   },

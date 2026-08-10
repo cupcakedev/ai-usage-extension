@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI maht",
+  "shots": {
+    "popup": {
+      "eyebrow": "Üks hüpikaken",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "ja Xiaomi MiMo ühel ekraanil."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Ülekate lehel",
+      "sub": [
+        "Sessiooni- ja nädalalimiidid otse Claude’i",
+        "ja ChatGPT sõnumivälja kõrval."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Sinu seaded",
+      "sub": [
+        "Vali pakkujad, paigutus ja täpselt see,",
+        "mida iga kaart näitab."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikoon ja ülekatted",
+      "sub": [
+        "Ikoon järgib suurimat kasutust 10%",
+        "sammudega — hüpikakent avamata."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Seadistamist pole",
+      "sub": [
+        "Ei API-võtmeid, sisselogimisi ega servereid.",
+        "Kõik jääb sinu brauserisse."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Kuus pakkujat, üks aken: sessiooni- ja nädalalimiidid,",
+      "ikoon tööriistaribal, ülekatted ja täielik kontroll."
+    ]
+  },
+  "tile": {
+    "sub": "Kuus pakkujat. Üks aken."
+  },
+  "highlights": {
+    "title": "Kuus pakkujat, null seadistamist",
+    "items": [
+      {
+        "title": "Ei API-võtmeid ega lisasisselogimisi",
+        "body": "Loeb sessioone, kuhu brauser on juba sisse logitud."
+      },
+      {
+        "title": "Miski ei lahku brauserist",
+        "body": "Ei servereid, kontosid ega telemeetriat — kõik jääb kohalikuks."
+      },
+      {
+        "title": "Värskendab end iga 5 minuti järel",
+        "body": "Taustasünkroonimine hoiab kõik ajakohasena."
+      }
+    ]
+  }
+}

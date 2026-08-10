@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "KI-Kapazität",
+  "shots": {
+    "popup": {
+      "eyebrow": "Ein Popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "und Xiaomi MiMo auf einem Bildschirm."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay auf der Seite",
+      "sub": [
+        "Sitzungs- und Wochenlimits direkt neben",
+        "dem Eingabefeld in Claude und ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Eigene Einstellungen",
+      "sub": [
+        "Anbieter, Layout und genau die Details",
+        "wählen, die jede Karte anzeigt."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Symbol & Overlays",
+      "sub": [
+        "Das Symbol folgt dem höchsten Verbrauch",
+        "in 10-%-Schritten — ganz ohne Popup."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Keine Einrichtung",
+      "sub": [
+        "Keine API-Schlüssel, Logins oder Server.",
+        "Alles bleibt im Browser."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Sechs Anbieter, ein Popup: Sitzungs- und Wochenlimits,",
+      "Symbolbereich, Overlays und volle Kontrolle."
+    ]
+  },
+  "tile": {
+    "sub": "Sechs Anbieter. Ein Popup."
+  },
+  "highlights": {
+    "title": "Sechs Anbieter, null Einrichtung",
+    "items": [
+      {
+        "title": "Keine API-Schlüssel, keine Logins",
+        "body": "Liest die Sitzungen, in denen der Browser bereits angemeldet ist."
+      },
+      {
+        "title": "Nichts verlässt den Browser",
+        "body": "Keine Server, keine Konten, keine Telemetrie — alles bleibt lokal."
+      },
+      {
+        "title": "Aktualisiert sich alle 5 Minuten",
+        "body": "Die Hintergrundsynchronisierung hält Popup, Symbol und Overlays aktuell."
+      }
+    ]
+  }
+}

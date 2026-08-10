@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Capacità IA",
+  "shots": {
+    "popup": {
+      "eyebrow": "Un solo popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "e Xiaomi MiMo in un’unica schermata."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay nella pagina",
+      "sub": [
+        "Limiti di sessione e settimanali accanto",
+        "al campo del messaggio."
+      ]
+    },
+    "providers": {
+      "eyebrow": "La tua configurazione",
+      "sub": [
+        "Scegli provider, layout e quali",
+        "dettagli mostra ogni scheda."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Icona e overlay",
+      "sub": [
+        "L’icona segue il consumo più alto",
+        "a passi del 10%, senza aprire il popup."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Nessuna configurazione",
+      "sub": [
+        "Nessuna chiave API, nessun login, nessun server.",
+        "Tutto resta nel browser."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Sei provider, un popup: limiti di sessione e settimana,",
+      "icona nella barra, overlay nella pagina e pieno controllo."
+    ]
+  },
+  "tile": {
+    "sub": "Sei provider. Un popup."
+  },
+  "highlights": {
+    "title": "Sei provider, zero configurazione",
+    "items": [
+      {
+        "title": "Nessuna chiave API, nessun login",
+        "body": "Legge le sessioni a cui il browser ha già effettuato l’accesso."
+      },
+      {
+        "title": "Niente esce dal browser",
+        "body": "Nessun server, nessun account, nessuna telemetria: tutto resta locale."
+      },
+      {
+        "title": "Si aggiorna ogni 5 minuti",
+        "body": "La sincronizzazione in background tiene tutto aggiornato."
+      }
+    ]
+  }
+}

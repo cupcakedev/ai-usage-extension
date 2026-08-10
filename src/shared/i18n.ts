@@ -21,7 +21,6 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   nextResetLabel: 'resets $1',
   showLimits: 'Show limits',
   hideLimits: 'Hide limits',
-  limitsTab: 'LIMITS',
   emptyClaude: 'No data yet. Open claude.ai while signed in, then refresh.',
   emptyCodex: 'No data yet. Open chatgpt.com while signed in, then refresh.',
   emptyMiniMax: 'No data yet. Open platform.minimax.io while signed in, then refresh.',

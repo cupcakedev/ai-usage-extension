@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Pojemność AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Jeden popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "i Xiaomi MiMo — na jednym ekranie."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Nakładka na stronie",
+      "sub": [
+        "Limity sesji i tygodnia tuż obok pola",
+        "wiadomości w Claude i ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Twoje ustawienia",
+      "sub": [
+        "Wybierz dostawców, układ i dokładnie to,",
+        "co pokazuje każda karta."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikona i nakładki",
+      "sub": [
+        "Ikona na pasku śledzi najwyższe zużycie",
+        "w krokach co 10% — bez otwierania popupu."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Bez konfiguracji",
+      "sub": [
+        "Bez kluczy API, logowania i serwerów.",
+        "Wszystko zostaje w przeglądarce."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Sześciu dostawców, jeden popup: limity sesji i tygodnia,",
+      "ikona na pasku, nakładki i pełna kontrola."
+    ]
+  },
+  "tile": {
+    "sub": "Sześciu dostawców. Jeden popup."
+  },
+  "highlights": {
+    "title": "Sześciu dostawców, zero konfiguracji",
+    "items": [
+      {
+        "title": "Bez kluczy API i dodatkowych logowań",
+        "body": "Czyta sesje, w których przeglądarka jest już zalogowana."
+      },
+      {
+        "title": "Nic nie opuszcza przeglądarki",
+        "body": "Bez serwerów, kont i telemetrii — dane zostają lokalnie."
+      },
+      {
+        "title": "Odświeża się co 5 minut",
+        "body": "Synchronizacja w tle utrzymuje wszystko na bieżąco."
+      }
+    ]
+  }
+}

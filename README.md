@@ -63,6 +63,12 @@ src/
 `chrome.storage.local`, and updates the badge. The popup and overlay read that
 snapshot and subscribe to `chrome.storage.onChanged`, so every surface stays in sync.
 
+**Localization:** every user-visible string goes through `msg()`
+(`src/shared/i18n.ts`), which reads `public/_locales/<locale>/messages.json`.
+All 53 Chrome Web Store languages are translated and the release tests enforce
+that they expose the same keys. The one exception is the overlay's "LIMITS"
+side tab, which stays in English everywhere by design.
+
 ## Getting Started
 
 ### Requirements

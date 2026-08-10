@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude ve Codex limitleri"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude ve ChatGPT (Codex) oturum ve haftalık kullanım limitlerini açılır pencerede ve sayfa katmanında izleyin."
+  },
+  "popupTitle": {
+    "message": "Kullanım"
+  },
+  "refreshUsage": {
+    "message": "Kullanımı yenile"
+  },
+  "refreshUsageLimits": {
+    "message": "Limitleri yenile"
+  },
+  "refreshErrorPrefix": {
+    "message": "Yenilenemedi"
+  },
+  "refreshFailed": {
+    "message": "Yenileme başarısız"
+  },
+  "availableResetsLabel": {
+    "message": "Kullanılabilir sıfırlamalar · $1"
+  },
+  "loadingSnapshot": {
+    "message": "yükleniyor"
+  },
+  "notConnected": {
+    "message": "bağlı değil"
+  },
+  "updated": {
+    "message": "güncellendi $1"
+  },
+  "refreshing": {
+    "message": "yenileniyor..."
+  },
+  "waitingForSnapshot": {
+    "message": "veri bekleniyor"
+  },
+  "sessionLimit": {
+    "message": "Oturum · 5 sa"
+  },
+  "weeklyLimit": {
+    "message": "Hafta · 7 g"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 sonra sıfırlanır"
+  },
+  "nextResetLabel": {
+    "message": "$1 sonra sıfırlanır"
+  },
+  "showLimits": {
+    "message": "Limitleri göster"
+  },
+  "hideLimits": {
+    "message": "Limitleri gizle"
+  },
+  "emptyClaude": {
+    "message": "Henüz veri yok. Oturum açıkken claude.ai'yi açın, sonra yenileyin."
+  },
+  "emptyCodex": {
+    "message": "Henüz veri yok. Oturum açıkken chatgpt.com'u açın, sonra yenileyin."
+  },
+  "emptyMiniMax": {
+    "message": "Henüz veri yok. Oturum açıkken platform.minimax.io'yu açın, sonra yenileyin."
+  },
+  "emptyKimi": {
+    "message": "Henüz veri yok. Oturum açıkken kimi.com/code'u açın, sonra yenileyin."
+  },
+  "emptyCursor": {
+    "message": "Henüz veri yok. Oturum açıkken cursor.com'u açın, sonra yenileyin."
+  },
+  "emptyMiMo": {
+    "message": "Henüz veri yok. Oturum açıkken platform.xiaomimimo.com'u açın, sonra yenileyin."
+  },
+  "emptyOverlay": {
+    "message": "Henüz veri yok. Açılır pencereyi açıp yenileyin."
+  },
+  "sourceCode": {
+    "message": "Kaynak kodu"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "bilinmiyor"
+  },
+  "timeNow": {
+    "message": "şimdi"
+  },
+  "timeJustNow": {
+    "message": "az önce"
+  },
+  "timeAgo": {
+    "message": "$1 önce"
+  },
+  "timeDayShort": {
+    "message": "g"
+  },
+  "timeHourShort": {
+    "message": "sa"
+  },
+  "timeMinuteShort": {
+    "message": "dk"
+  },
+  "optionsSaved": {
+    "message": "Tüm değişiklikler kaydedildi"
+  },
+  "optionsSaving": {
+    "message": "Kaydediliyor…"
+  },
+  "optionsSaveError": {
+    "message": "Kaydedilemedi"
+  },
+  "optionsSkip": {
+    "message": "Ayarlara geç"
+  },
+  "optionsLoading": {
+    "message": "Ayarlar yükleniyor…"
+  },
+  "optionsNavLabel": {
+    "message": "Ayar bölümleri"
+  },
+  "optionsNavLayout": {
+    "message": "Düzen"
+  },
+  "optionsNavProviders": {
+    "message": "Sağlayıcılar"
+  },
+  "optionsNavBadge": {
+    "message": "Araç çubuğu simgesi"
+  },
+  "optionsNavOverlays": {
+    "message": "Sayfa katmanları"
+  },
+  "optionsLayoutTitle": {
+    "message": "Açılır pencere düzeni"
+  },
+  "optionsLayoutDescription": {
+    "message": "Görünür sağlayıcı kartlarının nasıl dizileceğini seçin."
+  },
+  "optionsLayoutSingle": {
+    "message": "Tek sütun"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Her sağlayıcı için tam genişlikte kart."
+  },
+  "optionsLayoutGrid": {
+    "message": "İki sütun"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Satırda iki kartla derli toplu görünüm."
+  },
+  "optionsProvidersTitle": {
+    "message": "Sağlayıcılar"
+  },
+  "optionsProvidersDescription": {
+    "message": "Bir kartı gizleyin ya da hangi ayrıntıları göstereceğini seçin. Erişilemeyen veriler otomatik gizlenir."
+  },
+  "optionsProvidersShown": {
+    "message": "$2 sağlayıcıdan $1 tanesi görünür"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 ayrıntıdan $1 tanesi"
+  },
+  "optionsProviderHidden": {
+    "message": "Açılır pencerede gizli"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "$1 sağlayıcısını açılır pencerede göster"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 kullanım ayrıntıları"
+  },
+  "optionsMetricSession": {
+    "message": "Oturum kullanımı"
+  },
+  "optionsMetricWeekly": {
+    "message": "Haftalık kullanım"
+  },
+  "optionsMetricModels": {
+    "message": "Modele göre dağılım"
+  },
+  "optionsMetricReset": {
+    "message": "Sıfırlama zamanı"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Kullanılabilir sıfırlamalar"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Bakiye / özet"
+  },
+  "optionsMetricBalance": {
+    "message": "Bakiye"
+  },
+  "optionsBadgeTitle": {
+    "message": "Simge aralığı"
+  },
+  "optionsBadgeDescription": {
+    "message": "Uzantı simgesi bu kaynağa göre %10'luk adımlarla değişir."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Simge kaynağı"
+  },
+  "optionsBadgeHighest": {
+    "message": "Görünür sağlayıcıların en yükseği"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Gösterilen kartlar arasındaki en yüksek güncel yüzdeyi kullan."
+  },
+  "optionsBadgeSelected": {
+    "message": "Seçili sağlayıcı"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Diğer kartların görünürlüğünden bağımsız olarak tek sağlayıcı kullan."
+  },
+  "optionsBadgeWindow": {
+    "message": "Kullanım penceresi"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Oturum"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Haftalık"
+  },
+  "optionsBadgeProvider": {
+    "message": "Sağlayıcı"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Bu sağlayıcı açılır pencerede gizli, ancak simge aralığı etkin kalır."
+  },
+  "optionsBadgeSteps": {
+    "message": "Araç çubuğu simge adımları"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "en yakın %10'a aşağı yuvarlanır"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Sayfa katmanları"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Mesaj alanının yanında katlanabilir kullanım kapsülünü göster."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 sayfa katmanını etkinleştir"
+  },
+  "optionsResetTitle": {
+    "message": "Varsayılanlara sıfırla"
+  },
+  "optionsResetDescription": {
+    "message": "Bu sayfadaki tüm tercihleri geri yükler. Bu geri alınamaz."
+  },
+  "optionsResetAction": {
+    "message": "Varsayılanlara dön"
+  },
+  "optionsResetConfirm": {
+    "message": "Onaylamak için yeniden tıklayın"
+  },
+  "planUsage": {
+    "message": "Plan kullanımı"
+  },
+  "tokenPlan": {
+    "message": "Token planı"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker ayarları"
+  }
+}

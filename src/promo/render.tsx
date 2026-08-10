@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BRAND, COPY, HEADLINE } from './copy';
+import { DIR } from './locale';
 import { PROVIDERS } from './fixtures';
 import { HighlightsStage } from './HighlightsStage';
 import { OverlayStage } from './OverlayStage';
@@ -37,13 +38,28 @@ const Frame = ({
   center?: boolean;
   children: ReactNode;
 }) => (
-  <div className={`promo-frame ${center ? 'promo-frame--center' : ''}`} style={{ width, height }}>
+  <div
+    className={`promo-frame ${center ? 'promo-frame--center' : ''}`}
+    dir={DIR}
+    style={{ width, height }}
+  >
     <div
       className="promo-frame__arc"
-      style={{ left: width * 0.277, top: -width * 2.5, width: width * 4.06, height: width * 4.06 }}
+      style={{
+        insetInlineStart: width * 0.277,
+        top: -width * 2.5,
+        width: width * 4.06,
+        height: width * 4.06,
+      }}
       aria-hidden="true"
     />
     <div className="promo-frame__bloom" aria-hidden="true" />
+    {children}
+  </div>
+);
+
+const Ltr = ({ children }: { children: ReactNode }) => (
+  <div dir="ltr" style={{ display: 'contents' }}>
     {children}
   </div>
 );
@@ -129,11 +145,11 @@ const Window = ({
         width: PANEL_STAGE.width,
         height,
         top,
-        right: PANEL_STAGE.right,
+        insetInlineEnd: PANEL_STAGE.right,
         transform: `scale(${scale})`,
       }}
     >
-      {children}
+      <Ltr>{children}</Ltr>
     </div>
   );
 };
@@ -166,11 +182,13 @@ const Stage = () => {
           className="promo-stage promo-stage--popup promo-stage--grid"
           style={{
             top: POPUP_STAGE.top,
-            right: POPUP_STAGE.right,
+            insetInlineEnd: POPUP_STAGE.right,
             transform: `scale(${POPUP_STAGE.scale})`,
           }}
         >
-          <PopupStage layout="grid" providers={POPUP_PROVIDERS} />
+          <Ltr>
+            <PopupStage layout="grid" providers={POPUP_PROVIDERS} />
+          </Ltr>
         </div>
       );
   }
@@ -182,7 +200,11 @@ const Screenshot = () => (
 
     <div
       className="promo-copy"
-      style={{ left: SCREENSHOT.margin, top: SCREENSHOT.top, width: SCREENSHOT.columnWidth }}
+      style={{
+        insetInlineStart: SCREENSHOT.margin,
+        top: SCREENSHOT.top,
+        width: SCREENSHOT.columnWidth,
+      }}
     >
       <BrandMark size={SCREENSHOT.markSize} />
       <div style={{ marginTop: 30 }}>
@@ -204,16 +226,22 @@ const Marquee = () => (
       className="promo-stage promo-stage--popup"
       style={{
         top: MARQUEE.popup.top,
-        right: MARQUEE.popup.right,
+        insetInlineEnd: MARQUEE.popup.right,
         transform: `scale(${MARQUEE.popup.scale})`,
       }}
     >
-      <PopupStage layout="single" providers={MARQUEE.providers} />
+      <Ltr>
+        <PopupStage layout="single" providers={MARQUEE.providers} />
+      </Ltr>
     </div>
 
     <div
       className="promo-copy"
-      style={{ left: MARQUEE.margin, top: MARQUEE.top, width: MARQUEE.columnWidth }}
+      style={{
+        insetInlineStart: MARQUEE.margin,
+        top: MARQUEE.top,
+        width: MARQUEE.columnWidth,
+      }}
     >
       <div className="promo-lockup">
         <BrandMark size={MARQUEE.markSize} />

@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: limite Claude și Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Urmărește limitele de sesiune și săptămânale pentru Claude și ChatGPT (Codex) în popup și overlay. Fără configurare."
+  },
+  "popupTitle": {
+    "message": "Utilizare"
+  },
+  "refreshUsage": {
+    "message": "Reîmprospătează utilizarea"
+  },
+  "refreshUsageLimits": {
+    "message": "Reîmprospătează limitele"
+  },
+  "refreshErrorPrefix": {
+    "message": "Nu s-a putut reîmprospăta"
+  },
+  "refreshFailed": {
+    "message": "Reîmprospătare eșuată"
+  },
+  "availableResetsLabel": {
+    "message": "Resetări disponibile · $1"
+  },
+  "loadingSnapshot": {
+    "message": "se încarcă"
+  },
+  "notConnected": {
+    "message": "neconectat"
+  },
+  "updated": {
+    "message": "actualizat $1"
+  },
+  "refreshing": {
+    "message": "se reîmprospătează..."
+  },
+  "waitingForSnapshot": {
+    "message": "se așteaptă datele"
+  },
+  "sessionLimit": {
+    "message": "Sesiune · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Săptămână · 7 z"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "resetare în $1"
+  },
+  "nextResetLabel": {
+    "message": "resetare în $1"
+  },
+  "showLimits": {
+    "message": "Arată limitele"
+  },
+  "hideLimits": {
+    "message": "Ascunde limitele"
+  },
+  "emptyClaude": {
+    "message": "Încă nu există date. Deschide claude.ai autentificat, apoi reîmprospătează."
+  },
+  "emptyCodex": {
+    "message": "Încă nu există date. Deschide chatgpt.com autentificat, apoi reîmprospătează."
+  },
+  "emptyMiniMax": {
+    "message": "Încă nu există date. Deschide platform.minimax.io autentificat, apoi reîmprospătează."
+  },
+  "emptyKimi": {
+    "message": "Încă nu există date. Deschide kimi.com/code autentificat, apoi reîmprospătează."
+  },
+  "emptyCursor": {
+    "message": "Încă nu există date. Deschide cursor.com autentificat, apoi reîmprospătează."
+  },
+  "emptyMiMo": {
+    "message": "Încă nu există date. Deschide platform.xiaomimimo.com autentificat, apoi reîmprospătează."
+  },
+  "emptyOverlay": {
+    "message": "Încă nu există date. Deschide popupul și reîmprospătează."
+  },
+  "sourceCode": {
+    "message": "Cod sursă"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "necunoscut"
+  },
+  "timeNow": {
+    "message": "acum"
+  },
+  "timeJustNow": {
+    "message": "chiar acum"
+  },
+  "timeAgo": {
+    "message": "acum $1"
+  },
+  "timeDayShort": {
+    "message": "z"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Toate modificările au fost salvate"
+  },
+  "optionsSaving": {
+    "message": "Se salvează…"
+  },
+  "optionsSaveError": {
+    "message": "Nu s-a putut salva"
+  },
+  "optionsSkip": {
+    "message": "Sari la setări"
+  },
+  "optionsLoading": {
+    "message": "Se încarcă setările…"
+  },
+  "optionsNavLabel": {
+    "message": "Secțiuni de setări"
+  },
+  "optionsNavLayout": {
+    "message": "Aspect"
+  },
+  "optionsNavProviders": {
+    "message": "Furnizori"
+  },
+  "optionsNavBadge": {
+    "message": "Iconiță în bara de instrumente"
+  },
+  "optionsNavOverlays": {
+    "message": "Overlay-uri pe pagină"
+  },
+  "optionsLayoutTitle": {
+    "message": "Aspectul popupului"
+  },
+  "optionsLayoutDescription": {
+    "message": "Alege cum sunt aranjate cardurile vizibile ale furnizorilor."
+  },
+  "optionsLayoutSingle": {
+    "message": "O coloană"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Un card pe toată lățimea pentru fiecare furnizor."
+  },
+  "optionsLayoutGrid": {
+    "message": "Două coloane"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Privire compactă, cu două carduri pe rând."
+  },
+  "optionsProvidersTitle": {
+    "message": "Furnizori"
+  },
+  "optionsProvidersDescription": {
+    "message": "Ascunde un card sau alege ce detalii afișează. Datele indisponibile rămân ascunse automat."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 din $2 afișate"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 din $2 detalii"
+  },
+  "optionsProviderHidden": {
+    "message": "Ascuns în popup"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Arată $1 în popup"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Detalii de utilizare: $1"
+  },
+  "optionsMetricSession": {
+    "message": "Utilizare pe sesiune"
+  },
+  "optionsMetricWeekly": {
+    "message": "Utilizare săptămânală"
+  },
+  "optionsMetricModels": {
+    "message": "Defalcare pe modele"
+  },
+  "optionsMetricReset": {
+    "message": "Ora resetării"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Resetări disponibile"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Sold / rezumat"
+  },
+  "optionsMetricBalance": {
+    "message": "Sold"
+  },
+  "optionsBadgeTitle": {
+    "message": "Intervalul iconiței"
+  },
+  "optionsBadgeDescription": {
+    "message": "Iconița extensiei se schimbă în trepte de 10% pe baza acestei surse."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Sursa iconiței"
+  },
+  "optionsBadgeHighest": {
+    "message": "Cel mai mare dintre furnizorii vizibili"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Folosește cel mai mare procent curent dintre cardurile afișate."
+  },
+  "optionsBadgeSelected": {
+    "message": "Furnizor selectat"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Folosește un singur furnizor, indiferent de vizibilitatea celorlalte carduri."
+  },
+  "optionsBadgeWindow": {
+    "message": "Fereastră de utilizare"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesiune"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Săptămânal"
+  },
+  "optionsBadgeProvider": {
+    "message": "Furnizor"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Acest furnizor este ascuns în popup, dar intervalul iconiței rămâne activ."
+  },
+  "optionsBadgeSteps": {
+    "message": "Trepte ale iconiței"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "rotunjit în jos la 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Overlay-uri pe pagină"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Afișează capsula pliabilă de utilizare lângă câmpul de mesaj."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Activează overlay-ul $1 pe pagină"
+  },
+  "optionsResetTitle": {
+    "message": "Revenire la valorile implicite"
+  },
+  "optionsResetDescription": {
+    "message": "Restabilește toate preferințele de pe această pagină. Acțiunea nu poate fi anulată."
+  },
+  "optionsResetAction": {
+    "message": "Resetează"
+  },
+  "optionsResetConfirm": {
+    "message": "Apasă din nou pentru confirmare"
+  },
+  "planUsage": {
+    "message": "Utilizarea planului"
+  },
+  "tokenPlan": {
+    "message": "Plan de tokenuri"
+  },
+  "optionsTitle": {
+    "message": "Setări AI Usage Tracker"
+  }
+}

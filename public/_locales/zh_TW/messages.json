@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker：Claude 與 Codex 用量上限"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "在彈出視窗與頁面浮層中追蹤 Claude 和 ChatGPT（Codex）的工作階段與每週用量上限，免設定。"
+  },
+  "popupTitle": {
+    "message": "使用量"
+  },
+  "refreshUsage": {
+    "message": "重新整理使用量"
+  },
+  "refreshUsageLimits": {
+    "message": "重新整理上限"
+  },
+  "refreshErrorPrefix": {
+    "message": "無法重新整理"
+  },
+  "refreshFailed": {
+    "message": "重新整理失敗"
+  },
+  "availableResetsLabel": {
+    "message": "可用重設次數 · $1"
+  },
+  "loadingSnapshot": {
+    "message": "載入中"
+  },
+  "notConnected": {
+    "message": "未連線"
+  },
+  "updated": {
+    "message": "$1更新"
+  },
+  "refreshing": {
+    "message": "重新整理中..."
+  },
+  "waitingForSnapshot": {
+    "message": "等待資料"
+  },
+  "sessionLimit": {
+    "message": "工作階段 · 5 小時"
+  },
+  "weeklyLimit": {
+    "message": "每週 · 7 天"
+  },
+  "planLabel": {
+    "message": "方案 · $1"
+  },
+  "resetsLabel": {
+    "message": "$1後重設"
+  },
+  "nextResetLabel": {
+    "message": "$1後重設"
+  },
+  "showLimits": {
+    "message": "顯示上限"
+  },
+  "hideLimits": {
+    "message": "隱藏上限"
+  },
+  "emptyClaude": {
+    "message": "尚無資料。登入後開啟 claude.ai，再重新整理。"
+  },
+  "emptyCodex": {
+    "message": "尚無資料。登入後開啟 chatgpt.com，再重新整理。"
+  },
+  "emptyMiniMax": {
+    "message": "尚無資料。登入後開啟 platform.minimax.io，再重新整理。"
+  },
+  "emptyKimi": {
+    "message": "尚無資料。登入後開啟 kimi.com/code，再重新整理。"
+  },
+  "emptyCursor": {
+    "message": "尚無資料。登入後開啟 cursor.com，再重新整理。"
+  },
+  "emptyMiMo": {
+    "message": "尚無資料。登入後開啟 platform.xiaomimimo.com，再重新整理。"
+  },
+  "emptyOverlay": {
+    "message": "尚無資料。開啟彈出視窗並重新整理。"
+  },
+  "sourceCode": {
+    "message": "原始碼"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "未知"
+  },
+  "timeNow": {
+    "message": "現在"
+  },
+  "timeJustNow": {
+    "message": "剛剛"
+  },
+  "timeAgo": {
+    "message": "$1前"
+  },
+  "timeDayShort": {
+    "message": "天"
+  },
+  "timeHourShort": {
+    "message": "小時"
+  },
+  "timeMinuteShort": {
+    "message": "分"
+  },
+  "optionsSaved": {
+    "message": "所有變更已儲存"
+  },
+  "optionsSaving": {
+    "message": "儲存中…"
+  },
+  "optionsSaveError": {
+    "message": "無法儲存"
+  },
+  "optionsSkip": {
+    "message": "跳至設定"
+  },
+  "optionsLoading": {
+    "message": "載入設定中…"
+  },
+  "optionsNavLabel": {
+    "message": "設定區段"
+  },
+  "optionsNavLayout": {
+    "message": "版面"
+  },
+  "optionsNavProviders": {
+    "message": "服務供應商"
+  },
+  "optionsNavBadge": {
+    "message": "工具列圖示"
+  },
+  "optionsNavOverlays": {
+    "message": "頁面浮層"
+  },
+  "optionsLayoutTitle": {
+    "message": "彈出視窗版面"
+  },
+  "optionsLayoutDescription": {
+    "message": "選擇顯示中的供應商卡片排列方式。"
+  },
+  "optionsLayoutSingle": {
+    "message": "單欄"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "每個供應商一張全寬卡片。"
+  },
+  "optionsLayoutGrid": {
+    "message": "雙欄"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "每列兩張卡片的精簡總覽。"
+  },
+  "optionsProvidersTitle": {
+    "message": "服務供應商"
+  },
+  "optionsProvidersDescription": {
+    "message": "隱藏卡片，或選擇卡片顯示哪些用量細節。無法取得的資料會自動隱藏。"
+  },
+  "optionsProvidersShown": {
+    "message": "顯示 $1／$2"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 項中的 $1 項"
+  },
+  "optionsProviderHidden": {
+    "message": "已在彈出視窗隱藏"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "在彈出視窗顯示 $1"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 的用量細節"
+  },
+  "optionsMetricSession": {
+    "message": "工作階段用量"
+  },
+  "optionsMetricWeekly": {
+    "message": "每週用量"
+  },
+  "optionsMetricModels": {
+    "message": "依模型細分"
+  },
+  "optionsMetricReset": {
+    "message": "重設時間"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "可用重設次數"
+  },
+  "optionsMetricPlan": {
+    "message": "方案"
+  },
+  "optionsMetricSummary": {
+    "message": "餘額／摘要"
+  },
+  "optionsMetricBalance": {
+    "message": "餘額"
+  },
+  "optionsBadgeTitle": {
+    "message": "圖示區間"
+  },
+  "optionsBadgeDescription": {
+    "message": "擴充功能圖示依此來源以 10% 為級距變化。"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "圖示來源"
+  },
+  "optionsBadgeHighest": {
+    "message": "顯示中供應商的最高值"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "採用顯示卡片中目前最高的百分比。"
+  },
+  "optionsBadgeSelected": {
+    "message": "指定供應商"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "不論其他卡片是否顯示，都採用同一個供應商。"
+  },
+  "optionsBadgeWindow": {
+    "message": "用量區間"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "工作階段"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "每週"
+  },
+  "optionsBadgeProvider": {
+    "message": "供應商"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "此供應商已在彈出視窗隱藏，但圖示區間仍會生效。"
+  },
+  "optionsBadgeSteps": {
+    "message": "工具列圖示級距"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "向下取整至 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "頁面浮層"
+  },
+  "optionsOverlaysDescription": {
+    "message": "在訊息輸入框旁顯示可收合的用量膠囊。"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "啟用 $1 頁面浮層"
+  },
+  "optionsResetTitle": {
+    "message": "回復預設值"
+  },
+  "optionsResetDescription": {
+    "message": "回復本頁所有偏好設定，且無法復原。"
+  },
+  "optionsResetAction": {
+    "message": "回復預設值"
+  },
+  "optionsResetConfirm": {
+    "message": "再按一次以確認"
+  },
+  "planUsage": {
+    "message": "方案用量"
+  },
+  "tokenPlan": {
+    "message": "權杖方案"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker 設定"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Kapasitas AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Satu popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor,",
+        "dan Xiaomi MiMo dalam satu layar."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay di halaman",
+      "sub": [
+        "Batas sesi dan mingguan tepat di samping",
+        "kolom pesan Claude dan ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Pengaturanmu",
+      "sub": [
+        "Pilih penyedia, tata letak, dan detail apa",
+        "saja yang muncul di tiap kartu."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikon dan overlay",
+      "sub": [
+        "Ikon toolbar mengikuti pemakaian tertinggi",
+        "dalam langkah 10% — tanpa buka popup."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Tanpa setelan",
+      "sub": [
+        "Tanpa kunci API, login, atau server.",
+        "Semuanya tetap di browsermu."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Enam penyedia, satu popup: batas sesi dan mingguan,",
+      "ikon toolbar, overlay halaman, dan kendali penuh."
+    ]
+  },
+  "tile": {
+    "sub": "Enam penyedia. Satu popup."
+  },
+  "highlights": {
+    "title": "Enam penyedia, tanpa setelan",
+    "items": [
+      {
+        "title": "Tanpa kunci API dan login tambahan",
+        "body": "Membaca sesi yang sudah masuk di browsermu."
+      },
+      {
+        "title": "Tidak ada yang keluar dari browser",
+        "body": "Tanpa server, akun, atau telemetri — semua data lokal."
+      },
+      {
+        "title": "Menyegarkan diri tiap 5 menit",
+        "body": "Sinkronisasi latar menjaga semuanya tetap terkini."
+      }
+    ]
+  }
+}

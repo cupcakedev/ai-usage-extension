@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "AI pajėgumas",
+  "shots": {
+    "popup": {
+      "eyebrow": "Vienas langas",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "ir Xiaomi MiMo viename ekrane."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Perdanga puslapyje",
+      "sub": [
+        "Sesijos ir savaitės limitai iškart šalia",
+        "žinutės lauko Claude ir ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Jūsų nustatymai",
+      "sub": [
+        "Pasirinkite tiekėjus, išdėstymą ir tai,",
+        "kokius duomenis rodo kiekviena kortelė."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Piktograma ir perdangos",
+      "sub": [
+        "Piktograma seka didžiausią naudojimą 10 %",
+        "žingsniais — neatidarant lango."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Jokio nustatinėjimo",
+      "sub": [
+        "Jokių API raktų, prisijungimų ar serverių.",
+        "Viskas lieka jūsų naršyklėje."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Šeši tiekėjai, vienas langas: sesijos ir savaitės limitai,",
+      "piktograma juostoje, perdangos ir pilna kontrolė."
+    ]
+  },
+  "tile": {
+    "sub": "Šeši tiekėjai. Vienas langas."
+  },
+  "highlights": {
+    "title": "Šeši tiekėjai, nulis nustatymų",
+    "items": [
+      {
+        "title": "Jokių API raktų ir papildomų prisijungimų",
+        "body": "Skaito sesijas, prie kurių naršyklė jau prisijungusi."
+      },
+      {
+        "title": "Niekas nepalieka naršyklės",
+        "body": "Jokių serverių, paskyrų ar telemetrijos — viskas lieka vietoje."
+      },
+      {
+        "title": "Atsinaujina kas 5 minutes",
+        "body": "Fono sinchronizacija viską išlaiko šviežią."
+      }
+    ]
+  }
+}

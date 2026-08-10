@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: ліміти Claude і Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Стежте за лімітами сесії та тижня в Claude і ChatGPT (Codex) — у попапі та оверлеї. Без налаштування."
+  },
+  "popupTitle": {
+    "message": "Використання"
+  },
+  "refreshUsage": {
+    "message": "Оновити дані"
+  },
+  "refreshUsageLimits": {
+    "message": "Оновити ліміти"
+  },
+  "refreshErrorPrefix": {
+    "message": "Не вдалося оновити"
+  },
+  "refreshFailed": {
+    "message": "Помилка оновлення"
+  },
+  "availableResetsLabel": {
+    "message": "Доступні скидання · $1"
+  },
+  "loadingSnapshot": {
+    "message": "завантаження"
+  },
+  "notConnected": {
+    "message": "немає зʼєднання"
+  },
+  "updated": {
+    "message": "оновлено $1"
+  },
+  "refreshing": {
+    "message": "оновлення..."
+  },
+  "waitingForSnapshot": {
+    "message": "очікування даних"
+  },
+  "sessionLimit": {
+    "message": "Сесія · 5 год"
+  },
+  "weeklyLimit": {
+    "message": "Тиждень · 7 дн"
+  },
+  "planLabel": {
+    "message": "Тариф · $1"
+  },
+  "resetsLabel": {
+    "message": "скидання $1"
+  },
+  "nextResetLabel": {
+    "message": "скидання $1"
+  },
+  "showLimits": {
+    "message": "Показати ліміти"
+  },
+  "hideLimits": {
+    "message": "Сховати ліміти"
+  },
+  "emptyClaude": {
+    "message": "Даних ще немає. Відкрийте claude.ai з активним входом і оновіть."
+  },
+  "emptyCodex": {
+    "message": "Даних ще немає. Відкрийте chatgpt.com з активним входом і оновіть."
+  },
+  "emptyMiniMax": {
+    "message": "Даних ще немає. Відкрийте platform.minimax.io з активним входом і оновіть."
+  },
+  "emptyKimi": {
+    "message": "Даних ще немає. Відкрийте kimi.com/code з активним входом і оновіть."
+  },
+  "emptyCursor": {
+    "message": "Даних ще немає. Відкрийте cursor.com з активним входом і оновіть."
+  },
+  "emptyMiMo": {
+    "message": "Даних ще немає. Відкрийте platform.xiaomimimo.com з активним входом і оновіть."
+  },
+  "emptyOverlay": {
+    "message": "Даних ще немає. Відкрийте попап і оновіть."
+  },
+  "sourceCode": {
+    "message": "Вихідний код"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "невідомо"
+  },
+  "timeNow": {
+    "message": "зараз"
+  },
+  "timeJustNow": {
+    "message": "щойно"
+  },
+  "timeAgo": {
+    "message": "$1 тому"
+  },
+  "timeDayShort": {
+    "message": "дн"
+  },
+  "timeHourShort": {
+    "message": "год"
+  },
+  "timeMinuteShort": {
+    "message": "хв"
+  },
+  "optionsSaved": {
+    "message": "Усі зміни збережено"
+  },
+  "optionsSaving": {
+    "message": "Збереження…"
+  },
+  "optionsSaveError": {
+    "message": "Не вдалося зберегти"
+  },
+  "optionsSkip": {
+    "message": "Перейти до налаштувань"
+  },
+  "optionsLoading": {
+    "message": "Завантаження налаштувань…"
+  },
+  "optionsNavLabel": {
+    "message": "Розділи налаштувань"
+  },
+  "optionsNavLayout": {
+    "message": "Розкладка"
+  },
+  "optionsNavProviders": {
+    "message": "Провайдери"
+  },
+  "optionsNavBadge": {
+    "message": "Значок на панелі"
+  },
+  "optionsNavOverlays": {
+    "message": "Оверлеї на сторінках"
+  },
+  "optionsLayoutTitle": {
+    "message": "Розкладка попапа"
+  },
+  "optionsLayoutDescription": {
+    "message": "Виберіть, як розташувати видимі картки провайдерів у попапі."
+  },
+  "optionsLayoutSingle": {
+    "message": "Одна колонка"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Картка на всю ширину для кожного провайдера."
+  },
+  "optionsLayoutGrid": {
+    "message": "Дві колонки"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Компактний огляд: дві картки в рядку."
+  },
+  "optionsProvidersTitle": {
+    "message": "Провайдери"
+  },
+  "optionsProvidersDescription": {
+    "message": "Сховайте картку або виберіть, які дані вона показує. Недоступні дані ховаються автоматично."
+  },
+  "optionsProvidersShown": {
+    "message": "показано $1 з $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 з $2 деталей"
+  },
+  "optionsProviderHidden": {
+    "message": "Сховано в попапі"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Показувати $1 у попапі"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Дані про використання $1"
+  },
+  "optionsMetricSession": {
+    "message": "Використання за сесію"
+  },
+  "optionsMetricWeekly": {
+    "message": "Використання за тиждень"
+  },
+  "optionsMetricModels": {
+    "message": "Розподіл за моделями"
+  },
+  "optionsMetricReset": {
+    "message": "Час скидання"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Доступні скидання"
+  },
+  "optionsMetricPlan": {
+    "message": "Тариф"
+  },
+  "optionsMetricSummary": {
+    "message": "Баланс / підсумок"
+  },
+  "optionsMetricBalance": {
+    "message": "Баланс"
+  },
+  "optionsBadgeTitle": {
+    "message": "Діапазон значка"
+  },
+  "optionsBadgeDescription": {
+    "message": "Іконка розширення змінюється кроками по 10% на основі цього джерела."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Джерело значка"
+  },
+  "optionsBadgeHighest": {
+    "message": "Максимум серед видимих провайдерів"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Використовувати найбільший поточний відсоток серед показаних карток."
+  },
+  "optionsBadgeSelected": {
+    "message": "Вибраний провайдер"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Використовувати одного провайдера незалежно від видимості інших карток."
+  },
+  "optionsBadgeWindow": {
+    "message": "Вікно використання"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Сесія"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Тиждень"
+  },
+  "optionsBadgeProvider": {
+    "message": "Провайдер"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Цей провайдер прихований у попапі, але його діапазон значка лишається активним."
+  },
+  "optionsBadgeSteps": {
+    "message": "Кроки іконки на панелі"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "округлення вниз до 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Оверлеї на сторінках"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Показувати згортану капсулу з використанням поруч із полем вводу."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Увімкнути оверлей $1 на сторінці"
+  },
+  "optionsResetTitle": {
+    "message": "Скинути до типових"
+  },
+  "optionsResetDescription": {
+    "message": "Відновлює всі налаштування на цій сторінці. Дію не можна скасувати."
+  },
+  "optionsResetAction": {
+    "message": "Скинути налаштування"
+  },
+  "optionsResetConfirm": {
+    "message": "Натисніть ще раз для підтвердження"
+  },
+  "planUsage": {
+    "message": "Використання тарифу"
+  },
+  "tokenPlan": {
+    "message": "Токен-план"
+  },
+  "optionsTitle": {
+    "message": "Налаштування AI Usage Tracker"
+  }
+}

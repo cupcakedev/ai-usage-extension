@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: ลิมิตของ Claude และ Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "ติดตามลิมิตต่อเซสชันและรายสัปดาห์ของ Claude และ ChatGPT (Codex) ในป๊อปอัปและโอเวอร์เลย์บนหน้าเว็บ"
+  },
+  "popupTitle": {
+    "message": "การใช้งาน"
+  },
+  "refreshUsage": {
+    "message": "รีเฟรชการใช้งาน"
+  },
+  "refreshUsageLimits": {
+    "message": "รีเฟรชลิมิต"
+  },
+  "refreshErrorPrefix": {
+    "message": "รีเฟรชไม่สำเร็จ"
+  },
+  "refreshFailed": {
+    "message": "การรีเฟรชล้มเหลว"
+  },
+  "availableResetsLabel": {
+    "message": "การรีเซ็ตที่ใช้ได้ · $1"
+  },
+  "loadingSnapshot": {
+    "message": "กำลังโหลด"
+  },
+  "notConnected": {
+    "message": "ยังไม่เชื่อมต่อ"
+  },
+  "updated": {
+    "message": "อัปเดต $1"
+  },
+  "refreshing": {
+    "message": "กำลังรีเฟรช..."
+  },
+  "waitingForSnapshot": {
+    "message": "กำลังรอข้อมูล"
+  },
+  "sessionLimit": {
+    "message": "เซสชัน · 5 ชม."
+  },
+  "weeklyLimit": {
+    "message": "รายสัปดาห์ · 7 วัน"
+  },
+  "planLabel": {
+    "message": "แพ็กเกจ · $1"
+  },
+  "resetsLabel": {
+    "message": "รีเซ็ตอีก $1"
+  },
+  "nextResetLabel": {
+    "message": "รีเซ็ตอีก $1"
+  },
+  "showLimits": {
+    "message": "แสดงลิมิต"
+  },
+  "hideLimits": {
+    "message": "ซ่อนลิมิต"
+  },
+  "emptyClaude": {
+    "message": "ยังไม่มีข้อมูล เปิด claude.ai ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyCodex": {
+    "message": "ยังไม่มีข้อมูล เปิด chatgpt.com ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyMiniMax": {
+    "message": "ยังไม่มีข้อมูล เปิด platform.minimax.io ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyKimi": {
+    "message": "ยังไม่มีข้อมูล เปิด kimi.com/code ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyCursor": {
+    "message": "ยังไม่มีข้อมูล เปิด cursor.com ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyMiMo": {
+    "message": "ยังไม่มีข้อมูล เปิด platform.xiaomimimo.com ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyOverlay": {
+    "message": "ยังไม่มีข้อมูล เปิดป๊อปอัปแล้วรีเฟรช"
+  },
+  "sourceCode": {
+    "message": "ซอร์สโค้ด"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "ไม่ทราบ"
+  },
+  "timeNow": {
+    "message": "ตอนนี้"
+  },
+  "timeJustNow": {
+    "message": "เมื่อสักครู่"
+  },
+  "timeAgo": {
+    "message": "$1 ที่แล้ว"
+  },
+  "timeDayShort": {
+    "message": "ว"
+  },
+  "timeHourShort": {
+    "message": "ชม"
+  },
+  "timeMinuteShort": {
+    "message": "น"
+  },
+  "optionsSaved": {
+    "message": "บันทึกการเปลี่ยนแปลงทั้งหมดแล้ว"
+  },
+  "optionsSaving": {
+    "message": "กำลังบันทึก…"
+  },
+  "optionsSaveError": {
+    "message": "บันทึกไม่สำเร็จ"
+  },
+  "optionsSkip": {
+    "message": "ข้ามไปที่การตั้งค่า"
+  },
+  "optionsLoading": {
+    "message": "กำลังโหลดการตั้งค่า…"
+  },
+  "optionsNavLabel": {
+    "message": "ส่วนการตั้งค่า"
+  },
+  "optionsNavLayout": {
+    "message": "เลย์เอาต์"
+  },
+  "optionsNavProviders": {
+    "message": "ผู้ให้บริการ"
+  },
+  "optionsNavBadge": {
+    "message": "ไอคอนบนแถบเครื่องมือ"
+  },
+  "optionsNavOverlays": {
+    "message": "โอเวอร์เลย์บนหน้าเว็บ"
+  },
+  "optionsLayoutTitle": {
+    "message": "เลย์เอาต์ป๊อปอัป"
+  },
+  "optionsLayoutDescription": {
+    "message": "เลือกวิธีจัดเรียงการ์ดผู้ให้บริการที่แสดงอยู่"
+  },
+  "optionsLayoutSingle": {
+    "message": "หนึ่งคอลัมน์"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "การ์ดเต็มความกว้างสำหรับผู้ให้บริการแต่ละราย"
+  },
+  "optionsLayoutGrid": {
+    "message": "สองคอลัมน์"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "มุมมองกระชับ สองการ์ดต่อแถว"
+  },
+  "optionsProvidersTitle": {
+    "message": "ผู้ให้บริการ"
+  },
+  "optionsProvidersDescription": {
+    "message": "ซ่อนการ์ดหรือเลือกรายละเอียดที่จะแสดง ข้อมูลที่ไม่มีจะถูกซ่อนอัตโนมัติ"
+  },
+  "optionsProvidersShown": {
+    "message": "แสดง $1 จาก $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 จาก $2 รายการ"
+  },
+  "optionsProviderHidden": {
+    "message": "ซ่อนในป๊อปอัป"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "แสดง $1 ในป๊อปอัป"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "รายละเอียดการใช้งานของ $1"
+  },
+  "optionsMetricSession": {
+    "message": "การใช้งานต่อเซสชัน"
+  },
+  "optionsMetricWeekly": {
+    "message": "การใช้งานรายสัปดาห์"
+  },
+  "optionsMetricModels": {
+    "message": "แยกตามโมเดล"
+  },
+  "optionsMetricReset": {
+    "message": "เวลารีเซ็ต"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "การรีเซ็ตที่ใช้ได้"
+  },
+  "optionsMetricPlan": {
+    "message": "แพ็กเกจ"
+  },
+  "optionsMetricSummary": {
+    "message": "ยอดคงเหลือ / สรุป"
+  },
+  "optionsMetricBalance": {
+    "message": "ยอดคงเหลือ"
+  },
+  "optionsBadgeTitle": {
+    "message": "ช่วงของไอคอน"
+  },
+  "optionsBadgeDescription": {
+    "message": "ไอคอนส่วนขยายเปลี่ยนทีละ 10% ตามแหล่งข้อมูลนี้"
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "แหล่งของไอคอน"
+  },
+  "optionsBadgeHighest": {
+    "message": "สูงสุดจากผู้ให้บริการที่แสดงอยู่"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "ใช้เปอร์เซ็นต์ปัจจุบันที่สูงที่สุดจากการ์ดที่แสดง"
+  },
+  "optionsBadgeSelected": {
+    "message": "ผู้ให้บริการที่เลือก"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "ใช้ผู้ให้บริการรายเดียวไม่ว่าการ์ดอื่นจะแสดงหรือไม่"
+  },
+  "optionsBadgeWindow": {
+    "message": "ช่วงการใช้งาน"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "เซสชัน"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "รายสัปดาห์"
+  },
+  "optionsBadgeProvider": {
+    "message": "ผู้ให้บริการ"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "ผู้ให้บริการนี้ถูกซ่อนในป๊อปอัป แต่ช่วงไอคอนยังทำงานอยู่"
+  },
+  "optionsBadgeSteps": {
+    "message": "ระดับของไอคอน"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "ปัดลงเป็น 10% ที่ใกล้ที่สุด"
+  },
+  "optionsOverlaysTitle": {
+    "message": "โอเวอร์เลย์บนหน้าเว็บ"
+  },
+  "optionsOverlaysDescription": {
+    "message": "แสดงแคปซูลการใช้งานแบบพับได้ข้างช่องพิมพ์ข้อความ"
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "เปิดโอเวอร์เลย์ $1 บนหน้าเว็บ"
+  },
+  "optionsResetTitle": {
+    "message": "รีเซ็ตเป็นค่าเริ่มต้น"
+  },
+  "optionsResetDescription": {
+    "message": "คืนค่าการตั้งค่าทั้งหมดในหน้านี้ ย้อนกลับไม่ได้"
+  },
+  "optionsResetAction": {
+    "message": "รีเซ็ตค่าเริ่มต้น"
+  },
+  "optionsResetConfirm": {
+    "message": "คลิกอีกครั้งเพื่อยืนยัน"
+  },
+  "planUsage": {
+    "message": "การใช้งานตามแพ็กเกจ"
+  },
+  "tokenPlan": {
+    "message": "แพ็กเกจโทเค็น"
+  },
+  "optionsTitle": {
+    "message": "การตั้งค่า AI Usage Tracker"
+  }
+}

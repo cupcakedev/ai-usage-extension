@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: лимити за Claude и Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Следете лимитите за сесия и седмица в Claude и ChatGPT (Codex) в изскачащ прозорец и наслагване. Без настройка."
+  },
+  "popupTitle": {
+    "message": "Потребление"
+  },
+  "refreshUsage": {
+    "message": "Обнови потреблението"
+  },
+  "refreshUsageLimits": {
+    "message": "Обнови лимитите"
+  },
+  "refreshErrorPrefix": {
+    "message": "Неуспешно обновяване"
+  },
+  "refreshFailed": {
+    "message": "Обновяването не успя"
+  },
+  "availableResetsLabel": {
+    "message": "Налични нулирания · $1"
+  },
+  "loadingSnapshot": {
+    "message": "зареждане"
+  },
+  "notConnected": {
+    "message": "няма връзка"
+  },
+  "updated": {
+    "message": "обновено $1"
+  },
+  "refreshing": {
+    "message": "обновяване..."
+  },
+  "waitingForSnapshot": {
+    "message": "изчакване на данни"
+  },
+  "sessionLimit": {
+    "message": "Сесия · 5 ч"
+  },
+  "weeklyLimit": {
+    "message": "Седмица · 7 д"
+  },
+  "planLabel": {
+    "message": "План · $1"
+  },
+  "resetsLabel": {
+    "message": "нулиране след $1"
+  },
+  "nextResetLabel": {
+    "message": "нулиране след $1"
+  },
+  "showLimits": {
+    "message": "Покажи лимитите"
+  },
+  "hideLimits": {
+    "message": "Скрий лимитите"
+  },
+  "emptyClaude": {
+    "message": "Още няма данни. Отворете claude.ai с вход в профила и обновете."
+  },
+  "emptyCodex": {
+    "message": "Още няма данни. Отворете chatgpt.com с вход в профила и обновете."
+  },
+  "emptyMiniMax": {
+    "message": "Още няма данни. Отворете platform.minimax.io с вход в профила и обновете."
+  },
+  "emptyKimi": {
+    "message": "Още няма данни. Отворете kimi.com/code с вход в профила и обновете."
+  },
+  "emptyCursor": {
+    "message": "Още няма данни. Отворете cursor.com с вход в профила и обновете."
+  },
+  "emptyMiMo": {
+    "message": "Още няма данни. Отворете platform.xiaomimimo.com с вход в профила и обновете."
+  },
+  "emptyOverlay": {
+    "message": "Още няма данни. Отворете изскачащия прозорец и обновете."
+  },
+  "sourceCode": {
+    "message": "Изходен код"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "неизвестно"
+  },
+  "timeNow": {
+    "message": "сега"
+  },
+  "timeJustNow": {
+    "message": "току-що"
+  },
+  "timeAgo": {
+    "message": "преди $1"
+  },
+  "timeDayShort": {
+    "message": "д"
+  },
+  "timeHourShort": {
+    "message": "ч"
+  },
+  "timeMinuteShort": {
+    "message": "м"
+  },
+  "optionsSaved": {
+    "message": "Всички промени са запазени"
+  },
+  "optionsSaving": {
+    "message": "Запазване…"
+  },
+  "optionsSaveError": {
+    "message": "Неуспешно запазване"
+  },
+  "optionsSkip": {
+    "message": "Към настройките"
+  },
+  "optionsLoading": {
+    "message": "Зареждане на настройките…"
+  },
+  "optionsNavLabel": {
+    "message": "Раздели с настройки"
+  },
+  "optionsNavLayout": {
+    "message": "Оформление"
+  },
+  "optionsNavProviders": {
+    "message": "Доставчици"
+  },
+  "optionsNavBadge": {
+    "message": "Икона в лентата"
+  },
+  "optionsNavOverlays": {
+    "message": "Наслагвания в страницата"
+  },
+  "optionsLayoutTitle": {
+    "message": "Оформление на прозореца"
+  },
+  "optionsLayoutDescription": {
+    "message": "Изберете как да се подредят видимите карти на доставчиците."
+  },
+  "optionsLayoutSingle": {
+    "message": "Една колона"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Карта на цялата ширина за всеки доставчик."
+  },
+  "optionsLayoutGrid": {
+    "message": "Две колони"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Компактен преглед с две карти на ред."
+  },
+  "optionsProvidersTitle": {
+    "message": "Доставчици"
+  },
+  "optionsProvidersDescription": {
+    "message": "Скрийте карта или изберете какви данни показва. Липсващите данни се скриват автоматично."
+  },
+  "optionsProvidersShown": {
+    "message": "показани $1 от $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 от $2 детайла"
+  },
+  "optionsProviderHidden": {
+    "message": "Скрито в прозореца"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Показвай $1 в прозореца"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Данни за потреблението: $1"
+  },
+  "optionsMetricSession": {
+    "message": "Потребление за сесия"
+  },
+  "optionsMetricWeekly": {
+    "message": "Седмично потребление"
+  },
+  "optionsMetricModels": {
+    "message": "Разбивка по модели"
+  },
+  "optionsMetricReset": {
+    "message": "Време за нулиране"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Налични нулирания"
+  },
+  "optionsMetricPlan": {
+    "message": "План"
+  },
+  "optionsMetricSummary": {
+    "message": "Баланс / обобщение"
+  },
+  "optionsMetricBalance": {
+    "message": "Баланс"
+  },
+  "optionsBadgeTitle": {
+    "message": "Диапазон на иконата"
+  },
+  "optionsBadgeDescription": {
+    "message": "Иконата на разширението се променя на стъпки от 10% според този източник."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Източник за иконата"
+  },
+  "optionsBadgeHighest": {
+    "message": "Най-високият сред видимите доставчици"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Използвай най-големия текущ процент сред показаните карти."
+  },
+  "optionsBadgeSelected": {
+    "message": "Избран доставчик"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Използвай един доставчик независимо от видимостта на другите карти."
+  },
+  "optionsBadgeWindow": {
+    "message": "Прозорец на потреблението"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Сесия"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Седмица"
+  },
+  "optionsBadgeProvider": {
+    "message": "Доставчик"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Този доставчик е скрит в прозореца, но диапазонът на иконата остава активен."
+  },
+  "optionsBadgeSteps": {
+    "message": "Стъпки на иконата"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "закръглено надолу до 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Наслагвания в страницата"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Показвай сгъваемата капсула с потребление до полето за съобщение."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Включи наслагването $1 в страницата"
+  },
+  "optionsResetTitle": {
+    "message": "Връщане към стандартните"
+  },
+  "optionsResetDescription": {
+    "message": "Възстановява всички настройки на тази страница. Действието е необратимо."
+  },
+  "optionsResetAction": {
+    "message": "Върни стандартните"
+  },
+  "optionsResetConfirm": {
+    "message": "Щракнете отново за потвърждение"
+  },
+  "planUsage": {
+    "message": "Потребление по план"
+  },
+  "tokenPlan": {
+    "message": "Токен план"
+  },
+  "optionsTitle": {
+    "message": "Настройки на AI Usage Tracker"
+  }
+}

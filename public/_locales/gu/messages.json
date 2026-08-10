@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude અને Codex મર્યાદા"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude અને ChatGPT (Codex) ની સત્ર તથા સાપ્તાહિક મર્યાદા પોપઅપ અને પેજ ઓવરલેમાં જુઓ. સેટઅપની જરૂર નથી."
+  },
+  "popupTitle": {
+    "message": "વપરાશ"
+  },
+  "refreshUsage": {
+    "message": "વપરાશ રિફ્રેશ કરો"
+  },
+  "refreshUsageLimits": {
+    "message": "મર્યાદા રિફ્રેશ કરો"
+  },
+  "refreshErrorPrefix": {
+    "message": "રિફ્રેશ થઈ શક્યું નહીં"
+  },
+  "refreshFailed": {
+    "message": "રિફ્રેશ નિષ્ફળ"
+  },
+  "availableResetsLabel": {
+    "message": "ઉપલબ્ધ રીસેટ · $1"
+  },
+  "loadingSnapshot": {
+    "message": "લોડ થઈ રહ્યું છે"
+  },
+  "notConnected": {
+    "message": "કનેક્ટ નથી"
+  },
+  "updated": {
+    "message": "અપડેટ $1"
+  },
+  "refreshing": {
+    "message": "રિફ્રેશ થઈ રહ્યું છે..."
+  },
+  "waitingForSnapshot": {
+    "message": "ડેટાની રાહ"
+  },
+  "sessionLimit": {
+    "message": "સત્ર · ૫ કલાક"
+  },
+  "weeklyLimit": {
+    "message": "સાપ્તાહિક · ૭ દિવસ"
+  },
+  "planLabel": {
+    "message": "પ્લાન · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 પછી રીસેટ"
+  },
+  "nextResetLabel": {
+    "message": "$1 પછી રીસેટ"
+  },
+  "showLimits": {
+    "message": "મર્યાદા બતાવો"
+  },
+  "hideLimits": {
+    "message": "મર્યાદા છુપાવો"
+  },
+  "emptyClaude": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે claude.ai ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyCodex": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે chatgpt.com ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyMiniMax": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે platform.minimax.io ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyKimi": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે kimi.com/code ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyCursor": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે cursor.com ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyMiMo": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે platform.xiaomimimo.com ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyOverlay": {
+    "message": "હજુ ડેટા નથી. પોપઅપ ખોલો અને રિફ્રેશ કરો."
+  },
+  "sourceCode": {
+    "message": "સોર્સ કોડ"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "અજ્ઞાત"
+  },
+  "timeNow": {
+    "message": "હમણાં"
+  },
+  "timeJustNow": {
+    "message": "હમણાં જ"
+  },
+  "timeAgo": {
+    "message": "$1 પહેલાં"
+  },
+  "timeDayShort": {
+    "message": "દિ"
+  },
+  "timeHourShort": {
+    "message": "ક"
+  },
+  "timeMinuteShort": {
+    "message": "મિ"
+  },
+  "optionsSaved": {
+    "message": "બધા ફેરફાર સાચવ્યા"
+  },
+  "optionsSaving": {
+    "message": "સાચવી રહ્યું છે…"
+  },
+  "optionsSaveError": {
+    "message": "સાચવી શકાયું નહીં"
+  },
+  "optionsSkip": {
+    "message": "સેટિંગ્સ પર જાઓ"
+  },
+  "optionsLoading": {
+    "message": "સેટિંગ્સ લોડ થઈ રહી છે…"
+  },
+  "optionsNavLabel": {
+    "message": "સેટિંગ્સ વિભાગો"
+  },
+  "optionsNavLayout": {
+    "message": "લેઆઉટ"
+  },
+  "optionsNavProviders": {
+    "message": "પ્રોવાઇડર"
+  },
+  "optionsNavBadge": {
+    "message": "ટૂલબાર આઇકન"
+  },
+  "optionsNavOverlays": {
+    "message": "પેજ પરના ઓવરલે"
+  },
+  "optionsLayoutTitle": {
+    "message": "પોપઅપ લેઆઉટ"
+  },
+  "optionsLayoutDescription": {
+    "message": "દેખાતાં પ્રોવાઇડર કાર્ડ કેવી રીતે ગોઠવાય તે પસંદ કરો."
+  },
+  "optionsLayoutSingle": {
+    "message": "એક કૉલમ"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "દરેક પ્રોવાઇડર માટે પૂર્ણ પહોળાઈનું કાર્ડ."
+  },
+  "optionsLayoutGrid": {
+    "message": "બે કૉલમ"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "દર હરોળમાં બે કાર્ડ સાથે સંક્ષિપ્ત દૃશ્ય."
+  },
+  "optionsProvidersTitle": {
+    "message": "પ્રોવાઇડર"
+  },
+  "optionsProvidersDescription": {
+    "message": "કાર્ડ છુપાવો અથવા તે કઈ વિગતો બતાવે તે પસંદ કરો. અનુપલબ્ધ ડેટા આપોઆપ છુપાય છે."
+  },
+  "optionsProvidersShown": {
+    "message": "$2 માંથી $1 દેખાય છે"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 માંથી $1 વિગતો"
+  },
+  "optionsProviderHidden": {
+    "message": "પોપઅપમાં છુપાયેલ"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "પોપઅપમાં $1 બતાવો"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 ની વપરાશ વિગતો"
+  },
+  "optionsMetricSession": {
+    "message": "સત્ર વપરાશ"
+  },
+  "optionsMetricWeekly": {
+    "message": "સાપ્તાહિક વપરાશ"
+  },
+  "optionsMetricModels": {
+    "message": "મોડેલ પ્રમાણે વિભાજન"
+  },
+  "optionsMetricReset": {
+    "message": "રીસેટ સમય"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "ઉપલબ્ધ રીસેટ"
+  },
+  "optionsMetricPlan": {
+    "message": "પ્લાન"
+  },
+  "optionsMetricSummary": {
+    "message": "બેલેન્સ / સારાંશ"
+  },
+  "optionsMetricBalance": {
+    "message": "બેલેન્સ"
+  },
+  "optionsBadgeTitle": {
+    "message": "આઇકન રેન્જ"
+  },
+  "optionsBadgeDescription": {
+    "message": "આ સ્રોત મુજબ એક્સ્ટેન્શન આઇકન ૧૦% ના તબક્કે બદલાય છે."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "આઇકનનો સ્રોત"
+  },
+  "optionsBadgeHighest": {
+    "message": "દેખાતા પ્રોવાઇડરમાં સૌથી વધુ"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "બતાવેલા કાર્ડમાંથી હાલની સૌથી મોટી ટકાવારી વાપરો."
+  },
+  "optionsBadgeSelected": {
+    "message": "પસંદ કરેલ પ્રોવાઇડર"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "બીજાં કાર્ડ દેખાય કે નહીં, એક જ પ્રોવાઇડર વાપરો."
+  },
+  "optionsBadgeWindow": {
+    "message": "વપરાશ વિન્ડો"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "સત્ર"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "સાપ્તાહિક"
+  },
+  "optionsBadgeProvider": {
+    "message": "પ્રોવાઇડર"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "આ પ્રોવાઇડર પોપઅપમાં છુપાયેલ છે, પણ તેની આઇકન રેન્જ ચાલુ રહે છે."
+  },
+  "optionsBadgeSteps": {
+    "message": "આઇકનના તબક્કા"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "નજીકના ૧૦% સુધી નીચે"
+  },
+  "optionsOverlaysTitle": {
+    "message": "પેજ પરના ઓવરલે"
+  },
+  "optionsOverlaysDescription": {
+    "message": "મેસેજ બોક્સ પાસે સંકેલી શકાય તેવું વપરાશ કેપ્સ્યુલ બતાવો."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 નું પેજ ઓવરલે ચાલુ કરો"
+  },
+  "optionsResetTitle": {
+    "message": "ડિફોલ્ટ પર રીસેટ"
+  },
+  "optionsResetDescription": {
+    "message": "આ પેજની બધી પસંદગીઓ પુનઃસ્થાપિત કરે છે. આ પાછું લઈ શકાતું નથી."
+  },
+  "optionsResetAction": {
+    "message": "ડિફોલ્ટ પુનઃસ્થાપિત"
+  },
+  "optionsResetConfirm": {
+    "message": "પુષ્ટિ માટે ફરી ક્લિક કરો"
+  },
+  "planUsage": {
+    "message": "પ્લાન વપરાશ"
+  },
+  "tokenPlan": {
+    "message": "ટોકન પ્લાન"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker સેટિંગ્સ"
+  }
+}

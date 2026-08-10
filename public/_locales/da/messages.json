@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: grænser for Claude og Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Følg sessions- og ugegrænser for Claude og ChatGPT (Codex) i en popup og som overlay på siden. Uden opsætning."
+  },
+  "popupTitle": {
+    "message": "Forbrug"
+  },
+  "refreshUsage": {
+    "message": "Opdater forbrug"
+  },
+  "refreshUsageLimits": {
+    "message": "Opdater grænser"
+  },
+  "refreshErrorPrefix": {
+    "message": "Kunne ikke opdatere"
+  },
+  "refreshFailed": {
+    "message": "Opdatering mislykkedes"
+  },
+  "availableResetsLabel": {
+    "message": "Tilgængelige nulstillinger · $1"
+  },
+  "loadingSnapshot": {
+    "message": "indlæser"
+  },
+  "notConnected": {
+    "message": "ikke forbundet"
+  },
+  "updated": {
+    "message": "opdateret $1"
+  },
+  "refreshing": {
+    "message": "opdaterer..."
+  },
+  "waitingForSnapshot": {
+    "message": "venter på data"
+  },
+  "sessionLimit": {
+    "message": "Session · 5 t"
+  },
+  "weeklyLimit": {
+    "message": "Uge · 7 d"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "nulstilles om $1"
+  },
+  "nextResetLabel": {
+    "message": "nulstilles om $1"
+  },
+  "showLimits": {
+    "message": "Vis grænser"
+  },
+  "hideLimits": {
+    "message": "Skjul grænser"
+  },
+  "emptyClaude": {
+    "message": "Ingen data endnu. Åbn claude.ai, mens du er logget ind, og opdater."
+  },
+  "emptyCodex": {
+    "message": "Ingen data endnu. Åbn chatgpt.com, mens du er logget ind, og opdater."
+  },
+  "emptyMiniMax": {
+    "message": "Ingen data endnu. Åbn platform.minimax.io, mens du er logget ind, og opdater."
+  },
+  "emptyKimi": {
+    "message": "Ingen data endnu. Åbn kimi.com/code, mens du er logget ind, og opdater."
+  },
+  "emptyCursor": {
+    "message": "Ingen data endnu. Åbn cursor.com, mens du er logget ind, og opdater."
+  },
+  "emptyMiMo": {
+    "message": "Ingen data endnu. Åbn platform.xiaomimimo.com, mens du er logget ind, og opdater."
+  },
+  "emptyOverlay": {
+    "message": "Ingen data endnu. Åbn popuppen, og opdater."
+  },
+  "sourceCode": {
+    "message": "Kildekode"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "ukendt"
+  },
+  "timeNow": {
+    "message": "nu"
+  },
+  "timeJustNow": {
+    "message": "lige nu"
+  },
+  "timeAgo": {
+    "message": "for $1 siden"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "t"
+  },
+  "timeMinuteShort": {
+    "message": "m"
+  },
+  "optionsSaved": {
+    "message": "Alle ændringer er gemt"
+  },
+  "optionsSaving": {
+    "message": "Gemmer…"
+  },
+  "optionsSaveError": {
+    "message": "Kunne ikke gemme"
+  },
+  "optionsSkip": {
+    "message": "Gå til indstillinger"
+  },
+  "optionsLoading": {
+    "message": "Indlæser indstillinger…"
+  },
+  "optionsNavLabel": {
+    "message": "Indstillingsafsnit"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Udbydere"
+  },
+  "optionsNavBadge": {
+    "message": "Værktøjslinjeikon"
+  },
+  "optionsNavOverlays": {
+    "message": "Overlays på siden"
+  },
+  "optionsLayoutTitle": {
+    "message": "Popup-layout"
+  },
+  "optionsLayoutDescription": {
+    "message": "Vælg, hvordan synlige udbyderkort placeres i popuppen."
+  },
+  "optionsLayoutSingle": {
+    "message": "Én kolonne"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Et kort i fuld bredde til hver udbyder."
+  },
+  "optionsLayoutGrid": {
+    "message": "To kolonner"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Kompakt overblik med to kort pr. række."
+  },
+  "optionsProvidersTitle": {
+    "message": "Udbydere"
+  },
+  "optionsProvidersDescription": {
+    "message": "Skjul et kort, eller vælg hvilke oplysninger det viser. Utilgængelige data forbliver skjult."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 af $2 vises"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 af $2 detaljer"
+  },
+  "optionsProviderHidden": {
+    "message": "Skjult i popuppen"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Vis $1 i popuppen"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Forbrugsdetaljer for $1"
+  },
+  "optionsMetricSession": {
+    "message": "Sessionsforbrug"
+  },
+  "optionsMetricWeekly": {
+    "message": "Ugeforbrug"
+  },
+  "optionsMetricModels": {
+    "message": "Fordeling pr. model"
+  },
+  "optionsMetricReset": {
+    "message": "Nulstillingstid"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Tilgængelige nulstillinger"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / oversigt"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Ikonets interval"
+  },
+  "optionsBadgeDescription": {
+    "message": "Udvidelsens ikon skifter i trin på 10 % ud fra denne kilde."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Ikonkilde"
+  },
+  "optionsBadgeHighest": {
+    "message": "Højeste blandt synlige udbydere"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Brug den højeste aktuelle procent blandt viste kort."
+  },
+  "optionsBadgeSelected": {
+    "message": "Valgt udbyder"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Brug én udbyder uanset om andre kort vises."
+  },
+  "optionsBadgeWindow": {
+    "message": "Forbrugsvindue"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Session"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Uge"
+  },
+  "optionsBadgeProvider": {
+    "message": "Udbyder"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Udbyderen er skjult i popuppen, men ikonets interval er stadig aktivt."
+  },
+  "optionsBadgeSteps": {
+    "message": "Ikonets trin"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "rundet ned til 10 %"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Overlays på siden"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Vis den sammenklappelige forbrugskapsel ved siden af beskedfeltet."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Aktivér $1-overlay på siden"
+  },
+  "optionsResetTitle": {
+    "message": "Nulstil til standard"
+  },
+  "optionsResetDescription": {
+    "message": "Gendanner alle indstillinger på denne side. Det kan ikke fortrydes."
+  },
+  "optionsResetAction": {
+    "message": "Nulstil"
+  },
+  "optionsResetConfirm": {
+    "message": "Klik igen for at bekræfte"
+  },
+  "planUsage": {
+    "message": "Planforbrug"
+  },
+  "tokenPlan": {
+    "message": "Tokenplan"
+  },
+  "optionsTitle": {
+    "message": "Indstillinger for AI Usage Tracker"
+  }
+}

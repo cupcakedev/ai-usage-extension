@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: Claude आणि Codex मर्यादा"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Claude आणि ChatGPT (Codex) च्या सत्र व साप्ताहिक मर्यादा पॉपअप आणि पेज ओव्हरलेमध्ये पाहा. सेटअपची गरज नाही."
+  },
+  "popupTitle": {
+    "message": "वापर"
+  },
+  "refreshUsage": {
+    "message": "वापर रिफ्रेश करा"
+  },
+  "refreshUsageLimits": {
+    "message": "मर्यादा रिफ्रेश करा"
+  },
+  "refreshErrorPrefix": {
+    "message": "रिफ्रेश करता आले नाही"
+  },
+  "refreshFailed": {
+    "message": "रिफ्रेश अयशस्वी"
+  },
+  "availableResetsLabel": {
+    "message": "उपलब्ध रीसेट · $1"
+  },
+  "loadingSnapshot": {
+    "message": "लोड होत आहे"
+  },
+  "notConnected": {
+    "message": "कनेक्ट नाही"
+  },
+  "updated": {
+    "message": "अद्ययावत $1"
+  },
+  "refreshing": {
+    "message": "रिफ्रेश होत आहे..."
+  },
+  "waitingForSnapshot": {
+    "message": "डेटाची प्रतीक्षा"
+  },
+  "sessionLimit": {
+    "message": "सत्र · ५ तास"
+  },
+  "weeklyLimit": {
+    "message": "साप्ताहिक · ७ दिवस"
+  },
+  "planLabel": {
+    "message": "प्लॅन · $1"
+  },
+  "resetsLabel": {
+    "message": "$1 नंतर रीसेट"
+  },
+  "nextResetLabel": {
+    "message": "$1 नंतर रीसेट"
+  },
+  "showLimits": {
+    "message": "मर्यादा दाखवा"
+  },
+  "hideLimits": {
+    "message": "मर्यादा लपवा"
+  },
+  "emptyClaude": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना claude.ai उघडा आणि रिफ्रेश करा."
+  },
+  "emptyCodex": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना chatgpt.com उघडा आणि रिफ्रेश करा."
+  },
+  "emptyMiniMax": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना platform.minimax.io उघडा आणि रिफ्रेश करा."
+  },
+  "emptyKimi": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना kimi.com/code उघडा आणि रिफ्रेश करा."
+  },
+  "emptyCursor": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना cursor.com उघडा आणि रिफ्रेश करा."
+  },
+  "emptyMiMo": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना platform.xiaomimimo.com उघडा आणि रिफ्रेश करा."
+  },
+  "emptyOverlay": {
+    "message": "अद्याप डेटा नाही. पॉपअप उघडा आणि रिफ्रेश करा."
+  },
+  "sourceCode": {
+    "message": "स्रोत कोड"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "अज्ञात"
+  },
+  "timeNow": {
+    "message": "आत्ता"
+  },
+  "timeJustNow": {
+    "message": "आत्ताच"
+  },
+  "timeAgo": {
+    "message": "$1 पूर्वी"
+  },
+  "timeDayShort": {
+    "message": "दि"
+  },
+  "timeHourShort": {
+    "message": "ता"
+  },
+  "timeMinuteShort": {
+    "message": "मि"
+  },
+  "optionsSaved": {
+    "message": "सर्व बदल जतन झाले"
+  },
+  "optionsSaving": {
+    "message": "जतन होत आहे…"
+  },
+  "optionsSaveError": {
+    "message": "जतन करता आले नाही"
+  },
+  "optionsSkip": {
+    "message": "सेटिंग्जवर जा"
+  },
+  "optionsLoading": {
+    "message": "सेटिंग्ज लोड होत आहेत…"
+  },
+  "optionsNavLabel": {
+    "message": "सेटिंग्ज विभाग"
+  },
+  "optionsNavLayout": {
+    "message": "मांडणी"
+  },
+  "optionsNavProviders": {
+    "message": "प्रोव्हायडर"
+  },
+  "optionsNavBadge": {
+    "message": "टूलबार चिन्ह"
+  },
+  "optionsNavOverlays": {
+    "message": "पेजवरील ओव्हरले"
+  },
+  "optionsLayoutTitle": {
+    "message": "पॉपअप मांडणी"
+  },
+  "optionsLayoutDescription": {
+    "message": "दिसणारी प्रोव्हायडर कार्ड कशी मांडायची ते निवडा."
+  },
+  "optionsLayoutSingle": {
+    "message": "एक स्तंभ"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "प्रत्येक प्रोव्हायडरसाठी पूर्ण रुंदीचे कार्ड."
+  },
+  "optionsLayoutGrid": {
+    "message": "दोन स्तंभ"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "प्रत्येक ओळीत दोन कार्डांचे संक्षिप्त दृश्य."
+  },
+  "optionsProvidersTitle": {
+    "message": "प्रोव्हायडर"
+  },
+  "optionsProvidersDescription": {
+    "message": "कार्ड लपवा किंवा ते कोणती माहिती दाखवेल ते निवडा. उपलब्ध नसलेला डेटा आपोआप लपतो."
+  },
+  "optionsProvidersShown": {
+    "message": "$2 पैकी $1 दिसत आहेत"
+  },
+  "optionsProviderDetails": {
+    "message": "$2 पैकी $1 तपशील"
+  },
+  "optionsProviderHidden": {
+    "message": "पॉपअपमध्ये लपवलेले"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "पॉपअपमध्ये $1 दाखवा"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "$1 चे वापर तपशील"
+  },
+  "optionsMetricSession": {
+    "message": "सत्रातील वापर"
+  },
+  "optionsMetricWeekly": {
+    "message": "साप्ताहिक वापर"
+  },
+  "optionsMetricModels": {
+    "message": "मॉडेलनुसार विभागणी"
+  },
+  "optionsMetricReset": {
+    "message": "रीसेटची वेळ"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "उपलब्ध रीसेट"
+  },
+  "optionsMetricPlan": {
+    "message": "प्लॅन"
+  },
+  "optionsMetricSummary": {
+    "message": "शिल्लक / सारांश"
+  },
+  "optionsMetricBalance": {
+    "message": "शिल्लक"
+  },
+  "optionsBadgeTitle": {
+    "message": "चिन्हाची श्रेणी"
+  },
+  "optionsBadgeDescription": {
+    "message": "या स्रोतानुसार विस्ताराचे चिन्ह १०% टप्प्यांत बदलते."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "चिन्हाचा स्रोत"
+  },
+  "optionsBadgeHighest": {
+    "message": "दिसणाऱ्या प्रोव्हायडरपैकी सर्वाधिक"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "दाखवलेल्या कार्डांपैकी सध्याची सर्वाधिक टक्केवारी वापरा."
+  },
+  "optionsBadgeSelected": {
+    "message": "निवडलेला प्रोव्हायडर"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "इतर कार्ड दिसो वा न दिसो, एकच प्रोव्हायडर वापरा."
+  },
+  "optionsBadgeWindow": {
+    "message": "वापराची विंडो"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "सत्र"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "साप्ताहिक"
+  },
+  "optionsBadgeProvider": {
+    "message": "प्रोव्हायडर"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "हा प्रोव्हायडर पॉपअपमध्ये लपवलेला आहे, पण त्याची चिन्ह श्रेणी सुरू राहते."
+  },
+  "optionsBadgeSteps": {
+    "message": "चिन्हाचे टप्पे"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "जवळच्या १०% पर्यंत खाली"
+  },
+  "optionsOverlaysTitle": {
+    "message": "पेजवरील ओव्हरले"
+  },
+  "optionsOverlaysDescription": {
+    "message": "मेसेज बॉक्सशेजारी घडी घालता येणारे वापर कॅप्सूल दाखवा."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "$1 चे पेज ओव्हरले सुरू करा"
+  },
+  "optionsResetTitle": {
+    "message": "डीफॉल्टवर रीसेट"
+  },
+  "optionsResetDescription": {
+    "message": "या पानावरील सर्व प्राधान्ये पूर्ववत करते. हे पूर्ववत करता येणार नाही."
+  },
+  "optionsResetAction": {
+    "message": "डीफॉल्ट पूर्ववत"
+  },
+  "optionsResetConfirm": {
+    "message": "पुष्टीसाठी पुन्हा क्लिक करा"
+  },
+  "planUsage": {
+    "message": "प्लॅनचा वापर"
+  },
+  "tokenPlan": {
+    "message": "टोकन प्लॅन"
+  },
+  "optionsTitle": {
+    "message": "AI Usage Tracker सेटिंग्ज"
+  }
+}

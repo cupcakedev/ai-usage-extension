@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: מגבלות Claude ו-Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "עקבו אחר מגבלות הסשן והשבוע ב-Claude וב-ChatGPT (Codex) בחלון קופץ ובשכבה על הדף. בלי הגדרות."
+  },
+  "popupTitle": {
+    "message": "שימוש"
+  },
+  "refreshUsage": {
+    "message": "רענון השימוש"
+  },
+  "refreshUsageLimits": {
+    "message": "רענון המגבלות"
+  },
+  "refreshErrorPrefix": {
+    "message": "הרענון נכשל"
+  },
+  "refreshFailed": {
+    "message": "הרענון נכשל"
+  },
+  "availableResetsLabel": {
+    "message": "איפוסים זמינים · $1"
+  },
+  "loadingSnapshot": {
+    "message": "טוען"
+  },
+  "notConnected": {
+    "message": "לא מחובר"
+  },
+  "updated": {
+    "message": "עודכן $1"
+  },
+  "refreshing": {
+    "message": "מרענן..."
+  },
+  "waitingForSnapshot": {
+    "message": "ממתין לנתונים"
+  },
+  "sessionLimit": {
+    "message": "סשן · 5 ש׳"
+  },
+  "weeklyLimit": {
+    "message": "שבוע · 7 י׳"
+  },
+  "planLabel": {
+    "message": "מסלול · $1"
+  },
+  "resetsLabel": {
+    "message": "איפוס בעוד $1"
+  },
+  "nextResetLabel": {
+    "message": "איפוס בעוד $1"
+  },
+  "showLimits": {
+    "message": "הצגת מגבלות"
+  },
+  "hideLimits": {
+    "message": "הסתרת מגבלות"
+  },
+  "emptyClaude": {
+    "message": "אין נתונים עדיין. פתחו את claude.ai כשאתם מחוברים ורעננו."
+  },
+  "emptyCodex": {
+    "message": "אין נתונים עדיין. פתחו את chatgpt.com כשאתם מחוברים ורעננו."
+  },
+  "emptyMiniMax": {
+    "message": "אין נתונים עדיין. פתחו את platform.minimax.io כשאתם מחוברים ורעננו."
+  },
+  "emptyKimi": {
+    "message": "אין נתונים עדיין. פתחו את kimi.com/code כשאתם מחוברים ורעננו."
+  },
+  "emptyCursor": {
+    "message": "אין נתונים עדיין. פתחו את cursor.com כשאתם מחוברים ורעננו."
+  },
+  "emptyMiMo": {
+    "message": "אין נתונים עדיין. פתחו את platform.xiaomimimo.com כשאתם מחוברים ורעננו."
+  },
+  "emptyOverlay": {
+    "message": "אין נתונים עדיין. פתחו את החלון הקופץ ורעננו."
+  },
+  "sourceCode": {
+    "message": "קוד מקור"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "לא ידוע"
+  },
+  "timeNow": {
+    "message": "עכשיו"
+  },
+  "timeJustNow": {
+    "message": "הרגע"
+  },
+  "timeAgo": {
+    "message": "לפני $1"
+  },
+  "timeDayShort": {
+    "message": "י׳"
+  },
+  "timeHourShort": {
+    "message": "ש׳"
+  },
+  "timeMinuteShort": {
+    "message": "ד׳"
+  },
+  "optionsSaved": {
+    "message": "כל השינויים נשמרו"
+  },
+  "optionsSaving": {
+    "message": "שומר…"
+  },
+  "optionsSaveError": {
+    "message": "השמירה נכשלה"
+  },
+  "optionsSkip": {
+    "message": "דלגו להגדרות"
+  },
+  "optionsLoading": {
+    "message": "טוען הגדרות…"
+  },
+  "optionsNavLabel": {
+    "message": "מקטעי הגדרות"
+  },
+  "optionsNavLayout": {
+    "message": "פריסה"
+  },
+  "optionsNavProviders": {
+    "message": "ספקים"
+  },
+  "optionsNavBadge": {
+    "message": "סמל בסרגל הכלים"
+  },
+  "optionsNavOverlays": {
+    "message": "שכבות על הדף"
+  },
+  "optionsLayoutTitle": {
+    "message": "פריסת החלון הקופץ"
+  },
+  "optionsLayoutDescription": {
+    "message": "בחרו איך יסודרו כרטיסי הספקים הגלויים."
+  },
+  "optionsLayoutSingle": {
+    "message": "טור אחד"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "כרטיס ברוחב מלא לכל ספק."
+  },
+  "optionsLayoutGrid": {
+    "message": "שני טורים"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "תצוגה קומפקטית, שני כרטיסים בשורה."
+  },
+  "optionsProvidersTitle": {
+    "message": "ספקים"
+  },
+  "optionsProvidersDescription": {
+    "message": "הסתירו כרטיס או בחרו אילו נתונים יוצגו בו. נתונים שאינם זמינים מוסתרים אוטומטית."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 מתוך $2 מוצגים"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 מתוך $2 פרטים"
+  },
+  "optionsProviderHidden": {
+    "message": "מוסתר בחלון הקופץ"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "הצגת $1 בחלון הקופץ"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "פרטי שימוש של $1"
+  },
+  "optionsMetricSession": {
+    "message": "שימוש בסשן"
+  },
+  "optionsMetricWeekly": {
+    "message": "שימוש שבועי"
+  },
+  "optionsMetricModels": {
+    "message": "פירוט לפי מודלים"
+  },
+  "optionsMetricReset": {
+    "message": "מועד האיפוס"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "איפוסים זמינים"
+  },
+  "optionsMetricPlan": {
+    "message": "מסלול"
+  },
+  "optionsMetricSummary": {
+    "message": "יתרה / סיכום"
+  },
+  "optionsMetricBalance": {
+    "message": "יתרה"
+  },
+  "optionsBadgeTitle": {
+    "message": "טווח הסמל"
+  },
+  "optionsBadgeDescription": {
+    "message": "סמל התוסף משתנה בצעדים של 10% לפי המקור הזה."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "מקור הסמל"
+  },
+  "optionsBadgeHighest": {
+    "message": "הגבוה מבין הספקים הגלויים"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "השתמשו באחוז הנוכחי הגבוה ביותר מבין הכרטיסים המוצגים."
+  },
+  "optionsBadgeSelected": {
+    "message": "ספק נבחר"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "השתמשו בספק אחד ללא תלות בכרטיסים האחרים."
+  },
+  "optionsBadgeWindow": {
+    "message": "חלון השימוש"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "סשן"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "שבועי"
+  },
+  "optionsBadgeProvider": {
+    "message": "ספק"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "הספק הזה מוסתר בחלון הקופץ, אך טווח הסמל שלו נשאר פעיל."
+  },
+  "optionsBadgeSteps": {
+    "message": "דרגות הסמל"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "מעוגל למטה ל-10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "שכבות על הדף"
+  },
+  "optionsOverlaysDescription": {
+    "message": "הצגת קפסולת שימוש מתקפלת ליד תיבת ההודעה."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "הפעלת שכבת $1 על הדף"
+  },
+  "optionsResetTitle": {
+    "message": "איפוס לברירת המחדל"
+  },
+  "optionsResetDescription": {
+    "message": "משחזר את כל ההעדפות בדף הזה. לא ניתן לבטל."
+  },
+  "optionsResetAction": {
+    "message": "איפוס"
+  },
+  "optionsResetConfirm": {
+    "message": "לחצו שוב לאישור"
+  },
+  "planUsage": {
+    "message": "שימוש במסלול"
+  },
+  "tokenPlan": {
+    "message": "מסלול טוקנים"
+  },
+  "optionsTitle": {
+    "message": "הגדרות AI Usage Tracker"
+  }
+}

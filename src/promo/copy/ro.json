@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Capacitate AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Un singur popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "și Xiaomi MiMo pe un singur ecran."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay pe pagină",
+      "sub": [
+        "Limitele de sesiune și săptămână chiar",
+        "lângă câmpul de mesaj din Claude și ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Setările tale",
+      "sub": [
+        "Alege furnizorii, aspectul și exact ce",
+        "detalii afișează fiecare card."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Iconiță și overlay-uri",
+      "sub": [
+        "Iconița urmărește consumul maxim în trepte",
+        "de 10% — fără să deschizi popupul."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Fără configurare",
+      "sub": [
+        "Fără chei API, conturi noi sau servere.",
+        "Totul rămâne în browserul tău."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Șase furnizori, un popup: limite de sesiune și săptămână,",
+      "iconiță în bară, overlay-uri și control total."
+    ]
+  },
+  "tile": {
+    "sub": "Șase furnizori. Un popup."
+  },
+  "highlights": {
+    "title": "Șase furnizori, zero configurare",
+    "items": [
+      {
+        "title": "Fără chei API și fără conturi noi",
+        "body": "Citește sesiunile în care browserul este deja autentificat."
+      },
+      {
+        "title": "Nimic nu iese din browser",
+        "body": "Fără servere, conturi sau telemetrie — totul rămâne local."
+      },
+      {
+        "title": "Se reîmprospătează la 5 minute",
+        "body": "Sincronizarea din fundal ține totul la zi."
+      }
+    ]
+  }
+}

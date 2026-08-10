@@ -62,9 +62,6 @@
   "hideLimits": {
     "message": "Nascondi limiti"
   },
-  "limitsTab": {
-    "message": "LIMITI"
-  },
   "emptyClaude": {
     "message": "Ancora nessun dato. Apri claude.ai con accesso effettuato e aggiorna."
   },

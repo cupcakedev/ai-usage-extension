@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Kapasidad ng AI",
+  "shots": {
+    "popup": {
+      "eyebrow": "Isang popup",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor,",
+        "at Xiaomi MiMo sa isang screen."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Overlay sa pahina",
+      "sub": [
+        "Session at lingguhang limitasyon katabi mismo",
+        "ng message box ng Claude at ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Ang setup mo",
+      "sub": [
+        "Piliin ang mga provider, layout, at kung anong",
+        "detalye ang ipapakita ng bawat card."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Icon at mga overlay",
+      "sub": [
+        "Sinusundan ng icon ang pinakamataas na gamit",
+        "kada 10% — hindi na kailangang buksan."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Walang setup",
+      "sub": [
+        "Walang API key, log in, o server.",
+        "Nananatili ang lahat sa browser mo."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Anim na provider, isang popup: session at lingguhang",
+      "limitasyon, icon sa toolbar, overlay, at buong kontrol."
+    ]
+  },
+  "tile": {
+    "sub": "Anim na provider. Isang popup."
+  },
+  "highlights": {
+    "title": "Anim na provider, walang setup",
+    "items": [
+      {
+        "title": "Walang API key, walang dagdag na log in",
+        "body": "Binabasa ang mga session na naka-sign in na ang browser mo."
+      },
+      {
+        "title": "Walang lumalabas sa browser mo",
+        "body": "Walang server, account, o telemetry — lokal ang lahat ng data."
+      },
+      {
+        "title": "Nagre-refresh kada 5 minuto",
+        "body": "Pinapanatiling updated ng background sync ang lahat."
+      }
+    ]
+  }
+}

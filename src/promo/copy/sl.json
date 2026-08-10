@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Zmogljivost UI",
+  "shots": {
+    "popup": {
+      "eyebrow": "En pojavni okvir",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "in Xiaomi MiMo na enem zaslonu."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Prekriv na strani",
+      "sub": [
+        "Omejitve seje in tedna tik ob polju",
+        "za sporočilo v Claude in ChatGPT."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Vaše nastavitve",
+      "sub": [
+        "Izberite ponudnike, postavitev in to,",
+        "katere podatke kaže vsaka kartica."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikona in prekrivi",
+      "sub": [
+        "Ikona sledi najvišji porabi v korakih",
+        "po 10 % — brez odpiranja okna."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Brez nastavljanja",
+      "sub": [
+        "Brez ključev API, prijav in strežnikov.",
+        "Vse ostane v vašem brskalniku."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Šest ponudnikov, eno okno: omejitve seje in tedna,",
+      "ikona v orodni vrstici, prekrivi in polni nadzor."
+    ]
+  },
+  "tile": {
+    "sub": "Šest ponudnikov. Eno okno."
+  },
+  "highlights": {
+    "title": "Šest ponudnikov, nič nastavljanja",
+    "items": [
+      {
+        "title": "Brez ključev API in dodatnih prijav",
+        "body": "Bere seje, v katere je brskalnik že prijavljen."
+      },
+      {
+        "title": "Nič ne zapusti brskalnika",
+        "body": "Brez strežnikov, računov in telemetrije — vse ostane lokalno."
+      },
+      {
+        "title": "Osveži se vsakih 5 minut",
+        "body": "Sinhronizacija v ozadju ohranja vse posodobljeno."
+      }
+    ]
+  }
+}

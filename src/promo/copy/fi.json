@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Tekoälyn kapasiteetti",
+  "shots": {
+    "popup": {
+      "eyebrow": "Yksi ponnahdusikkuna",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "ja Xiaomi MiMo yhdellä näytöllä."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Peittokuva sivulla",
+      "sub": [
+        "Istunto- ja viikkorajat aivan Clauden ja",
+        "ChatGPT:n viestikentän vieressä."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Omat asetuksesi",
+      "sub": [
+        "Valitse palvelut, asettelu ja tarkalleen",
+        "mitä tietoja kukin kortti näyttää."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Kuvake ja peittokuvat",
+      "sub": [
+        "Kuvake seuraa suurinta käyttöä 10 %:n",
+        "portain — ilman ponnahdusikkunaa."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Ei asennusta",
+      "sub": [
+        "Ei API-avaimia, kirjautumisia tai palvelimia.",
+        "Kaikki pysyy selaimessasi."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Kuusi palvelua, yksi ikkuna: istunto- ja viikkorajat,",
+      "kuvake työkalurivillä, peittokuvat ja täysi hallinta."
+    ]
+  },
+  "tile": {
+    "sub": "Kuusi palvelua. Yksi ikkuna."
+  },
+  "highlights": {
+    "title": "Kuusi palvelua, ei asennusta",
+    "items": [
+      {
+        "title": "Ei API-avaimia eikä lisäkirjautumisia",
+        "body": "Lukee istunnot, joihin selaimesi on jo kirjautunut."
+      },
+      {
+        "title": "Mikään ei lähde selaimestasi",
+        "body": "Ei palvelimia, tilejä tai telemetriaa — kaikki pysyy paikallisena."
+      },
+      {
+        "title": "Päivittyy itsestään 5 minuutin välein",
+        "body": "Taustasynkronointi pitää kaiken ajan tasalla."
+      }
+    ]
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: лимити за Claude и Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Пратите лимите сесије и недеље за Claude и ChatGPT (Codex) у искачућем прозору и преклопу на страници."
+  },
+  "popupTitle": {
+    "message": "Потрошња"
+  },
+  "refreshUsage": {
+    "message": "Освежи потрошњу"
+  },
+  "refreshUsageLimits": {
+    "message": "Освежи лимите"
+  },
+  "refreshErrorPrefix": {
+    "message": "Освежавање није успело"
+  },
+  "refreshFailed": {
+    "message": "Освежавање није успело"
+  },
+  "availableResetsLabel": {
+    "message": "Доступна ресетовања · $1"
+  },
+  "loadingSnapshot": {
+    "message": "учитавање"
+  },
+  "notConnected": {
+    "message": "није повезано"
+  },
+  "updated": {
+    "message": "ажурирано $1"
+  },
+  "refreshing": {
+    "message": "освежавање..."
+  },
+  "waitingForSnapshot": {
+    "message": "чекање података"
+  },
+  "sessionLimit": {
+    "message": "Сесија · 5 ч"
+  },
+  "weeklyLimit": {
+    "message": "Недеља · 7 д"
+  },
+  "planLabel": {
+    "message": "План · $1"
+  },
+  "resetsLabel": {
+    "message": "ресет за $1"
+  },
+  "nextResetLabel": {
+    "message": "ресет за $1"
+  },
+  "showLimits": {
+    "message": "Прикажи лимите"
+  },
+  "hideLimits": {
+    "message": "Сакриј лимите"
+  },
+  "emptyClaude": {
+    "message": "Још нема података. Отворите claude.ai пријављени и освежите."
+  },
+  "emptyCodex": {
+    "message": "Још нема података. Отворите chatgpt.com пријављени и освежите."
+  },
+  "emptyMiniMax": {
+    "message": "Још нема података. Отворите platform.minimax.io пријављени и освежите."
+  },
+  "emptyKimi": {
+    "message": "Још нема података. Отворите kimi.com/code пријављени и освежите."
+  },
+  "emptyCursor": {
+    "message": "Још нема података. Отворите cursor.com пријављени и освежите."
+  },
+  "emptyMiMo": {
+    "message": "Још нема података. Отворите platform.xiaomimimo.com пријављени и освежите."
+  },
+  "emptyOverlay": {
+    "message": "Још нема података. Отворите искачући прозор и освежите."
+  },
+  "sourceCode": {
+    "message": "Изворни код"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "непознато"
+  },
+  "timeNow": {
+    "message": "сада"
+  },
+  "timeJustNow": {
+    "message": "управо сада"
+  },
+  "timeAgo": {
+    "message": "пре $1"
+  },
+  "timeDayShort": {
+    "message": "д"
+  },
+  "timeHourShort": {
+    "message": "ч"
+  },
+  "timeMinuteShort": {
+    "message": "м"
+  },
+  "optionsSaved": {
+    "message": "Све измене сачуване"
+  },
+  "optionsSaving": {
+    "message": "Чување…"
+  },
+  "optionsSaveError": {
+    "message": "Чување није успело"
+  },
+  "optionsSkip": {
+    "message": "Пређи на подешавања"
+  },
+  "optionsLoading": {
+    "message": "Учитавање подешавања…"
+  },
+  "optionsNavLabel": {
+    "message": "Одељци подешавања"
+  },
+  "optionsNavLayout": {
+    "message": "Распоред"
+  },
+  "optionsNavProviders": {
+    "message": "Провајдери"
+  },
+  "optionsNavBadge": {
+    "message": "Икона на траци"
+  },
+  "optionsNavOverlays": {
+    "message": "Преклопи на страници"
+  },
+  "optionsLayoutTitle": {
+    "message": "Распоред искачућег прозора"
+  },
+  "optionsLayoutDescription": {
+    "message": "Изаберите како су распоређене видљиве картице провајдера."
+  },
+  "optionsLayoutSingle": {
+    "message": "Једна колона"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Картица пуне ширине за сваког провајдера."
+  },
+  "optionsLayoutGrid": {
+    "message": "Две колоне"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Компактан преглед са две картице у реду."
+  },
+  "optionsProvidersTitle": {
+    "message": "Провајдери"
+  },
+  "optionsProvidersDescription": {
+    "message": "Сакријте картицу или изаберите које податке приказује. Недоступни подаци остају сакривени."
+  },
+  "optionsProvidersShown": {
+    "message": "приказано $1 од $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 од $2 података"
+  },
+  "optionsProviderHidden": {
+    "message": "Сакривено у прозору"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Прикажи $1 у искачућем прозору"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Подаци о потрошњи: $1"
+  },
+  "optionsMetricSession": {
+    "message": "Потрошња сесије"
+  },
+  "optionsMetricWeekly": {
+    "message": "Недељна потрошња"
+  },
+  "optionsMetricModels": {
+    "message": "Преглед по моделима"
+  },
+  "optionsMetricReset": {
+    "message": "Време ресетовања"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Доступна ресетовања"
+  },
+  "optionsMetricPlan": {
+    "message": "План"
+  },
+  "optionsMetricSummary": {
+    "message": "Стање / сажетак"
+  },
+  "optionsMetricBalance": {
+    "message": "Стање"
+  },
+  "optionsBadgeTitle": {
+    "message": "Опсег иконе"
+  },
+  "optionsBadgeDescription": {
+    "message": "Икона проширења мења се на сваких 10% према овом извору."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Извор иконе"
+  },
+  "optionsBadgeHighest": {
+    "message": "Највиши међу видљивим провајдерима"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Користи највећи тренутни проценат међу приказаним картицама."
+  },
+  "optionsBadgeSelected": {
+    "message": "Изабрани провајдер"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Користи једног провајдера без обзира на видљивост осталих картица."
+  },
+  "optionsBadgeWindow": {
+    "message": "Прозор потрошње"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Сесија"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Недеља"
+  },
+  "optionsBadgeProvider": {
+    "message": "Провајдер"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Овај провајдер је сакривен у прозору, али опсег иконе остаје активан."
+  },
+  "optionsBadgeSteps": {
+    "message": "Кораци иконе"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "заокружено наниже на 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Преклопи на страници"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Прикажи склопиву капсулу потрошње поред поља за поруку."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Укључи преклоп $1 на страници"
+  },
+  "optionsResetTitle": {
+    "message": "Врати на подразумевано"
+  },
+  "optionsResetDescription": {
+    "message": "Враћа сва подешавања на овој страници. Радња се не може опозвати."
+  },
+  "optionsResetAction": {
+    "message": "Врати подразумевано"
+  },
+  "optionsResetConfirm": {
+    "message": "Кликните поново за потврду"
+  },
+  "planUsage": {
+    "message": "Потрошња плана"
+  },
+  "tokenPlan": {
+    "message": "План токена"
+  },
+  "optionsTitle": {
+    "message": "Подешавања AI Usage Tracker-а"
+  }
+}

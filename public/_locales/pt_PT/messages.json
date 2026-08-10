@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: limites do Claude e Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Acompanhe os limites de sessão e semanais do Claude e do ChatGPT (Codex) numa janela e numa camada na página."
+  },
+  "popupTitle": {
+    "message": "Utilização"
+  },
+  "refreshUsage": {
+    "message": "Atualizar utilização"
+  },
+  "refreshUsageLimits": {
+    "message": "Atualizar limites"
+  },
+  "refreshErrorPrefix": {
+    "message": "Não foi possível atualizar"
+  },
+  "refreshFailed": {
+    "message": "Falha ao atualizar"
+  },
+  "availableResetsLabel": {
+    "message": "Reposições disponíveis · $1"
+  },
+  "loadingSnapshot": {
+    "message": "a carregar"
+  },
+  "notConnected": {
+    "message": "sem ligação"
+  },
+  "updated": {
+    "message": "atualizado $1"
+  },
+  "refreshing": {
+    "message": "a atualizar..."
+  },
+  "waitingForSnapshot": {
+    "message": "à espera de dados"
+  },
+  "sessionLimit": {
+    "message": "Sessão · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Semana · 7 d"
+  },
+  "planLabel": {
+    "message": "Plano · $1"
+  },
+  "resetsLabel": {
+    "message": "repõe em $1"
+  },
+  "nextResetLabel": {
+    "message": "repõe em $1"
+  },
+  "showLimits": {
+    "message": "Mostrar limites"
+  },
+  "hideLimits": {
+    "message": "Ocultar limites"
+  },
+  "emptyClaude": {
+    "message": "Ainda sem dados. Abra claude.ai conectado e atualize."
+  },
+  "emptyCodex": {
+    "message": "Ainda sem dados. Abra chatgpt.com conectado e atualize."
+  },
+  "emptyMiniMax": {
+    "message": "Ainda sem dados. Abra platform.minimax.io conectado e atualize."
+  },
+  "emptyKimi": {
+    "message": "Ainda sem dados. Abra kimi.com/code conectado e atualize."
+  },
+  "emptyCursor": {
+    "message": "Ainda sem dados. Abra cursor.com conectado e atualize."
+  },
+  "emptyMiMo": {
+    "message": "Ainda sem dados. Abra platform.xiaomimimo.com conectado e atualize."
+  },
+  "emptyOverlay": {
+    "message": "Ainda sem dados. Abra a janela e atualize."
+  },
+  "sourceCode": {
+    "message": "Código-fonte"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "desconhecido"
+  },
+  "timeNow": {
+    "message": "agora"
+  },
+  "timeJustNow": {
+    "message": "agora mesmo"
+  },
+  "timeAgo": {
+    "message": "há $1"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Todas as alterações guardadas"
+  },
+  "optionsSaving": {
+    "message": "A guardar…"
+  },
+  "optionsSaveError": {
+    "message": "Não foi possível guardar"
+  },
+  "optionsSkip": {
+    "message": "Ir para as definições"
+  },
+  "optionsLoading": {
+    "message": "A carregar as definições…"
+  },
+  "optionsNavLabel": {
+    "message": "Secções das definições"
+  },
+  "optionsNavLayout": {
+    "message": "Layout"
+  },
+  "optionsNavProviders": {
+    "message": "Fornecedores"
+  },
+  "optionsNavBadge": {
+    "message": "Ícone da barra"
+  },
+  "optionsNavOverlays": {
+    "message": "Camadas na página"
+  },
+  "optionsLayoutTitle": {
+    "message": "Esquema da janela"
+  },
+  "optionsLayoutDescription": {
+    "message": "Escolha como são dispostos os cartões de fornecedor visíveis."
+  },
+  "optionsLayoutSingle": {
+    "message": "Uma coluna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Um cartão de largura total para cada fornecedor."
+  },
+  "optionsLayoutGrid": {
+    "message": "Duas colunas"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Visão compacta com dois cards por linha."
+  },
+  "optionsProvidersTitle": {
+    "message": "Fornecedores"
+  },
+  "optionsProvidersDescription": {
+    "message": "Oculte um cartão ou escolha que dados de utilização mostra. Os dados indisponíveis ficam ocultos automaticamente."
+  },
+  "optionsProvidersShown": {
+    "message": "$1 de $2 exibidos"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 de $2 detalhes"
+  },
+  "optionsProviderHidden": {
+    "message": "Oculto na janela"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Mostrar $1 na janela"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Dados de utilização de $1"
+  },
+  "optionsMetricSession": {
+    "message": "Utilização da sessão"
+  },
+  "optionsMetricWeekly": {
+    "message": "Utilização semanal"
+  },
+  "optionsMetricModels": {
+    "message": "Detalhe por modelo"
+  },
+  "optionsMetricReset": {
+    "message": "Hora da reposição"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Reposições disponíveis"
+  },
+  "optionsMetricPlan": {
+    "message": "Plano"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / resumo"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Intervalo do ícone"
+  },
+  "optionsBadgeDescription": {
+    "message": "O ícone da extensão muda em passos de 10% com base nesta origem."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Origem do ícone"
+  },
+  "optionsBadgeHighest": {
+    "message": "O mais alto dos fornecedores visíveis"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Usar a maior percentagem atual entre os cartões mostrados."
+  },
+  "optionsBadgeSelected": {
+    "message": "Fornecedor selecionado"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Usar um fornecedor independentemente dos outros cartões."
+  },
+  "optionsBadgeWindow": {
+    "message": "Janela de uso"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sessão"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Semana"
+  },
+  "optionsBadgeProvider": {
+    "message": "Fornecedor"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Este fornecedor está oculto na janela, mas o intervalo do ícone continua ativo."
+  },
+  "optionsBadgeSteps": {
+    "message": "Níveis do ícone"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "arredondado para baixo até 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Camadas na página"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Mostrar a cápsula de utilização recolhível junto ao campo de mensagem."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Ativar a camada de $1 na página"
+  },
+  "optionsResetTitle": {
+    "message": "Repor predefinições"
+  },
+  "optionsResetDescription": {
+    "message": "Repõe todas as preferências desta página. Não é possível anular."
+  },
+  "optionsResetAction": {
+    "message": "Repor predefinições"
+  },
+  "optionsResetConfirm": {
+    "message": "Clique novamente para confirmar"
+  },
+  "planUsage": {
+    "message": "Utilização do plano"
+  },
+  "tokenPlan": {
+    "message": "Plano de tokens"
+  },
+  "optionsTitle": {
+    "message": "Definições do AI Usage Tracker"
+  }
+}

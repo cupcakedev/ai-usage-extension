@@ -12,6 +12,8 @@ import { formatRelativeTime, formatReset, getUsageTone, isLimitAvailable } from 
 
 const HOST_ID = 'ai-usage-claude-overlay-host';
 
+const TAB_LABEL = 'LIMITS';
+
 type AnyUsage = {
   session: UsageLimit;
   weekly: UsageLimit;
@@ -202,7 +204,7 @@ const UsageOverlay: React.FC = () => {
           aria-expanded={!collapsed}
         >
           <img className="aiu-tab-icon" src={limitBrandAsset} alt="" />
-          <span className="aiu-tab-label">{msg('limitsTab')}</span>
+          <span className="aiu-tab-label">{TAB_LABEL}</span>
         </button>
 
         <div className="aiu-card">

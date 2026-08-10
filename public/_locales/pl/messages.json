@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: limity Claude i Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "Śledź limity sesji i tygodniowe w Claude oraz ChatGPT (Codex) w popupie i nakładce na stronie. Bez konfiguracji."
+  },
+  "popupTitle": {
+    "message": "Zużycie"
+  },
+  "refreshUsage": {
+    "message": "Odśwież zużycie"
+  },
+  "refreshUsageLimits": {
+    "message": "Odśwież limity"
+  },
+  "refreshErrorPrefix": {
+    "message": "Nie udało się odświeżyć"
+  },
+  "refreshFailed": {
+    "message": "Odświeżanie nieudane"
+  },
+  "availableResetsLabel": {
+    "message": "Dostępne resety · $1"
+  },
+  "loadingSnapshot": {
+    "message": "wczytywanie"
+  },
+  "notConnected": {
+    "message": "brak połączenia"
+  },
+  "updated": {
+    "message": "zaktualizowano $1"
+  },
+  "refreshing": {
+    "message": "odświeżanie..."
+  },
+  "waitingForSnapshot": {
+    "message": "oczekiwanie na dane"
+  },
+  "sessionLimit": {
+    "message": "Sesja · 5 h"
+  },
+  "weeklyLimit": {
+    "message": "Tydzień · 7 dni"
+  },
+  "planLabel": {
+    "message": "Plan · $1"
+  },
+  "resetsLabel": {
+    "message": "reset za $1"
+  },
+  "nextResetLabel": {
+    "message": "reset za $1"
+  },
+  "showLimits": {
+    "message": "Pokaż limity"
+  },
+  "hideLimits": {
+    "message": "Ukryj limity"
+  },
+  "emptyClaude": {
+    "message": "Brak danych. Otwórz claude.ai po zalogowaniu i odśwież."
+  },
+  "emptyCodex": {
+    "message": "Brak danych. Otwórz chatgpt.com po zalogowaniu i odśwież."
+  },
+  "emptyMiniMax": {
+    "message": "Brak danych. Otwórz platform.minimax.io po zalogowaniu i odśwież."
+  },
+  "emptyKimi": {
+    "message": "Brak danych. Otwórz kimi.com/code po zalogowaniu i odśwież."
+  },
+  "emptyCursor": {
+    "message": "Brak danych. Otwórz cursor.com po zalogowaniu i odśwież."
+  },
+  "emptyMiMo": {
+    "message": "Brak danych. Otwórz platform.xiaomimimo.com po zalogowaniu i odśwież."
+  },
+  "emptyOverlay": {
+    "message": "Brak danych. Otwórz popup i odśwież."
+  },
+  "sourceCode": {
+    "message": "Kod źródłowy"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "nieznany"
+  },
+  "timeNow": {
+    "message": "teraz"
+  },
+  "timeJustNow": {
+    "message": "przed chwilą"
+  },
+  "timeAgo": {
+    "message": "$1 temu"
+  },
+  "timeDayShort": {
+    "message": "d"
+  },
+  "timeHourShort": {
+    "message": "h"
+  },
+  "timeMinuteShort": {
+    "message": "min"
+  },
+  "optionsSaved": {
+    "message": "Zapisano wszystkie zmiany"
+  },
+  "optionsSaving": {
+    "message": "Zapisywanie…"
+  },
+  "optionsSaveError": {
+    "message": "Nie udało się zapisać"
+  },
+  "optionsSkip": {
+    "message": "Przejdź do ustawień"
+  },
+  "optionsLoading": {
+    "message": "Wczytywanie ustawień…"
+  },
+  "optionsNavLabel": {
+    "message": "Sekcje ustawień"
+  },
+  "optionsNavLayout": {
+    "message": "Układ"
+  },
+  "optionsNavProviders": {
+    "message": "Dostawcy"
+  },
+  "optionsNavBadge": {
+    "message": "Ikona na pasku"
+  },
+  "optionsNavOverlays": {
+    "message": "Nakładki na stronie"
+  },
+  "optionsLayoutTitle": {
+    "message": "Układ popupu"
+  },
+  "optionsLayoutDescription": {
+    "message": "Wybierz, jak rozmieścić widoczne karty dostawców w popupie."
+  },
+  "optionsLayoutSingle": {
+    "message": "Jedna kolumna"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "Karta na całą szerokość dla każdego dostawcy."
+  },
+  "optionsLayoutGrid": {
+    "message": "Dwie kolumny"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "Zwarty przegląd: dwie karty w rzędzie."
+  },
+  "optionsProvidersTitle": {
+    "message": "Dostawcy"
+  },
+  "optionsProvidersDescription": {
+    "message": "Ukryj kartę lub wybierz, jakie dane pokazuje. Niedostępne dane są ukrywane automatycznie."
+  },
+  "optionsProvidersShown": {
+    "message": "widocznych $1 z $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 z $2 szczegółów"
+  },
+  "optionsProviderHidden": {
+    "message": "Ukryte w popupie"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "Pokaż $1 w popupie"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "Szczegóły zużycia: $1"
+  },
+  "optionsMetricSession": {
+    "message": "Zużycie sesji"
+  },
+  "optionsMetricWeekly": {
+    "message": "Zużycie tygodniowe"
+  },
+  "optionsMetricModels": {
+    "message": "Podział na modele"
+  },
+  "optionsMetricReset": {
+    "message": "Czas resetu"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "Dostępne resety"
+  },
+  "optionsMetricPlan": {
+    "message": "Plan"
+  },
+  "optionsMetricSummary": {
+    "message": "Saldo / podsumowanie"
+  },
+  "optionsMetricBalance": {
+    "message": "Saldo"
+  },
+  "optionsBadgeTitle": {
+    "message": "Zakres ikony"
+  },
+  "optionsBadgeDescription": {
+    "message": "Ikona rozszerzenia zmienia się co 10% na podstawie tego źródła."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "Źródło ikony"
+  },
+  "optionsBadgeHighest": {
+    "message": "Najwyższy z widocznych dostawców"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "Użyj największego bieżącego procentu spośród widocznych kart."
+  },
+  "optionsBadgeSelected": {
+    "message": "Wybrany dostawca"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "Użyj jednego dostawcy niezależnie od widoczności innych kart."
+  },
+  "optionsBadgeWindow": {
+    "message": "Okno zużycia"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "Sesja"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "Tydzień"
+  },
+  "optionsBadgeProvider": {
+    "message": "Dostawca"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "Ten dostawca jest ukryty w popupie, ale jego zakres ikony pozostaje aktywny."
+  },
+  "optionsBadgeSteps": {
+    "message": "Stopnie ikony na pasku"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "zaokrąglane w dół do 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "Nakładki na stronie"
+  },
+  "optionsOverlaysDescription": {
+    "message": "Pokaż zwijaną kapsułę zużycia obok pola wiadomości."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "Włącz nakładkę $1 na stronie"
+  },
+  "optionsResetTitle": {
+    "message": "Przywróć domyślne"
+  },
+  "optionsResetDescription": {
+    "message": "Przywraca wszystkie ustawienia na tej stronie. Tej operacji nie można cofnąć."
+  },
+  "optionsResetAction": {
+    "message": "Przywróć domyślne"
+  },
+  "optionsResetConfirm": {
+    "message": "Kliknij ponownie, aby potwierdzić"
+  },
+  "planUsage": {
+    "message": "Zużycie planu"
+  },
+  "tokenPlan": {
+    "message": "Plan tokenów"
+  },
+  "optionsTitle": {
+    "message": "Ustawienia AI Usage Tracker"
+  }
+}

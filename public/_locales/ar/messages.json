@@ -1,0 +1,278 @@
+{
+  "appName": {
+    "message": "AI Usage Tracker: حدود Claude و Codex"
+  },
+  "appShortName": {
+    "message": "AI Usage Tracker"
+  },
+  "appDescription": {
+    "message": "تابع حدود الجلسة والأسبوع في Claude و ChatGPT (Codex) في نافذة منبثقة وطبقة على الصفحة. بدون إعداد."
+  },
+  "popupTitle": {
+    "message": "الاستخدام"
+  },
+  "refreshUsage": {
+    "message": "تحديث الاستخدام"
+  },
+  "refreshUsageLimits": {
+    "message": "تحديث الحدود"
+  },
+  "refreshErrorPrefix": {
+    "message": "تعذّر التحديث"
+  },
+  "refreshFailed": {
+    "message": "فشل التحديث"
+  },
+  "availableResetsLabel": {
+    "message": "إعادات الضبط المتاحة · $1"
+  },
+  "loadingSnapshot": {
+    "message": "جارٍ التحميل"
+  },
+  "notConnected": {
+    "message": "غير متصل"
+  },
+  "updated": {
+    "message": "تم التحديث $1"
+  },
+  "refreshing": {
+    "message": "جارٍ التحديث..."
+  },
+  "waitingForSnapshot": {
+    "message": "في انتظار البيانات"
+  },
+  "sessionLimit": {
+    "message": "الجلسة · 5 س"
+  },
+  "weeklyLimit": {
+    "message": "الأسبوع · 7 ي"
+  },
+  "planLabel": {
+    "message": "الخطة · $1"
+  },
+  "resetsLabel": {
+    "message": "إعادة الضبط بعد $1"
+  },
+  "nextResetLabel": {
+    "message": "إعادة الضبط بعد $1"
+  },
+  "showLimits": {
+    "message": "إظهار الحدود"
+  },
+  "hideLimits": {
+    "message": "إخفاء الحدود"
+  },
+  "emptyClaude": {
+    "message": "لا توجد بيانات بعد. افتح claude.ai بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyCodex": {
+    "message": "لا توجد بيانات بعد. افتح chatgpt.com بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyMiniMax": {
+    "message": "لا توجد بيانات بعد. افتح platform.minimax.io بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyKimi": {
+    "message": "لا توجد بيانات بعد. افتح kimi.com/code بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyCursor": {
+    "message": "لا توجد بيانات بعد. افتح cursor.com بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyMiMo": {
+    "message": "لا توجد بيانات بعد. افتح platform.xiaomimimo.com بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyOverlay": {
+    "message": "لا توجد بيانات بعد. افتح النافذة المنبثقة ثم حدّث."
+  },
+  "sourceCode": {
+    "message": "الكود المصدري"
+  },
+  "github": {
+    "message": "GitHub"
+  },
+  "timeUnknown": {
+    "message": "غير معروف"
+  },
+  "timeNow": {
+    "message": "الآن"
+  },
+  "timeJustNow": {
+    "message": "الآن للتو"
+  },
+  "timeAgo": {
+    "message": "قبل $1"
+  },
+  "timeDayShort": {
+    "message": "ي"
+  },
+  "timeHourShort": {
+    "message": "س"
+  },
+  "timeMinuteShort": {
+    "message": "د"
+  },
+  "optionsSaved": {
+    "message": "تم حفظ كل التغييرات"
+  },
+  "optionsSaving": {
+    "message": "جارٍ الحفظ…"
+  },
+  "optionsSaveError": {
+    "message": "تعذّر الحفظ"
+  },
+  "optionsSkip": {
+    "message": "الانتقال إلى الإعدادات"
+  },
+  "optionsLoading": {
+    "message": "جارٍ تحميل الإعدادات…"
+  },
+  "optionsNavLabel": {
+    "message": "أقسام الإعدادات"
+  },
+  "optionsNavLayout": {
+    "message": "التصميم"
+  },
+  "optionsNavProviders": {
+    "message": "المزوّدون"
+  },
+  "optionsNavBadge": {
+    "message": "أيقونة شريط الأدوات"
+  },
+  "optionsNavOverlays": {
+    "message": "الطبقات على الصفحة"
+  },
+  "optionsLayoutTitle": {
+    "message": "تصميم النافذة المنبثقة"
+  },
+  "optionsLayoutDescription": {
+    "message": "اختر طريقة ترتيب بطاقات المزوّدين المرئية."
+  },
+  "optionsLayoutSingle": {
+    "message": "عمود واحد"
+  },
+  "optionsLayoutSingleDescription": {
+    "message": "بطاقة بعرض كامل لكل مزوّد."
+  },
+  "optionsLayoutGrid": {
+    "message": "عمودان"
+  },
+  "optionsLayoutGridDescription": {
+    "message": "نظرة مختصرة ببطاقتين في كل صف."
+  },
+  "optionsProvidersTitle": {
+    "message": "المزوّدون"
+  },
+  "optionsProvidersDescription": {
+    "message": "أخفِ بطاقة أو اختر التفاصيل التي تظهر فيها. البيانات غير المتوفرة تبقى مخفية تلقائيًا."
+  },
+  "optionsProvidersShown": {
+    "message": "يظهر $1 من $2"
+  },
+  "optionsProviderDetails": {
+    "message": "$1 من $2 تفاصيل"
+  },
+  "optionsProviderHidden": {
+    "message": "مخفي في النافذة المنبثقة"
+  },
+  "optionsProviderToggleLabel": {
+    "message": "إظهار $1 في النافذة المنبثقة"
+  },
+  "optionsProviderDetailsLegend": {
+    "message": "تفاصيل استخدام $1"
+  },
+  "optionsMetricSession": {
+    "message": "استخدام الجلسة"
+  },
+  "optionsMetricWeekly": {
+    "message": "الاستخدام الأسبوعي"
+  },
+  "optionsMetricModels": {
+    "message": "التوزيع حسب الموديل"
+  },
+  "optionsMetricReset": {
+    "message": "وقت إعادة الضبط"
+  },
+  "optionsMetricAvailableResets": {
+    "message": "إعادات الضبط المتاحة"
+  },
+  "optionsMetricPlan": {
+    "message": "الخطة"
+  },
+  "optionsMetricSummary": {
+    "message": "الرصيد / الملخص"
+  },
+  "optionsMetricBalance": {
+    "message": "الرصيد"
+  },
+  "optionsBadgeTitle": {
+    "message": "نطاق الأيقونة"
+  },
+  "optionsBadgeDescription": {
+    "message": "تتغير أيقونة الإضافة بخطوات 10% حسب هذا المصدر."
+  },
+  "optionsBadgeSourceLabel": {
+    "message": "مصدر الأيقونة"
+  },
+  "optionsBadgeHighest": {
+    "message": "الأعلى بين المزوّدين المرئيين"
+  },
+  "optionsBadgeHighestDescription": {
+    "message": "استخدم أكبر نسبة حالية بين البطاقات المعروضة."
+  },
+  "optionsBadgeSelected": {
+    "message": "مزوّد محدد"
+  },
+  "optionsBadgeSelectedDescription": {
+    "message": "استخدم مزوّدًا واحدًا بغض النظر عن ظهور البطاقات الأخرى."
+  },
+  "optionsBadgeWindow": {
+    "message": "نافذة الاستخدام"
+  },
+  "optionsBadgeWindowSession": {
+    "message": "الجلسة"
+  },
+  "optionsBadgeWindowWeekly": {
+    "message": "الأسبوع"
+  },
+  "optionsBadgeProvider": {
+    "message": "المزوّد"
+  },
+  "optionsBadgeHiddenWarning": {
+    "message": "هذا المزوّد مخفي في النافذة المنبثقة، لكن نطاق أيقونته يبقى نشطًا."
+  },
+  "optionsBadgeSteps": {
+    "message": "درجات الأيقونة"
+  },
+  "optionsBadgeStepsHint": {
+    "message": "يُقرّب للأسفل إلى 10%"
+  },
+  "optionsOverlaysTitle": {
+    "message": "الطبقات على الصفحة"
+  },
+  "optionsOverlaysDescription": {
+    "message": "أظهر كبسولة الاستخدام القابلة للطي بجانب حقل الرسالة."
+  },
+  "optionsOverlayToggleLabel": {
+    "message": "تفعيل طبقة $1 على الصفحة"
+  },
+  "optionsResetTitle": {
+    "message": "إعادة التعيين إلى الافتراضي"
+  },
+  "optionsResetDescription": {
+    "message": "يستعيد كل التفضيلات في هذه الصفحة. لا يمكن التراجع."
+  },
+  "optionsResetAction": {
+    "message": "إعادة التعيين"
+  },
+  "optionsResetConfirm": {
+    "message": "انقر مرة أخرى للتأكيد"
+  },
+  "planUsage": {
+    "message": "استخدام الخطة"
+  },
+  "tokenPlan": {
+    "message": "خطة التوكنات"
+  },
+  "optionsTitle": {
+    "message": "إعدادات AI Usage Tracker"
+  }
+}

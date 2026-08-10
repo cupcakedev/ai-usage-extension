@@ -1,0 +1,66 @@
+{
+  "panelEyebrow": "Kapacitet AI-ja",
+  "shots": {
+    "popup": {
+      "eyebrow": "Jedan skočni prozor",
+      "sub": [
+        "Claude, Codex, MiniMax, Kimi, Cursor",
+        "i Xiaomi MiMo na jednom zaslonu."
+      ]
+    },
+    "overlay": {
+      "eyebrow": "Preklop na stranici",
+      "sub": [
+        "Limiti sesije i tjedna odmah uz polje",
+        "za poruku u Claudeu i ChatGPT-u."
+      ]
+    },
+    "providers": {
+      "eyebrow": "Vaše postavke",
+      "sub": [
+        "Odaberite pružatelje, raspored i točno",
+        "koje podatke prikazuje kartica."
+      ]
+    },
+    "badge": {
+      "eyebrow": "Ikona i preklopi",
+      "sub": [
+        "Ikona prati najveću potrošnju u koracima",
+        "od 10 % — bez otvaranja prozora."
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Bez postavljanja",
+      "sub": [
+        "Bez API ključeva, prijava i poslužitelja.",
+        "Sve ostaje u vašem pregledniku."
+      ]
+    }
+  },
+  "marquee": {
+    "sub": [
+      "Šest pružatelja, jedan prozor: limiti sesije i tjedna,",
+      "ikona na traci, preklopi i potpuna kontrola."
+    ]
+  },
+  "tile": {
+    "sub": "Šest pružatelja. Jedan prozor."
+  },
+  "highlights": {
+    "title": "Šest pružatelja, nula postavljanja",
+    "items": [
+      {
+        "title": "Bez API ključeva i dodatnih prijava",
+        "body": "Čita sesije u koje je preglednik već prijavljen."
+      },
+      {
+        "title": "Ništa ne napušta preglednik",
+        "body": "Bez poslužitelja, računa i telemetrije — sve ostaje lokalno."
+      },
+      {
+        "title": "Osvježava se svakih 5 minuta",
+        "body": "Sinkronizacija u pozadini drži sve ažurnim."
+      }
+    ]
+  }
+}

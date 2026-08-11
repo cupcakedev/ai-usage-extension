@@ -1,7 +1,10 @@
 # Chrome Web Store Listing
 
 This file is the canonical source for the Chrome Web Store listing.
-Everything below is uploaded to the Web Store dashboard as-is.
+Upload the Name, Short Description, Full Description, Category, Language, and
+Single Purpose sections to the Web Store dashboard. The Keywords section is an
+internal search-intent map: Chrome Web Store has no keyword field, so do not
+paste it into the public listing.
 
 > The `store:check` tests in `tests/store.test.js` enforce that every
 > section below stays present and within Chrome's character limits.
@@ -9,43 +12,30 @@ Everything below is uploaded to the Web Store dashboard as-is.
 
 ## Name
 
-AI Usage Tracker: Quota & Limits for Claude, Codex
+Claude & Codex Usage Tracker: Limits
 
 ## Short Description
 
-Track Claude and ChatGPT (Codex) session & weekly usage limits at a glance in a popup and on-page overlay. Privacy-first, no setup.
+Track Claude, ChatGPT & Codex usage, session limits, and weekly resets in a toolbar badge and on-page overlay. Private.
 
 ## Full Description
 
-AI Usage Tracker: Quota & Limits for Claude, Codex is a browser extension for people who want a clearer, more predictable AI assistant experience. Track your message limits, view real-time countdowns, and display unobtrusive usage meters directly on provider pages so you can focus on your work without hitting sudden limits.
+Monitor Claude, ChatGPT, and Codex account usage from one browser extension. See session limits, weekly capacity, and reset countdowns before a limit interrupts your work.
 
-Whether you use Claude and ChatGPT for coding, writing, research, or deep problem-solving, AI Usage Tracker helps reduce the friction of hitting limit blocks and gives you direct control over how your capacity is monitored. You choose where the overlay appears and how you track your limits.
+Use the toolbar badge for a quick status check, open the popup for details, or enable the optional on-page overlay beside the chat input. It is designed for coding, writing, research, and any workflow where knowing the next reset time helps you plan.
 
-AI Usage Tracker also supports Kimi, MiniMax, Cursor, and Xiaomi MiMo. Depending on each provider's account data, it can surface session, weekly, plan, model, balance, and reset-time details. No API key or separate login is required: the extension reads only from the browser's already authenticated provider sessions.
+Depending on what an AI provider makes available for the signed-in account, the extension can show session, weekly, plan, model, balance, and reset-time details. It needs no API key or separate extension account: it reads usage data from your existing browser session.
 
 Key features:
 
-- Real-time limit tracking for Claude (claude.ai) and ChatGPT/Codex (chatgpt.com)
-- At-a-glance toolbar badge showing your highest current usage percentage
-- Contextual on-page overlays positioned right next to chat inputs
-- Collapsible capsule widget in Shadow DOM to prevent host page style clashes
-- Session-based (5-hour) and weekly (7-day) capacity monitoring
-- Live countdowns showing precisely when your limits will reset
-- On-demand refresh button and automatic background syncing every 5 minutes
-- 100% private: reads directly from your own authenticated browser sessions
+- Live usage tracking for supported AI accounts
+- Session-based (5-hour) and weekly (7-day) limit monitoring when available
+- Toolbar badge with your highest current usage percentage
+- Optional on-page overlays positioned beside chat inputs
+- Live reset countdowns, manual refresh, and automatic background updates every 5 minutes
+- Private by design: no external servers, tracking, telemetry, API key, or extension account
 
-Why users choose AI Usage Tracker:
-- Fast, automated usage polling without manual page reloading
-- Cleaner UI that integrates seamlessly with AI chat interfaces
-- Better pacing for heavy coding, learning, or writing sessions
-- Safe by design with no external servers, no tracking, and no telemetry
-- Simple side-panel controls with quick enable/disable options
-
-Great for:
-- Developers and power users who use Claude Code or ChatGPT limits heavily
-- Plus, Pro, and Team plan subscribers who want a clear read on their quotas
-- Professionals and students who want to avoid interrupting their deep work flow
-- Anyone tired of hitting "you've reached your limit" with no prior warning
+Best for developers, students, and professionals who want a clear read on their available AI capacity without manually reopening account settings. Supported providers and the open-source code are documented below.
 
 Source code: https://github.com/cupcakedev/ai-usage-extension
 
@@ -59,10 +49,8 @@ English
 
 ## Keywords
 
-claude usage, claude limits, claude rate limit tracker, codex usage, chatgpt
-limits, chatgpt rate limit, ai usage tracker, claude session reset, claude
-weekly limit, codex weekly cap, anthropic usage monitor, openai usage monitor,
-claude pro tracker, chatgpt plus tracker, claude code usage
+Claude usage tracker, Claude limits, Codex usage tracker, ChatGPT limits, AI
+usage tracker, session reset tracker
 
 ## Single Purpose
 

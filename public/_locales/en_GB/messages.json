@@ -1,12 +1,12 @@
 {
   "appName": {
-    "message": "AI Usage Tracker: Claude & Codex Limits"
+    "message": "Claude & Codex Usage Tracker: Limits"
   },
   "appShortName": {
     "message": "AI Usage Tracker"
   },
   "appDescription": {
-    "message": "Track Claude and ChatGPT (Codex) session & weekly usage limits at a glance in a popup and on-page overlay. Privacy-first, no setup."
+    "message": "Track Claude, ChatGPT & Codex usage, session limits, and weekly resets in a toolbar badge and on-page overlay. Private."
   },
   "popupTitle": {
     "message": "Usage"

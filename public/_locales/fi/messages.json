@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Peittokuvat sivulla"
   },
+  "optionsLanguageTitle": {
+    "message": "Kieli"
+  },
+  "optionsLanguageDescription": {
+    "message": "Valitse kieli ponnahdusikkunalle, tälle sivulle ja peittokuville."
+  },
+  "optionsLanguageAuto": {
+    "message": "Selaimen kieli"
+  },
+  "optionsLanguageHint": {
+    "message": "Kielen vaihto lataa sivun uudelleen."
+  },
   "optionsLayoutTitle": {
     "message": "Ponnahdusikkunan asettelu"
   },

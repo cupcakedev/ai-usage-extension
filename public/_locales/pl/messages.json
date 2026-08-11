@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Nakładki na stronie"
   },
+  "optionsLanguageTitle": {
+    "message": "Język"
+  },
+  "optionsLanguageDescription": {
+    "message": "Wybierz język popupu, tej strony i nakładek na stronach."
+  },
+  "optionsLanguageAuto": {
+    "message": "Język przeglądarki"
+  },
+  "optionsLanguageHint": {
+    "message": "Zmiana języka przeładuje tę stronę."
+  },
   "optionsLayoutTitle": {
     "message": "Układ popupu"
   },

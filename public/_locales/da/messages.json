@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Overlays på siden"
   },
+  "optionsLanguageTitle": {
+    "message": "Sprog"
+  },
+  "optionsLanguageDescription": {
+    "message": "Vælg sprog til popuppen, denne side og overlays."
+  },
+  "optionsLanguageAuto": {
+    "message": "Browserens sprog"
+  },
+  "optionsLanguageHint": {
+    "message": "Skift af sprog genindlæser siden."
+  },
   "optionsLayoutTitle": {
     "message": "Popup-layout"
   },

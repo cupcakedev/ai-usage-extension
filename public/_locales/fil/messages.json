@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Mga overlay sa pahina"
   },
+  "optionsLanguageTitle": {
+    "message": "Wika"
+  },
+  "optionsLanguageDescription": {
+    "message": "Piliin ang wika para sa popup, sa pahinang ito, at sa mga overlay."
+  },
+  "optionsLanguageAuto": {
+    "message": "Wika ng browser"
+  },
+  "optionsLanguageHint": {
+    "message": "Ang pagpapalit ng wika ay magre-reload sa pahina."
+  },
   "optionsLayoutTitle": {
     "message": "Layout ng popup"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Surcouches sur la page"
   },
+  "optionsLanguageTitle": {
+    "message": "Langue"
+  },
+  "optionsLanguageDescription": {
+    "message": "Choisissez la langue du popup, de cette page et des surcouches."
+  },
+  "optionsLanguageAuto": {
+    "message": "Langue du navigateur"
+  },
+  "optionsLanguageHint": {
+    "message": "Changer de langue recharge cette page."
+  },
   "optionsLayoutTitle": {
     "message": "Disposition du popup"
   },

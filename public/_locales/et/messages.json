@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Ülekatted lehel"
   },
+  "optionsLanguageTitle": {
+    "message": "Keel"
+  },
+  "optionsLanguageDescription": {
+    "message": "Vali hüpikakna, selle lehe ja ülekatete keel."
+  },
+  "optionsLanguageAuto": {
+    "message": "Brauseri keel"
+  },
+  "optionsLanguageHint": {
+    "message": "Keele vahetamine laadib lehe uuesti."
+  },
   "optionsLayoutTitle": {
     "message": "Hüpikakna paigutus"
   },

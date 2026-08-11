@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Perdangos puslapyje"
   },
+  "optionsLanguageTitle": {
+    "message": "Kalba"
+  },
+  "optionsLanguageDescription": {
+    "message": "Pasirinkite lango, šio puslapio ir perdangų kalbą."
+  },
+  "optionsLanguageAuto": {
+    "message": "Naršyklės kalba"
+  },
+  "optionsLanguageHint": {
+    "message": "Pakeitus kalbą puslapis perkraunamas."
+  },
   "optionsLayoutTitle": {
     "message": "Iššokančio lango išdėstymas"
   },

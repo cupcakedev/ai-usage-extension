@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Overlays på sidan"
   },
+  "optionsLanguageTitle": {
+    "message": "Språk"
+  },
+  "optionsLanguageDescription": {
+    "message": "Välj språk för popupen, den här sidan och overlays."
+  },
+  "optionsLanguageAuto": {
+    "message": "Webbläsarens språk"
+  },
+  "optionsLanguageHint": {
+    "message": "Byte av språk laddar om sidan."
+  },
   "optionsLayoutTitle": {
     "message": "Popup-layout"
   },

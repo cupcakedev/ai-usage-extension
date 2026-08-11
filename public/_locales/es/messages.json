@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Superposiciones en la página"
   },
+  "optionsLanguageTitle": {
+    "message": "Idioma"
+  },
+  "optionsLanguageDescription": {
+    "message": "Elige el idioma del popup, de esta página y de las superposiciones."
+  },
+  "optionsLanguageAuto": {
+    "message": "Idioma del navegador"
+  },
+  "optionsLanguageHint": {
+    "message": "Cambiar el idioma recarga esta página."
+  },
   "optionsLayoutTitle": {
     "message": "Diseño del popup"
   },

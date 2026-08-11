@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Pārklājumi lapā"
   },
+  "optionsLanguageTitle": {
+    "message": "Valoda"
+  },
+  "optionsLanguageDescription": {
+    "message": "Izvēlieties loga, šīs lapas un pārklājumu valodu."
+  },
+  "optionsLanguageAuto": {
+    "message": "Pārlūka valoda"
+  },
+  "optionsLanguageHint": {
+    "message": "Mainot valodu, lapa tiks pārlādēta."
+  },
   "optionsLayoutTitle": {
     "message": "Uznirstošā loga izkārtojums"
   },

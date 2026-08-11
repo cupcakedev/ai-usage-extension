@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "โอเวอร์เลย์บนหน้าเว็บ"
   },
+  "optionsLanguageTitle": {
+    "message": "ภาษา"
+  },
+  "optionsLanguageDescription": {
+    "message": "เลือกภาษาสำหรับป๊อปอัป หน้านี้ และโอเวอร์เลย์บนหน้าเว็บ"
+  },
+  "optionsLanguageAuto": {
+    "message": "ภาษาของเบราว์เซอร์"
+  },
+  "optionsLanguageHint": {
+    "message": "การเปลี่ยนภาษาจะโหลดหน้านี้ใหม่"
+  },
   "optionsLayoutTitle": {
     "message": "เลย์เอาต์ป๊อปอัป"
   },

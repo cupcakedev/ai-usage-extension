@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "በገጽ ላይ ሽፋኖች"
   },
+  "optionsLanguageTitle": {
+    "message": "ቋንቋ"
+  },
+  "optionsLanguageDescription": {
+    "message": "የብቅ-ባዩን፣ የዚህን ገጽ እና በገጽ ላይ ያሉ ሽፋኖችን ቋንቋ ይምረጡ።"
+  },
+  "optionsLanguageAuto": {
+    "message": "የአሳሽ ቋንቋ"
+  },
+  "optionsLanguageHint": {
+    "message": "ቋንቋ ሲቀየር ይህ ገጽ እንደገና ይጫናል።"
+  },
   "optionsLayoutTitle": {
     "message": "የብቅ-ባይ አቀማመጥ"
   },

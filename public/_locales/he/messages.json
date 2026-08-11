@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "שכבות על הדף"
   },
+  "optionsLanguageTitle": {
+    "message": "שפה"
+  },
+  "optionsLanguageDescription": {
+    "message": "בחרו את שפת החלון הקופץ, הדף הזה והשכבות על הדפים."
+  },
+  "optionsLanguageAuto": {
+    "message": "שפת הדפדפן"
+  },
+  "optionsLanguageHint": {
+    "message": "שינוי השפה יטען מחדש את הדף."
+  },
   "optionsLayoutTitle": {
     "message": "פריסת החלון הקופץ"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Vipande vya ukurasa"
   },
+  "optionsLanguageTitle": {
+    "message": "Lugha"
+  },
+  "optionsLanguageDescription": {
+    "message": "Chagua lugha ya kidirisha, ukurasa huu na vipande vya ukurasa."
+  },
+  "optionsLanguageAuto": {
+    "message": "Lugha ya kivinjari"
+  },
+  "optionsLanguageHint": {
+    "message": "Kubadilisha lugha kunapakia ukurasa upya."
+  },
   "optionsLayoutTitle": {
     "message": "Mpangilio wa kidirisha"
   },

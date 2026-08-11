@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "പേജിലെ ഓവർലേകൾ"
   },
+  "optionsLanguageTitle": {
+    "message": "ഭാഷ"
+  },
+  "optionsLanguageDescription": {
+    "message": "പോപ്പപ്പ്, ഈ പേജ്, പേജ് ഓവർലേകൾ എന്നിവയുടെ ഭാഷ തിരഞ്ഞെടുക്കുക."
+  },
+  "optionsLanguageAuto": {
+    "message": "ബ്രൗസറിന്റെ ഭാഷ"
+  },
+  "optionsLanguageHint": {
+    "message": "ഭാഷ മാറ്റിയാൽ ഈ പേജ് വീണ്ടും ലോഡ് ചെയ്യും."
+  },
   "optionsLayoutTitle": {
     "message": "പോപ്പപ്പ് ലേഔട്ട്"
   },

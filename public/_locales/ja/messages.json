@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "ページ内オーバーレイ"
   },
+  "optionsLanguageTitle": {
+    "message": "言語"
+  },
+  "optionsLanguageDescription": {
+    "message": "ポップアップ・この設定ページ・ページ内オーバーレイの言語を選びます。"
+  },
+  "optionsLanguageAuto": {
+    "message": "ブラウザの言語"
+  },
+  "optionsLanguageHint": {
+    "message": "言語を変更するとこのページが再読み込みされます。"
+  },
   "optionsLayoutTitle": {
     "message": "ポップアップのレイアウト"
   },

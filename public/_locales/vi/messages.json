@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Lớp phủ trên trang"
   },
+  "optionsLanguageTitle": {
+    "message": "Ngôn ngữ"
+  },
+  "optionsLanguageDescription": {
+    "message": "Chọn ngôn ngữ cho cửa sổ, trang này và lớp phủ trên trang."
+  },
+  "optionsLanguageAuto": {
+    "message": "Ngôn ngữ trình duyệt"
+  },
+  "optionsLanguageHint": {
+    "message": "Đổi ngôn ngữ sẽ tải lại trang này."
+  },
   "optionsLayoutTitle": {
     "message": "Bố cục cửa sổ bật lên"
   },

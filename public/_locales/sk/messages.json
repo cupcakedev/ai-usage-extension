@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Prekrytia na stránke"
   },
+  "optionsLanguageTitle": {
+    "message": "Jazyk"
+  },
+  "optionsLanguageDescription": {
+    "message": "Vyberte jazyk popupu, tejto stránky a prekrytí na stránkach."
+  },
+  "optionsLanguageAuto": {
+    "message": "Jazyk prehliadača"
+  },
+  "optionsLanguageHint": {
+    "message": "Zmena jazyka znova načíta túto stránku."
+  },
   "optionsLayoutTitle": {
     "message": "Rozloženie popupu"
   },

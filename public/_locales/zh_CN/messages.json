@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "页面内浮层"
   },
+  "optionsLanguageTitle": {
+    "message": "语言"
+  },
+  "optionsLanguageDescription": {
+    "message": "选择弹窗、此页面和页面浮层使用的语言。"
+  },
+  "optionsLanguageAuto": {
+    "message": "浏览器语言"
+  },
+  "optionsLanguageHint": {
+    "message": "切换语言后会重新加载此页面。"
+  },
   "optionsLayoutTitle": {
     "message": "弹窗布局"
   },

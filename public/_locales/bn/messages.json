@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "পেজ ওভারলে"
   },
+  "optionsLanguageTitle": {
+    "message": "ভাষা"
+  },
+  "optionsLanguageDescription": {
+    "message": "পপআপ, এই পেজ ও পেজ ওভারলের ভাষা বেছে নিন।"
+  },
+  "optionsLanguageAuto": {
+    "message": "ব্রাউজারের ভাষা"
+  },
+  "optionsLanguageHint": {
+    "message": "ভাষা বদলালে এই পেজ আবার লোড হবে।"
+  },
   "optionsLayoutTitle": {
     "message": "পপআপ লেআউট"
   },

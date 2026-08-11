@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Наслагвания в страницата"
   },
+  "optionsLanguageTitle": {
+    "message": "Език"
+  },
+  "optionsLanguageDescription": {
+    "message": "Изберете езика на прозореца, тази страница и наслагванията."
+  },
+  "optionsLanguageAuto": {
+    "message": "Език на браузъра"
+  },
+  "optionsLanguageHint": {
+    "message": "Смяната на езика презарежда страницата."
+  },
   "optionsLayoutTitle": {
     "message": "Оформление на прозореца"
   },

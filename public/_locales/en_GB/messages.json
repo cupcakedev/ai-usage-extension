@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "On-page overlays"
   },
+  "optionsLanguageTitle": {
+    "message": "Language"
+  },
+  "optionsLanguageDescription": {
+    "message": "Choose the language for the popup, this page, and the on-page overlays."
+  },
+  "optionsLanguageAuto": {
+    "message": "Browser language"
+  },
+  "optionsLanguageHint": {
+    "message": "Switching the language reloads this page."
+  },
   "optionsLayoutTitle": {
     "message": "Popup layout"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Overlay di halaman"
   },
+  "optionsLanguageTitle": {
+    "message": "Bahasa"
+  },
+  "optionsLanguageDescription": {
+    "message": "Pilih bahasa untuk popup, halaman ini, dan overlay di halaman."
+  },
+  "optionsLanguageAuto": {
+    "message": "Bahasa browser"
+  },
+  "optionsLanguageHint": {
+    "message": "Mengganti bahasa akan memuat ulang halaman ini."
+  },
   "optionsLayoutTitle": {
     "message": "Tata letak popup"
   },

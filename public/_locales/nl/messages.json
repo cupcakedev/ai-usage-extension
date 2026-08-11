@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Overlays op de pagina"
   },
+  "optionsLanguageTitle": {
+    "message": "Taal"
+  },
+  "optionsLanguageDescription": {
+    "message": "Kies de taal voor de pop-up, deze pagina en de overlays."
+  },
+  "optionsLanguageAuto": {
+    "message": "Browsertaal"
+  },
+  "optionsLanguageHint": {
+    "message": "Bij het wisselen van taal wordt deze pagina herladen."
+  },
   "optionsLayoutTitle": {
     "message": "Pop-upindeling"
   },

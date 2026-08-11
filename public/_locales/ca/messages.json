@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Capes a la pàgina"
   },
+  "optionsLanguageTitle": {
+    "message": "Idioma"
+  },
+  "optionsLanguageDescription": {
+    "message": "Tria l’idioma de la finestra, d’aquesta pàgina i de les capes."
+  },
+  "optionsLanguageAuto": {
+    "message": "Idioma del navegador"
+  },
+  "optionsLanguageHint": {
+    "message": "Canviar d’idioma recarrega la pàgina."
+  },
   "optionsLayoutTitle": {
     "message": "Disposició de la finestra emergent"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "પેજ પરના ઓવરલે"
   },
+  "optionsLanguageTitle": {
+    "message": "ભાષા"
+  },
+  "optionsLanguageDescription": {
+    "message": "પોપઅપ, આ પેજ અને પેજ ઓવરલે માટે ભાષા પસંદ કરો."
+  },
+  "optionsLanguageAuto": {
+    "message": "બ્રાઉઝરની ભાષા"
+  },
+  "optionsLanguageHint": {
+    "message": "ભાષા બદલતાં આ પેજ ફરી લોડ થશે."
+  },
   "optionsLayoutTitle": {
     "message": "પોપઅપ લેઆઉટ"
   },

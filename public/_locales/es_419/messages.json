@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Superposiciones en la página"
   },
+  "optionsLanguageTitle": {
+    "message": "Idioma"
+  },
+  "optionsLanguageDescription": {
+    "message": "Elige el idioma de la ventana emergente, esta página y las capas."
+  },
+  "optionsLanguageAuto": {
+    "message": "Idioma del navegador"
+  },
+  "optionsLanguageHint": {
+    "message": "Cambiar el idioma recarga esta página."
+  },
   "optionsLayoutTitle": {
     "message": "Diseño de la ventana emergente"
   },

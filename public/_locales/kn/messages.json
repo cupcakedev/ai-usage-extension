@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "ಪುಟದ ಓವರ್‌ಲೇಗಳು"
   },
+  "optionsLanguageTitle": {
+    "message": "ಭಾಷೆ"
+  },
+  "optionsLanguageDescription": {
+    "message": "ಪಾಪ್‌ಅಪ್, ಈ ಪುಟ ಮತ್ತು ಪುಟದ ಓವರ್‌ಲೇಗಳ ಭಾಷೆಯನ್ನು ಆರಿಸಿ."
+  },
+  "optionsLanguageAuto": {
+    "message": "ಬ್ರೌಸರ್ ಭಾಷೆ"
+  },
+  "optionsLanguageHint": {
+    "message": "ಭಾಷೆ ಬದಲಾಯಿಸಿದರೆ ಈ ಪುಟ ಮತ್ತೆ ಲೋಡ್ ಆಗುತ್ತದೆ."
+  },
   "optionsLayoutTitle": {
     "message": "ಪಾಪ್‌ಅಪ್ ವಿನ್ಯಾಸ"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Overlay-uri pe pagină"
   },
+  "optionsLanguageTitle": {
+    "message": "Limbă"
+  },
+  "optionsLanguageDescription": {
+    "message": "Alege limba pentru popup, această pagină și overlay-uri."
+  },
+  "optionsLanguageAuto": {
+    "message": "Limba browserului"
+  },
+  "optionsLanguageHint": {
+    "message": "Schimbarea limbii reîncarcă pagina."
+  },
   "optionsLayoutTitle": {
     "message": "Aspectul popupului"
   },

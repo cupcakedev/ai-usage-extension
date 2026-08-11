@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "పేజీ ఓవర్‌లేలు"
   },
+  "optionsLanguageTitle": {
+    "message": "భాష"
+  },
+  "optionsLanguageDescription": {
+    "message": "పాపప్, ఈ పేజీ, పేజీ ఓవర్‌లేల భాషను ఎంచుకోండి."
+  },
+  "optionsLanguageAuto": {
+    "message": "బ్రౌజర్ భాష"
+  },
+  "optionsLanguageHint": {
+    "message": "భాష మార్చితే ఈ పేజీ మళ్లీ లోడ్ అవుతుంది."
+  },
   "optionsLayoutTitle": {
     "message": "పాపప్ లేఅవుట్"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Επικαλύψεις στη σελίδα"
   },
+  "optionsLanguageTitle": {
+    "message": "Γλώσσα"
+  },
+  "optionsLanguageDescription": {
+    "message": "Επιλέξτε τη γλώσσα για το αναδυόμενο, τη σελίδα και τις επικαλύψεις."
+  },
+  "optionsLanguageAuto": {
+    "message": "Γλώσσα προγράμματος περιήγησης"
+  },
+  "optionsLanguageHint": {
+    "message": "Η αλλαγή γλώσσας φορτώνει ξανά τη σελίδα."
+  },
   "optionsLayoutTitle": {
     "message": "Διάταξη αναδυόμενου"
   },

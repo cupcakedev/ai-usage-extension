@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Преклопи на страници"
   },
+  "optionsLanguageTitle": {
+    "message": "Језик"
+  },
+  "optionsLanguageDescription": {
+    "message": "Изаберите језик прозора, ове странице и преклопа."
+  },
+  "optionsLanguageAuto": {
+    "message": "Језик прегледача"
+  },
+  "optionsLanguageHint": {
+    "message": "Промена језика поново учитава страницу."
+  },
   "optionsLayoutTitle": {
     "message": "Распоред искачућег прозора"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Sobreposições na página"
   },
+  "optionsLanguageTitle": {
+    "message": "Idioma"
+  },
+  "optionsLanguageDescription": {
+    "message": "Escolha o idioma do popup, desta página e das sobreposições."
+  },
+  "optionsLanguageAuto": {
+    "message": "Idioma do navegador"
+  },
+  "optionsLanguageHint": {
+    "message": "Trocar o idioma recarrega esta página."
+  },
   "optionsLayoutTitle": {
     "message": "Layout do popup"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Lapisan pada halaman"
   },
+  "optionsLanguageTitle": {
+    "message": "Bahasa"
+  },
+  "optionsLanguageDescription": {
+    "message": "Pilih bahasa untuk popup, halaman ini dan lapisan pada halaman."
+  },
+  "optionsLanguageAuto": {
+    "message": "Bahasa pelayar"
+  },
+  "optionsLanguageHint": {
+    "message": "Menukar bahasa akan memuat semula halaman ini."
+  },
   "optionsLayoutTitle": {
     "message": "Susun atur popup"
   },

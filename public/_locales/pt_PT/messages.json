@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Camadas na página"
   },
+  "optionsLanguageTitle": {
+    "message": "Idioma"
+  },
+  "optionsLanguageDescription": {
+    "message": "Escolha o idioma da janela, desta página e das camadas na página."
+  },
+  "optionsLanguageAuto": {
+    "message": "Idioma do navegador"
+  },
+  "optionsLanguageHint": {
+    "message": "Mudar o idioma recarrega esta página."
+  },
   "optionsLayoutTitle": {
     "message": "Esquema da janela"
   },

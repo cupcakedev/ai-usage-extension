@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Oldalon megjelenő panelek"
   },
+  "optionsLanguageTitle": {
+    "message": "Nyelv"
+  },
+  "optionsLanguageDescription": {
+    "message": "Válaszd ki a felugró ablak, ez az oldal és a panelek nyelvét."
+  },
+  "optionsLanguageAuto": {
+    "message": "Böngésző nyelve"
+  },
+  "optionsLanguageHint": {
+    "message": "A nyelv váltása újratölti az oldalt."
+  },
   "optionsLayoutTitle": {
     "message": "Felugró ablak elrendezése"
   },

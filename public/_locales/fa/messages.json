@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "لایه‌های روی صفحه"
   },
+  "optionsLanguageTitle": {
+    "message": "زبان"
+  },
+  "optionsLanguageDescription": {
+    "message": "زبان پنجره بازشو، این صفحه و لایه‌های روی صفحه را انتخاب کنید."
+  },
+  "optionsLanguageAuto": {
+    "message": "زبان مرورگر"
+  },
+  "optionsLanguageHint": {
+    "message": "تغییر زبان این صفحه را دوباره بارگذاری می‌کند."
+  },
   "optionsLayoutTitle": {
     "message": "چیدمان پنجره بازشو"
   },

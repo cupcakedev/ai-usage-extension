@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "頁面浮層"
   },
+  "optionsLanguageTitle": {
+    "message": "語言"
+  },
+  "optionsLanguageDescription": {
+    "message": "選擇彈出視窗、此頁面與頁面浮層使用的語言。"
+  },
+  "optionsLanguageAuto": {
+    "message": "瀏覽器語言"
+  },
+  "optionsLanguageHint": {
+    "message": "切換語言後會重新載入此頁面。"
+  },
   "optionsLayoutTitle": {
     "message": "彈出視窗版面"
   },

@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "பக்க மேலடுக்குகள்"
   },
+  "optionsLanguageTitle": {
+    "message": "மொழி"
+  },
+  "optionsLanguageDescription": {
+    "message": "பாப்அப், இந்தப் பக்கம் மற்றும் பக்க மேலடுக்குகளுக்கான மொழியைத் தேர்வுசெய்யவும்."
+  },
+  "optionsLanguageAuto": {
+    "message": "உலாவியின் மொழி"
+  },
+  "optionsLanguageHint": {
+    "message": "மொழியை மாற்றினால் இந்தப் பக்கம் மீண்டும் ஏற்றப்படும்."
+  },
   "optionsLayoutTitle": {
     "message": "பாப்அப் தளவமைப்பு"
   },

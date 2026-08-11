@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Prekrivi na strani"
   },
+  "optionsLanguageTitle": {
+    "message": "Jezik"
+  },
+  "optionsLanguageDescription": {
+    "message": "Izberite jezik pojavnega okna, te strani in prekrivov."
+  },
+  "optionsLanguageAuto": {
+    "message": "Jezik brskalnika"
+  },
+  "optionsLanguageHint": {
+    "message": "Ob zamenjavi jezika se stran znova naloži."
+  },
   "optionsLayoutTitle": {
     "message": "Postavitev pojavnega okna"
   },

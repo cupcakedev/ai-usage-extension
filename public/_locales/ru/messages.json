@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Оверлеи на страницах"
   },
+  "optionsLanguageTitle": {
+    "message": "Язык"
+  },
+  "optionsLanguageDescription": {
+    "message": "Выберите язык попапа, этой страницы и оверлеев на сайтах."
+  },
+  "optionsLanguageAuto": {
+    "message": "Язык браузера"
+  },
+  "optionsLanguageHint": {
+    "message": "При смене языка страница перезагрузится."
+  },
   "optionsLayoutTitle": {
     "message": "Раскладка попапа"
   },

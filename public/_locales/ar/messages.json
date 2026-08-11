@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "الطبقات على الصفحة"
   },
+  "optionsLanguageTitle": {
+    "message": "اللغة"
+  },
+  "optionsLanguageDescription": {
+    "message": "اختر لغة النافذة المنبثقة وهذه الصفحة والطبقات على الصفحات."
+  },
+  "optionsLanguageAuto": {
+    "message": "لغة المتصفح"
+  },
+  "optionsLanguageHint": {
+    "message": "تغيير اللغة يعيد تحميل هذه الصفحة."
+  },
   "optionsLayoutTitle": {
     "message": "تصميم النافذة المنبثقة"
   },

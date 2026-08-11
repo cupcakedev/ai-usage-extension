@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "पेज पर ओवरले"
   },
+  "optionsLanguageTitle": {
+    "message": "भाषा"
+  },
+  "optionsLanguageDescription": {
+    "message": "पॉपअप, इस पेज और पेज ओवरले के लिए भाषा चुनें।"
+  },
+  "optionsLanguageAuto": {
+    "message": "ब्राउज़र की भाषा"
+  },
+  "optionsLanguageHint": {
+    "message": "भाषा बदलने पर यह पेज फिर से लोड होगा।"
+  },
   "optionsLayoutTitle": {
     "message": "पॉपअप लेआउट"
   },

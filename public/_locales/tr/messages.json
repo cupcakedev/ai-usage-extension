@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Sayfa katmanları"
   },
+  "optionsLanguageTitle": {
+    "message": "Dil"
+  },
+  "optionsLanguageDescription": {
+    "message": "Popup, bu sayfa ve sayfa katmanları için dili seçin."
+  },
+  "optionsLanguageAuto": {
+    "message": "Tarayıcı dili"
+  },
+  "optionsLanguageHint": {
+    "message": "Dili değiştirmek bu sayfayı yeniden yükler."
+  },
   "optionsLayoutTitle": {
     "message": "Açılır pencere düzeni"
   },

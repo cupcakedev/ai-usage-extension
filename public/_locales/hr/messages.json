@@ -140,6 +140,18 @@
   "optionsNavOverlays": {
     "message": "Preklopi na stranici"
   },
+  "optionsLanguageTitle": {
+    "message": "Jezik"
+  },
+  "optionsLanguageDescription": {
+    "message": "Odaberite jezik skočnog prozora, ove stranice i preklopa."
+  },
+  "optionsLanguageAuto": {
+    "message": "Jezik preglednika"
+  },
+  "optionsLanguageHint": {
+    "message": "Promjena jezika ponovno učitava stranicu."
+  },
   "optionsLayoutTitle": {
     "message": "Raspored skočnog prozora"
   },

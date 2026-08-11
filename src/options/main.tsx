@@ -1,9 +1,25 @@
 import { createRoot } from 'react-dom/client';
 import { msg } from '../shared/i18n';
-import { OptionsApp } from './OptionsApp';
+import { applyStoredLanguage, watchLanguage } from '../shared/language';
 import './styles.css';
 
-// The static <title> in options.html cannot go through chrome.i18n, so localize it here.
-document.title = msg('optionsTitle');
+/*
+ * Section titles and metric labels are built with `msg()` at import time, so
+ * the language override has to be applied before those modules load, and a
+ * language change reloads the page.
+ */
+const start = async (): Promise<void> => {
+  const language = await applyStoredLanguage();
 
-createRoot(document.getElementById('root')!).render(<OptionsApp />);
+  const { OptionsApp } = await import('./OptionsApp');
+
+  document.title = msg('optionsTitle');
+  document.documentElement.lang =
+    language === 'auto' ? chrome.i18n.getUILanguage() : language.replace('_', '-');
+
+  createRoot(document.getElementById('root')!).render(<OptionsApp />);
+
+  watchLanguage(() => window.location.reload());
+};
+
+void start();

@@ -1,4 +1,4 @@
-import { BadgePercent, Layers3, LayoutDashboard, MonitorCog } from 'lucide-react';
+import { BadgePercent, Languages, Layers3, LayoutDashboard, MonitorCog } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { msg } from '../shared/i18n';
 
@@ -12,6 +12,13 @@ export interface SectionDefinition {
 
 /** Single source of truth for the side navigation and the section headers it links to. */
 export const SECTIONS: SectionDefinition[] = [
+  {
+    id: 'language',
+    label: msg('optionsLanguageTitle'),
+    title: msg('optionsLanguageTitle'),
+    description: msg('optionsLanguageDescription'),
+    Icon: Languages,
+  },
   {
     id: 'display',
     label: msg('optionsNavLayout'),

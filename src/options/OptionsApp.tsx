@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { msg } from '../shared/i18n';
 import { BadgeSettingsSection } from './components/BadgeSettingsSection';
 import { DisplaySettingsSection } from './components/DisplaySettingsSection';
+import { LanguageSettingsSection } from './components/LanguageSettingsSection';
 import { OptionsHeader } from './components/OptionsHeader';
 import { OptionsNavigation } from './components/OptionsNavigation';
 import { OverlaySettingsSection } from './components/OverlaySettingsSection';
@@ -14,6 +15,7 @@ import {
   withBadgeMetric,
   withBadgeMode,
   withBadgeProvider,
+  withLanguage,
   withOverlayEnabled,
   withPopupLayout,
   withProviderVisibility,
@@ -73,6 +75,12 @@ export const OptionsApp = () => {
       <div className="auo-layout">
         <OptionsNavigation activeId={activeId} onNavigate={scrollToSection} />
         <div id="settings-content" className="auo-content" ref={contentRef} tabIndex={-1}>
+          <LanguageSettingsSection
+            language={settings.language}
+            onLanguageChange={(language) =>
+              updateSettings((current) => withLanguage(current, language))
+            }
+          />
           <DisplaySettingsSection
             popupLayout={settings.popupLayout}
             onPopupLayoutChange={(layout) =>

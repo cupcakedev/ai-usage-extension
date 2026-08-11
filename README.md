@@ -69,6 +69,13 @@ All 53 Chrome Web Store languages are translated and the release tests enforce
 that they expose the same keys. The one exception is the overlay's "LIMITS"
 side tab, which stays in English everywhere by design.
 
+Settings carry a `language` preference: `auto` follows the browser, anything
+else loads that `_locales` bundle at startup and feeds it to `msg()` through
+`setLocaleMessages`. Because several modules build label tables with `msg()` at
+import time, the popup and options entry points apply the language *before*
+importing their app; the content script gets the same bundle from the service
+worker (`GET_LOCALE_MESSAGES`), which cannot be fetched from a page context.
+
 ## Getting Started
 
 ### Requirements

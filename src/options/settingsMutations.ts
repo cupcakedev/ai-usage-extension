@@ -1,3 +1,4 @@
+import type { LanguagePreference } from '../shared/locales';
 import type {
   BadgeMetric,
   BadgeMode,
@@ -6,6 +7,11 @@ import type {
   ProviderId,
   ProviderMetric,
 } from '../shared/types';
+
+export const withLanguage = (
+  settings: ExtensionSettings,
+  language: LanguagePreference,
+): ExtensionSettings => ({ ...settings, language });
 
 export const withPopupLayout = (
   settings: ExtensionSettings,

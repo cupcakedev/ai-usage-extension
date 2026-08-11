@@ -49,6 +49,11 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsNavProviders: 'Providers',
   optionsNavBadge: 'Toolbar badge',
   optionsNavOverlays: 'On-page overlays',
+  optionsLanguageTitle: 'Language',
+  optionsLanguageDescription:
+    'Choose the language for the popup, this page, and the on-page overlays.',
+  optionsLanguageAuto: 'Browser language',
+  optionsLanguageHint: 'Switching the language reloads this page.',
   optionsLayoutTitle: 'Popup layout',
   optionsLayoutDescription: 'Choose how visible provider cards are arranged in the popup.',
   optionsLayoutSingle: 'One column',
@@ -97,13 +102,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsTitle: 'AI Usage Tracker settings',
 };
 
-export const msg = (name: string, substitutions?: string | string[]): string => {
-  const value = globalThis.chrome?.i18n?.getMessage(name, substitutions);
-  if (value) {
-    return value;
-  }
-
-  const fallback = FALLBACK_MESSAGES[name] ?? name;
+const fill = (template: string, substitutions?: string | string[]): string => {
   const values = Array.isArray(substitutions)
     ? substitutions
     : substitutions
@@ -112,6 +111,31 @@ export const msg = (name: string, substitutions?: string | string[]): string => 
 
   return values.reduce(
     (text, substitution, index) => text.split(`$${index + 1}`).join(substitution),
-    fallback,
+    template,
   );
+};
+
+let overrides: Record<string, string> | null = null;
+
+/**
+ * Renders the UI in a language other than the browser's. Pass `null` to fall
+ * back to `chrome.i18n`. Must run before any module builds a label table with
+ * `msg()` at import time.
+ */
+export const setLocaleMessages = (messages: Record<string, string> | null): void => {
+  overrides = messages;
+};
+
+export const msg = (name: string, substitutions?: string | string[]): string => {
+  const override = overrides?.[name];
+  if (override) {
+    return fill(override, substitutions);
+  }
+
+  const value = globalThis.chrome?.i18n?.getMessage(name, substitutions);
+  if (value) {
+    return value;
+  }
+
+  return fill(FALLBACK_MESSAGES[name] ?? name, substitutions);
 };

@@ -711,6 +711,12 @@ select {
   color: var(--faint);
 }
 
+.auo-field__hint {
+  color: var(--faint);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 .auo-field select {
   width: 100%;
   min-height: 38px;

@@ -37,7 +37,7 @@ UI renders it.
 | ------------------ | ------------------------------------- | ------------- |
 | `screenshot-1.jpg` | Popup with all six providers          | 1280 × 800 px |
 | `screenshot-2.jpg` | On-page overlay on Claude and ChatGPT | 1280 × 800 px |
-| `screenshot-3.jpg` | Settings: layout and provider details | 1280 × 800 px |
+| `screenshot-3.jpg` | Settings: language, layout, provider details | 1280 × 800 px |
 | `screenshot-4.jpg` | Settings: toolbar badge and overlays  | 1280 × 800 px |
 | `screenshot-5.jpg` | Provider lineup, privacy, zero setup  | 1280 × 800 px |
 | `marquee.png`      | Marquee promo tile                    | 1400 × 560 px |

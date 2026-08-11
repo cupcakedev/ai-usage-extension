@@ -1,4 +1,5 @@
 import { STORAGE_KEYS } from './constants';
+import { normalizeLanguage } from './locales';
 import type {
   ExtensionSettings,
   ProviderDisplaySettings,
@@ -42,6 +43,7 @@ const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({
 });
 
 export const createDefaultSettings = (): ExtensionSettings => ({
+  language: 'auto',
   popupLayout: 'single',
   providers: Object.fromEntries(
     PROVIDER_IDS.map((provider) => [provider, defaultProvider(provider)]),
@@ -96,6 +98,7 @@ export const normalizeSettings = (
   ) as ExtensionSettings['providers'];
 
   return {
+    language: normalizeLanguage(candidate.language),
     popupLayout: candidate.popupLayout === 'grid' ? 'grid' : 'single',
     providers,
     badge: {

@@ -52,10 +52,9 @@ const PROVIDER_TITLE: Record<ProviderId, string> = {
   cursor: 'Cursor',
   mimo: 'MiMo',
 };
-const METRIC_LABEL: Record<BadgeMetric, string> = {
-  session: msg('sessionLimit'),
-  weekly: msg('weeklyLimit'),
-};
+/** Read lazily so a language change is picked up without a worker restart. */
+const metricLabel = (metric: BadgeMetric): string =>
+  metric === 'session' ? msg('sessionLimit') : msg('weeklyLimit');
 
 interface UsageSummary {
   percent: number;
@@ -96,7 +95,7 @@ const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSu
     msg('appShortName'),
     ...rows.map(
       ({ provider, metric, percent }) =>
-        `${PROVIDER_TITLE[provider]} · ${METRIC_LABEL[metric]} ${percent}%`,
+        `${PROVIDER_TITLE[provider]} · ${metricLabel(metric)} ${percent}%`,
     ),
   ].join('\n');
 

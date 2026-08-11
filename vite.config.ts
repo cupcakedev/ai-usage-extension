@@ -13,6 +13,10 @@ export default defineConfig(({ mode }) => ({
 	build:
 		mode === 'development'
 			? {
+					// Extension pages can load their module preloads in a different
+					// execution world than the popup. Dynamic imports still work, but
+					// Chromium reports a misleading cross-world preload warning.
+					modulePreload: false,
 					watch: {
 						chokidar: {
 							usePolling: true,
@@ -20,7 +24,7 @@ export default defineConfig(({ mode }) => ({
 						},
 					},
 				}
-			: undefined,
+			: { modulePreload: false },
 	resolve: {
 		alias: {
 			'@sidepanel': resolve(__dirname, 'src/sidepanel'),

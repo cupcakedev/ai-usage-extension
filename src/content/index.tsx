@@ -5,8 +5,9 @@ import codexBrandAsset from '../assets/brands/codex-openai.jpg?inline';
 import limitBrandAsset from '../../public/icons/limit-icon-2.0.png?inline';
 import { STORAGE_KEYS } from '../shared/constants';
 import { useNow } from '../shared/hooks/useNow';
-import { msg } from '../shared/i18n';
-import { requestUsageRefresh } from '../shared/messaging';
+import { msg, setLocaleMessages } from '../shared/i18n';
+import { watchLanguage } from '../shared/language';
+import { requestLocaleMessages, requestUsageRefresh } from '../shared/messaging';
 import type { ClaudeUsage, CodexUsage, UsageLimit, UsageState } from '../shared/types';
 import { formatRelativeTime, formatReset, getUsageTone, isLimitAvailable } from '../shared/utils';
 
@@ -86,12 +87,24 @@ const inputSelector = isClaude
 
 const UsageOverlay: React.FC = () => {
   const [enabled, setEnabled] = useState(true);
+  const [localeVersion, setLocaleVersion] = useState(0);
   const [usage, setUsage] = useState<ClaudeUsage | CodexUsage | null>(null);
   const [collapsed, setCollapsed] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [hasInput, setHasInput] = useState(false);
   const now = useNow(60_000);
+
+  useEffect(
+    () =>
+      watchLanguage(() => {
+        void requestLocaleMessages().then((messages) => {
+          setLocaleMessages(messages);
+          setLocaleVersion((version) => version + 1);
+        });
+      }),
+    [],
+  );
 
   useEffect(() => {
     const checkElement = (): void => {
@@ -193,7 +206,7 @@ const UsageOverlay: React.FC = () => {
   }
 
   return (
-    <div className="aiu-root">
+    <div className="aiu-root" key={localeVersion}>
       <div className={`aiu-wrap ${collapsed ? 'aiu-wrap--collapsed' : ''}`}>
         <button
           type="button"
@@ -317,8 +330,14 @@ const mount = (): void => {
   });
 };
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', mount, { once: true });
-} else {
-  mount();
-}
+const start = async (): Promise<void> => {
+  setLocaleMessages(await requestLocaleMessages().catch(() => null));
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount, { once: true });
+  } else {
+    mount();
+  }
+};
+
+void start();

@@ -1,3 +1,5 @@
+import type { LanguagePreference } from '../locales';
+
 export type UsageStatus = 'ok' | 'warning' | 'critical';
 
 export type ProviderId = 'claude' | 'codex' | 'minimax' | 'kimi' | 'cursor' | 'mimo';
@@ -81,6 +83,8 @@ export interface ProviderDisplaySettings {
 }
 
 export interface ExtensionSettings {
+  /** `auto` follows the browser UI language; anything else is a `_locales` folder. */
+  language: LanguagePreference;
   popupLayout: PopupLayout;
   providers: Record<ProviderId, ProviderDisplaySettings>;
   badge: {
@@ -99,7 +103,7 @@ export interface ExtensionSettings {
 /* -------------------------------------------------------------------------- */
 
 /** Messages sent to the background service worker. */
-export type ExtensionMessage = { type: 'REFRESH_USAGE' };
+export type ExtensionMessage = { type: 'REFRESH_USAGE' } | { type: 'GET_LOCALE_MESSAGES' };
 
 /** Response returned by the background worker for a given message. */
 export type MessageResponse<T = unknown> =
@@ -108,3 +112,6 @@ export type MessageResponse<T = unknown> =
 
 /** Typed response for the `REFRESH_USAGE` message. */
 export type RefreshUsageResponse = MessageResponse<UsageState>;
+
+/** Typed response for `GET_LOCALE_MESSAGES`; `null` means "follow the browser". */
+export type LocaleMessagesResponse = MessageResponse<Record<string, string> | null>;

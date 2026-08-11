@@ -1,5 +1,13 @@
 import { REFRESH_ALARM, REFRESH_INTERVAL_MINUTES, STORAGE_KEYS } from '../shared/constants';
-import type { ExtensionMessage, RefreshUsageResponse, UsageState } from '../shared/types';
+import { applyStoredLanguage } from '../shared/language';
+import { loadLocaleMessages } from '../shared/locales';
+import { readExtensionSettings } from '../shared/settings';
+import type {
+  ExtensionMessage,
+  LocaleMessagesResponse,
+  RefreshUsageResponse,
+  UsageState,
+} from '../shared/types';
 import { updateBadge } from './badge';
 import { UsageService } from './services/UsageService';
 
@@ -30,7 +38,10 @@ const refreshUsage = (): Promise<UsageState> => {
   return refreshInFlight;
 };
 
-void UsageService.getUsageState()
+const languageReady = applyStoredLanguage().catch(() => undefined);
+
+void languageReady
+  .then(() => UsageService.getUsageState())
   .then((state) => (hasStartedRefresh ? undefined : queueBadgeUpdate(state)))
   .catch(() => undefined);
 
@@ -51,14 +62,33 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
   if (areaName === 'local' && changes[STORAGE_KEYS.extensionSettings]) {
-    void UsageService.getUsageState()
+    void applyStoredLanguage()
+      .catch(() => undefined)
+      .then(() => UsageService.getUsageState())
       .then(queueBadgeUpdate)
       .catch(() => undefined);
   }
 });
 
+const collectLocaleMessages = async (): Promise<Record<string, string> | null> => {
+  const { language } = await readExtensionSettings();
+  return language === 'auto' ? null : loadLocaleMessages(language);
+};
+
 chrome.runtime.onMessage.addListener(
-  (message: ExtensionMessage, _sender, sendResponse: (response: RefreshUsageResponse) => void) => {
+  (
+    message: ExtensionMessage,
+    _sender,
+    sendResponse: (response: RefreshUsageResponse | LocaleMessagesResponse) => void,
+  ) => {
+    if (message?.type === 'GET_LOCALE_MESSAGES') {
+      collectLocaleMessages()
+        .then((data) => sendResponse({ success: true, data }))
+        .catch(() => sendResponse({ success: true, data: null }));
+
+      return true;
+    }
+
     if (message?.type !== 'REFRESH_USAGE') {
       return undefined;
     }

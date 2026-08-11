@@ -1,5 +1,6 @@
 import { BadgeSettingsSection } from '../options/components/BadgeSettingsSection';
 import { DisplaySettingsSection } from '../options/components/DisplaySettingsSection';
+import { LanguageSettingsSection } from '../options/components/LanguageSettingsSection';
 import { OverlaySettingsSection } from '../options/components/OverlaySettingsSection';
 import { ProviderSettingsSection } from '../options/components/ProviderSettingsSection';
 import { SETTINGS } from './fixtures';
@@ -13,6 +14,7 @@ export const SettingsStage = ({ view }: { view: SettingsView }) => (
   <div className="promo-options">
     {view === 'providers' ? (
       <>
+        <LanguageSettingsSection language={SETTINGS.language} onLanguageChange={noop} />
         <DisplaySettingsSection popupLayout={SETTINGS.popupLayout} onPopupLayoutChange={noop} />
         <ProviderSettingsSection
           providers={SETTINGS.providers}

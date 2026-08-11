@@ -1,15 +1,3 @@
-# Chrome interneta veikala ieraksts — angļu
-
-## Vārds
-
-AI lietojuma izsekotājs: Kvota un ierobežojumi Klodam, Codex
-
-## Īss apraksts
-
-Vienā mirklī uznirstošajā logā un lapas pārklājumā izsekojiet Kloda un ChatGPT (Codex) sesijas un iknedēļas lietošanas ierobežojumus. Privātums, pirmkārt, bez iestatīšanas.
-
-## Pilns apraksts
-
 AI lietojuma izsekotājs: Kvota un ierobežojumi Klodam, Codex ir pārlūkprogrammas paplašinājums cilvēkiem, kuri vēlas skaidrāku un paredzamāku AI palīga pieredzi. Sekojiet līdzi ziņojumu ierobežojumiem, skatiet reāllaika atpakaļskaitīšanu un parādiet neuzkrītošus lietošanas skaitītājus tieši pakalpojumu sniedzēja lapās, lai jūs varētu koncentrēties uz savu darbu, nepārkāpjot pēkšņus ierobežojumus.
 
 Neatkarīgi no tā, vai izmantojat Claude un ChatGPT kodēšanai, rakstīšanai, izpētei vai dziļai problēmu risināšanai, AI lietojuma izsekotājs palīdz samazināt robežu bloku berzi un sniedz jums tiešu kontroli pār to, kā tiek uzraudzīta jūsu jauda. Jūs izvēlaties, kur tiek rādīts pārklājums un kā izsekot saviem ierobežojumiem.
@@ -41,11 +29,3 @@ Lieliski piemērots:
 - Ikviens, kuram ir apnicis sist bez iepriekšēja brīdinājuma “esat sasniedzis savu limitu”.
 
 Avota kods: https://github.com/cupcakedev/ai-usage-extension
-
-## Atslēgvārdi
-
-klaude lietojums, klaude ierobežojumi, tērzēšanas ierobežojumi, kodeksa lietojums, AI lietojuma izsekotājs, ātruma ierobežojuma izsekotājs, claude atiestatīšana, čatgpt kvota, openai lietojums, produktivitāte
-
-## Vienam mērķim
-
-Paplašinājuma uznirstošajā logā, rīkjoslas emblēmā un nodrošinātāja lapas pārklājumā parādīt sesijas un iknedēļas lietošanas ierobežojumus pierakstītā lietotāja Claude un ChatGPT/Codex kontiem.

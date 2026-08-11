@@ -1,15 +1,3 @@
-# Chrome Web Mağazası Girişi - İngilizce
-
-## Ad
-
-Yapay Zeka Kullanım Takibi: Claude ve Codex için Kota ve Sınırlar
-
-## Kısa Açıklama
-
-Claude ve ChatGPT (Codex) oturumunu ve haftalık kullanım limitlerini açılır pencerede ve sayfa üzeri paylaşımda bir bakışta takip edin. Önce gizlilik, kurulum yok.
-
-## Tam Açıklama
-
 AI Kullanım Takibi: Claude için Kota ve Sınırlar, Codex, daha net, daha öngörülebilir bir AI asistan deneyimi isteyen kişilere yönelik bir tarayıcı uzantısıdır. Mesaj limitlerinizi takip edin, gerçek zamanlı geri sayımları görüntüleyin ve dikkat çekmeyen kullanım ölçümlerini doğrudan sağlayıcı sayfalarında görüntüleyin, böylece ani limitlere çarpmadan işinize odaklanabilirsiniz.
 
 Claude ve ChatGPT'yi kodlama, yazma, araştırma veya derin problem çözme için kullanıyor olsanız da, AI Kullanım İzleyici, sınır bloklarına ulaşma sürtünmesini azaltmaya yardımcı olur ve kapasitenizin nasıl izleneceği konusunda size doğrudan kontrol sağlar. Kaplamanın nerede görüneceğini ve sınırlarınızı nasıl takip edeceğinizi siz seçersiniz.
@@ -41,11 +29,3 @@ Kullanıcılar neden AI Kullanım İzleyiciyi seçiyor:
 - Önceden uyarı vermeden "sınırınıza ulaştınız" demekten yorulan herkes
 
 Kaynak kodu: https://github.com/cupcakedev/ai-usage-extension
-
-## Anahtar Kelimeler
-
-Claude kullanımı, Claude sınırları, Chatgpt sınırları, Codex kullanımı, AI kullanım izleyicisi, Hız sınırı izleyicisi, Claude sıfırlama, Chatgpt kotası, Openai kullanımı, üretkenlik
-
-## Tek Amaçlı
-
-Oturum açan kullanıcının Claude ve ChatGPT/Codex hesaplarına ilişkin oturum ve haftalık kullanım sınırlarını uzantı açılır penceresinde, araç çubuğu rozetinde ve sağlayıcı sayfası katmanında görüntüleyin.

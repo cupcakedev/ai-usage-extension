@@ -1,15 +1,3 @@
-# Danh sách cửa hàng Chrome trực tuyến - Tiếng Anh
-
-## Tên
-
-Trình theo dõi sử dụng AI: Hạn ngạch & giới hạn cho Claude, Codex
-
-## Mô tả ngắn
-
-Theo dõi nhanh phiên Claude và ChatGPT (Codex) cũng như giới hạn sử dụng hàng tuần trong cửa sổ bật lên và lớp phủ trên trang. Ưu tiên quyền riêng tư, không cần thiết lập.
-
-## Mô tả đầy đủ
-
 Trình theo dõi sử dụng AI: Hạn ngạch & Giới hạn cho Claude, Codex là một tiện ích mở rộng trình duyệt dành cho những người muốn có trải nghiệm trợ lý AI rõ ràng hơn, dễ dự đoán hơn. Theo dõi giới hạn tin nhắn của bạn, xem đếm ngược thời gian thực và hiển thị đồng hồ đo mức sử dụng kín đáo trực tiếp trên các trang của nhà cung cấp để bạn có thể tập trung vào công việc của mình mà không gặp phải giới hạn đột ngột.
 
 Cho dù bạn sử dụng Claude và ChatGPT để viết mã, viết, nghiên cứu hay giải quyết vấn đề chuyên sâu, AI Usage Tracker sẽ giúp giảm ma sát khi chạm vào các khối giới hạn và cung cấp cho bạn quyền kiểm soát trực tiếp cách giám sát năng lực của bạn. Bạn chọn nơi lớp phủ xuất hiện và cách bạn theo dõi giới hạn của mình.
@@ -41,11 +29,3 @@ Tuyệt vời cho:
 - Bất cứ ai cảm thấy mệt mỏi khi nhấn "bạn đã đạt đến giới hạn" mà không có cảnh báo trước
 
 Mã nguồn: https://github.com/cupcakedev/ai-usage-extension
-
-## Từ khóa
-
-mức sử dụng claude, giới hạn claude, giới hạn chatgpt, sử dụng codex, trình theo dõi sử dụng ai, trình theo dõi giới hạn tốc độ, đặt lại claude, hạn ngạch chatgpt, sử dụng openai, năng suất
-
-## Mục đích duy nhất
-
-Hiển thị giới hạn phiên và mức sử dụng hàng tuần cho tài khoản Claude và ChatGPT/Codex của người dùng đã đăng nhập trong cửa sổ bật lên tiện ích mở rộng, huy hiệu thanh công cụ và lớp phủ trang của nhà cung cấp.

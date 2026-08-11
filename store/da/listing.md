@@ -1,15 +1,3 @@
-# Fortegnelse over Chrome Webshop - engelsk
-
-## Navn
-
-AI Usage Tracker: Kvote og grænser for Claude, Codex
-
-## Kort beskrivelse
-
-Spor Claude- og ChatGPT-sessioner (Codex) og ugentlige brugsgrænser på et øjeblik i en pop-up og overlejring på siden. Privatliv først, ingen opsætning.
-
-## Fuld beskrivelse
-
 AI Usage Tracker: Quota & Limits for Claude, Codex er en browserudvidelse til folk, der ønsker en klarere, mere forudsigelig AI-assistentoplevelse. Spor dine beskedgrænser, se nedtællinger i realtid og vis diskrete forbrugsmålere direkte på udbyderens sider, så du kan fokusere på dit arbejde uden at ramme pludselige grænser.
 
 Uanset om du bruger Claude og ChatGPT til kodning, skrivning, research eller dyb problemløsning, hjælper AI Usage Tracker med at reducere friktionen ved at ramme grænseblokke og giver dig direkte kontrol over, hvordan din kapacitet overvåges. Du vælger, hvor overlejringen skal vises, og hvordan du sporer dine grænser.
@@ -41,11 +29,3 @@ Fantastisk til:
 - Enhver, der er træt af at ramme "du har nået din grænse" uden forudgående varsel
 
 Kildekode: https://github.com/cupcakedev/ai-usage-extension
-
-## Nøgleord
-
-claude usage, claude limits, chatgpt limits, codex usage, ai usage tracker, rate limit tracker, claude reset, chatgpt quota, openai usage, produktivitet
-
-## Enkelt formål
-
-Vis sessions- og ugentlige brugsgrænser for den loggede brugers Claude- og ChatGPT/Codex-konti i popup-udvidelsen, værktøjslinjens badge og udbydersideoverlejringen.

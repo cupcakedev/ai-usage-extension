@@ -1,15 +1,3 @@
-# Cantuman Toko Web Chrome - Bahasa Inggris
-
-## Nama
-
-Pelacak Penggunaan AI: Kuota & Batasan untuk Claude, Codex
-
-## Deskripsi Singkat
-
-Lacak sesi Claude dan ChatGPT (Codex) & batas penggunaan mingguan secara sekilas dalam popup dan overlay di halaman. Privasi mengutamakan, tanpa pengaturan.
-
-## Deskripsi Lengkap
-
 Pelacak Penggunaan AI: Kuota & Batasan untuk Claude, Codex adalah ekstensi browser untuk orang-orang yang menginginkan pengalaman asisten AI yang lebih jelas dan dapat diprediksi. Lacak batas pesan Anda, lihat hitungan mundur waktu nyata, dan tampilkan pengukur penggunaan yang tidak mengganggu langsung di halaman penyedia sehingga Anda dapat fokus pada pekerjaan Anda tanpa mencapai batas yang tiba-tiba.
 
 Baik Anda menggunakan Claude dan ChatGPT untuk pengkodean, penulisan, penelitian, atau pemecahan masalah mendalam, AI Usage Tracker membantu mengurangi hambatan dalam mencapai batasan dan memberi Anda kendali langsung atas bagaimana kapasitas Anda dipantau. Anda memilih di mana overlay muncul dan bagaimana Anda melacak batasan Anda.
@@ -41,11 +29,3 @@ Bagus untuk:
 - Siapa pun yang lelah menekan "Anda telah mencapai batas" tanpa peringatan sebelumnya
 
 Kode sumber: https://github.com/cupcakedev/ai-usage-extension
-
-## Kata Kunci
-
-penggunaan claude, batas claude, batas chatgpt, penggunaan codex, pelacak penggunaan ai, pelacak batas kecepatan, reset claude, kuota chatgpt, penggunaan openai, produktivitas
-
-## Tujuan Tunggal
-
-Tampilkan batas penggunaan sesi dan mingguan untuk akun Claude dan ChatGPT/Codex pengguna yang masuk di popup ekstensi, badge toolbar, dan overlay halaman penyedia.

@@ -1,15 +1,3 @@
-# „Chrome“ internetinės parduotuvės įrašas – anglų kalba
-
-## Vardas
-
-AI naudojimo stebėjimo priemonė: Claude'o kvota ir apribojimai, Codex
-
-## Trumpas aprašymas
-
-Stebėkite Claude ir ChatGPT (Codex) seansą ir savaitės naudojimo apribojimus iššokančiajame lange ir puslapio perdangoje. Privatumas – visų pirma, jokios sąrankos.
-
-## Visas aprašymas
-
 AI naudojimo stebėjimo priemonė: Claude'o kvota ir apribojimai, Codex yra naršyklės plėtinys, skirtas žmonėms, norintiems aiškesnės ir labiau nuspėjamos AI asistento patirties. Stebėkite pranešimų limitus, peržiūrėkite atgalines atskaitas realiuoju laiku ir tiesiog tiekėjo puslapiuose rodykite nepastebimus naudojimo matuoklius, kad galėtumėte sutelkti dėmesį į savo darbą nepataikydami staigių apribojimų.
 
 Nesvarbu, ar naudojate „Claude“ ir „ChatGPT“ kodavimui, rašymui, tyrinėjimui ar giliam problemų sprendimui, AI naudojimo stebėjimo priemonė padeda sumažinti trintį, kai pasiekiate ribinius blokus, ir suteikia tiesioginę galimybę valdyti, kaip stebimas jūsų pajėgumas. Jūs pasirenkate, kur bus rodoma perdanga ir kaip stebėti savo ribas.
@@ -41,11 +29,3 @@ Puikiai tinka:
 - Kiekvienas, pavargęs nuo „pasiekei savo ribą“ be išankstinio įspėjimo
 
 Šaltinio kodas: https://github.com/cupcakedev/ai-usage-extension
-
-## Raktiniai žodžiai
-
-„Claude“ naudojimas, „Claude“ apribojimai, „chatgpt“ apribojimai, „codex“ naudojimas, „AI“ naudojimo stebėjimo priemonė, greičio apribojimo stebėjimo priemonė, „Claude“ nustatymas iš naujo, „chatgpt“ kvota, „Openai“ naudojimas, produktyvumas
-
-## Vienos paskirties
-
-Rodyti seanso ir savaitės naudojimo apribojimus prisijungusio naudotojo Claude ir ChatGPT / Codex paskyroms plėtinio iššokančiajame lange, įrankių juostos ženklelyje ir teikėjo puslapio perdangoje.

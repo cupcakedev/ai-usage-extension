@@ -1,15 +1,3 @@
-# Chrome Web Store Listing - Spanish
-
-## Name
-
-AI Usage Tracker: límites de Claude y Codex
-
-## Short Description
-
-Consulta límites de Claude y ChatGPT (Codex) por sesión y semana en popup, insignia y superposición. Privado y sin configuración.
-
-## Full Description
-
 AI Usage Tracker: límites de Claude y Codex es una extensión de navegador para personas que quieren una experiencia con asistentes de IA más clara y predecible. Controla tus límites de mensajes, consulta cuentas regresivas en tiempo real y muestra medidores de uso discretos directamente en las páginas de los proveedores para que puedas concentrarte en tu trabajo sin encontrarte con límites repentinos.
 
 Tanto si usas Claude y ChatGPT para programar, escribir, investigar o resolver problemas complejos, AI Usage Tracker ayuda a reducir la fricción de los bloqueos por límite y te da control directo sobre cómo se supervisa tu capacidad. Tú eliges dónde aparece la superposición y cómo controlas tus límites.
@@ -41,11 +29,3 @@ Ideal para:
 - Cualquiera cansado de encontrarse con “has alcanzado tu límite” sin aviso previo
 
 Código fuente: https://github.com/cupcakedev/ai-usage-extension
-
-## Keywords
-
-uso claude, límites claude, límites chatgpt, uso codex, rastreador uso ia, límite de tasa, reinicio claude, cuota chatgpt, uso openai, productividad
-
-## Single Purpose
-
-Mostrar los límites de sesión y semanales de las cuentas Claude y ChatGPT/Codex del usuario conectado en el popup, la insignia y la superposición de página.

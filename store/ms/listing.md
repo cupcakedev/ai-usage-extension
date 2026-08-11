@@ -1,15 +1,3 @@
-# Penyenaraian Kedai Web Chrome - Bahasa Inggeris
-
-## Nama
-
-Penjejak Penggunaan AI: Kuota & Had untuk Claude, Codex
-
-## Penerangan Ringkas
-
-Jejaki sesi Claude dan ChatGPT (Codex) & had penggunaan mingguan sepintas lalu dalam tindanan timbul dan pada halaman. Privasi-diutamakan, tiada persediaan.
-
-## Penerangan Penuh
-
 Penjejak Penggunaan AI: Kuota & Had untuk Claude, Codex ialah sambungan penyemak imbas untuk orang yang mahukan pengalaman pembantu AI yang lebih jelas dan boleh diramal. Jejaki had mesej anda, lihat kira detik masa nyata dan paparkan meter penggunaan yang tidak mengganggu terus pada halaman pembekal supaya anda boleh fokus pada kerja anda tanpa mencapai had mengejut.
 
 Sama ada anda menggunakan Claude dan ChatGPT untuk pengekodan, penulisan, penyelidikan atau penyelesaian masalah yang mendalam, Penjejak Penggunaan AI membantu mengurangkan geseran memukul blok had dan memberi anda kawalan langsung ke atas cara kapasiti anda dipantau. Anda memilih tempat tindanan muncul dan cara anda menjejaki had anda.
@@ -41,11 +29,3 @@ Bagus untuk:
 - Sesiapa sahaja yang bosan memukul "anda telah mencapai had anda" tanpa amaran terlebih dahulu
 
 Kod sumber: https://github.com/cupcakedev/ai-usage-extension
-
-## Kata kunci
-
-penggunaan claude, had claude, had chatgpt, penggunaan codex, penjejak penggunaan ai, penjejak had kadar, set semula claude, kuota chatgpt, penggunaan openai, produktiviti
-
-## Tujuan Tunggal
-
-Sesi paparan dan had penggunaan mingguan untuk akaun Claude dan ChatGPT/Codex pengguna yang dilog masuk dalam pop timbul sambungan, lencana bar alat dan tindanan halaman penyedia.

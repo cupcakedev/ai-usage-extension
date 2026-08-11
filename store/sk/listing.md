@@ -1,15 +1,3 @@
-# Záznam v Internetovom obchode Chrome – angličtina
-
-## Meno
-
-Sledovanie používania AI: Kvóty a limity pre Claude, Codex
-
-## Krátky popis
-
-Sledujte reláciu Claude a ChatGPT (Codex) a týždenné limity používania na prvý pohľad vo vyskakovacom okne a prekrytí na stránke. Ochrana osobných údajov predovšetkým, žiadne nastavenie.
-
-## Úplný popis
-
 AI Usage Tracker: Quota & Limits for Claude, Codex je rozšírenie prehliadača pre ľudí, ktorí chcú jasnejšiu a predvídateľnejšiu skúsenosť s asistentom AI. Sledujte svoje limity správ, prezerajte si odpočítavanie v reálnom čase a zobrazujte nenápadné merače spotreby priamo na stránkach poskytovateľa, aby ste sa mohli sústrediť na svoju prácu bez toho, aby ste narazili na náhle limity.
 
 Či už používate Claude a ChatGPT na kódovanie, písanie, výskum alebo hlboké riešenie problémov, AI Usage Tracker pomáha znižovať trenie pri narážaní na limitné bloky a poskytuje vám priamu kontrolu nad tým, ako sa monitoruje vaša kapacita. Vy si vyberiete, kde sa prekrytie zobrazí a ako budete sledovať svoje limity.
@@ -41,11 +29,3 @@ Skvelé pre:
 - Každého, koho už nebaví trafiť sa do „dosiahli ste svoj limit“ bez predchádzajúceho upozornenia
 
 Zdrojový kód: https://github.com/cupcakedev/ai-usage-extension
-
-## Kľúčové slová
-
-používanie claude, limity claude, limity chatgpt, používanie kódexu, sledovač používania AI, sledovač limitov rýchlosti, reset claude, kvóta chatgpt, používanie openai, produktivita
-
-## Jednoúčelový
-
-Zobrazte limity relácie a týždenného používania pre účty Claude a ChatGPT/Codex prihláseného používateľa vo vyskakovacom okne rozšírenia, odznaku panela s nástrojmi a prekrytí stránky poskytovateľa.

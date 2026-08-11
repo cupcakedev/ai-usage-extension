@@ -1,15 +1,3 @@
-# Listahan ng Chrome Web Store - English
-
-## Pangalan
-
-AI Usage Tracker: Quota at Limits para kay Claude, Codex
-
-## Maikling Paglalarawan
-
-Subaybayan ang Claude at ChatGPT (Codex) session at lingguhang mga limitasyon sa paggamit sa isang sulyap sa isang popup at on-page na overlay. Privacy-una, walang setup.
-
-## Buong Paglalarawan
-
 AI Usage Tracker: Quota at Limits para kay Claude, ang Codex ay isang extension ng browser para sa mga taong gusto ng mas malinaw, mas predictable na karanasan sa AI assistant. Subaybayan ang iyong mga limitasyon sa mensahe, tingnan ang mga real-time na countdown, at ipakita ang hindi nakakagambalang mga metro ng paggamit nang direkta sa mga page ng provider upang makapag-focus ka sa iyong trabaho nang hindi naabot ang mga biglaang limitasyon.
 
 Gumagamit ka man ng Claude at ChatGPT para sa coding, pagsulat, pananaliksik, o malalim na paglutas ng problema, nakakatulong ang AI Usage Tracker na bawasan ang friction ng pagpindot sa mga bloke ng limitasyon at binibigyan ka ng direktang kontrol sa kung paano sinusubaybayan ang iyong kapasidad. Pipiliin mo kung saan lalabas ang overlay at kung paano mo sinusubaybayan ang iyong mga limitasyon.
@@ -41,11 +29,3 @@ Mahusay para sa:
 - Sinumang pagod sa pagpindot sa "naabot mo na ang iyong limitasyon" nang walang paunang babala
 
 Source code: https://github.com/cupcakedev/ai-usage-extension
-
-## Mga Keyword
-
-paggamit ng claude, mga limitasyon ng claude, mga limitasyon sa chatgpt, paggamit ng codex, tracker ng paggamit ng ai, tracker ng limitasyon sa rate, pag-reset ng claude, quota ng chatgpt, paggamit ng openai, pagiging produktibo
-
-## Isang Layunin
-
-Pagpapakita ng session at lingguhang mga limitasyon sa paggamit para sa Claude at ChatGPT/Codex account ng naka-sign in na user sa popup ng extension, toolbar badge, at overlay ng pahina ng provider.

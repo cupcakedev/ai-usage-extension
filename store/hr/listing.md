@@ -1,15 +1,3 @@
-# Popis Chrome web trgovine - engleski
-
-## Ime
-
-AI Usage Tracker: Kvote i ograničenja za Claude, Codex
-
-## Kratki opis
-
-Pratite Claude i ChatGPT (Codex) sesije i tjedna ograničenja upotrebe na prvi pogled u skočnom prozoru i preklapanju na stranici. Privatnost na prvom mjestu, bez postavljanja.
-
-## Potpuni opis
-
 AI Usage Tracker: Kvota i ograničenja za Claudea, Codex je proširenje preglednika za ljude koji žele jasnije, predvidljivije iskustvo AI pomoćnika. Pratite ograničenja poruka, pregledajte odbrojavanja u stvarnom vremenu i prikažite nenametljive mjerače upotrebe izravno na stranicama pružatelja tako da se možete usredotočiti na svoj posao bez iznenadnih ograničenja.
 
 Bez obzira koristite li Claude i ChatGPT za kodiranje, pisanje, istraživanje ili dubinsko rješavanje problema, AI Usage Tracker pomaže u smanjenju trenja pri pogađanju graničnih blokova i daje vam izravnu kontrolu nad načinom na koji se prati vaš kapacitet. Vi birate gdje će se preklapanje pojaviti i kako ćete pratiti svoja ograničenja.
@@ -41,11 +29,3 @@ Izvrstan za:
 - Svatko umoran od udaranja "dosegli ste svoj limit" bez prethodnog upozorenja
 
 Izvorni kod: https://github.com/cupcakedev/ai-usage-extension
-
-## Ključne riječi
-
-korištenje claudea, ograničenja claudea, ograničenja chatgpta, korištenje codexa, praćenje korištenja AI-ja, praćenje ograničenja brzine, resetiranje claudea, kvota chatgpta, korištenje openaija, produktivnost
-
-## Jedna svrha
-
-Prikaz sesija i tjednih ograničenja upotrebe za Claude i ChatGPT/Codex račune prijavljenog korisnika u skočnom prozoru proširenja, znački alatne trake i preklapanju stranice pružatelja usluga.

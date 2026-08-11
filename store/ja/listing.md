@@ -1,15 +1,3 @@
-# Chrome Web Store Listing - Japanese
-
-## Name
-
-AI Usage Tracker: Claude と Codex の上限
-
-## Short Description
-
-Claude と ChatGPT (Codex) のセッション・週間上限をポップアップ、バッジ、オーバーレイで確認。プライバシー重視、設定不要。
-
-## Full Description
-
 AI Usage Tracker: Claude と Codex の上限は、より明確で予測しやすい AI アシスタント体験を求める人のためのブラウザ拡張機能です。メッセージ上限を追跡し、リアルタイムのカウントダウンを確認し、プロバイダーページ上に控えめな使用量メーターを直接表示できるため、突然の上限にぶつかることなく作業に集中できます。
 
 Claude と ChatGPT をコーディング、執筆、調査、深い問題解決に使っている場合でも、AI Usage Tracker は上限ブロックに伴うストレスを減らし、容量の監視方法を直接コントロールできるようにします。オーバーレイをどこに表示するか、どのように上限を追跡するかを自分で選べます。
@@ -41,11 +29,3 @@ AI Usage Tracker は Kimi、MiniMax、Cursor、Xiaomi MiMo にも対応してい
 - 事前の警告なしに「上限に達しました」と表示されることに疲れた人
 
 ソースコード: https://github.com/cupcakedev/ai-usage-extension
-
-## Keywords
-
-claude 使用量, claude 上限, chatgpt 上限, codex 使用量, ai usage tracker, rate limit, claude リセット, chatgpt quota, openai usage, 生産性
-
-## Single Purpose
-
-ログイン中の Claude と ChatGPT/Codex アカウントのセッション上限と週間上限を、ポップアップ、ツールバーバッジ、プロバイダーページのオーバーレイに表示すること。

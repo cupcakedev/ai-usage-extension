@@ -1,15 +1,3 @@
-# Ficha de Chrome Web Store - Inglés
-
-## Nombre
-
-Rastreador de uso de IA: cuotas y límites para Claude, Codex
-
-## Breve descripción
-
-Realice un seguimiento de la sesión de Claude y ChatGPT (Codex) y de los límites de uso semanales de un vistazo en una ventana emergente y una superposición en la página. La privacidad es lo primero, sin configuración.
-
-## Descripción completa
-
 Rastreador de uso de IA: cuotas y límites para Claude, Codex es una extensión de navegador para personas que desean una experiencia de asistente de IA más clara y predecible. Realice un seguimiento de sus límites de mensajes, vea cuentas regresivas en tiempo real y muestre medidores de uso discretos directamente en las páginas del proveedor para que pueda concentrarse en su trabajo sin alcanzar límites repentinos.
 
 Ya sea que use Claude y ChatGPT para codificar, escribir, investigar o resolver problemas profundos, AI Usage Tracker ayuda a reducir la fricción al alcanzar bloques límite y le brinda control directo sobre cómo se monitorea su capacidad. Tú eliges dónde aparece la superposición y cómo realizas un seguimiento de tus límites.
@@ -41,11 +29,3 @@ Genial para:
 - Cualquiera que esté cansado de decir "has alcanzado tu límite" sin previo aviso
 
 Código fuente: https://github.com/cupcakedev/ai-usage-extension
-
-## Palabras clave
-
-uso de claude, límites de claude, límites de chatgpt, uso de códice, rastreador de uso de ai, rastreador de límite de velocidad, reinicio de claude, cuota de chatgpt, uso de openai, productividad
-
-## Propósito único
-
-Muestre los límites de uso semanal y de sesión para las cuentas Claude y ChatGPT/Codex del usuario que inició sesión en la ventana emergente de extensión, la insignia de la barra de herramientas y la superposición de la página del proveedor.

@@ -1,15 +1,3 @@
-# Chrome Web Store Listing - Hindi
-
-## Name
-
-AI Usage Tracker: Claude और Codex की सीमाएं
-
-## Short Description
-
-Claude और ChatGPT (Codex) की सत्र और साप्ताहिक सीमाएं पॉपअप, बैज और पेज ओवरले में देखें। निजी, बिना सेटअप।
-
-## Full Description
-
 AI Usage Tracker: Claude और Codex की सीमाएं उन लोगों के लिए ब्राउज़र एक्सटेंशन है जो AI assistant का अनुभव ज्यादा साफ और भरोसेमंद बनाना चाहते हैं। अपनी संदेश सीमाएं ट्रैक करें, रीयल-टाइम काउंटडाउन देखें, और प्रदाता पेजों पर सीधे हल्के उपयोग मीटर दिखाएं ताकि आप अचानक सीमा पर पहुंचने की चिंता के बिना अपने काम पर ध्यान दे सकें।
 
 चाहे आप Claude और ChatGPT का उपयोग कोडिंग, लेखन, रिसर्च या गहरी समस्या-समाधान के लिए करते हों, AI Usage Tracker सीमा ब्लॉक होने से होने वाली रुकावट कम करता है और आपको अपनी उपलब्ध क्षमता की निगरानी पर सीधा नियंत्रण देता है। आप तय करते हैं कि ओवरले कहां दिखे और आप अपनी सीमाओं को कैसे ट्रैक करें।
@@ -41,11 +29,3 @@ AI Usage Tracker Kimi, MiniMax, Cursor और Xiaomi MiMo को भी सप�
 - कोई भी व्यक्ति जो बिना पहले से चेतावनी मिले “you've reached your limit” देखकर थक चुका है
 
 स्रोत कोड: https://github.com/cupcakedev/ai-usage-extension
-
-## Keywords
-
-claude उपयोग, claude सीमाएं, chatgpt सीमाएं, codex उपयोग, ai usage tracker, सीमा ट्रैकर, claude reset, chatgpt quota, openai उपयोग, उत्पादकता
-
-## Single Purpose
-
-साइन-इन उपयोगकर्ता के Claude और ChatGPT/Codex खातों की सत्र और साप्ताहिक सीमाएं एक्सटेंशन पॉपअप, टूलबार बैज और प्रदाता पेज ओवरले में दिखाना।

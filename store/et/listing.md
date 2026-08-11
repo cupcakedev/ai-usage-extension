@@ -1,15 +1,3 @@
-# Chrome'i veebipoe kirje – inglise keel
-
-## Nimi
-
-AI kasutamise jälgija: Claude'i kvoodid ja piirangud, Codex
-
-## Lühikirjeldus
-
-Jälgige hüpikaknas ja lehe ülekattes Claude'i ja ChatGPT (Codex) seanssi ja iganädalasi kasutuspiiranguid. Privaatsus - esiteks, seadistust pole vaja.
-
-## Täielik kirjeldus
-
 AI kasutamise jälgija: Claude'i kvoodid ja piirangud, Codex on brauserilaiend inimestele, kes soovivad selgemat ja prognoositavamat AI-abilise kogemust. Jälgige oma sõnumite piiranguid, vaadake reaalajas loendureid ja kuvage märkamatuid kasutusmõõdikuid otse teenusepakkuja lehtedel, et saaksite keskenduda oma tööle ilma äkilisi piiranguid tabamata.
 
 Olenemata sellest, kas kasutate Claude'i ja ChatGPT-d kodeerimiseks, kirjutamiseks, uurimiseks või sügavate probleemide lahendamiseks, aitab AI Usage Tracker vähendada hõõrdumist piirplokkide tabamisel ja annab teile otsese kontrolli selle üle, kuidas teie võimsust jälgitakse. Saate valida, kus ülekate kuvatakse ja kuidas oma limiite jälgite.
@@ -41,11 +29,3 @@ Suurepärane:
 - Igaüks, kes on väsinud ilma eelneva hoiatuseta tabamast "olete oma piirini jõudnud".
 
 Lähtekood: https://github.com/cupcakedev/ai-usage-extension
-
-## Märksõnad
-
-claude'i kasutus, claude'i piirangud, chatgpt limiidid, koodeksi kasutus, AI kasutuse jälgija, kiiruspiirangu jälgija, claude'i lähtestamine, chatgpt kvoot, openai kasutamine, tootlikkus
-
-## Üheotstarbeline
-
-Kuvage sisselogitud kasutaja Claude'i ja ChatGPT/Codexi kontode seansi- ja nädalased kasutuspiirangud laienduse hüpikaknas, tööriistariba märgis ja pakkuja lehe ülekattes.

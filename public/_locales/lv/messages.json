@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Datu vēl nav. Atveriet platform.xiaomimimo.com, esot pieteicies, un atsvaidziniet."
   },
+  "emptyGlm": {
+    "message": "Datu vēl nav. Atveriet z.ai, esot pieteicies, un atsvaidziniet."
+  },
   "emptyOverlay": {
     "message": "Datu vēl nav. Atveriet uznirstošo logu un atsvaidziniet."
   },

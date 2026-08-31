@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Belum ada data. Buka platform.xiaomimimo.com saat sudah masuk, lalu segarkan."
   },
+  "emptyGlm": {
+    "message": "Belum ada data. Buka z.ai saat sudah masuk, lalu segarkan."
+  },
   "emptyOverlay": {
     "message": "Belum ada data. Buka popup lalu segarkan."
   },

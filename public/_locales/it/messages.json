@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Ancora nessun dato. Apri platform.xiaomimimo.com con accesso effettuato e aggiorna."
   },
+  "emptyGlm": {
+    "message": "Ancora nessun dato. Apri z.ai con accesso effettuato e aggiorna."
+  },
   "emptyOverlay": {
     "message": "Ancora nessun dato. Apri il popup e aggiorna."
   },

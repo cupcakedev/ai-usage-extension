@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Noch keine Daten. Öffne platform.xiaomimimo.com angemeldet und aktualisiere."
   },
+  "emptyGlm": {
+    "message": "Noch keine Daten. Öffne z.ai angemeldet und aktualisiere."
+  },
   "emptyOverlay": {
     "message": "Noch keine Daten. Öffne das Popup und aktualisiere."
   },

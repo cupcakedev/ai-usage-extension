@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "እስካሁን መረጃ የለም። ገብተው platform.xiaomimimo.com ን ይክፈቱና ያድሱ።"
   },
+  "emptyGlm": {
+    "message": "እስካሁን መረጃ የለም። ገብተው z.ai ን ይክፈቱና ያድሱ።"
+  },
   "emptyOverlay": {
     "message": "እስካሁን መረጃ የለም። ብቅ-ባዩን ይክፈቱና ያድሱ።"
   },

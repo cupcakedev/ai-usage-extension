@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Još nema podataka. Otvorite platform.xiaomimimo.com dok ste prijavljeni i osvježite."
   },
+  "emptyGlm": {
+    "message": "Još nema podataka. Otvorite z.ai dok ste prijavljeni i osvježite."
+  },
   "emptyOverlay": {
     "message": "Još nema podataka. Otvorite skočni prozor i osvježite."
   },

@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "まだデータがありません。ログイン済みの platform.xiaomimimo.com を開いて更新してください。"
   },
+  "emptyGlm": {
+    "message": "まだデータがありません。ログイン済みの z.ai を開いて更新してください。"
+  },
   "emptyOverlay": {
     "message": "まだデータがありません。ポップアップを開いて更新してください。"
   },

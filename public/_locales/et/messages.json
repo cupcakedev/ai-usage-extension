@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Andmeid veel pole. Ava sisselogituna platform.xiaomimimo.com ja värskenda."
   },
+  "emptyGlm": {
+    "message": "Andmeid veel pole. Ava sisselogituna z.ai ja värskenda."
+  },
   "emptyOverlay": {
     "message": "Andmeid veel pole. Ava hüpikaken ja värskenda."
   },

@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Ingen data ennå. Åpne platform.xiaomimimo.com mens du er innlogget, og oppdater."
   },
+  "emptyGlm": {
+    "message": "Ingen data ennå. Åpne z.ai mens du er innlogget, og oppdater."
+  },
   "emptyOverlay": {
     "message": "Ingen data ennå. Åpne popupen og oppdater."
   },

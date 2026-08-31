@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Wala pang data. Buksan ang platform.xiaomimimo.com habang naka-sign in, tapos mag-refresh."
   },
+  "emptyGlm": {
+    "message": "Wala pang data. Buksan ang z.ai habang naka-sign in, tapos mag-refresh."
+  },
   "emptyOverlay": {
     "message": "Wala pang data. Buksan ang popup at mag-refresh."
   },

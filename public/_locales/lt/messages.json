@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Duomenų dar nėra. Prisijungę atidarykite platform.xiaomimimo.com ir atnaujinkite."
   },
+  "emptyGlm": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite z.ai ir atnaujinkite."
+  },
   "emptyOverlay": {
     "message": "Duomenų dar nėra. Atidarykite iššokantį langą ir atnaujinkite."
   },

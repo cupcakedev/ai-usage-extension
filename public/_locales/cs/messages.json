@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Zatím žádná data. Otevřete platform.xiaomimimo.com přihlášeni a obnovte."
   },
+  "emptyGlm": {
+    "message": "Zatím žádná data. Otevřete z.ai přihlášeni a obnovte."
+  },
   "emptyOverlay": {
     "message": "Zatím žádná data. Otevřete popup a obnovte."
   },

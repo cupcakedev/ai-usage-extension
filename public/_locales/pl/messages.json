@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Brak danych. Otwórz platform.xiaomimimo.com po zalogowaniu i odśwież."
   },
+  "emptyGlm": {
+    "message": "Brak danych. Otwórz z.ai po zalogowaniu i odśwież."
+  },
   "emptyOverlay": {
     "message": "Brak danych. Otwórz popup i odśwież."
   },

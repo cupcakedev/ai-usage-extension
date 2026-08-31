@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Zatiaľ žiadne dáta. Otvorte platform.xiaomimimo.com prihlásení a obnovte."
   },
+  "emptyGlm": {
+    "message": "Zatiaľ žiadne dáta. Otvorte z.ai prihlásení a obnovte."
+  },
   "emptyOverlay": {
     "message": "Zatiaľ žiadne dáta. Otvorte popup a obnovte."
   },

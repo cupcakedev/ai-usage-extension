@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Încă nu există date. Deschide platform.xiaomimimo.com autentificat, apoi reîmprospătează."
   },
+  "emptyGlm": {
+    "message": "Încă nu există date. Deschide z.ai autentificat, apoi reîmprospătează."
+  },
   "emptyOverlay": {
     "message": "Încă nu există date. Deschide popupul și reîmprospătează."
   },

@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "尚無資料。登入後開啟 platform.xiaomimimo.com，再重新整理。"
   },
+  "emptyGlm": {
+    "message": "尚無資料。登入後開啟 z.ai，再重新整理。"
+  },
   "emptyOverlay": {
     "message": "尚無資料。開啟彈出視窗並重新整理。"
   },

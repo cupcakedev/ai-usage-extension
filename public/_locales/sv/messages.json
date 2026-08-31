@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Inga data än. Öppna platform.xiaomimimo.com när du är inloggad och uppdatera."
   },
+  "emptyGlm": {
+    "message": "Inga data än. Öppna z.ai när du är inloggad och uppdatera."
+  },
   "emptyOverlay": {
     "message": "Inga data än. Öppna popupen och uppdatera."
   },

@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Még nincs adat. Nyisd meg a platform.xiaomimimo.com oldalt bejelentkezve, majd frissíts."
   },
+  "emptyGlm": {
+    "message": "Még nincs adat. Nyisd meg a z.ai oldalt bejelentkezve, majd frissíts."
+  },
   "emptyOverlay": {
     "message": "Még nincs adat. Nyisd meg a felugró ablakot és frissíts."
   },

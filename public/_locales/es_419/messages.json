@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Aún no hay datos. Abre platform.xiaomimimo.com con sesión iniciada y actualiza."
   },
+  "emptyGlm": {
+    "message": "Aún no hay datos. Abre z.ai con sesión iniciada y actualiza."
+  },
   "emptyOverlay": {
     "message": "Aún no hay datos. Abre la ventana emergente y actualiza."
   },

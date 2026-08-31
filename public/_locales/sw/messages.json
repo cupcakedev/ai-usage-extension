@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Bado hakuna data. Fungua platform.xiaomimimo.com ukiwa umeingia, kisha onyesha upya."
   },
+  "emptyGlm": {
+    "message": "Bado hakuna data. Fungua z.ai ukiwa umeingia, kisha onyesha upya."
+  },
   "emptyOverlay": {
     "message": "Bado hakuna data. Fungua kidirisha ibukizi na uonyeshe upya."
   },

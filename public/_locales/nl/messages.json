@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Nog geen gegevens. Open platform.xiaomimimo.com terwijl je bent ingelogd en vernieuw."
   },
+  "emptyGlm": {
+    "message": "Nog geen gegevens. Open z.ai terwijl je bent ingelogd en vernieuw."
+  },
   "emptyOverlay": {
     "message": "Nog geen gegevens. Open de pop-up en vernieuw."
   },

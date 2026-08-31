@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "No data yet. Open platform.xiaomimimo.com while signed in, then refresh."
   },
+  "emptyGlm": {
+    "message": "No data yet. Open z.ai while signed in, then refresh."
+  },
   "emptyOverlay": {
     "message": "No data yet. Open the popup and refresh."
   },

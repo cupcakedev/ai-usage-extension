@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Ainda sem dados. Abra platform.xiaomimimo.com conectado e atualize."
   },
+  "emptyGlm": {
+    "message": "Ainda sem dados. Abra z.ai conectado e atualize."
+  },
   "emptyOverlay": {
     "message": "Ainda sem dados. Abra a janela e atualize."
   },

@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Chưa có dữ liệu. Mở platform.xiaomimimo.com khi đã đăng nhập rồi làm mới."
   },
+  "emptyGlm": {
+    "message": "Chưa có dữ liệu. Mở z.ai khi đã đăng nhập rồi làm mới."
+  },
   "emptyOverlay": {
     "message": "Chưa có dữ liệu. Mở cửa sổ bật lên rồi làm mới."
   },

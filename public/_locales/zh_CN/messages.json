@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "暂无数据。请在登录状态下打开 platform.xiaomimimo.com，然后刷新。"
   },
+  "emptyGlm": {
+    "message": "暂无数据。请在登录状态下打开 z.ai，然后刷新。"
+  },
   "emptyOverlay": {
     "message": "暂无数据。请打开弹窗并刷新。"
   },

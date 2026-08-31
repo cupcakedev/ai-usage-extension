@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Aucune donnée. Ouvrez platform.xiaomimimo.com connecté, puis actualisez."
   },
+  "emptyGlm": {
+    "message": "Aucune donnée. Ouvrez z.ai connecté, puis actualisez."
+  },
   "emptyOverlay": {
     "message": "Aucune donnée. Ouvrez le popup et actualisez."
   },

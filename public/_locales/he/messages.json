@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "אין נתונים עדיין. פתחו את platform.xiaomimimo.com כשאתם מחוברים ורעננו."
   },
+  "emptyGlm": {
+    "message": "אין נתונים עדיין. פתחו את z.ai כשאתם מחוברים ורעננו."
+  },
   "emptyOverlay": {
     "message": "אין נתונים עדיין. פתחו את החלון הקופץ ורעננו."
   },

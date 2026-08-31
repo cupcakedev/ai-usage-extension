@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Ei vielä tietoja. Avaa platform.xiaomimimo.com kirjautuneena ja päivitä."
   },
+  "emptyGlm": {
+    "message": "Ei vielä tietoja. Avaa z.ai kirjautuneena ja päivitä."
+  },
   "emptyOverlay": {
     "message": "Ei vielä tietoja. Avaa ponnahdusikkuna ja päivitä."
   },

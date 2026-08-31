@@ -80,6 +80,9 @@
   "emptyMiMo": {
     "message": "Henüz veri yok. Oturum açıkken platform.xiaomimimo.com'u açın, sonra yenileyin."
   },
+  "emptyGlm": {
+    "message": "Henüz veri yok. Oturum açıkken z.ai'yi açın, sonra yenileyin."
+  },
   "emptyOverlay": {
     "message": "Henüz veri yok. Açılır pencereyi açıp yenileyin."
   },

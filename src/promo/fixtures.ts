@@ -73,6 +73,15 @@ const MIMO_USAGE: ExternalProviderUsage = {
   lastUpdated: NOW - 5 * MINUTE,
 };
 
+const GLM_USAGE: ExternalProviderUsage = {
+  plan: 'Pro',
+  session: { percentage: 44, resetsAt: resetsIn(1 * HOUR + 52 * MINUTE) },
+  weekly: { percentage: 27, resetsAt: resetsIn(5 * DAY + 9 * HOUR) },
+  models: [],
+  status: 'ok',
+  lastUpdated: NOW - 4 * MINUTE,
+};
+
 export interface PromoProvider {
   id: ProviderId;
   title: string;
@@ -90,6 +99,7 @@ const USAGE: Record<ProviderId, PromoProvider['usage']> = {
   kimi: KIMI_USAGE,
   cursor: CURSOR_USAGE,
   mimo: MIMO_USAGE,
+  glm: GLM_USAGE,
 };
 
 const METRICS: Record<ProviderId, ProviderMetric[]> = {
@@ -99,6 +109,7 @@ const METRICS: Record<ProviderId, ProviderMetric[]> = {
   kimi: ['session', 'weekly', 'reset'],
   cursor: ['session', 'reset', 'plan'],
   mimo: ['session', 'reset', 'plan'],
+  glm: ['session', 'weekly', 'reset'],
 };
 
 const LABEL_OVERRIDES: Partial<

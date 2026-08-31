@@ -408,6 +408,23 @@ input {
   line-height: 1.5;
 }
 
+.au-empty__link {
+  color: var(--au-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 120ms ease;
+}
+
+.au-empty__link:hover {
+  color: var(--au-text);
+}
+
+.au-empty__link:focus-visible {
+  outline: 2px solid var(--au-line-strong);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* ---- Footer --------------------------------------------------------- */
 
 .au-footer {

@@ -70,6 +70,14 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
   }
 });
 
+const storeGlmToken = async (token: string): Promise<void> => {
+  const stored = await chrome.storage.local.get(STORAGE_KEYS.glmToken);
+  if (stored[STORAGE_KEYS.glmToken] === token) return;
+
+  await chrome.storage.local.set({ [STORAGE_KEYS.glmToken]: token });
+  await refreshUsage();
+};
+
 const collectLocaleMessages = async (): Promise<Record<string, string> | null> => {
   const { language } = await readExtensionSettings();
   return language === 'auto' ? null : loadLocaleMessages(language);
@@ -87,6 +95,13 @@ chrome.runtime.onMessage.addListener(
         .catch(() => sendResponse({ success: true, data: null }));
 
       return true;
+    }
+
+    if (message?.type === 'SET_GLM_TOKEN') {
+      const token = typeof message.token === 'string' ? message.token.trim() : '';
+      if (token) void storeGlmToken(token).catch(() => undefined);
+
+      return undefined;
     }
 
     if (message?.type !== 'REFRESH_USAGE') {

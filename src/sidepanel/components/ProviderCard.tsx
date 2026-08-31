@@ -4,6 +4,7 @@ import type {
   ClaudeUsage,
   CodexUsage,
   ExternalProviderUsage,
+  ProviderLink,
   ProviderMetric,
 } from '../../shared/types';
 import { formatRelativeTime, isLimitAvailable } from '../../shared/utils';
@@ -21,6 +22,8 @@ interface ProviderCardProps {
   now: number;
   /** Hint shown when the provider has no snapshot yet. */
   emptyHint: string;
+  /** Turns the host named inside `emptyHint` into a link to the provider's console. */
+  emptyHintLink?: ProviderLink;
   /** Labels vary because some providers expose a billing or token-plan window rather than 5h/7d quotas. */
   primaryLabel?: string;
   secondaryLabel?: string;
@@ -61,6 +64,23 @@ const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number; showReset: b
   );
 };
 
+const EmptyHint: React.FC<{ hint: string; link?: ProviderLink }> = ({ hint, link }) => {
+  const start = link ? hint.indexOf(link.host) : -1;
+  if (!link || start === -1) {
+    return <p className="au-empty">{hint}</p>;
+  }
+
+  return (
+    <p className="au-empty">
+      {hint.slice(0, start)}
+      <a className="au-empty__link" href={link.url} target="_blank" rel="noreferrer">
+        {link.host}
+      </a>
+      {hint.slice(start + link.host.length)}
+    </p>
+  );
+};
+
 /** Renders one provider's usage, handling loading / empty / data states. */
 export const ProviderCard: React.FC<ProviderCardProps> = ({
   title,
@@ -70,6 +90,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   loading,
   now,
   emptyHint,
+  emptyHintLink,
   primaryLabel = msg('sessionLimit'),
   secondaryLabel = msg('weeklyLimit'),
   footer,
@@ -121,7 +142,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
           {!metrics.length && <p className="au-empty">No metrics selected.</p>}
         </>
       ) : (
-        <p className="au-empty">{emptyHint}</p>
+        <EmptyHint hint={emptyHint} link={emptyHintLink} />
       )}
       {footer}
     </UsageCard>

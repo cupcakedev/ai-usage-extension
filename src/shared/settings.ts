@@ -7,7 +7,15 @@ import type {
   ProviderMetric,
 } from './types';
 
-export const PROVIDER_IDS: ProviderId[] = ['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'];
+export const PROVIDER_IDS: ProviderId[] = [
+  'claude',
+  'codex',
+  'minimax',
+  'kimi',
+  'cursor',
+  'mimo',
+  'glm',
+];
 
 /**
  * What each provider can actually put on its popup card, derived from the snapshots the
@@ -26,6 +34,7 @@ export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = 
   kimi: ['session', 'weekly', 'reset'],
   cursor: ['session', 'models', 'reset', 'plan'],
   mimo: ['session', 'reset', 'plan', 'summary'],
+  glm: ['session', 'weekly', 'models', 'reset', 'plan'],
 };
 
 const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
@@ -35,6 +44,7 @@ const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
   kimi: { visible: false, metrics: ['session', 'weekly', 'reset'] },
   cursor: { visible: false, metrics: ['session', 'reset'] },
   mimo: { visible: false, metrics: ['session'] },
+  glm: { visible: false, metrics: ['session', 'weekly', 'reset'] },
 };
 
 const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({

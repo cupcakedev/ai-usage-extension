@@ -8,6 +8,8 @@ export const STORAGE_KEYS = {
   usageState: 'ai_usage_state',
   /** Cached Claude organization id used to build the usage endpoint. */
   claudeOrgId: 'claude_org_id',
+  /** Console bearer token the z.ai content script lifts out of the page. */
+  glmToken: 'glm_token',
   /** Whether the on-page overlay is shown on claude.ai. */
   claudeOverlayEnabled: 'claude_overlay_enabled',
   /** Whether the on-page overlay is collapsed into its side tab. */

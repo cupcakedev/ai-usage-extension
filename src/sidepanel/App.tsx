@@ -4,10 +4,11 @@ import cursorBrandAsset from '../assets/brands/cursor.webp';
 import kimiBrandAsset from '../assets/brands/kimi.webp';
 import minimaxBrandAsset from '../assets/brands/minimax.webp';
 import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
+import zaiBrandAsset from '../assets/brands/zai.webp';
 import { RefreshCw, Settings } from 'lucide-react';
 import { msg } from '../shared/i18n';
 import { useNow } from '../shared/hooks/useNow';
-import type { ProviderId } from '../shared/types';
+import type { ProviderId, ProviderLink } from '../shared/types';
 import { ProviderCard } from './components/ProviderCard';
 import { useUsageData } from './hooks/useUsageData';
 import './styles/global.css';
@@ -18,6 +19,7 @@ const PROVIDERS: Array<{
   iconSrc: string;
   iconAlt: string;
   emptyHint: string;
+  emptyHintLink: ProviderLink;
   primaryLabel?: string;
   secondaryLabel?: string;
 }> = [
@@ -27,6 +29,7 @@ const PROVIDERS: Array<{
     iconSrc: claudeBrandAsset,
     iconAlt: 'Claude by Anthropic',
     emptyHint: msg('emptyClaude'),
+    emptyHintLink: { host: 'claude.ai', url: 'https://claude.ai/settings/usage' },
   },
   {
     id: 'codex',
@@ -34,6 +37,7 @@ const PROVIDERS: Array<{
     iconSrc: codexBrandAsset,
     iconAlt: 'OpenAI',
     emptyHint: msg('emptyCodex'),
+    emptyHintLink: { host: 'chatgpt.com', url: 'https://chatgpt.com/codex' },
   },
   {
     id: 'minimax',
@@ -41,6 +45,10 @@ const PROVIDERS: Array<{
     iconSrc: minimaxBrandAsset,
     iconAlt: 'MiniMax',
     emptyHint: msg('emptyMiniMax'),
+    emptyHintLink: {
+      host: 'platform.minimax.io',
+      url: 'https://platform.minimax.io/user-center/payment/coding-plan',
+    },
   },
   {
     id: 'kimi',
@@ -48,6 +56,7 @@ const PROVIDERS: Array<{
     iconSrc: kimiBrandAsset,
     iconAlt: 'Kimi',
     emptyHint: msg('emptyKimi'),
+    emptyHintLink: { host: 'kimi.com/code', url: 'https://www.kimi.com/code' },
   },
   {
     id: 'cursor',
@@ -55,6 +64,7 @@ const PROVIDERS: Array<{
     iconSrc: cursorBrandAsset,
     iconAlt: 'Cursor',
     emptyHint: msg('emptyCursor'),
+    emptyHintLink: { host: 'cursor.com', url: 'https://cursor.com/dashboard' },
     primaryLabel: msg('planUsage'),
     secondaryLabel: '',
   },
@@ -64,8 +74,17 @@ const PROVIDERS: Array<{
     iconSrc: mimoBrandAsset,
     iconAlt: 'Xiaomi MiMo',
     emptyHint: msg('emptyMiMo'),
+    emptyHintLink: { host: 'platform.xiaomimimo.com', url: 'https://platform.xiaomimimo.com' },
     primaryLabel: msg('tokenPlan'),
     secondaryLabel: '',
+  },
+  {
+    id: 'glm',
+    title: 'GLM Coding Plan',
+    iconSrc: zaiBrandAsset,
+    iconAlt: 'z.ai',
+    emptyHint: msg('emptyGlm'),
+    emptyHintLink: { host: 'z.ai', url: 'https://z.ai/manage-apikey/coding-plan/personal/usage' },
   },
 ];
 
@@ -80,7 +99,8 @@ export const App = () => {
     !usage.minimax &&
     !usage.kimi &&
     !usage.cursor &&
-    !usage.mimo;
+    !usage.mimo &&
+    !usage.glm;
 
   return (
     <main className={`au-shell ${settings?.popupLayout === 'grid' ? 'au-shell--grid' : ''}`}>
@@ -128,6 +148,7 @@ export const App = () => {
               loading={initialLoading}
               now={now}
               emptyHint={provider.emptyHint}
+              emptyHintLink={provider.emptyHintLink}
               primaryLabel={provider.primaryLabel}
               secondaryLabel={provider.secondaryLabel}
               metrics={settings?.providers[provider.id].metrics}

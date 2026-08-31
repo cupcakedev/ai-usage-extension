@@ -27,6 +27,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   emptyKimi: 'No data yet. Open kimi.com/code while signed in, then refresh.',
   emptyCursor: 'No data yet. Open cursor.com while signed in, then refresh.',
   emptyMiMo: 'No data yet. Open platform.xiaomimimo.com while signed in, then refresh.',
+  emptyGlm: 'No data yet. Open z.ai while signed in, then refresh.',
   planUsage: 'Plan usage',
   tokenPlan: 'Token plan',
   emptyOverlay: 'No data yet. Open the popup and refresh.',

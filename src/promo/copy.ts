@@ -27,6 +27,7 @@ export const PROVIDER_HOSTS: Record<string, string> = {
   kimi: 'kimi.com',
   cursor: 'cursor.com',
   mimo: 'platform.xiaomimimo.com',
+  glm: 'z.ai',
 };
 
 const TRANSLATIONS = import.meta.glob<PromoCopy>('./copy/*.json', {

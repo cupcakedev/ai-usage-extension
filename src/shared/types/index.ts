@@ -2,7 +2,7 @@ import type { LanguagePreference } from '../locales';
 
 export type UsageStatus = 'ok' | 'warning' | 'critical';
 
-export type ProviderId = 'claude' | 'codex' | 'minimax' | 'kimi' | 'cursor' | 'mimo';
+export type ProviderId = 'claude' | 'codex' | 'minimax' | 'kimi' | 'cursor' | 'mimo' | 'glm';
 
 export interface UsageLimit {
   percentage: number;
@@ -10,6 +10,12 @@ export interface UsageLimit {
   used?: number;
   limit?: number;
   available?: boolean;
+}
+
+/** A provider's console, named by the exact host string its empty-state hint spells out. */
+export interface ProviderLink {
+  host: string;
+  url: string;
 }
 
 export interface ModelUsage {
@@ -55,6 +61,7 @@ export type MiniMaxUsage = ExternalProviderUsage;
 export type KimiUsage = ExternalProviderUsage;
 export type CursorUsage = ExternalProviderUsage;
 export type MiMoUsage = ExternalProviderUsage;
+export type GlmUsage = ExternalProviderUsage;
 
 export interface UsageState {
   claude?: ClaudeUsage;
@@ -63,6 +70,7 @@ export interface UsageState {
   kimi?: KimiUsage;
   cursor?: CursorUsage;
   mimo?: MiMoUsage;
+  glm?: GlmUsage;
 }
 
 export type PopupLayout = 'single' | 'grid';
@@ -103,7 +111,10 @@ export interface ExtensionSettings {
 /* -------------------------------------------------------------------------- */
 
 /** Messages sent to the background service worker. */
-export type ExtensionMessage = { type: 'REFRESH_USAGE' } | { type: 'GET_LOCALE_MESSAGES' };
+export type ExtensionMessage =
+  | { type: 'REFRESH_USAGE' }
+  | { type: 'GET_LOCALE_MESSAGES' }
+  | { type: 'SET_GLM_TOKEN'; token: string };
 
 /** Response returned by the background worker for a given message. */
 export type MessageResponse<T = unknown> =

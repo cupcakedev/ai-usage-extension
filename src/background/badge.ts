@@ -51,6 +51,7 @@ const PROVIDER_TITLE: Record<ProviderId, string> = {
   kimi: 'Kimi',
   cursor: 'Cursor',
   mimo: 'MiMo',
+  glm: 'GLM',
 };
 /** Read lazily so a language change is picked up without a worker restart. */
 const metricLabel = (metric: BadgeMetric): string =>
@@ -76,7 +77,7 @@ const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSu
   const providers =
     settings.badge.mode === 'provider'
       ? [settings.badge.provider]
-      : (['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo'] as const).filter(
+      : (['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo', 'glm'] as const).filter(
           (provider) => settings.providers[provider].visible,
         );
 

@@ -3,6 +3,7 @@ import {
   ClaudeUsage,
   CodexUsage,
   CursorUsage,
+  GlmUsage,
   KimiUsage,
   MiniMaxUsage,
   MiMoUsage,
@@ -24,6 +25,8 @@ const ENDPOINTS = {
   mimoBalance: 'https://platform.xiaomimimo.com/api/v1/balance',
   mimoPlanDetail: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/detail',
   mimoPlanUsage: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/usage',
+  glmQuota: 'https://api.z.ai/api/monitor/usage/quota/limit',
+  glmQuotaCn: 'https://open.bigmodel.cn/api/monitor/usage/quota/limit',
 } as const;
 
 const JSON_HEADERS = { Accept: 'application/json' } as const;
@@ -527,12 +530,124 @@ const buildMiMoUsage = (
   };
 };
 
+/* -------------------- GLM -------------------- */
+
+const GLM_UNIT_MINUTES: Record<number, number> = { 1: 1440, 3: 60, 5: 1, 6: 10080 };
+
+const GLM_QUOTA_TYPES = ['TOKENS_LIMIT', 'CREDIT_LIMIT'];
+
+const GLM_MONTHLY_MINUTES = 30 * 24 * 60;
+
+interface GlmLimit {
+  type: string;
+  windowMinutes: number | null;
+  limit: UsageLimit;
+}
+
+const glmWindowTag = (windowMinutes: number | null): string | null => {
+  if (windowMinutes === null || windowMinutes <= 0) return null;
+  if (windowMinutes >= 2880) return `${Math.round(windowMinutes / 1440)}d`;
+  if (windowMinutes >= 60) return `${Math.round(windowMinutes / 60)}h`;
+  return `${windowMinutes}m`;
+};
+
+const glmLimitFrom = (entry: Json): GlmLimit | null => {
+  const type = readString(entry.type);
+  if (!type) return null;
+
+  const total = readNumber(entry.usage);
+  const remaining = readNumber(entry.remaining);
+  const current = readNumber(entry.currentValue);
+  const hasTotal = total !== null && total > 0;
+  const used = hasTotal && remaining !== null ? Math.max(total - remaining, current ?? 0) : current;
+  const percentage =
+    hasTotal && used !== null
+      ? percentFromUsedLimit(Math.min(Math.max(used, 0), total), total)
+      : readNumber(entry.percentage);
+
+  const unit = readNumber(entry.unit);
+  const count = readNumber(entry.number);
+  const unitMinutes = unit === null ? undefined : GLM_UNIT_MINUTES[unit];
+  const windowMinutes =
+    type === 'TIME_LIMIT' && unit === 5 && count === 1
+      ? GLM_MONTHLY_MINUTES
+      : unitMinutes && count !== null && count > 0
+        ? count * unitMinutes
+        : null;
+
+  return {
+    type,
+    windowMinutes,
+    limit: {
+      ...buildLimit(percentage, epochToIso(entry.nextResetTime)),
+      ...(used !== null ? { used } : {}),
+      ...(hasTotal ? { limit: total } : {}),
+    },
+  };
+};
+
+const glmModelLabel = (entry: GlmLimit): string => {
+  const tag = glmWindowTag(entry.windowMinutes);
+  const name = entry.type === 'TIME_LIMIT' ? 'MCP' : 'Quota';
+  return tag ? `${name} · ${tag}` : name;
+};
+
+const buildGlmUsage = (raw: Json | null): GlmUsage | null => {
+  if (!raw) return null;
+  const payload = asJson(raw.data);
+  if (readBoolean(raw.success) !== true || readNumber(raw.code) !== 200 || !payload) return null;
+
+  const limits = asArray(payload.limits)
+    .map(asJson)
+    .filter((entry): entry is Json => entry !== null)
+    .map(glmLimitFrom)
+    .filter((entry): entry is GlmLimit => entry !== null);
+
+  const quotas = limits
+    .filter((entry) => GLM_QUOTA_TYPES.includes(entry.type))
+    .sort(
+      (a, b) =>
+        (a.windowMinutes ?? Number.MAX_SAFE_INTEGER) - (b.windowMinutes ?? Number.MAX_SAFE_INTEGER),
+    );
+  if (!quotas.length) return null;
+
+  const session = quotas[0];
+  const weekly = quotas.length > 1 ? quotas[quotas.length - 1] : null;
+  const extras = [
+    ...quotas.slice(1, weekly ? -1 : undefined),
+    ...limits.filter((entry) => !GLM_QUOTA_TYPES.includes(entry.type)),
+  ];
+
+  const plan = firstString(
+    payload.planName,
+    payload.plan,
+    payload.plan_type,
+    payload.packageName,
+    payload.level,
+  );
+
+  return {
+    ...(plan ? { plan } : {}),
+    ...finalize({ session: session.limit, weekly: weekly?.limit ?? unavailableLimit() }),
+    models: extras.map((entry, index) => ({
+      id: `glm:${entry.type.toLowerCase()}:${index}`,
+      label: glmModelLabel(entry),
+      limit: entry.limit,
+    })),
+    raw,
+  };
+};
+
 /* -------------------- HTTP -------------------- */
+
+const isChallengeResponse = (headers: Headers): boolean =>
+  headers.get('cf-mitigated') !== null ||
+  (headers.get('content-type') ?? '').toLowerCase().includes('text/html');
 
 const fetchJson = async (
   url: string,
   init: RequestInit = {},
-): Promise<{ ok: true; data: Json } | { ok: false; status: number }> => {
+): Promise<{ ok: true; data: Json } | { ok: false; status: number; challenged: boolean }> => {
   const response = await fetch(url, {
     credentials: 'include',
     ...init,
@@ -540,7 +655,11 @@ const fetchJson = async (
   });
 
   if (!response.ok) {
-    return { ok: false, status: response.status };
+    return {
+      ok: false,
+      status: response.status,
+      challenged: isChallengeResponse(response.headers),
+    };
   }
 
   const payload = (await response.json()) as unknown;
@@ -570,13 +689,14 @@ export class UsageService {
   }
 
   static async refreshAllUsage(): Promise<UsageState> {
-    const [claude, codex, minimax, kimi, cursor, mimo] = await Promise.all([
+    const [claude, codex, minimax, kimi, cursor, mimo, glm] = await Promise.all([
       this.fetchClaudeUsage().catch(() => null),
       this.fetchCodexUsage().catch(() => null),
       this.fetchMiniMaxUsage().catch(() => null),
       this.fetchKimiUsage().catch(() => null),
       this.fetchCursorUsage().catch(() => null),
       this.fetchMiMoUsage().catch(() => null),
+      this.fetchGlmUsage().catch(() => null),
     ]);
 
     const next = await this.getUsageState();
@@ -586,6 +706,7 @@ export class UsageService {
     if (kimi) next.kimi = kimi;
     if (cursor) next.cursor = cursor;
     if (mimo) next.mimo = mimo;
+    if (glm) next.glm = glm;
 
     await this.saveUsageState(next);
     return next;
@@ -597,7 +718,8 @@ export class UsageService {
 
     const result = await fetchJson(ENDPOINTS.claudeUsage(orgId));
     if (!result.ok) {
-      if (result.status === 401 || result.status === 403) {
+      const rejectedByClaude = result.status === 401 || result.status === 403;
+      if (rejectedByClaude && !result.challenged) {
         await chrome.storage.local.remove(STORAGE_KEYS.claudeOrgId);
       }
       return null;
@@ -670,6 +792,21 @@ export class UsageService {
       detail.ok ? detail.data : null,
       usage.ok ? usage.data : null,
     );
+  }
+
+  static async fetchGlmUsage(): Promise<GlmUsage | null> {
+    const stored = await chrome.storage.local.get(STORAGE_KEYS.glmToken);
+    const token = readString(stored[STORAGE_KEYS.glmToken]);
+    if (!token) return null;
+
+    const headers = { Authorization: `Bearer ${token}`, 'Accept-Language': 'en-US,en' };
+    for (const endpoint of [ENDPOINTS.glmQuota, ENDPOINTS.glmQuotaCn]) {
+      const result = await fetchJson(endpoint, { headers }).catch(() => null);
+      if (!result?.ok) continue;
+      const usage = buildGlmUsage(result.data);
+      if (usage) return usage;
+    }
+    return null;
   }
 
   private static async fetchCodexSession(): Promise<CodexSessionInfo | null> {

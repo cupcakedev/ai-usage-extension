@@ -78,3 +78,23 @@ the extension neither reads source code nor sends editor or chat content.
 Required to read the signed-in Xiaomi MiMo balance and token-plan usage from
 its console API using existing browser cookies. Requests are limited to balance,
 plan detail, and usage endpoints; no generation API is called.
+
+## host: https://z.ai/*
+
+Required to run a small content script on the signed-in z.ai console that reads
+the bearer token the page already keeps in its own `localStorage`, so the
+extension can query the user's GLM Coding Plan quota. The token stays on the
+device and is only ever sent back to z.ai's own API host.
+
+## host: https://api.z.ai/*
+
+Required to call z.ai's `/api/monitor/usage/quota/limit` endpoint — the same one
+the z.ai console itself uses — to read the signed-in user's GLM Coding Plan
+5-hour and weekly quotas. Only usage counters are read; no model, chat, or
+completion endpoint is ever called.
+
+## host: https://open.bigmodel.cn/*
+
+The China mainland host for the same GLM Coding Plan quota endpoint, used when
+the account is registered on BigModel rather than the global z.ai platform. Its
+access is identical: read-only quota figures for the signed-in user.

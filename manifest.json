@@ -17,7 +17,10 @@
     "https://platform.minimaxi.com/*",
     "https://www.kimi.com/*",
     "https://cursor.com/*",
-    "https://platform.xiaomimimo.com/*"
+    "https://platform.xiaomimimo.com/*",
+    "https://z.ai/*",
+    "https://api.z.ai/*",
+    "https://open.bigmodel.cn/*"
   ],
   "background": {
     "service_worker": "src/background/index.ts",
@@ -49,6 +52,15 @@
       ],
       "css": [
         "src/content/styles/overlay.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://z.ai/*"
+      ],
+      "js": [
+        "src/content/glm.ts"
       ],
       "run_at": "document_idle"
     }

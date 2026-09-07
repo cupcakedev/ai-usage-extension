@@ -41,4 +41,5 @@ jobs:
         env:
           VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
           VITE_POSTHOG_HOST: ${{ vars.VITE_POSTHOG_HOST }}
+          VITE_UNINSTALL_FORM_URL: ${{ vars.VITE_UNINSTALL_FORM_URL }}
         run: pnpm build

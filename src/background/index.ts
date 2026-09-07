@@ -1,4 +1,9 @@
-import { REFRESH_ALARM, REFRESH_INTERVAL_MINUTES, STORAGE_KEYS } from '../shared/constants';
+import {
+  REFRESH_ALARM,
+  REFRESH_INTERVAL_MINUTES,
+  STORAGE_KEYS,
+  UNINSTALL_FORM_URL,
+} from '../shared/constants';
 import { applyStoredLanguage } from '../shared/language';
 import { loadLocaleMessages } from '../shared/locales';
 import { readExtensionSettings } from '../shared/settings';
@@ -43,6 +48,10 @@ const refreshAfterInFlight = async (): Promise<void> => {
   await refreshInFlight?.catch(() => undefined);
   await refreshUsage();
 };
+
+if (UNINSTALL_FORM_URL) {
+  void Promise.resolve(chrome.runtime.setUninstallURL(UNINSTALL_FORM_URL)).catch(() => undefined);
+}
 
 const languageReady = applyStoredLanguage().catch(() => undefined);
 

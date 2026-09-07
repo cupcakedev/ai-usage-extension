@@ -45,3 +45,5 @@ export const GITHUB_REPO_URL = 'https://github.com/cupcakedev/ai-usage-extension
 export const GITHUB_ISSUES_URL = `${GITHUB_REPO_URL}/issues/new`;
 
 export const REPORT_MAX_LENGTH = 1000;
+
+export const UNINSTALL_FORM_URL = import.meta.env.VITE_UNINSTALL_FORM_URL?.trim();

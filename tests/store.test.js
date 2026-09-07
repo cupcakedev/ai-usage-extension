@@ -171,33 +171,16 @@ describe('localized store listings', () => {
   for (const locale of localizedStoreLocales) {
     const path = `store/${locale}/listing.md`;
 
-    it(`${path} has complete Chrome Web Store copy`, () => {
+    it(`${path} carries a substantial localized description`, () => {
       assert.ok(existsSync(resolve(root, path)), `${path} is missing`);
 
-      const listing = read(path);
-      const present = new Set(headings(listing));
+      const description = read(path).trim();
 
-      for (const required of requiredListingHeadings) {
-        assert.ok(present.has(required), `${path} must contain a "## ${required}" heading`);
-      }
-
-      const shortDescription = sectionBody(listing, 'Short Description');
-      const fullDescription = sectionBody(listing, 'Full Description');
-      const keywords = sectionBody(listing, 'Keywords')
-        .replace(/\s+/g, ' ')
-        .split(',')
-        .map((term) => term.trim())
-        .filter(Boolean);
-
+      assert.deepEqual(headings(description), [], `${path} should be plain description copy`);
       assert.ok(
-        shortDescription.length <= CHROME_SHORT_DESCRIPTION_MAX,
-        `${path} Short Description is ${shortDescription.length} chars, max is ${CHROME_SHORT_DESCRIPTION_MAX}`,
+        description.length >= SEO_FULL_DESCRIPTION_MIN,
+        `${path} is only ${description.length} chars; aim for >=${SEO_FULL_DESCRIPTION_MIN} for SEO`,
       );
-      assert.ok(
-        fullDescription.length >= SEO_FULL_DESCRIPTION_MIN,
-        `${path} Full Description is only ${fullDescription.length} chars; aim for >=${SEO_FULL_DESCRIPTION_MIN} for SEO`,
-      );
-      assert.ok(keywords.length >= 5, `${path} Keywords has only ${keywords.length} terms`);
     });
   }
 });

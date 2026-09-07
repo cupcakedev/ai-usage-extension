@@ -54,14 +54,17 @@ usage tracker, session reset tracker
 
 ## Single Purpose
 
-Display the current session and weekly usage limits for the signed-in user's
-Claude (claude.ai) and Codex (chatgpt.com) accounts, both in the extension UI
-and as an overlay on the provider pages.
+Display the current session and weekly usage limits for the AI coding accounts
+the user is already signed in to — Claude (claude.ai), Codex (chatgpt.com),
+MiniMax, Kimi Code, Cursor, Xiaomi MiMo, and the GLM (z.ai) and Qwen Coding
+Plans — both
+in the extension UI and as an overlay on the provider pages.
 
 ## Justification Summary
 
-This extension calls only the rate-limit endpoints of the user's already
-signed-in Claude and Codex accounts, caches the result in `chrome.storage.local`,
-and renders it in the popup and on-page overlay. Each requested permission maps
-to one of those tasks; the full rationale is documented in
+This extension calls only the usage and rate-limit endpoints of the accounts the
+user is already signed in to, caches the result in `chrome.storage.local`, and
+renders it in the popup and on-page overlay. No prompt, chat, or generation
+endpoint is ever called, and nothing leaves the device. Each requested
+permission maps to one of those tasks; the full rationale is documented in
 [permissions.md](./permissions.md).

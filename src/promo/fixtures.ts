@@ -82,6 +82,15 @@ const GLM_USAGE: ExternalProviderUsage = {
   lastUpdated: NOW - 4 * MINUTE,
 };
 
+const QWEN_USAGE: ExternalProviderUsage = {
+  plan: 'Pro',
+  session: { percentage: 36, resetsAt: resetsIn(3 * HOUR + 12 * MINUTE) },
+  weekly: { percentage: 58, resetsAt: resetsIn(2 * DAY + 7 * HOUR) },
+  models: [],
+  status: 'ok',
+  lastUpdated: NOW - 3 * MINUTE,
+};
+
 export interface PromoProvider {
   id: ProviderId;
   title: string;
@@ -100,6 +109,7 @@ const USAGE: Record<ProviderId, PromoProvider['usage']> = {
   cursor: CURSOR_USAGE,
   mimo: MIMO_USAGE,
   glm: GLM_USAGE,
+  qwen: QWEN_USAGE,
 };
 
 const METRICS: Record<ProviderId, ProviderMetric[]> = {
@@ -110,6 +120,7 @@ const METRICS: Record<ProviderId, ProviderMetric[]> = {
   cursor: ['session', 'reset', 'plan'],
   mimo: ['session', 'reset', 'plan'],
   glm: ['session', 'weekly', 'reset'],
+  qwen: ['session', 'weekly', 'reset', 'plan'],
 };
 
 const LABEL_OVERRIDES: Partial<

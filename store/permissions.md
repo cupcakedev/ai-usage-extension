@@ -98,3 +98,28 @@ completion endpoint is ever called.
 The China mainland host for the same GLM Coding Plan quota endpoint, used when
 the account is registered on BigModel rather than the global z.ai platform. Its
 access is identical: read-only quota figures for the signed-in user.
+
+## host: https://home.qwencloud.com/*
+
+Required to read the signed-in Qwen Cloud console session token from
+`/tool/user/info.json`, which the console's own gateway requires alongside the
+existing cookies before it will return the account's Coding Plan quota. Nothing
+else on this host is read and the token never leaves the device.
+
+## host: https://cs-data.qwencloud.com/*
+
+The Qwen Cloud data gateway. Required to call the same three read-only
+token-plan endpoints the console's billing page uses — subscription, usage, and
+quota-config — so the extension can show the account's 5-hour and weekly quota.
+No model or generation endpoint is ever called.
+
+## host: https://platform-home.qianwenai.com/*
+
+The China mainland equivalent of the Qwen Cloud console host, used when the
+account is registered there instead of on the global site. Access is identical:
+reading the console session token needed to authenticate the quota request.
+
+## host: https://cs-data.qianwenai.com/*
+
+The China mainland Qwen data gateway, serving the same read-only token-plan
+quota endpoints as the global host for accounts registered in that region.

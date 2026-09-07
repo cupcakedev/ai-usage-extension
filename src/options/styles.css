@@ -751,6 +751,36 @@ select {
   color: var(--text);
 }
 
+.auo-credential {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.auo-credential__input {
+  width: 100%;
+  min-height: 38px;
+  padding: 0 11px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-sunken);
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.auo-credential__input::placeholder {
+  color: var(--faint);
+}
+
+.auo-credential__input:hover {
+  border-color: var(--line-strong);
+  background-color: var(--surface-hover);
+}
+
 .auo-warning {
   display: flex;
   align-items: flex-start;
@@ -929,6 +959,7 @@ select {
 .auo-choice:has(input:focus-visible),
 .auo-chip:has(input:focus-visible),
 select:focus-visible,
+input[type='password']:focus-visible,
 button:focus-visible,
 .auo-nav__item:focus-visible,
 .auo-skip:focus-visible {

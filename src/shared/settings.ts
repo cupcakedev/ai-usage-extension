@@ -2,10 +2,34 @@ import { STORAGE_KEYS } from './constants';
 import { normalizeLanguage } from './locales';
 import type {
   ExtensionSettings,
+  OverlayProviderId,
   ProviderDisplaySettings,
   ProviderId,
   ProviderMetric,
 } from './types';
+
+export const OVERLAY_PROVIDER_IDS: OverlayProviderId[] = ['claude', 'codex', 'glm'];
+
+export const OVERLAY_DEFAULTS: Record<OverlayProviderId, boolean> = {
+  claude: true,
+  codex: true,
+  glm: false,
+};
+
+export const OVERLAY_STORAGE_KEYS: Record<
+  OverlayProviderId,
+  { enabled: string; collapsed: string }
+> = {
+  claude: {
+    enabled: STORAGE_KEYS.claudeOverlayEnabled,
+    collapsed: STORAGE_KEYS.claudeOverlayCollapsed,
+  },
+  codex: {
+    enabled: STORAGE_KEYS.codexOverlayEnabled,
+    collapsed: STORAGE_KEYS.codexOverlayCollapsed,
+  },
+  glm: { enabled: STORAGE_KEYS.glmOverlayEnabled, collapsed: STORAGE_KEYS.glmOverlayCollapsed },
+};
 
 export const PROVIDER_IDS: ProviderId[] = [
   'claude',
@@ -15,6 +39,7 @@ export const PROVIDER_IDS: ProviderId[] = [
   'cursor',
   'mimo',
   'glm',
+  'qwen',
 ];
 
 /**
@@ -35,6 +60,7 @@ export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = 
   cursor: ['session', 'models', 'reset', 'plan'],
   mimo: ['session', 'reset', 'plan', 'summary'],
   glm: ['session', 'weekly', 'models', 'reset', 'plan'],
+  qwen: ['session', 'weekly', 'reset', 'plan'],
 };
 
 const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
@@ -45,6 +71,7 @@ const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
   cursor: { visible: false, metrics: ['session', 'reset'] },
   mimo: { visible: false, metrics: ['session'] },
   glm: { visible: false, metrics: ['session', 'weekly', 'reset'] },
+  qwen: { visible: false, metrics: ['session', 'weekly', 'reset'] },
 };
 
 const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({
@@ -63,10 +90,7 @@ export const createDefaultSettings = (): ExtensionSettings => ({
     provider: 'claude',
     metric: 'session',
   },
-  overlays: {
-    claude: true,
-    codex: true,
-  },
+  overlays: { ...OVERLAY_DEFAULTS },
 });
 
 /** Keeps only metrics the provider can render, so stored lists never carry dead toggles. */
@@ -118,10 +142,12 @@ export const normalizeSettings = (
         : defaults.badge.provider,
       metric: candidate.badge?.metric === 'weekly' ? 'weekly' : 'session',
     },
-    overlays: {
-      claude: candidate.overlays?.claude ?? legacyOverlays?.claude ?? defaults.overlays.claude,
-      codex: candidate.overlays?.codex ?? legacyOverlays?.codex ?? defaults.overlays.codex,
-    },
+    overlays: Object.fromEntries(
+      OVERLAY_PROVIDER_IDS.map((provider) => [
+        provider,
+        candidate.overlays?.[provider] ?? legacyOverlays?.[provider] ?? defaults.overlays[provider],
+      ]),
+    ) as ExtensionSettings['overlays'],
   };
 };
 
@@ -131,13 +157,15 @@ export const readExtensionSettings = async (): Promise<ExtensionSettings> => {
   }
   const stored = await chrome.storage.local.get([
     STORAGE_KEYS.extensionSettings,
-    STORAGE_KEYS.claudeOverlayEnabled,
-    STORAGE_KEYS.codexOverlayEnabled,
+    ...OVERLAY_PROVIDER_IDS.map((provider) => OVERLAY_STORAGE_KEYS[provider].enabled),
   ]);
-  return normalizeSettings(stored[STORAGE_KEYS.extensionSettings], {
-    claude: stored[STORAGE_KEYS.claudeOverlayEnabled] !== false,
-    codex: stored[STORAGE_KEYS.codexOverlayEnabled] !== false,
-  });
+  const legacyOverlays = Object.fromEntries(
+    OVERLAY_PROVIDER_IDS.flatMap((provider) => {
+      const value = stored[OVERLAY_STORAGE_KEYS[provider].enabled];
+      return value === undefined ? [] : [[provider, value !== false]];
+    }),
+  ) as Partial<ExtensionSettings['overlays']>;
+  return normalizeSettings(stored[STORAGE_KEYS.extensionSettings], legacyOverlays);
 };
 
 export const saveExtensionSettings = async (settings: ExtensionSettings): Promise<void> => {
@@ -146,8 +174,11 @@ export const saveExtensionSettings = async (settings: ExtensionSettings): Promis
   }
   await chrome.storage.local.set({
     [STORAGE_KEYS.extensionSettings]: settings,
-    // Preserve these keys for existing overlay instances during the migration.
-    [STORAGE_KEYS.claudeOverlayEnabled]: settings.overlays.claude,
-    [STORAGE_KEYS.codexOverlayEnabled]: settings.overlays.codex,
+    ...Object.fromEntries(
+      OVERLAY_PROVIDER_IDS.map((provider) => [
+        OVERLAY_STORAGE_KEYS[provider].enabled,
+        settings.overlays[provider],
+      ]),
+    ),
   });
 };

@@ -13,7 +13,6 @@ interface OverlaySettingsSectionProps {
 const OVERLAY_HOSTS: Record<OverlayProviderId, string> = {
   claude: 'claude.ai',
   codex: 'chatgpt.com',
-  glm: 'z.ai',
 };
 
 export const OverlaySettingsSection = ({

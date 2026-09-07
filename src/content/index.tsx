@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import claudeBrandAsset from '../assets/brands/claude-anthropic.jpg?inline';
 import codexBrandAsset from '../assets/brands/codex-openai.jpg?inline';
-import zaiBrandAsset from '../assets/brands/zai.webp?inline';
 import limitBrandAsset from '../../public/icons/limit-icon-2.0.png?inline';
 import { STORAGE_KEYS } from '../shared/constants';
 import { OVERLAY_DEFAULTS, OVERLAY_STORAGE_KEYS } from '../shared/settings';
@@ -86,7 +85,7 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
 interface OverlayHostConfig {
   brandAsset: string;
   title: string;
-  inputSelector: string | null;
+  inputSelector: string;
 }
 
 const OVERLAY_HOSTS: Record<OverlayProviderId, OverlayHostConfig> = {
@@ -102,15 +101,10 @@ const OVERLAY_HOSTS: Record<OverlayProviderId, OverlayHostConfig> = {
     inputSelector:
       '#prompt-textarea, [data-testid="composer-footer-actions"], [data-testid="chat-input"]',
   },
-  glm: { brandAsset: zaiBrandAsset, title: 'GLM', inputSelector: null },
 };
 
 const hostname = window.location.hostname;
-const usageField: OverlayProviderId = hostname.includes('claude.ai')
-  ? 'claude'
-  : hostname === 'z.ai' || hostname.endsWith('.z.ai')
-    ? 'glm'
-    : 'codex';
+const usageField: OverlayProviderId = hostname.includes('claude.ai') ? 'claude' : 'codex';
 const enabledKey = OVERLAY_STORAGE_KEYS[usageField].enabled;
 const collapsedKey = OVERLAY_STORAGE_KEYS[usageField].collapsed;
 const { brandAsset, title, inputSelector } = OVERLAY_HOSTS[usageField];
@@ -123,7 +117,7 @@ const UsageOverlay: React.FC = () => {
   const [collapsed, setCollapsed] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const [hasInput, setHasInput] = useState(inputSelector === null);
+  const [hasInput, setHasInput] = useState(false);
   const now = useNow(60_000);
 
   useEffect(
@@ -138,8 +132,6 @@ const UsageOverlay: React.FC = () => {
   );
 
   useEffect(() => {
-    if (inputSelector === null) return;
-
     const checkElement = (): void => {
       setHasInput(document.querySelector(inputSelector) !== null);
     };

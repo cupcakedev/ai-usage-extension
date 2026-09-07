@@ -6,11 +6,15 @@ import minimaxBrandAsset from '../assets/brands/minimax.webp';
 import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
 import qwenBrandAsset from '../assets/brands/qwen.webp';
 import zaiBrandAsset from '../assets/brands/zai.webp';
-import { RefreshCw, Settings } from 'lucide-react';
+import { MessageSquareWarning, RefreshCw, Settings } from 'lucide-react';
+import { useCallback, useState } from 'react';
+import { GITHUB_ISSUES_URL, GITHUB_REPO_URL, POSTHOG_PROJECT_TOKEN } from '../shared/constants';
+import { trackFrom } from '../shared/analytics/track';
 import { msg } from '../shared/i18n';
 import { useNow } from '../shared/hooks/useNow';
 import type { ProviderId, ProviderLink } from '../shared/types';
 import { ProviderCard } from './components/ProviderCard';
+import { ReportDialog } from './components/ReportDialog';
 import { useUsageData } from './hooks/useUsageData';
 import './styles/global.css';
 
@@ -100,9 +104,18 @@ const PROVIDERS: Array<{
   },
 ];
 
+const track = trackFrom('popup');
+
 export const App = () => {
   const { usage, settings, loading, refreshing, error, refresh } = useUsageData();
   const now = useNow(30_000);
+  const [reportOpen, setReportOpen] = useState(false);
+
+  const sendReport = useCallback(
+    (message: string) =>
+      track('problem_reported', { message, message_length: message.length }).catch(() => false),
+    [],
+  );
 
   const initialLoading =
     loading &&
@@ -175,17 +188,25 @@ export const App = () => {
       </div>
 
       <footer className="au-footer">
-        <a
-          className="au-footer__link"
-          href="https://github.com/cupcakedev/ai-usage-extension"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a className="au-footer__link" href={GITHUB_REPO_URL} target="_blank" rel="noreferrer">
           {msg('sourceCode')}
         </a>
         <span aria-hidden="true">·</span>
         <span>{msg('github')}</span>
+        <span aria-hidden="true">·</span>
+        {POSTHOG_PROJECT_TOKEN ? (
+          <button type="button" className="au-footer__button" onClick={() => setReportOpen(true)}>
+            <MessageSquareWarning aria-hidden="true" size={12} strokeWidth={1.8} />
+            {msg('reportProblem')}
+          </button>
+        ) : (
+          <a className="au-footer__link" href={GITHUB_ISSUES_URL} target="_blank" rel="noreferrer">
+            {msg('reportProblem')}
+          </a>
+        )}
       </footer>
+
+      {reportOpen && <ReportDialog onSend={sendReport} onClose={() => setReportOpen(false)} />}
     </main>
   );
 };

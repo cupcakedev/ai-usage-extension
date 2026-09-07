@@ -455,6 +455,218 @@ input {
   border-radius: 4px;
 }
 
+.au-footer__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--au-text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+
+.au-footer__button:hover {
+  color: var(--au-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.au-footer__button:focus-visible {
+  outline: 2px solid var(--au-line-strong);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Report dialog -------------------------------------------------- */
+
+.au-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  animation: au-modal-fade 120ms ease;
+}
+
+.au-modal__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+  padding: 14px;
+  border: 1px solid var(--au-line);
+  border-radius: 12px;
+  background: var(--au-surface);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.au-modal__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.au-modal__title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--au-text);
+}
+
+.au-modal__hint {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--au-text-muted);
+}
+
+.au-modal__close {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--au-text-faint);
+  cursor: pointer;
+  transition:
+    color 120ms ease,
+    background 120ms ease;
+}
+
+.au-modal__close:hover {
+  background: var(--au-surface-hover);
+  color: var(--au-text);
+}
+
+.au-modal__input {
+  width: 100%;
+  resize: none;
+  padding: 9px 10px;
+  border: 1px solid var(--au-line);
+  border-radius: 8px;
+  background: var(--au-bg);
+  color: var(--au-text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.au-modal__input::placeholder {
+  color: var(--au-text-faint);
+}
+
+.au-modal__input:focus-visible {
+  outline: none;
+  border-color: var(--au-line-strong);
+}
+
+.au-modal__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--au-text-faint);
+}
+
+.au-modal__count {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.au-modal__error {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  font-size: 11px;
+  color: var(--au-fill-critical);
+}
+
+.au-modal__error .au-footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.au-modal__done {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--au-surface-hover);
+  color: var(--au-text);
+  font-size: 12px;
+}
+
+.au-modal__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.au-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border: 1px solid var(--au-line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--au-text-muted);
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    color 120ms ease,
+    background 120ms ease,
+    opacity 120ms ease;
+}
+
+.au-modal__btn:hover:not(:disabled) {
+  background: var(--au-surface-hover);
+  color: var(--au-text);
+}
+
+.au-modal__btn--primary {
+  border-color: transparent;
+  background: var(--au-text);
+  color: var(--au-bg);
+}
+
+.au-modal__btn--primary:hover:not(:disabled) {
+  background: var(--au-fill);
+  color: var(--au-bg);
+}
+
+.au-modal__btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+@keyframes au-modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* ---- Loading skeleton ---------------------------------------------- */
 
 .au-loader {

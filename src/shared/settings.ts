@@ -8,12 +8,11 @@ import type {
   ProviderMetric,
 } from './types';
 
-export const OVERLAY_PROVIDER_IDS: OverlayProviderId[] = ['claude', 'codex', 'glm'];
+export const OVERLAY_PROVIDER_IDS: OverlayProviderId[] = ['claude', 'codex'];
 
 export const OVERLAY_DEFAULTS: Record<OverlayProviderId, boolean> = {
   claude: true,
   codex: true,
-  glm: false,
 };
 
 export const OVERLAY_STORAGE_KEYS: Record<
@@ -28,7 +27,6 @@ export const OVERLAY_STORAGE_KEYS: Record<
     enabled: STORAGE_KEYS.codexOverlayEnabled,
     collapsed: STORAGE_KEYS.codexOverlayCollapsed,
   },
-  glm: { enabled: STORAGE_KEYS.glmOverlayEnabled, collapsed: STORAGE_KEYS.glmOverlayCollapsed },
 };
 
 export const PROVIDER_IDS: ProviderId[] = [
@@ -57,7 +55,7 @@ export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = 
   codex: ['session', 'weekly', 'models', 'reset', 'availableResets'],
   minimax: ['session', 'weekly', 'models', 'reset', 'plan'],
   kimi: ['session', 'weekly', 'reset'],
-  cursor: ['session', 'models', 'reset', 'plan'],
+  cursor: ['session', 'models', 'reset', 'plan', 'summary'],
   mimo: ['session', 'reset', 'plan', 'summary'],
   glm: ['session', 'weekly', 'models', 'reset', 'plan'],
   qwen: ['session', 'weekly', 'reset', 'plan'],
@@ -68,7 +66,7 @@ const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
   codex: { visible: true, metrics: ['weekly', 'reset', 'availableResets'] },
   minimax: { visible: false, metrics: ['session', 'weekly', 'models', 'reset'] },
   kimi: { visible: false, metrics: ['session', 'weekly', 'reset'] },
-  cursor: { visible: false, metrics: ['session', 'reset'] },
+  cursor: { visible: false, metrics: ['session', 'reset', 'summary'] },
   mimo: { visible: false, metrics: ['session'] },
   glm: { visible: false, metrics: ['session', 'weekly', 'reset'] },
   qwen: { visible: false, metrics: ['session', 'weekly', 'reset'] },

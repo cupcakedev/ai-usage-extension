@@ -9,6 +9,7 @@ import type {
   UsageState,
 } from '../shared/types';
 import { updateBadge } from './badge';
+import { track } from './services/analytics';
 import { UsageService } from './services/UsageService';
 
 let hasStartedRefresh = false;
@@ -102,6 +103,18 @@ chrome.runtime.onMessage.addListener(
       collectLocaleMessages()
         .then((data) => sendResponse({ success: true, data }))
         .catch(() => sendResponse({ success: true, data: null }));
+
+      return true;
+    }
+
+    if (message?.type === 'TRACK') {
+      track(message.event, message.properties, message.context)
+        .then((sent) =>
+          sent
+            ? sendResponse({ success: true, data: null })
+            : sendResponse({ success: false, error: 'analytics_unavailable' }),
+        )
+        .catch(() => sendResponse({ success: false, error: 'analytics_unavailable' }));
 
       return true;
     }

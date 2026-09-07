@@ -177,12 +177,24 @@ const claudeModelBreakdown = (raw: Json): ModelUsage[] => {
   }, []);
 };
 
+const CLAUDE_SCOPED_WINDOWS = [
+  ['seven_day_sonnet', 'Sonnet'],
+  ['seven_day_opus', 'Opus'],
+  ['seven_day_oauth_apps', 'OAuth apps'],
+] as const;
+
+const claudeScopedWindows = (raw: Json): ModelUsage[] =>
+  CLAUDE_SCOPED_WINDOWS.flatMap(([key, label]) => {
+    const limit = claudeWindowFrom(raw[key]);
+    return isLimitAvailable(limit) ? [{ id: `claude:${key}`, label: `${label} · 7d`, limit }] : [];
+  });
+
 const buildClaudeUsage = (raw: Json | null): ClaudeUsage | null => {
   if (!raw) return null;
 
   const session = claudeWindowFrom(raw.five_hour);
   const weekly = claudeWindowFrom(raw.seven_day);
-  const models = claudeModelBreakdown(raw);
+  const models = [...claudeModelBreakdown(raw), ...claudeScopedWindows(raw)];
   if (!isLimitAvailable(session) && !isLimitAvailable(weekly) && !models.length) return null;
 
   return {
@@ -355,6 +367,12 @@ const accountIdFromSession = (session: Json): string | null => {
 
 /* -------------------- Browser-session providers -------------------- */
 
+const ratioOrPercent = (value: unknown): number | null => {
+  const raw = readPercent(value);
+  if (raw === null) return null;
+  return raw > 0 && raw <= 1 ? raw * 100 : raw;
+};
+
 const minimaxLimit = (row: Json, period: 'interval' | 'weekly'): UsageLimit => {
   const prefix = period === 'interval' ? 'current_interval' : 'current_weekly';
   const total = readNumeric(row[`${prefix}_total_count`]);
@@ -367,11 +385,11 @@ const minimaxLimit = (row: Json, period: 'interval' | 'weekly'): UsageLimit => {
       ? Math.max(0, usableTotal - remaining)
       : null;
   const used = usableUsed ?? inferredUsed;
+  const remainingPercent = ratioOrPercent(row[`${prefix}_remaining_percent`]);
   const percentage =
-    readPercent(row[`${prefix}_used_percent`]) ??
-    (readPercent(row[`${prefix}_remaining_percent`]) !== null
-      ? 100 - (readPercent(row[`${prefix}_remaining_percent`]) ?? 0)
-      : percentFromUsedLimit(used, usableTotal));
+    percentFromUsedLimit(used, usableTotal) ??
+    ratioOrPercent(row[`${prefix}_used_percent`]) ??
+    (remainingPercent !== null ? 100 - remainingPercent : null);
   const resetField = period === 'interval' ? 'end_time' : 'weekly_end_time';
   const remainsField = period === 'interval' ? 'remains_time' : 'weekly_remains_time';
   const remainsSeconds = readNumeric(row[remainsField]);
@@ -453,6 +471,22 @@ const buildMiniMaxUsage = (raw: Json | null): MiniMaxUsage | null => {
   };
 };
 
+const KIMI_SESSION_WINDOW_MINUTES = 300;
+
+const KIMI_SESSION_MAX_MINUTES = 24 * 60;
+
+const KIMI_TIME_UNIT_MINUTES: Record<string, number> = { MINUTE: 1, HOUR: 60, DAY: 1440 };
+
+const kimiWindowMinutes = (entry: Json): number | null => {
+  const window = asJson(entry.window);
+  if (!window) return null;
+  const duration = readNumeric(window.duration);
+  if (duration === null || duration <= 0) return null;
+  const unit = readString(window.timeUnit)?.toUpperCase() ?? '';
+  const factor = Object.entries(KIMI_TIME_UNIT_MINUTES).find(([name]) => unit.includes(name))?.[1];
+  return factor === undefined ? null : duration * factor;
+};
+
 const kimiDetailLimit = (value: unknown): UsageLimit => {
   const detail = asJson(value);
   if (!detail) return unavailableLimit();
@@ -481,7 +515,16 @@ const buildKimiUsage = (raw: Json | null): KimiUsage | null => {
   const limits = asArray(usage.limits)
     .map(asJson)
     .filter((entry): entry is Json => entry !== null);
-  const rateLimit = limits[0] ? kimiDetailLimit(limits[0].detail) : unavailableLimit();
+  const dated = limits
+    .filter((entry) => kimiWindowMinutes(entry) !== null)
+    .sort((a, b) => (kimiWindowMinutes(a) ?? 0) - (kimiWindowMinutes(b) ?? 0));
+  const shortest = dated.find(
+    (entry) => (kimiWindowMinutes(entry) ?? 0) <= KIMI_SESSION_MAX_MINUTES,
+  );
+  const sessionEntry = dated.length
+    ? (dated.find((entry) => kimiWindowMinutes(entry) === KIMI_SESSION_WINDOW_MINUTES) ?? shortest)
+    : limits[0];
+  const rateLimit = sessionEntry ? kimiDetailLimit(sessionEntry.detail) : unavailableLimit();
   if (!isLimitAvailable(rateLimit) && !isLimitAvailable(weekly)) return null;
 
   return {
@@ -521,6 +564,17 @@ const cursorUsageWindow = (value: unknown, resetsAt: string | null): UsageLimit 
 
 const buildCursorUsage = (raw: Json | null): CursorUsage | null => {
   if (!raw) return null;
+  const plan = readString(raw.membershipType) ?? undefined;
+  if (readBoolean(raw.isUnlimited) === true) {
+    return {
+      ...(plan ? { plan } : {}),
+      ...finalize({ session: unavailableLimit(), weekly: unavailableLimit() }),
+      models: [],
+      summary: 'Unlimited',
+      raw,
+    };
+  }
+
   const individual = asJson(raw.individualUsage);
   const team = asJson(raw.teamUsage);
   const resetsAt = readString(raw.billingCycleEnd);
@@ -539,7 +593,7 @@ const buildCursorUsage = (raw: Json | null): CursorUsage | null => {
   if (!session) return null;
 
   return {
-    plan: readString(raw.membershipType) ?? undefined,
+    ...(plan ? { plan } : {}),
     ...finalize({ session, weekly: unavailableLimit() }),
     models: models.slice(1),
     raw,

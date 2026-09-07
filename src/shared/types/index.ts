@@ -1,3 +1,5 @@
+import type { AnalyticsContext, AnalyticsEventName, AnalyticsEvents } from '../analytics/events';
+
 import type { LanguagePreference } from '../locales';
 
 export type UsageStatus = 'ok' | 'warning' | 'critical';
@@ -12,7 +14,7 @@ export type ProviderId =
   | 'glm'
   | 'qwen';
 
-export type OverlayProviderId = Extract<ProviderId, 'claude' | 'codex' | 'glm'>;
+export type OverlayProviderId = Extract<ProviderId, 'claude' | 'codex'>;
 
 export interface UsageLimit {
   percentage: number;
@@ -126,7 +128,13 @@ export interface ExtensionSettings {
 export type ExtensionMessage =
   | { type: 'REFRESH_USAGE' }
   | { type: 'GET_LOCALE_MESSAGES' }
-  | { type: 'SET_GLM_TOKEN'; token: string };
+  | { type: 'SET_GLM_TOKEN'; token: string }
+  | {
+      type: 'TRACK';
+      context: AnalyticsContext;
+      event: AnalyticsEventName;
+      properties: AnalyticsEvents[AnalyticsEventName];
+    };
 
 /** Response returned by the background worker for a given message. */
 export type MessageResponse<T = unknown> =

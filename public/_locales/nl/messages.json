@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "niet verbonden"
   },
+  "sessionExpired": {
+    "message": "sessie verlopen"
+  },
   "updated": {
     "message": "bijgewerkt $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Nog geen gegevens. Open z.ai terwijl je bent ingelogd en vernieuw."
+  },
+  "emptyQwen": {
+    "message": "Nog geen gegevens. Open qwencloud.com terwijl je bent ingelogd en vernieuw."
   },
   "emptyOverlay": {
     "message": "Nog geen gegevens. Open de pop-up en vernieuw."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Saldo"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API-sleutel"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Optioneel. Gebruik hem als deze browser niet is aangemeld bij z.ai, of voor BigModel-accounts."
   },
   "optionsBadgeTitle": {
     "message": "Pictogrambereik"

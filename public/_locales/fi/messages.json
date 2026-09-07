@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "ei yhteyttä"
   },
+  "sessionExpired": {
+    "message": "istunto vanhentui"
+  },
   "updated": {
     "message": "päivitetty $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Ei vielä tietoja. Avaa z.ai kirjautuneena ja päivitä."
+  },
+  "emptyQwen": {
+    "message": "Ei vielä tietoja. Avaa qwencloud.com kirjautuneena ja päivitä."
   },
   "emptyOverlay": {
     "message": "Ei vielä tietoja. Avaa ponnahdusikkuna ja päivitä."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Saldo"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API -avain"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Valinnainen. Käytä sitä, jos tällä selaimella ei ole kirjauduttu z.ai-palveluun, tai BigModel-tileille."
   },
   "optionsBadgeTitle": {
     "message": "Kuvakkeen taso"

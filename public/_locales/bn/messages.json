@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "সংযুক্ত নয়"
   },
+  "sessionExpired": {
+    "message": "সেশনের মেয়াদ শেষ"
+  },
   "updated": {
     "message": "আপডেট $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় z.ai খুলে রিফ্রেশ করুন।"
+  },
+  "emptyQwen": {
+    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় qwencloud.com খুলে রিফ্রেশ করুন।"
   },
   "emptyOverlay": {
     "message": "এখনও ডেটা নেই। পপআপ খুলে রিফ্রেশ করুন।"
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "ব্যালেন্স"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API কী"
+  },
+  "optionsGlmKeyHint": {
+    "message": "ঐচ্ছিক। এই ব্রাউজারে z.ai-তে সাইন ইন না থাকলে, বা BigModel অ্যাকাউন্টের জন্য ব্যবহার করুন।"
   },
   "optionsBadgeTitle": {
     "message": "আইকনের রেঞ্জ"

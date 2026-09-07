@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "ikke tilkoblet"
   },
+  "sessionExpired": {
+    "message": "økten er utløpt"
+  },
   "updated": {
     "message": "oppdatert $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Ingen data ennå. Åpne z.ai mens du er innlogget, og oppdater."
+  },
+  "emptyQwen": {
+    "message": "Ingen data ennå. Åpne qwencloud.com mens du er innlogget, og oppdater."
   },
   "emptyOverlay": {
     "message": "Ingen data ennå. Åpne popupen og oppdater."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Saldo"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API-nøkkel"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Valgfritt. Bruk den hvis denne nettleseren ikke er logget på z.ai, eller for BigModel-kontoer."
   },
   "optionsBadgeTitle": {
     "message": "Ikonintervall"

@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "കണക്റ്റ് ചെയ്തിട്ടില്ല"
   },
+  "sessionExpired": {
+    "message": "സെഷൻ കാലഹരണപ്പെട്ടു"
+  },
   "updated": {
     "message": "പുതുക്കി $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് z.ai തുറന്ന് പുതുക്കുക."
+  },
+  "emptyQwen": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് qwencloud.com തുറന്ന് പുതുക്കുക."
   },
   "emptyOverlay": {
     "message": "ഇതുവരെ ഡാറ്റയില്ല. പോപ്പപ്പ് തുറന്ന് പുതുക്കുക."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "ബാലൻസ്"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API കീ"
+  },
+  "optionsGlmKeyHint": {
+    "message": "ഐച്ഛികം. ഈ ബ്രൗസറിൽ z.ai-യിൽ സൈൻ ഇൻ ചെയ്തിട്ടില്ലെങ്കിൽ, അല്ലെങ്കിൽ BigModel അക്കൗണ്ടുകൾക്കായി ഉപയോഗിക്കുക."
   },
   "optionsBadgeTitle": {
     "message": "ഐക്കൺ ശ്രേണി"

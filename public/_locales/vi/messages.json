@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "chưa kết nối"
   },
+  "sessionExpired": {
+    "message": "phiên đã hết hạn"
+  },
   "updated": {
     "message": "cập nhật $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Chưa có dữ liệu. Mở z.ai khi đã đăng nhập rồi làm mới."
+  },
+  "emptyQwen": {
+    "message": "Chưa có dữ liệu. Mở qwencloud.com khi đã đăng nhập rồi làm mới."
   },
   "emptyOverlay": {
     "message": "Chưa có dữ liệu. Mở cửa sổ bật lên rồi làm mới."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Số dư"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Khóa API GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Tùy chọn. Dùng khi trình duyệt này chưa đăng nhập z.ai, hoặc cho tài khoản BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Dải biểu tượng"

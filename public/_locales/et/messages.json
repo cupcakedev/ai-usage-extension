@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "ühendus puudub"
   },
+  "sessionExpired": {
+    "message": "seanss aegunud"
+  },
   "updated": {
     "message": "värskendatud $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Andmeid veel pole. Ava sisselogituna z.ai ja värskenda."
+  },
+  "emptyQwen": {
+    "message": "Andmeid veel pole. Ava sisselogituna qwencloud.com ja värskenda."
   },
   "emptyOverlay": {
     "message": "Andmeid veel pole. Ava hüpikaken ja värskenda."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Jääk"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM-i API-võti"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Valikuline. Kasuta seda, kui see brauser pole z.ai-sse sisse logitud, või BigModeli kontode puhul."
   },
   "optionsBadgeTitle": {
     "message": "Ikooni vahemik"

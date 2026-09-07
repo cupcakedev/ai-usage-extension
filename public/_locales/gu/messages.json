@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "કનેક્ટ નથી"
   },
+  "sessionExpired": {
+    "message": "સત્ર સમાપ્ત"
+  },
   "updated": {
     "message": "અપડેટ $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે z.ai ખોલો અને રિફ્રેશ કરો."
+  },
+  "emptyQwen": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે qwencloud.com ખોલો અને રિફ્રેશ કરો."
   },
   "emptyOverlay": {
     "message": "હજુ ડેટા નથી. પોપઅપ ખોલો અને રિફ્રેશ કરો."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "બેલેન્સ"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API કી"
+  },
+  "optionsGlmKeyHint": {
+    "message": "વૈકલ્પિક. આ બ્રાઉઝર z.ai માં સાઇન ઇન ન હોય ત્યારે, અથવા BigModel એકાઉન્ટ માટે વાપરો."
   },
   "optionsBadgeTitle": {
     "message": "આઇકન રેન્જ"

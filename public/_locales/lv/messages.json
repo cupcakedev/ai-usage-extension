@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "nav savienojuma"
   },
+  "sessionExpired": {
+    "message": "sesija beigusies"
+  },
   "updated": {
     "message": "atjaunināts $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Datu vēl nav. Atveriet z.ai, esot pieteicies, un atsvaidziniet."
+  },
+  "emptyQwen": {
+    "message": "Datu vēl nav. Atveriet qwencloud.com, esot pieteicies, un atsvaidziniet."
   },
   "emptyOverlay": {
     "message": "Datu vēl nav. Atveriet uznirstošo logu un atsvaidziniet."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Atlikums"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API atslēga"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Neobligāti. Izmantojiet, ja šajā pārlūkā nav pieteikšanās z.ai, vai BigModel kontiem."
   },
   "optionsBadgeTitle": {
     "message": "Ikonas diapazons"

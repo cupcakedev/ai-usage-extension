@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "није повезано"
   },
+  "sessionExpired": {
+    "message": "сесија је истекла"
+  },
   "updated": {
     "message": "ажурирано $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Још нема података. Отворите z.ai пријављени и освежите."
+  },
+  "emptyQwen": {
+    "message": "Још нема података. Отворите qwencloud.com пријављени и освежите."
   },
   "emptyOverlay": {
     "message": "Још нема података. Отворите искачући прозор и освежите."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Стање"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API кључ"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Опционо. Користите га ако овај прегледач није пријављен на z.ai, или за BigModel налоге."
   },
   "optionsBadgeTitle": {
     "message": "Опсег иконе"

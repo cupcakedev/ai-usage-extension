@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "متصل نیست"
   },
+  "sessionExpired": {
+    "message": "نشست منقضی شد"
+  },
   "updated": {
     "message": "به‌روزرسانی $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "هنوز داده‌ای نیست. با حساب واردشده z.ai را باز کنید و به‌روزرسانی کنید."
+  },
+  "emptyQwen": {
+    "message": "هنوز داده‌ای نیست. با حساب واردشده qwencloud.com را باز کنید و به‌روزرسانی کنید."
   },
   "emptyOverlay": {
     "message": "هنوز داده‌ای نیست. پنجره بازشو را باز کنید و به‌روزرسانی کنید."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "موجودی"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "کلید API جی‌ال‌ام"
+  },
+  "optionsGlmKeyHint": {
+    "message": "اختیاری. اگر در این مرورگر به z.ai وارد نشده‌اید یا برای حساب‌های BigModel از آن استفاده کنید."
   },
   "optionsBadgeTitle": {
     "message": "بازه نماد"

@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "haijaunganishwa"
   },
+  "sessionExpired": {
+    "message": "kipindi kimeisha"
+  },
   "updated": {
     "message": "imesasishwa $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Bado hakuna data. Fungua z.ai ukiwa umeingia, kisha onyesha upya."
+  },
+  "emptyQwen": {
+    "message": "Bado hakuna data. Fungua qwencloud.com ukiwa umeingia, kisha onyesha upya."
   },
   "emptyOverlay": {
     "message": "Bado hakuna data. Fungua kidirisha ibukizi na uonyeshe upya."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Salio"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Ufunguo wa API wa GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Si lazima. Itumie ikiwa kivinjari hiki hakijaingia katika z.ai, au kwa akaunti za BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Kiwango cha aikoni"

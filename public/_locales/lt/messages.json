@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "neprisijungta"
   },
+  "sessionExpired": {
+    "message": "seansas baigėsi"
+  },
   "updated": {
     "message": "atnaujinta $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Duomenų dar nėra. Prisijungę atidarykite z.ai ir atnaujinkite."
+  },
+  "emptyQwen": {
+    "message": "Duomenų dar nėra. Prisijungę atidarykite qwencloud.com ir atnaujinkite."
   },
   "emptyOverlay": {
     "message": "Duomenų dar nėra. Atidarykite iššokantį langą ir atnaujinkite."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Likutis"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API raktas"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Neprivaloma. Naudokite, jei šioje naršyklėje neprisijungta prie z.ai, arba BigModel paskyroms."
   },
   "optionsBadgeTitle": {
     "message": "Piktogramos diapazonas"

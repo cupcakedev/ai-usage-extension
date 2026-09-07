@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "nincs kapcsolat"
   },
+  "sessionExpired": {
+    "message": "a munkamenet lejárt"
+  },
   "updated": {
     "message": "frissítve $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Még nincs adat. Nyisd meg a z.ai oldalt bejelentkezve, majd frissíts."
+  },
+  "emptyQwen": {
+    "message": "Még nincs adat. Nyisd meg a qwencloud.com oldalt bejelentkezve, majd frissíts."
   },
   "emptyOverlay": {
     "message": "Még nincs adat. Nyisd meg a felugró ablakot és frissíts."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Egyenleg"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API-kulcs"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Nem kötelező. Akkor használd, ha ez a böngésző nincs bejelentkezve a z.ai-ba, vagy BigModel-fiókokhoz."
   },
   "optionsBadgeTitle": {
     "message": "Ikon tartománya"

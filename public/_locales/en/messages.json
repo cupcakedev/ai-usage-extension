@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "not connected"
   },
+  "sessionExpired": {
+    "message": "session expired"
+  },
   "updated": {
     "message": "updated $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "No data yet. Open z.ai while signed in, then refresh."
+  },
+  "emptyQwen": {
+    "message": "No data yet. Open qwencloud.com while signed in, then refresh."
   },
   "emptyOverlay": {
     "message": "No data yet. Open the popup and refresh."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Balance"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API key"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Optional. Use it when this browser is not signed in to z.ai, or for BigModel accounts."
   },
   "optionsBadgeTitle": {
     "message": "Badge range"

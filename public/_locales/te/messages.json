@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "కనెక్ట్ కాలేదు"
   },
+  "sessionExpired": {
+    "message": "సెషన్ గడువు ముగిసింది"
+  },
   "updated": {
     "message": "నవీకరణ $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "ఇంకా డేటా లేదు. సైన్ ఇన్ అయి z.ai తెరిచి రిఫ్రెష్ చేయండి."
+  },
+  "emptyQwen": {
+    "message": "ఇంకా డేటా లేదు. సైన్ ఇన్ అయి qwencloud.com తెరిచి రిఫ్రెష్ చేయండి."
   },
   "emptyOverlay": {
     "message": "ఇంకా డేటా లేదు. పాపప్ తెరిచి రిఫ్రెష్ చేయండి."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "బ్యాలెన్స్"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API కీ"
+  },
+  "optionsGlmKeyHint": {
+    "message": "ఐచ్ఛికం. ఈ బ్రౌజర్‌లో z.ai కు సైన్ ఇన్ కాకపోతే, లేదా BigModel ఖాతాల కోసం వాడండి."
   },
   "optionsBadgeTitle": {
     "message": "చిహ్న పరిధి"

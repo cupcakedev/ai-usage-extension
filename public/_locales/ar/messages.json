@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "غير متصل"
   },
+  "sessionExpired": {
+    "message": "انتهت الجلسة"
+  },
   "updated": {
     "message": "تم التحديث $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "لا توجد بيانات بعد. افتح z.ai بعد تسجيل الدخول ثم حدّث."
+  },
+  "emptyQwen": {
+    "message": "لا توجد بيانات بعد. افتح qwencloud.com بعد تسجيل الدخول ثم حدّث."
   },
   "emptyOverlay": {
     "message": "لا توجد بيانات بعد. افتح النافذة المنبثقة ثم حدّث."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "الرصيد"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "مفتاح GLM API"
+  },
+  "optionsGlmKeyHint": {
+    "message": "اختياري. استخدمه إذا لم يكن هذا المتصفح مسجّل الدخول إلى z.ai، أو لحسابات BigModel."
   },
   "optionsBadgeTitle": {
     "message": "نطاق الأيقونة"

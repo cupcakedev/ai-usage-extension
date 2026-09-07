@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "कनेक्ट नाही"
   },
+  "sessionExpired": {
+    "message": "सत्र कालबाह्य"
+  },
   "updated": {
     "message": "अद्ययावत $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "अद्याप डेटा नाही. साइन इन असताना z.ai उघडा आणि रिफ्रेश करा."
+  },
+  "emptyQwen": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना qwencloud.com उघडा आणि रिफ्रेश करा."
   },
   "emptyOverlay": {
     "message": "अद्याप डेटा नाही. पॉपअप उघडा आणि रिफ्रेश करा."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "शिल्लक"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API की"
+  },
+  "optionsGlmKeyHint": {
+    "message": "पर्यायी. हा ब्राउझर z.ai मध्ये साइन इन नसल्यास, किंवा BigModel खात्यांसाठी वापरा."
   },
   "optionsBadgeTitle": {
     "message": "चिन्हाची श्रेणी"

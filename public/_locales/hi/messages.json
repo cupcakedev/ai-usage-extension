@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "कनेक्ट नहीं है"
   },
+  "sessionExpired": {
+    "message": "सत्र समाप्त"
+  },
   "updated": {
     "message": "$1 अपडेट किया गया"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "अभी कोई डेटा नहीं है। साइन इन करके z.ai खोलें, फिर अपडेट करें।"
+  },
+  "emptyQwen": {
+    "message": "अभी कोई डेटा नहीं है। साइन इन करके qwencloud.com खोलें, फिर अपडेट करें।"
   },
   "emptyOverlay": {
     "message": "अभी कोई डेटा नहीं है। पॉपअप खोलें और अपडेट करें।"
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "बैलेंस"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API कुंजी"
+  },
+  "optionsGlmKeyHint": {
+    "message": "वैकल्पिक। इसका उपयोग तब करें जब यह ब्राउज़र z.ai में साइन इन न हो, या BigModel खातों के लिए।"
   },
   "optionsBadgeTitle": {
     "message": "आइकन रेंज"

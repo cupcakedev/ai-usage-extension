@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "இணைக்கப்படவில்லை"
   },
+  "sessionExpired": {
+    "message": "அமர்வு காலாவதியானது"
+  },
   "updated": {
     "message": "புதுப்பிக்கப்பட்டது $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் z.ai ஐத் திறந்து புதுப்பிக்கவும்."
+  },
+  "emptyQwen": {
+    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் qwencloud.com ஐத் திறந்து புதுப்பிக்கவும்."
   },
   "emptyOverlay": {
     "message": "இதுவரை தரவு இல்லை. பாப்அப்பைத் திறந்து புதுப்பிக்கவும்."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "இருப்பு"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API விசை"
+  },
+  "optionsGlmKeyHint": {
+    "message": "விருப்பத்தேர்வு. இந்த உலாவியில் z.ai-இல் உள்நுழையவில்லை என்றால், அல்லது BigModel கணக்குகளுக்குப் பயன்படுத்தவும்."
   },
   "optionsBadgeTitle": {
     "message": "ஐகான் வரம்பு"

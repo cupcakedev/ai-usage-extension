@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "tidak terhubung"
   },
+  "sessionExpired": {
+    "message": "sesi kedaluwarsa"
+  },
   "updated": {
     "message": "diperbarui $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Belum ada data. Buka z.ai saat sudah masuk, lalu segarkan."
+  },
+  "emptyQwen": {
+    "message": "Belum ada data. Buka qwencloud.com saat sudah masuk, lalu segarkan."
   },
   "emptyOverlay": {
     "message": "Belum ada data. Buka popup lalu segarkan."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Saldo"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Kunci API GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Opsional. Gunakan jika peramban ini tidak masuk ke z.ai, atau untuk akun BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Rentang ikon"

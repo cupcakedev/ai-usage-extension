@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "немає зʼєднання"
   },
+  "sessionExpired": {
+    "message": "сеанс завершився"
+  },
   "updated": {
     "message": "оновлено $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Даних ще немає. Відкрийте z.ai з активним входом і оновіть."
+  },
+  "emptyQwen": {
+    "message": "Даних ще немає. Відкрийте qwencloud.com з активним входом і оновіть."
   },
   "emptyOverlay": {
     "message": "Даних ще немає. Відкрийте попап і оновіть."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Баланс"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Ключ API GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Необовʼязково. Використайте, якщо в цьому браузері немає входу в z.ai, або для акаунтів BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Діапазон значка"

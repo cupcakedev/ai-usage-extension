@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "hindi nakakonekta"
   },
+  "sessionExpired": {
+    "message": "nag-expire ang session"
+  },
   "updated": {
     "message": "na-update $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Wala pang data. Buksan ang z.ai habang naka-sign in, tapos mag-refresh."
+  },
+  "emptyQwen": {
+    "message": "Wala pang data. Buksan ang qwencloud.com habang naka-sign in, tapos mag-refresh."
   },
   "emptyOverlay": {
     "message": "Wala pang data. Buksan ang popup at mag-refresh."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Balanse"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API key"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Opsyonal. Gamitin ito kung hindi naka-sign in ang browser na ito sa z.ai, o para sa mga BigModel account."
   },
   "optionsBadgeTitle": {
     "message": "Saklaw ng icon"

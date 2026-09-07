@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "未连接"
   },
+  "sessionExpired": {
+    "message": "会话已过期"
+  },
   "updated": {
     "message": "更新于 $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "暂无数据。请在登录状态下打开 z.ai，然后刷新。"
+  },
+  "emptyQwen": {
+    "message": "暂无数据。请在登录状态下打开 qwencloud.com，然后刷新。"
   },
   "emptyOverlay": {
     "message": "暂无数据。请打开弹窗并刷新。"
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "余额"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API 密钥"
+  },
+  "optionsGlmKeyHint": {
+    "message": "可选。当此浏览器未登录 z.ai，或使用 BigModel 账号时填写。"
   },
   "optionsBadgeTitle": {
     "message": "图标区间"

@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "ej ansluten"
   },
+  "sessionExpired": {
+    "message": "sessionen har gått ut"
+  },
   "updated": {
     "message": "uppdaterad $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Inga data än. Öppna z.ai när du är inloggad och uppdatera."
+  },
+  "emptyQwen": {
+    "message": "Inga data än. Öppna qwencloud.com när du är inloggad och uppdatera."
   },
   "emptyOverlay": {
     "message": "Inga data än. Öppna popupen och uppdatera."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Saldo"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API-nyckel"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Valfritt. Använd den om den här webbläsaren inte är inloggad på z.ai, eller för BigModel-konton."
   },
   "optionsBadgeTitle": {
     "message": "Ikonintervall"

@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "sin conexión"
   },
+  "sessionExpired": {
+    "message": "sesión caducada"
+  },
   "updated": {
     "message": "actualizado $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Aún no hay datos. Abre z.ai con sesión iniciada y actualiza."
+  },
+  "emptyQwen": {
+    "message": "Aún no hay datos. Abre qwencloud.com con sesión iniciada y actualiza."
   },
   "emptyOverlay": {
     "message": "Aún no hay datos. Abre la ventana emergente y actualiza."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Saldo"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Clave de API de GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Opcional. Úsala si este navegador no tiene la sesión iniciada en z.ai, o para cuentas de BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Rango del ícono"

@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "няма връзка"
   },
+  "sessionExpired": {
+    "message": "сесията изтече"
+  },
   "updated": {
     "message": "обновено $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Още няма данни. Отворете z.ai с вход в профила и обновете."
+  },
+  "emptyQwen": {
+    "message": "Още няма данни. Отворете qwencloud.com с вход в профила и обновете."
   },
   "emptyOverlay": {
     "message": "Още няма данни. Отворете изскачащия прозорец и обновете."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Баланс"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API ключ"
+  },
+  "optionsGlmKeyHint": {
+    "message": "По избор. Използвайте го, ако браузърът не е влязъл в z.ai, или за акаунти в BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Диапазон на иконата"

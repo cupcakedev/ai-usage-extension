@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "bağlı değil"
   },
+  "sessionExpired": {
+    "message": "oturum sona erdi"
+  },
   "updated": {
     "message": "güncellendi $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Henüz veri yok. Oturum açıkken z.ai'yi açın, sonra yenileyin."
+  },
+  "emptyQwen": {
+    "message": "Henüz veri yok. Oturum açıkken qwencloud.com'u açın, sonra yenileyin."
   },
   "emptyOverlay": {
     "message": "Henüz veri yok. Açılır pencereyi açıp yenileyin."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Bakiye"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM API anahtarı"
+  },
+  "optionsGlmKeyHint": {
+    "message": "İsteğe bağlı. Bu tarayıcıda z.ai oturumu açık değilse veya BigModel hesapları için kullanın."
   },
   "optionsBadgeTitle": {
     "message": "Simge aralığı"

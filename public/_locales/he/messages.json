@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "לא מחובר"
   },
+  "sessionExpired": {
+    "message": "הפעילות פגה"
+  },
   "updated": {
     "message": "עודכן $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "אין נתונים עדיין. פתחו את z.ai כשאתם מחוברים ורעננו."
+  },
+  "emptyQwen": {
+    "message": "אין נתונים עדיין. פתחו את qwencloud.com כשאתם מחוברים ורעננו."
   },
   "emptyOverlay": {
     "message": "אין נתונים עדיין. פתחו את החלון הקופץ ורעננו."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "יתרה"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "מפתח API של GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "אופציונלי. השתמשו בו אם הדפדפן הזה לא מחובר ל‑z.ai, או עבור חשבונות BigModel."
   },
   "optionsBadgeTitle": {
     "message": "טווח הסמל"

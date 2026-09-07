@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "nepřipojeno"
   },
+  "sessionExpired": {
+    "message": "relace vypršela"
+  },
   "updated": {
     "message": "aktualizováno $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Zatím žádná data. Otevřete z.ai přihlášeni a obnovte."
+  },
+  "emptyQwen": {
+    "message": "Zatím žádná data. Otevřete qwencloud.com přihlášeni a obnovte."
   },
   "emptyOverlay": {
     "message": "Zatím žádná data. Otevřete popup a obnovte."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Zůstatek"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "API klíč GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Volitelné. Použijte, když tento prohlížeč není přihlášen k z.ai, nebo pro účty BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Rozsah ikony"

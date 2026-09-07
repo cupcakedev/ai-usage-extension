@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "neconectat"
   },
+  "sessionExpired": {
+    "message": "sesiune expirată"
+  },
   "updated": {
     "message": "actualizat $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Încă nu există date. Deschide z.ai autentificat, apoi reîmprospătează."
+  },
+  "emptyQwen": {
+    "message": "Încă nu există date. Deschide qwencloud.com autentificat, apoi reîmprospătează."
   },
   "emptyOverlay": {
     "message": "Încă nu există date. Deschide popupul și reîmprospătează."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Sold"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Cheie API GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Opțional. Folosește-o dacă acest browser nu este autentificat pe z.ai sau pentru conturi BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Intervalul iconiței"

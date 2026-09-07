@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "未接続"
   },
+  "sessionExpired": {
+    "message": "セッションの期限切れ"
+  },
   "updated": {
     "message": "$1 に更新"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "まだデータがありません。ログイン済みの z.ai を開いて更新してください。"
+  },
+  "emptyQwen": {
+    "message": "まだデータがありません。ログイン済みの qwencloud.com を開いて更新してください。"
   },
   "emptyOverlay": {
     "message": "まだデータがありません。ポップアップを開いて更新してください。"
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "残高"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "GLM APIキー"
+  },
+  "optionsGlmKeyHint": {
+    "message": "任意。このブラウザーで z.ai にログインしていない場合や、BigModel アカウントで使用します。"
   },
   "optionsBadgeTitle": {
     "message": "アイコンの段階"

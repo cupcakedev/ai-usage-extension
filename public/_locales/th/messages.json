@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "ยังไม่เชื่อมต่อ"
   },
+  "sessionExpired": {
+    "message": "เซสชันหมดอายุ"
+  },
   "updated": {
     "message": "อัปเดต $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "ยังไม่มีข้อมูล เปิด z.ai ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
+  "emptyQwen": {
+    "message": "ยังไม่มีข้อมูล เปิด qwencloud.com ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
   },
   "emptyOverlay": {
     "message": "ยังไม่มีข้อมูล เปิดป๊อปอัปแล้วรีเฟรช"
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "ยอดคงเหลือ"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "คีย์ API ของ GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "ไม่บังคับ ใช้เมื่อเบราว์เซอร์นี้ยังไม่ได้ลงชื่อเข้าใช้ z.ai หรือสำหรับบัญชี BigModel"
   },
   "optionsBadgeTitle": {
     "message": "ช่วงของไอคอน"

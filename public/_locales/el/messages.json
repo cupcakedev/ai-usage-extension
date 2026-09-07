@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "χωρίς σύνδεση"
   },
+  "sessionExpired": {
+    "message": "η συνεδρία έληξε"
+  },
   "updated": {
     "message": "ενημερώθηκε $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το z.ai συνδεδεμένοι και ανανεώστε."
+  },
+  "emptyQwen": {
+    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το qwencloud.com συνδεδεμένοι και ανανεώστε."
   },
   "emptyOverlay": {
     "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το αναδυόμενο παράθυρο και ανανεώστε."
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "Υπόλοιπο"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "Κλειδί API GLM"
+  },
+  "optionsGlmKeyHint": {
+    "message": "Προαιρετικό. Χρησιμοποιήστε το αν αυτό το πρόγραμμα περιήγησης δεν είναι συνδεδεμένο στο z.ai ή για λογαριασμούς BigModel."
   },
   "optionsBadgeTitle": {
     "message": "Εύρος εικονιδίου"

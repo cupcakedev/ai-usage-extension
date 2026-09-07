@@ -32,6 +32,9 @@
   "notConnected": {
     "message": "አልተገናኘም"
   },
+  "sessionExpired": {
+    "message": "ክፍለ‑ጊዜው አልፎበታል"
+  },
   "updated": {
     "message": "ተዘምኗል $1"
   },
@@ -82,6 +85,9 @@
   },
   "emptyGlm": {
     "message": "እስካሁን መረጃ የለም። ገብተው z.ai ን ይክፈቱና ያድሱ።"
+  },
+  "emptyQwen": {
+    "message": "እስካሁን መረጃ የለም። ገብተው qwencloud.com ን ይክፈቱና ያድሱ።"
   },
   "emptyOverlay": {
     "message": "እስካሁን መረጃ የለም። ብቅ-ባዩን ይክፈቱና ያድሱ።"
@@ -217,6 +223,12 @@
   },
   "optionsMetricBalance": {
     "message": "ቀሪ ሒሳብ"
+  },
+  "optionsGlmKeyLabel": {
+    "message": "የGLM API ቁልፍ"
+  },
+  "optionsGlmKeyHint": {
+    "message": "አማራጭ። ይህ አሳሽ ወደ z.ai ካልገባ ወይም ለBigModel መለያዎች ይጠቀሙበት።"
   },
   "optionsBadgeTitle": {
     "message": "የአዶ ክልል"

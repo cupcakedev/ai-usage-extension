@@ -1,18 +1,19 @@
-# AI Usage Tracker: Claude, Codex, Kimi, Cursor, GLM
+# AI Usage Tracker: Claude, Codex, Kimi, Cursor, GLM, Qwen
 
 [![CI](https://github.com/cupcakedev/ai-usage-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/cupcakedev/ai-usage-extension/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 A Chrome extension (Manifest V3) that tracks usage limits from **Claude**, **Codex**,
-**MiniMax**, **Kimi Code**, **Cursor**, **Xiaomi MiMo**, and the **GLM Coding Plan**
-(z.ai), using your existing browser sessions. It surfaces the data in a popup, an
-on-page overlay, and the toolbar badge.
+**MiniMax**, **Kimi Code**, **Cursor**, **Xiaomi MiMo**, the **GLM Coding Plan**
+(z.ai), and the **Qwen Coding Plan** (Qwen Cloud), using your existing browser
+sessions. It surfaces the data in a popup, an on-page overlay, and the toolbar
+badge.
 
 ## Features
 
 - **Live limits** for Claude, Codex, MiniMax, Kimi Code, Cursor, Xiaomi MiMo, and the
-  GLM Coding Plan: percentage used, raw counts, and time to reset when exposed by the
-  provider.
+  GLM and Qwen Coding Plans: percentage used, raw counts, and time to reset when
+  exposed by the provider.
 - **Toolbar badge** showing your highest current usage at a glance.
 - **On-page overlay** on `claude.ai` — a collapsible capsule rendered in a Shadow DOM,
   so it never clashes with the host page's styles.

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_appName__",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "__MSG_appDescription__",
   "default_locale": "en",
   "permissions": [
@@ -20,7 +20,11 @@
     "https://platform.xiaomimimo.com/*",
     "https://z.ai/*",
     "https://api.z.ai/*",
-    "https://open.bigmodel.cn/*"
+    "https://open.bigmodel.cn/*",
+    "https://home.qwencloud.com/*",
+    "https://cs-data.qwencloud.com/*",
+    "https://platform-home.qianwenai.com/*",
+    "https://cs-data.qianwenai.com/*"
   ],
   "background": {
     "service_worker": "src/background/index.ts",
@@ -45,7 +49,8 @@
       "matches": [
         "https://claude.ai/*",
         "https://chatgpt.com/*",
-        "https://chat.openai.com/*"
+        "https://chat.openai.com/*",
+        "https://z.ai/*"
       ],
       "js": [
         "src/content/index.tsx"

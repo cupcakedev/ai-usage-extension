@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "రద్దు చేయి"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker పిన్ చేయండి"
+  },
+  "welcomeSubtitle": {
+    "message": "మీ పరిమితులు ఒక్క క్లిక్ దూరంలో — పాపప్ నేరుగా టూల్‌బార్ నుండి తెరుచుకుంటుంది."
+  },
+  "welcomeStepPin": {
+    "message": "టూల్‌బార్‌లోని పొడిగింపుల చిహ్నం {icon} క్లిక్ చేసి AI Usage Tracker పిన్ చేయండి"
+  },
+  "welcomeStepOpen": {
+    "message": "మీ వినియోగం చూడటానికి పిన్ చేసిన చిహ్నంపై క్లిక్ చేయండి"
+  },
+  "welcomeCta": {
+    "message": "ప్రారంభించండి"
+  },
+  "welcomeCtaHint": {
+    "message": "తర్వాత Chromeలో అన్‌పిన్ చేయవచ్చు."
+  },
   "github": {
     "message": "GitHub"
   },

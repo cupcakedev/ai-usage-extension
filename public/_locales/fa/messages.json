@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "انصراف"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker را سنجاق کنید"
+  },
+  "welcomeSubtitle": {
+    "message": "محدودیت‌هایتان یک کلیک فاصله دارد — پنجره مستقیم از نوار ابزار باز می‌شود."
+  },
+  "welcomeStepPin": {
+    "message": "روی نماد افزونه‌ها {icon} در نوار ابزار کلیک کنید و AI Usage Tracker را سنجاق کنید"
+  },
+  "welcomeStepOpen": {
+    "message": "برای دیدن مصرف خود روی نماد سنجاق‌شده کلیک کنید"
+  },
+  "welcomeCta": {
+    "message": "شروع کنید"
+  },
+  "welcomeCtaHint": {
+    "message": "بعداً می‌توانید در Chrome آن را بردارید."
+  },
   "github": {
     "message": "GitHub"
   },

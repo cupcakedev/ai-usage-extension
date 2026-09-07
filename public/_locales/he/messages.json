@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "ביטול"
   },
+  "welcomeTitle": {
+    "message": "הצמידו את AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "שמרו על המגבלות במרחק לחיצה — החלון נפתח ישירות מסרגל הכלים."
+  },
+  "welcomeStepPin": {
+    "message": "לחצו על סמל ההרחבות {icon} בסרגל הכלים והצמידו את AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "לחצו על הסמל המוצמד כדי לראות את השימוש שלכם"
+  },
+  "welcomeCta": {
+    "message": "שנתחיל"
+  },
+  "welcomeCtaHint": {
+    "message": "אפשר לבטל את ההצמדה מאוחר יותר ב-Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

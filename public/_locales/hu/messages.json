@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Mégse"
   },
+  "welcomeTitle": {
+    "message": "Rögzítsd az AI Usage Trackert"
+  },
+  "welcomeSubtitle": {
+    "message": "Legyenek a limitek egy kattintásra — a felugró ablak közvetlenül az eszköztárból nyílik."
+  },
+  "welcomeStepPin": {
+    "message": "Kattints a bővítmények ikonjára {icon} az eszköztáron, majd rögzítsd az AI Usage Trackert"
+  },
+  "welcomeStepOpen": {
+    "message": "Kattints a rögzített ikonra a felhasználásod megtekintéséhez"
+  },
+  "welcomeCta": {
+    "message": "Kezdés"
+  },
+  "welcomeCtaHint": {
+    "message": "Később a Chrome-ban leveheted a rögzítést."
+  },
   "github": {
     "message": "GitHub"
   },

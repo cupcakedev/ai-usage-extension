@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Откажи"
   },
+  "welcomeTitle": {
+    "message": "Закачи AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Нека ти лимити буду на један клик — прозор се отвара директно са траке алатки."
+  },
+  "welcomeStepPin": {
+    "message": "Кликни на икону проширења {icon} на траци и закачи AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Кликни на закачену икону да видиш потрошњу"
+  },
+  "welcomeCta": {
+    "message": "Почни"
+  },
+  "welcomeCtaHint": {
+    "message": "Касније можеш да је откачиш у Chrome-у."
+  },
   "github": {
     "message": "GitHub"
   },

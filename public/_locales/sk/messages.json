@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Zrušiť"
   },
+  "welcomeTitle": {
+    "message": "Pripnúť AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Majte limity na jedno kliknutie — okno sa otvorí priamo z lišty prehliadača."
+  },
+  "welcomeStepPin": {
+    "message": "Kliknite na ikonu rozšírení {icon} na lište a pripnite AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Kliknutím na pripnutú ikonu zobrazíte svoje využitie"
+  },
+  "welcomeCta": {
+    "message": "Začať"
+  },
+  "welcomeCtaHint": {
+    "message": "Neskôr ho môžete v Chrome odopnúť."
+  },
   "github": {
     "message": "GitHub"
   },

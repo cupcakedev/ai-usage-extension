@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "ரத்து செய்"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker ஐ பின் செய்யவும்"
+  },
+  "welcomeSubtitle": {
+    "message": "உங்கள் வரம்புகள் ஒரே கிளிக்கில் — பாப்அப் நேரடியாக கருவிப்பட்டியிலிருந்து திறக்கும்."
+  },
+  "welcomeStepPin": {
+    "message": "கருவிப்பட்டியில் நீட்டிப்பு ஐகானை {icon} கிளிக் செய்து AI Usage Tracker ஐ பின் செய்யவும்"
+  },
+  "welcomeStepOpen": {
+    "message": "உங்கள் பயன்பாட்டைப் பார்க்க பின் செய்த ஐகானை கிளிக் செய்யவும்"
+  },
+  "welcomeCta": {
+    "message": "தொடங்கு"
+  },
+  "welcomeCtaHint": {
+    "message": "பின்னர் Chrome இல் அன்பின் செய்யலாம்."
+  },
   "github": {
     "message": "GitHub"
   },

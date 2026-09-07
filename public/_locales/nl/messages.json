@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Annuleren"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker vastzetten"
+  },
+  "welcomeSubtitle": {
+    "message": "Houd je limieten één klik weg — de pop-up opent direct vanuit de werkbalk."
+  },
+  "welcomeStepPin": {
+    "message": "Klik op het extensiepictogram {icon} in de werkbalk en zet AI Usage Tracker vast"
+  },
+  "welcomeStepOpen": {
+    "message": "Klik op het vastgezette pictogram om je verbruik te zien"
+  },
+  "welcomeCta": {
+    "message": "Aan de slag"
+  },
+  "welcomeCtaHint": {
+    "message": "Je kunt het later in Chrome weer losmaken."
+  },
   "github": {
     "message": "GitHub"
   },

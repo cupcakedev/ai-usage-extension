@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "বাতিল"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker পিন করুন"
+  },
+  "welcomeSubtitle": {
+    "message": "আপনার সীমা এক ক্লিক দূরে রাখুন — পপআপ সরাসরি টুলবার থেকে খোলে।"
+  },
+  "welcomeStepPin": {
+    "message": "টুলবারে এক্সটেনশন আইকনে {icon} ক্লিক করুন, তারপর AI Usage Tracker পিন করুন"
+  },
+  "welcomeStepOpen": {
+    "message": "আপনার ব্যবহার দেখতে পিন করা আইকনে ক্লিক করুন"
+  },
+  "welcomeCta": {
+    "message": "শুরু করুন"
+  },
+  "welcomeCtaHint": {
+    "message": "পরে Chrome থেকে আনপিন করতে পারবেন।"
+  },
   "github": {
     "message": "GitHub"
   },

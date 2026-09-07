@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "إلغاء"
   },
+  "welcomeTitle": {
+    "message": "ثبّت AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "اجعل حدودك على بُعد نقرة واحدة — تفتح النافذة مباشرة من شريط الأدوات."
+  },
+  "welcomeStepPin": {
+    "message": "انقر على أيقونة الإضافات {icon} في شريط الأدوات، ثم ثبّت AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "انقر على الأيقونة المثبّتة لرؤية استهلاكك"
+  },
+  "welcomeCta": {
+    "message": "لنبدأ"
+  },
+  "welcomeCtaHint": {
+    "message": "يمكنك إلغاء التثبيت لاحقًا من Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

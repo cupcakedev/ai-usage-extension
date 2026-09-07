@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "ሰርዝ"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker ን ይሰኩት"
+  },
+  "welcomeSubtitle": {
+    "message": "ገደቦችዎ በአንድ ጠቅታ ርቀት ይሁኑ — መስኮቱ በቀጥታ ከመሣሪያ አሞሌው ይከፈታል።"
+  },
+  "welcomeStepPin": {
+    "message": "በመሣሪያ አሞሌው ላይ ያለውን የቅጥያ አዶ {icon} ጠቅ ያድርጉ፣ ከዚያ AI Usage Tracker ን ይሰኩት"
+  },
+  "welcomeStepOpen": {
+    "message": "አጠቃቀምዎን ለማየት የተሰካውን አዶ ጠቅ ያድርጉ"
+  },
+  "welcomeCta": {
+    "message": "ይጀምሩ"
+  },
+  "welcomeCtaHint": {
+    "message": "በኋላ በChrome ውስጥ ማላቀቅ ይችላሉ።"
+  },
   "github": {
     "message": "GitHub"
   },

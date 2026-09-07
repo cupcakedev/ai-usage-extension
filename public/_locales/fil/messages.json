@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Kanselahin"
   },
+  "welcomeTitle": {
+    "message": "I-pin ang AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Isang click lang ang mga limit mo — direktang bumubukas ang popup mula sa toolbar."
+  },
+  "welcomeStepPin": {
+    "message": "I-click ang extensions icon {icon} sa toolbar, tapos i-pin ang AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "I-click ang naka-pin na icon para makita ang paggamit mo"
+  },
+  "welcomeCta": {
+    "message": "Magsimula"
+  },
+  "welcomeCtaHint": {
+    "message": "Puwede mong i-unpin mamaya sa Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

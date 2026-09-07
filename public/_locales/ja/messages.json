@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "キャンセル"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker をピン留め"
+  },
+  "welcomeSubtitle": {
+    "message": "上限をワンクリックで確認。ポップアップはツールバーから直接開きます。"
+  },
+  "welcomeStepPin": {
+    "message": "ツールバーの拡張機能アイコン {icon} をクリックし、AI Usage Tracker をピン留めします"
+  },
+  "welcomeStepOpen": {
+    "message": "ピン留めしたアイコンをクリックすると使用状況が表示されます"
+  },
+  "welcomeCta": {
+    "message": "はじめる"
+  },
+  "welcomeCtaHint": {
+    "message": "ピン留めはあとから Chrome で解除できます。"
+  },
   "github": {
     "message": "GitHub"
   },

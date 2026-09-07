@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "રદ કરો"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker પિન કરો"
+  },
+  "welcomeSubtitle": {
+    "message": "તમારી મર્યાદા એક ક્લિક દૂર રાખો — પોપઅપ સીધું ટૂલબારમાંથી ખૂલે છે."
+  },
+  "welcomeStepPin": {
+    "message": "ટૂલબારમાં એક્સટેન્શન આઇકન {icon} પર ક્લિક કરો, પછી AI Usage Tracker પિન કરો"
+  },
+  "welcomeStepOpen": {
+    "message": "તમારો વપરાશ જોવા પિન કરેલા આઇકન પર ક્લિક કરો"
+  },
+  "welcomeCta": {
+    "message": "શરૂ કરો"
+  },
+  "welcomeCtaHint": {
+    "message": "તમે પછીથી Chrome માંથી અનપિન કરી શકો છો."
+  },
   "github": {
     "message": "GitHub"
   },

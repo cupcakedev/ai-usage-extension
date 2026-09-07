@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "İptal"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker’ı sabitleyin"
+  },
+  "welcomeSubtitle": {
+    "message": "Limitleriniz tek tık uzağınızda olsun — pencere doğrudan araç çubuğundan açılır."
+  },
+  "welcomeStepPin": {
+    "message": "Araç çubuğundaki uzantılar simgesine {icon} tıklayın ve AI Usage Tracker’ı sabitleyin"
+  },
+  "welcomeStepOpen": {
+    "message": "Kullanımınızı görmek için sabitlenmiş simgeye tıklayın"
+  },
+  "welcomeCta": {
+    "message": "Başla"
+  },
+  "welcomeCtaHint": {
+    "message": "Daha sonra Chrome’dan sabitlemeyi kaldırabilirsiniz."
+  },
   "github": {
     "message": "GitHub"
   },

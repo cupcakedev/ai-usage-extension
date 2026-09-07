@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Loobu"
   },
+  "welcomeTitle": {
+    "message": "Kinnita AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Hoia oma piirid ühe klõpsu kaugusel — aken avaneb otse tööriistaribalt."
+  },
+  "welcomeStepPin": {
+    "message": "Klõpsa tööriistaribal laienduste ikoonil {icon} ja kinnita AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Klõpsa kinnitatud ikoonil, et näha oma kasutust"
+  },
+  "welcomeCta": {
+    "message": "Alusta"
+  },
+  "welcomeCtaHint": {
+    "message": "Hiljem saad selle Chrome’is lahti võtta."
+  },
   "github": {
     "message": "GitHub"
   },

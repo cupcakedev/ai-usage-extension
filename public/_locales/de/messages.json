@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Abbrechen"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker anheften"
+  },
+  "welcomeSubtitle": {
+    "message": "Halte deine Limits einen Klick entfernt — das Popup öffnet sich direkt aus der Symbolleiste."
+  },
+  "welcomeStepPin": {
+    "message": "Klicke auf das Erweiterungssymbol {icon} in der Symbolleiste und hefte AI Usage Tracker an"
+  },
+  "welcomeStepOpen": {
+    "message": "Klicke auf das angeheftete Symbol, um deine Nutzung zu sehen"
+  },
+  "welcomeCta": {
+    "message": "Los geht’s"
+  },
+  "welcomeCtaHint": {
+    "message": "Du kannst es später in Chrome wieder lösen."
+  },
   "github": {
     "message": "GitHub"
   },

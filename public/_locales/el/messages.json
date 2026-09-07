@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Άκυρο"
   },
+  "welcomeTitle": {
+    "message": "Καρφιτσώστε το AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Κρατήστε τα όριά σας ένα κλικ μακριά — το παράθυρο ανοίγει απευθείας από τη γραμμή εργαλείων."
+  },
+  "welcomeStepPin": {
+    "message": "Κάντε κλικ στο εικονίδιο επεκτάσεων {icon} στη γραμμή και καρφιτσώστε το AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Κάντε κλικ στο καρφιτσωμένο εικονίδιο για να δείτε τη χρήση σας"
+  },
+  "welcomeCta": {
+    "message": "Ξεκινήστε"
+  },
+  "welcomeCtaHint": {
+    "message": "Μπορείτε να το ξεκαρφιτσώσετε αργότερα από το Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

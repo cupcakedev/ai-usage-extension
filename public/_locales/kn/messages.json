@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "ರದ್ದುಮಾಡಿ"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker ಪಿನ್ ಮಾಡಿ"
+  },
+  "welcomeSubtitle": {
+    "message": "ನಿಮ್ಮ ಮಿತಿಗಳು ಒಂದೇ ಕ್ಲಿಕ್‌ನಲ್ಲಿ — ಪಾಪ್‌ಅಪ್ ನೇರವಾಗಿ ಟೂಲ್‌ಬಾರ್‌ನಿಂದ ತೆರೆಯುತ್ತದೆ."
+  },
+  "welcomeStepPin": {
+    "message": "ಟೂಲ್‌ಬಾರ್‌ನಲ್ಲಿ ವಿಸ್ತರಣೆ ಐಕಾನ್ {icon} ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ AI Usage Tracker ಪಿನ್ ಮಾಡಿ"
+  },
+  "welcomeStepOpen": {
+    "message": "ನಿಮ್ಮ ಬಳಕೆ ನೋಡಲು ಪಿನ್ ಮಾಡಿದ ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡಿ"
+  },
+  "welcomeCta": {
+    "message": "ಪ್ರಾರಂಭಿಸಿ"
+  },
+  "welcomeCtaHint": {
+    "message": "ನಂತರ Chrome ನಲ್ಲಿ ಅನ್‌ಪಿನ್ ಮಾಡಬಹುದು."
+  },
   "github": {
     "message": "GitHub"
   },

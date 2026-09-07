@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Atšaukti"
   },
+  "welcomeTitle": {
+    "message": "Prisekite AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Laikykite limitus per vieną spustelėjimą — langas atsidaro tiesiai iš įrankių juostos."
+  },
+  "welcomeStepPin": {
+    "message": "Spustelėkite plėtinių piktogramą {icon} įrankių juostoje ir prisekite AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Spustelėkite prisegtą piktogramą, kad matytumėte savo naudojimą"
+  },
+  "welcomeCta": {
+    "message": "Pradėti"
+  },
+  "welcomeCtaHint": {
+    "message": "Vėliau galėsite jį atsegti „Chrome“."
+  },
   "github": {
     "message": "GitHub"
   },

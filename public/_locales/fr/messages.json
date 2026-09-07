@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Annuler"
   },
+  "welcomeTitle": {
+    "message": "Épingler AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Gardez vos limites à un clic — la fenêtre s’ouvre directement depuis la barre d’outils."
+  },
+  "welcomeStepPin": {
+    "message": "Cliquez sur l’icône des extensions {icon} dans la barre d’outils, puis épinglez AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Cliquez sur l’icône épinglée pour voir votre consommation"
+  },
+  "welcomeCta": {
+    "message": "Commencer"
+  },
+  "welcomeCtaHint": {
+    "message": "Vous pourrez la détacher plus tard depuis Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "取消"
   },
+  "welcomeTitle": {
+    "message": "固定 AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "让用量随时一键可见 —— 弹窗直接从工具栏打开。"
+  },
+  "welcomeStepPin": {
+    "message": "点击工具栏中的扩展程序图标 {icon}，然后固定 AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "点击固定后的图标即可查看用量"
+  },
+  "welcomeCta": {
+    "message": "开始使用"
+  },
+  "welcomeCtaHint": {
+    "message": "之后可以在 Chrome 中取消固定。"
+  },
   "github": {
     "message": "GitHub"
   },

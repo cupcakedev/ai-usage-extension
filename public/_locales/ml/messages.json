@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "റദ്ദാക്കുക"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker പിൻ ചെയ്യുക"
+  },
+  "welcomeSubtitle": {
+    "message": "നിങ്ങളുടെ പരിധികൾ ഒറ്റ ക്ലിക്കിൽ — പോപ്പ്അപ്പ് നേരിട്ട് ടൂൾബാറിൽ നിന്ന് തുറക്കുന്നു."
+  },
+  "welcomeStepPin": {
+    "message": "ടൂൾബാറിലെ എക്സ്റ്റൻഷൻ ഐക്കണിൽ {icon} ക്ലിക്ക് ചെയ്ത് AI Usage Tracker പിൻ ചെയ്യുക"
+  },
+  "welcomeStepOpen": {
+    "message": "നിങ്ങളുടെ ഉപയോഗം കാണാൻ പിൻ ചെയ്ത ഐക്കണിൽ ക്ലിക്ക് ചെയ്യുക"
+  },
+  "welcomeCta": {
+    "message": "തുടങ്ങുക"
+  },
+  "welcomeCtaHint": {
+    "message": "പിന്നീട് Chrome-ൽ അൺപിൻ ചെയ്യാം."
+  },
   "github": {
     "message": "GitHub"
   },

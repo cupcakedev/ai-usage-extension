@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Отказ"
   },
+  "welcomeTitle": {
+    "message": "Закачете AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Дръжте лимитите на един клик — прозорецът се отваря директно от лентата с инструменти."
+  },
+  "welcomeStepPin": {
+    "message": "Щракнете върху иконата за разширения {icon} в лентата и закачете AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Щракнете върху закачената икона, за да видите потреблението си"
+  },
+  "welcomeCta": {
+    "message": "Да започваме"
+  },
+  "welcomeCtaHint": {
+    "message": "По-късно можете да я откачите от Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

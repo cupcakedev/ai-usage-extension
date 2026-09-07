@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "Avbryt"
   },
+  "welcomeTitle": {
+    "message": "Fäst AI Usage Tracker"
+  },
+  "welcomeSubtitle": {
+    "message": "Ha dina gränser ett klick bort — popupen öppnas direkt från verktygsfältet."
+  },
+  "welcomeStepPin": {
+    "message": "Klicka på tilläggsikonen {icon} i verktygsfältet och fäst AI Usage Tracker"
+  },
+  "welcomeStepOpen": {
+    "message": "Klicka på den fästa ikonen för att se din användning"
+  },
+  "welcomeCta": {
+    "message": "Kom igång"
+  },
+  "welcomeCtaHint": {
+    "message": "Du kan lossa den senare i Chrome."
+  },
   "github": {
     "message": "GitHub"
   },

@@ -128,6 +128,24 @@
   "reportCancel": {
     "message": "रद्द करा"
   },
+  "welcomeTitle": {
+    "message": "AI Usage Tracker पिन करा"
+  },
+  "welcomeSubtitle": {
+    "message": "तुमच्या मर्यादा एका क्लिकवर ठेवा — पॉपअप थेट टूलबारमधून उघडतो."
+  },
+  "welcomeStepPin": {
+    "message": "टूलबारमधील एक्स्टेंशन आयकनवर {icon} क्लिक करा आणि AI Usage Tracker पिन करा"
+  },
+  "welcomeStepOpen": {
+    "message": "तुमचा वापर पाहण्यासाठी पिन केलेल्या आयकनवर क्लिक करा"
+  },
+  "welcomeCta": {
+    "message": "सुरू करा"
+  },
+  "welcomeCtaHint": {
+    "message": "तुम्ही नंतर Chrome मधून अनपिन करू शकता."
+  },
   "github": {
     "message": "GitHub"
   },

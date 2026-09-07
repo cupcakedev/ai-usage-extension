@@ -49,8 +49,21 @@ jobs:
         if: steps.check.outputs.exists == 'false'
         run: pnpm install --frozen-lockfile
 
+      - name: Check problem reporting is configured
+        if: steps.check.outputs.exists == 'false'
+        env:
+          VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
+        run: |
+          if [ -z "$VITE_POSTHOG_PROJECT_TOKEN" ]; then
+            echo "::error::Repository secret VITE_POSTHOG_PROJECT_TOKEN is empty. The release would ship with the popup's \"Report a problem\" button degraded to a GitHub link. Add the secret, or delete this step to release without problem reports."
+            exit 1
+          fi
+
       - name: Build release zip
         if: steps.check.outputs.exists == 'false'
+        env:
+          VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
+          VITE_POSTHOG_HOST: ${{ vars.VITE_POSTHOG_HOST }}
         run: pnpm release
 
       - name: Create GitHub release

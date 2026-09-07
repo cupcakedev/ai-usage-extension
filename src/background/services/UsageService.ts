@@ -8,6 +8,7 @@ import {
   MiniMaxUsage,
   MiMoUsage,
   ModelUsage,
+  QwenUsage,
   UsageLimit,
   UsageState,
 } from '../../shared/types';
@@ -27,6 +28,33 @@ const ENDPOINTS = {
   mimoPlanUsage: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/usage',
   glmQuota: 'https://api.z.ai/api/monitor/usage/quota/limit',
   glmQuotaCn: 'https://open.bigmodel.cn/api/monitor/usage/quota/limit',
+} as const;
+
+const QWEN_REGIONS = [
+  {
+    console: 'https://home.qwencloud.com',
+    gateway: 'https://cs-data.qwencloud.com/data/api.json',
+    action: 'IntlBroadScopeAspnGateway',
+    region: 'ap-southeast-1',
+    consoleSite: 'QWENCLOUD',
+    commodityCode: 'sfm_tokenplansolo_public_intl',
+  },
+  {
+    console: 'https://platform-home.qianwenai.com',
+    gateway: 'https://cs-data.qianwenai.com/data/api.json',
+    action: 'BroadScopeAspnGateway',
+    region: 'cn-beijing',
+    consoleSite: 'QIANWENAI',
+    commodityCode: 'sfm_tokenplansolo_public_cn',
+  },
+] as const;
+
+type QwenRegion = (typeof QWEN_REGIONS)[number];
+
+const QWEN_APIS = {
+  subscription: 'zeldaHttp.apikeyMgr./tokenplan/personal/api/v2/subscription',
+  usage: 'zeldaHttp.apikeyMgr./tokenplan/personal/api/v2/usage',
+  quotaConfig: 'zeldaHttp.apikeyMgr./tokenplan/personal/api/v2/quota-config',
 } as const;
 
 const JSON_HEADERS = { Accept: 'application/json' } as const;
@@ -243,20 +271,19 @@ const codexModelBreakdown = (raw: Json): ModelUsage[] => {
   if (Array.isArray(additional)) {
     additional.forEach((entry, index) => {
       if (!isObject(entry)) return;
+      const rateLimit = asJson(entry.rate_limit);
+      if (!rateLimit) return;
       const label = humanizeSlug(
-        firstString(entry.model, entry.name, entry.label) ?? `limit_${index + 1}`,
+        firstString(entry.limit_name, entry.metered_feature) ?? `limit_${index + 1}`,
       );
-      models.push(...codexRateLimitWindows(`additional[${index}]`, label, entry));
+      models.push(...codexRateLimitWindows(`additional[${index}]`, label, rateLimit));
     });
   } else if (isObject(additional)) {
     for (const [name, entry] of Object.entries(additional)) {
       if (!isObject(entry)) continue;
-      models.push(...codexRateLimitWindows(`additional.${name}`, humanizeSlug(name), entry));
+      const rateLimit = asJson(entry.rate_limit) ?? entry;
+      models.push(...codexRateLimitWindows(`additional.${name}`, humanizeSlug(name), rateLimit));
     }
-  }
-
-  if (isObject(raw.code_review_rate_limit)) {
-    models.push(...codexRateLimitWindows('code_review', 'Code review', raw.code_review_rate_limit));
   }
 
   return models;
@@ -530,13 +557,16 @@ const buildMiMoUsage = (
   };
 };
 
-/* -------------------- GLM -------------------- */
-
 const GLM_UNIT_MINUTES: Record<number, number> = { 1: 1440, 3: 60, 5: 1, 6: 10080 };
 
 const GLM_QUOTA_TYPES = ['TOKENS_LIMIT', 'CREDIT_LIMIT'];
 
 const GLM_MONTHLY_MINUTES = 30 * 24 * 60;
+
+interface GlmFetch {
+  usage: GlmUsage | null;
+  rejected: boolean;
+}
 
 interface GlmLimit {
   type: string;
@@ -638,6 +668,62 @@ const buildGlmUsage = (raw: Json | null): GlmUsage | null => {
   };
 };
 
+const isoFromUnknown = (value: unknown): string | null => {
+  const fromEpoch = epochToIso(value);
+  if (fromEpoch) return fromEpoch;
+  const text = readString(value);
+  if (!text) return null;
+  const parsed = new Date(text);
+  return Number.isFinite(parsed.getTime()) ? parsed.toISOString() : null;
+};
+
+const qwenRatioPercent = (value: unknown): number | null => {
+  const ratio = readNumeric(value);
+  return ratio === null ? null : ratio * 100;
+};
+
+const qwenWindow = (
+  percent: number | null,
+  resetsAt: unknown,
+  total: number | null,
+): UsageLimit => {
+  if (percent === null) return unavailableLimit();
+  const hasTotal = total !== null && total > 0;
+  return {
+    ...buildLimit(percent, isoFromUnknown(resetsAt)),
+    ...(hasTotal ? { used: Math.round((percent / 100) * total), limit: total } : {}),
+  };
+};
+
+const buildQwenUsage = (
+  usage: Json | null,
+  subscription: Json | null,
+  quotaConfig: Json | null,
+): QwenUsage | null => {
+  if (!usage) return null;
+
+  const session = qwenRatioPercent(usage.per5HourPercentage);
+  const weekly = qwenRatioPercent(usage.per1WeekPercentage);
+  if (session === null && weekly === null) return null;
+
+  const specCode = readString(subscription?.specCode);
+  const quota = specCode && quotaConfig ? asJson(quotaConfig[specCode]) : null;
+
+  return {
+    ...(specCode ? { plan: humanizeSlug(specCode) } : {}),
+    ...finalize({
+      session: qwenWindow(
+        session,
+        usage.per5HourResetTime,
+        quota ? readNumeric(quota.five_hour ?? quota.fiveHour) : null,
+      ),
+      weekly: qwenWindow(weekly, usage.per1WeekResetTime, quota ? readNumeric(quota.weekly) : null),
+    }),
+    models: [],
+    raw: usage,
+  };
+};
+
 /* -------------------- HTTP -------------------- */
 
 const isChallengeResponse = (headers: Headers): boolean =>
@@ -666,6 +752,50 @@ const fetchJson = async (
   return { ok: true, data: (isObject(payload) ? payload : { value: payload }) as Json };
 };
 
+const qwenGatewayCall = async (
+  region: QwenRegion,
+  api: string,
+  data: Json,
+  secToken: string,
+): Promise<Json | null> => {
+  const body = new URLSearchParams({
+    product: 'sfm_bailian',
+    action: region.action,
+    sec_token: secToken,
+    region: region.region,
+    params: JSON.stringify({
+      Api: api,
+      Data: {
+        ...data,
+        cornerstoneParam: {
+          domain: new URL(region.console).hostname,
+          consoleSite: region.consoleSite,
+          console: 'ONE_CONSOLE',
+          xsp_lang: 'en-US',
+          protocol: 'V2',
+          productCode: 'p_efm',
+        },
+      },
+    }),
+  });
+
+  const url = `${region.gateway}?product=sfm_bailian&action=${region.action}&api=${encodeURIComponent(api)}`;
+  const result = await fetchJson(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString(),
+  }).catch(() => null);
+  if (!result?.ok) return null;
+
+  const envelope = result.data;
+  if (readString(envelope.code) !== '200' && readBoolean(envelope.successResponse) !== true) {
+    return null;
+  }
+
+  const payload = asJson(envelope.data);
+  return payload && readBoolean(payload.success) !== false ? payload : null;
+};
+
 const fetchJsonRaw = async (url: string, init?: RequestInit): Promise<unknown> => {
   const response = await fetch(url, {
     credentials: 'include',
@@ -689,14 +819,15 @@ export class UsageService {
   }
 
   static async refreshAllUsage(): Promise<UsageState> {
-    const [claude, codex, minimax, kimi, cursor, mimo, glm] = await Promise.all([
+    const [claude, codex, minimax, kimi, cursor, mimo, glm, qwen] = await Promise.all([
       this.fetchClaudeUsage().catch(() => null),
       this.fetchCodexUsage().catch(() => null),
       this.fetchMiniMaxUsage().catch(() => null),
       this.fetchKimiUsage().catch(() => null),
       this.fetchCursorUsage().catch(() => null),
       this.fetchMiMoUsage().catch(() => null),
-      this.fetchGlmUsage().catch(() => null),
+      this.fetchGlmUsage().catch(() => ({ usage: null, rejected: false })),
+      this.fetchQwenUsage().catch(() => null),
     ]);
 
     const next = await this.getUsageState();
@@ -706,7 +837,14 @@ export class UsageService {
     if (kimi) next.kimi = kimi;
     if (cursor) next.cursor = cursor;
     if (mimo) next.mimo = mimo;
-    if (glm) next.glm = glm;
+    if (glm.usage) next.glm = glm.usage;
+    if (qwen) next.qwen = qwen;
+
+    const issues = { ...next.issues };
+    if (glm.rejected) issues.glm = 'auth';
+    else delete issues.glm;
+    if (Object.keys(issues).length) next.issues = issues;
+    else delete next.issues;
 
     await this.saveUsageState(next);
     return next;
@@ -794,19 +932,66 @@ export class UsageService {
     );
   }
 
-  static async fetchGlmUsage(): Promise<GlmUsage | null> {
-    const stored = await chrome.storage.local.get(STORAGE_KEYS.glmToken);
-    const token = readString(stored[STORAGE_KEYS.glmToken]);
-    if (!token) return null;
+  static async fetchGlmUsage(): Promise<GlmFetch> {
+    const stored = await chrome.storage.local.get([STORAGE_KEYS.glmApiKey, STORAGE_KEYS.glmToken]);
+    const apiKey = readString(stored[STORAGE_KEYS.glmApiKey]);
+    const sessionToken = readString(stored[STORAGE_KEYS.glmToken]);
 
-    const headers = { Authorization: `Bearer ${token}`, 'Accept-Language': 'en-US,en' };
+    const credentials = apiKey
+      ? [`Bearer ${apiKey}`, apiKey]
+      : sessionToken
+        ? [`Bearer ${sessionToken}`]
+        : [];
+    if (!credentials.length) return { usage: null, rejected: false };
+
+    let rejected = false;
     for (const endpoint of [ENDPOINTS.glmQuota, ENDPOINTS.glmQuotaCn]) {
-      const result = await fetchJson(endpoint, { headers }).catch(() => null);
-      if (!result?.ok) continue;
-      const usage = buildGlmUsage(result.data);
-      if (usage) return usage;
+      for (const authorization of credentials) {
+        const result = await fetchJson(endpoint, {
+          headers: { Authorization: authorization, 'Accept-Language': 'en-US,en' },
+        }).catch(() => null);
+        if (!result) continue;
+        if (!result.ok) {
+          rejected ||= result.status === 401 || result.status === 403;
+          continue;
+        }
+
+        const usage = buildGlmUsage(result.data);
+        if (usage) return { usage, rejected: false };
+        rejected ||= readBoolean(result.data.success) === false;
+      }
+    }
+    return { usage: null, rejected };
+  }
+
+  static async fetchQwenUsage(): Promise<QwenUsage | null> {
+    for (const region of QWEN_REGIONS) {
+      const secToken = await this.fetchQwenSecToken(region);
+      if (!secToken) continue;
+
+      const usage = await qwenGatewayCall(region, QWEN_APIS.usage, {}, secToken);
+      if (!usage) continue;
+
+      const [subscription, quotaConfig] = await Promise.all([
+        qwenGatewayCall(
+          region,
+          QWEN_APIS.subscription,
+          { commodityCode: region.commodityCode },
+          secToken,
+        ),
+        qwenGatewayCall(region, QWEN_APIS.quotaConfig, {}, secToken),
+      ]);
+
+      const built = buildQwenUsage(usage, subscription, quotaConfig);
+      if (built) return built;
     }
     return null;
+  }
+
+  private static async fetchQwenSecToken(region: QwenRegion): Promise<string | null> {
+    const result = await fetchJson(`${region.console}/tool/user/info.json`).catch(() => null);
+    if (!result?.ok) return null;
+    return readString(asJson(result.data.data)?.secToken);
   }
 
   private static async fetchCodexSession(): Promise<CodexSessionInfo | null> {

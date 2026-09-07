@@ -4,6 +4,7 @@ import type {
   ClaudeUsage,
   CodexUsage,
   ExternalProviderUsage,
+  ProviderIssue,
   ProviderLink,
   ProviderMetric,
 } from '../../shared/types';
@@ -22,8 +23,8 @@ interface ProviderCardProps {
   now: number;
   /** Hint shown when the provider has no snapshot yet. */
   emptyHint: string;
-  /** Turns the host named inside `emptyHint` into a link to the provider's console. */
   emptyHintLink?: ProviderLink;
+  issue?: ProviderIssue;
   /** Labels vary because some providers expose a billing or token-plan window rather than 5h/7d quotas. */
   primaryLabel?: string;
   secondaryLabel?: string;
@@ -91,6 +92,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   now,
   emptyHint,
   emptyHintLink,
+  issue,
   primaryLabel = msg('sessionLimit'),
   secondaryLabel = msg('weeklyLimit'),
   footer,
@@ -101,7 +103,9 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
     ? msg('loadingSnapshot')
     : usage
       ? msg('updated', formatRelativeTime(usage.lastUpdated, now))
-      : msg('notConnected');
+      : issue === 'auth'
+        ? msg('sessionExpired')
+        : msg('notConnected');
 
   return (
     <UsageCard title={title} subtitle={subtitle} iconSrc={iconSrc} iconAlt={iconAlt}>

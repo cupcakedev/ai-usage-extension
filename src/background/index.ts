@@ -38,6 +38,11 @@ const refreshUsage = (): Promise<UsageState> => {
   return refreshInFlight;
 };
 
+const refreshAfterInFlight = async (): Promise<void> => {
+  await refreshInFlight?.catch(() => undefined);
+  await refreshUsage();
+};
+
 const languageReady = applyStoredLanguage().catch(() => undefined);
 
 void languageReady
@@ -61,6 +66,10 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName === 'local' && changes[STORAGE_KEYS.glmApiKey]) {
+    void refreshAfterInFlight().catch(() => undefined);
+  }
+
   if (areaName === 'local' && changes[STORAGE_KEYS.extensionSettings]) {
     void applyStoredLanguage()
       .catch(() => undefined)
@@ -75,7 +84,7 @@ const storeGlmToken = async (token: string): Promise<void> => {
   if (stored[STORAGE_KEYS.glmToken] === token) return;
 
   await chrome.storage.local.set({ [STORAGE_KEYS.glmToken]: token });
-  await refreshUsage();
+  await refreshAfterInFlight();
 };
 
 const collectLocaleMessages = async (): Promise<Record<string, string> | null> => {
@@ -100,6 +109,7 @@ chrome.runtime.onMessage.addListener(
     if (message?.type === 'SET_GLM_TOKEN') {
       const token = typeof message.token === 'string' ? message.token.trim() : '';
       if (token) void storeGlmToken(token).catch(() => undefined);
+      sendResponse({ success: true, data: null });
 
       return undefined;
     }

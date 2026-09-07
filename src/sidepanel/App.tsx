@@ -4,6 +4,7 @@ import cursorBrandAsset from '../assets/brands/cursor.webp';
 import kimiBrandAsset from '../assets/brands/kimi.webp';
 import minimaxBrandAsset from '../assets/brands/minimax.webp';
 import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
+import qwenBrandAsset from '../assets/brands/qwen.webp';
 import zaiBrandAsset from '../assets/brands/zai.webp';
 import { RefreshCw, Settings } from 'lucide-react';
 import { msg } from '../shared/i18n';
@@ -86,6 +87,17 @@ const PROVIDERS: Array<{
     emptyHint: msg('emptyGlm'),
     emptyHintLink: { host: 'z.ai', url: 'https://z.ai/manage-apikey/coding-plan/personal/usage' },
   },
+  {
+    id: 'qwen',
+    title: 'Qwen Coding Plan',
+    iconSrc: qwenBrandAsset,
+    iconAlt: 'Qwen Cloud',
+    emptyHint: msg('emptyQwen'),
+    emptyHintLink: {
+      host: 'qwencloud.com',
+      url: 'https://home.qwencloud.com/billing/subscription/token-plan-individual',
+    },
+  },
 ];
 
 export const App = () => {
@@ -100,7 +112,8 @@ export const App = () => {
     !usage.kimi &&
     !usage.cursor &&
     !usage.mimo &&
-    !usage.glm;
+    !usage.glm &&
+    !usage.qwen;
 
   return (
     <main className={`au-shell ${settings?.popupLayout === 'grid' ? 'au-shell--grid' : ''}`}>
@@ -149,6 +162,7 @@ export const App = () => {
               now={now}
               emptyHint={provider.emptyHint}
               emptyHintLink={provider.emptyHintLink}
+              issue={usage.issues?.[provider.id]}
               primaryLabel={provider.primaryLabel}
               secondaryLabel={provider.secondaryLabel}
               metrics={settings?.providers[provider.id].metrics}

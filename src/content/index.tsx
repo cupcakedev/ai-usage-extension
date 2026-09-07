@@ -2,13 +2,22 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import claudeBrandAsset from '../assets/brands/claude-anthropic.jpg?inline';
 import codexBrandAsset from '../assets/brands/codex-openai.jpg?inline';
+import zaiBrandAsset from '../assets/brands/zai.webp?inline';
 import limitBrandAsset from '../../public/icons/limit-icon-2.0.png?inline';
 import { STORAGE_KEYS } from '../shared/constants';
+import { OVERLAY_DEFAULTS, OVERLAY_STORAGE_KEYS } from '../shared/settings';
 import { useNow } from '../shared/hooks/useNow';
 import { msg, setLocaleMessages } from '../shared/i18n';
 import { watchLanguage } from '../shared/language';
 import { requestLocaleMessages, requestUsageRefresh } from '../shared/messaging';
-import type { ClaudeUsage, CodexUsage, UsageLimit, UsageState } from '../shared/types';
+import type {
+  ClaudeUsage,
+  CodexUsage,
+  ExternalProviderUsage,
+  OverlayProviderId,
+  UsageLimit,
+  UsageState,
+} from '../shared/types';
 import { formatRelativeTime, formatReset, getUsageTone, isLimitAvailable } from '../shared/utils';
 
 const HOST_ID = 'ai-usage-claude-overlay-host';
@@ -73,26 +82,47 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
   );
 };
 
-const isClaude = window.location.hostname.includes('claude.ai');
-const enabledKey = isClaude ? STORAGE_KEYS.claudeOverlayEnabled : STORAGE_KEYS.codexOverlayEnabled;
-const collapsedKey = isClaude
-  ? STORAGE_KEYS.claudeOverlayCollapsed
-  : STORAGE_KEYS.codexOverlayCollapsed;
-const usageField = isClaude ? 'claude' : 'codex';
-const brandAsset = isClaude ? claudeBrandAsset : codexBrandAsset;
-const title = isClaude ? 'Claude' : 'Codex';
-const inputSelector = isClaude
-  ? '#chat-input-file-upload-onpage, #chat-input-file-upload-epitaxy, [data-surface="prompt"], [data-testid="chat-input"]'
-  : '#prompt-textarea, [data-testid="composer-footer-actions"], [data-testid="chat-input"]';
+interface OverlayHostConfig {
+  brandAsset: string;
+  title: string;
+  inputSelector: string | null;
+}
+
+const OVERLAY_HOSTS: Record<OverlayProviderId, OverlayHostConfig> = {
+  claude: {
+    brandAsset: claudeBrandAsset,
+    title: 'Claude',
+    inputSelector:
+      '#chat-input-file-upload-onpage, #chat-input-file-upload-epitaxy, [data-surface="prompt"], [data-testid="chat-input"]',
+  },
+  codex: {
+    brandAsset: codexBrandAsset,
+    title: 'Codex',
+    inputSelector:
+      '#prompt-textarea, [data-testid="composer-footer-actions"], [data-testid="chat-input"]',
+  },
+  glm: { brandAsset: zaiBrandAsset, title: 'GLM', inputSelector: null },
+};
+
+const hostname = window.location.hostname;
+const usageField: OverlayProviderId = hostname.includes('claude.ai')
+  ? 'claude'
+  : hostname === 'z.ai' || hostname.endsWith('.z.ai')
+    ? 'glm'
+    : 'codex';
+const enabledKey = OVERLAY_STORAGE_KEYS[usageField].enabled;
+const collapsedKey = OVERLAY_STORAGE_KEYS[usageField].collapsed;
+const { brandAsset, title, inputSelector } = OVERLAY_HOSTS[usageField];
+const enabledByDefault = OVERLAY_DEFAULTS[usageField];
 
 const UsageOverlay: React.FC = () => {
-  const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState(enabledByDefault);
   const [localeVersion, setLocaleVersion] = useState(0);
-  const [usage, setUsage] = useState<ClaudeUsage | CodexUsage | null>(null);
+  const [usage, setUsage] = useState<ClaudeUsage | CodexUsage | ExternalProviderUsage | null>(null);
   const [collapsed, setCollapsed] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const [hasInput, setHasInput] = useState(false);
+  const [hasInput, setHasInput] = useState(inputSelector === null);
   const now = useNow(60_000);
 
   useEffect(
@@ -107,6 +137,8 @@ const UsageOverlay: React.FC = () => {
   );
 
   useEffect(() => {
+    if (inputSelector === null) return;
+
     const checkElement = (): void => {
       setHasInput(document.querySelector(inputSelector) !== null);
     };
@@ -140,7 +172,7 @@ const UsageOverlay: React.FC = () => {
 
       const usageState = (snapshot[STORAGE_KEYS.usageState] ?? {}) as UsageState;
       setUsage(usageState[usageField] ?? null);
-      setEnabled(snapshot[enabledKey] !== false);
+      setEnabled(snapshot[enabledKey] ?? enabledByDefault);
       setCollapsed(snapshot[collapsedKey] !== false);
       setIsLoading(false);
     };
@@ -161,7 +193,7 @@ const UsageOverlay: React.FC = () => {
       }
 
       if (changes[enabledKey]) {
-        setEnabled(changes[enabledKey].newValue !== false);
+        setEnabled(changes[enabledKey].newValue ?? enabledByDefault);
       }
 
       if (changes[collapsedKey]) {

@@ -4,6 +4,7 @@ import cursorBrandAsset from '../assets/brands/cursor.webp';
 import kimiBrandAsset from '../assets/brands/kimi.webp';
 import minimaxBrandAsset from '../assets/brands/minimax.webp';
 import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
+import qwenBrandAsset from '../assets/brands/qwen.webp';
 import zaiBrandAsset from '../assets/brands/zai.webp';
 import { msg } from '../shared/i18n';
 import type { ProviderId, ProviderMetric } from '../shared/types';
@@ -16,6 +17,7 @@ export const PROVIDER_DETAILS: Record<ProviderId, { name: string; icon: string }
   cursor: { name: 'Cursor', icon: cursorBrandAsset },
   mimo: { name: 'Xiaomi MiMo', icon: mimoBrandAsset },
   glm: { name: 'GLM Coding Plan', icon: zaiBrandAsset },
+  qwen: { name: 'Qwen Coding Plan', icon: qwenBrandAsset },
 };
 
 /** Resolves a file shipped in the extension root (icons/…) from an extension page. */

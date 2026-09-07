@@ -3,6 +3,7 @@ import { msg } from '../../shared/i18n';
 import { PROVIDER_IDS, PROVIDER_SUPPORTED_METRICS } from '../../shared/settings';
 import type { ExtensionSettings, ProviderId, ProviderMetric } from '../../shared/types';
 import { metricLabel, PROVIDER_DETAILS } from '../config';
+import { GlmCredentialField } from './GlmCredentialField';
 import { SettingsSection } from './SettingsSection';
 import { Switch } from './Switch';
 
@@ -86,6 +87,8 @@ export const ProviderSettingsSection = ({
                   </label>
                 ))}
               </fieldset>
+
+              {provider === 'glm' && <GlmCredentialField />}
             </section>
           );
         })}

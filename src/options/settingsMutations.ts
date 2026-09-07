@@ -3,6 +3,7 @@ import type {
   BadgeMetric,
   BadgeMode,
   ExtensionSettings,
+  OverlayProviderId,
   PopupLayout,
   ProviderId,
   ProviderMetric,
@@ -72,7 +73,7 @@ export const withBadgeProvider = (
 
 export const withOverlayEnabled = (
   settings: ExtensionSettings,
-  provider: 'claude' | 'codex',
+  provider: OverlayProviderId,
   enabled: boolean,
 ): ExtensionSettings => ({
   ...settings,

@@ -2,7 +2,17 @@ import type { LanguagePreference } from '../locales';
 
 export type UsageStatus = 'ok' | 'warning' | 'critical';
 
-export type ProviderId = 'claude' | 'codex' | 'minimax' | 'kimi' | 'cursor' | 'mimo' | 'glm';
+export type ProviderId =
+  | 'claude'
+  | 'codex'
+  | 'minimax'
+  | 'kimi'
+  | 'cursor'
+  | 'mimo'
+  | 'glm'
+  | 'qwen';
+
+export type OverlayProviderId = Extract<ProviderId, 'claude' | 'codex' | 'glm'>;
 
 export interface UsageLimit {
   percentage: number;
@@ -12,7 +22,6 @@ export interface UsageLimit {
   available?: boolean;
 }
 
-/** A provider's console, named by the exact host string its empty-state hint spells out. */
 export interface ProviderLink {
   host: string;
   url: string;
@@ -62,6 +71,9 @@ export type KimiUsage = ExternalProviderUsage;
 export type CursorUsage = ExternalProviderUsage;
 export type MiMoUsage = ExternalProviderUsage;
 export type GlmUsage = ExternalProviderUsage;
+export type QwenUsage = ExternalProviderUsage;
+
+export type ProviderIssue = 'auth';
 
 export interface UsageState {
   claude?: ClaudeUsage;
@@ -71,6 +83,8 @@ export interface UsageState {
   cursor?: CursorUsage;
   mimo?: MiMoUsage;
   glm?: GlmUsage;
+  qwen?: QwenUsage;
+  issues?: Partial<Record<ProviderId, ProviderIssue>>;
 }
 
 export type PopupLayout = 'single' | 'grid';
@@ -100,10 +114,7 @@ export interface ExtensionSettings {
     provider: ProviderId;
     metric: BadgeMetric;
   };
-  overlays: {
-    claude: boolean;
-    codex: boolean;
-  };
+  overlays: Record<OverlayProviderId, boolean>;
 }
 
 /* -------------------------------------------------------------------------- */

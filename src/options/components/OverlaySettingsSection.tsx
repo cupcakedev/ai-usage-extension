@@ -1,17 +1,19 @@
 import { msg } from '../../shared/i18n';
-import type { ExtensionSettings } from '../../shared/types';
+import { OVERLAY_PROVIDER_IDS } from '../../shared/settings';
+import type { ExtensionSettings, OverlayProviderId } from '../../shared/types';
 import { PROVIDER_DETAILS } from '../config';
 import { SettingsSection } from './SettingsSection';
 import { Switch } from './Switch';
 
 interface OverlaySettingsSectionProps {
   overlays: ExtensionSettings['overlays'];
-  onOverlayChange: (provider: 'claude' | 'codex', enabled: boolean) => void;
+  onOverlayChange: (provider: OverlayProviderId, enabled: boolean) => void;
 }
 
-const OVERLAY_HOSTS: Record<'claude' | 'codex', string> = {
+const OVERLAY_HOSTS: Record<OverlayProviderId, string> = {
   claude: 'claude.ai',
   codex: 'chatgpt.com',
+  glm: 'z.ai',
 };
 
 export const OverlaySettingsSection = ({
@@ -20,7 +22,7 @@ export const OverlaySettingsSection = ({
 }: OverlaySettingsSectionProps) => (
   <SettingsSection id="overlays">
     <div className="auo-overlay-list">
-      {(['claude', 'codex'] as const).map((provider) => {
+      {OVERLAY_PROVIDER_IDS.map((provider) => {
         const details = PROVIDER_DETAILS[provider];
         return (
           <div

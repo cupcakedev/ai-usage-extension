@@ -2,7 +2,7 @@ AI Usage Tracker: límites de Claude y Codex es una extensión de navegador para
 
 Tanto si usas Claude y ChatGPT para programar, escribir, investigar o resolver problemas complejos, AI Usage Tracker ayuda a reducir la fricción de los bloqueos por límite y te da control directo sobre cómo se supervisa tu capacidad. Tú eliges dónde aparece la superposición y cómo controlas tus límites.
 
-AI Usage Tracker también admite Kimi, MiniMax, Cursor y Xiaomi MiMo. Según los datos de cuenta que exponga cada proveedor, puede mostrar detalles de sesión, semana, plan, modelo, saldo y hora de reinicio. No se requiere una clave API ni un inicio de sesión independiente: la extensión solo lee sesiones de proveedor ya autenticadas en el navegador.
+AI Usage Tracker también admite Kimi, MiniMax, Cursor, Xiaomi MiMo, GLM Coding Plan (z.ai) y Qwen Coding Plan. Según los datos de cuenta que exponga cada proveedor, puede mostrar detalles de sesión, semana, plan, modelo, saldo y hora de reinicio. No se requiere una clave API ni un inicio de sesión independiente: la extensión solo lee sesiones de proveedor ya autenticadas en el navegador.
 
 Funciones clave:
 

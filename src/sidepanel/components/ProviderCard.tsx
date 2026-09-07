@@ -99,6 +99,16 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   metrics = ['session', 'weekly', 'models', 'reset', 'availableResets', 'plan', 'summary'],
 }) => {
   const shows = (metric: ProviderMetric): boolean => metrics.includes(metric);
+  const showsSession = shows('session') && isLimitAvailable(usage?.session);
+  const showsWeekly = shows('weekly') && Boolean(secondaryLabel) && isLimitAvailable(usage?.weekly);
+  const showsModels = shows('models') && Boolean(usage?.models.length);
+  const showsPlan = shows('plan') && Boolean(usage && 'plan' in usage && usage.plan !== 'unknown');
+  const showsResets =
+    shows('availableResets') &&
+    Boolean(usage && 'availableResets' in usage && usage.availableResets !== null);
+  const showsSummary = shows('summary') && Boolean(usage && 'summary' in usage && usage.summary);
+  const hasVisibleMetric =
+    showsSession || showsWeekly || showsModels || showsPlan || showsResets || showsSummary;
   const subtitle = loading
     ? msg('loadingSnapshot')
     : usage
@@ -111,9 +121,9 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
     <UsageCard title={title} subtitle={subtitle} iconSrc={iconSrc} iconAlt={iconAlt}>
       {loading ? (
         <Skeleton />
-      ) : usage ? (
+      ) : usage && hasVisibleMetric ? (
         <>
-          {shows('session') && isLimitAvailable(usage.session) && (
+          {showsSession && (
             <UsageMetric
               label={primaryLabel}
               limit={usage.session}
@@ -121,7 +131,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
               showReset={shows('reset')}
             />
           )}
-          {shows('weekly') && secondaryLabel && isLimitAvailable(usage.weekly) && (
+          {showsWeekly && (
             <UsageMetric
               label={secondaryLabel}
               limit={usage.weekly}
@@ -129,22 +139,19 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
               showReset={shows('reset')}
             />
           )}
-          {shows('models') && <ModelBreakdown usage={usage} now={now} showReset={shows('reset')} />}
-          {shows('plan') && 'plan' in usage && usage.plan !== 'unknown' && (
+          {showsModels && <ModelBreakdown usage={usage} now={now} showReset={shows('reset')} />}
+          {showsPlan && 'plan' in usage && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>
           )}
-          {shows('availableResets') &&
-            'availableResets' in usage &&
-            usage.availableResets !== null && (
-              <p className="au-footnote">
-                {msg('availableResetsLabel', String(usage.availableResets))}
-              </p>
-            )}
-          {shows('summary') && 'summary' in usage && usage.summary && (
-            <p className="au-footnote">{usage.summary}</p>
+          {showsResets && 'availableResets' in usage && (
+            <p className="au-footnote">
+              {msg('availableResetsLabel', String(usage.availableResets))}
+            </p>
           )}
-          {!metrics.length && <p className="au-empty">No metrics selected.</p>}
+          {showsSummary && 'summary' in usage && <p className="au-footnote">{usage.summary}</p>}
         </>
+      ) : usage && !metrics.length ? (
+        <p className="au-empty">No metrics selected.</p>
       ) : (
         <EmptyHint hint={emptyHint} link={emptyHintLink} />
       )}

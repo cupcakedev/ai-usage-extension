@@ -48,8 +48,11 @@ interface OverlayMetricProps {
 
 const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
   const percent = useMemo(() => Math.round(limit.percentage), [limit.percentage]);
-  const hasCount =
-    typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0;
+  const count =
+    limit.countLabel ??
+    (typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0
+      ? `${limit.used} / ${limit.limit}`
+      : null);
 
   return (
     <div className="aiu-group">
@@ -68,11 +71,9 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
         <div className="aiu-meter__fill" style={{ width: `${percent}%` }} />
       </div>
       <div className="aiu-meta">
-        {hasCount && (
+        {count !== null && (
           <>
-            <span>
-              {limit.used} / {limit.limit}
-            </span>
+            <span>{count}</span>
             {' · '}
           </>
         )}

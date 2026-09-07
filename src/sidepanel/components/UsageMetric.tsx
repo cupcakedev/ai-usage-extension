@@ -18,19 +18,20 @@ export const UsageMetric: React.FC<UsageMetricProps> = ({
   now,
   showReset = true,
 }) => {
-  const hasCount =
-    typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0;
+  const count =
+    limit.countLabel ??
+    (typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0
+      ? `${limit.used} / ${limit.limit}`
+      : null);
 
   return (
     <div className="au-metric">
       <ProgressBar label={label} percentage={limit.percentage} />
-      {(hasCount || showReset) && (
+      {(count !== null || showReset) && (
         <p className="au-meta">
-          {hasCount && (
+          {count !== null && (
             <>
-              <span>
-                {limit.used} / {limit.limit}
-              </span>
+              <span>{count}</span>
               {showReset && ' · '}
             </>
           )}

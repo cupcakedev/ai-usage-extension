@@ -150,8 +150,10 @@ const humanizeSlug = (slug: string): string =>
 /* -------------------- Claude -------------------- */
 
 const claudeWindowFrom = (window: unknown): UsageLimit => {
-  if (!isObject(window)) return buildLimit(0, null);
-  return buildLimit(readNumber(window.utilization), readString(window.resets_at));
+  if (!isObject(window)) return unavailableLimit();
+  const utilization = readNumber(window.utilization);
+  if (utilization === null) return unavailableLimit();
+  return buildLimit(utilization, readString(window.resets_at));
 };
 
 const claudeModelBreakdown = (raw: Json): ModelUsage[] => {
@@ -178,30 +180,35 @@ const claudeModelBreakdown = (raw: Json): ModelUsage[] => {
 const buildClaudeUsage = (raw: Json | null): ClaudeUsage | null => {
   if (!raw) return null;
 
+  const session = claudeWindowFrom(raw.five_hour);
+  const weekly = claudeWindowFrom(raw.seven_day);
+  const models = claudeModelBreakdown(raw);
+  if (!isLimitAvailable(session) && !isLimitAvailable(weekly) && !models.length) return null;
+
   return {
     plan: 'unknown',
-    ...finalize({
-      session: claudeWindowFrom(raw.five_hour),
-      weekly: claudeWindowFrom(raw.seven_day),
-    }),
-    models: claudeModelBreakdown(raw),
+    ...finalize({ session, weekly }),
+    models,
     raw,
   };
 };
 
+const claudeOrgCapabilities = (entry: Json): string[] =>
+  asArray(entry.capabilities)
+    .map((value) => readString(value)?.toLowerCase())
+    .filter((value): value is string => value !== undefined && value !== null);
+
 const resolveOrgFromList = (orgs: unknown): string | null => {
-  if (!Array.isArray(orgs) || orgs.length === 0) return null;
+  const entries = asArray(orgs).filter((entry): entry is Json => isObject(entry));
+  if (!entries.length) return null;
 
-  for (const entry of orgs) {
-    if (!isObject(entry)) continue;
-    const caps = Array.isArray(entry.capabilities) ? entry.capabilities : [];
-    if (caps.includes('api')) continue;
-    const id = readString(entry.uuid);
-    if (id) return id;
-  }
+  const withChat = entries.find((entry) => claudeOrgCapabilities(entry).includes('chat'));
+  const notApiOnly = entries.find((entry) => {
+    const caps = claudeOrgCapabilities(entry);
+    return caps.length !== 1 || caps[0] !== 'api';
+  });
 
-  const first = isObject(orgs[0]) ? readString(orgs[0].uuid) : null;
-  return first;
+  return readString((withChat ?? notApiOnly ?? entries[0]).uuid);
 };
 
 /* -------------------- Codex -------------------- */
@@ -366,8 +373,15 @@ const minimaxLimit = (row: Json, period: 'interval' | 'weekly'): UsageLimit => {
       ? 100 - (readPercent(row[`${prefix}_remaining_percent`]) ?? 0)
       : percentFromUsedLimit(used, usableTotal));
   const resetField = period === 'interval' ? 'end_time' : 'weekly_end_time';
+  const remainsField = period === 'interval' ? 'remains_time' : 'weekly_remains_time';
+  const remainsSeconds = readNumeric(row[remainsField]);
+  const resetsAt =
+    epochToIso(row[resetField]) ??
+    (remainsSeconds !== null && remainsSeconds > 0
+      ? toIso(Date.now() + remainsSeconds * 1000)
+      : null);
   return {
-    ...buildLimit(percentage, epochToIso(row[resetField])),
+    ...buildLimit(percentage, resetsAt),
     ...(used !== null ? { used } : {}),
     ...(usableTotal !== null ? { limit: usableTotal } : {}),
   };
@@ -444,8 +458,13 @@ const kimiDetailLimit = (value: unknown): UsageLimit => {
   if (!detail) return unavailableLimit();
   const used = readNumeric(detail.used);
   const limit = readNumeric(detail.limit);
+  const percentage = percentFromUsedLimit(used, limit);
+  if (percentage === null) return unavailableLimit();
   return {
-    ...buildLimit(percentFromUsedLimit(used, limit), readString(detail.resetTime)),
+    ...buildLimit(
+      percentage,
+      firstString(detail.resetTime, detail.resetAt, detail.reset_time, detail.reset_at),
+    ),
     ...(used !== null ? { used } : {}),
     ...(limit !== null ? { limit } : {}),
   };
@@ -463,11 +482,23 @@ const buildKimiUsage = (raw: Json | null): KimiUsage | null => {
     .map(asJson)
     .filter((entry): entry is Json => entry !== null);
   const rateLimit = limits[0] ? kimiDetailLimit(limits[0].detail) : unavailableLimit();
+  if (!isLimitAvailable(rateLimit) && !isLimitAvailable(weekly)) return null;
+
   return {
     ...finalize({ session: rateLimit, weekly }),
     models: [],
     raw,
   };
+};
+
+const cursorDollars = (cents: number): string =>
+  `$${(cents / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+const cursorCountLabel = (used: number | null, limit: number | null): string | null => {
+  if (used === null) return null;
+  return limit !== null && limit > 0
+    ? `${cursorDollars(used)} / ${cursorDollars(limit)}`
+    : cursorDollars(used);
 };
 
 const cursorUsageWindow = (value: unknown, resetsAt: string | null): UsageLimit | null => {
@@ -480,10 +511,11 @@ const cursorUsageWindow = (value: unknown, resetsAt: string | null): UsageLimit 
       .map(readNumeric)
       .find((value): value is number => value !== null) ?? percentFromUsedLimit(used, limit);
   if (percentage === null && used === null) return null;
+
+  const countLabel = cursorCountLabel(used, limit);
   return {
     ...buildLimit(percentage, resetsAt),
-    ...(used !== null ? { used } : {}),
-    ...(limit !== null ? { limit } : {}),
+    ...(countLabel !== null ? { countLabel } : {}),
   };
 };
 
@@ -540,19 +572,23 @@ const buildMiMoUsage = (
     .find((entry) => entry !== null);
   const used = item ? readNumeric(item.used) : null;
   const limit = item ? readNumeric(item.limit) : null;
-  const session: UsageLimit = {
-    ...buildLimit(
-      readNumeric(monthUsage?.percent) ?? percentFromUsedLimit(used, limit),
-      readString(plan?.currentPeriodEnd),
-    ),
-    ...(used !== null ? { used } : {}),
-    ...(limit !== null ? { limit } : {}),
-  };
+  const percentage = readNumeric(monthUsage?.percent) ?? percentFromUsedLimit(used, limit);
+  const summary = mimoBalanceSummary(balance);
+  if (percentage === null && !summary) return null;
+
+  const session: UsageLimit =
+    percentage === null
+      ? unavailableLimit()
+      : {
+          ...buildLimit(percentage, readString(plan?.currentPeriodEnd)),
+          ...(used !== null ? { used } : {}),
+          ...(limit !== null ? { limit } : {}),
+        };
   return {
     plan: readString(plan?.planCode) ?? undefined,
     ...finalize({ session, weekly: unavailableLimit() }),
     models: [],
-    summary: mimoBalanceSummary(balance),
+    summary,
     raw: balance,
   };
 };

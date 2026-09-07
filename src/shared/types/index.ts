@@ -19,6 +19,7 @@ export interface UsageLimit {
   resetsAt: string | null;
   used?: number;
   limit?: number;
+  countLabel?: string;
   available?: boolean;
 }
 

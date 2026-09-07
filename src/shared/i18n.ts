@@ -33,6 +33,13 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   planUsage: 'Plan usage',
   tokenPlan: 'Token plan',
   emptyOverlay: 'No data yet. Open the popup and refresh.',
+  welcomeTitle: 'Pin AI Usage Tracker',
+  welcomeSubtitle:
+    'Keep your limits one click away — the popup opens straight from the browser toolbar.',
+  welcomeStepPin: 'Click the extensions icon {icon} in the toolbar, then pin AI Usage Tracker',
+  welcomeStepOpen: 'Click the pinned icon to see your usage',
+  welcomeCta: 'Get started',
+  welcomeCtaHint: 'You can unpin it later from Chrome.',
   reportProblem: 'Report a problem',
   reportTitle: 'Report a problem',
   reportDescription: 'Describe what went wrong. The report goes straight to the maintainers.',

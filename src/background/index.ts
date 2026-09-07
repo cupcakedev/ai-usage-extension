@@ -51,9 +51,13 @@ void languageReady
   .then((state) => (hasStartedRefresh ? undefined : queueBadgeUpdate(state)))
   .catch(() => undefined);
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   chrome.alarms.create(REFRESH_ALARM, { periodInMinutes: REFRESH_INTERVAL_MINUTES });
   void refreshUsage().catch(() => undefined);
+
+  if (details.reason === 'install') {
+    void chrome.tabs.create({ url: chrome.runtime.getURL('src/welcome.html') });
+  }
 });
 
 chrome.runtime.onStartup.addListener(() => {

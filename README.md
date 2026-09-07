@@ -53,6 +53,7 @@ src/
   background/   # Service worker: scheduling, fetching, badge updates
     services/   # UsageService — fetches & parses provider APIs
   content/      # claude.ai overlay (React in Shadow DOM) + z.ai token bridge
+  welcome/      # First-run onboarding page opened on install
   sidepanel/    # Popup UI (React)
     components/ # Presentational components
     hooks/      # useUsageData — owns the popup's data lifecycle

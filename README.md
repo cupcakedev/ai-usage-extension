@@ -19,7 +19,9 @@ badge.
   so it never clashes with the host page's styles.
 - **Background refresh** every 5 minutes via `chrome.alarms`, plus on-demand refresh.
 - **Private by design**: usage is read from your own authenticated browser sessions.
-  No external servers, no extension accounts, no tracking.
+  No extension accounts, no background telemetry.
+- **Problem reports**: an optional "Report a problem" button in the popup footer sends
+  the message you type — and nothing else until you press Send — to PostHog.
 
 ## Install
 
@@ -57,6 +59,7 @@ src/
   shared/       # Cross-context layer — no context-specific imports
     constants  # Storage keys, alarm name, thresholds
     hooks      # Framework hooks shared by popup & overlay (useNow)
+    analytics  # Manual problem reports: distinct id, event map, popup -> worker bridge
     messaging  # Typed message helpers (readUsageState, requestUsageRefresh)
     types      # Domain & messaging types
     utils      # clampPercent, getUsageTone, formatReset, formatRelativeTime
@@ -78,6 +81,27 @@ else loads that `_locales` bundle at startup and feeds it to `msg()` through
 import time, the popup and options entry points apply the language *before*
 importing their app; the content script gets the same bundle from the service
 worker (`GET_LOCALE_MESSAGES`), which cannot be fetched from a page context.
+
+## Problem reports
+
+The popup footer carries a **Report a problem** button. It opens a dialog, and pressing
+Send hands the message to the service worker, which forwards it to PostHog as a single
+`problem_reported` event. Nothing is captured automatically: no pageviews, no
+autocapture, no exception tracking, no session recording. Alongside the message the
+event carries the extension version, browser version, UI language, and which provider
+cards are enabled or failing — the context needed to act on the report. The reporter is
+identified only by a random UUID generated locally on first use
+(`ai_usage_distinct_id` in `chrome.storage.local`).
+
+Reporting is configured through the build environment (see `.env.example`):
+
+```bash
+VITE_POSTHOG_PROJECT_TOKEN=phc_...
+VITE_POSTHOG_HOST=https://eu.i.posthog.com
+```
+
+Without a project token the feature stays off and the footer button becomes a plain
+link to GitHub issues instead.
 
 ## Getting Started
 

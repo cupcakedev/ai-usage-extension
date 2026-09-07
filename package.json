@@ -1,6 +1,6 @@
 {
 	"name": "ai-usage-tracker",
-	"version": "0.1.19",
+	"version": "0.1.20",
 	"description": "Private Chrome extension for tracking Claude, Codex, Kimi, MiniMax, Cursor, Xiaomi MiMo, GLM, and Qwen Coding Plan usage limits, quotas, and reset times.",
 	"private": true,
 	"license": "MIT",

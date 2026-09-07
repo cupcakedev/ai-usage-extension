@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Pirminis kodas"
   },
+  "reportProblem": {
+    "message": "Pranešti apie problemą"
+  },
+  "reportTitle": {
+    "message": "Pranešti apie problemą"
+  },
+  "reportDescription": {
+    "message": "Aprašykite, kas nutiko. Pranešimas keliauja tiesiai kūrėjams."
+  },
+  "reportPlaceholder": {
+    "message": "Kas nutiko? Kuris tiekėjas paveiktas?"
+  },
+  "reportPrivacy": {
+    "message": "Išsiunčia jūsų žinutę kartu su plėtinio versija, kalba ir įjungtomis tiekėjų kortelėmis."
+  },
+  "reportSend": {
+    "message": "Siųsti"
+  },
+  "reportSending": {
+    "message": "Siunčiama…"
+  },
+  "reportSent": {
+    "message": "Ačiū! Pranešimas išsiųstas."
+  },
+  "reportFailed": {
+    "message": "Nepavyko išsiųsti pranešimo."
+  },
+  "reportOnGithub": {
+    "message": "Atverti issue GitHub"
+  },
+  "reportCancel": {
+    "message": "Atšaukti"
+  },
   "github": {
     "message": "GitHub"
   },

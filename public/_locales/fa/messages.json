@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "کد منبع"
   },
+  "reportProblem": {
+    "message": "گزارش مشکل"
+  },
+  "reportTitle": {
+    "message": "گزارش مشکل"
+  },
+  "reportDescription": {
+    "message": "توضیح دهید چه اشکالی پیش آمد. گزارش مستقیم به توسعه‌دهندگان می‌رسد."
+  },
+  "reportPlaceholder": {
+    "message": "چه اتفاقی افتاد؟ کدام ارائه‌دهنده تحت تأثیر است؟"
+  },
+  "reportPrivacy": {
+    "message": "پیام شما همراه با نسخهٔ افزونه، زبان و کارت‌های ارائه‌دهندهٔ فعال ارسال می‌شود."
+  },
+  "reportSend": {
+    "message": "ارسال"
+  },
+  "reportSending": {
+    "message": "در حال ارسال…"
+  },
+  "reportSent": {
+    "message": "ممنون! گزارش شما ارسال شد."
+  },
+  "reportFailed": {
+    "message": "ارسال گزارش ممکن نشد."
+  },
+  "reportOnGithub": {
+    "message": "باز کردن issue در GitHub"
+  },
+  "reportCancel": {
+    "message": "انصراف"
+  },
   "github": {
     "message": "GitHub"
   },

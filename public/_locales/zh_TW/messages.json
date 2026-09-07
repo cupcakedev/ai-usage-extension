@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "原始碼"
   },
+  "reportProblem": {
+    "message": "回報問題"
+  },
+  "reportTitle": {
+    "message": "回報問題"
+  },
+  "reportDescription": {
+    "message": "描述出了什麼問題。回報會直接送給開發者。"
+  },
+  "reportPlaceholder": {
+    "message": "發生了什麼事？影響了哪個服務商？"
+  },
+  "reportPrivacy": {
+    "message": "會隨訊息一起傳送擴充功能版本、語言以及已啟用的服務商卡片。"
+  },
+  "reportSend": {
+    "message": "傳送"
+  },
+  "reportSending": {
+    "message": "傳送中…"
+  },
+  "reportSent": {
+    "message": "謝謝！回報已送出。"
+  },
+  "reportFailed": {
+    "message": "無法送出回報。"
+  },
+  "reportOnGithub": {
+    "message": "在 GitHub 上開 issue"
+  },
+  "reportCancel": {
+    "message": "取消"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Mã nguồn"
   },
+  "reportProblem": {
+    "message": "Báo cáo sự cố"
+  },
+  "reportTitle": {
+    "message": "Báo cáo sự cố"
+  },
+  "reportDescription": {
+    "message": "Mô tả điều gì đã sai. Báo cáo sẽ gửi thẳng đến nhà phát triển."
+  },
+  "reportPlaceholder": {
+    "message": "Chuyện gì đã xảy ra? Nhà cung cấp nào bị ảnh hưởng?"
+  },
+  "reportPrivacy": {
+    "message": "Gửi tin nhắn của bạn kèm phiên bản tiện ích, ngôn ngữ và các thẻ nhà cung cấp đang bật."
+  },
+  "reportSend": {
+    "message": "Gửi"
+  },
+  "reportSending": {
+    "message": "Đang gửi…"
+  },
+  "reportSent": {
+    "message": "Cảm ơn! Báo cáo của bạn đã được gửi."
+  },
+  "reportFailed": {
+    "message": "Không thể gửi báo cáo."
+  },
+  "reportOnGithub": {
+    "message": "Mở issue trên GitHub"
+  },
+  "reportCancel": {
+    "message": "Hủy"
+  },
   "github": {
     "message": "GitHub"
   },

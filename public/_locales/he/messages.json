@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "קוד מקור"
   },
+  "reportProblem": {
+    "message": "דיווח על תקלה"
+  },
+  "reportTitle": {
+    "message": "דיווח על תקלה"
+  },
+  "reportDescription": {
+    "message": "תארו מה השתבש. הדיווח מגיע ישירות למפתחים."
+  },
+  "reportPlaceholder": {
+    "message": "מה קרה? איזה ספק הושפע?"
+  },
+  "reportPrivacy": {
+    "message": "שולח את ההודעה שלך יחד עם גרסת ההרחבה, השפה וכרטיסי הספקים הפעילים."
+  },
+  "reportSend": {
+    "message": "שליחה"
+  },
+  "reportSending": {
+    "message": "שולח…"
+  },
+  "reportSent": {
+    "message": "תודה! הדיווח נשלח."
+  },
+  "reportFailed": {
+    "message": "לא ניתן היה לשלוח את הדיווח."
+  },
+  "reportOnGithub": {
+    "message": "פתיחת issue ב-GitHub"
+  },
+  "reportCancel": {
+    "message": "ביטול"
+  },
   "github": {
     "message": "GitHub"
   },

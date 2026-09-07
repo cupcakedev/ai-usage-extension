@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "ソースコード"
   },
+  "reportProblem": {
+    "message": "問題を報告"
+  },
+  "reportTitle": {
+    "message": "問題を報告"
+  },
+  "reportDescription": {
+    "message": "何が起きたかをお書きください。報告は開発者に直接届きます。"
+  },
+  "reportPlaceholder": {
+    "message": "何が起きましたか？どのプロバイダーが影響を受けていますか？"
+  },
+  "reportPrivacy": {
+    "message": "メッセージに加えて、拡張機能のバージョン、言語、有効なプロバイダーカードを送信します。"
+  },
+  "reportSend": {
+    "message": "送信"
+  },
+  "reportSending": {
+    "message": "送信中…"
+  },
+  "reportSent": {
+    "message": "ありがとうございます。報告を送信しました。"
+  },
+  "reportFailed": {
+    "message": "報告を送信できませんでした。"
+  },
+  "reportOnGithub": {
+    "message": "GitHub で issue を作成"
+  },
+  "reportCancel": {
+    "message": "キャンセル"
+  },
   "github": {
     "message": "GitHub"
   },

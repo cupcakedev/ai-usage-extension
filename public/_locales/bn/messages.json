@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "সোর্স কোড"
   },
+  "reportProblem": {
+    "message": "সমস্যা জানান"
+  },
+  "reportTitle": {
+    "message": "সমস্যা জানান"
+  },
+  "reportDescription": {
+    "message": "কী ভুল হয়েছে লিখুন। রিপোর্ট সরাসরি ডেভেলপারদের কাছে যায়।"
+  },
+  "reportPlaceholder": {
+    "message": "কী হয়েছে? কোন প্রোভাইডার প্রভাবিত?"
+  },
+  "reportPrivacy": {
+    "message": "আপনার বার্তার সঙ্গে এক্সটেনশন সংস্করণ, ভাষা এবং চালু থাকা প্রোভাইডার কার্ড পাঠানো হয়।"
+  },
+  "reportSend": {
+    "message": "পাঠান"
+  },
+  "reportSending": {
+    "message": "পাঠানো হচ্ছে…"
+  },
+  "reportSent": {
+    "message": "ধন্যবাদ! আপনার রিপোর্ট পাঠানো হয়েছে।"
+  },
+  "reportFailed": {
+    "message": "রিপোর্ট পাঠানো যায়নি।"
+  },
+  "reportOnGithub": {
+    "message": "GitHub-এ issue খুলুন"
+  },
+  "reportCancel": {
+    "message": "বাতিল"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Zdrojový kód"
   },
+  "reportProblem": {
+    "message": "Nahlásit problém"
+  },
+  "reportTitle": {
+    "message": "Nahlásit problém"
+  },
+  "reportDescription": {
+    "message": "Popište, co se pokazilo. Hlášení míří přímo vývojářům."
+  },
+  "reportPlaceholder": {
+    "message": "Co se stalo? Kterého poskytovatele se to týká?"
+  },
+  "reportPrivacy": {
+    "message": "Odešle vaši zprávu spolu s verzí rozšíření, jazykem a zapnutými kartami poskytovatelů."
+  },
+  "reportSend": {
+    "message": "Odeslat"
+  },
+  "reportSending": {
+    "message": "Odesílání…"
+  },
+  "reportSent": {
+    "message": "Díky! Hlášení bylo odesláno."
+  },
+  "reportFailed": {
+    "message": "Hlášení se nepodařilo odeslat."
+  },
+  "reportOnGithub": {
+    "message": "Otevřít issue na GitHubu"
+  },
+  "reportCancel": {
+    "message": "Zrušit"
+  },
   "github": {
     "message": "GitHub"
   },

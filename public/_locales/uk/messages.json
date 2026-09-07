@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Вихідний код"
   },
+  "reportProblem": {
+    "message": "Повідомити про проблему"
+  },
+  "reportTitle": {
+    "message": "Повідомити про проблему"
+  },
+  "reportDescription": {
+    "message": "Опишіть, що пішло не так. Повідомлення надійде безпосередньо розробникам."
+  },
+  "reportPlaceholder": {
+    "message": "Що сталося? Якого провайдера це стосується?"
+  },
+  "reportPrivacy": {
+    "message": "Надсилає ваше повідомлення разом із версією розширення, мовою та переліком увімкнених карток провайдерів."
+  },
+  "reportSend": {
+    "message": "Надіслати"
+  },
+  "reportSending": {
+    "message": "Надсилаємо…"
+  },
+  "reportSent": {
+    "message": "Дякуємо! Повідомлення надіслано."
+  },
+  "reportFailed": {
+    "message": "Не вдалося надіслати повідомлення."
+  },
+  "reportOnGithub": {
+    "message": "Відкрити issue на GitHub"
+  },
+  "reportCancel": {
+    "message": "Скасувати"
+  },
   "github": {
     "message": "GitHub"
   },

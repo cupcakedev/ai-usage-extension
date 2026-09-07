@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "स्रोत कोड"
   },
+  "reportProblem": {
+    "message": "समस्या की रिपोर्ट करें"
+  },
+  "reportTitle": {
+    "message": "समस्या की रिपोर्ट करें"
+  },
+  "reportDescription": {
+    "message": "बताएं कि क्या गड़बड़ हुई। रिपोर्ट सीधे डेवलपर्स तक जाती है।"
+  },
+  "reportPlaceholder": {
+    "message": "क्या हुआ? कौन-सा प्रोवाइडर प्रभावित है?"
+  },
+  "reportPrivacy": {
+    "message": "आपका संदेश एक्सटेंशन संस्करण, भाषा और चालू प्रोवाइडर कार्ड के साथ भेजा जाता है।"
+  },
+  "reportSend": {
+    "message": "भेजें"
+  },
+  "reportSending": {
+    "message": "भेजा जा रहा है…"
+  },
+  "reportSent": {
+    "message": "धन्यवाद! आपकी रिपोर्ट भेज दी गई।"
+  },
+  "reportFailed": {
+    "message": "रिपोर्ट नहीं भेजी जा सकी।"
+  },
+  "reportOnGithub": {
+    "message": "GitHub पर issue खोलें"
+  },
+  "reportCancel": {
+    "message": "रद्द करें"
+  },
   "github": {
     "message": "GitHub"
   },

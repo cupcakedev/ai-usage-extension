@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Forráskód"
   },
+  "reportProblem": {
+    "message": "Probléma jelentése"
+  },
+  "reportTitle": {
+    "message": "Probléma jelentése"
+  },
+  "reportDescription": {
+    "message": "Írd le, mi hibázott. A jelentés közvetlenül a fejlesztőkhöz kerül."
+  },
+  "reportPlaceholder": {
+    "message": "Mi történt? Melyik szolgáltatót érinti?"
+  },
+  "reportPrivacy": {
+    "message": "Elküldi az üzenetedet a bővítmény verziójával, a nyelvvel és a bekapcsolt szolgáltatókártyákkal együtt."
+  },
+  "reportSend": {
+    "message": "Küldés"
+  },
+  "reportSending": {
+    "message": "Küldés…"
+  },
+  "reportSent": {
+    "message": "Köszönjük! A jelentés elküldve."
+  },
+  "reportFailed": {
+    "message": "A jelentést nem sikerült elküldeni."
+  },
+  "reportOnGithub": {
+    "message": "GitHub-issue megnyitása"
+  },
+  "reportCancel": {
+    "message": "Mégse"
+  },
   "github": {
     "message": "GitHub"
   },

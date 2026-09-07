@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "సోర్స్ కోడ్"
   },
+  "reportProblem": {
+    "message": "సమస్యను నివేదించండి"
+  },
+  "reportTitle": {
+    "message": "సమస్యను నివేదించండి"
+  },
+  "reportDescription": {
+    "message": "ఏమి తప్పు జరిగిందో వివరించండి. నివేదిక నేరుగా డెవలపర్లకు చేరుతుంది."
+  },
+  "reportPlaceholder": {
+    "message": "ఏమి జరిగింది? ఏ ప్రొవైడర్ ప్రభావితమైంది?"
+  },
+  "reportPrivacy": {
+    "message": "మీ సందేశాన్ని పొడిగింపు వెర్షన్, భాష మరియు ఆన్‌లో ఉన్న ప్రొవైడర్ కార్డులతో పంపుతుంది."
+  },
+  "reportSend": {
+    "message": "పంపండి"
+  },
+  "reportSending": {
+    "message": "పంపుతోంది…"
+  },
+  "reportSent": {
+    "message": "ధన్యవాదాలు! మీ నివేదిక పంపబడింది."
+  },
+  "reportFailed": {
+    "message": "నివేదికను పంపలేకపోయాం."
+  },
+  "reportOnGithub": {
+    "message": "GitHubలో issue తెరవండి"
+  },
+  "reportCancel": {
+    "message": "రద్దు చేయి"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Изворни код"
   },
+  "reportProblem": {
+    "message": "Пријави проблем"
+  },
+  "reportTitle": {
+    "message": "Пријави проблем"
+  },
+  "reportDescription": {
+    "message": "Опишите шта је пошло наопако. Пријава иде директно програмерима."
+  },
+  "reportPlaceholder": {
+    "message": "Шта се десило? Који провајдер је погођен?"
+  },
+  "reportPrivacy": {
+    "message": "Шаље вашу поруку заједно са верзијом екстензије, језиком и укљученим картицама провајдера."
+  },
+  "reportSend": {
+    "message": "Пошаљи"
+  },
+  "reportSending": {
+    "message": "Слање…"
+  },
+  "reportSent": {
+    "message": "Хвала! Пријава је послата."
+  },
+  "reportFailed": {
+    "message": "Пријаву није било могуће послати."
+  },
+  "reportOnGithub": {
+    "message": "Отвори issue на GitHub-у"
+  },
+  "reportCancel": {
+    "message": "Откажи"
+  },
   "github": {
     "message": "GitHub"
   },

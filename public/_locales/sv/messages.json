@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Källkod"
   },
+  "reportProblem": {
+    "message": "Rapportera ett problem"
+  },
+  "reportTitle": {
+    "message": "Rapportera ett problem"
+  },
+  "reportDescription": {
+    "message": "Beskriv vad som gick fel. Rapporten går direkt till utvecklarna."
+  },
+  "reportPlaceholder": {
+    "message": "Vad hände? Vilken leverantör påverkas?"
+  },
+  "reportPrivacy": {
+    "message": "Skickar ditt meddelande med tilläggets version, språk och vilka leverantörskort som är aktiva."
+  },
+  "reportSend": {
+    "message": "Skicka"
+  },
+  "reportSending": {
+    "message": "Skickar…"
+  },
+  "reportSent": {
+    "message": "Tack! Din rapport skickades."
+  },
+  "reportFailed": {
+    "message": "Det gick inte att skicka rapporten."
+  },
+  "reportOnGithub": {
+    "message": "Öppna ett GitHub-ärende"
+  },
+  "reportCancel": {
+    "message": "Avbryt"
+  },
   "github": {
     "message": "GitHub"
   },

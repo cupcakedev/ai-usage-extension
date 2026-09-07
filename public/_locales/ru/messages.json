@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Исходный код"
   },
+  "reportProblem": {
+    "message": "Сообщить о проблеме"
+  },
+  "reportTitle": {
+    "message": "Сообщить о проблеме"
+  },
+  "reportDescription": {
+    "message": "Опишите, что пошло не так. Сообщение придёт напрямую разработчикам."
+  },
+  "reportPlaceholder": {
+    "message": "Что случилось? Какой провайдер затронут?"
+  },
+  "reportPrivacy": {
+    "message": "Отправляет ваше сообщение вместе с версией расширения, языком и списком включённых карточек провайдеров."
+  },
+  "reportSend": {
+    "message": "Отправить"
+  },
+  "reportSending": {
+    "message": "Отправляем…"
+  },
+  "reportSent": {
+    "message": "Спасибо! Сообщение отправлено."
+  },
+  "reportFailed": {
+    "message": "Не удалось отправить сообщение."
+  },
+  "reportOnGithub": {
+    "message": "Открыть issue на GitHub"
+  },
+  "reportCancel": {
+    "message": "Отмена"
+  },
   "github": {
     "message": "GitHub"
   },

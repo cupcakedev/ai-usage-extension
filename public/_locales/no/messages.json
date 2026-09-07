@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Kildekode"
   },
+  "reportProblem": {
+    "message": "Rapporter et problem"
+  },
+  "reportTitle": {
+    "message": "Rapporter et problem"
+  },
+  "reportDescription": {
+    "message": "Beskriv hva som gikk galt. Rapporten går rett til utviklerne."
+  },
+  "reportPlaceholder": {
+    "message": "Hva skjedde? Hvilken leverandør er berørt?"
+  },
+  "reportPrivacy": {
+    "message": "Sender meldingen din med utvidelsens versjon, språk og hvilke leverandørkort som er på."
+  },
+  "reportSend": {
+    "message": "Send"
+  },
+  "reportSending": {
+    "message": "Sender…"
+  },
+  "reportSent": {
+    "message": "Takk! Rapporten ble sendt."
+  },
+  "reportFailed": {
+    "message": "Kunne ikke sende rapporten."
+  },
+  "reportOnGithub": {
+    "message": "Åpne et GitHub-issue"
+  },
+  "reportCancel": {
+    "message": "Avbryt"
+  },
   "github": {
     "message": "GitHub"
   },

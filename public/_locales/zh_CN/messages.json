@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "源代码"
   },
+  "reportProblem": {
+    "message": "报告问题"
+  },
+  "reportTitle": {
+    "message": "报告问题"
+  },
+  "reportDescription": {
+    "message": "描述出了什么问题。报告将直接发送给开发者。"
+  },
+  "reportPlaceholder": {
+    "message": "发生了什么？影响了哪个服务商？"
+  },
+  "reportPrivacy": {
+    "message": "会随消息一起发送扩展版本、语言以及已启用的服务商卡片。"
+  },
+  "reportSend": {
+    "message": "发送"
+  },
+  "reportSending": {
+    "message": "发送中…"
+  },
+  "reportSent": {
+    "message": "谢谢！报告已发送。"
+  },
+  "reportFailed": {
+    "message": "无法发送报告。"
+  },
+  "reportOnGithub": {
+    "message": "在 GitHub 上提交 issue"
+  },
+  "reportCancel": {
+    "message": "取消"
+  },
   "github": {
     "message": "GitHub"
   },

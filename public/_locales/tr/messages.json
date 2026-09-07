@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Kaynak kodu"
   },
+  "reportProblem": {
+    "message": "Sorun bildir"
+  },
+  "reportTitle": {
+    "message": "Sorun bildir"
+  },
+  "reportDescription": {
+    "message": "Neyin yanlış gittiğini anlatın. Bildirim doğrudan geliştiricilere ulaşır."
+  },
+  "reportPlaceholder": {
+    "message": "Ne oldu? Hangi sağlayıcı etkilendi?"
+  },
+  "reportPrivacy": {
+    "message": "Mesajınızı uzantı sürümü, dil ve açık sağlayıcı kartlarıyla birlikte gönderir."
+  },
+  "reportSend": {
+    "message": "Gönder"
+  },
+  "reportSending": {
+    "message": "Gönderiliyor…"
+  },
+  "reportSent": {
+    "message": "Teşekkürler! Bildiriminiz gönderildi."
+  },
+  "reportFailed": {
+    "message": "Bildirim gönderilemedi."
+  },
+  "reportOnGithub": {
+    "message": "GitHub’da issue aç"
+  },
+  "reportCancel": {
+    "message": "İptal"
+  },
   "github": {
     "message": "GitHub"
   },

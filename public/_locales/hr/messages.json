@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Izvorni kod"
   },
+  "reportProblem": {
+    "message": "Prijavi problem"
+  },
+  "reportTitle": {
+    "message": "Prijavi problem"
+  },
+  "reportDescription": {
+    "message": "Opišite što je pošlo po zlu. Prijava ide izravno razvijateljima."
+  },
+  "reportPlaceholder": {
+    "message": "Što se dogodilo? Koji je pružatelj zahvaćen?"
+  },
+  "reportPrivacy": {
+    "message": "Šalje vašu poruku zajedno s verzijom proširenja, jezikom i uključenim karticama pružatelja."
+  },
+  "reportSend": {
+    "message": "Pošalji"
+  },
+  "reportSending": {
+    "message": "Slanje…"
+  },
+  "reportSent": {
+    "message": "Hvala! Prijava je poslana."
+  },
+  "reportFailed": {
+    "message": "Prijavu nije bilo moguće poslati."
+  },
+  "reportOnGithub": {
+    "message": "Otvori issue na GitHubu"
+  },
+  "reportCancel": {
+    "message": "Odustani"
+  },
   "github": {
     "message": "GitHub"
   },

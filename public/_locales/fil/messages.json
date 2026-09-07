@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Source code"
   },
+  "reportProblem": {
+    "message": "Mag-ulat ng problema"
+  },
+  "reportTitle": {
+    "message": "Mag-ulat ng problema"
+  },
+  "reportDescription": {
+    "message": "Ilarawan kung ano ang nagkamali. Diretso sa mga developer ang ulat."
+  },
+  "reportPlaceholder": {
+    "message": "Ano ang nangyari? Aling provider ang apektado?"
+  },
+  "reportPrivacy": {
+    "message": "Ipinapadala ang iyong mensahe kasama ang bersyon ng extension, wika, at mga naka-on na provider card."
+  },
+  "reportSend": {
+    "message": "Ipadala"
+  },
+  "reportSending": {
+    "message": "Ipinapadala…"
+  },
+  "reportSent": {
+    "message": "Salamat! Naipadala ang iyong ulat."
+  },
+  "reportFailed": {
+    "message": "Hindi naipadala ang ulat."
+  },
+  "reportOnGithub": {
+    "message": "Magbukas ng issue sa GitHub"
+  },
+  "reportCancel": {
+    "message": "Kanselahin"
+  },
   "github": {
     "message": "GitHub"
   },

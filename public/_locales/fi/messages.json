@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Lähdekoodi"
   },
+  "reportProblem": {
+    "message": "Ilmoita ongelmasta"
+  },
+  "reportTitle": {
+    "message": "Ilmoita ongelmasta"
+  },
+  "reportDescription": {
+    "message": "Kuvaile, mikä meni pieleen. Ilmoitus menee suoraan kehittäjille."
+  },
+  "reportPlaceholder": {
+    "message": "Mitä tapahtui? Mitä palveluntarjoajaa asia koskee?"
+  },
+  "reportPrivacy": {
+    "message": "Lähettää viestisi laajennuksen version, kielen ja käytössä olevien palvelukorttien kanssa."
+  },
+  "reportSend": {
+    "message": "Lähetä"
+  },
+  "reportSending": {
+    "message": "Lähetetään…"
+  },
+  "reportSent": {
+    "message": "Kiitos! Ilmoitus lähetettiin."
+  },
+  "reportFailed": {
+    "message": "Ilmoitusta ei voitu lähettää."
+  },
+  "reportOnGithub": {
+    "message": "Avaa GitHub-issue"
+  },
+  "reportCancel": {
+    "message": "Peruuta"
+  },
   "github": {
     "message": "GitHub"
   },

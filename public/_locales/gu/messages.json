@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "સોર્સ કોડ"
   },
+  "reportProblem": {
+    "message": "સમસ્યાની જાણ કરો"
+  },
+  "reportTitle": {
+    "message": "સમસ્યાની જાણ કરો"
+  },
+  "reportDescription": {
+    "message": "શું ખોટું થયું તે જણાવો. રિપોર્ટ સીધો ડેવલપર્સ સુધી પહોંચે છે."
+  },
+  "reportPlaceholder": {
+    "message": "શું થયું? કયો પ્રોવાઇડર અસરગ્રસ્ત છે?"
+  },
+  "reportPrivacy": {
+    "message": "તમારો સંદેશ એક્સટેન્શન સંસ્કરણ, ભાષા અને ચાલુ પ્રોવાઇડર કાર્ડ સાથે મોકલાય છે."
+  },
+  "reportSend": {
+    "message": "મોકલો"
+  },
+  "reportSending": {
+    "message": "મોકલાઈ રહ્યું છે…"
+  },
+  "reportSent": {
+    "message": "આભાર! તમારો રિપોર્ટ મોકલાયો."
+  },
+  "reportFailed": {
+    "message": "રિપોર્ટ મોકલી શકાયો નથી."
+  },
+  "reportOnGithub": {
+    "message": "GitHub પર issue ખોલો"
+  },
+  "reportCancel": {
+    "message": "રદ કરો"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Pirmkods"
   },
+  "reportProblem": {
+    "message": "Ziņot par problēmu"
+  },
+  "reportTitle": {
+    "message": "Ziņot par problēmu"
+  },
+  "reportDescription": {
+    "message": "Aprakstiet, kas nogāja greizi. Ziņojums nonāk tieši pie izstrādātājiem."
+  },
+  "reportPlaceholder": {
+    "message": "Kas notika? Kurš pakalpojumu sniedzējs ir skarts?"
+  },
+  "reportPrivacy": {
+    "message": "Nosūta jūsu ziņojumu kopā ar paplašinājuma versiju, valodu un ieslēgtajām pakalpojumu kartēm."
+  },
+  "reportSend": {
+    "message": "Nosūtīt"
+  },
+  "reportSending": {
+    "message": "Nosūta…"
+  },
+  "reportSent": {
+    "message": "Paldies! Ziņojums nosūtīts."
+  },
+  "reportFailed": {
+    "message": "Ziņojumu neizdevās nosūtīt."
+  },
+  "reportOnGithub": {
+    "message": "Atvērt issue GitHub"
+  },
+  "reportCancel": {
+    "message": "Atcelt"
+  },
   "github": {
     "message": "GitHub"
   },

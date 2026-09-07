@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Codi font"
   },
+  "reportProblem": {
+    "message": "Informa d’un problema"
+  },
+  "reportTitle": {
+    "message": "Informa d’un problema"
+  },
+  "reportDescription": {
+    "message": "Descriu què ha fallat. L’informe arriba directament als desenvolupadors."
+  },
+  "reportPlaceholder": {
+    "message": "Què ha passat? Quin proveïdor està afectat?"
+  },
+  "reportPrivacy": {
+    "message": "Envia el teu missatge amb la versió de l’extensió, l’idioma i les targetes de proveïdor actives."
+  },
+  "reportSend": {
+    "message": "Envia"
+  },
+  "reportSending": {
+    "message": "Enviant…"
+  },
+  "reportSent": {
+    "message": "Gràcies! El teu informe s’ha enviat."
+  },
+  "reportFailed": {
+    "message": "No s’ha pogut enviar l’informe."
+  },
+  "reportOnGithub": {
+    "message": "Obre una incidència a GitHub"
+  },
+  "reportCancel": {
+    "message": "Cancel·la"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "സോഴ്‌സ് കോഡ്"
   },
+  "reportProblem": {
+    "message": "പ്രശ്നം അറിയിക്കുക"
+  },
+  "reportTitle": {
+    "message": "പ്രശ്നം അറിയിക്കുക"
+  },
+  "reportDescription": {
+    "message": "എന്താണ് സംഭവിച്ചതെന്ന് വിവരിക്കുക. റിപ്പോർട്ട് നേരിട്ട് ഡെവലപ്പർമാർക്ക് എത്തും."
+  },
+  "reportPlaceholder": {
+    "message": "എന്താണ് സംഭവിച്ചത്? ഏത് ദാതാവിനെ ബാധിച്ചു?"
+  },
+  "reportPrivacy": {
+    "message": "നിങ്ങളുടെ സന്ദേശം എക്സ്റ്റൻഷൻ പതിപ്പ്, ഭാഷ, സജീവമായ ദാതാവ് കാർഡുകൾ എന്നിവയോടൊപ്പം അയയ്ക്കുന്നു."
+  },
+  "reportSend": {
+    "message": "അയയ്ക്കുക"
+  },
+  "reportSending": {
+    "message": "അയയ്ക്കുന്നു…"
+  },
+  "reportSent": {
+    "message": "നന്ദി! നിങ്ങളുടെ റിപ്പോർട്ട് അയച്ചു."
+  },
+  "reportFailed": {
+    "message": "റിപ്പോർട്ട് അയയ്ക്കാനായില്ല."
+  },
+  "reportOnGithub": {
+    "message": "GitHub-ൽ issue തുറക്കുക"
+  },
+  "reportCancel": {
+    "message": "റദ്ദാക്കുക"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Kod sumber"
   },
+  "reportProblem": {
+    "message": "Laporkan masalah"
+  },
+  "reportTitle": {
+    "message": "Laporkan masalah"
+  },
+  "reportDescription": {
+    "message": "Terangkan apa yang tidak kena. Laporan pergi terus kepada pembangun."
+  },
+  "reportPlaceholder": {
+    "message": "Apa yang berlaku? Penyedia mana yang terjejas?"
+  },
+  "reportPrivacy": {
+    "message": "Menghantar mesej anda bersama versi sambungan, bahasa dan kad penyedia yang dihidupkan."
+  },
+  "reportSend": {
+    "message": "Hantar"
+  },
+  "reportSending": {
+    "message": "Menghantar…"
+  },
+  "reportSent": {
+    "message": "Terima kasih! Laporan anda telah dihantar."
+  },
+  "reportFailed": {
+    "message": "Laporan tidak dapat dihantar."
+  },
+  "reportOnGithub": {
+    "message": "Buka issue di GitHub"
+  },
+  "reportCancel": {
+    "message": "Batal"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "소스 코드"
   },
+  "reportProblem": {
+    "message": "문제 신고"
+  },
+  "reportTitle": {
+    "message": "문제 신고"
+  },
+  "reportDescription": {
+    "message": "무엇이 잘못됐는지 알려주세요. 신고는 개발자에게 바로 전달됩니다."
+  },
+  "reportPlaceholder": {
+    "message": "무슨 일이 있었나요? 어떤 제공자에 영향이 있나요?"
+  },
+  "reportPrivacy": {
+    "message": "메시지와 함께 확장 프로그램 버전, 언어, 활성화된 제공자 카드를 보냅니다."
+  },
+  "reportSend": {
+    "message": "보내기"
+  },
+  "reportSending": {
+    "message": "보내는 중…"
+  },
+  "reportSent": {
+    "message": "감사합니다! 신고를 보냈습니다."
+  },
+  "reportFailed": {
+    "message": "신고를 보내지 못했습니다."
+  },
+  "reportOnGithub": {
+    "message": "GitHub 이슈 열기"
+  },
+  "reportCancel": {
+    "message": "취소"
+  },
   "github": {
     "message": "GitHub"
   },

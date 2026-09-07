@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "الكود المصدري"
   },
+  "reportProblem": {
+    "message": "الإبلاغ عن مشكلة"
+  },
+  "reportTitle": {
+    "message": "الإبلاغ عن مشكلة"
+  },
+  "reportDescription": {
+    "message": "صف ما الذي حدث خطأ. يصل البلاغ مباشرة إلى المطورين."
+  },
+  "reportPlaceholder": {
+    "message": "ماذا حدث؟ أي مزوّد تأثر؟"
+  },
+  "reportPrivacy": {
+    "message": "يرسل رسالتك مع إصدار الإضافة واللغة وبطاقات المزوّدين المفعّلة."
+  },
+  "reportSend": {
+    "message": "إرسال"
+  },
+  "reportSending": {
+    "message": "جارٍ الإرسال…"
+  },
+  "reportSent": {
+    "message": "شكرًا! تم إرسال بلاغك."
+  },
+  "reportFailed": {
+    "message": "تعذّر إرسال البلاغ."
+  },
+  "reportOnGithub": {
+    "message": "فتح issue على GitHub"
+  },
+  "reportCancel": {
+    "message": "إلغاء"
+  },
   "github": {
     "message": "GitHub"
   },

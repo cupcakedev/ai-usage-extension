@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Msimbo wa chanzo"
   },
+  "reportProblem": {
+    "message": "Ripoti tatizo"
+  },
+  "reportTitle": {
+    "message": "Ripoti tatizo"
+  },
+  "reportDescription": {
+    "message": "Eleza kilichoenda vibaya. Ripoti huenda moja kwa moja kwa watengenezaji."
+  },
+  "reportPlaceholder": {
+    "message": "Nini kilitokea? Mtoa huduma yupi ameathirika?"
+  },
+  "reportPrivacy": {
+    "message": "Hutuma ujumbe wako pamoja na toleo la kiendelezi, lugha na kadi za watoa huduma zilizowashwa."
+  },
+  "reportSend": {
+    "message": "Tuma"
+  },
+  "reportSending": {
+    "message": "Inatuma…"
+  },
+  "reportSent": {
+    "message": "Asante! Ripoti yako imetumwa."
+  },
+  "reportFailed": {
+    "message": "Imeshindwa kutuma ripoti."
+  },
+  "reportOnGithub": {
+    "message": "Fungua issue kwenye GitHub"
+  },
+  "reportCancel": {
+    "message": "Ghairi"
+  },
   "github": {
     "message": "GitHub"
   },

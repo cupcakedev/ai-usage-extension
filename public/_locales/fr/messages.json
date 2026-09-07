@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Code source"
   },
+  "reportProblem": {
+    "message": "Signaler un problème"
+  },
+  "reportTitle": {
+    "message": "Signaler un problème"
+  },
+  "reportDescription": {
+    "message": "Décrivez ce qui ne va pas. Le rapport est envoyé directement aux mainteneurs."
+  },
+  "reportPlaceholder": {
+    "message": "Que s’est-il passé ? Quel fournisseur est concerné ?"
+  },
+  "reportPrivacy": {
+    "message": "Envoie votre message avec la version de l’extension, la langue et les cartes de fournisseurs activées."
+  },
+  "reportSend": {
+    "message": "Envoyer"
+  },
+  "reportSending": {
+    "message": "Envoi…"
+  },
+  "reportSent": {
+    "message": "Merci ! Votre rapport a été envoyé."
+  },
+  "reportFailed": {
+    "message": "Impossible d’envoyer le rapport."
+  },
+  "reportOnGithub": {
+    "message": "Ouvrir un ticket GitHub"
+  },
+  "reportCancel": {
+    "message": "Annuler"
+  },
   "github": {
     "message": "GitHub"
   },

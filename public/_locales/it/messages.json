@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Codice sorgente"
   },
+  "reportProblem": {
+    "message": "Segnala un problema"
+  },
+  "reportTitle": {
+    "message": "Segnala un problema"
+  },
+  "reportDescription": {
+    "message": "Descrivi cosa non ha funzionato. La segnalazione arriva direttamente agli sviluppatori."
+  },
+  "reportPlaceholder": {
+    "message": "Cosa è successo? Quale provider è coinvolto?"
+  },
+  "reportPrivacy": {
+    "message": "Invia il messaggio con versione dell’estensione, lingua e schede provider attive."
+  },
+  "reportSend": {
+    "message": "Invia"
+  },
+  "reportSending": {
+    "message": "Invio…"
+  },
+  "reportSent": {
+    "message": "Grazie! La segnalazione è stata inviata."
+  },
+  "reportFailed": {
+    "message": "Impossibile inviare la segnalazione."
+  },
+  "reportOnGithub": {
+    "message": "Apri una issue su GitHub"
+  },
+  "reportCancel": {
+    "message": "Annulla"
+  },
   "github": {
     "message": "GitHub"
   },

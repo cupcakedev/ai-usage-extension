@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Kildekode"
   },
+  "reportProblem": {
+    "message": "Rapportér et problem"
+  },
+  "reportTitle": {
+    "message": "Rapportér et problem"
+  },
+  "reportDescription": {
+    "message": "Beskriv hvad der gik galt. Rapporten går direkte til udviklerne."
+  },
+  "reportPlaceholder": {
+    "message": "Hvad skete der? Hvilken udbyder er berørt?"
+  },
+  "reportPrivacy": {
+    "message": "Sender din besked med udvidelsens version, sprog og hvilke udbyderkort der er slået til."
+  },
+  "reportSend": {
+    "message": "Send"
+  },
+  "reportSending": {
+    "message": "Sender…"
+  },
+  "reportSent": {
+    "message": "Tak! Din rapport blev sendt."
+  },
+  "reportFailed": {
+    "message": "Rapporten kunne ikke sendes."
+  },
+  "reportOnGithub": {
+    "message": "Åbn et GitHub-issue"
+  },
+  "reportCancel": {
+    "message": "Annullér"
+  },
   "github": {
     "message": "GitHub"
   },

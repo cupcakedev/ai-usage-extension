@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Broncode"
   },
+  "reportProblem": {
+    "message": "Probleem melden"
+  },
+  "reportTitle": {
+    "message": "Probleem melden"
+  },
+  "reportDescription": {
+    "message": "Beschrijf wat er misging. De melding gaat rechtstreeks naar de makers."
+  },
+  "reportPlaceholder": {
+    "message": "Wat gebeurde er? Welke provider is getroffen?"
+  },
+  "reportPrivacy": {
+    "message": "Verstuurt je bericht met de extensieversie, taal en welke providerkaarten aanstaan."
+  },
+  "reportSend": {
+    "message": "Versturen"
+  },
+  "reportSending": {
+    "message": "Versturen…"
+  },
+  "reportSent": {
+    "message": "Bedankt! Je melding is verstuurd."
+  },
+  "reportFailed": {
+    "message": "Kon de melding niet versturen."
+  },
+  "reportOnGithub": {
+    "message": "Een GitHub-issue openen"
+  },
+  "reportCancel": {
+    "message": "Annuleren"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Kod źródłowy"
   },
+  "reportProblem": {
+    "message": "Zgłoś problem"
+  },
+  "reportTitle": {
+    "message": "Zgłoś problem"
+  },
+  "reportDescription": {
+    "message": "Opisz, co poszło nie tak. Zgłoszenie trafia prosto do twórców."
+  },
+  "reportPlaceholder": {
+    "message": "Co się stało? Którego dostawcy dotyczy problem?"
+  },
+  "reportPrivacy": {
+    "message": "Wysyła wiadomość wraz z wersją rozszerzenia, językiem i listą włączonych kart dostawców."
+  },
+  "reportSend": {
+    "message": "Wyślij"
+  },
+  "reportSending": {
+    "message": "Wysyłanie…"
+  },
+  "reportSent": {
+    "message": "Dziękujemy! Zgłoszenie zostało wysłane."
+  },
+  "reportFailed": {
+    "message": "Nie udało się wysłać zgłoszenia."
+  },
+  "reportOnGithub": {
+    "message": "Otwórz zgłoszenie na GitHubie"
+  },
+  "reportCancel": {
+    "message": "Anuluj"
+  },
   "github": {
     "message": "GitHub"
   },

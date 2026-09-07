@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Source code"
   },
+  "reportProblem": {
+    "message": "Report a problem"
+  },
+  "reportTitle": {
+    "message": "Report a problem"
+  },
+  "reportDescription": {
+    "message": "Describe what went wrong. The report goes straight to the maintainers."
+  },
+  "reportPlaceholder": {
+    "message": "What happened? Which provider is affected?"
+  },
+  "reportPrivacy": {
+    "message": "Sends your message with the extension version, language, and which provider cards are enabled."
+  },
+  "reportSend": {
+    "message": "Send"
+  },
+  "reportSending": {
+    "message": "Sending…"
+  },
+  "reportSent": {
+    "message": "Thanks! Your report was sent."
+  },
+  "reportFailed": {
+    "message": "Could not send the report."
+  },
+  "reportOnGithub": {
+    "message": "Open a GitHub issue"
+  },
+  "reportCancel": {
+    "message": "Cancel"
+  },
   "github": {
     "message": "GitHub"
   },

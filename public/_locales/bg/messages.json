@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Изходен код"
   },
+  "reportProblem": {
+    "message": "Съобщаване на проблем"
+  },
+  "reportTitle": {
+    "message": "Съобщаване на проблем"
+  },
+  "reportDescription": {
+    "message": "Опишете какво се обърка. Съобщението отива директно при разработчиците."
+  },
+  "reportPlaceholder": {
+    "message": "Какво се случи? Кой доставчик е засегнат?"
+  },
+  "reportPrivacy": {
+    "message": "Изпраща съобщението ви заедно с версията на разширението, езика и включените карти на доставчици."
+  },
+  "reportSend": {
+    "message": "Изпрати"
+  },
+  "reportSending": {
+    "message": "Изпращане…"
+  },
+  "reportSent": {
+    "message": "Благодарим! Съобщението беше изпратено."
+  },
+  "reportFailed": {
+    "message": "Съобщението не можа да бъде изпратено."
+  },
+  "reportOnGithub": {
+    "message": "Отвори issue в GitHub"
+  },
+  "reportCancel": {
+    "message": "Отказ"
+  },
   "github": {
     "message": "GitHub"
   },

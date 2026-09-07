@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "ምንጭ ኮድ"
   },
+  "reportProblem": {
+    "message": "ችግር ሪፖርት አድርግ"
+  },
+  "reportTitle": {
+    "message": "ችግር ሪፖርት አድርግ"
+  },
+  "reportDescription": {
+    "message": "ምን እንደተሳሳተ ይግለጹ። ሪፖርቱ በቀጥታ ወደ አልሚዎቹ ይደርሳል።"
+  },
+  "reportPlaceholder": {
+    "message": "ምን ተከሰተ? የትኛው አቅራቢ ተጎዳ?"
+  },
+  "reportPrivacy": {
+    "message": "መልእክትዎን ከቅጥያው ስሪት፣ ቋንቋ እና ከነቁ የአቅራቢ ካርዶች ጋር ይልካል።"
+  },
+  "reportSend": {
+    "message": "ላክ"
+  },
+  "reportSending": {
+    "message": "በመላክ ላይ…"
+  },
+  "reportSent": {
+    "message": "አመሰግናለሁ! ሪፖርትዎ ተልኳል።"
+  },
+  "reportFailed": {
+    "message": "ሪፖርቱን መላክ አልተቻለም።"
+  },
+  "reportOnGithub": {
+    "message": "በGitHub ላይ issue ክፈት"
+  },
+  "reportCancel": {
+    "message": "ሰርዝ"
+  },
   "github": {
     "message": "GitHub"
   },

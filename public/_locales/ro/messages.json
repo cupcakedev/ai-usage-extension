@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Cod sursă"
   },
+  "reportProblem": {
+    "message": "Raportează o problemă"
+  },
+  "reportTitle": {
+    "message": "Raportează o problemă"
+  },
+  "reportDescription": {
+    "message": "Descrie ce nu a funcționat. Raportul ajunge direct la dezvoltatori."
+  },
+  "reportPlaceholder": {
+    "message": "Ce s-a întâmplat? Ce furnizor este afectat?"
+  },
+  "reportPrivacy": {
+    "message": "Trimite mesajul tău împreună cu versiunea extensiei, limba și cardurile de furnizori activate."
+  },
+  "reportSend": {
+    "message": "Trimite"
+  },
+  "reportSending": {
+    "message": "Se trimite…"
+  },
+  "reportSent": {
+    "message": "Mulțumim! Raportul a fost trimis."
+  },
+  "reportFailed": {
+    "message": "Raportul nu a putut fi trimis."
+  },
+  "reportOnGithub": {
+    "message": "Deschide un issue pe GitHub"
+  },
+  "reportCancel": {
+    "message": "Anulează"
+  },
   "github": {
     "message": "GitHub"
   },

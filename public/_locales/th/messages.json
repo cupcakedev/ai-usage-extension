@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "ซอร์สโค้ด"
   },
+  "reportProblem": {
+    "message": "รายงานปัญหา"
+  },
+  "reportTitle": {
+    "message": "รายงานปัญหา"
+  },
+  "reportDescription": {
+    "message": "อธิบายว่าเกิดอะไรขึ้น รายงานจะส่งตรงถึงผู้พัฒนา"
+  },
+  "reportPlaceholder": {
+    "message": "เกิดอะไรขึ้น ผู้ให้บริการรายใดได้รับผลกระทบ"
+  },
+  "reportPrivacy": {
+    "message": "ส่งข้อความของคุณพร้อมเวอร์ชันส่วนขยาย ภาษา และการ์ดผู้ให้บริการที่เปิดใช้งาน"
+  },
+  "reportSend": {
+    "message": "ส่ง"
+  },
+  "reportSending": {
+    "message": "กำลังส่ง…"
+  },
+  "reportSent": {
+    "message": "ขอบคุณ! ส่งรายงานแล้ว"
+  },
+  "reportFailed": {
+    "message": "ส่งรายงานไม่สำเร็จ"
+  },
+  "reportOnGithub": {
+    "message": "เปิด issue บน GitHub"
+  },
+  "reportCancel": {
+    "message": "ยกเลิก"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Código fuente"
   },
+  "reportProblem": {
+    "message": "Informar de un problema"
+  },
+  "reportTitle": {
+    "message": "Informar de un problema"
+  },
+  "reportDescription": {
+    "message": "Describe qué ha fallado. El informe llega directamente a los desarrolladores."
+  },
+  "reportPlaceholder": {
+    "message": "¿Qué ha pasado? ¿Qué proveedor está afectado?"
+  },
+  "reportPrivacy": {
+    "message": "Envía tu mensaje con la versión de la extensión, el idioma y las tarjetas de proveedor activas."
+  },
+  "reportSend": {
+    "message": "Enviar"
+  },
+  "reportSending": {
+    "message": "Enviando…"
+  },
+  "reportSent": {
+    "message": "¡Gracias! Tu informe se ha enviado."
+  },
+  "reportFailed": {
+    "message": "No se pudo enviar el informe."
+  },
+  "reportOnGithub": {
+    "message": "Abrir una incidencia en GitHub"
+  },
+  "reportCancel": {
+    "message": "Cancelar"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "ಮೂಲ ಕೋಡ್"
   },
+  "reportProblem": {
+    "message": "ಸಮಸ್ಯೆ ವರದಿ ಮಾಡಿ"
+  },
+  "reportTitle": {
+    "message": "ಸಮಸ್ಯೆ ವರದಿ ಮಾಡಿ"
+  },
+  "reportDescription": {
+    "message": "ಏನು ತಪ್ಪಾಯಿತು ಎಂದು ವಿವರಿಸಿ. ವರದಿ ನೇರವಾಗಿ ಡೆವಲಪರ್‌ಗಳಿಗೆ ತಲುಪುತ್ತದೆ."
+  },
+  "reportPlaceholder": {
+    "message": "ಏನಾಯಿತು? ಯಾವ ಪೂರೈಕೆದಾರ ಬಾಧಿತವಾಗಿದೆ?"
+  },
+  "reportPrivacy": {
+    "message": "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ವಿಸ್ತರಣೆ ಆವೃತ್ತಿ, ಭಾಷೆ ಮತ್ತು ಸಕ್ರಿಯ ಪೂರೈಕೆದಾರ ಕಾರ್ಡ್‌ಗಳ ಜೊತೆ ಕಳುಹಿಸುತ್ತದೆ."
+  },
+  "reportSend": {
+    "message": "ಕಳುಹಿಸಿ"
+  },
+  "reportSending": {
+    "message": "ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "reportSent": {
+    "message": "ಧನ್ಯವಾದಗಳು! ನಿಮ್ಮ ವರದಿ ಕಳುಹಿಸಲಾಗಿದೆ."
+  },
+  "reportFailed": {
+    "message": "ವರದಿ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
+  },
+  "reportOnGithub": {
+    "message": "GitHub ನಲ್ಲಿ issue ತೆರೆಯಿರಿ"
+  },
+  "reportCancel": {
+    "message": "ರದ್ದುಮಾಡಿ"
+  },
   "github": {
     "message": "GitHub"
   },

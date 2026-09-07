@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Lähtekood"
   },
+  "reportProblem": {
+    "message": "Teata probleemist"
+  },
+  "reportTitle": {
+    "message": "Teata probleemist"
+  },
+  "reportDescription": {
+    "message": "Kirjelda, mis läks valesti. Teade jõuab otse arendajateni."
+  },
+  "reportPlaceholder": {
+    "message": "Mis juhtus? Milline teenusepakkuja on mõjutatud?"
+  },
+  "reportPrivacy": {
+    "message": "Saadab su sõnumi koos laienduse versiooni, keele ja sisselülitatud teenusepakkujate kaartidega."
+  },
+  "reportSend": {
+    "message": "Saada"
+  },
+  "reportSending": {
+    "message": "Saadan…"
+  },
+  "reportSent": {
+    "message": "Aitäh! Teade saadeti."
+  },
+  "reportFailed": {
+    "message": "Teadet ei õnnestunud saata."
+  },
+  "reportOnGithub": {
+    "message": "Ava GitHubis issue"
+  },
+  "reportCancel": {
+    "message": "Loobu"
+  },
   "github": {
     "message": "GitHub"
   },

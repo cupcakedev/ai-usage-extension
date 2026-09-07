@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "स्रोत कोड"
   },
+  "reportProblem": {
+    "message": "समस्या कळवा"
+  },
+  "reportTitle": {
+    "message": "समस्या कळवा"
+  },
+  "reportDescription": {
+    "message": "काय चुकले ते सांगा. अहवाल थेट डेव्हलपरना जातो."
+  },
+  "reportPlaceholder": {
+    "message": "काय झाले? कोणता प्रोव्हायडर प्रभावित आहे?"
+  },
+  "reportPrivacy": {
+    "message": "तुमचा संदेश एक्स्टेंशन आवृत्ती, भाषा आणि सुरू असलेल्या प्रोव्हायडर कार्डांसह पाठवला जातो."
+  },
+  "reportSend": {
+    "message": "पाठवा"
+  },
+  "reportSending": {
+    "message": "पाठवत आहे…"
+  },
+  "reportSent": {
+    "message": "धन्यवाद! तुमचा अहवाल पाठवला गेला."
+  },
+  "reportFailed": {
+    "message": "अहवाल पाठवता आला नाही."
+  },
+  "reportOnGithub": {
+    "message": "GitHub वर issue उघडा"
+  },
+  "reportCancel": {
+    "message": "रद्द करा"
+  },
   "github": {
     "message": "GitHub"
   },

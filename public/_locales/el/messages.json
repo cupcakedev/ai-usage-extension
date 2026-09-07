@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Πηγαίος κώδικας"
   },
+  "reportProblem": {
+    "message": "Αναφορά προβλήματος"
+  },
+  "reportTitle": {
+    "message": "Αναφορά προβλήματος"
+  },
+  "reportDescription": {
+    "message": "Περιγράψτε τι πήγε στραβά. Η αναφορά πηγαίνει απευθείας στους προγραμματιστές."
+  },
+  "reportPlaceholder": {
+    "message": "Τι συνέβη; Ποιος πάροχος επηρεάζεται;"
+  },
+  "reportPrivacy": {
+    "message": "Στέλνει το μήνυμά σας μαζί με την έκδοση της επέκτασης, τη γλώσσα και τις ενεργές κάρτες παρόχων."
+  },
+  "reportSend": {
+    "message": "Αποστολή"
+  },
+  "reportSending": {
+    "message": "Αποστολή…"
+  },
+  "reportSent": {
+    "message": "Ευχαριστούμε! Η αναφορά στάλθηκε."
+  },
+  "reportFailed": {
+    "message": "Δεν ήταν δυνατή η αποστολή της αναφοράς."
+  },
+  "reportOnGithub": {
+    "message": "Άνοιγμα issue στο GitHub"
+  },
+  "reportCancel": {
+    "message": "Άκυρο"
+  },
   "github": {
     "message": "GitHub"
   },

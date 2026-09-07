@@ -95,6 +95,39 @@
   "sourceCode": {
     "message": "Quellcode"
   },
+  "reportProblem": {
+    "message": "Problem melden"
+  },
+  "reportTitle": {
+    "message": "Problem melden"
+  },
+  "reportDescription": {
+    "message": "Beschreibe, was schiefgelaufen ist. Die Meldung geht direkt an die Entwickler."
+  },
+  "reportPlaceholder": {
+    "message": "Was ist passiert? Welcher Anbieter ist betroffen?"
+  },
+  "reportPrivacy": {
+    "message": "Sendet deine Nachricht mit Erweiterungsversion, Sprache und den aktivierten Anbieterkarten."
+  },
+  "reportSend": {
+    "message": "Senden"
+  },
+  "reportSending": {
+    "message": "Wird gesendet…"
+  },
+  "reportSent": {
+    "message": "Danke! Deine Meldung wurde gesendet."
+  },
+  "reportFailed": {
+    "message": "Meldung konnte nicht gesendet werden."
+  },
+  "reportOnGithub": {
+    "message": "GitHub-Issue öffnen"
+  },
+  "reportCancel": {
+    "message": "Abbrechen"
+  },
   "github": {
     "message": "GitHub"
   },

@@ -17,7 +17,8 @@ badge.
 - **Toolbar badge** showing your highest current usage at a glance.
 - **On-page overlay** on `claude.ai` — a collapsible capsule rendered in a Shadow DOM,
   so it never clashes with the host page's styles.
-- **Background refresh** every 5 minutes via `chrome.alarms`, plus on-demand refresh.
+- **Background refresh** every 5 minutes via `chrome.alarms`, plus automatic refresh
+  when the popup opens and on-demand refresh.
 - **Private by design**: usage is read from your own authenticated browser sessions.
   No extension accounts, no background telemetry.
 - **Problem reports**: an optional "Report a problem" button in the popup footer sends
@@ -41,7 +42,7 @@ Then:
 1. Open `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Click **Load unpacked** and select the `dist/` directory.
-4. Sign in to the providers you want to track, then open the popup and refresh.
+4. Sign in to the providers you want to track, then open the popup. It refreshes automatically.
 
 ## Architecture
 
@@ -69,6 +70,11 @@ src/
 **Data flow:** the background worker fetches usage, writes a `UsageState` snapshot to
 `chrome.storage.local`, and updates the badge. The popup and overlay read that
 snapshot and subscribe to `chrome.storage.onChanged`, so every surface stays in sync.
+Each provider is saved as soon as its request completes, without waiting for slower
+providers. Requests bypass the HTTP cache and time out after 10 seconds; failed
+requests retain the last successful snapshot and its original update time.
+The worker checks and restores the recurring alarm whenever it starts. Chrome may
+delay alarms while the device is asleep.
 
 **Localization:** every user-visible string goes through `msg()`
 (`src/shared/i18n.ts`), which reads `public/_locales/<locale>/messages.json`.
@@ -151,7 +157,7 @@ pnpm build
 | `pnpm build`         | Type-check, then produce a production build.  |
 | `pnpm release`       | Test, build, and package `dist/` into `release/*.zip`. |
 | `pnpm typecheck`     | Run `tsc` with no emit.                       |
-| `pnpm test`          | Run release-gate checks for store metadata.   |
+| `pnpm test`          | Run usage-refresh regression tests and store release-gate checks. |
 | `pnpm lint`          | Lint `src/` with ESLint.                      |
 | `pnpm format`        | Format `src/` with Prettier.                  |
 | `pnpm promo`         | Render the store artwork into `store/<locale>/promo/`. |

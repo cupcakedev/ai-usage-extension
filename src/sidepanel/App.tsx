@@ -117,17 +117,6 @@ export const App = () => {
     [],
   );
 
-  const initialLoading =
-    loading &&
-    !usage.claude &&
-    !usage.codex &&
-    !usage.minimax &&
-    !usage.kimi &&
-    !usage.cursor &&
-    !usage.mimo &&
-    !usage.glm &&
-    !usage.qwen;
-
   return (
     <main className={`au-shell ${settings?.popupLayout === 'grid' ? 'au-shell--grid' : ''}`}>
       <header className="au-topbar">
@@ -171,7 +160,7 @@ export const App = () => {
               iconSrc={provider.iconSrc}
               iconAlt={provider.iconAlt}
               usage={usage[provider.id]}
-              loading={initialLoading}
+              loading={(loading || refreshing) && !usage[provider.id]}
               now={now}
               emptyHint={provider.emptyHint}
               emptyHintLink={provider.emptyHintLink}

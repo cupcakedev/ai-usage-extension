@@ -57,11 +57,25 @@ const languageReady = applyStoredLanguage().catch(() => undefined);
 
 void languageReady
   .then(() => UsageService.getUsageState())
-  .then((state) => (hasStartedRefresh ? undefined : queueBadgeUpdate(state)))
+  .then(async (state) => {
+    if (hasStartedRefresh) return;
+    await queueBadgeUpdate(state).catch(() => undefined);
+    if (!hasStartedRefresh) await refreshUsage();
+  })
+  .catch(() => undefined);
+
+// Alarms can disappear across browser restarts or extension disable/enable.
+// Check on every worker start without postponing an existing alarm.
+void chrome.alarms
+  .get(REFRESH_ALARM)
+  .then(async (alarm) => {
+    if (!alarm || alarm.periodInMinutes !== REFRESH_INTERVAL_MINUTES) {
+      await chrome.alarms.create(REFRESH_ALARM, { periodInMinutes: REFRESH_INTERVAL_MINUTES });
+    }
+  })
   .catch(() => undefined);
 
 chrome.runtime.onInstalled.addListener((details) => {
-  chrome.alarms.create(REFRESH_ALARM, { periodInMinutes: REFRESH_INTERVAL_MINUTES });
   void refreshUsage().catch(() => undefined);
 
   if (details.reason === 'install') {
@@ -80,6 +94,12 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName === 'local' && changes[STORAGE_KEYS.usageState]) {
+    void queueBadgeUpdate((changes[STORAGE_KEYS.usageState].newValue ?? {}) as UsageState).catch(
+      () => undefined,
+    );
+  }
+
   if (areaName === 'local' && changes[STORAGE_KEYS.glmApiKey]) {
     void refreshAfterInFlight().catch(() => undefined);
   }

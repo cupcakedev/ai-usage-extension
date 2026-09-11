@@ -8,6 +8,7 @@ import {
   MiniMaxUsage,
   MiMoUsage,
   ModelUsage,
+  ProviderId,
   QwenUsage,
   UsageLimit,
   UsageState,
@@ -58,6 +59,7 @@ const QWEN_APIS = {
 } as const;
 
 const JSON_HEADERS = { Accept: 'application/json' } as const;
+const REQUEST_TIMEOUT_MS = 10_000;
 
 type Json = Record<string, unknown>;
 
@@ -825,6 +827,8 @@ const fetchJson = async (
   init: RequestInit = {},
 ): Promise<{ ok: true; data: Json } | { ok: false; status: number; challenged: boolean }> => {
   const response = await fetch(url, {
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    cache: 'no-store',
     credentials: 'include',
     ...init,
     headers: { ...JSON_HEADERS, ...(init.headers ?? {}) },
@@ -888,6 +892,8 @@ const qwenGatewayCall = async (
 
 const fetchJsonRaw = async (url: string, init?: RequestInit): Promise<unknown> => {
   const response = await fetch(url, {
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    cache: 'no-store',
     credentials: 'include',
     headers: JSON_HEADERS,
     ...init,
@@ -909,34 +915,57 @@ export class UsageService {
   }
 
   static async refreshAllUsage(): Promise<UsageState> {
-    const [claude, codex, minimax, kimi, cursor, mimo, glm, qwen] = await Promise.all([
-      this.fetchClaudeUsage().catch(() => null),
-      this.fetchCodexUsage().catch(() => null),
-      this.fetchMiniMaxUsage().catch(() => null),
-      this.fetchKimiUsage().catch(() => null),
-      this.fetchCursorUsage().catch(() => null),
-      this.fetchMiMoUsage().catch(() => null),
-      this.fetchGlmUsage().catch(() => ({ usage: null, rejected: false })),
-      this.fetchQwenUsage().catch(() => null),
+    const next = await this.getUsageState();
+    let saveQueue: Promise<void> = Promise.resolve();
+
+    // Publish each provider as it finishes. Serialize writes so a slower storage
+    // operation cannot overwrite a newer snapshot from another provider.
+    const publish = (update: () => void): Promise<void> => {
+      saveQueue = saveQueue
+        .catch(() => undefined)
+        .then(async () => {
+          update();
+          await this.saveUsageState(next);
+        });
+      return saveQueue;
+    };
+
+    const refreshProvider = async <K extends ProviderId>(
+      provider: K,
+      fetchUsage: () => Promise<UsageState[K] | null>,
+    ): Promise<void> => {
+      const usage = await fetchUsage().catch(() => null);
+      if (usage)
+        await publish(() => {
+          next[provider] = usage;
+        });
+    };
+
+    const results = await Promise.allSettled([
+      refreshProvider('claude', () => this.fetchClaudeUsage()),
+      refreshProvider('codex', () => this.fetchCodexUsage()),
+      refreshProvider('minimax', () => this.fetchMiniMaxUsage()),
+      refreshProvider('kimi', () => this.fetchKimiUsage()),
+      refreshProvider('cursor', () => this.fetchCursorUsage()),
+      refreshProvider('mimo', () => this.fetchMiMoUsage()),
+      refreshProvider('qwen', () => this.fetchQwenUsage()),
+      (async () => {
+        const glm = await this.fetchGlmUsage().catch(() => ({ usage: null, rejected: false }));
+        await publish(() => {
+          if (glm.usage) next.glm = glm.usage;
+          const issues = { ...next.issues };
+          if (glm.rejected) issues.glm = 'auth';
+          else delete issues.glm;
+          if (Object.keys(issues).length) next.issues = issues;
+          else delete next.issues;
+        });
+      })(),
     ]);
 
-    const next = await this.getUsageState();
-    if (claude) next.claude = claude;
-    if (codex) next.codex = codex;
-    if (minimax) next.minimax = minimax;
-    if (kimi) next.kimi = kimi;
-    if (cursor) next.cursor = cursor;
-    if (mimo) next.mimo = mimo;
-    if (glm.usage) next.glm = glm.usage;
-    if (qwen) next.qwen = qwen;
-
-    const issues = { ...next.issues };
-    if (glm.rejected) issues.glm = 'auth';
-    else delete issues.glm;
-    if (Object.keys(issues).length) next.issues = issues;
-    else delete next.issues;
-
-    await this.saveUsageState(next);
+    // Keep the refresh in flight until every provider has settled, even if a
+    // storage write failed, so a retry cannot race unfinished writes.
+    const failure = results.find((result) => result.status === 'rejected');
+    if (failure?.status === 'rejected') throw failure.reason;
     return next;
   }
 

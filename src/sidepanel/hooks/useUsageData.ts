@@ -33,10 +33,26 @@ export const useUsageData = (): UsageData => {
 
       setUsage(state);
       setSettings(preferences);
-      setLoading(false);
+      setRefreshing(true);
+      try {
+        const next = await requestUsageRefresh();
+        if (active) setUsage(next);
+      } catch (cause) {
+        if (active) setError(cause instanceof Error ? cause.message : msg('refreshFailed'));
+      } finally {
+        if (active) {
+          setRefreshing(false);
+          setLoading(false);
+        }
+      }
     };
 
-    void hydrate();
+    void hydrate().catch((cause: unknown) => {
+      if (active) {
+        setError(cause instanceof Error ? cause.message : msg('refreshFailed'));
+        setLoading(false);
+      }
+    });
 
     const listener = (
       changes: Record<string, chrome.storage.StorageChange>,

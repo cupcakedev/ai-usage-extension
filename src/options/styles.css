@@ -701,6 +701,10 @@ select {
   align-content: start;
 }
 
+.auo-percentage-field {
+  margin-top: 16px;
+}
+
 .auo-field__label {
   color: var(--muted);
   font-size: 11px;

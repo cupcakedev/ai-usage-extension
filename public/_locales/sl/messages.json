@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Nastavitve AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% porabljeno"
+  },
+  "percentageRemaining": {
+    "message": "$1% preostalo"
+  },
+  "optionsPercentageTitle": {
+    "message": "Prikaz omejitev"
+  },
+  "optionsPercentageUsed": {
+    "message": "Porabljeno"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Preostalo"
   }
 }

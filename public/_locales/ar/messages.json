@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "إعدادات AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "تم استخدام $1%"
+  },
+  "percentageRemaining": {
+    "message": "متبقٍ $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "عرض الحدود"
+  },
+  "optionsPercentageUsed": {
+    "message": "المستخدم"
+  },
+  "optionsPercentageRemaining": {
+    "message": "المتبقي"
   }
 }

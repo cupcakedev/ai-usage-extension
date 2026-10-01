@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "የAI Usage Tracker ቅንብሮች"
+  },
+  "percentageUsed": {
+    "message": "$1% ጥቅም ላይ ውሏል"
+  },
+  "percentageRemaining": {
+    "message": "$1% ቀርቷል"
+  },
+  "optionsPercentageTitle": {
+    "message": "የገደብ ማሳያ"
+  },
+  "optionsPercentageUsed": {
+    "message": "ጥቅም ላይ የዋለ"
+  },
+  "optionsPercentageRemaining": {
+    "message": "የቀረ"
   }
 }

@@ -168,6 +168,7 @@ export const App = () => {
               primaryLabel={provider.primaryLabel}
               secondaryLabel={provider.secondaryLabel}
               metrics={settings?.providers[provider.id].metrics}
+              percentageDisplay={settings?.percentageDisplay}
             />
           ),
         )}

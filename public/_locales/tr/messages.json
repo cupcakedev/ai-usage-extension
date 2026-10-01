@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker ayarları"
+  },
+  "percentageUsed": {
+    "message": "$1% kullanıldı"
+  },
+  "percentageRemaining": {
+    "message": "$1% kaldı"
+  },
+  "optionsPercentageTitle": {
+    "message": "Limit gösterimi"
+  },
+  "optionsPercentageUsed": {
+    "message": "Kullanılan"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Kalan"
   }
 }

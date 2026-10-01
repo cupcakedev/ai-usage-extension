@@ -19,6 +19,8 @@ badge.
   so it never clashes with the host page's styles.
 - **Background refresh** every 5 minutes via `chrome.alarms`, plus automatic refresh
   when the popup opens and on-demand refresh.
+- **Limit display**: show the used percentage (13% used) or remaining percentage
+  (87% left) across all providers, including the popup, overlays, and badge tooltip.
 - **Private by design**: usage is read from your own authenticated browser sessions.
   No extension accounts, no background telemetry.
 - **Problem reports**: an optional "Report a problem" button in the popup footer sends
@@ -43,6 +45,11 @@ Then:
 2. Enable **Developer mode**.
 3. Click **Load unpacked** and select the `dist/` directory.
 4. Sign in to the providers you want to track, then open the popup. It refreshes automatically.
+
+Under **Popup layout**, **Limit display** switches between **Used** and **Remaining**.
+Percentage labels and progress-bar fill follow the selected mode. Warning colors,
+badge icon ranges, raw counts, and stored usage calculations still use the consumed
+amount.
 
 ## Architecture
 

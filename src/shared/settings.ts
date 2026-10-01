@@ -80,6 +80,7 @@ const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({
 export const createDefaultSettings = (): ExtensionSettings => ({
   language: 'auto',
   popupLayout: 'single',
+  percentageDisplay: 'used',
   providers: Object.fromEntries(
     PROVIDER_IDS.map((provider) => [provider, defaultProvider(provider)]),
   ) as ExtensionSettings['providers'],
@@ -132,6 +133,7 @@ export const normalizeSettings = (
   return {
     language: normalizeLanguage(candidate.language),
     popupLayout: candidate.popupLayout === 'grid' ? 'grid' : 'single',
+    percentageDisplay: candidate.percentageDisplay === 'remaining' ? 'remaining' : 'used',
     providers,
     badge: {
       mode: candidate.badge?.mode === 'provider' ? 'provider' : 'highest',

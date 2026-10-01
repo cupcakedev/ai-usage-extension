@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker 设置"
+  },
+  "percentageUsed": {
+    "message": "已用 $1%"
+  },
+  "percentageRemaining": {
+    "message": "剩余 $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "限额显示"
+  },
+  "optionsPercentageUsed": {
+    "message": "已用"
+  },
+  "optionsPercentageRemaining": {
+    "message": "剩余"
   }
 }

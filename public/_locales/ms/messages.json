@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Tetapan AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% digunakan"
+  },
+  "percentageRemaining": {
+    "message": "$1% berbaki"
+  },
+  "optionsPercentageTitle": {
+    "message": "Paparan had"
+  },
+  "optionsPercentageUsed": {
+    "message": "Digunakan"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Berbaki"
   }
 }

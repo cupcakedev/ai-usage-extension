@@ -4,7 +4,7 @@ import claudeBrandAsset from '../assets/brands/claude-anthropic.jpg?inline';
 import codexBrandAsset from '../assets/brands/codex-openai.jpg?inline';
 import limitBrandAsset from '../../public/icons/limit-icon-2.0.png?inline';
 import { STORAGE_KEYS } from '../shared/constants';
-import { OVERLAY_DEFAULTS, OVERLAY_STORAGE_KEYS } from '../shared/settings';
+import { OVERLAY_DEFAULTS, OVERLAY_STORAGE_KEYS, normalizeSettings } from '../shared/settings';
 import { useNow } from '../shared/hooks/useNow';
 import { msg, setLocaleMessages } from '../shared/i18n';
 import { watchLanguage } from '../shared/language';
@@ -14,10 +14,18 @@ import type {
   CodexUsage,
   ExternalProviderUsage,
   OverlayProviderId,
+  PercentageDisplay,
   UsageLimit,
   UsageState,
 } from '../shared/types';
-import { formatRelativeTime, formatReset, getUsageTone, isLimitAvailable } from '../shared/utils';
+import {
+  clampPercent,
+  formatRelativeTime,
+  formatReset,
+  formatUsagePercent,
+  getUsageTone,
+  isLimitAvailable,
+} from '../shared/utils';
 
 const HOST_ID = 'ai-usage-claude-overlay-host';
 
@@ -43,10 +51,12 @@ interface OverlayMetricProps {
   label: string;
   limit: UsageLimit;
   now: number;
+  percentageDisplay: PercentageDisplay;
 }
 
-const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
-  const percent = useMemo(() => Math.round(limit.percentage), [limit.percentage]);
+const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now, percentageDisplay }) => {
+  const percent = useMemo(() => clampPercent(limit.percentage), [limit.percentage]);
+  const displayedPercent = percentageDisplay === 'remaining' ? 100 - percent : percent;
   const count =
     limit.countLabel ??
     (typeof limit.used === 'number' && typeof limit.limit === 'number' && limit.limit > 0
@@ -57,17 +67,18 @@ const OverlayMetric: React.FC<OverlayMetricProps> = ({ label, limit, now }) => {
     <div className="aiu-group">
       <div className="aiu-row">
         <span className="aiu-label">{label}</span>
-        <span className="aiu-value">{percent}%</span>
+        <span className="aiu-value">{formatUsagePercent(percent, percentageDisplay)}</span>
       </div>
       <div
         className={`aiu-meter aiu-meter--${getUsageTone(percent)}`}
         role="progressbar"
         aria-label={label}
-        aria-valuenow={percent}
+        aria-valuenow={displayedPercent}
+        aria-valuetext={formatUsagePercent(percent, percentageDisplay)}
         aria-valuemin={0}
         aria-valuemax={100}
       >
-        <div className="aiu-meter__fill" style={{ width: `${percent}%` }} />
+        <div className="aiu-meter__fill" style={{ width: `${displayedPercent}%` }} />
       </div>
       <div className="aiu-meta">
         {count !== null && (
@@ -112,6 +123,7 @@ const enabledByDefault = OVERLAY_DEFAULTS[usageField];
 
 const UsageOverlay: React.FC = () => {
   const [enabled, setEnabled] = useState(enabledByDefault);
+  const [percentageDisplay, setPercentageDisplay] = useState<PercentageDisplay>('used');
   const [localeVersion, setLocaleVersion] = useState(0);
   const [usage, setUsage] = useState<ClaudeUsage | CodexUsage | ExternalProviderUsage | null>(null);
   const [collapsed, setCollapsed] = useState(true);
@@ -157,6 +169,7 @@ const UsageOverlay: React.FC = () => {
         STORAGE_KEYS.usageState,
         enabledKey,
         collapsedKey,
+        STORAGE_KEYS.extensionSettings,
       ]);
 
       if (!active) {
@@ -167,6 +180,9 @@ const UsageOverlay: React.FC = () => {
       setUsage(usageState[usageField] ?? null);
       setEnabled(snapshot[enabledKey] ?? enabledByDefault);
       setCollapsed(snapshot[collapsedKey] !== false);
+      setPercentageDisplay(
+        normalizeSettings(snapshot[STORAGE_KEYS.extensionSettings]).percentageDisplay,
+      );
       setIsLoading(false);
     };
 
@@ -191,6 +207,11 @@ const UsageOverlay: React.FC = () => {
 
       if (changes[collapsedKey]) {
         setCollapsed(changes[collapsedKey].newValue !== false);
+      }
+      if (changes[STORAGE_KEYS.extensionSettings]) {
+        setPercentageDisplay(
+          normalizeSettings(changes[STORAGE_KEYS.extensionSettings].newValue).percentageDisplay,
+        );
       }
     };
 
@@ -284,10 +305,20 @@ const UsageOverlay: React.FC = () => {
           {usage ? (
             <>
               {isLimitAvailable(usage.session) && (
-                <OverlayMetric label={msg('sessionLimit')} limit={usage.session} now={now} />
+                <OverlayMetric
+                  label={msg('sessionLimit')}
+                  limit={usage.session}
+                  now={now}
+                  percentageDisplay={percentageDisplay}
+                />
               )}
               {isLimitAvailable(usage.weekly) && (
-                <OverlayMetric label={msg('weeklyLimit')} limit={usage.weekly} now={now} />
+                <OverlayMetric
+                  label={msg('weeklyLimit')}
+                  limit={usage.weekly}
+                  now={now}
+                  percentageDisplay={percentageDisplay}
+                />
               )}
             </>
           ) : isLoading || isRefreshing ? (

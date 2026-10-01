@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "تنظیمات AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% استفاده‌شده"
+  },
+  "percentageRemaining": {
+    "message": "$1% باقی‌مانده"
+  },
+  "optionsPercentageTitle": {
+    "message": "نمایش محدودیت‌ها"
+  },
+  "optionsPercentageUsed": {
+    "message": "استفاده‌شده"
+  },
+  "optionsPercentageRemaining": {
+    "message": "باقی‌مانده"
   }
 }

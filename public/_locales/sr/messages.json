@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Подешавања AI Usage Tracker-а"
+  },
+  "percentageUsed": {
+    "message": "$1% искоришћено"
+  },
+  "percentageRemaining": {
+    "message": "$1% преостало"
+  },
+  "optionsPercentageTitle": {
+    "message": "Приказ ограничења"
+  },
+  "optionsPercentageUsed": {
+    "message": "Искоришћено"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Преостало"
   }
 }

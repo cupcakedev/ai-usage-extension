@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Cài đặt AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "Đã dùng $1%"
+  },
+  "percentageRemaining": {
+    "message": "Còn $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "Hiển thị giới hạn"
+  },
+  "optionsPercentageUsed": {
+    "message": "Đã dùng"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Còn lại"
   }
 }

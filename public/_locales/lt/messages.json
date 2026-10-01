@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker nustatymai"
+  },
+  "percentageUsed": {
+    "message": "$1% panaudota"
+  },
+  "percentageRemaining": {
+    "message": "$1% liko"
+  },
+  "optionsPercentageTitle": {
+    "message": "Limitų rodymas"
+  },
+  "optionsPercentageUsed": {
+    "message": "Panaudota"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Liko"
   }
 }

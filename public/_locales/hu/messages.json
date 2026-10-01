@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker beállítások"
+  },
+  "percentageUsed": {
+    "message": "$1% felhasználva"
+  },
+  "percentageRemaining": {
+    "message": "$1% maradt"
+  },
+  "optionsPercentageTitle": {
+    "message": "Korlátok megjelenítése"
+  },
+  "optionsPercentageUsed": {
+    "message": "Felhasznált"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Fennmaradó"
   }
 }

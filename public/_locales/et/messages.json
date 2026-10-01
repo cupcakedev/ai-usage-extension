@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Trackeri seaded"
+  },
+  "percentageUsed": {
+    "message": "$1% kasutatud"
+  },
+  "percentageRemaining": {
+    "message": "$1% alles"
+  },
+  "optionsPercentageTitle": {
+    "message": "Limiitide kuvamine"
+  },
+  "optionsPercentageUsed": {
+    "message": "Kasutatud"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Alles"
   }
 }

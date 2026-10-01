@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker సెట్టింగ్‌లు"
+  },
+  "percentageUsed": {
+    "message": "$1% ఉపయోగించారు"
+  },
+  "percentageRemaining": {
+    "message": "$1% మిగిలింది"
+  },
+  "optionsPercentageTitle": {
+    "message": "పరిమితి ప్రదర్శన"
+  },
+  "optionsPercentageUsed": {
+    "message": "ఉపయోగించినది"
+  },
+  "optionsPercentageRemaining": {
+    "message": "మిగిలినది"
   }
 }

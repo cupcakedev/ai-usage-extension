@@ -1,6 +1,6 @@
 import React from 'react';
 import { msg } from '../../shared/i18n';
-import type { UsageLimit } from '../../shared/types';
+import type { PercentageDisplay, UsageLimit } from '../../shared/types';
 import { formatReset } from '../../shared/utils';
 import { ProgressBar } from './ProgressBar';
 
@@ -9,6 +9,7 @@ interface UsageMetricProps {
   limit: UsageLimit;
   now: number;
   showReset?: boolean;
+  percentageDisplay?: PercentageDisplay;
 }
 
 /** A labelled progress bar plus its "used / limit · resets" caption. */
@@ -17,6 +18,7 @@ export const UsageMetric: React.FC<UsageMetricProps> = ({
   limit,
   now,
   showReset = true,
+  percentageDisplay = 'used',
 }) => {
   const count =
     limit.countLabel ??
@@ -26,7 +28,11 @@ export const UsageMetric: React.FC<UsageMetricProps> = ({
 
   return (
     <div className="au-metric">
-      <ProgressBar label={label} percentage={limit.percentage} />
+      <ProgressBar
+        label={label}
+        percentage={limit.percentage}
+        percentageDisplay={percentageDisplay}
+      />
       {(count !== null || showReset) && (
         <p className="au-meta">
           {count !== null && (

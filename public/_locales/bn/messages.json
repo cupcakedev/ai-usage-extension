@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker সেটিংস"
+  },
+  "percentageUsed": {
+    "message": "$1% ব্যবহৃত"
+  },
+  "percentageRemaining": {
+    "message": "$1% বাকি"
+  },
+  "optionsPercentageTitle": {
+    "message": "সীমা প্রদর্শন"
+  },
+  "optionsPercentageUsed": {
+    "message": "ব্যবহৃত"
+  },
+  "optionsPercentageRemaining": {
+    "message": "বাকি"
   }
 }

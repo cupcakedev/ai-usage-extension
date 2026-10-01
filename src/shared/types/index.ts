@@ -91,6 +91,7 @@ export interface UsageState {
 }
 
 export type PopupLayout = 'single' | 'grid';
+export type PercentageDisplay = 'used' | 'remaining';
 export type ProviderMetric =
   | 'session'
   | 'weekly'
@@ -111,6 +112,7 @@ export interface ExtensionSettings {
   /** `auto` follows the browser UI language; anything else is a `_locales` folder. */
   language: LanguagePreference;
   popupLayout: PopupLayout;
+  percentageDisplay: PercentageDisplay;
   providers: Record<ProviderId, ProviderDisplaySettings>;
   badge: {
     mode: BadgeMode;

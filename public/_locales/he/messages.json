@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "הגדרות AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% בשימוש"
+  },
+  "percentageRemaining": {
+    "message": "$1% נותרו"
+  },
+  "optionsPercentageTitle": {
+    "message": "תצוגת מגבלות"
+  },
+  "optionsPercentageUsed": {
+    "message": "בשימוש"
+  },
+  "optionsPercentageRemaining": {
+    "message": "נותר"
   }
 }

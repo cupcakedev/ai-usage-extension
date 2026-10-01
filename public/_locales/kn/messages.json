@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "percentageUsed": {
+    "message": "$1% ಬಳಸಲಾಗಿದೆ"
+  },
+  "percentageRemaining": {
+    "message": "$1% ಉಳಿದಿದೆ"
+  },
+  "optionsPercentageTitle": {
+    "message": "ಮಿತಿ ಪ್ರದರ್ಶನ"
+  },
+  "optionsPercentageUsed": {
+    "message": "ಬಳಸಲಾಗಿದೆ"
+  },
+  "optionsPercentageRemaining": {
+    "message": "ಉಳಿದಿದೆ"
   }
 }

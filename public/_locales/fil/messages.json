@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Mga setting ng AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% nagamit"
+  },
+  "percentageRemaining": {
+    "message": "$1% natitira"
+  },
+  "optionsPercentageTitle": {
+    "message": "Pagpapakita ng limitasyon"
+  },
+  "optionsPercentageUsed": {
+    "message": "Nagamit"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Natitira"
   }
 }

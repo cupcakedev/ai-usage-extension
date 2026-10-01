@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Ajustes de AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% usado"
+  },
+  "percentageRemaining": {
+    "message": "$1% restante"
+  },
+  "optionsPercentageTitle": {
+    "message": "Visualización de límites"
+  },
+  "optionsPercentageUsed": {
+    "message": "Usado"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Restante"
   }
 }

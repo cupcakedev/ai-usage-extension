@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker ക്രമീകരണങ്ങൾ"
+  },
+  "percentageUsed": {
+    "message": "$1% ഉപയോഗിച്ചു"
+  },
+  "percentageRemaining": {
+    "message": "$1% ബാക്കി"
+  },
+  "optionsPercentageTitle": {
+    "message": "പരിധി പ്രദർശനം"
+  },
+  "optionsPercentageUsed": {
+    "message": "ഉപയോഗിച്ചത്"
+  },
+  "optionsPercentageRemaining": {
+    "message": "ബാക്കി"
   }
 }

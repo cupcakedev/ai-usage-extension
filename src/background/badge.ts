@@ -1,7 +1,7 @@
 import { msg } from '../shared/i18n';
 import { readExtensionSettings } from '../shared/settings';
 import type { BadgeMetric, ExtensionSettings, ProviderId, UsageState } from '../shared/types';
-import { clampPercent, isLimitAvailable } from '../shared/utils';
+import { clampPercent, formatUsagePercent, isLimitAvailable } from '../shared/utils';
 
 const iconPath = (range: number): string => `icons/badges/range-${range}.png`;
 
@@ -97,7 +97,7 @@ const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSu
     msg('appShortName'),
     ...rows.map(
       ({ provider, metric, percent }) =>
-        `${PROVIDER_TITLE[provider]} · ${metricLabel(metric)} ${percent}%`,
+        `${PROVIDER_TITLE[provider]} · ${metricLabel(metric)} ${formatUsagePercent(percent, settings.percentageDisplay)}`,
     ),
   ].join('\n');
 

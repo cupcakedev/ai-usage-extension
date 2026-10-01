@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "การตั้งค่า AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "ใช้แล้ว $1%"
+  },
+  "percentageRemaining": {
+    "message": "เหลือ $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "การแสดงขีดจำกัด"
+  },
+  "optionsPercentageUsed": {
+    "message": "ใช้แล้ว"
+  },
+  "optionsPercentageRemaining": {
+    "message": "คงเหลือ"
   }
 }

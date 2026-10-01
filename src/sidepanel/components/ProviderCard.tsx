@@ -4,6 +4,7 @@ import type {
   ClaudeUsage,
   CodexUsage,
   ExternalProviderUsage,
+  PercentageDisplay,
   ProviderIssue,
   ProviderLink,
   ProviderMetric,
@@ -31,6 +32,7 @@ interface ProviderCardProps {
   /** Optional content pinned to the bottom of the card (e.g. a setting). */
   footer?: React.ReactNode;
   metrics?: ProviderMetric[];
+  percentageDisplay?: PercentageDisplay;
 }
 
 const Skeleton: React.FC = () => (
@@ -41,11 +43,12 @@ const Skeleton: React.FC = () => (
   </div>
 );
 
-const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number; showReset: boolean }> = ({
-  usage,
-  now,
-  showReset,
-}) => {
+const ModelBreakdown: React.FC<{
+  usage: ProviderUsage;
+  now: number;
+  showReset: boolean;
+  percentageDisplay: PercentageDisplay;
+}> = ({ usage, now, showReset, percentageDisplay }) => {
   if (!usage.models.length) {
     return null;
   }
@@ -59,6 +62,7 @@ const ModelBreakdown: React.FC<{ usage: ProviderUsage; now: number; showReset: b
           limit={model.limit}
           now={now}
           showReset={showReset}
+          percentageDisplay={percentageDisplay}
         />
       ))}
     </div>
@@ -97,6 +101,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
   secondaryLabel = msg('weeklyLimit'),
   footer,
   metrics = ['session', 'weekly', 'models', 'reset', 'availableResets', 'plan', 'summary'],
+  percentageDisplay = 'used',
 }) => {
   const shows = (metric: ProviderMetric): boolean => metrics.includes(metric);
   const showsSession = shows('session') && isLimitAvailable(usage?.session);
@@ -127,6 +132,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
             <UsageMetric
               label={primaryLabel}
               limit={usage.session}
+              percentageDisplay={percentageDisplay}
               now={now}
               showReset={shows('reset')}
             />
@@ -135,11 +141,19 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({
             <UsageMetric
               label={secondaryLabel}
               limit={usage.weekly}
+              percentageDisplay={percentageDisplay}
               now={now}
               showReset={shows('reset')}
             />
           )}
-          {showsModels && <ModelBreakdown usage={usage} now={now} showReset={shows('reset')} />}
+          {showsModels && (
+            <ModelBreakdown
+              usage={usage}
+              now={now}
+              showReset={shows('reset')}
+              percentageDisplay={percentageDisplay}
+            />
+          )}
           {showsPlan && 'plan' in usage && (
             <p className="au-footnote">{msg('planLabel', usage.plan)}</p>
           )}

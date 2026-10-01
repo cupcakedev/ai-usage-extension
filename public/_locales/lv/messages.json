@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker iestatījumi"
+  },
+  "percentageUsed": {
+    "message": "$1% izmantots"
+  },
+  "percentageRemaining": {
+    "message": "$1% atlicis"
+  },
+  "optionsPercentageTitle": {
+    "message": "Limitu attēlojums"
+  },
+  "optionsPercentageUsed": {
+    "message": "Izmantots"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Atlicis"
   }
 }

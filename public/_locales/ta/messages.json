@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker அமைப்புகள்"
+  },
+  "percentageUsed": {
+    "message": "$1% பயன்படுத்தப்பட்டது"
+  },
+  "percentageRemaining": {
+    "message": "$1% மீதமுள்ளது"
+  },
+  "optionsPercentageTitle": {
+    "message": "வரம்பு காட்சி"
+  },
+  "optionsPercentageUsed": {
+    "message": "பயன்படுத்தியது"
+  },
+  "optionsPercentageRemaining": {
+    "message": "மீதமுள்ளது"
   }
 }

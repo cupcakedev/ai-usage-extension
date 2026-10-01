@@ -17,7 +17,12 @@ export function loadTypeScript(file, { globals = {}, mocks = {} } = {}) {
     cache.set(path, module);
     const source = readFileSync(path, 'utf8').replaceAll('import.meta.env', '({})');
     const { outputText } = ts.transpileModule(source, {
-      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2020,
+        jsx: ts.JsxEmit.ReactJSX,
+        esModuleInterop: true,
+      },
       fileName: path,
     });
     runInNewContext(

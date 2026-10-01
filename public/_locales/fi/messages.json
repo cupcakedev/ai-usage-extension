@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Trackerin asetukset"
+  },
+  "percentageUsed": {
+    "message": "$1% käytetty"
+  },
+  "percentageRemaining": {
+    "message": "$1% jäljellä"
+  },
+  "optionsPercentageTitle": {
+    "message": "Rajojen näyttö"
+  },
+  "optionsPercentageUsed": {
+    "message": "Käytetty"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Jäljellä"
   }
 }

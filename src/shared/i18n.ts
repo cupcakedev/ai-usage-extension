@@ -4,6 +4,11 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   appDescription:
     'Track Claude and ChatGPT (Codex) session and weekly usage limits in a popup, toolbar badge, and on-page overlay. Privacy-first, no setup.',
   popupTitle: 'Usage',
+  percentageUsed: '$1% used',
+  percentageRemaining: '$1% left',
+  optionsPercentageTitle: 'Limit display',
+  optionsPercentageUsed: 'Used',
+  optionsPercentageRemaining: 'Remaining',
   refreshUsage: 'Refresh usage',
   refreshUsageLimits: 'Refresh usage limits',
   refreshErrorPrefix: 'Couldn’t refresh',

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker の設定"
+  },
+  "percentageUsed": {
+    "message": "$1% 使用済み"
+  },
+  "percentageRemaining": {
+    "message": "残り $1%"
+  },
+  "optionsPercentageTitle": {
+    "message": "上限の表示"
+  },
+  "optionsPercentageUsed": {
+    "message": "使用済み"
+  },
+  "optionsPercentageRemaining": {
+    "message": "残り"
   }
 }

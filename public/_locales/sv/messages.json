@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Inställningar för AI Usage Tracker"
+  },
+  "percentageUsed": {
+    "message": "$1% använt"
+  },
+  "percentageRemaining": {
+    "message": "$1% kvar"
+  },
+  "optionsPercentageTitle": {
+    "message": "Visning av gränser"
+  },
+  "optionsPercentageUsed": {
+    "message": "Använt"
+  },
+  "optionsPercentageRemaining": {
+    "message": "Återstående"
   }
 }

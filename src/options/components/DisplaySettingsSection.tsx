@@ -1,11 +1,13 @@
 import { Check } from 'lucide-react';
 import { msg } from '../../shared/i18n';
-import type { PopupLayout } from '../../shared/types';
+import type { PercentageDisplay, PopupLayout } from '../../shared/types';
 import { SettingsSection } from './SettingsSection';
 
 interface DisplaySettingsSectionProps {
   popupLayout: PopupLayout;
   onPopupLayoutChange: (layout: PopupLayout) => void;
+  percentageDisplay: PercentageDisplay;
+  onPercentageDisplayChange: (display: PercentageDisplay) => void;
 }
 
 const LAYOUT_OPTIONS: Array<{
@@ -28,6 +30,8 @@ const LAYOUT_OPTIONS: Array<{
 export const DisplaySettingsSection = ({
   popupLayout,
   onPopupLayoutChange,
+  percentageDisplay,
+  onPercentageDisplayChange,
 }: DisplaySettingsSectionProps) => (
   <SettingsSection id="display">
     <div className="auo-choice-group" role="radiogroup" aria-label={msg('optionsLayoutTitle')}>
@@ -55,5 +59,19 @@ export const DisplaySettingsSection = ({
         </label>
       ))}
     </div>
+    <label className="auo-field auo-percentage-field">
+      <span className="auo-field__label">{msg('optionsPercentageTitle')}</span>
+      <select
+        value={percentageDisplay}
+        onChange={(event) => onPercentageDisplayChange(event.target.value as PercentageDisplay)}
+      >
+        <option value="used">
+          {msg('optionsPercentageUsed')} — {msg('percentageUsed', '13')}
+        </option>
+        <option value="remaining">
+          {msg('optionsPercentageRemaining')} — {msg('percentageRemaining', '87')}
+        </option>
+      </select>
+    </label>
   </SettingsSection>
 );

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker の設定"
+  },
+  "optionsRefreshTitle": {
+    "message": "使用量の更新"
+  },
+  "optionsRefreshDescription": {
+    "message": "自動更新または手動更新を選択します。"
+  },
+  "optionsRefreshAuto": {
+    "message": "自動"
+  },
+  "optionsRefreshManual": {
+    "message": "更新ボタンを押したときのみ"
+  },
+  "optionsRefreshInterval": {
+    "message": "間隔（分、最小 1）"
   }
 }

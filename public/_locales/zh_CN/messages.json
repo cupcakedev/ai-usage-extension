@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker 设置"
+  },
+  "optionsRefreshTitle": {
+    "message": "用量刷新"
+  },
+  "optionsRefreshDescription": {
+    "message": "选择自动或手动刷新。"
+  },
+  "optionsRefreshAuto": {
+    "message": "自动"
+  },
+  "optionsRefreshManual": {
+    "message": "仅点击刷新时"
+  },
+  "optionsRefreshInterval": {
+    "message": "间隔（分钟，最少 1）"
   }
 }

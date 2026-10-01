@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Indstillinger for AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Opdatering af forbrug"
+  },
+  "optionsRefreshDescription": {
+    "message": "Vælg automatisk eller manuel opdatering."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatisk"
+  },
+  "optionsRefreshManual": {
+    "message": "Kun via Opdater"
+  },
+  "optionsRefreshInterval": {
+    "message": "Interval (minutter, mindst 1)"
   }
 }

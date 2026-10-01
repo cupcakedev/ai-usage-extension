@@ -4,7 +4,7 @@ import claudeBrandAsset from '../assets/brands/claude-anthropic.jpg?inline';
 import codexBrandAsset from '../assets/brands/codex-openai.jpg?inline';
 import limitBrandAsset from '../../public/icons/limit-icon-2.0.png?inline';
 import { STORAGE_KEYS } from '../shared/constants';
-import { OVERLAY_DEFAULTS, OVERLAY_STORAGE_KEYS } from '../shared/settings';
+import { OVERLAY_DEFAULTS, OVERLAY_STORAGE_KEYS, readExtensionSettings } from '../shared/settings';
 import { useNow } from '../shared/hooks/useNow';
 import { msg, setLocaleMessages } from '../shared/i18n';
 import { watchLanguage } from '../shared/language';
@@ -213,9 +213,17 @@ const UsageOverlay: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    void requestUsageRefresh().catch((error) => {
-      console.debug('Failed to refresh usage limits from overlay', error);
-    });
+    let active = true;
+    void readExtensionSettings()
+      .then((settings) => {
+        if (active && settings.refresh.mode === 'auto') return requestUsageRefresh(true);
+      })
+      .catch((error) => {
+        console.debug('Failed to refresh usage limits from overlay', error);
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
   const toggleCollapsed = useCallback((): void => {

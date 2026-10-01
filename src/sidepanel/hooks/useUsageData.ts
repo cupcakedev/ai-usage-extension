@@ -33,9 +33,13 @@ export const useUsageData = (): UsageData => {
 
       setUsage(state);
       setSettings(preferences);
+      if (preferences.refresh.mode === 'manual') {
+        setLoading(false);
+        return;
+      }
       setRefreshing(true);
       try {
-        const next = await requestUsageRefresh();
+        const next = await requestUsageRefresh(true);
         if (active) setUsage(next);
       } catch (cause) {
         if (active) setError(cause instanceof Error ? cause.message : msg('refreshFailed'));

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "הגדרות AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "רענון שימוש"
+  },
+  "optionsRefreshDescription": {
+    "message": "בחרו רענון אוטומטי או ידני."
+  },
+  "optionsRefreshAuto": {
+    "message": "אוטומטי"
+  },
+  "optionsRefreshManual": {
+    "message": "רק בלחיצה על רענון"
+  },
+  "optionsRefreshInterval": {
+    "message": "מרווח (דקות, לפחות 1)"
   }
 }

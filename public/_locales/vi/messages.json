@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Cài đặt AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Làm mới mức sử dụng"
+  },
+  "optionsRefreshDescription": {
+    "message": "Chọn cập nhật tự động hoặc thủ công."
+  },
+  "optionsRefreshAuto": {
+    "message": "Tự động"
+  },
+  "optionsRefreshManual": {
+    "message": "Chỉ khi nhấn Làm mới"
+  },
+  "optionsRefreshInterval": {
+    "message": "Khoảng thời gian (phút, tối thiểu 1)"
   }
 }

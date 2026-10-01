@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Setări AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Actualizarea utilizării"
+  },
+  "optionsRefreshDescription": {
+    "message": "Alegeți actualizări automate sau manuale."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automat"
+  },
+  "optionsRefreshManual": {
+    "message": "Doar prin butonul Actualizează"
+  },
+  "optionsRefreshInterval": {
+    "message": "Interval (minute, minimum 1)"
   }
 }

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Inställningar för AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Uppdatering av användning"
+  },
+  "optionsRefreshDescription": {
+    "message": "Välj automatisk eller manuell uppdatering."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatisk"
+  },
+  "optionsRefreshManual": {
+    "message": "Endast via Uppdatera"
+  },
+  "optionsRefreshInterval": {
+    "message": "Intervall (minuter, minst 1)"
   }
 }

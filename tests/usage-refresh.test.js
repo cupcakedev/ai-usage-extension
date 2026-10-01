@@ -200,8 +200,8 @@ describe('provider refresh', () => {
   });
 });
 
-function workerHarness(alarm) {
-  const calls = { refresh: 0, create: [], badges: [] };
+function workerHarness(alarm, refresh = { mode: 'auto', intervalMinutes: 5 }) {
+  const calls = { refresh: 0, create: [], clear: [], badges: [] };
   const pending = deferred();
   const chrome = {
     runtime: {
@@ -214,8 +214,9 @@ function workerHarness(alarm) {
       onAlarm: event(),
       get: async () => alarm,
       create: async (...args) => calls.create.push(args),
+      clear: async (name) => calls.clear.push(name),
     },
-    storage: { onChanged: event() },
+    storage: { onChanged: event(), local: { get: async () => ({}), set: async () => {} } },
     tabs: { create: async () => {} },
   };
   loadTypeScript('src/background/index.ts', {
@@ -223,7 +224,7 @@ function workerHarness(alarm) {
     mocks: {
       '../shared/language': { applyStoredLanguage: async () => {} },
       '../shared/locales': { loadLocaleMessages: async () => ({}) },
-      '../shared/settings': { readExtensionSettings: async () => ({ language: 'auto' }) },
+      '../shared/settings': { readExtensionSettings: async () => ({ language: 'auto', refresh }) },
       './badge': { updateBadge: async (state) => calls.badges.push(state) },
       './services/analytics': { track: async () => true },
       './services/UsageService': {
@@ -237,7 +238,14 @@ function workerHarness(alarm) {
       },
     },
   });
-  return { chrome, calls, pending };
+  return {
+    chrome,
+    calls,
+    pending,
+    setRefresh: (next) => {
+      refresh = next;
+    },
+  };
 }
 
 describe('worker startup and refresh scheduling', () => {
@@ -296,12 +304,69 @@ describe('worker startup and refresh scheduling', () => {
     chrome.alarms.onAlarm.emit({ name: 'unrelated' });
     assert.equal(calls.refresh, 1);
     chrome.alarms.onAlarm.emit({ name: 'refreshUsage' });
+    await flush();
     assert.equal(calls.refresh, 2);
     await flush();
   });
+
+  it('removes the alarm and skips every automatic trigger in manual mode, but permits Refresh', async () => {
+    const { chrome, calls, pending } = workerHarness(
+      { name: 'refreshUsage', periodInMinutes: 5 },
+      { mode: 'manual', intervalMinutes: 5 },
+    );
+    await flush();
+    assert.deepEqual(calls.clear, ['refreshUsage']);
+    assert.equal(calls.create.length, 0);
+    assert.equal(calls.refresh, 0);
+    chrome.runtime.onStartup.emit();
+    chrome.runtime.onInstalled.emit({ reason: 'update' });
+    chrome.alarms.onAlarm.emit({ name: 'refreshUsage' });
+    chrome.storage.onChanged.emit({ glm_api_key: { newValue: 'synthetic-key' } }, 'local');
+    chrome.runtime.onMessage.emit(
+      { type: 'SET_GLM_TOKEN', token: 'synthetic-token' },
+      {},
+      () => {},
+    );
+    const automatic = deferred();
+    chrome.runtime.onMessage.emit(
+      { type: 'REFRESH_USAGE', automatic: true },
+      {},
+      automatic.resolve,
+    );
+    assert.equal((await automatic.promise).success, true);
+    await flush();
+    assert.equal(calls.refresh, 0);
+    const manual = deferred();
+    chrome.runtime.onMessage.emit({ type: 'REFRESH_USAGE' }, {}, manual.resolve);
+    assert.equal(calls.refresh, 1);
+    pending.resolve({ mimo: sample(13) });
+    assert.equal((await manual.promise).data.mimo.session.percentage, 13);
+  });
+
+  it('reschedules custom intervals and applies manual/automatic changes immediately', async () => {
+    const { chrome, calls, pending, setRefresh } = workerHarness(undefined, {
+      mode: 'auto',
+      intervalMinutes: 12.5,
+    });
+    await flush();
+    assert.equal(calls.create[0][1].periodInMinutes, 12.5);
+    pending.resolve({});
+    await flush();
+    setRefresh({ mode: 'manual', intervalMinutes: 12.5 });
+    chrome.storage.onChanged.emit({ ai_usage_settings: { newValue: {} } }, 'local');
+    await flush();
+    assert.deepEqual(calls.clear, ['refreshUsage']);
+    chrome.alarms.onAlarm.emit({ name: 'refreshUsage' });
+    await flush();
+    assert.equal(calls.refresh, 1);
+    setRefresh({ mode: 'auto', intervalMinutes: 30 });
+    chrome.storage.onChanged.emit({ ai_usage_settings: { newValue: {} } }, 'local');
+    await flush();
+    assert.equal(calls.create.at(-1)[1].periodInMinutes, 30);
+  });
 });
 
-function popupHarness(initial = {}) {
+function popupHarness(initial = {}, mode = 'auto') {
   const states = [];
   let cleanup;
   let refreshCalls = 0;
@@ -327,7 +392,9 @@ function popupHarness(initial = {}) {
         useCallback: (callback) => callback,
       },
       '../../shared/i18n': { msg: (key) => key },
-      '../../shared/settings': { readExtensionSettings: async () => ({ providers: {} }) },
+      '../../shared/settings': {
+        readExtensionSettings: async () => ({ providers: {}, refresh: { mode } }),
+      },
       '../../shared/messaging': {
         readUsageState: async () => initial,
         requestUsageRefresh: () => {
@@ -337,11 +404,34 @@ function popupHarness(initial = {}) {
       },
     },
   });
-  useUsageData();
-  return { states, pending, changes, cleanup: () => cleanup(), calls: () => refreshCalls };
+  const data = useUsageData();
+  return {
+    states,
+    pending,
+    changes,
+    refresh: data.refresh,
+    cleanup: () => cleanup(),
+    calls: () => refreshCalls,
+  };
 }
 
 describe('popup hydration', () => {
+  it('shows cached data without fetching in manual mode and refreshes on demand', async () => {
+    const cache = { mimo: sample(13) };
+    const { states, pending, refresh, calls, cleanup } = popupHarness(cache, 'manual');
+    await flush();
+    assert.equal(calls(), 0);
+    assert.equal(states[0], cache);
+    assert.equal(states[2], false);
+    assert.equal(states[3], false);
+    const refreshing = refresh();
+    assert.equal(calls(), 1);
+    pending.resolve({ mimo: sample(25) });
+    await refreshing;
+    assert.equal(states[0].mimo.session.percentage, 25);
+    cleanup();
+  });
+
   it('automatically refreshes, shows cache immediately, and receives partial snapshots', async () => {
     const cache = { mimo: sample(1) };
     const { states, pending, changes, calls, cleanup } = popupHarness(cache);

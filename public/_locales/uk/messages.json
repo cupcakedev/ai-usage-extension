@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Налаштування AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Оновлення даних"
+  },
+  "optionsRefreshDescription": {
+    "message": "Виберіть автоматичне або ручне оновлення."
+  },
+  "optionsRefreshAuto": {
+    "message": "Автоматично"
+  },
+  "optionsRefreshManual": {
+    "message": "Лише кнопкою «Оновити»"
+  },
+  "optionsRefreshInterval": {
+    "message": "Інтервал (хвилини, мінімум 1)"
   }
 }

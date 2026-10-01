@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Настройки на AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Обновяване на използването"
+  },
+  "optionsRefreshDescription": {
+    "message": "Изберете автоматично или ръчно обновяване."
+  },
+  "optionsRefreshAuto": {
+    "message": "Автоматично"
+  },
+  "optionsRefreshManual": {
+    "message": "Само с бутона Обнови"
+  },
+  "optionsRefreshInterval": {
+    "message": "Интервал (минути, минимум 1)"
   }
 }

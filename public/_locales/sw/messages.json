@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Mipangilio ya AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Kuonyesha matumizi upya"
+  },
+  "optionsRefreshDescription": {
+    "message": "Chagua masasisho ya moja kwa moja au ya mwenyewe."
+  },
+  "optionsRefreshAuto": {
+    "message": "Moja kwa moja"
+  },
+  "optionsRefreshManual": {
+    "message": "Ukibonyeza Onyesha upya tu"
+  },
+  "optionsRefreshInterval": {
+    "message": "Muda (dakika, angalau 1)"
   }
 }

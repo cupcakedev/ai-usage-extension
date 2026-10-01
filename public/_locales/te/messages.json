@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker సెట్టింగ్‌లు"
+  },
+  "optionsRefreshTitle": {
+    "message": "వినియోగం రిఫ్రెష్"
+  },
+  "optionsRefreshDescription": {
+    "message": "స్వయంచాలక లేదా మాన్యువల్ నవీకరణలను ఎంచుకోండి."
+  },
+  "optionsRefreshAuto": {
+    "message": "స్వయంచాలక"
+  },
+  "optionsRefreshManual": {
+    "message": "రిఫ్రెష్ బటన్ నొక్కినప్పుడు మాత్రమే"
+  },
+  "optionsRefreshInterval": {
+    "message": "వ్యవధి (నిమిషాలు, కనీసం 1)"
   }
 }

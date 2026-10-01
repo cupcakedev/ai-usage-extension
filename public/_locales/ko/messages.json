@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker 설정"
+  },
+  "optionsRefreshTitle": {
+    "message": "사용량 새로고침"
+  },
+  "optionsRefreshDescription": {
+    "message": "자동 또는 수동 새로고침을 선택하세요."
+  },
+  "optionsRefreshAuto": {
+    "message": "자동"
+  },
+  "optionsRefreshManual": {
+    "message": "새로고침 버튼을 누를 때만"
+  },
+  "optionsRefreshInterval": {
+    "message": "간격(분, 최소 1)"
   }
 }

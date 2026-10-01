@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Trackeri seaded"
+  },
+  "optionsRefreshTitle": {
+    "message": "Kasutuse värskendamine"
+  },
+  "optionsRefreshDescription": {
+    "message": "Valige automaatne või käsitsi värskendamine."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automaatne"
+  },
+  "optionsRefreshManual": {
+    "message": "Ainult nupuga Värskenda"
+  },
+  "optionsRefreshInterval": {
+    "message": "Intervall (minutites, vähemalt 1)"
   }
 }

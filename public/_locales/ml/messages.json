@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker ക്രമീകരണങ്ങൾ"
+  },
+  "optionsRefreshTitle": {
+    "message": "ഉപയോഗം പുതുക്കൽ"
+  },
+  "optionsRefreshDescription": {
+    "message": "സ്വയമേവയോ മാനുവലായോ പുതുക്കുന്നത് തിരഞ്ഞെടുക്കുക."
+  },
+  "optionsRefreshAuto": {
+    "message": "സ്വയമേവ"
+  },
+  "optionsRefreshManual": {
+    "message": "പുതുക്കൽ ബട്ടൺ അമർത്തുമ്പോൾ മാത്രം"
+  },
+  "optionsRefreshInterval": {
+    "message": "ഇടവേള (മിനിറ്റ്, കുറഞ്ഞത് 1)"
   }
 }

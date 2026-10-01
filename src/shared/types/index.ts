@@ -91,6 +91,7 @@ export interface UsageState {
 }
 
 export type PopupLayout = 'single' | 'grid';
+export type RefreshMode = 'auto' | 'manual';
 export type ProviderMetric =
   | 'session'
   | 'weekly'
@@ -111,6 +112,10 @@ export interface ExtensionSettings {
   /** `auto` follows the browser UI language; anything else is a `_locales` folder. */
   language: LanguagePreference;
   popupLayout: PopupLayout;
+  refresh: {
+    mode: RefreshMode;
+    intervalMinutes: number;
+  };
   providers: Record<ProviderId, ProviderDisplaySettings>;
   badge: {
     mode: BadgeMode;
@@ -126,7 +131,7 @@ export interface ExtensionSettings {
 
 /** Messages sent to the background service worker. */
 export type ExtensionMessage =
-  | { type: 'REFRESH_USAGE' }
+  | { type: 'REFRESH_USAGE'; automatic?: boolean }
   | { type: 'GET_LOCALE_MESSAGES' }
   | { type: 'SET_GLM_TOKEN'; token: string }
   | {

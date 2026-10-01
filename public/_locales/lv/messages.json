@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker iestatījumi"
+  },
+  "optionsRefreshTitle": {
+    "message": "Lietojuma atjaunināšana"
+  },
+  "optionsRefreshDescription": {
+    "message": "Izvēlieties automātisku vai manuālu atjaunināšanu."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automātiski"
+  },
+  "optionsRefreshManual": {
+    "message": "Tikai ar pogu Atjaunināt"
+  },
+  "optionsRefreshInterval": {
+    "message": "Intervāls (minūtes, vismaz 1)"
   }
 }

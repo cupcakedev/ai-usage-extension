@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Trackerin asetukset"
+  },
+  "optionsRefreshTitle": {
+    "message": "Käytön päivitys"
+  },
+  "optionsRefreshDescription": {
+    "message": "Valitse automaattinen tai manuaalinen päivitys."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automaattinen"
+  },
+  "optionsRefreshManual": {
+    "message": "Vain Päivitä-painikkeella"
+  },
+  "optionsRefreshInterval": {
+    "message": "Aikaväli (minuuttia, vähintään 1)"
   }
 }

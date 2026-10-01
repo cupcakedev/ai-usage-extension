@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from './constants';
+import { REFRESH_INTERVAL_MINUTES, STORAGE_KEYS } from './constants';
 import { normalizeLanguage } from './locales';
 import type {
   ExtensionSettings,
@@ -80,6 +80,7 @@ const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({
 export const createDefaultSettings = (): ExtensionSettings => ({
   language: 'auto',
   popupLayout: 'single',
+  refresh: { mode: 'auto', intervalMinutes: REFRESH_INTERVAL_MINUTES },
   providers: Object.fromEntries(
     PROVIDER_IDS.map((provider) => [provider, defaultProvider(provider)]),
   ) as ExtensionSettings['providers'],
@@ -132,6 +133,15 @@ export const normalizeSettings = (
   return {
     language: normalizeLanguage(candidate.language),
     popupLayout: candidate.popupLayout === 'grid' ? 'grid' : 'single',
+    refresh: {
+      mode: candidate.refresh?.mode === 'manual' ? 'manual' : 'auto',
+      intervalMinutes:
+        typeof candidate.refresh?.intervalMinutes === 'number' &&
+        Number.isFinite(candidate.refresh.intervalMinutes) &&
+        candidate.refresh.intervalMinutes >= 1
+          ? candidate.refresh.intervalMinutes
+          : REFRESH_INTERVAL_MINUTES,
+    },
     providers,
     badge: {
       mode: candidate.badge?.mode === 'provider' ? 'provider' : 'highest',

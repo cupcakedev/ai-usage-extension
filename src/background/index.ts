@@ -1,9 +1,4 @@
-import {
-  REFRESH_ALARM,
-  REFRESH_INTERVAL_MINUTES,
-  STORAGE_KEYS,
-  UNINSTALL_FORM_URL,
-} from '../shared/constants';
+import { REFRESH_ALARM, STORAGE_KEYS, UNINSTALL_FORM_URL } from '../shared/constants';
 import { applyStoredLanguage } from '../shared/language';
 import { loadLocaleMessages } from '../shared/locales';
 import { readExtensionSettings } from '../shared/settings';
@@ -20,6 +15,7 @@ import { UsageService } from './services/UsageService';
 let hasStartedRefresh = false;
 let refreshInFlight: Promise<UsageState> | null = null;
 let badgeUpdateQueue: Promise<void> = Promise.resolve();
+let alarmUpdateQueue: Promise<void> = Promise.resolve();
 
 const queueBadgeUpdate = (state: UsageState): Promise<void> => {
   badgeUpdateQueue = badgeUpdateQueue.catch(() => undefined).then(() => updateBadge(state));
@@ -46,7 +42,30 @@ const refreshUsage = (): Promise<UsageState> => {
 
 const refreshAfterInFlight = async (): Promise<void> => {
   await refreshInFlight?.catch(() => undefined);
-  await refreshUsage();
+  await refreshAutomatically();
+};
+
+const refreshAutomatically = async (): Promise<UsageState> => {
+  const settings = await readExtensionSettings();
+  return settings.refresh.mode === 'manual' ? UsageService.getUsageState() : refreshUsage();
+};
+
+// Serialize alarm changes so rapid settings saves cannot leave a stale schedule.
+const syncRefreshAlarm = (): Promise<void> => {
+  alarmUpdateQueue = alarmUpdateQueue
+    .catch(() => undefined)
+    .then(async () => {
+      const { refresh } = await readExtensionSettings();
+      if (refresh.mode === 'manual') {
+        await chrome.alarms.clear(REFRESH_ALARM);
+        return;
+      }
+      const alarm = await chrome.alarms.get(REFRESH_ALARM);
+      if (!alarm || alarm.periodInMinutes !== refresh.intervalMinutes) {
+        await chrome.alarms.create(REFRESH_ALARM, { periodInMinutes: refresh.intervalMinutes });
+      }
+    });
+  return alarmUpdateQueue;
 };
 
 if (UNINSTALL_FORM_URL) {
@@ -60,23 +79,16 @@ void languageReady
   .then(async (state) => {
     if (hasStartedRefresh) return;
     await queueBadgeUpdate(state).catch(() => undefined);
-    if (!hasStartedRefresh) await refreshUsage();
+    if (!hasStartedRefresh) await refreshAutomatically();
   })
   .catch(() => undefined);
 
 // Alarms can disappear across browser restarts or extension disable/enable.
 // Check on every worker start without postponing an existing alarm.
-void chrome.alarms
-  .get(REFRESH_ALARM)
-  .then(async (alarm) => {
-    if (!alarm || alarm.periodInMinutes !== REFRESH_INTERVAL_MINUTES) {
-      await chrome.alarms.create(REFRESH_ALARM, { periodInMinutes: REFRESH_INTERVAL_MINUTES });
-    }
-  })
-  .catch(() => undefined);
+void syncRefreshAlarm().catch(() => undefined);
 
 chrome.runtime.onInstalled.addListener((details) => {
-  void refreshUsage().catch(() => undefined);
+  void refreshAutomatically().catch(() => undefined);
 
   if (details.reason === 'install') {
     void chrome.tabs.create({ url: chrome.runtime.getURL('src/welcome.html') });
@@ -84,12 +96,12 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 chrome.runtime.onStartup.addListener(() => {
-  void refreshUsage().catch(() => undefined);
+  void refreshAutomatically().catch(() => undefined);
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === REFRESH_ALARM) {
-    void refreshUsage().catch(() => undefined);
+    void refreshAutomatically().catch(() => undefined);
   }
 });
 
@@ -105,6 +117,7 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
   }
 
   if (areaName === 'local' && changes[STORAGE_KEYS.extensionSettings]) {
+    void syncRefreshAlarm().catch(() => undefined);
     void applyStoredLanguage()
       .catch(() => undefined)
       .then(() => UsageService.getUsageState())
@@ -164,7 +177,7 @@ chrome.runtime.onMessage.addListener(
       return undefined;
     }
 
-    refreshUsage()
+    (message.automatic ? refreshAutomatically() : refreshUsage())
       .then((state) => sendResponse({ success: true, data: state }))
       .catch((error: unknown) => {
         sendResponse({

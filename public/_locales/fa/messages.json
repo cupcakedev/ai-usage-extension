@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "تنظیمات AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "تازه‌سازی مصرف"
+  },
+  "optionsRefreshDescription": {
+    "message": "تازه‌سازی خودکار یا دستی را انتخاب کنید."
+  },
+  "optionsRefreshAuto": {
+    "message": "خودکار"
+  },
+  "optionsRefreshManual": {
+    "message": "فقط با دکمهٔ تازه‌سازی"
+  },
+  "optionsRefreshInterval": {
+    "message": "فاصله (دقیقه، حداقل 1)"
   }
 }

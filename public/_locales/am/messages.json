@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "የAI Usage Tracker ቅንብሮች"
+  },
+  "optionsRefreshTitle": {
+    "message": "አጠቃቀምን ማደስ"
+  },
+  "optionsRefreshDescription": {
+    "message": "ራስ-ሰር ወይም በእጅ ማደስን ይምረጡ።"
+  },
+  "optionsRefreshAuto": {
+    "message": "ራስ-ሰር"
+  },
+  "optionsRefreshManual": {
+    "message": "አድስ ሲጫን ብቻ"
+  },
+  "optionsRefreshInterval": {
+    "message": "ክፍተት (ደቂቃ፣ ቢያንስ 1)"
   }
 }

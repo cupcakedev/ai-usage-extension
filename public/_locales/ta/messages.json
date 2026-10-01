@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker அமைப்புகள்"
+  },
+  "optionsRefreshTitle": {
+    "message": "பயன்பாட்டைப் புதுப்பித்தல்"
+  },
+  "optionsRefreshDescription": {
+    "message": "தானியங்கி அல்லது கைமுறை புதுப்பிப்பைத் தேர்ந்தெடுக்கவும்."
+  },
+  "optionsRefreshAuto": {
+    "message": "தானியங்கி"
+  },
+  "optionsRefreshManual": {
+    "message": "புதுப்பி பொத்தானை அழுத்தும்போது மட்டும்"
+  },
+  "optionsRefreshInterval": {
+    "message": "இடைவெளி (நிமிடங்கள், குறைந்தது 1)"
   }
 }

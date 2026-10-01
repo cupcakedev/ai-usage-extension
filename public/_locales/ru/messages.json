@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Настройки AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Обновление данных"
+  },
+  "optionsRefreshDescription": {
+    "message": "Выберите автоматическое или ручное обновление."
+  },
+  "optionsRefreshAuto": {
+    "message": "Автоматически"
+  },
+  "optionsRefreshManual": {
+    "message": "Только по кнопке «Обновить»"
+  },
+  "optionsRefreshInterval": {
+    "message": "Интервал (минуты, минимум 1)"
   }
 }

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Nastavenia AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Obnovenie využitia"
+  },
+  "optionsRefreshDescription": {
+    "message": "Vyberte automatické alebo ručné obnovenie."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automaticky"
+  },
+  "optionsRefreshManual": {
+    "message": "Iba tlačidlom Obnoviť"
+  },
+  "optionsRefreshInterval": {
+    "message": "Interval (minúty, najmenej 1)"
   }
 }

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Tetapan AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Muat semula penggunaan"
+  },
+  "optionsRefreshDescription": {
+    "message": "Pilih kemas kini automatik atau manual."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatik"
+  },
+  "optionsRefreshManual": {
+    "message": "Hanya apabila menekan Muat semula"
+  },
+  "optionsRefreshInterval": {
+    "message": "Selang (minit, minimum 1)"
   }
 }

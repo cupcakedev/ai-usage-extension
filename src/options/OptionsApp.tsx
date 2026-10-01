@@ -8,6 +8,7 @@ import { OptionsHeader } from './components/OptionsHeader';
 import { OptionsNavigation } from './components/OptionsNavigation';
 import { OverlaySettingsSection } from './components/OverlaySettingsSection';
 import { ProviderSettingsSection } from './components/ProviderSettingsSection';
+import { RefreshSettingsSection } from './components/RefreshSettingsSection';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useOptionsSettings } from './hooks/useOptionsSettings';
 import { SECTION_IDS } from './sections';
@@ -85,6 +86,18 @@ export const OptionsApp = () => {
             popupLayout={settings.popupLayout}
             onPopupLayoutChange={(layout) =>
               updateSettings((current) => withPopupLayout(current, layout))
+            }
+          />
+          <RefreshSettingsSection
+            refresh={settings.refresh}
+            onModeChange={(mode) =>
+              updateSettings((current) => ({ ...current, refresh: { ...current.refresh, mode } }))
+            }
+            onIntervalChange={(intervalMinutes) =>
+              updateSettings((current) => ({
+                ...current,
+                refresh: { ...current.refresh, intervalMinutes },
+              }))
             }
           />
           <ProviderSettingsSection

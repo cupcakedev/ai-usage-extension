@@ -1,4 +1,11 @@
-import { BadgePercent, Languages, Layers3, LayoutDashboard, MonitorCog } from 'lucide-react';
+import {
+  BadgePercent,
+  Languages,
+  Layers3,
+  LayoutDashboard,
+  MonitorCog,
+  RefreshCw,
+} from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { msg } from '../shared/i18n';
 
@@ -25,6 +32,13 @@ export const SECTIONS: SectionDefinition[] = [
     title: msg('optionsLayoutTitle'),
     description: msg('optionsLayoutDescription'),
     Icon: LayoutDashboard,
+  },
+  {
+    id: 'refresh',
+    label: msg('optionsRefreshTitle'),
+    title: msg('optionsRefreshTitle'),
+    description: msg('optionsRefreshDescription'),
+    Icon: RefreshCw,
   },
   {
     id: 'providers',

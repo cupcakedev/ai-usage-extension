@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Postavke AI Usage Trackera"
+  },
+  "optionsRefreshTitle": {
+    "message": "Osvježavanje potrošnje"
+  },
+  "optionsRefreshDescription": {
+    "message": "Odaberite automatsko ili ručno osvježavanje."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatski"
+  },
+  "optionsRefreshManual": {
+    "message": "Samo gumbom Osvježi"
+  },
+  "optionsRefreshInterval": {
+    "message": "Interval (minute, najmanje 1)"
   }
 }

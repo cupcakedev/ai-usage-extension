@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Setelan AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Penyegaran penggunaan"
+  },
+  "optionsRefreshDescription": {
+    "message": "Pilih pembaruan otomatis atau manual."
+  },
+  "optionsRefreshAuto": {
+    "message": "Otomatis"
+  },
+  "optionsRefreshManual": {
+    "message": "Hanya saat menekan Segarkan"
+  },
+  "optionsRefreshInterval": {
+    "message": "Interval (menit, minimal 1)"
   }
 }

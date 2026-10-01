@@ -19,8 +19,8 @@ export const readUsageState = async (): Promise<UsageState> => {
  * Ask the background worker to fetch fresh usage for every provider.
  * Resolves with the new snapshot or throws with a descriptive error.
  */
-export const requestUsageRefresh = async (): Promise<UsageState> => {
-  const message: ExtensionMessage = { type: 'REFRESH_USAGE' };
+export const requestUsageRefresh = async (automatic = false): Promise<UsageState> => {
+  const message: ExtensionMessage = { type: 'REFRESH_USAGE', automatic };
   const response = (await chrome.runtime.sendMessage(message)) as RefreshUsageResponse | undefined;
 
   if (!response) {

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker সেটিংস"
+  },
+  "optionsRefreshTitle": {
+    "message": "ব্যবহার রিফ্রেশ"
+  },
+  "optionsRefreshDescription": {
+    "message": "স্বয়ংক্রিয় বা ম্যানুয়াল আপডেট বেছে নিন।"
+  },
+  "optionsRefreshAuto": {
+    "message": "স্বয়ংক্রিয়"
+  },
+  "optionsRefreshManual": {
+    "message": "শুধু রিফ্রেশ বোতাম চাপলে"
+  },
+  "optionsRefreshInterval": {
+    "message": "ব্যবধান (মিনিট, সর্বনিম্ন 1)"
   }
 }

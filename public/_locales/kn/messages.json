@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "optionsRefreshTitle": {
+    "message": "ಬಳಕೆ ರಿಫ್ರೆಶ್"
+  },
+  "optionsRefreshDescription": {
+    "message": "ಸ್ವಯಂಚಾಲಿತ ಅಥವಾ ಹಸ್ತಚಾಲಿತ ನವೀಕರಣ ಆಯ್ಕೆಮಾಡಿ."
+  },
+  "optionsRefreshAuto": {
+    "message": "ಸ್ವಯಂಚಾಲಿತ"
+  },
+  "optionsRefreshManual": {
+    "message": "ರಿಫ್ರೆಶ್ ಬಟನ್ ಒತ್ತಿದಾಗ ಮಾತ್ರ"
+  },
+  "optionsRefreshInterval": {
+    "message": "ಮಧ್ಯಂತರ (ನಿಮಿಷ, ಕನಿಷ್ಠ 1)"
   }
 }

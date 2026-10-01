@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "การตั้งค่า AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "การรีเฟรชการใช้งาน"
+  },
+  "optionsRefreshDescription": {
+    "message": "เลือกอัปเดตอัตโนมัติหรือด้วยตนเอง"
+  },
+  "optionsRefreshAuto": {
+    "message": "อัตโนมัติ"
+  },
+  "optionsRefreshManual": {
+    "message": "เฉพาะเมื่อกดรีเฟรช"
+  },
+  "optionsRefreshInterval": {
+    "message": "ช่วงเวลา (นาที ขั้นต่ำ 1)"
   }
 }

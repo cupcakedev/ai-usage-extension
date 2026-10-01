@@ -18,9 +18,10 @@ or written to any other storage backend.
 
 ## alarms
 
-A single recurring `chrome.alarms` entry wakes the service worker every five
-minutes to re-fetch the usage limits. Without it the on-page overlay would
-only update while the popup was open, which defeats the at-a-glance use case.
+A single recurring `chrome.alarms` entry wakes the service worker to re-fetch
+usage limits in automatic mode. It defaults to five minutes and follows the
+user's configured interval. Manual mode removes this alarm and fetches usage
+only when the user presses Refresh.
 
 ## cookies
 

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "إعدادات AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "تحديث الاستخدام"
+  },
+  "optionsRefreshDescription": {
+    "message": "اختر التحديث التلقائي أو اليدوي."
+  },
+  "optionsRefreshAuto": {
+    "message": "تلقائي"
+  },
+  "optionsRefreshManual": {
+    "message": "فقط عند الضغط على تحديث"
+  },
+  "optionsRefreshInterval": {
+    "message": "الفاصل (بالدقائق، الحد الأدنى 1)"
   }
 }

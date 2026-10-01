@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker beállítások"
+  },
+  "optionsRefreshTitle": {
+    "message": "Használat frissítése"
+  },
+  "optionsRefreshDescription": {
+    "message": "Válasszon automatikus vagy kézi frissítést."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatikus"
+  },
+  "optionsRefreshManual": {
+    "message": "Csak a Frissítés gombbal"
+  },
+  "optionsRefreshInterval": {
+    "message": "Időköz (perc, legalább 1)"
   }
 }

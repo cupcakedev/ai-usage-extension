@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker nustatymai"
+  },
+  "optionsRefreshTitle": {
+    "message": "Naudojimo atnaujinimas"
+  },
+  "optionsRefreshDescription": {
+    "message": "Pasirinkite automatinį arba rankinį atnaujinimą."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatiškai"
+  },
+  "optionsRefreshManual": {
+    "message": "Tik mygtuku Atnaujinti"
+  },
+  "optionsRefreshInterval": {
+    "message": "Intervalas (minutės, bent 1)"
   }
 }

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker ayarları"
+  },
+  "optionsRefreshTitle": {
+    "message": "Kullanım yenileme"
+  },
+  "optionsRefreshDescription": {
+    "message": "Otomatik veya elle yenilemeyi seçin."
+  },
+  "optionsRefreshAuto": {
+    "message": "Otomatik"
+  },
+  "optionsRefreshManual": {
+    "message": "Yalnızca Yenile düğmesiyle"
+  },
+  "optionsRefreshInterval": {
+    "message": "Aralık (dakika, en az 1)"
   }
 }

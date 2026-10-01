@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Impostazioni di AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Aggiornamento utilizzo"
+  },
+  "optionsRefreshDescription": {
+    "message": "Scegli aggiornamenti automatici o manuali."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatico"
+  },
+  "optionsRefreshManual": {
+    "message": "Solo premendo Aggiorna"
+  },
+  "optionsRefreshInterval": {
+    "message": "Intervallo (minuti, minimo 1)"
   }
 }

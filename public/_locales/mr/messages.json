@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker सेटिंग्ज"
+  },
+  "optionsRefreshTitle": {
+    "message": "वापर रीफ्रेश"
+  },
+  "optionsRefreshDescription": {
+    "message": "स्वयंचलित किंवा मॅन्युअल अपडेट निवडा."
+  },
+  "optionsRefreshAuto": {
+    "message": "स्वयंचलित"
+  },
+  "optionsRefreshManual": {
+    "message": "फक्त रीफ्रेश बटण दाबल्यावर"
+  },
+  "optionsRefreshInterval": {
+    "message": "अंतराल (मिनिटे, किमान 1)"
   }
 }

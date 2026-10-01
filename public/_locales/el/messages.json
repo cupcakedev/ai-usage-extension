@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Ρυθμίσεις AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Ανανέωση χρήσης"
+  },
+  "optionsRefreshDescription": {
+    "message": "Επιλέξτε αυτόματη ή μη αυτόματη ανανέωση."
+  },
+  "optionsRefreshAuto": {
+    "message": "Αυτόματα"
+  },
+  "optionsRefreshManual": {
+    "message": "Μόνο με το κουμπί Ανανέωση"
+  },
+  "optionsRefreshInterval": {
+    "message": "Διάστημα (λεπτά, τουλάχιστον 1)"
   }
 }

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker-instellingen"
+  },
+  "optionsRefreshTitle": {
+    "message": "Gebruik vernieuwen"
+  },
+  "optionsRefreshDescription": {
+    "message": "Kies automatisch of handmatig vernieuwen."
+  },
+  "optionsRefreshAuto": {
+    "message": "Automatisch"
+  },
+  "optionsRefreshManual": {
+    "message": "Alleen via Vernieuwen"
+  },
+  "optionsRefreshInterval": {
+    "message": "Interval (minuten, minimaal 1)"
   }
 }

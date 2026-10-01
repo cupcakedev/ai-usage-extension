@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "Mga setting ng AI Usage Tracker"
+  },
+  "optionsRefreshTitle": {
+    "message": "Pag-refresh ng paggamit"
+  },
+  "optionsRefreshDescription": {
+    "message": "Pumili ng awtomatiko o manwal na pag-update."
+  },
+  "optionsRefreshAuto": {
+    "message": "Awtomatiko"
+  },
+  "optionsRefreshManual": {
+    "message": "Kapag pinindot lang ang Refresh"
+  },
+  "optionsRefreshInterval": {
+    "message": "Pagitan (minuto, hindi bababa sa 1)"
   }
 }

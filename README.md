@@ -17,8 +17,8 @@ badge.
 - **Toolbar badge** showing your highest current usage at a glance.
 - **On-page overlay** on `claude.ai` — a collapsible capsule rendered in a Shadow DOM,
   so it never clashes with the host page's styles.
-- **Background refresh** every 5 minutes via `chrome.alarms`, plus automatic refresh
-  when the popup opens and on-demand refresh.
+- **Configurable refresh**: automatic updates every 5 minutes by default, with a
+  custom interval of at least 1 minute, or manual updates only via **Refresh**.
 - **Private by design**: usage is read from your own authenticated browser sessions.
   No extension accounts, no background telemetry.
 - **Problem reports**: an optional "Report a problem" button in the popup footer sends
@@ -42,7 +42,15 @@ Then:
 1. Open `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Click **Load unpacked** and select the `dist/` directory.
-4. Sign in to the providers you want to track, then open the popup. It refreshes automatically.
+4. Sign in to the providers you want to track, then open the popup. It refreshes automatically
+   by default; in manual mode, press **Refresh**.
+
+Open **Settings** to select **Usage refresh** and set a custom interval in minutes
+(fractional values are supported). The interval is saved when you leave the field
+or press Enter. **Only on Refresh** removes the background alarm and suppresses
+automatic usage requests on worker startup, popup/overlay opening, and credential
+changes. Cached data remains visible until you press Refresh. A request already
+in progress when you switch modes is allowed to finish.
 
 ## Architecture
 
@@ -73,8 +81,9 @@ snapshot and subscribe to `chrome.storage.onChanged`, so every surface stays in 
 Each provider is saved as soon as its request completes, without waiting for slower
 providers. Requests bypass the HTTP cache and time out after 10 seconds; failed
 requests retain the last successful snapshot and its original update time.
-The worker checks and restores the recurring alarm whenever it starts. Chrome may
-delay alarms while the device is asleep.
+The worker checks the configured refresh mode whenever it starts and when settings
+change: it restores the recurring alarm in automatic mode and clears it in manual
+mode. Chrome may delay alarms while the device is asleep.
 
 **Localization:** every user-visible string goes through `msg()`
 (`src/shared/i18n.ts`), which reads `public/_locales/<locale>/messages.json`.

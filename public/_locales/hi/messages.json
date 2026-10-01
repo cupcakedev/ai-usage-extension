@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker सेटिंग्स"
+  },
+  "optionsRefreshTitle": {
+    "message": "उपयोग रीफ़्रेश"
+  },
+  "optionsRefreshDescription": {
+    "message": "स्वचालित या मैन्युअल अपडेट चुनें।"
+  },
+  "optionsRefreshAuto": {
+    "message": "स्वचालित"
+  },
+  "optionsRefreshManual": {
+    "message": "केवल रीफ़्रेश बटन दबाने पर"
+  },
+  "optionsRefreshInterval": {
+    "message": "अंतराल (मिनट, न्यूनतम 1)"
   }
 }

@@ -352,5 +352,20 @@
   },
   "optionsTitle": {
     "message": "AI Usage Tracker સેટિંગ્સ"
+  },
+  "optionsRefreshTitle": {
+    "message": "વપરાશ રિફ્રેશ"
+  },
+  "optionsRefreshDescription": {
+    "message": "આપમેળે અથવા જાતે અપડેટ પસંદ કરો."
+  },
+  "optionsRefreshAuto": {
+    "message": "આપમેળે"
+  },
+  "optionsRefreshManual": {
+    "message": "ફક્ત રિફ્રેશ બટન દબાવવાથી"
+  },
+  "optionsRefreshInterval": {
+    "message": "અંતરાલ (મિનિટ, ઓછામાં ઓછું 1)"
   }
 }

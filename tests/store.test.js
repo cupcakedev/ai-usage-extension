@@ -44,6 +44,7 @@ const hostHeading = (host) => `host: ${host}`;
 const expectedPermissionHeadings = [
   ...(manifest.permissions ?? []),
   ...(manifest.host_permissions ?? []).map(hostHeading),
+  ...(manifest.optional_host_permissions ?? []).map((host) => `optional ${hostHeading(host)}`),
 ];
 
 const CHROME_SHORT_DESCRIPTION_MAX = 132;

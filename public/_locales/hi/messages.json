@@ -90,7 +90,7 @@
     "message": "अभी कोई डेटा नहीं है। साइन इन करके qwencloud.com खोलें, फिर अपडेट करें।"
   },
   "emptyOpenCode": {
-    "message": "अभी कोई डेटा नहीं है। साइन इन करके opencode.ai/console खोलें, फिर अपडेट करें।"
+    "message": "अभी कोई डेटा नहीं है। सेटिंग्स में opencode.ai/console से API कुंजी जोड़ें, फिर रीफ़्रेश करें।"
   },
   "emptyOverlay": {
     "message": "अभी कोई डेटा नहीं है। पॉपअप खोलें और अपडेट करें।"
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "वैकल्पिक। इसका उपयोग तब करें जब यह ब्राउज़र z.ai में साइन इन न हो, या BigModel खातों के लिए।"
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API कुंजी"
   },
   "optionsBadgeTitle": {
     "message": "आइकन रेंज"

@@ -1,4 +1,6 @@
 import { STORAGE_KEYS } from '../../shared/constants';
+import { hasProviderAccess } from '../../shared/permissions';
+import { readExtensionSettings } from '../../shared/settings';
 import {
   ClaudeUsage,
   CodexUsage,
@@ -8,6 +10,7 @@ import {
   MiniMaxUsage,
   MiMoUsage,
   ModelUsage,
+  OverlayProviderId,
   OpenCodeUsage,
   ProviderId,
   QwenUsage,
@@ -30,8 +33,9 @@ const ENDPOINTS = {
   mimoPlanUsage: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/usage',
   glmQuota: 'https://api.z.ai/api/monitor/usage/quota/limit',
   glmQuotaCn: 'https://open.bigmodel.cn/api/monitor/usage/quota/limit',
-  opencodeUsage: 'https://opencode.ai/console/api/billing/drawer/usage',
-  opencodeGoStatus: 'https://opencode.ai/console/api/go/status',
+  opencodeGo: 'https://opencode.ai/zen/go/v1/usage',
+  opencodeBudgets: 'https://opencode.ai/console/api/policies/current-budgets',
+  opencodeBilling: 'https://opencode.ai/console/api/billing/status',
 } as const;
 
 const QWEN_REGIONS = [
@@ -829,77 +833,75 @@ const opencodeMicroCents = (value: unknown): number | null => {
   return microCents === null ? null : microCents / MICRO_CENTS_PER_DOLLAR;
 };
 
-const opencodeBudgetLimit = (budget: Json): number | null =>
-  opencodeMicroCents(budget.limitMicroCents ?? budget.amountMicroCents) ??
-  readNumeric(budget.limitDollars ?? budget.amountDollars ?? budget.limit ?? budget.amount);
-
-const opencodeBudgetWindow = (budget: unknown, period: Json | null): UsageLimit | null => {
-  const entry = asJson(budget);
-  if (!entry || !period) return null;
-  const limit = opencodeBudgetLimit(entry);
-  const spent = opencodeMicroCents(period.totalCostMicroCents);
-  if (limit === null || limit <= 0 || spent === null) return null;
-  return {
-    ...buildLimit(percentFromUsedLimit(spent, limit), isoFromUnknown(period.endsAt)),
-    countLabel: `${opencodeDollars(spent)} / ${opencodeDollars(limit)}`,
-  };
-};
-
-const opencodeSummary = (personal: Json, workspace: Json | null): string => {
-  const spent = opencodeMicroCents(personal.totalCostMicroCents) ?? 0;
-  const go = asArray(personal.daily)
-    .map(asJson)
-    .reduce((sum, day) => sum + (opencodeMicroCents(day?.goCostMicroCents) ?? 0), 0);
-  const team = workspace ? opencodeMicroCents(workspace.totalCostMicroCents) : null;
-  const parts = [`This month · ${opencodeDollars(spent)}`];
-  if (go > 0) parts.push(`Go ${opencodeDollars(go)}`);
-  if (team !== null && team > spent) parts.push(`Workspace ${opencodeDollars(team)}`);
-  return parts.join(' · ');
-};
+interface OpenCodeFetch {
+  usage: OpenCodeUsage | null;
+  rejected: boolean;
+}
 
 const opencodeGoMeter = (value: unknown): UsageLimit | null => {
   const meter = asJson(value);
   if (!meter) return null;
-  const used = opencodeMicroCents(meter.usedMicroCents);
-  const limit = opencodeMicroCents(meter.limitMicroCents);
-  const percentage = percentFromUsedLimit(used, limit);
-  if (used === null || limit === null || percentage === null) return null;
-  return {
-    ...buildLimit(percentage, isoFromUnknown(meter.resetsAt)),
-    countLabel: `${opencodeDollars(used)} / ${opencodeDollars(limit)}`,
-  };
+  const percent = readString(meter.status) === 'rate-limited' ? 100 : readNumeric(meter.percent);
+  if (percent === null) return null;
+  return buildLimit(percent, isoFromUnknown(meter.resetsAt));
 };
 
-const buildOpenCodeUsage = (usage: Json | null, go: Json | null): OpenCodeUsage | null => {
-  const personal = asJson(usage?.personal);
-  const workspace = asJson(usage?.workspace);
-  const hasSpend = personal !== null && opencodeMicroCents(personal.totalCostMicroCents) !== null;
+const opencodeBudgetRows = (budgets: unknown): ModelUsage[] =>
+  asArray(budgets)
+    .map(asJson)
+    .filter((entry): entry is Json => entry !== null)
+    .flatMap((budget, index) => {
+      const limit = readNumeric(budget.limitDollars);
+      if (limit === null) return [];
+      const shared = readBoolean(budget.shared) === true || budget.scope === 'combined';
+      const resetsAt = isoFromUnknown(budget.resetsAt);
+      const id = readString(budget.ruleID) ?? String(index);
+      const row = (key: string, label: string, spent: number): ModelUsage => ({
+        id: `opencode:budget:${id}:${key}`,
+        label,
+        limit: {
+          ...buildLimit(limit > 0 ? (spent / limit) * 100 : 100, resetsAt),
+          countLabel: `${opencodeDollars(spent)} / ${opencodeDollars(limit)}`,
+        },
+      });
+      const name = shared ? 'Workspace budget' : 'Budget';
+      const models = asArray(budget.models)
+        .map(asJson)
+        .filter((entry): entry is Json => entry !== null);
+      if (budget.per === 'model' && models.length) {
+        return models.map((model, modelIndex) =>
+          row(
+            readString(model.modelID) ?? String(modelIndex),
+            `${firstString(model.name, model.modelID) ?? 'Model'} · ${name}`,
+            readNumeric(model.spentDollars) ?? 0,
+          ),
+        );
+      }
+      return [row('all', name, readNumeric(budget.spentDollars) ?? 0)];
+    });
 
-  const meters = asJson(asJson(go?.access)?.meters);
-  const fiveHour = opencodeGoMeter(meters?.fiveHour);
-  const week = opencodeGoMeter(meters?.week);
-  const month = opencodeGoMeter(meters?.month);
-
-  const budgets = asJson(usage?.budgets);
-  const budget =
-    opencodeBudgetWindow(budgets?.personal, personal) ??
-    opencodeBudgetWindow(budgets?.workspace, workspace);
-
+const buildOpenCodeUsage = (
+  go: Json | null,
+  budgets: unknown,
+  billing: Json | null,
+): OpenCodeUsage | null => {
+  const meters = asJson(go?.usage);
+  const rolling = opencodeGoMeter(meters?.rolling);
+  const weekly = opencodeGoMeter(meters?.weekly);
+  const monthly = opencodeGoMeter(meters?.monthly);
   const models: ModelUsage[] = [
-    ...(month ? [{ id: 'opencode:go:month', label: 'Go · Monthly', limit: month }] : []),
-    ...(budget ? [{ id: 'opencode:budget', label: 'Monthly budget', limit: budget }] : []),
+    ...(monthly ? [{ id: 'opencode:go:monthly', label: 'Go · Monthly', limit: monthly }] : []),
+    ...opencodeBudgetRows(budgets),
   ];
-  if (!hasSpend && !fiveHour && !week && !models.length) return null;
-
-  const product = readString(go?.product);
-  const plan = fiveHour || week || month ? humanizeSlug(product ?? 'go') : undefined;
+  const balance = opencodeMicroCents(billing?.balanceMicroCents);
+  if (!rolling && !weekly && !models.length && balance === null) return null;
 
   return {
-    ...(plan ? { plan } : {}),
-    ...finalize({ session: fiveHour ?? unavailableLimit(), weekly: week ?? unavailableLimit() }),
+    ...(rolling || weekly || monthly ? { plan: 'Go' } : {}),
+    ...finalize({ session: rolling ?? unavailableLimit(), weekly: weekly ?? unavailableLimit() }),
     models,
-    ...(hasSpend && personal ? { summary: opencodeSummary(personal, workspace) } : {}),
-    raw: { usage, go },
+    ...(balance !== null ? { summary: `Balance · ${opencodeDollars(balance)}` } : {}),
+    raw: { go, budgets, billing },
   };
 };
 
@@ -1002,7 +1004,11 @@ export class UsageService {
   }
 
   static async refreshAllUsage(): Promise<UsageState> {
-    const next = await this.getUsageState();
+    const [next, settings] = await Promise.all([this.getUsageState(), readExtensionSettings()]);
+    const isActive = (provider: ProviderId): boolean =>
+      settings.providers[provider].visible ||
+      (settings.badge.mode === 'provider' && settings.badge.provider === provider) ||
+      (provider in settings.overlays && settings.overlays[provider as OverlayProviderId]);
     let saveQueue: Promise<void> = Promise.resolve();
 
     // Publish each provider as it finishes. Serialize writes so a slower storage
@@ -1021,11 +1027,28 @@ export class UsageService {
       provider: K,
       fetchUsage: () => Promise<UsageState[K] | null>,
     ): Promise<void> => {
+      if (!isActive(provider)) return;
       const usage = await fetchUsage().catch(() => null);
       if (usage)
         await publish(() => {
           next[provider] = usage;
         });
+    };
+
+    const refreshKeyedProvider = async <K extends 'glm' | 'opencode'>(
+      provider: K,
+      fetchUsage: () => Promise<{ usage: UsageState[K] | null; rejected: boolean }>,
+    ): Promise<void> => {
+      if (!isActive(provider)) return;
+      const result = await fetchUsage().catch(() => ({ usage: null, rejected: false }));
+      await publish(() => {
+        if (result.usage) next[provider] = result.usage;
+        const issues = { ...next.issues };
+        if (result.rejected) issues[provider] = 'auth';
+        else delete issues[provider];
+        if (Object.keys(issues).length) next.issues = issues;
+        else delete next.issues;
+      });
     };
 
     const results = await Promise.allSettled([
@@ -1036,18 +1059,8 @@ export class UsageService {
       refreshProvider('cursor', () => this.fetchCursorUsage()),
       refreshProvider('mimo', () => this.fetchMiMoUsage()),
       refreshProvider('qwen', () => this.fetchQwenUsage()),
-      refreshProvider('opencode', () => this.fetchOpenCodeUsage()),
-      (async () => {
-        const glm = await this.fetchGlmUsage().catch(() => ({ usage: null, rejected: false }));
-        await publish(() => {
-          if (glm.usage) next.glm = glm.usage;
-          const issues = { ...next.issues };
-          if (glm.rejected) issues.glm = 'auth';
-          else delete issues.glm;
-          if (Object.keys(issues).length) next.issues = issues;
-          else delete next.issues;
-        });
-      })(),
+      refreshKeyedProvider('glm', () => this.fetchGlmUsage()),
+      refreshKeyedProvider('opencode', () => this.fetchOpenCodeUsage()),
     ]);
 
     // Keep the refresh in flight until every provider has settled, even if a
@@ -1195,12 +1208,25 @@ export class UsageService {
     return null;
   }
 
-  static async fetchOpenCodeUsage(): Promise<OpenCodeUsage | null> {
-    const [usage, go] = await Promise.all([
-      fetchJson(ENDPOINTS.opencodeUsage).catch(() => null),
-      fetchJson(ENDPOINTS.opencodeGoStatus).catch(() => null),
-    ]);
-    return buildOpenCodeUsage(usage?.ok ? usage.data : null, go?.ok ? go.data : null);
+  static async fetchOpenCodeUsage(): Promise<OpenCodeFetch> {
+    const stored = await chrome.storage.local.get(STORAGE_KEYS.opencodeApiKey);
+    const apiKey = readString(stored[STORAGE_KEYS.opencodeApiKey]);
+    if (!apiKey || !(await hasProviderAccess('opencode'))) return { usage: null, rejected: false };
+
+    const init: RequestInit = {
+      credentials: 'omit',
+      headers: { Authorization: `Bearer ${apiKey}` },
+    };
+    const results = await Promise.all(
+      [ENDPOINTS.opencodeGo, ENDPOINTS.opencodeBudgets, ENDPOINTS.opencodeBilling].map((url) =>
+        fetchJson(url, init).catch(() => null),
+      ),
+    );
+    const [go, budgets, billing] = results.map((result) => (result?.ok ? result.data : null));
+    const usage = buildOpenCodeUsage(go, budgets?.value ?? budgets, billing);
+    const rejected =
+      !usage && results.some((result) => result?.ok === false && result.status === 401);
+    return { usage, rejected };
   }
 
   private static async fetchQwenSecToken(region: QwenRegion): Promise<string | null> {

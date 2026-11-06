@@ -90,7 +90,7 @@
     "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് qwencloud.com തുറന്ന് പുതുക്കുക."
   },
   "emptyOpenCode": {
-    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് opencode.ai/console തുറന്ന് പുതുക്കുക."
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. ക്രമീകരണങ്ങളിൽ opencode.ai/console ൽ നിന്നുള്ള API കീ ചേർത്ത് പുതുക്കുക."
   },
   "emptyOverlay": {
     "message": "ഇതുവരെ ഡാറ്റയില്ല. പോപ്പപ്പ് തുറന്ന് പുതുക്കുക."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "ഐച്ഛികം. ഈ ബ്രൗസറിൽ z.ai-യിൽ സൈൻ ഇൻ ചെയ്തിട്ടില്ലെങ്കിൽ, അല്ലെങ്കിൽ BigModel അക്കൗണ്ടുകൾക്കായി ഉപയോഗിക്കുക."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API കീ"
   },
   "optionsBadgeTitle": {
     "message": "ഐക്കൺ ശ്രേണി"

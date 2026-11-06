@@ -90,7 +90,7 @@
     "message": "Belum ada data. Buka qwencloud.com saat sudah masuk, lalu segarkan."
   },
   "emptyOpenCode": {
-    "message": "Belum ada data. Buka opencode.ai/console saat sudah masuk, lalu segarkan."
+    "message": "Belum ada data. Tambahkan kunci API dari opencode.ai/console di pengaturan, lalu muat ulang."
   },
   "emptyOverlay": {
     "message": "Belum ada data. Buka popup lalu segarkan."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Opsional. Gunakan jika peramban ini tidak masuk ke z.ai, atau untuk akun BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Kunci API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Rentang ikon"

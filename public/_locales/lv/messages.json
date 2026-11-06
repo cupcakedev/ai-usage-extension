@@ -90,7 +90,7 @@
     "message": "Datu vēl nav. Atveriet qwencloud.com, esot pieteicies, un atsvaidziniet."
   },
   "emptyOpenCode": {
-    "message": "Datu vēl nav. Atveriet opencode.ai/console, esot pieteicies, un atsvaidziniet."
+    "message": "Vēl nav datu. Iestatījumos pievienojiet API atslēgu no opencode.ai/console un atsvaidziniet."
   },
   "emptyOverlay": {
     "message": "Datu vēl nav. Atveriet uznirstošo logu un atsvaidziniet."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Neobligāti. Izmantojiet, ja šajā pārlūkā nav pieteikšanās z.ai, vai BigModel kontiem."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API atslēga"
   },
   "optionsBadgeTitle": {
     "message": "Ikonas diapazons"

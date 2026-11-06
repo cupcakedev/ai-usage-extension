@@ -90,7 +90,7 @@
     "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் qwencloud.com ஐத் திறந்து புதுப்பிக்கவும்."
   },
   "emptyOpenCode": {
-    "message": "இதுவரை தரவு இல்லை. உள்நுழைந்த நிலையில் opencode.ai/console ஐத் திறந்து புதுப்பிக்கவும்."
+    "message": "இன்னும் தரவு இல்லை. அமைப்புகளில் opencode.ai/console இலிருந்து API விசையைச் சேர்த்து, பின்னர் புதுப்பிக்கவும்."
   },
   "emptyOverlay": {
     "message": "இதுவரை தரவு இல்லை. பாப்அப்பைத் திறந்து புதுப்பிக்கவும்."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "விருப்பத்தேர்வு. இந்த உலாவியில் z.ai-இல் உள்நுழையவில்லை என்றால், அல்லது BigModel கணக்குகளுக்குப் பயன்படுத்தவும்."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API விசை"
   },
   "optionsBadgeTitle": {
     "message": "ஐகான் வரம்பு"

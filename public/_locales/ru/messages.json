@@ -90,7 +90,7 @@
     "message": "Данных пока нет. Откройте qwencloud.com под своим аккаунтом и обновите."
   },
   "emptyOpenCode": {
-    "message": "Данных пока нет. Откройте opencode.ai/console под своим аккаунтом и обновите."
+    "message": "Данных пока нет. Добавьте API-ключ из opencode.ai/console в настройках и обновите."
   },
   "emptyOverlay": {
     "message": "Данных пока нет. Откройте попап и обновите."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Необязательно. Используйте, если в этом браузере нет входа в z.ai, или для аккаунтов BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "API-ключ OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Диапазон значка"

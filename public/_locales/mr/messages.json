@@ -90,7 +90,7 @@
     "message": "अद्याप डेटा नाही. साइन इन असताना qwencloud.com उघडा आणि रिफ्रेश करा."
   },
   "emptyOpenCode": {
-    "message": "अद्याप डेटा नाही. साइन इन असताना opencode.ai/console उघडा आणि रिफ्रेश करा."
+    "message": "अद्याप डेटा नाही. सेटिंग्जमध्ये opencode.ai/console वरील API की जोडा, नंतर रिफ्रेश करा."
   },
   "emptyOverlay": {
     "message": "अद्याप डेटा नाही. पॉपअप उघडा आणि रिफ्रेश करा."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "पर्यायी. हा ब्राउझर z.ai मध्ये साइन इन नसल्यास, किंवा BigModel खात्यांसाठी वापरा."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API की"
   },
   "optionsBadgeTitle": {
     "message": "चिन्हाची श्रेणी"

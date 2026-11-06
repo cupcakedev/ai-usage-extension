@@ -90,7 +90,7 @@
     "message": "لا توجد بيانات بعد. افتح qwencloud.com بعد تسجيل الدخول ثم حدّث."
   },
   "emptyOpenCode": {
-    "message": "لا توجد بيانات بعد. افتح opencode.ai/console بعد تسجيل الدخول ثم حدّث."
+    "message": "لا توجد بيانات بعد. أضف مفتاح API من opencode.ai/console في الإعدادات، ثم حدّث."
   },
   "emptyOverlay": {
     "message": "لا توجد بيانات بعد. افتح النافذة المنبثقة ثم حدّث."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "اختياري. استخدمه إذا لم يكن هذا المتصفح مسجّل الدخول إلى z.ai، أو لحسابات BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "مفتاح OpenCode API"
   },
   "optionsBadgeTitle": {
     "message": "نطاق الأيقونة"

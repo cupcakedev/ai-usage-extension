@@ -9,15 +9,24 @@ const sample = (percentage) => ({
   status: 'ok',
   lastUpdated: 123,
 });
-const providers = ['Claude', 'Codex', 'MiniMax', 'Kimi', 'Cursor', 'MiMo', 'Qwen', 'OpenCode'];
+const providers = ['Claude', 'Codex', 'MiniMax', 'Kimi', 'Cursor', 'MiMo', 'Qwen'];
 
-function serviceHarness(initial = {}, globals = {}) {
+const allVisible = {
+  providers: Object.fromEntries(
+    [...providers.map((name) => name.toLowerCase()), 'glm', 'opencode'].map((id) => [id, { visible: true }]),
+  ),
+};
+
+function serviceHarness(initial = {}, globals = {}, settings = allVisible) {
   let stored = structuredClone(initial);
   const writes = [];
   const chrome = {
     storage: {
       local: {
-        get: async () => ({ ai_usage_state: structuredClone(stored) }),
+        get: async () => ({
+          ai_usage_state: structuredClone(stored),
+          ai_usage_settings: settings,
+        }),
         set: async (value) => {
           stored = structuredClone(value.ai_usage_state);
           writes.push(stored);
@@ -34,6 +43,7 @@ function serviceHarness(initial = {}, globals = {}) {
 function stubProviders(service) {
   for (const name of providers) service[`fetch${name}Usage`] = async () => null;
   service.fetchGlmUsage = async () => ({ usage: null, rejected: false });
+  service.fetchOpenCodeUsage = async () => ({ usage: null, rejected: false });
 }
 
 describe('provider refresh', () => {
@@ -65,6 +75,32 @@ describe('provider refresh', () => {
     const result = await refresh;
     assert.deepEqual(structuredClone(result), read());
     assert.equal(read().qwen.session.percentage, 56);
+  });
+
+  it('skips providers that are hidden, unless the badge or an overlay needs them', async () => {
+    const settings = {
+      providers: { claude: { visible: false }, codex: { visible: false }, cursor: { visible: true } },
+      badge: { mode: 'provider', provider: 'kimi' },
+      overlays: { claude: false, codex: true },
+    };
+    const { UsageService } = serviceHarness({}, {}, settings);
+    const called = [];
+    for (const name of providers) {
+      UsageService[`fetch${name}Usage`] = async () => {
+        called.push(name);
+        return null;
+      };
+    }
+    UsageService.fetchGlmUsage = async () => {
+      called.push('Glm');
+      return { usage: null, rejected: false };
+    };
+    UsageService.fetchOpenCodeUsage = async () => {
+      called.push('OpenCode');
+      return { usage: null, rejected: false };
+    };
+    await UsageService.refreshAllUsage();
+    assert.deepEqual(called.sort(), ['Codex', 'Cursor', 'Kimi']);
   });
 
   it('serializes storage writes even when providers finish together', async () => {
@@ -217,6 +253,7 @@ function workerHarness(alarm, refresh = { mode: 'auto', intervalMinutes: 5 }) {
       clear: async (name) => calls.clear.push(name),
     },
     storage: { onChanged: event(), local: { get: async () => ({}), set: async () => {} } },
+    permissions: { onAdded: event() },
     tabs: { create: async () => {} },
   };
   loadTypeScript('src/background/index.ts', {
@@ -505,5 +542,93 @@ describe('popup hydration', () => {
     pending.resolve({ mimo: sample(9) });
     await flush();
     assert.deepEqual(states, before);
+  });
+});
+
+describe('OpenCode usage', () => {
+  const json = (body, status = 200) =>
+    new Response(JSON.stringify(body), {
+      status,
+      headers: { 'content-type': 'application/json' },
+    });
+
+  function openCodeHarness(respond, { key = 'oc-key', granted = true } = {}) {
+    const requests = [];
+    const chrome = {
+      storage: { local: { get: async () => (key ? { opencode_api_key: key } : {}) } },
+      permissions: { contains: async () => granted },
+    };
+    const fetch = async (url, init) => {
+      requests.push({ url: String(url), init });
+      return respond(String(url));
+    };
+    const { UsageService } = loadTypeScript('src/background/services/UsageService.ts', {
+      globals: { chrome, fetch },
+    });
+    return { UsageService, requests };
+  }
+
+  it('reads Go windows, budgets and balance with the API key', async () => {
+    const { UsageService, requests } = openCodeHarness((url) => {
+      if (url.endsWith('/zen/go/v1/usage')) {
+        return json({
+          usage: {
+            rolling: { status: 'ok', percent: 12, resetsAt: '2026-11-06T17:02:09.000Z' },
+            weekly: { status: 'rate-limited', percent: 98, resetsAt: '2026-11-09T00:00:00.000Z' },
+            monthly: { status: 'ok', percent: 40, resetsAt: '2026-12-06T11:32:50.000Z' },
+          },
+        });
+      }
+      if (url.endsWith('/current-budgets')) {
+        return json([
+          {
+            ruleID: 'rule_1',
+            limitDollars: 20,
+            spentDollars: 5,
+            per: 'set',
+            shared: false,
+            models: [],
+            resetsAt: '2026-12-01T00:00:00.000Z',
+          },
+        ]);
+      }
+      return json({ balanceMicroCents: '1250000000' });
+    });
+
+    const { usage, rejected } = await UsageService.fetchOpenCodeUsage();
+    assert.equal(rejected, false);
+    assert.equal(usage.plan, 'Go');
+    assert.equal(usage.session.percentage, 12);
+    assert.equal(usage.weekly.percentage, 100);
+    assert.deepEqual(
+      structuredClone(usage.models).map((model) => [model.label, model.limit.percentage, model.limit.countLabel]),
+      [
+        ['Go · Monthly', 40, undefined],
+        ['Budget', 25, '$5.00 / $20.00'],
+      ],
+    );
+    assert.equal(usage.summary, 'Balance · $12.50');
+    assert.equal(requests.length, 3);
+    for (const { init } of requests) {
+      assert.equal(init.headers.Authorization, 'Bearer oc-key');
+      assert.equal(init.credentials, 'omit');
+    }
+  });
+
+  it('reports a rejected key and skips requests without a key or permission', async () => {
+    const rejectedKey = openCodeHarness(() => json({ error: 'Unauthorized' }, 401));
+    assert.deepEqual(structuredClone(await rejectedKey.UsageService.fetchOpenCodeUsage()), {
+      usage: null,
+      rejected: true,
+    });
+
+    for (const options of [{ key: null }, { granted: false }]) {
+      const harness = openCodeHarness(() => json({}), options);
+      assert.deepEqual(structuredClone(await harness.UsageService.fetchOpenCodeUsage()), {
+        usage: null,
+        rejected: false,
+      });
+      assert.equal(harness.requests.length, 0);
+    }
   });
 });

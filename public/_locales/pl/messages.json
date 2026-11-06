@@ -90,7 +90,7 @@
     "message": "Brak danych. Otwórz qwencloud.com po zalogowaniu i odśwież."
   },
   "emptyOpenCode": {
-    "message": "Brak danych. Otwórz opencode.ai/console po zalogowaniu i odśwież."
+    "message": "Brak danych. Dodaj w ustawieniach klucz API z opencode.ai/console, a następnie odśwież."
   },
   "emptyOverlay": {
     "message": "Brak danych. Otwórz popup i odśwież."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Opcjonalnie. Użyj go, gdy ta przeglądarka nie jest zalogowana w z.ai, lub dla kont BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Klucz API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Zakres ikony"

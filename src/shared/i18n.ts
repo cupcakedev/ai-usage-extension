@@ -41,7 +41,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   emptyMiMo: 'No data yet. Open platform.xiaomimimo.com while signed in, then refresh.',
   emptyGlm: 'No data yet. Open z.ai while signed in, then refresh.',
   emptyQwen: 'No data yet. Open qwencloud.com while signed in, then refresh.',
-  emptyOpenCode: 'No data yet. Open opencode.ai/console while signed in, then refresh.',
+  emptyOpenCode: 'No data yet. Add an API key from opencode.ai/console in settings, then refresh.',
   planUsage: 'Plan usage',
   tokenPlan: 'Token plan',
   emptyOverlay: 'No data yet. Open the popup and refresh.',
@@ -113,6 +113,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   optionsGlmKeyLabel: 'GLM API key',
   optionsGlmKeyHint:
     'Optional. Use it when this browser is not signed in to z.ai, or for BigModel accounts.',
+  optionsOpenCodeKeyLabel: 'OpenCode API key',
   optionsBadgeTitle: 'Badge range',
   optionsBadgeDescription: 'The extension icon changes by 10% ranges based on this source.',
   optionsBadgeSourceLabel: 'Badge source',

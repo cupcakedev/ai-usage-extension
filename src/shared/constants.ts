@@ -16,6 +16,7 @@ export const STORAGE_KEYS = {
   codexOverlayEnabled: 'codex_overlay_enabled',
   codexOverlayCollapsed: 'codex_overlay_collapsed',
   glmApiKey: 'glm_api_key',
+  opencodeApiKey: 'opencode_api_key',
   /** User-configurable display, badge, and overlay preferences. */
   extensionSettings: 'ai_usage_settings',
   /** Anonymous, locally generated id attached to manual problem reports. */

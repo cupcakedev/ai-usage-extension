@@ -90,7 +90,7 @@
     "message": "Duomenų dar nėra. Prisijungę atidarykite qwencloud.com ir atnaujinkite."
   },
   "emptyOpenCode": {
-    "message": "Duomenų dar nėra. Prisijungę atidarykite opencode.ai/console ir atnaujinkite."
+    "message": "Duomenų dar nėra. Nustatymuose pridėkite API raktą iš opencode.ai/console ir atnaujinkite."
   },
   "emptyOverlay": {
     "message": "Duomenų dar nėra. Atidarykite iššokantį langą ir atnaujinkite."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Neprivaloma. Naudokite, jei šioje naršyklėje neprisijungta prie z.ai, arba BigModel paskyroms."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API raktas"
   },
   "optionsBadgeTitle": {
     "message": "Piktogramos diapazonas"

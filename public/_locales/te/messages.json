@@ -90,7 +90,7 @@
     "message": "ఇంకా డేటా లేదు. సైన్ ఇన్ అయి qwencloud.com తెరిచి రిఫ్రెష్ చేయండి."
   },
   "emptyOpenCode": {
-    "message": "ఇంకా డేటా లేదు. సైన్ ఇన్ అయి opencode.ai/console తెరిచి రిఫ్రెష్ చేయండి."
+    "message": "ఇంకా డేటా లేదు. సెట్టింగ్‌లలో opencode.ai/console నుండి API కీని జోడించి, ఆపై రిఫ్రెష్ చేయండి."
   },
   "emptyOverlay": {
     "message": "ఇంకా డేటా లేదు. పాపప్ తెరిచి రిఫ్రెష్ చేయండి."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "ఐచ్ఛికం. ఈ బ్రౌజర్‌లో z.ai కు సైన్ ఇన్ కాకపోతే, లేదా BigModel ఖాతాల కోసం వాడండి."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API కీ"
   },
   "optionsBadgeTitle": {
     "message": "చిహ్న పరిధి"

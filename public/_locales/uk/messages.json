@@ -90,7 +90,7 @@
     "message": "Даних ще немає. Відкрийте qwencloud.com з активним входом і оновіть."
   },
   "emptyOpenCode": {
-    "message": "Даних ще немає. Відкрийте opencode.ai/console з активним входом і оновіть."
+    "message": "Даних поки немає. Додайте API-ключ з opencode.ai/console у налаштуваннях і оновіть."
   },
   "emptyOverlay": {
     "message": "Даних ще немає. Відкрийте попап і оновіть."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Необовʼязково. Використайте, якщо в цьому браузері немає входу в z.ai, або для акаунтів BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Ключ API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Діапазон значка"

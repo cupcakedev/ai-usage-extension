@@ -24,7 +24,9 @@
     "https://home.qwencloud.com/*",
     "https://cs-data.qwencloud.com/*",
     "https://platform-home.qianwenai.com/*",
-    "https://cs-data.qianwenai.com/*",
+    "https://cs-data.qianwenai.com/*"
+  ],
+  "optional_host_permissions": [
     "https://opencode.ai/*"
   ],
   "background": {

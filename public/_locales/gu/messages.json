@@ -90,7 +90,7 @@
     "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે qwencloud.com ખોલો અને રિફ્રેશ કરો."
   },
   "emptyOpenCode": {
-    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે opencode.ai/console ખોલો અને રિફ્રેશ કરો."
+    "message": "હજી કોઈ ડેટા નથી. સેટિંગ્સમાં opencode.ai/console પરથી API કી ઉમેરો, પછી રિફ્રેશ કરો."
   },
   "emptyOverlay": {
     "message": "હજુ ડેટા નથી. પોપઅપ ખોલો અને રિફ્રેશ કરો."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "વૈકલ્પિક. આ બ્રાઉઝર z.ai માં સાઇન ઇન ન હોય ત્યારે, અથવા BigModel એકાઉન્ટ માટે વાપરો."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API કી"
   },
   "optionsBadgeTitle": {
     "message": "આઇકન રેન્જ"

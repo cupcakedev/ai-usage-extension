@@ -125,10 +125,11 @@ reading the console session token needed to authenticate the quota request.
 The China mainland Qwen data gateway, serving the same read-only token-plan
 quota endpoints as the global host for accounts registered in that region.
 
-## host: https://opencode.ai/*
+## optional host: https://opencode.ai/*
 
-The OpenCode Console. Required to call the two read-only endpoints the
-console's Billing drawer uses — billing usage and Go status — so the extension
-can show the OpenCode Go 5-hour, weekly, and monthly limits, this month's spend,
-and any monthly budget for the signed-in account. No inference endpoint is ever
-called and nothing is written.
+Optional, requested only when the user turns on the OpenCode card in settings.
+Used to call three read-only OpenCode endpoints — Go usage, current budgets,
+and billing status — with the API key the user pastes into settings, so the
+extension can show the OpenCode Go 5-hour, weekly, and monthly limits, monthly
+budgets, and the prepaid balance. Cookies are not sent, no inference endpoint
+is ever called, and the key never leaves the device except to opencode.ai.

@@ -1,6 +1,7 @@
 import { RotateCcw } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { msg } from '../shared/i18n';
+import { requestProviderAccess } from '../shared/permissions';
 import { BadgeSettingsSection } from './components/BadgeSettingsSection';
 import { DisplaySettingsSection } from './components/DisplaySettingsSection';
 import { LanguageSettingsSection } from './components/LanguageSettingsSection';
@@ -109,9 +110,17 @@ export const OptionsApp = () => {
           />
           <ProviderSettingsSection
             providers={settings.providers}
-            onProviderVisibilityChange={(provider, visible) =>
-              updateSettings((current) => withProviderVisibility(current, provider, visible))
-            }
+            onProviderVisibilityChange={(provider, visible) => {
+              if (!visible) {
+                updateSettings((current) => withProviderVisibility(current, provider, false));
+                return;
+              }
+              void requestProviderAccess(provider).then((granted) => {
+                if (granted) {
+                  updateSettings((current) => withProviderVisibility(current, provider, true));
+                }
+              });
+            }}
             onMetricToggle={(provider, metric) =>
               updateSettings((current) => withToggledProviderMetric(current, provider, metric))
             }

@@ -90,7 +90,7 @@
     "message": "まだデータがありません。ログイン済みの qwencloud.com を開いて更新してください。"
   },
   "emptyOpenCode": {
-    "message": "まだデータがありません。ログイン済みの opencode.ai/console を開いて更新してください。"
+    "message": "まだデータがありません。設定で opencode.ai/console の API キーを追加してから更新してください。"
   },
   "emptyOverlay": {
     "message": "まだデータがありません。ポップアップを開いて更新してください。"
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "任意。このブラウザーで z.ai にログインしていない場合や、BigModel アカウントで使用します。"
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode APIキー"
   },
   "optionsBadgeTitle": {
     "message": "アイコンの段階"

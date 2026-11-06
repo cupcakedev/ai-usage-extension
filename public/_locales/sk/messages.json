@@ -90,7 +90,7 @@
     "message": "Zatiaľ žiadne dáta. Otvorte qwencloud.com prihlásení a obnovte."
   },
   "emptyOpenCode": {
-    "message": "Zatiaľ žiadne dáta. Otvorte opencode.ai/console prihlásení a obnovte."
+    "message": "Zatiaľ žiadne údaje. Pridajte v nastaveniach kľúč API z opencode.ai/console a obnovte."
   },
   "emptyOverlay": {
     "message": "Zatiaľ žiadne dáta. Otvorte popup a obnovte."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Voliteľné. Použite, ak tento prehliadač nie je prihlásený do z.ai, alebo pre účty BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "API kľúč OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Rozsah ikony"

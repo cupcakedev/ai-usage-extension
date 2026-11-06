@@ -90,7 +90,7 @@
     "message": "Ancora nessun dato. Apri qwencloud.com con accesso effettuato e aggiorna."
   },
   "emptyOpenCode": {
-    "message": "Ancora nessun dato. Apri opencode.ai/console con accesso effettuato e aggiorna."
+    "message": "Ancora nessun dato. Aggiungi una chiave API di opencode.ai/console nelle impostazioni, poi aggiorna."
   },
   "emptyOverlay": {
     "message": "Ancora nessun dato. Apri il popup e aggiorna."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Facoltativa. Usala se questo browser non ha l'accesso a z.ai, o per gli account BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Chiave API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Intervallo dell’icona"

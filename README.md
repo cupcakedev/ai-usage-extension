@@ -5,7 +5,7 @@
 
 A Chrome extension (Manifest V3) that tracks usage limits from **Claude**, **Codex**,
 **MiniMax**, **Kimi Code**, **Cursor**, **Xiaomi MiMo**, the **GLM Coding Plan**
-(z.ai), the **Qwen Coding Plan** (Qwen Cloud), and **OpenCode Go**, using your existing browser
+(z.ai), the **Qwen Coding Plan** (Qwen Cloud), and **OpenCode Go** (with a Console API key), using your existing browser
 sessions. It surfaces the data in a popup, an on-page overlay, and the toolbar
 badge.
 

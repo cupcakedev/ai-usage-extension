@@ -90,7 +90,7 @@
     "message": "Bado hakuna data. Fungua qwencloud.com ukiwa umeingia, kisha onyesha upya."
   },
   "emptyOpenCode": {
-    "message": "Bado hakuna data. Fungua opencode.ai/console ukiwa umeingia, kisha onyesha upya."
+    "message": "Bado hakuna data. Ongeza ufunguo wa API kutoka opencode.ai/console katika mipangilio, kisha onyesha upya."
   },
   "emptyOverlay": {
     "message": "Bado hakuna data. Fungua kidirisha ibukizi na uonyeshe upya."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Si lazima. Itumie ikiwa kivinjari hiki hakijaingia katika z.ai, au kwa akaunti za BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Ufunguo wa API wa OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Kiwango cha aikoni"

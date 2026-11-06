@@ -90,7 +90,7 @@
     "message": "아직 데이터가 없습니다. 로그인한 상태로 qwencloud.com을 열고 새로고침하세요."
   },
   "emptyOpenCode": {
-    "message": "아직 데이터가 없습니다. 로그인한 상태로 opencode.ai/console을 열고 새로고침하세요."
+    "message": "아직 데이터가 없습니다. 설정에서 opencode.ai/console의 API 키를 추가한 뒤 새로고침하세요."
   },
   "emptyOverlay": {
     "message": "아직 데이터가 없습니다. 팝업을 열고 새로고침하세요."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "선택 사항. 이 브라우저에서 z.ai에 로그인하지 않았거나 BigModel 계정을 사용할 때 입력하세요."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API 키"
   },
   "optionsBadgeTitle": {
     "message": "아이콘 구간"

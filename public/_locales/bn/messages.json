@@ -90,7 +90,7 @@
     "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় qwencloud.com খুলে রিফ্রেশ করুন।"
   },
   "emptyOpenCode": {
-    "message": "এখনও ডেটা নেই। সাইন ইন করা অবস্থায় opencode.ai/console খুলে রিফ্রেশ করুন।"
+    "message": "এখনও কোনো ডেটা নেই। সেটিংসে opencode.ai/console থেকে একটি API কী যোগ করুন, তারপর রিফ্রেশ করুন।"
   },
   "emptyOverlay": {
     "message": "এখনও ডেটা নেই। পপআপ খুলে রিফ্রেশ করুন।"
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "ঐচ্ছিক। এই ব্রাউজারে z.ai-তে সাইন ইন না থাকলে, বা BigModel অ্যাকাউন্টের জন্য ব্যবহার করুন।"
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API কী"
   },
   "optionsBadgeTitle": {
     "message": "আইকনের রেঞ্জ"

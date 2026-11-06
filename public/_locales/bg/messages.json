@@ -90,7 +90,7 @@
     "message": "Още няма данни. Отворете qwencloud.com с вход в профила и обновете."
   },
   "emptyOpenCode": {
-    "message": "Още няма данни. Отворете opencode.ai/console с вход в профила и обновете."
+    "message": "Все още няма данни. Добавете API ключ от opencode.ai/console в настройките и обновете."
   },
   "emptyOverlay": {
     "message": "Още няма данни. Отворете изскачащия прозорец и обновете."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "По избор. Използвайте го, ако браузърът не е влязъл в z.ai, или за акаунти в BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API ключ"
   },
   "optionsBadgeTitle": {
     "message": "Диапазон на иконата"

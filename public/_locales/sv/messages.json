@@ -90,7 +90,7 @@
     "message": "Inga data än. Öppna qwencloud.com när du är inloggad och uppdatera."
   },
   "emptyOpenCode": {
-    "message": "Inga data än. Öppna opencode.ai/console när du är inloggad och uppdatera."
+    "message": "Inga data ännu. Lägg till en API-nyckel från opencode.ai/console i inställningarna och uppdatera."
   },
   "emptyOverlay": {
     "message": "Inga data än. Öppna popupen och uppdatera."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Valfritt. Använd den om den här webbläsaren inte är inloggad på z.ai, eller för BigModel-konton."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API-nyckel"
   },
   "optionsBadgeTitle": {
     "message": "Ikonintervall"

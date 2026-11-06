@@ -90,7 +90,7 @@
     "message": "Henüz veri yok. Oturum açıkken qwencloud.com'u açın, sonra yenileyin."
   },
   "emptyOpenCode": {
-    "message": "Henüz veri yok. Oturum açıkken opencode.ai/console'u açın, sonra yenileyin."
+    "message": "Henüz veri yok. Ayarlardan opencode.ai/console adresinden aldığınız API anahtarını ekleyin, ardından yenileyin."
   },
   "emptyOverlay": {
     "message": "Henüz veri yok. Açılır pencereyi açıp yenileyin."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "İsteğe bağlı. Bu tarayıcıda z.ai oturumu açık değilse veya BigModel hesapları için kullanın."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API anahtarı"
   },
   "optionsBadgeTitle": {
     "message": "Simge aralığı"

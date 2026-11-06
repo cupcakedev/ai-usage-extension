@@ -90,7 +90,7 @@
     "message": "Ingen data endnu. Åbn qwencloud.com, mens du er logget ind, og opdater."
   },
   "emptyOpenCode": {
-    "message": "Ingen data endnu. Åbn opencode.ai/console, mens du er logget ind, og opdater."
+    "message": "Ingen data endnu. Tilføj en API-nøgle fra opencode.ai/console i indstillingerne, og opdater."
   },
   "emptyOverlay": {
     "message": "Ingen data endnu. Åbn popuppen, og opdater."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Valgfrit. Brug den, hvis denne browser ikke er logget ind på z.ai, eller til BigModel-konti."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API-nøgle"
   },
   "optionsBadgeTitle": {
     "message": "Ikonets interval"

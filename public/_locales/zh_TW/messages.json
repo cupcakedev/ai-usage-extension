@@ -90,7 +90,7 @@
     "message": "尚無資料。登入後開啟 qwencloud.com，再重新整理。"
   },
   "emptyOpenCode": {
-    "message": "尚無資料。登入後開啟 opencode.ai/console，再重新整理。"
+    "message": "尚無資料。請在設定中新增來自 opencode.ai/console 的 API 金鑰，然後重新整理。"
   },
   "emptyOverlay": {
     "message": "尚無資料。開啟彈出視窗並重新整理。"
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "選填。當此瀏覽器未登入 z.ai，或使用 BigModel 帳號時填寫。"
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API 金鑰"
   },
   "optionsBadgeTitle": {
     "message": "圖示區間"

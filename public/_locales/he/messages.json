@@ -90,7 +90,7 @@
     "message": "אין נתונים עדיין. פתחו את qwencloud.com כשאתם מחוברים ורעננו."
   },
   "emptyOpenCode": {
-    "message": "אין נתונים עדיין. פתחו את opencode.ai/console כשאתם מחוברים ורעננו."
+    "message": "אין עדיין נתונים. הוסיפו מפתח API מ-opencode.ai/console בהגדרות ורעננו."
   },
   "emptyOverlay": {
     "message": "אין נתונים עדיין. פתחו את החלון הקופץ ורעננו."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "אופציונלי. השתמשו בו אם הדפדפן הזה לא מחובר ל‑z.ai, או עבור חשבונות BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "מפתח API של OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "טווח הסמל"

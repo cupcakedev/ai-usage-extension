@@ -90,7 +90,7 @@
     "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το qwencloud.com συνδεδεμένοι και ανανεώστε."
   },
   "emptyOpenCode": {
-    "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το opencode.ai/console συνδεδεμένοι και ανανεώστε."
+    "message": "Δεν υπάρχουν δεδομένα ακόμη. Προσθέστε ένα κλειδί API από το opencode.ai/console στις ρυθμίσεις και ανανεώστε."
   },
   "emptyOverlay": {
     "message": "Δεν υπάρχουν δεδομένα. Ανοίξτε το αναδυόμενο παράθυρο και ανανεώστε."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Προαιρετικό. Χρησιμοποιήστε το αν αυτό το πρόγραμμα περιήγησης δεν είναι συνδεδεμένο στο z.ai ή για λογαριασμούς BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Κλειδί API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Εύρος εικονιδίου"

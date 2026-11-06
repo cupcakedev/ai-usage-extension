@@ -90,7 +90,7 @@
     "message": "Encara no hi ha dades. Obre qwencloud.com amb la sessió iniciada i actualitza."
   },
   "emptyOpenCode": {
-    "message": "Encara no hi ha dades. Obre opencode.ai/console amb la sessió iniciada i actualitza."
+    "message": "Encara no hi ha dades. Afegeix una clau d’API de opencode.ai/console a la configuració i actualitza."
   },
   "emptyOverlay": {
     "message": "Encara no hi ha dades. Obre la finestra emergent i actualitza."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Opcional. Fes-la servir si aquest navegador no té la sessió iniciada a z.ai, o per a comptes de BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Clau API de OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Interval de la icona"

@@ -90,7 +90,7 @@
     "message": "Chưa có dữ liệu. Mở qwencloud.com khi đã đăng nhập rồi làm mới."
   },
   "emptyOpenCode": {
-    "message": "Chưa có dữ liệu. Mở opencode.ai/console khi đã đăng nhập rồi làm mới."
+    "message": "Chưa có dữ liệu. Thêm khóa API từ opencode.ai/console trong cài đặt, sau đó làm mới."
   },
   "emptyOverlay": {
     "message": "Chưa có dữ liệu. Mở cửa sổ bật lên rồi làm mới."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Tùy chọn. Dùng khi trình duyệt này chưa đăng nhập z.ai, hoặc cho tài khoản BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Khóa API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Dải biểu tượng"

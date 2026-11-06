@@ -90,7 +90,7 @@
     "message": "ยังไม่มีข้อมูล เปิด qwencloud.com ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
   },
   "emptyOpenCode": {
-    "message": "ยังไม่มีข้อมูล เปิด opencode.ai/console ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+    "message": "ยังไม่มีข้อมูล เพิ่มคีย์ API จาก opencode.ai/console ในการตั้งค่า แล้วรีเฟรช"
   },
   "emptyOverlay": {
     "message": "ยังไม่มีข้อมูล เปิดป๊อปอัปแล้วรีเฟรช"
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "ไม่บังคับ ใช้เมื่อเบราว์เซอร์นี้ยังไม่ได้ลงชื่อเข้าใช้ z.ai หรือสำหรับบัญชี BigModel"
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "คีย์ API ของ OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "ช่วงของไอคอน"

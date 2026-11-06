@@ -90,7 +90,7 @@
     "message": "Încă nu există date. Deschide qwencloud.com autentificat, apoi reîmprospătează."
   },
   "emptyOpenCode": {
-    "message": "Încă nu există date. Deschide opencode.ai/console autentificat, apoi reîmprospătează."
+    "message": "Încă nu există date. Adaugă o cheie API de la opencode.ai/console în setări, apoi reîmprospătează."
   },
   "emptyOverlay": {
     "message": "Încă nu există date. Deschide popupul și reîmprospătează."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Opțional. Folosește-o dacă acest browser nu este autentificat pe z.ai sau pentru conturi BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Cheie API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Intervalul iconiței"

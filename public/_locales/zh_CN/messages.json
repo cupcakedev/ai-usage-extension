@@ -90,7 +90,7 @@
     "message": "暂无数据。请在登录状态下打开 qwencloud.com，然后刷新。"
   },
   "emptyOpenCode": {
-    "message": "暂无数据。请在登录状态下打开 opencode.ai/console，然后刷新。"
+    "message": "暂无数据。请在设置中添加来自 opencode.ai/console 的 API 密钥，然后刷新。"
   },
   "emptyOverlay": {
     "message": "暂无数据。请打开弹窗并刷新。"
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "可选。当此浏览器未登录 z.ai，或使用 BigModel 账号时填写。"
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API 密钥"
   },
   "optionsBadgeTitle": {
     "message": "图标区间"

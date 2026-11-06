@@ -90,7 +90,7 @@
     "message": "Andmeid veel pole. Ava sisselogituna qwencloud.com ja värskenda."
   },
   "emptyOpenCode": {
-    "message": "Andmeid veel pole. Ava sisselogituna opencode.ai/console ja värskenda."
+    "message": "Andmeid veel pole. Lisa seadetes opencode.ai/console API-võti ja värskenda."
   },
   "emptyOverlay": {
     "message": "Andmeid veel pole. Ava hüpikaken ja värskenda."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Valikuline. Kasuta seda, kui see brauser pole z.ai-sse sisse logitud, või BigModeli kontode puhul."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode-i API-võti"
   },
   "optionsBadgeTitle": {
     "message": "Ikooni vahemik"

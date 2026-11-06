@@ -90,7 +90,7 @@
     "message": "Nog geen gegevens. Open qwencloud.com terwijl je bent ingelogd en vernieuw."
   },
   "emptyOpenCode": {
-    "message": "Nog geen gegevens. Open opencode.ai/console terwijl je bent ingelogd en vernieuw."
+    "message": "Nog geen gegevens. Voeg in de instellingen een API-sleutel van opencode.ai/console toe en vernieuw."
   },
   "emptyOverlay": {
     "message": "Nog geen gegevens. Open de pop-up en vernieuw."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Optioneel. Gebruik hem als deze browser niet is aangemeld bij z.ai, of voor BigModel-accounts."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API-sleutel"
   },
   "optionsBadgeTitle": {
     "message": "Pictogrambereik"

@@ -90,7 +90,7 @@
     "message": "Noch keine Daten. Öffne qwencloud.com angemeldet und aktualisiere."
   },
   "emptyOpenCode": {
-    "message": "Noch keine Daten. Öffne opencode.ai/console angemeldet und aktualisiere."
+    "message": "Noch keine Daten. Füge in den Einstellungen einen API-Schlüssel von opencode.ai/console hinzu und aktualisiere."
   },
   "emptyOverlay": {
     "message": "Noch keine Daten. Öffne das Popup und aktualisiere."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Optional. Nutze ihn, wenn dieser Browser nicht bei z.ai angemeldet ist, oder für BigModel-Konten."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode-API-Schlüssel"
   },
   "optionsBadgeTitle": {
     "message": "Symbolbereich"

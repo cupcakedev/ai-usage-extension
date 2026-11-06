@@ -90,7 +90,7 @@
     "message": "Wala pang data. Buksan ang qwencloud.com habang naka-sign in, tapos mag-refresh."
   },
   "emptyOpenCode": {
-    "message": "Wala pang data. Buksan ang opencode.ai/console habang naka-sign in, tapos mag-refresh."
+    "message": "Wala pang data. Magdagdag ng API key mula sa opencode.ai/console sa settings, pagkatapos ay i-refresh."
   },
   "emptyOverlay": {
     "message": "Wala pang data. Buksan ang popup at mag-refresh."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Opsyonal. Gamitin ito kung hindi naka-sign in ang browser na ito sa z.ai, o para sa mga BigModel account."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API key"
   },
   "optionsBadgeTitle": {
     "message": "Saklaw ng icon"

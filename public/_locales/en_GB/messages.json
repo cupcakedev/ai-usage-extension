@@ -90,7 +90,7 @@
     "message": "No data yet. Open qwencloud.com while signed in, then refresh."
   },
   "emptyOpenCode": {
-    "message": "No data yet. Open opencode.ai/console while signed in, then refresh."
+    "message": "No data yet. Add an API key from opencode.ai/console in settings, then refresh."
   },
   "emptyOverlay": {
     "message": "No data yet. Open the popup and refresh."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Optional. Use it when this browser is not signed in to z.ai, or for BigModel accounts."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API key"
   },
   "optionsBadgeTitle": {
     "message": "Badge range"

@@ -90,7 +90,7 @@
     "message": "Aucune donnée. Ouvrez qwencloud.com connecté, puis actualisez."
   },
   "emptyOpenCode": {
-    "message": "Aucune donnée. Ouvrez opencode.ai/console connecté, puis actualisez."
+    "message": "Aucune donnée pour l’instant. Ajoutez une clé API de opencode.ai/console dans les paramètres, puis actualisez."
   },
   "emptyOverlay": {
     "message": "Aucune donnée. Ouvrez le popup et actualisez."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Facultatif. À utiliser si ce navigateur n'est pas connecté à z.ai, ou pour les comptes BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Clé API OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Plage de l’icône"

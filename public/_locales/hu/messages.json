@@ -90,7 +90,7 @@
     "message": "Még nincs adat. Nyisd meg a qwencloud.com oldalt bejelentkezve, majd frissíts."
   },
   "emptyOpenCode": {
-    "message": "Még nincs adat. Nyisd meg a opencode.ai/console oldalt bejelentkezve, majd frissíts."
+    "message": "Még nincs adat. Adj hozzá egy API-kulcsot a(z) opencode.ai/console oldalról a beállításokban, majd frissíts."
   },
   "emptyOverlay": {
     "message": "Még nincs adat. Nyisd meg a felugró ablakot és frissíts."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Nem kötelező. Akkor használd, ha ez a böngésző nincs bejelentkezve a z.ai-ba, vagy BigModel-fiókokhoz."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API-kulcs"
   },
   "optionsBadgeTitle": {
     "message": "Ikon tartománya"

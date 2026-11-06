@@ -90,7 +90,7 @@
     "message": "Aún no hay datos. Abre qwencloud.com con sesión iniciada y actualiza."
   },
   "emptyOpenCode": {
-    "message": "Aún no hay datos. Abre opencode.ai/console con sesión iniciada y actualiza."
+    "message": "Aún no hay datos. Agrega una clave de API de opencode.ai/console en la configuración y actualiza."
   },
   "emptyOverlay": {
     "message": "Aún no hay datos. Abre la ventana emergente y actualiza."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Opcional. Úsala si este navegador no tiene la sesión iniciada en z.ai, o para cuentas de BigModel."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "Clave de API de OpenCode"
   },
   "optionsBadgeTitle": {
     "message": "Rango del ícono"

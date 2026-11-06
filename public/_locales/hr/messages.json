@@ -90,7 +90,7 @@
     "message": "Još nema podataka. Otvorite qwencloud.com dok ste prijavljeni i osvježite."
   },
   "emptyOpenCode": {
-    "message": "Još nema podataka. Otvorite opencode.ai/console dok ste prijavljeni i osvježite."
+    "message": "Još nema podataka. Dodajte API ključ s opencode.ai/console u postavkama pa osvježite."
   },
   "emptyOverlay": {
     "message": "Još nema podataka. Otvorite skočni prozor i osvježite."
@@ -283,6 +283,9 @@
   },
   "optionsGlmKeyHint": {
     "message": "Neobavezno. Upotrijebite ga ako ovaj preglednik nije prijavljen na z.ai ili za BigModel račune."
+  },
+  "optionsOpenCodeKeyLabel": {
+    "message": "OpenCode API ključ"
   },
   "optionsBadgeTitle": {
     "message": "Raspon ikone"

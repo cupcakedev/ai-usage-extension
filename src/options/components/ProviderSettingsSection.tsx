@@ -1,9 +1,10 @@
 import { Check, EyeOff } from 'lucide-react';
+import { STORAGE_KEYS } from '../../shared/constants';
 import { msg } from '../../shared/i18n';
 import { PROVIDER_IDS, PROVIDER_SUPPORTED_METRICS } from '../../shared/settings';
 import type { ExtensionSettings, ProviderId, ProviderMetric } from '../../shared/types';
 import { metricLabel, PROVIDER_DETAILS } from '../config';
-import { GlmCredentialField } from './GlmCredentialField';
+import { CredentialField } from './CredentialField';
 import { SettingsSection } from './SettingsSection';
 import { Switch } from './Switch';
 
@@ -88,7 +89,21 @@ export const ProviderSettingsSection = ({
                 ))}
               </fieldset>
 
-              {provider === 'glm' && <GlmCredentialField />}
+              {provider === 'glm' && (
+                <CredentialField
+                  id="glm-api-key"
+                  storageKey={STORAGE_KEYS.glmApiKey}
+                  label={msg('optionsGlmKeyLabel')}
+                  hint={msg('optionsGlmKeyHint')}
+                />
+              )}
+              {provider === 'opencode' && (
+                <CredentialField
+                  id="opencode-api-key"
+                  storageKey={STORAGE_KEYS.opencodeApiKey}
+                  label={msg('optionsOpenCodeKeyLabel')}
+                />
+              )}
             </section>
           );
         })}

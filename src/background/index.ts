@@ -105,6 +105,10 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 });
 
+chrome.permissions.onAdded.addListener(() => {
+  void refreshAfterInFlight().catch(() => undefined);
+});
+
 chrome.storage.onChanged.addListener((changes, areaName) => {
   if (areaName === 'local' && changes[STORAGE_KEYS.usageState]) {
     void queueBadgeUpdate((changes[STORAGE_KEYS.usageState].newValue ?? {}) as UsageState).catch(
@@ -112,14 +116,24 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     );
   }
 
-  if (areaName === 'local' && changes[STORAGE_KEYS.glmApiKey]) {
+  if (
+    areaName === 'local' &&
+    (changes[STORAGE_KEYS.glmApiKey] || changes[STORAGE_KEYS.opencodeApiKey])
+  ) {
     void refreshAfterInFlight().catch(() => undefined);
   }
 
   if (areaName === 'local' && changes[STORAGE_KEYS.extensionSettings]) {
     const { oldValue, newValue } = changes[STORAGE_KEYS.extensionSettings];
+    const shown = (value: typeof newValue, provider: string): boolean =>
+      value?.providers?.[provider]?.visible === true;
+    const providerShown = Object.keys(newValue?.providers ?? {}).some(
+      (provider) => shown(newValue, provider) && !shown(oldValue, provider),
+    );
     if (oldValue?.refresh?.mode === 'manual' && newValue?.refresh?.mode !== 'manual') {
       void refreshUsage().catch(() => undefined);
+    } else if (providerShown) {
+      void refreshAfterInFlight().catch(() => undefined);
     }
     void syncRefreshAlarm().catch(() => undefined);
     void applyStoredLanguage()

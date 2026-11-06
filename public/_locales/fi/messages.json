@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Ei vielä tietoja. Avaa qwencloud.com kirjautuneena ja päivitä."
   },
+  "emptyOpenCode": {
+    "message": "Ei vielä tietoja. Avaa opencode.ai/console kirjautuneena ja päivitä."
+  },
   "emptyOverlay": {
     "message": "Ei vielä tietoja. Avaa ponnahdusikkuna ja päivitä."
   },

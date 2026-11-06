@@ -4,6 +4,7 @@ import cursorBrandAsset from '../assets/brands/cursor.webp';
 import kimiBrandAsset from '../assets/brands/kimi.webp';
 import minimaxBrandAsset from '../assets/brands/minimax.webp';
 import mimoBrandAsset from '../assets/brands/xiaomimimo.webp';
+import opencodeBrandAsset from '../assets/brands/opencode.webp';
 import qwenBrandAsset from '../assets/brands/qwen.webp';
 import zaiBrandAsset from '../assets/brands/zai.webp';
 import { MessageSquareWarning, RefreshCw, Settings } from 'lucide-react';
@@ -101,6 +102,14 @@ const PROVIDERS: Array<{
       host: 'qwencloud.com',
       url: 'https://home.qwencloud.com/billing/subscription/token-plan-individual',
     },
+  },
+  {
+    id: 'opencode',
+    title: 'OpenCode',
+    iconSrc: opencodeBrandAsset,
+    iconAlt: 'OpenCode',
+    emptyHint: msg('emptyOpenCode'),
+    emptyHintLink: { host: 'opencode.ai/console', url: 'https://opencode.ai/console' },
   },
 ];
 

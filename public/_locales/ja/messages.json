@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "まだデータがありません。ログイン済みの qwencloud.com を開いて更新してください。"
   },
+  "emptyOpenCode": {
+    "message": "まだデータがありません。ログイン済みの opencode.ai/console を開いて更新してください。"
+  },
   "emptyOverlay": {
     "message": "まだデータがありません。ポップアップを開いて更新してください。"
   },

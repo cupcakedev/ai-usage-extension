@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "אין נתונים עדיין. פתחו את qwencloud.com כשאתם מחוברים ורעננו."
   },
+  "emptyOpenCode": {
+    "message": "אין נתונים עדיין. פתחו את opencode.ai/console כשאתם מחוברים ורעננו."
+  },
   "emptyOverlay": {
     "message": "אין נתונים עדיין. פתחו את החלון הקופץ ורעננו."
   },

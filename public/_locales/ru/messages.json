@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Данных пока нет. Откройте qwencloud.com под своим аккаунтом и обновите."
   },
+  "emptyOpenCode": {
+    "message": "Данных пока нет. Откройте opencode.ai/console под своим аккаунтом и обновите."
+  },
   "emptyOverlay": {
     "message": "Данных пока нет. Откройте попап и обновите."
   },

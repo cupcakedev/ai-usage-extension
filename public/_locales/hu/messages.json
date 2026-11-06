@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Még nincs adat. Nyisd meg a qwencloud.com oldalt bejelentkezve, majd frissíts."
   },
+  "emptyOpenCode": {
+    "message": "Még nincs adat. Nyisd meg a opencode.ai/console oldalt bejelentkezve, majd frissíts."
+  },
   "emptyOverlay": {
     "message": "Még nincs adat. Nyisd meg a felugró ablakot és frissíts."
   },

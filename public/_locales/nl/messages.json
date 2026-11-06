@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Nog geen gegevens. Open qwencloud.com terwijl je bent ingelogd en vernieuw."
   },
+  "emptyOpenCode": {
+    "message": "Nog geen gegevens. Open opencode.ai/console terwijl je bent ingelogd en vernieuw."
+  },
   "emptyOverlay": {
     "message": "Nog geen gegevens. Open de pop-up en vernieuw."
   },

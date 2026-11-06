@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Noch keine Daten. Öffne qwencloud.com angemeldet und aktualisiere."
   },
+  "emptyOpenCode": {
+    "message": "Noch keine Daten. Öffne opencode.ai/console angemeldet und aktualisiere."
+  },
   "emptyOverlay": {
     "message": "Noch keine Daten. Öffne das Popup und aktualisiere."
   },

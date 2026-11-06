@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "ఇంకా డేటా లేదు. సైన్ ఇన్ అయి qwencloud.com తెరిచి రిఫ్రెష్ చేయండి."
   },
+  "emptyOpenCode": {
+    "message": "ఇంకా డేటా లేదు. సైన్ ఇన్ అయి opencode.ai/console తెరిచి రిఫ్రెష్ చేయండి."
+  },
   "emptyOverlay": {
     "message": "ఇంకా డేటా లేదు. పాపప్ తెరిచి రిఫ్రెష్ చేయండి."
   },

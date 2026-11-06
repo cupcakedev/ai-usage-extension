@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Ainda sem dados. Abra qwencloud.com conectado e atualize."
   },
+  "emptyOpenCode": {
+    "message": "Ainda sem dados. Abra opencode.ai/console conectado e atualize."
+  },
   "emptyOverlay": {
     "message": "Ainda sem dados. Abra a janela e atualize."
   },

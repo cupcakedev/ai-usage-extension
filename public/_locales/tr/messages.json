@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Henüz veri yok. Oturum açıkken qwencloud.com'u açın, sonra yenileyin."
   },
+  "emptyOpenCode": {
+    "message": "Henüz veri yok. Oturum açıkken opencode.ai/console'u açın, sonra yenileyin."
+  },
   "emptyOverlay": {
     "message": "Henüz veri yok. Açılır pencereyi açıp yenileyin."
   },

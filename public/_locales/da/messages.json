@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Ingen data endnu. Åbn qwencloud.com, mens du er logget ind, og opdater."
   },
+  "emptyOpenCode": {
+    "message": "Ingen data endnu. Åbn opencode.ai/console, mens du er logget ind, og opdater."
+  },
   "emptyOverlay": {
     "message": "Ingen data endnu. Åbn popuppen, og opdater."
   },

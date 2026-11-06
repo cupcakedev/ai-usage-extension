@@ -38,6 +38,7 @@ export const PROVIDER_IDS: ProviderId[] = [
   'mimo',
   'glm',
   'qwen',
+  'opencode',
 ];
 
 /**
@@ -47,7 +48,7 @@ export const PROVIDER_IDS: ProviderId[] = [
  * - `models` needs a non-empty breakdown — Kimi and MiMo always report an empty list.
  * - `plan` is a footnote skipped for Claude, whose snapshot pins the plan to 'unknown',
  *   and Codex, whose snapshot has no plan field at all.
- * - `summary` is the balance footnote only MiMo produces.
+ * - `summary` is the balance or spend footnote MiMo, Cursor and OpenCode produce.
  * Metrics outside this list would be dead toggles, so they are neither offered nor stored.
  */
 export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = {
@@ -59,6 +60,7 @@ export const PROVIDER_SUPPORTED_METRICS: Record<ProviderId, ProviderMetric[]> = 
   mimo: ['session', 'reset', 'plan', 'summary'],
   glm: ['session', 'weekly', 'models', 'reset', 'plan'],
   qwen: ['session', 'weekly', 'reset', 'plan'],
+  opencode: ['session', 'weekly', 'models', 'reset', 'plan', 'summary'],
 };
 
 const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
@@ -70,6 +72,7 @@ const PROVIDER_DEFAULTS: Record<ProviderId, ProviderDisplaySettings> = {
   mimo: { visible: false, metrics: ['session'] },
   glm: { visible: false, metrics: ['session', 'weekly', 'reset'] },
   qwen: { visible: false, metrics: ['session', 'weekly', 'reset'] },
+  opencode: { visible: false, metrics: ['session', 'weekly', 'models', 'reset', 'summary'] },
 };
 
 const defaultProvider = (provider: ProviderId): ProviderDisplaySettings => ({

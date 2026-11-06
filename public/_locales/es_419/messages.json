@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Aún no hay datos. Abre qwencloud.com con sesión iniciada y actualiza."
   },
+  "emptyOpenCode": {
+    "message": "Aún no hay datos. Abre opencode.ai/console con sesión iniciada y actualiza."
+  },
   "emptyOverlay": {
     "message": "Aún no hay datos. Abre la ventana emergente y actualiza."
   },

@@ -41,6 +41,7 @@ const FALLBACK_MESSAGES: Record<string, string> = {
   emptyMiMo: 'No data yet. Open platform.xiaomimimo.com while signed in, then refresh.',
   emptyGlm: 'No data yet. Open z.ai while signed in, then refresh.',
   emptyQwen: 'No data yet. Open qwencloud.com while signed in, then refresh.',
+  emptyOpenCode: 'No data yet. Open opencode.ai/console while signed in, then refresh.',
   planUsage: 'Plan usage',
   tokenPlan: 'Token plan',
   emptyOverlay: 'No data yet. Open the popup and refresh.',

@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Bado hakuna data. Fungua qwencloud.com ukiwa umeingia, kisha onyesha upya."
   },
+  "emptyOpenCode": {
+    "message": "Bado hakuna data. Fungua opencode.ai/console ukiwa umeingia, kisha onyesha upya."
+  },
   "emptyOverlay": {
     "message": "Bado hakuna data. Fungua kidirisha ibukizi na uonyeshe upya."
   },

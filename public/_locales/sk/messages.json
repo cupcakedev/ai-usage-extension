@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Zatiaľ žiadne dáta. Otvorte qwencloud.com prihlásení a obnovte."
   },
+  "emptyOpenCode": {
+    "message": "Zatiaľ žiadne dáta. Otvorte opencode.ai/console prihlásení a obnovte."
+  },
   "emptyOverlay": {
     "message": "Zatiaľ žiadne dáta. Otvorte popup a obnovte."
   },

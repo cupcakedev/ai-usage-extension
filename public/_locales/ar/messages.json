@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "لا توجد بيانات بعد. افتح qwencloud.com بعد تسجيل الدخول ثم حدّث."
   },
+  "emptyOpenCode": {
+    "message": "لا توجد بيانات بعد. افتح opencode.ai/console بعد تسجيل الدخول ثم حدّث."
+  },
   "emptyOverlay": {
     "message": "لا توجد بيانات بعد. افتح النافذة المنبثقة ثم حدّث."
   },

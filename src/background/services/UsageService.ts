@@ -8,6 +8,7 @@ import {
   MiniMaxUsage,
   MiMoUsage,
   ModelUsage,
+  OpenCodeUsage,
   ProviderId,
   QwenUsage,
   UsageLimit,
@@ -29,6 +30,8 @@ const ENDPOINTS = {
   mimoPlanUsage: 'https://platform.xiaomimimo.com/api/v1/tokenPlan/usage',
   glmQuota: 'https://api.z.ai/api/monitor/usage/quota/limit',
   glmQuotaCn: 'https://open.bigmodel.cn/api/monitor/usage/quota/limit',
+  opencodeUsage: 'https://opencode.ai/console/api/billing/drawer/usage',
+  opencodeGoStatus: 'https://opencode.ai/console/api/go/status',
 } as const;
 
 const QWEN_REGIONS = [
@@ -816,6 +819,90 @@ const buildQwenUsage = (
   };
 };
 
+const MICRO_CENTS_PER_DOLLAR = 100_000_000;
+
+const opencodeDollars = (dollars: number): string =>
+  `$${dollars.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+const opencodeMicroCents = (value: unknown): number | null => {
+  const microCents = readNumeric(value);
+  return microCents === null ? null : microCents / MICRO_CENTS_PER_DOLLAR;
+};
+
+const opencodeBudgetLimit = (budget: Json): number | null =>
+  opencodeMicroCents(budget.limitMicroCents ?? budget.amountMicroCents) ??
+  readNumeric(budget.limitDollars ?? budget.amountDollars ?? budget.limit ?? budget.amount);
+
+const opencodeBudgetWindow = (budget: unknown, period: Json | null): UsageLimit | null => {
+  const entry = asJson(budget);
+  if (!entry || !period) return null;
+  const limit = opencodeBudgetLimit(entry);
+  const spent = opencodeMicroCents(period.totalCostMicroCents);
+  if (limit === null || limit <= 0 || spent === null) return null;
+  return {
+    ...buildLimit(percentFromUsedLimit(spent, limit), isoFromUnknown(period.endsAt)),
+    countLabel: `${opencodeDollars(spent)} / ${opencodeDollars(limit)}`,
+  };
+};
+
+const opencodeSummary = (personal: Json, workspace: Json | null): string => {
+  const spent = opencodeMicroCents(personal.totalCostMicroCents) ?? 0;
+  const go = asArray(personal.daily)
+    .map(asJson)
+    .reduce((sum, day) => sum + (opencodeMicroCents(day?.goCostMicroCents) ?? 0), 0);
+  const team = workspace ? opencodeMicroCents(workspace.totalCostMicroCents) : null;
+  const parts = [`This month · ${opencodeDollars(spent)}`];
+  if (go > 0) parts.push(`Go ${opencodeDollars(go)}`);
+  if (team !== null && team > spent) parts.push(`Workspace ${opencodeDollars(team)}`);
+  return parts.join(' · ');
+};
+
+const opencodeGoMeter = (value: unknown): UsageLimit | null => {
+  const meter = asJson(value);
+  if (!meter) return null;
+  const used = opencodeMicroCents(meter.usedMicroCents);
+  const limit = opencodeMicroCents(meter.limitMicroCents);
+  const percentage = percentFromUsedLimit(used, limit);
+  if (used === null || limit === null || percentage === null) return null;
+  return {
+    ...buildLimit(percentage, isoFromUnknown(meter.resetsAt)),
+    countLabel: `${opencodeDollars(used)} / ${opencodeDollars(limit)}`,
+  };
+};
+
+const buildOpenCodeUsage = (usage: Json | null, go: Json | null): OpenCodeUsage | null => {
+  const personal = asJson(usage?.personal);
+  const workspace = asJson(usage?.workspace);
+  const hasSpend = personal !== null && opencodeMicroCents(personal.totalCostMicroCents) !== null;
+
+  const meters = asJson(asJson(go?.access)?.meters);
+  const fiveHour = opencodeGoMeter(meters?.fiveHour);
+  const week = opencodeGoMeter(meters?.week);
+  const month = opencodeGoMeter(meters?.month);
+
+  const budgets = asJson(usage?.budgets);
+  const budget =
+    opencodeBudgetWindow(budgets?.personal, personal) ??
+    opencodeBudgetWindow(budgets?.workspace, workspace);
+
+  const models: ModelUsage[] = [
+    ...(month ? [{ id: 'opencode:go:month', label: 'Go · Monthly', limit: month }] : []),
+    ...(budget ? [{ id: 'opencode:budget', label: 'Monthly budget', limit: budget }] : []),
+  ];
+  if (!hasSpend && !fiveHour && !week && !models.length) return null;
+
+  const product = readString(go?.product);
+  const plan = fiveHour || week || month ? humanizeSlug(product ?? 'go') : undefined;
+
+  return {
+    ...(plan ? { plan } : {}),
+    ...finalize({ session: fiveHour ?? unavailableLimit(), weekly: week ?? unavailableLimit() }),
+    models,
+    ...(hasSpend && personal ? { summary: opencodeSummary(personal, workspace) } : {}),
+    raw: { usage, go },
+  };
+};
+
 /* -------------------- HTTP -------------------- */
 
 const isChallengeResponse = (headers: Headers): boolean =>
@@ -949,6 +1036,7 @@ export class UsageService {
       refreshProvider('cursor', () => this.fetchCursorUsage()),
       refreshProvider('mimo', () => this.fetchMiMoUsage()),
       refreshProvider('qwen', () => this.fetchQwenUsage()),
+      refreshProvider('opencode', () => this.fetchOpenCodeUsage()),
       (async () => {
         const glm = await this.fetchGlmUsage().catch(() => ({ usage: null, rejected: false }));
         await publish(() => {
@@ -1105,6 +1193,14 @@ export class UsageService {
       if (built) return built;
     }
     return null;
+  }
+
+  static async fetchOpenCodeUsage(): Promise<OpenCodeUsage | null> {
+    const [usage, go] = await Promise.all([
+      fetchJson(ENDPOINTS.opencodeUsage).catch(() => null),
+      fetchJson(ENDPOINTS.opencodeGoStatus).catch(() => null),
+    ]);
+    return buildOpenCodeUsage(usage?.ok ? usage.data : null, go?.ok ? go.data : null);
   }
 
   private static async fetchQwenSecToken(region: QwenRegion): Promise<string | null> {

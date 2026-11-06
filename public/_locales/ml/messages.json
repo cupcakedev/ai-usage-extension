@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് qwencloud.com തുറന്ന് പുതുക്കുക."
   },
+  "emptyOpenCode": {
+    "message": "ഇതുവരെ ഡാറ്റയില്ല. സൈൻ ഇൻ ചെയ്ത് opencode.ai/console തുറന്ന് പുതുക്കുക."
+  },
   "emptyOverlay": {
     "message": "ഇതുവരെ ഡാറ്റയില്ല. പോപ്പപ്പ് തുറന്ന് പുതുക്കുക."
   },

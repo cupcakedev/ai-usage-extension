@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Datu vēl nav. Atveriet qwencloud.com, esot pieteicies, un atsvaidziniet."
   },
+  "emptyOpenCode": {
+    "message": "Datu vēl nav. Atveriet opencode.ai/console, esot pieteicies, un atsvaidziniet."
+  },
   "emptyOverlay": {
     "message": "Datu vēl nav. Atveriet uznirstošo logu un atsvaidziniet."
   },

@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Још нема података. Отворите qwencloud.com пријављени и освежите."
   },
+  "emptyOpenCode": {
+    "message": "Још нема података. Отворите opencode.ai/console пријављени и освежите."
+  },
   "emptyOverlay": {
     "message": "Још нема података. Отворите искачући прозор и освежите."
   },

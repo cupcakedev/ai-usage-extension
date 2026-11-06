@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "अद्याप डेटा नाही. साइन इन असताना qwencloud.com उघडा आणि रिफ्रेश करा."
   },
+  "emptyOpenCode": {
+    "message": "अद्याप डेटा नाही. साइन इन असताना opencode.ai/console उघडा आणि रिफ्रेश करा."
+  },
   "emptyOverlay": {
     "message": "अद्याप डेटा नाही. पॉपअप उघडा आणि रिफ्रेश करा."
   },

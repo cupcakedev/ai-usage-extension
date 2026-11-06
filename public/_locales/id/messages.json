@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Belum ada data. Buka qwencloud.com saat sudah masuk, lalu segarkan."
   },
+  "emptyOpenCode": {
+    "message": "Belum ada data. Buka opencode.ai/console saat sudah masuk, lalu segarkan."
+  },
   "emptyOverlay": {
     "message": "Belum ada data. Buka popup lalu segarkan."
   },

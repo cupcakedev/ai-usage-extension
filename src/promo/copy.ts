@@ -29,6 +29,7 @@ export const PROVIDER_HOSTS: Record<string, string> = {
   mimo: 'platform.xiaomimimo.com',
   glm: 'z.ai',
   qwen: 'qwencloud.com',
+  opencode: 'opencode.ai',
 };
 
 const TRANSLATIONS = import.meta.glob<PromoCopy>('./copy/*.json', {

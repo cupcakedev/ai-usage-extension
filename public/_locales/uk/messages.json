@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Даних ще немає. Відкрийте qwencloud.com з активним входом і оновіть."
   },
+  "emptyOpenCode": {
+    "message": "Даних ще немає. Відкрийте opencode.ai/console з активним входом і оновіть."
+  },
   "emptyOverlay": {
     "message": "Даних ще немає. Відкрийте попап і оновіть."
   },

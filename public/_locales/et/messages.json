@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Andmeid veel pole. Ava sisselogituna qwencloud.com ja värskenda."
   },
+  "emptyOpenCode": {
+    "message": "Andmeid veel pole. Ava sisselogituna opencode.ai/console ja värskenda."
+  },
   "emptyOverlay": {
     "message": "Andmeid veel pole. Ava hüpikaken ja värskenda."
   },

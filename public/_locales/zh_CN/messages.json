@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "暂无数据。请在登录状态下打开 qwencloud.com，然后刷新。"
   },
+  "emptyOpenCode": {
+    "message": "暂无数据。请在登录状态下打开 opencode.ai/console，然后刷新。"
+  },
   "emptyOverlay": {
     "message": "暂无数据。请打开弹窗并刷新。"
   },

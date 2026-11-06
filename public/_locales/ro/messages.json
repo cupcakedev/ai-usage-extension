@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Încă nu există date. Deschide qwencloud.com autentificat, apoi reîmprospătează."
   },
+  "emptyOpenCode": {
+    "message": "Încă nu există date. Deschide opencode.ai/console autentificat, apoi reîmprospătează."
+  },
   "emptyOverlay": {
     "message": "Încă nu există date. Deschide popupul și reîmprospătează."
   },

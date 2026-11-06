@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Brak danych. Otwórz qwencloud.com po zalogowaniu i odśwież."
   },
+  "emptyOpenCode": {
+    "message": "Brak danych. Otwórz opencode.ai/console po zalogowaniu i odśwież."
+  },
   "emptyOverlay": {
     "message": "Brak danych. Otwórz popup i odśwież."
   },

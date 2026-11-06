@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "아직 데이터가 없습니다. 로그인한 상태로 qwencloud.com을 열고 새로고침하세요."
   },
+  "emptyOpenCode": {
+    "message": "아직 데이터가 없습니다. 로그인한 상태로 opencode.ai/console을 열고 새로고침하세요."
+  },
   "emptyOverlay": {
     "message": "아직 데이터가 없습니다. 팝업을 열고 새로고침하세요."
   },

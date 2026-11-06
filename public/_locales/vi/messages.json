@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Chưa có dữ liệu. Mở qwencloud.com khi đã đăng nhập rồi làm mới."
   },
+  "emptyOpenCode": {
+    "message": "Chưa có dữ liệu. Mở opencode.ai/console khi đã đăng nhập rồi làm mới."
+  },
   "emptyOverlay": {
     "message": "Chưa có dữ liệu. Mở cửa sổ bật lên rồi làm mới."
   },

@@ -91,6 +91,15 @@ const QWEN_USAGE: ExternalProviderUsage = {
   lastUpdated: NOW - 3 * MINUTE,
 };
 
+const OPENCODE_USAGE: ExternalProviderUsage = {
+  plan: 'Go',
+  session: { percentage: 38, resetsAt: resetsIn(2 * HOUR + 41 * MINUTE) },
+  weekly: { percentage: 22, resetsAt: resetsIn(3 * DAY + 4 * HOUR) },
+  models: [],
+  status: 'ok',
+  lastUpdated: NOW - 2 * MINUTE,
+};
+
 export interface PromoProvider {
   id: ProviderId;
   title: string;
@@ -110,6 +119,7 @@ const USAGE: Record<ProviderId, PromoProvider['usage']> = {
   mimo: MIMO_USAGE,
   glm: GLM_USAGE,
   qwen: QWEN_USAGE,
+  opencode: OPENCODE_USAGE,
 };
 
 const METRICS: Record<ProviderId, ProviderMetric[]> = {
@@ -121,6 +131,7 @@ const METRICS: Record<ProviderId, ProviderMetric[]> = {
   mimo: ['session', 'reset', 'plan'],
   glm: ['session', 'weekly', 'reset'],
   qwen: ['session', 'weekly', 'reset', 'plan'],
+  opencode: ['session', 'weekly', 'reset', 'plan'],
 };
 
 const LABEL_OVERRIDES: Partial<

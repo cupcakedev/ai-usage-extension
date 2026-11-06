@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ qwencloud.com ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
   },
+  "emptyOpenCode": {
+    "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಸೈನ್ ಇನ್ ಆಗಿ opencode.ai/console ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
+  },
   "emptyOverlay": {
     "message": "ಇನ್ನೂ ಡೇಟಾ ಇಲ್ಲ. ಪಾಪ್‌ಅಪ್ ತೆರೆದು ರಿಫ್ರೆಶ್ ಮಾಡಿ."
   },

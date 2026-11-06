@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "እስካሁን መረጃ የለም። ገብተው qwencloud.com ን ይክፈቱና ያድሱ።"
   },
+  "emptyOpenCode": {
+    "message": "እስካሁን መረጃ የለም። ገብተው opencode.ai/console ን ይክፈቱና ያድሱ።"
+  },
   "emptyOverlay": {
     "message": "እስካሁን መረጃ የለም። ብቅ-ባዩን ይክፈቱና ያድሱ።"
   },

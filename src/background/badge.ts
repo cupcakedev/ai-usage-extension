@@ -57,6 +57,7 @@ const PROVIDER_TITLE: Record<ProviderId, string> = {
   mimo: 'MiMo',
   glm: 'GLM',
   qwen: 'Qwen',
+  opencode: 'OpenCode',
 };
 /** Read lazily so a language change is picked up without a worker restart. */
 const metricLabel = (metric: BadgeMetric): string =>
@@ -82,9 +83,19 @@ const summarizeUsage = (state: UsageState, settings: ExtensionSettings): UsageSu
   const providers =
     settings.badge.mode === 'provider'
       ? [settings.badge.provider]
-      : (['claude', 'codex', 'minimax', 'kimi', 'cursor', 'mimo', 'glm', 'qwen'] as const).filter(
-          (provider) => settings.providers[provider].visible,
-        );
+      : (
+          [
+            'claude',
+            'codex',
+            'minimax',
+            'kimi',
+            'cursor',
+            'mimo',
+            'glm',
+            'qwen',
+            'opencode',
+          ] as const
+        ).filter((provider) => settings.providers[provider].visible);
 
   const rows = providers.flatMap((provider) => {
     const usage = state[provider];

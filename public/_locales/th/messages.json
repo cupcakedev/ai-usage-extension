@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "ยังไม่มีข้อมูล เปิด qwencloud.com ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
   },
+  "emptyOpenCode": {
+    "message": "ยังไม่มีข้อมูล เปิด opencode.ai/console ขณะลงชื่อเข้าใช้แล้วรีเฟรช"
+  },
   "emptyOverlay": {
     "message": "ยังไม่มีข้อมูล เปิดป๊อปอัปแล้วรีเฟรช"
   },

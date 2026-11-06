@@ -9,7 +9,7 @@ const sample = (percentage) => ({
   status: 'ok',
   lastUpdated: 123,
 });
-const providers = ['Claude', 'Codex', 'MiniMax', 'Kimi', 'Cursor', 'MiMo', 'Qwen'];
+const providers = ['Claude', 'Codex', 'MiniMax', 'Kimi', 'Cursor', 'MiMo', 'Qwen', 'OpenCode'];
 
 function serviceHarness(initial = {}, globals = {}) {
   let stored = structuredClone(initial);

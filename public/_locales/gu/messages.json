@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે qwencloud.com ખોલો અને રિફ્રેશ કરો."
   },
+  "emptyOpenCode": {
+    "message": "હજુ ડેટા નથી. સાઇન ઇન હોય ત્યારે opencode.ai/console ખોલો અને રિફ્રેશ કરો."
+  },
   "emptyOverlay": {
     "message": "હજુ ડેટા નથી. પોપઅપ ખોલો અને રિફ્રેશ કરો."
   },

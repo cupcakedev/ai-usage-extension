@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Ancora nessun dato. Apri qwencloud.com con accesso effettuato e aggiorna."
   },
+  "emptyOpenCode": {
+    "message": "Ancora nessun dato. Apri opencode.ai/console con accesso effettuato e aggiorna."
+  },
   "emptyOverlay": {
     "message": "Ancora nessun dato. Apri il popup e aggiorna."
   },

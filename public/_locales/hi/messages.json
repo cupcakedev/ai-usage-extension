@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "अभी कोई डेटा नहीं है। साइन इन करके qwencloud.com खोलें, फिर अपडेट करें।"
   },
+  "emptyOpenCode": {
+    "message": "अभी कोई डेटा नहीं है। साइन इन करके opencode.ai/console खोलें, फिर अपडेट करें।"
+  },
   "emptyOverlay": {
     "message": "अभी कोई डेटा नहीं है। पॉपअप खोलें और अपडेट करें।"
   },

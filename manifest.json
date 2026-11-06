@@ -24,7 +24,8 @@
     "https://home.qwencloud.com/*",
     "https://cs-data.qwencloud.com/*",
     "https://platform-home.qianwenai.com/*",
-    "https://cs-data.qianwenai.com/*"
+    "https://cs-data.qianwenai.com/*",
+    "https://opencode.ai/*"
   ],
   "background": {
     "service_worker": "src/background/index.ts",

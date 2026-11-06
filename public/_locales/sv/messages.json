@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "Inga data än. Öppna qwencloud.com när du är inloggad och uppdatera."
   },
+  "emptyOpenCode": {
+    "message": "Inga data än. Öppna opencode.ai/console när du är inloggad och uppdatera."
+  },
   "emptyOverlay": {
     "message": "Inga data än. Öppna popupen och uppdatera."
   },

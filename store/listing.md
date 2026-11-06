@@ -56,7 +56,7 @@ usage tracker, session reset tracker
 
 Display the current session and weekly usage limits for the AI coding accounts
 the user is already signed in to — Claude (claude.ai), Codex (chatgpt.com),
-MiniMax, Kimi Code, Cursor, Xiaomi MiMo, and the GLM (z.ai) and Qwen Coding
+MiniMax, Kimi Code, Cursor, Xiaomi MiMo, OpenCode, and the GLM (z.ai) and Qwen Coding
 Plans — both
 in the extension UI and as an overlay on the provider pages.
 

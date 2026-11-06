@@ -89,6 +89,9 @@
   "emptyQwen": {
     "message": "尚無資料。登入後開啟 qwencloud.com，再重新整理。"
   },
+  "emptyOpenCode": {
+    "message": "尚無資料。登入後開啟 opencode.ai/console，再重新整理。"
+  },
   "emptyOverlay": {
     "message": "尚無資料。開啟彈出視窗並重新整理。"
   },

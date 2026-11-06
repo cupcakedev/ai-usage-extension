@@ -12,7 +12,8 @@ export type ProviderId =
   | 'cursor'
   | 'mimo'
   | 'glm'
-  | 'qwen';
+  | 'qwen'
+  | 'opencode';
 
 export type OverlayProviderId = Extract<ProviderId, 'claude' | 'codex'>;
 
@@ -75,6 +76,7 @@ export type CursorUsage = ExternalProviderUsage;
 export type MiMoUsage = ExternalProviderUsage;
 export type GlmUsage = ExternalProviderUsage;
 export type QwenUsage = ExternalProviderUsage;
+export type OpenCodeUsage = ExternalProviderUsage;
 
 export type ProviderIssue = 'auth';
 
@@ -87,6 +89,7 @@ export interface UsageState {
   mimo?: MiMoUsage;
   glm?: GlmUsage;
   qwen?: QwenUsage;
+  opencode?: OpenCodeUsage;
   issues?: Partial<Record<ProviderId, ProviderIssue>>;
 }
 
